@@ -1,3 +1,4 @@
+import { isString } from "@/lang";
 import { objectToString } from "../object";
 import { isNil } from "./isNil";
 import { isObject } from "./isObject";
@@ -20,11 +21,15 @@ import { isObject } from "./isObject";
  * @returns `true` if the value is empty; otherwise, `false`.
  * @see     {@link nonEmpty}
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
 export function isEmpty(value: unknown): boolean {
   if (isNil(value)) {
     return true;
+  }
+
+  if (isString(value)) {
+    return value.length === 0;
   }
 
   if (Array.isArray(value)) {
