@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.6.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.5.1...v1.6.0) (2025-10-11)
+
+
+### Features
+
+* **appsscript/sheet:** Add extractRangeFromA1Notation utility function ([55f1c99](https://github.com/MaksymStoianov/appsscript-utils/commit/55f1c99cc606d6f852286909e0513ea6de221113))
+* **appsscript/sheet:** Add extractSheetNameFromA1Notation utility function ([6f9dd6f](https://github.com/MaksymStoianov/appsscript-utils/commit/6f9dd6fffbb5136918512ae0d1c13e82a6a56c50))
+* **appsscript/sheet:** Add parseA1Notations utility function ([c2ab5ef](https://github.com/MaksymStoianov/appsscript-utils/commit/c2ab5ef73772e89bdd3229e91be71b0b1e8853b5))
+* **appsscript/sheet:** Add parseA1Notations utility function ([cd4440c](https://github.com/MaksymStoianov/appsscript-utils/commit/cd4440c35d315c3c3933ca5406d219574ee096d2))
+* **appsscript/sheet:** Add updateSheetNameInA1Notation utility function ([9fec360](https://github.com/MaksymStoianov/appsscript-utils/commit/9fec3600b3fef467d502b8996141558ea7d9f384))
+* **appsscript/sheet:** Normalize parseA1Notation to exclude sheet name from a1Notation property ([1fea5a0](https://github.com/MaksymStoianov/appsscript-utils/commit/1fea5a07ebde235b3aed0748a1dacac8b9365ec5))
+
+
+### Bug Fixes
+
+* **lang:** Improve string handling in isEmpty with 'strict' mode ([9ceb4e3](https://github.com/MaksymStoianov/appsscript-utils/commit/9ceb4e35b1c39e65f909e7eeab3769112e308d8a))
+
 ## [1.5.1](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.5.0...v1.5.1) (2025-09-09)
 
 
