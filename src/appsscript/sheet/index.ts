@@ -70,3 +70,4 @@ export {
 } from "./parseA1Notations";
 
 export { toA1Notation } from "./toA1Notation";
+export { updateSheetNameInA1Notation } from "./updateSheetNameInA1Notation";
