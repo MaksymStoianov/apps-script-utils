@@ -33,16 +33,17 @@ import type { GridRange } from "./types";
  * parseA1Notation("'Sheet name'!A1:B2");
  * ```
  *
- * @param       a1Notation - The A1 notation string to parse.
- * @returns     An object representing the parsed grid range.
+ * @param       {string} a1Notation - The A1 notation string to parse.
+ * @returns     {GridRange} An object representing the parsed grid range.
  * @throws      {@link IllegalArgumentException}
+ * @see         {@link parseA1Notations}
  * @see         {@link GridRange}
  * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @since       1.0.0
- * @version     1.0.1
+ * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
@@ -52,7 +53,7 @@ export function parseA1Notation(a1Notation: string): GridRange {
     throw new IllegalArgumentException();
   }
 
-  const trimmedInput = requireNonEmptyString(a1Notation.trim());
+  const trimmedInput = requireNonEmptyString(a1Notation).trim();
 
   let sheetName: string | null = null;
   let rangeA1Part: string;
@@ -268,32 +269,12 @@ export function parseA1Notation(a1Notation: string): GridRange {
     throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
   }
 
-  let fullCanonicalA1Notation = "";
-  if (sheetName !== null) {
-    const isSimpleSheetName = /^[A-Z_][A-Z0-9_]*$/i.test(sheetName);
-
-    if (!isSimpleSheetName) {
-      if (!sheetName.includes("'")) {
-        fullCanonicalA1Notation += `'${sheetName}'!`;
-      } else if (!sheetName.includes('"')) {
-        fullCanonicalA1Notation += `"${sheetName}"!`;
-      } else {
-        fullCanonicalA1Notation += `'${sheetName.replace(/'/g, "''")}'!`;
-      }
-    } else {
-      fullCanonicalA1Notation += `${sheetName}!`;
-    }
-  }
-  fullCanonicalA1Notation += canonicalA1Notation;
-
-  const result: GridRange = {
+  return {
     sheetName,
-    a1Notation: fullCanonicalA1Notation,
+    a1Notation: canonicalA1Notation,
     startRowIndex: currentStartRowIndex,
     endRowIndex: finalEndRowIndex,
     startColumnIndex: currentStartColumnIndex,
     endColumnIndex: finalEndColumnIndex
   };
-
-  return result;
 }

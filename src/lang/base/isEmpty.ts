@@ -1,3 +1,4 @@
+import { isString } from "../../lang";
 import { objectToString } from "../object";
 import { isNil } from "./isNil";
 import { isObject } from "./isObject";
@@ -16,15 +17,23 @@ import { isObject } from "./isObject";
  * - Returns `false` for any other value, including numbers (even 0), booleans, functions,
  * or objects that are not empty according to the above rules.
  *
- * @param   value - The value to check for emptiness.
- * @returns `true` if the value is empty; otherwise, `false`.
+ * @param   {unknown} value - The value to check for emptiness.
+ * @param   {boolean} [strict=false] - The strictness mode for string validation.
+ * - If `false` (default), strings containing only whitespace characters (spaces, tabs, newlines)
+ * are considered empty (using `trim()`). This is known as "blank" check.
+ * - If `true`, only a string with zero length (`""`) is considered empty.
+ * @returns {boolean} `true` if the value is empty; otherwise, `false`.
  * @see     {@link nonEmpty}
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
-export function isEmpty(value: unknown): boolean {
+export function isEmpty(value: unknown, strict: boolean = false): boolean {
   if (isNil(value)) {
     return true;
+  }
+
+  if (isString(value)) {
+    return (strict ? value : value.trim()).length === 0;
   }
 
   if (Array.isArray(value)) {
