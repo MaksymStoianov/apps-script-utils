@@ -3,7 +3,7 @@
 ![Project banner for Google Apps Script Utils](docs/assets/google-apps-script-utils-author-MaksymStoianov-artist-DarynaMikhailenko.jpg)
 
 <p align="right">
-  <i>Artist: <a href="https://darynamikhailenko.com/?utm_source=github&utm_medium=readme&utm_campaign=appsscript-utils&utm_content=banner_artist_credit" title="Portfolio of Daryna Mikhailenko, the artist">Daryna Mikhailenko</a></i>
+  <i>Artist: <a href="https://darynamikhailenko.com/?utm_source=github&utm_medium=readme&utm_campaign=appsscript-utils&utm_content=banner-artist-credit" title="Portfolio of Daryna Mikhailenko, the artist">Daryna Mikhailenko</a></i>
 </p>
 
 # Utilities for Google Apps Script™ projects
@@ -36,7 +36,7 @@ npm install github:MaksymStoianov/appsscript-utils#main
 For example:
 
 ```bash
-npm install github:MaksymStoianov/appsscript-utils#v1.5.0
+npm install github:MaksymStoianov/appsscript-utils#v1.6.0
 ```
 
 ## Functions by Category
@@ -106,40 +106,44 @@ Functions that enable various operations on Google Sheets.
 
 <details open><summary>Functions</summary>
 
-| Function                                                                         | Description                                                                                                                                   |
-|:---------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
-| [`appendColumn`](src/appsscript/sheet/appendColumn.ts)                           | Appends a single column of data to the sheet.                                                                                                 |
-| [`appendColumns`](src/appsscript/sheet/appendColumns.ts)                         | Appends multiple columns of data to the sheet.                                                                                                |
-| [`appendRow`](src/appsscript/sheet/appendRow.ts)                                 | Appends a single row of data to the sheet.                                                                                                    |
-| [`appendRows`](src/appsscript/sheet/appendRows.ts)                               | Appends multiple rows of data to the sheet.                                                                                                   |
-| [`convertRichTextToHtml`](src/appsscript/sheet/convertRichTextToHtml.ts)         | Converts a [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value) to an HTML string.              |
-| [`doGridRangesIntersect`](src/appsscript/sheet/doGridRangesIntersect.ts)         | Checks if two [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects intersect.                                                       |
-| [`getColumnIndexByLetter`](src/appsscript/sheet/getColumnIndexByLetter.ts)       | Gets the column index by its letter (e.g., 'A' -> 1).                                                                                         |
-| [`getColumnLetterByIndex`](src/appsscript/sheet/getColumnLetterByIndex.ts)       | Gets the column letter by its index (e.g., 1 -> 'A').                                                                                         |
-| [`getColumnLetterByPosition`](src/appsscript/sheet/getColumnLetterByPosition.ts) | Gets the column letter by its position.                                                                                                       |
-| [`getColumnPositionByLetter`](src/appsscript/sheet/getColumnPositionByLetter.ts) | Gets the column position by its letter.                                                                                                       |
-| [`getSheetById`](src/appsscript/sheet/getSheetById.ts)                           | Gets a sheet by its ID.                                                                                                                       |
-| [`highlightHtml`](src/appsscript/sheet/highlightHtml.ts)                         | Adds syntax highlighting to an HTML string.                                                                                                   |
-| [`isCellGridRange`](src/appsscript/sheet/isCellGridRange.ts)                     | Checks if a [`GridRange`](src/appsscript/sheet/types/GridRange.ts) represents a single cell.                                                  |
-| [`isGridRangeContainedIn`](src/appsscript/sheet/isGridRangeContainedIn.ts)       | Checks if one [`GridRange`](src/appsscript/sheet/types/GridRange.ts) is contained within another.                                             |
-| [`isGridRangeSameDimensions`](src/appsscript/sheet/isGridRangeSameDimensions.ts) | Checks if two [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects have the same dimensions.                                        |
-| [`isRange`](src/appsscript/sheet/isRange.ts)                                     | Checks if an object is a [`Range`](https://developers.google.com/apps-script/reference/document/range).                                       |
-| [`isRichTextValue`](src/appsscript/sheet/isRichTextValue.ts)                     | Checks if an object is a [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value).                  |
-| [`isSheet`](src/appsscript/sheet/isSheet.ts)                                     | Checks if an object is a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).                                    |
-| [`isSpreadsheet`](src/appsscript/sheet/isSpreadsheet.ts)                         | Checks if an object is a [`Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet).                        |
-| [`isTextStyle`](src/appsscript/sheet/isTextStyle.ts)                             | Checks if an object is a [`TextStyle`](https://developers.google.com/apps-script/reference/slides/text-style).                                |
-| [`isValidSheetId`](src/appsscript/sheet/isValidSheetId.ts) 🆕                    | Checks if a sheet id is valid.                                                                                                                |
-| [`isValidSheetName`](src/appsscript/sheet/isValidSheetName.ts)                   | Checks if a sheet name is valid.                                                                                                              |
-| [`isValidSpreadsheetId`](src/appsscript/sheet/isValidSpreadsheetId.ts)           | Checks if a spreadsheet ID is valid.                                                                                                          |
-| [`nonRange`](src/appsscript/sheet/nonRange.ts) 🆕                                | Checks if an object is not a [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range).                                |
-| [`nonSheet`](src/appsscript/sheet/nonSheet.ts) 🆕                                | Checks if an object is not a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).                                |
-| [`parseA1Notation`](src/appsscript/sheet/parseA1Notation.ts)                     | Parses an A1 notation (e.g., 'A1:B2') into [`GridRange`](src/appsscript/sheet/types/GridRange.ts) components.                                 |
-| [`prependRow`](src/appsscript/sheet/prependRow.ts)                               | Prepends a single row of data to the sheet.                                                                                                   |
-| [`prependRows`](src/appsscript/sheet/prependRows.ts)                             | Prepends multiple rows of data to the sheet.                                                                                                  |
-| [`requireRange`](src/appsscript/sheet/requireRange.ts) 🆕                        | Checks if an object is not a [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range), otherwise throws an exception. |
-| [`requireSheet`](src/appsscript/sheet/requireSheet.ts) 🆕                        | Checks if an object is not a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet), otherwise throws an exception. |
-| [`sortSheets`](src/appsscript/sheet/sortSheets.ts) 🆕                            | Sorts all sheets in a spreadsheet alphabetically by name.                                                                                     |
-| [`toA1Notation`](src/appsscript/sheet/toA1Notation.ts)                           | Converts a [`GridRange`](src/appsscript/sheet/types/GridRange.ts) to A1 notation.                                                             |
+| Function                                                                                      | Description                                                                                                                                   |
+|:----------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
+| [`appendColumn`](src/appsscript/sheet/appendColumn.ts)                                        | Appends a single column of data to the sheet.                                                                                                 |
+| [`appendColumns`](src/appsscript/sheet/appendColumns.ts)                                      | Appends multiple columns of data to the sheet.                                                                                                |
+| [`appendRow`](src/appsscript/sheet/appendRow.ts)                                              | Appends a single row of data to the sheet.                                                                                                    |
+| [`appendRows`](src/appsscript/sheet/appendRows.ts)                                            | Appends multiple rows of data to the sheet.                                                                                                   |
+| [`convertRichTextToHtml`](src/appsscript/sheet/convertRichTextToHtml.ts)                      | Converts a [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value) to an HTML string.              |
+| [`doGridRangesIntersect`](src/appsscript/sheet/doGridRangesIntersect.ts)                      | Checks if two [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects intersect.                                                       |
+| [`extractRangeFromA1Notation`](src/appsscript/sheet/extractRangeFromA1Notation.ts) 🆕         | Extracts the **range part** from a full A1 notation string (e.g., `'Sheet1!A1:B2'` returns `'A1:B2'`).                                        |
+| [`extractSheetNameFromA1Notation`](src/appsscript/sheet/extractSheetNameFromA1Notation.ts) 🆕 | Extracts the sheet name from an A1 notation string (e.g., `Sheet1!A1:B2`).                                                                    |
+| [`getColumnIndexByLetter`](src/appsscript/sheet/getColumnIndexByLetter.ts)                    | Gets the column index by its letter (e.g., 'A' -> 1).                                                                                         |
+| [`getColumnLetterByIndex`](src/appsscript/sheet/getColumnLetterByIndex.ts)                    | Gets the column letter by its index (e.g., 1 -> 'A').                                                                                         |
+| [`getColumnLetterByPosition`](src/appsscript/sheet/getColumnLetterByPosition.ts)              | Gets the column letter by its position.                                                                                                       |
+| [`getColumnPositionByLetter`](src/appsscript/sheet/getColumnPositionByLetter.ts)              | Gets the column position by its letter.                                                                                                       |
+| [`getSheetById`](src/appsscript/sheet/getSheetById.ts)                                        | Gets a sheet by its ID.                                                                                                                       |
+| [`highlightHtml`](src/appsscript/sheet/highlightHtml.ts)                                      | Adds syntax highlighting to an HTML string.                                                                                                   |
+| [`isCellGridRange`](src/appsscript/sheet/isCellGridRange.ts)                                  | Checks if a [`GridRange`](src/appsscript/sheet/types/GridRange.ts) represents a single cell.                                                  |
+| [`isGridRangeContainedIn`](src/appsscript/sheet/isGridRangeContainedIn.ts)                    | Checks if one [`GridRange`](src/appsscript/sheet/types/GridRange.ts) is contained within another.                                             |
+| [`isGridRangeSameDimensions`](src/appsscript/sheet/isGridRangeSameDimensions.ts)              | Checks if two [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects have the same dimensions.                                        |
+| [`isRange`](src/appsscript/sheet/isRange.ts)                                                  | Checks if an object is a [`Range`](https://developers.google.com/apps-script/reference/document/range).                                       |
+| [`isRichTextValue`](src/appsscript/sheet/isRichTextValue.ts)                                  | Checks if an object is a [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value).                  |
+| [`isSheet`](src/appsscript/sheet/isSheet.ts)                                                  | Checks if an object is a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).                                    |
+| [`isSpreadsheet`](src/appsscript/sheet/isSpreadsheet.ts)                                      | Checks if an object is a [`Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet).                        |
+| [`isTextStyle`](src/appsscript/sheet/isTextStyle.ts)                                          | Checks if an object is a [`TextStyle`](https://developers.google.com/apps-script/reference/slides/text-style).                                |
+| [`isValidSheetId`](src/appsscript/sheet/isValidSheetId.ts)                                    | Checks if a sheet id is valid.                                                                                                                |
+| [`isValidSheetName`](src/appsscript/sheet/isValidSheetName.ts)                                | Checks if a sheet name is valid.                                                                                                              |
+| [`isValidSpreadsheetId`](src/appsscript/sheet/isValidSpreadsheetId.ts)                        | Checks if a spreadsheet ID is valid.                                                                                                          |
+| [`nonRange`](src/appsscript/sheet/nonRange.ts)                                                | Checks if an object is not a [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range).                                |
+| [`nonSheet`](src/appsscript/sheet/nonSheet.ts)                                                | Checks if an object is not a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).                                |
+| [`parseA1Notation`](src/appsscript/sheet/parseA1Notation.ts) 🆕                               | Parses an A1 notation (e.g., 'A1:B2') into [`GridRange`](src/appsscript/sheet/types/GridRange.ts) components.                                 |
+| [`parseA1Notations`](src/appsscript/sheet/parseA1Notations.ts) 🆕                             | Parses a comma-separated string of A1 notations into an array of [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects.              |
+| [`prependRow`](src/appsscript/sheet/prependRow.ts)                                            | Prepends a single row of data to the sheet.                                                                                                   |
+| [`prependRows`](src/appsscript/sheet/prependRows.ts)                                          | Prepends multiple rows of data to the sheet.                                                                                                  |
+| [`requireRange`](src/appsscript/sheet/requireRange.ts)                                        | Checks if an object is not a [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range), otherwise throws an exception. |
+| [`requireSheet`](src/appsscript/sheet/requireSheet.ts)                                        | Checks if an object is not a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet), otherwise throws an exception. |
+| [`sortSheets`](src/appsscript/sheet/sortSheets.ts)                                            | Sorts all sheets in a spreadsheet alphabetically by name.                                                                                     |
+| [`toA1Notation`](src/appsscript/sheet/toA1Notation.ts)                                        | Converts a [`GridRange`](src/appsscript/sheet/types/GridRange.ts) to A1 notation.                                                             |
+| [`updateSheetNameInA1Notation`](src/appsscript/sheet/updateSheetNameInA1Notation.ts) 🆕       | Updates or sets the sheet name within an A1 notation string, while preserving the range information (e.g., `A1:B2`).                          |
 
 </details>
 
@@ -188,14 +192,14 @@ This package contains core utility functions that are not tied to a specific App
 | [`escapeXml`](src/html/escapeXml.ts)                                | Escapes XML special characters.                                                                |
 | [`hashCode`](src/lang/object/hashCode.ts)                           | Calculates a hash code for a string.                                                           |
 | [`is2DArray`](src/lang/array/is2DArray.ts)                          | Checks if a variable is a 2D array.                                                            |
-| [`isArray`](src/lang/base/isArray.ts) 🆕                            | Checks if a variable is a `Array`.                                                             |
+| [`isArray`](src/lang/base/isArray.ts)                               | Checks if a variable is a `Array`.                                                             |
 | [`isBoolean`](src/lang/base/isBoolean.ts)                           | Checks if a variable is a boolean value.                                                       |
 | [`isConsistent2DArray`](src/lang/array/isConsistent2DArray.ts)      | Checks if a 2D array has consistent inner array lengths.                                       |
 | [`isEmail`](src/lang/string/isEmail.ts)                             | Checks if a string is a valid email address.                                                   |
 | [`isEmpty`](src/lang/base/isEmpty.ts)                               | Checks if a value is empty (for strings, arrays, objects).                                     |
 | [`isException`](src/lang/base/isException.ts)                       | Checks if an object is an instance of `Exception` or its subclass.                             |
 | [`isFunction`](src/lang/base/isFunction.ts)                         | Checks if a variable is a function.                                                            |
-| [`isFunctionLike`](src/lang/base/isFunctionLike.ts) 🆕              | Checks if a variable is a function in a broader sense.                                         |
+| [`isFunctionLike`](src/lang/base/isFunctionLike.ts)                 | Checks if a variable is a function in a broader sense.                                         |
 | [`isLength`](src/lang/base/isLength.ts)                             | Checks if a value is "length-like" (arrays, strings, etc.).                                    |
 | [`isNil`](src/lang/base/isNil.ts)                                   | Checks if a value is `null` or `undefined`.                                                    |
 | [`isNull`](src/lang/base/isNull.ts)                                 | Checks if a value is `null`.                                                                   |
@@ -213,17 +217,17 @@ This package contains core utility functions that are not tied to a specific App
 | [`isValidSlug`](src/lang/string/isValidSlug.ts)                     | Checks if a string is a valid "slug" (URL-friendly string).                                    |
 | [`isValidVersion`](src/lang/string/isValidVersion.ts)               | Checks if a string is a valid version number (semantic versioning).                            |
 | [`isVersionCompatible`](src/lang/string/isVersionCompatible.ts)     | Checks version compatibility.                                                                  |
-| [`nonArray`](src/lang/base/nonArray.ts) 🆕                          | Returns `true` if not `Array`.                                                                 |
-| [`nonBoolean`](src/lang/base/nonBoolean.ts) 🆕                      | Returns `true` if not `boolean`.                                                               |
-| [`nonEmpty`](src/lang/base/nonEmpty.ts) 🆕                          | Returns `true` if not "empty".                                                                 |
+| [`nonArray`](src/lang/base/nonArray.ts)                             | Returns `true` if not `Array`.                                                                 |
+| [`nonBoolean`](src/lang/base/nonBoolean.ts)                         | Returns `true` if not `boolean`.                                                               |
+| [`nonEmpty`](src/lang/base/nonEmpty.ts)                             | Returns `true` if not "empty".                                                                 |
 | [`nonFunction`](src/lang/base/nonFunction.ts) 🆕                    | Returns `true` if not `Function`.                                                              |
 | [`nonNil`](src/lang/base/nonNil.ts)                                 | Returns `true` if not `null` or `undefined`.                                                   |
 | [`nonNull`](src/lang/base/nonNull.ts)                               | Returns `true` if not `null`.                                                                  |
 | [`nonNumber`](src/lang/base/nonNumber.ts)                           | Returns `true` if not a `number`.                                                              |
-| [`nonScalar`](src/lang/base/nonScalar.ts) 🆕                        | Returns `true` if not a scalar value (`string`, `number`, `boolean`, `symbol` and `bigint`).   |
+| [`nonScalar`](src/lang/base/nonScalar.ts)                           | Returns `true` if not a scalar value (`string`, `number`, `boolean`, `symbol` and `bigint`).   |
 | [`nonString`](src/lang/base/nonString.ts)                           | Returns `true` if not a `string`.                                                              |
-| [`nonSymbol`](src/lang/base/nonSymbol.ts) 🆕                        | Returns `true` if not a `Symbol`.                                                              |
-| [`nonUndefined`](src/lang/base/nonUndefined.ts) 🆕                  | Returns `true` if not a `undefined`.                                                           |
+| [`nonSymbol`](src/lang/base/nonSymbol.ts)                           | Returns `true` if not a `Symbol`.                                                              |
+| [`nonUndefined`](src/lang/base/nonUndefined.ts)                     | Returns `true` if not a `undefined`.                                                           |
 | [`parseJson`](src/json/parseJson.ts)                                | Safely parses a JSON string.                                                                   |
 | [`requireNonEmptyString`](src/lang/string/requireNonEmptyString.ts) | Checks if a string is non-empty, otherwise throws an exception.                                |
 | [`requireNonNull`](src/lang/base/requireNonNull.ts)                 | Checks that a value is not `null`, otherwise throws an exception.                              |

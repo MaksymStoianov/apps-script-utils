@@ -47,6 +47,8 @@ export { appendRow } from "./appendRow";
 export { appendRows } from "./appendRows";
 export { convertRichTextToHtml } from "./convertRichTextToHtml";
 export { doGridRangesIntersect } from "./doGridRangesIntersect";
+export { extractRangeFromA1Notation } from "./extractRangeFromA1Notation";
+export { extractSheetNameFromA1Notation } from "./extractSheetNameFromA1Notation";
 export { getColumnIndexByLetter } from "./getColumnIndexByLetter";
 export { getColumnLetterByIndex } from "./getColumnLetterByIndex";
 export { getSheetById } from "./getSheetById";
