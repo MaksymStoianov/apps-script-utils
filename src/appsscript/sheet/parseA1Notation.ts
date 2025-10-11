@@ -43,7 +43,7 @@ import type { GridRange } from "./types";
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @since       1.0.0
- * @version     1.0.2
+ * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
@@ -269,32 +269,12 @@ export function parseA1Notation(a1Notation: string): GridRange {
     throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
   }
 
-  let fullCanonicalA1Notation = "";
-  if (sheetName !== null) {
-    const isSimpleSheetName = /^[A-Z_][A-Z0-9_]*$/i.test(sheetName);
-
-    if (!isSimpleSheetName) {
-      if (!sheetName.includes("'")) {
-        fullCanonicalA1Notation += `'${sheetName}'!`;
-      } else if (!sheetName.includes('"')) {
-        fullCanonicalA1Notation += `"${sheetName}"!`;
-      } else {
-        fullCanonicalA1Notation += `'${sheetName.replace(/'/g, "''")}'!`;
-      }
-    } else {
-      fullCanonicalA1Notation += `${sheetName}!`;
-    }
-  }
-  fullCanonicalA1Notation += canonicalA1Notation;
-
-  const result: GridRange = {
+  return {
     sheetName,
-    a1Notation: fullCanonicalA1Notation,
+    a1Notation: canonicalA1Notation,
     startRowIndex: currentStartRowIndex,
     endRowIndex: finalEndRowIndex,
     startColumnIndex: currentStartColumnIndex,
     endColumnIndex: finalEndColumnIndex
   };
-
-  return result;
 }
