@@ -19,9 +19,11 @@
   "keywords": [
     "google-apps-script",
     "googleappsscript",
+    "apps-script",
     "appsscript",
     "gas",
     "typescript",
+    "javascript",
     "utilities"
   ],
   "author": "Maksym Stoianov <stoianov.maksym@gmail.com>",
