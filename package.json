@@ -1,14 +1,16 @@
 {
   "name": "apps-script-utils",
-  "version": "1.0.1",
+  "version": "1.6.0",
   "description": "Utilities for Google Apps Script™ projects.",
   "main": "src/index.ts",
   "scripts": {
+    "maint": "bash ./sctipts/maintenance.sh",
     "dev": "vitest",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
     "test": "vitest run",
-    "build": "rm -rf dist/* && tsc"
+    "build": "rm -rf dist/* && tsc",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
