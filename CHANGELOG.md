@@ -1,5 +1,100 @@
 # Changelog
 
+## [1.6.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.5.1...v1.6.0) (2025-10-11)
+
+
+### Features
+
+* **appsscript/sheet:** Add extractRangeFromA1Notation utility function ([55f1c99](https://github.com/MaksymStoianov/appsscript-utils/commit/55f1c99cc606d6f852286909e0513ea6de221113))
+* **appsscript/sheet:** Add extractSheetNameFromA1Notation utility function ([6f9dd6f](https://github.com/MaksymStoianov/appsscript-utils/commit/6f9dd6fffbb5136918512ae0d1c13e82a6a56c50))
+* **appsscript/sheet:** Add parseA1Notations utility function ([c2ab5ef](https://github.com/MaksymStoianov/appsscript-utils/commit/c2ab5ef73772e89bdd3229e91be71b0b1e8853b5))
+* **appsscript/sheet:** Add parseA1Notations utility function ([cd4440c](https://github.com/MaksymStoianov/appsscript-utils/commit/cd4440c35d315c3c3933ca5406d219574ee096d2))
+* **appsscript/sheet:** Add updateSheetNameInA1Notation utility function ([9fec360](https://github.com/MaksymStoianov/appsscript-utils/commit/9fec3600b3fef467d502b8996141558ea7d9f384))
+* **appsscript/sheet:** Normalize parseA1Notation to exclude sheet name from a1Notation property ([1fea5a0](https://github.com/MaksymStoianov/appsscript-utils/commit/1fea5a07ebde235b3aed0748a1dacac8b9365ec5))
+
+
+### Bug Fixes
+
+* **lang:** Improve string handling in isEmpty with 'strict' mode ([9ceb4e3](https://github.com/MaksymStoianov/appsscript-utils/commit/9ceb4e35b1c39e65f909e7eeab3769112e308d8a))
+
+## [1.5.1](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.5.0...v1.5.1) (2025-09-09)
+
+
+### Bug Fixes
+
+* imports ([14698eb](https://github.com/MaksymStoianov/appsscript-utils/commit/14698eb18da88686f50b855637b9b454b4465473))
+* imports ([6ed4266](https://github.com/MaksymStoianov/appsscript-utils/commit/6ed426619eb071006e0cd0dc79d1d5794fd4256e))
+
+## [1.5.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.4.0...v1.5.0) (2025-09-09)
+
+
+### Features
+
+* **refactor:** add new helpers and exceptions ([984cff7](https://github.com/MaksymStoianov/appsscript-utils/commit/984cff70df985cabdebaf8aa05f1339d1bf2e535))
+
+## [1.4.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.3.0...v1.4.0) (2025-09-03)
+
+
+### Features
+
+* **appsscript/admin/isAdmin:** Add isAdmin utility function ([a4dec07](https://github.com/MaksymStoianov/appsscript-utils/commit/a4dec07d6803baf5975f5f21dffb3c65e3f64e15))
+* **appsscript/sheets/sortSheets:** Add sortSheets utility function ([669987f](https://github.com/MaksymStoianov/appsscript-utils/commit/669987f8ad89033d9e97900a0cda85fd2abdae0b))
+* **base/nonFunction:** Add nonFunction utility function ([505c685](https://github.com/MaksymStoianov/appsscript-utils/commit/505c68542b65583218cd4cb75c228cefe763ad22))
+* **base/nonUndefined:** Add nonUndefined utility function ([aeb1273](https://github.com/MaksymStoianov/appsscript-utils/commit/aeb1273480d238e1978af25a8ac1e6f4ea71921d))
+* **base:** Add isArray and nonArray utility functions ([ef073d3](https://github.com/MaksymStoianov/appsscript-utils/commit/ef073d3250a00ca0357a5ca12f558df9caa066d5))
+* **base:** Add nonScalar and nonSymbol utility function ([92abd17](https://github.com/MaksymStoianov/appsscript-utils/commit/92abd1717d9371c289cc9da368dbbf5b5b3ea888))
+
+## [1.3.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.2.0...v1.3.0) (2025-09-02)
+
+
+### Features
+
+* **appsscript/sheets/nonSheet:** Add nonSheet utility function ([adab35c](https://github.com/MaksymStoianov/appsscript-utils/commit/adab35cbe0561ed520bdf4f06b3fb8e60d0e3f17))
+
+
+### Bug Fixes
+
+* imports ([d8b407c](https://github.com/MaksymStoianov/appsscript-utils/commit/d8b407c46eb74a0a7277b435eb22eb7477f830eb))
+* imports ([528ecc1](https://github.com/MaksymStoianov/appsscript-utils/commit/528ecc1580f84dfe26f4676eb8fbb420ba7cf500))
+* src/base/index.ts add nonEmpty ([be7c474](https://github.com/MaksymStoianov/appsscript-utils/commit/be7c47444fb462c7fc71fe15e8fc5792a28f3dbc))
+
+## [1.2.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.1.1...v1.2.0) (2025-09-02)
+
+
+### Features
+
+* **base/isFunctionLike:** Add isFunctionLike utility function ([0f3177b](https://github.com/MaksymStoianov/appsscript-utils/commit/0f3177b5857a319c5eac51acd8d5d80a8fcc50fb))
+* **base/nonBoolean:** Add nonBoolean utility function ([1c0192c](https://github.com/MaksymStoianov/appsscript-utils/commit/1c0192c14ca2f2a8e6e3120716f8c17c7e440ca7))
+* **base/nonEmpty:** Add nonEmpty utility function ([d4bf710](https://github.com/MaksymStoianov/appsscript-utils/commit/d4bf7101d900923decee3261d048ede7d1f41108))
+
+
+### Bug Fixes
+
+* lint ([db80175](https://github.com/MaksymStoianov/appsscript-utils/commit/db80175b87a03a056c1900d8382d786063511566))
+* **readme:** fix link in README.md ([62a4dd8](https://github.com/MaksymStoianov/appsscript-utils/commit/62a4dd897b93951452edc89d2ed2568db044e4de))
+
+## [1.1.1](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.1.0...v1.1.1) (2025-08-31)
+
+
+### Bug Fixes
+
+* **readme:** update README.md ([5f834de](https://github.com/MaksymStoianov/appsscript-utils/commit/5f834ded6e269349bbe564abac9603456c7b823d))
+* **readme:** update README.md ([531eb9e](https://github.com/MaksymStoianov/appsscript-utils/commit/531eb9e5d195df4f0806e25a13e98ea607331f45))
+
+## [1.1.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.0.1...v1.1.0) (2025-08-31)
+
+
+### Features
+
+* **readme:** update links ([f2d52f3](https://github.com/MaksymStoianov/appsscript-utils/commit/f2d52f32175a345faf137a57c11c79e60eb5f264))
+* **readme:** update links ([29e6842](https://github.com/MaksymStoianov/appsscript-utils/commit/29e684262beaa930ef47f25bfef0bad2381c003c))
+* **readme:** update links ([94fe0ca](https://github.com/MaksymStoianov/appsscript-utils/commit/94fe0ca45ac06f3408c1d13440067cd232942ccf))
+
+
+### Bug Fixes
+
+* **readme:** fix bugs ([1de5993](https://github.com/MaksymStoianov/appsscript-utils/commit/1de59937c5da818caf81d201c1cadd66888e3de8))
+
 ## [1.0.1](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.0.0...v1.0.1) (2025-07-25)
 
 ### Bug Fixes
