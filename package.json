@@ -45,7 +45,7 @@
     "@eslint/markdown": "^7.2.0",
     "@types/google-apps-script": "^2.0.7",
     "@types/node": "^24.9.1",
-    "eslint": "^9.35.0",
+    "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-googleappsscript": "^1.0.5",
     "husky": "^9.1.7",
