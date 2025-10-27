@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash ./sctipts/pre-commit.sh

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash ./sctipts/pre-push.sh

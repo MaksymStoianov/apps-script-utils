@@ -12,12 +12,6 @@
     "build": "rm -rf dist/* && tsc",
     "prepare": "husky"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "bash ./sctipts/pre-commit.sh",
-      "pre-push": "bash ./sctipts/pre-push.sh"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaksymStoianov/apps-script-utils.git"
