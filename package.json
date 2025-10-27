@@ -1,34 +1,38 @@
 {
-  "name": "appsscript-utils",
+  "name": "apps-script-utils",
   "version": "1.6.0",
-  "description": "Utilities and types for Google Apps Script development.",
+  "description": "Utilities for Google Apps Script™ projects.",
   "main": "src/index.ts",
   "scripts": {
+    "maint": "bash ./sctipts/maintenance.sh",
     "dev": "vitest",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
     "test": "vitest run",
-    "build": "rm -rf dist/* && tsc"
+    "build": "rm -rf dist/* && tsc",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MaksymStoianov/appsscript-utils.git"
+    "url": "git+https://github.com/MaksymStoianov/apps-script-utils.git"
   },
   "keywords": [
     "google-apps-script",
     "googleappsscript",
+    "apps-script",
     "appsscript",
     "gas",
     "typescript",
+    "javascript",
     "utilities"
   ],
   "author": "Maksym Stoianov <stoianov.maksym@gmail.com>",
   "license": "Apache-2.0",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/MaksymStoianov/appsscript-utils/issues"
+    "url": "https://github.com/MaksymStoianov/apps-script-utils/issues"
   },
-  "homepage": "https://github.com/MaksymStoianov/appsscript-utils#readme",
+  "homepage": "https://github.com/MaksymStoianov/apps-script-utils#readme",
   "funding": [
     {
       "type": "github",
