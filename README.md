@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Project banner for Google Apps Script Utils](docs/assets/google-apps-script-utils-author-MaksymStoianov-artist-DarynaMikhailenko.jpg)
+![Project banner for Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
 
 <p align="right">
   <i>Artist: <a href="https://darynamikhailenko.com/?utm_source=github&utm_medium=readme&utm_campaign=appsscript-utils&utm_content=banner-artist-credit" title="Portfolio of Daryna Mikhailenko, the artist">Daryna Mikhailenko</a></i>
