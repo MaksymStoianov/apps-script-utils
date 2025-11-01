@@ -1,6 +1,6 @@
 {
   "name": "apps-script-utils",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Utilities for Google Apps Script™ projects.",
   "main": "src/index.ts",
   "scripts": {
