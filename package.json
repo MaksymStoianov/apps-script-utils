@@ -26,7 +26,11 @@
     "javascript",
     "utilities"
   ],
-  "author": "Maksym Stoianov <stoianov.maksym@gmail.com>",
+  "author": {
+    "name": "Maksym Stoianov",
+    "email": "stoianov.maksym@gmail.com",
+    "url": "https://maksymstoianov.com"
+  },
   "license": "Apache-2.0",
   "type": "module",
   "bugs": {
