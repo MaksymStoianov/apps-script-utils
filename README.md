@@ -18,6 +18,29 @@
 [![GitHub Fork](https://img.shields.io/github/forks/MaksymStoianov/apps-script-utils?style=social)](https://github.com/MaksymStoianov/apps-script-utils/forks)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github)](https://github.com/sponsors/MaksymStoianov)
 
+<!-- TOC -->
+* [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
+  * [Introduction](#introduction)
+  * [How to Install](#how-to-install)
+  * [Functions by Category](#functions-by-category)
+    * [1. Google Apps Script Module](#1-google-apps-script-module)
+      * [1.1. Google Base Methods](#11-google-base-methods)
+      * [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
+      * [1.3. Google Drive Methods](#13-google-drive-methods)
+      * [1.4. Google Docs Methods](#14-google-docs-methods)
+      * [1.5. Google Forms Methods](#15-google-forms-methods)
+      * [1.6. Google Sheets Methods](#16-google-sheets-methods)
+      * [1.7. Google Slides Methods](#17-google-slides-methods)
+      * [1.8. Google UI Methods](#18-google-ui-methods)
+    * [2. `Base` Utilities](#2-base-utilities)
+    * [3. Exceptions Module](#3-exceptions-module)
+    * [4. `path` Module](#4-path-module)
+    * [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
+  * [Tasks](#tasks)
+  * [Changelog](#changelog)
+  * [License](#license)
+<!-- TOC -->
+
 ## Introduction
 
 A set of utilities for **Google Apps Script**, as well as common functions for working with data, strings, validation
@@ -55,9 +78,22 @@ Functions that enable various operations on a collection of base utility methods
 
 <details open><summary>Functions</summary>
 
-| Function                                            | Description                            |
-| :-------------------------------------------------- | :------------------------------------- |
-| [`getByteSize`](src/appsscript/base/getByteSize.ts) | Returns the size of a string in bytes. |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="src/appsscript/base/getByteSize.ts"><code>getByteSize</code></a></td>
+            <td><code>Number</code></td>
+            <td>Returns the size of a string in bytes.</td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
@@ -72,9 +108,22 @@ Functions that enable various operations on Google Drive.
 
 <details open><summary>Functions</summary>
 
-| Function | Description |
-| :------- | :---------- |
-|          |             |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
@@ -84,9 +133,22 @@ Functions that enable various operations on Google Docs.
 
 <details open><summary>Functions</summary>
 
-| Function | Description |
-| :------- | :---------- |
-|          |             |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
@@ -96,9 +158,22 @@ Functions that enable various operations on Google Forms.
 
 <details open><summary>Functions</summary>
 
-| Function | Description |
-| :------- | :---------- |
-|          |             |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
@@ -108,44 +183,197 @@ Functions that enable various operations on Google Sheets.
 
 <details open><summary>Functions</summary>
 
-| Function                                                                                      | Description                                                                                                                                   |
-| :-------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`appendColumn`](src/appsscript/sheet/appendColumn.ts)                                        | Appends a single column of data to the sheet.                                                                                                 |
-| [`appendColumns`](src/appsscript/sheet/appendColumns.ts)                                      | Appends multiple columns of data to the sheet.                                                                                                |
-| [`appendRow`](src/appsscript/sheet/appendRow.ts)                                              | Appends a single row of data to the sheet.                                                                                                    |
-| [`appendRows`](src/appsscript/sheet/appendRows.ts)                                            | Appends multiple rows of data to the sheet.                                                                                                   |
-| [`convertRichTextToHtml`](src/appsscript/sheet/convertRichTextToHtml.ts)                      | Converts a [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value) to an HTML string.              |
-| [`doGridRangesIntersect`](src/appsscript/sheet/doGridRangesIntersect.ts)                      | Checks if two [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects intersect.                                                       |
-| [`extractRangeFromA1Notation`](src/appsscript/sheet/extractRangeFromA1Notation.ts) 🆕         | Extracts the **range part** from a full A1 notation string (e.g., `'Sheet1!A1:B2'` returns `'A1:B2'`).                                        |
-| [`extractSheetNameFromA1Notation`](src/appsscript/sheet/extractSheetNameFromA1Notation.ts) 🆕 | Extracts the sheet name from an A1 notation string (e.g., `Sheet1!A1:B2`).                                                                    |
-| [`getColumnIndexByLetter`](src/appsscript/sheet/getColumnIndexByLetter.ts)                    | Gets the column index by its letter (e.g., 'A' -> 1).                                                                                         |
-| [`getColumnLetterByIndex`](src/appsscript/sheet/getColumnLetterByIndex.ts)                    | Gets the column letter by its index (e.g., 1 -> 'A').                                                                                         |
-| [`getColumnLetterByPosition`](src/appsscript/sheet/getColumnLetterByPosition.ts)              | Gets the column letter by its position.                                                                                                       |
-| [`getColumnPositionByLetter`](src/appsscript/sheet/getColumnPositionByLetter.ts)              | Gets the column position by its letter.                                                                                                       |
-| [`getSheetById`](src/appsscript/sheet/getSheetById.ts)                                        | Gets a sheet by its ID.                                                                                                                       |
-| [`highlightHtml`](src/appsscript/sheet/highlightHtml.ts)                                      | Adds syntax highlighting to an HTML string.                                                                                                   |
-| [`isCellGridRange`](src/appsscript/sheet/isCellGridRange.ts)                                  | Checks if a [`GridRange`](src/appsscript/sheet/types/GridRange.ts) represents a single cell.                                                  |
-| [`isGridRangeContainedIn`](src/appsscript/sheet/isGridRangeContainedIn.ts)                    | Checks if one [`GridRange`](src/appsscript/sheet/types/GridRange.ts) is contained within another.                                             |
-| [`isGridRangeSameDimensions`](src/appsscript/sheet/isGridRangeSameDimensions.ts)              | Checks if two [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects have the same dimensions.                                        |
-| [`isRange`](src/appsscript/sheet/isRange.ts)                                                  | Checks if an object is a [`Range`](https://developers.google.com/apps-script/reference/document/range).                                       |
-| [`isRichTextValue`](src/appsscript/sheet/isRichTextValue.ts)                                  | Checks if an object is a [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value).                  |
-| [`isSheet`](src/appsscript/sheet/isSheet.ts)                                                  | Checks if an object is a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).                                    |
-| [`isSpreadsheet`](src/appsscript/sheet/isSpreadsheet.ts)                                      | Checks if an object is a [`Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet).                        |
-| [`isTextStyle`](src/appsscript/sheet/isTextStyle.ts)                                          | Checks if an object is a [`TextStyle`](https://developers.google.com/apps-script/reference/slides/text-style).                                |
-| [`isValidSheetId`](src/appsscript/sheet/isValidSheetId.ts)                                    | Checks if a sheet id is valid.                                                                                                                |
-| [`isValidSheetName`](src/appsscript/sheet/isValidSheetName.ts)                                | Checks if a sheet name is valid.                                                                                                              |
-| [`isValidSpreadsheetId`](src/appsscript/sheet/isValidSpreadsheetId.ts)                        | Checks if a spreadsheet ID is valid.                                                                                                          |
-| [`nonRange`](src/appsscript/sheet/nonRange.ts)                                                | Checks if an object is not a [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range).                                |
-| [`nonSheet`](src/appsscript/sheet/nonSheet.ts)                                                | Checks if an object is not a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).                                |
-| [`parseA1Notation`](src/appsscript/sheet/parseA1Notation.ts) 🆕                               | Parses an A1 notation (e.g., 'A1:B2') into [`GridRange`](src/appsscript/sheet/types/GridRange.ts) components.                                 |
-| [`parseA1Notations`](src/appsscript/sheet/parseA1Notations.ts) 🆕                             | Parses a comma-separated string of A1 notations into an array of [`GridRange`](src/appsscript/sheet/types/GridRange.ts) objects.              |
-| [`prependRow`](src/appsscript/sheet/prependRow.ts)                                            | Prepends a single row of data to the sheet.                                                                                                   |
-| [`prependRows`](src/appsscript/sheet/prependRows.ts)                                          | Prepends multiple rows of data to the sheet.                                                                                                  |
-| [`requireRange`](src/appsscript/sheet/requireRange.ts)                                        | Checks if an object is not a [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range), otherwise throws an exception. |
-| [`requireSheet`](src/appsscript/sheet/requireSheet.ts)                                        | Checks if an object is not a [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet), otherwise throws an exception. |
-| [`sortSheets`](src/appsscript/sheet/sortSheets.ts)                                            | Sorts all sheets in a spreadsheet alphabetically by name.                                                                                     |
-| [`toA1Notation`](src/appsscript/sheet/toA1Notation.ts)                                        | Converts a [`GridRange`](src/appsscript/sheet/types/GridRange.ts) to A1 notation.                                                             |
-| [`updateSheetNameInA1Notation`](src/appsscript/sheet/updateSheetNameInA1Notation.ts) 🆕       | Updates or sets the sheet name within an A1 notation string, while preserving the range information (e.g., `A1:B2`).                          |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="src/appsscript/sheet/appendColumn.ts"><code>appendColumn</code></a></td>
+            <td></td>
+            <td>Appends a single column of data to the sheet.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/appendColumns.ts"><code>appendColumns</code></a></td>
+            <td></td>
+            <td>Appends multiple columns of data to the sheet.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/appendRow.ts"><code>appendRow</code></a></td>
+            <td></td>
+            <td>Appends a single row of data to the sheet.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/appendRows.ts"><code>appendRows</code></a></td>
+            <td></td>
+            <td>Appends multiple rows of data to the sheet.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/convertRichTextToHtml.ts"><code>convertRichTextToHtml</code></a></td>
+            <td></td>
+            <td>Converts a <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a> to an HTML string.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/doGridRangesIntersect.ts"><code>doGridRangesIntersect</code></a></td>
+            <td></td>
+            <td>Checks if two <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> objects intersect.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/extractRangeFromA1Notation.ts"><code>extractRangeFromA1Notation</code></a> 🆕</td>
+            <td></td>
+            <td>Extracts the range part from a full A1 notation string (e.g., <code>Sheet1!A1:B2</code> returns <code>A1:B2</code>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/extractSheetNameFromA1Notation.ts"><code>extractSheetNameFromA1Notation</code></a> </td>
+            <td></td>
+            <td>Extracts the sheet name from an A1 notation string (e.g., <code>Sheet1!A1:B2</code>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/getColumnIndexByLetter.ts"><code>getColumnIndexByLetter</code></a></td>
+            <td></td>
+            <td>Gets the column index by its letter (e.g., <code>A</code> -> <code>1</code>).</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/getColumnLetterByIndex.ts"><code>getColumnLetterByIndex</code></a></td>
+            <td></td>
+            <td>Gets the column letter by its index (e.g., <code>1</code> -> <code>A</code>).</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/getColumnLetterByPosition.ts"><code>getColumnLetterByPosition</code></a></td>
+            <td></td>
+            <td>Gets the column letter by its position.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/getColumnPositionByLetter.ts"><code>getColumnPositionByLetter</code></a></td>
+            <td></td>
+            <td>Gets the column position by its letter.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/getSheetById.ts"><code>getSheetById</code></a></td>
+            <td></td>
+            <td>Gets a sheet by its ID.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/highlightHtml.ts"><code>highlightHtml</code></a></td>
+            <td></td>
+            <td>Adds syntax highlighting to an HTML string.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isCellGridRange.ts"><code>isCellGridRange</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> represents a single cell.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isGridRangeContainedIn.ts"><code>isGridRangeContainedIn</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if one <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> is contained within another.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isGridRangeSameDimensions.ts"><code>isGridRangeSameDimensions</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if two <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> objects have the same dimensions.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isRange.ts"><code>isRange</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is a <a href="https://developers.google.com/apps-script/reference/document/range"><code>Range</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isRichTextValue.ts"><code>isRichTextValue</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isSheet.ts"><code>isSheet</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isSpreadsheet.ts"><code>isSpreadsheet</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isTextStyle.ts"><code>isTextStyle</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is a <a href="https://developers.google.com/apps-script/reference/slides/text-style"><code>TextStyle</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isValidSheetId.ts"><code>isValidSheetId</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a sheet id is valid.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isValidSheetName.ts"><code>isValidSheetName</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a sheet name is valid.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/isValidSpreadsheetId.ts"><code>isValidSpreadsheetId</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a spreadsheet ID is valid.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/nonRange.ts"><code>nonRange</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is not a <a href="https://developers.google.com/apps-script/reference/document/range"><code>Range</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/nonSheet.ts"><code>nonSheet</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/parseA1Notation.ts"><code>parseA1Notation</code></a> 🆕</td>
+            <td></td>
+            <td>Parses an A1 notation (e.g., <code>A1:B2</code>) into <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> components.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/parseA1Notations.ts"><code>parseA1Notations</code></a> 🆕</td>
+            <td></td>
+            <td>Parses a comma-separated string of A1 notations into an array of <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> objects.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/prependRow.ts"><code>prependRow</code></a></td>
+            <td></td>
+            <td>Prepends a single row of data to the sheet.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/prependRows.ts"><code>prependRows</code></a></td>
+            <td></td>
+            <td>Prepends multiple rows of data to the sheet.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/requireRange.ts"><code>requireRange</code></a></td>
+            <td><a href="https://developers.google.com/apps-script/reference/document/range"><code>Range</code></a></td>
+            <td>Checks if an object is not a <a href="https://developers.google.com/apps-script/reference/document/range"><code>Range</code></a>, otherwise throws an exception.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/requireSheet.ts"><code>requireSheet</code></a></td>
+            <td><a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a></td>
+            <td>Checks if an object is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>, otherwise throws an exception.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/sortSheets.ts"><code>sortSheets</code></a></td>
+            <td></td>
+            <td>Sorts all sheets in a spreadsheet alphabetically by name.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/toA1Notation.ts"><code>toA1Notation</code></a></td>
+            <td></td>
+            <td>Converts a <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> to A1 notation.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/sheet/updateSheetNameInA1Notation.ts"><code>updateSheetNameInA1Notation</code></a> 🆕</td>
+            <td></td>
+            <td>Updates or sets the sheet name within an A1 notation string, while preserving the range information (e.g., <code>A1:B2</code>).</td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
@@ -155,9 +383,22 @@ Functions that enable various operations on Google Slides.
 
 <details open><summary>Functions</summary>
 
-| Function | Description |
-| :------- | :---------- |
-|          |             |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
@@ -167,18 +408,43 @@ Functions that enable various operations on the user interface, including sideba
 
 <details open><summary>Functions</summary>
 
-| Function                                                            | Description                                                                                                       |
-| :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------- |
-| [`checkMultipleAccount`](src/appsscript/ui/checkMultipleAccount.ts) | Checks if multiple Google accounts are in use.                                                                    |
-| [`isHtmlOutput`](src/appsscript/ui/isHtmlOutput.ts)                 | Checks if an object is an [`HtmlOutput`](https://developers.google.com/apps-script/reference/html/html-output).   |
-| [`isTextOutput`](src/appsscript/ui/isTextOutput.ts)                 | Checks if an object is a [`TextOutput`](https://developers.google.com/apps-script/reference/content/text-output). |
-| [`isUi`](src/appsscript/ui/isUi.ts)                                 | Checks if an object is a [`Ui`](https://developers.google.com/apps-script/reference/base/ui).                     |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="src/appsscript/ui/checkMultipleAccount.ts"><code>checkMultipleAccount</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if multiple Google accounts are in use.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/ui/isHtmlOutput.ts"><code>isHtmlOutput</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is an <a href="https://developers.google.com/apps-script/reference/html/html-output"><code>HtmlOutput</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/ui/isTextOutput.ts"><code>isTextOutput</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is a <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/ui/isUi.ts"><code>isUi</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if an object is a <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a>.</td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
 </details>
 
-### 2. `Base Utilities
+### 2. `Base` Utilities
 
 This package contains core utility functions that are not tied to a specific Apps Script service.
 
@@ -258,7 +524,7 @@ This package is for all exception classes.
 | Exception                                                                                  | Description                                                                                                                                       |
 | :----------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`AdminDirectoryException`](src/exception/appsscript/admin/AdminDirectoryException.ts)     | Represents an exception thrown when the Admin SDK Directory Service is not available or enabled.                                                  |
-| [`InvalidGridRangeException`](src/exception/appsscript/sheet/InvalidGridRangeException.ts) | Represents an exception thrown when an invalid [`GridRange`](src/appsscript/sheet/types/GridRange.ts) object is provided.                         |
+| [`InvalidGridRangeException`](src/exception/appsscript/sheet/InvalidGridRangeException.ts) | Represents an exception thrown when an invalid <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object is provided.                         |
 | [`InvalidRangeException`](src/exception/appsscript/sheet/InvalidRangeException.ts)         | Represents an exception thrown when an invalid [range](https://developers.google.com/apps-script/reference/spreadsheet/sheet) object is provided. |
 | [`InvalidSheetException`](src/exception/appsscript/sheet/InvalidSheetException.ts)         | Represents an exception thrown when an invalid [sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) object is provided. |
 
@@ -280,14 +546,47 @@ Functions for working with file paths and URLs.
 
 <details open><summary>Functions</summary>
 
-| Function                                         | Description                                                     |
-| :----------------------------------------------- | :-------------------------------------------------------------- |
-| [`isAbsolute`](src/net/path/isAbsolute.ts)       | Checks if a path is absolute.                                   |
-| [`isRelative`](src/net/path/isRelative.ts)       | Checks if a path is relative.                                   |
-| [`isValidDomain`](src/net/path/isValidDomain.ts) | Checks if a string is a valid domain name.                      |
-| [`join`](src/net/path/join.ts)                   | Joins multiple path segments.                                   |
-| [`normalize`](src/net/path/normalize.ts)         | Normalizes a path, resolving `.` and `..`.                      |
-| [`parse`](src/net/path/parse.ts)                 | Parses a path into its components (root, dir, base, ext, name). |
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="src/net/path/isAbsolute.ts"><code>isAbsolute</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a path is absolute.</td>
+        </tr>
+        <tr>
+            <td><a href="src/net/path/isRelative.ts"><code>isRelative</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a path is relative.</td>
+        </tr>
+        <tr>
+            <td><a href="src/net/path/isValidDomain.ts"><code>isValidDomain</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a string is a valid domain name.</td>
+        </tr>
+        <tr>
+            <td><a href="src/net/path/join.ts"><code>join</code></a></td>
+            <td><code>String</code></td>
+            <td>Joins multiple path segments.</td>
+        </tr>
+        <tr>
+            <td><a href="src/net/path/normalize.ts"><code>normalize</code></a></td>
+            <td><code>String</code></td>
+            <td>Normalizes a path, resolving <code>.</code> and <code>..</code>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/net/path/parse.ts"><code>parse</code></a></td>
+            <td><a href="src/net/path/types/ParsedPath.ts"><code>ParsedPath</code></a></td>
+            <td>Parses a path into its components (<code>root</code>, <code>dir</code>, <code>base</code>, <code>ext</code>, <code>name</code>).</td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
@@ -295,17 +594,39 @@ Functions for working with file paths and URLs.
 
 <details open><summary>Functions</summary>
 
-| Abstract                     | Description |
-| :--------------------------- | :---------- |
-| [`Class`](src/lang/Class.ts) |             |
+<table>
+    <thead>
+        <tr>
+            <th>Abstract</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="src/lang/Class.ts"><code>Class</code></a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
 <details open><summary>Functions</summary>
 
-| Interface                          | Description              |
-| :--------------------------------- | :----------------------- |
-| [`Iterator`](src/lang/Iterator.ts) | Interface for iterators. |
+<table>
+    <thead>
+        <tr>
+            <th>Interface</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="src/lang/Iterator.ts"><code>Iterator</code></a></td>
+            <td>Interface for iterators.</td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
