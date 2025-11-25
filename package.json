@@ -51,7 +51,7 @@
     "@eslint/js": "^9.38.0",
     "@eslint/json": "^0.13.2",
     "@eslint/markdown": "^7.5.0",
-    "@types/google-apps-script": "^2.0.7",
+    "@types/google-apps-script": "^2.0.8",
     "@types/node": "^24.9.1",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
