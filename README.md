@@ -19,27 +19,28 @@
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github)](https://github.com/sponsors/MaksymStoianov)
 
 <!-- TOC -->
-* [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
-  * [Introduction](#introduction)
-  * [How to Install](#how-to-install)
-  * [Functions by Category](#functions-by-category)
-    * [1. Google Apps Script Module](#1-google-apps-script-module)
-      * [1.1. Google Base Methods](#11-google-base-methods)
-      * [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
-      * [1.3. Google Drive Methods](#13-google-drive-methods)
-      * [1.4. Google Docs Methods](#14-google-docs-methods)
-      * [1.5. Google Forms Methods](#15-google-forms-methods)
-      * [1.6. Google Sheets Methods](#16-google-sheets-methods)
-      * [1.7. Google Slides Methods](#17-google-slides-methods)
-      * [1.8. Google UI Methods](#18-google-ui-methods)
-    * [2. `Base` Utilities](#2-base-utilities)
-    * [3. Exceptions Module](#3-exceptions-module)
-    * [4. `path` Module](#4-path-module)
-    * [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
-  * [Tasks](#tasks)
-  * [Changelog](#changelog)
-  * [License](#license)
-<!-- TOC -->
+
+- [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
+  - [Introduction](#introduction)
+  - [How to Install](#how-to-install)
+  - [Functions by Category](#functions-by-category)
+    - [1. Google Apps Script Module](#1-google-apps-script-module)
+      - [1.1. Google Base Methods](#11-google-base-methods)
+      - [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
+      - [1.3. Google Drive Methods](#13-google-drive-methods)
+      - [1.4. Google Docs Methods](#14-google-docs-methods)
+      - [1.5. Google Forms Methods](#15-google-forms-methods)
+      - [1.6. Google Sheets Methods](#16-google-sheets-methods)
+      - [1.7. Google Slides Methods](#17-google-slides-methods)
+      - [1.8. Google UI Methods](#18-google-ui-methods)
+    - [2. `Base` Utilities](#2-base-utilities)
+    - [3. Exceptions Module](#3-exceptions-module)
+    - [4. `path` Module](#4-path-module)
+    - [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
+  - [Tasks](#tasks)
+  - [Changelog](#changelog)
+  - [License](#license)
+  <!-- TOC -->
 
 ## Introduction
 
@@ -524,7 +525,7 @@ This package is for all exception classes.
 | Exception                                                                                  | Description                                                                                                                                       |
 | :----------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`AdminDirectoryException`](src/exception/appsscript/admin/AdminDirectoryException.ts)     | Represents an exception thrown when the Admin SDK Directory Service is not available or enabled.                                                  |
-| [`InvalidGridRangeException`](src/exception/appsscript/sheet/InvalidGridRangeException.ts) | Represents an exception thrown when an invalid <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object is provided.                         |
+| [`InvalidGridRangeException`](src/exception/appsscript/sheet/InvalidGridRangeException.ts) | Represents an exception thrown when an invalid <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object is provided.   |
 | [`InvalidRangeException`](src/exception/appsscript/sheet/InvalidRangeException.ts)         | Represents an exception thrown when an invalid [range](https://developers.google.com/apps-script/reference/spreadsheet/sheet) object is provided. |
 | [`InvalidSheetException`](src/exception/appsscript/sheet/InvalidSheetException.ts)         | Represents an exception thrown when an invalid [sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) object is provided. |
 
