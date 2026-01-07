@@ -2,11 +2,10 @@
 
 ## [1.6.1](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.6.0...v1.6.1) (2025-11-01)
 
-
 ### Bug Fixes
 
-* update package.json ([a180666](https://github.com/MaksymStoianov/apps-script-utils/commit/a180666a82a16b9c7ae5dae10dc38d802515010d))
-* update package.json ([87d27ac](https://github.com/MaksymStoianov/apps-script-utils/commit/87d27ac131bfdef5adb07dafc4d637bb105ff636))
+- update package.json ([a180666](https://github.com/MaksymStoianov/apps-script-utils/commit/a180666a82a16b9c7ae5dae10dc38d802515010d))
+- update package.json ([87d27ac](https://github.com/MaksymStoianov/apps-script-utils/commit/87d27ac131bfdef5adb07dafc4d637bb105ff636))
 
 ## [1.6.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.5.1...v1.6.0) (2025-10-11)
 
