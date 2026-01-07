@@ -1,5 +1,5 @@
-import { IllegalArgumentException, isEmpty } from "apps-script-utils";
-import { isCountable } from "./isCountable";
+import { IllegalArgumentException } from "../../exception";
+import { isCountable, isEmpty } from "../../lang";
 
 /**
  * ## getSheetById
@@ -10,6 +10,7 @@ import { isCountable } from "./isCountable";
  * @param       [spreadsheet] - The Spreadsheet object to search within. Defaults to the active Spreadsheet if not provided.
  * @returns     The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object if found, otherwise `null`.
  * @throws      {@link IllegalArgumentException}
+ * @see         {@link getSheetById}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @version     1.0.0
@@ -24,9 +25,7 @@ export function getSheetByIndex(
   }
 
   if (!(sheetIndex === 0 || isCountable(sheetIndex))) {
-    throw new IllegalArgumentException(
-      "The sheetIndex must be a valid number."
-    );
+    throw new IllegalArgumentException();
   }
 
   const ss = spreadsheet || SpreadsheetApp.getActiveSpreadsheet();
