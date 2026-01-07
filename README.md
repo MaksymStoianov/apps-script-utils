@@ -19,27 +19,28 @@
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github)](https://github.com/sponsors/MaksymStoianov)
 
 <!-- TOC -->
-* [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
-  * [Introduction](#introduction)
-  * [How to Install](#how-to-install)
-  * [Functions by Category](#functions-by-category)
-    * [1. Google Apps Script Module](#1-google-apps-script-module)
-      * [1.1. Google Base Methods](#11-google-base-methods)
-      * [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
-      * [1.3. Google Drive Methods](#13-google-drive-methods)
-      * [1.4. Google Docs Methods](#14-google-docs-methods)
-      * [1.5. Google Forms Methods](#15-google-forms-methods)
-      * [1.6. Google Sheets Methods](#16-google-sheets-methods)
-      * [1.7. Google Slides Methods](#17-google-slides-methods)
-      * [1.8. Google UI Methods](#18-google-ui-methods)
-    * [2. `Base` Utilities](#2-base-utilities)
-    * [3. Exceptions Module](#3-exceptions-module)
-    * [4. `path` Module](#4-path-module)
-    * [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
-  * [Tasks](#tasks)
-  * [Changelog](#changelog)
-  * [License](#license)
-<!-- TOC -->
+
+- [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
+    - [Introduction](#introduction)
+    - [How to Install](#how-to-install)
+    - [Functions by Category](#functions-by-category)
+        - [1. Google Apps Script Module](#1-google-apps-script-module)
+            - [1.1. Google Base Methods](#11-google-base-methods)
+            - [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
+            - [1.3. Google Drive Methods](#13-google-drive-methods)
+            - [1.4. Google Docs Methods](#14-google-docs-methods)
+            - [1.5. Google Forms Methods](#15-google-forms-methods)
+            - [1.6. Google Sheets Methods](#16-google-sheets-methods)
+            - [1.7. Google Slides Methods](#17-google-slides-methods)
+            - [1.8. Google UI Methods](#18-google-ui-methods)
+        - [2. `Base` Utilities](#2-base-utilities)
+        - [3. Exceptions Module](#3-exceptions-module)
+        - [4. `path` Module](#4-path-module)
+        - [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
+    - [Tasks](#tasks)
+    - [Changelog](#changelog)
+    - [License](#license)
+  <!-- TOC -->
 
 ## Introduction
 
@@ -258,6 +259,11 @@ Functions that enable various operations on Google Sheets.
             <td>Gets a sheet by its ID.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/getSheetByIndex.ts"><code>getSheetByIndex</code></a></td>
+            <td></td>
+            <td>Gets a sheet by its index.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/highlightHtml.ts"><code>highlightHtml</code></a></td>
             <td></td>
             <td>Adds syntax highlighting to an HTML string.</td>
@@ -451,7 +457,7 @@ This package contains core utility functions that are not tied to a specific App
 <details open><summary>Functions</summary>
 
 | Function                                                            | Description                                                                                    |
-| :------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------- |
+|:--------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
 | [`chunk`](src/lang/array/chunk.ts)                                  | Splits an array into chunks of a specified size.                                               |
 | [`decodeHtml`](src/html/decodeHtml.ts)                              | Decodes HTML entities.                                                                         |
 | [`encodeHtml`](src/html/encodeHtml.ts)                              | Encodes a string for safe use in HTML.                                                         |
@@ -471,7 +477,10 @@ This package contains core utility functions that are not tied to a specific App
 | [`isLength`](src/lang/base/isLength.ts)                             | Checks if a value is "length-like" (arrays, strings, etc.).                                    |
 | [`isNil`](src/lang/base/isNil.ts)                                   | Checks if a value is `null` or `undefined`.                                                    |
 | [`isNull`](src/lang/base/isNull.ts)                                 | Checks if a value is `null`.                                                                   |
-| [`isNumber`](src/lang/base/isNumber.ts)                             | Checks if a variable is a number.                                                              |
+| [`toInteger`](src/lang/number/toInteger.ts)                         | Converts a value to an integer.                                                                |
+| [`isInteger`](src/lang/number/isInteger.ts)                         |                                                                                                |
+| [`isCountable)`](src/lang/number/isCountable.ts)                    |                                                                                                |
+| [`nonNegative`](src/lang/number/nonNegative.ts)                     |                                                                                                |
 | [`isNumberLike`](src/lang/base/isNumberLike.ts)                     | Checks if a value can be converted to a number.                                                |
 | [`isObject`](src/lang/base/isObject.ts)                             | Checks if a variable is an object (but not `null` or an array).                                |
 | [`isObjectLike`](src/lang/base/isObjectLike.ts)                     | Checks if a variable is object-like (objects, arrays, functions).                              |
@@ -522,14 +531,14 @@ This package is for all exception classes.
 <details open><summary>Functions</summary>
 
 | Exception                                                                                  | Description                                                                                                                                       |
-| :----------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+|:-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
 | [`AdminDirectoryException`](src/exception/appsscript/admin/AdminDirectoryException.ts)     | Represents an exception thrown when the Admin SDK Directory Service is not available or enabled.                                                  |
-| [`InvalidGridRangeException`](src/exception/appsscript/sheet/InvalidGridRangeException.ts) | Represents an exception thrown when an invalid <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object is provided.                         |
+| [`InvalidGridRangeException`](src/exception/appsscript/sheet/InvalidGridRangeException.ts) | Represents an exception thrown when an invalid <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object is provided.   |
 | [`InvalidRangeException`](src/exception/appsscript/sheet/InvalidRangeException.ts)         | Represents an exception thrown when an invalid [range](https://developers.google.com/apps-script/reference/spreadsheet/sheet) object is provided. |
 | [`InvalidSheetException`](src/exception/appsscript/sheet/InvalidSheetException.ts)         | Represents an exception thrown when an invalid [sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) object is provided. |
 
 | Exception                                                                     | Description                                                                                     |
-| :---------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
+|:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------|
 | [`Exception`](src/exception/Exception.ts)                                     | Base exception class.                                                                           |
 | [`RuntimeException`](src/exception/RuntimeException.ts)                       | Exception for runtime errors.                                                                   |
 | [`EmptyStringException`](src/exception/EmptyStringException.ts)               | Exception for empty strings.                                                                    |

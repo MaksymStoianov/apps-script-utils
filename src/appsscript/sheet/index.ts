@@ -51,7 +51,8 @@ export { extractRangeFromA1Notation } from "./extractRangeFromA1Notation";
 export { extractSheetNameFromA1Notation } from "./extractSheetNameFromA1Notation";
 export { getColumnIndexByLetter } from "./getColumnIndexByLetter";
 export { getColumnLetterByIndex } from "./getColumnLetterByIndex";
-export { getSheetById } from "./getSheetById";
+export * from "./getSheetById";
+export * from "./getSheetByIndex";
 // TODO: getValues(sheet: Sheet, config: Object)
 // TODO: clearColumnsByConditional(sheet: Sheet, callback: Function)
 // TODO: clearRowsByConditional(sheet: Sheet, callback: Function)
