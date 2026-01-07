@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.6.1...v1.7.0) (2026-01-07)
+
+
+### Features
+
+* **appsscript/sheet/getSheetById:** Update getSheetById utility function ([3c31a01](https://github.com/MaksymStoianov/apps-script-utils/commit/3c31a01f457d890718a88be73fc84d4a15c63c0f))
+* **appsscript/sheet/getSheetByIndex:** Add getSheetByIndex utility function ([857ea01](https://github.com/MaksymStoianov/apps-script-utils/commit/857ea0182b990fb8254a3f3ca4d9d5c1686315d6))
+* **lang/number/nonNegative:** Add nonNegative utility function ([95da638](https://github.com/MaksymStoianov/apps-script-utils/commit/95da6382723fb8392abe6e1ec65588098d62fbbf))
+
 ## [1.6.1](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.6.0...v1.6.1) (2025-11-01)
 
 ### Bug Fixes
