@@ -21,34 +21,34 @@
 <!-- TOC -->
 
 - [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
-    - [Overview](#overview)
-    - [Key Features](#key-features)
-    - [Requirements](#requirements)
-    - [How to Install](#how-to-install)
-    - [Usage Examples](#usage-examples)
-    - [Development](#development)
-        - [Scripts](#scripts)
-        - [Testing](#testing)
-    - [Project Structure](#project-structure)
-    - [Functions by Category](#functions-by-category)
-        - [1. Google Apps Script Module](#1-google-apps-script-module)
-            - [1.1. Google Base Methods](#11-google-base-methods)
-            - [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
-            - [1.3. Google Drive Methods](#13-google-drive-methods)
-            - [1.4. Google Docs Methods](#14-google-docs-methods)
-            - [1.5. Google Forms Methods](#15-google-forms-methods)
-            - [1.6. Google Sheets Methods](#16-google-sheets-methods)
-            - [1.7. Google Slides Methods](#17-google-slides-methods)
-            - [1.8. Google UI Methods](#18-google-ui-methods)
-        - [2. `Base` Utilities](#2-base-utilities)
-        - [3. Exceptions Module](#3-exceptions-module)
-        - [4. `path` Module](#4-path-module)
-        - [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
-    - [Contributing](#contributing)
-    - [Support](#support)
-    - [Roadmap](#roadmap)
-    - [Changelog](#changelog)
-    - [License](#license)
+  - [Overview](#overview)
+  - [Key Features](#key-features)
+  - [Requirements](#requirements)
+  - [How to Install](#how-to-install)
+  - [Usage Examples](#usage-examples)
+  - [Development](#development)
+    - [Scripts](#scripts)
+    - [Testing](#testing)
+  - [Project Structure](#project-structure)
+  - [Functions by Category](#functions-by-category)
+    - [1. Google Apps Script Module](#1-google-apps-script-module)
+      - [1.1. Google Base Methods](#11-google-base-methods)
+      - [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
+      - [1.3. Google Drive Methods](#13-google-drive-methods)
+      - [1.4. Google Docs Methods](#14-google-docs-methods)
+      - [1.5. Google Forms Methods](#15-google-forms-methods)
+      - [1.6. Google Sheets Methods](#16-google-sheets-methods)
+      - [1.7. Google Slides Methods](#17-google-slides-methods)
+      - [1.8. Google UI Methods](#18-google-ui-methods)
+    - [2. `Base` Utilities](#2-base-utilities)
+    - [3. Exceptions Module](#3-exceptions-module)
+    - [4. `path` Module](#4-path-module)
+    - [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
+  - [Contributing](#contributing)
+  - [Support](#support)
+  - [Roadmap](#roadmap)
+  - [Changelog](#changelog)
+  - [License](#license)
   <!-- TOC -->
 
 ## Overview
@@ -95,7 +95,7 @@ npm install github:MaksymStoianov/apps-script-utils#v1.6.0
 Append multiple rows of data efficiently:
 
 ```typescript
-import {appendRows} from "apps-script-utils";
+import { appendRows } from "apps-script-utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 const data = [
@@ -111,7 +111,7 @@ appendRows(sheet, data);
 Check if the current user has administrative privileges:
 
 ```typescript
-import {isAdmin} from "apps-script-utils";
+import { isAdmin } from "apps-script-utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");
@@ -125,7 +125,7 @@ if (isAdmin()) {
 Parse complex A1 notations into structured objects:
 
 ```typescript
-import {parseA1Notation} from "apps-script-utils";
+import { parseA1Notation } from "apps-script-utils";
 
 const rangeInfo = parseA1Notation("'Sheet1'!A1:B10");
 

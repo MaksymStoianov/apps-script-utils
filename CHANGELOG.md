@@ -48,8 +48,8 @@
 
 -
 
-imports ([14698eb](https://github.com/MaksymStoianov/appsscript-utils/commit/14698eb18da88686f50b855637b9b454b4465473))
--
+## imports ([14698eb](https://github.com/MaksymStoianov/appsscript-utils/commit/14698eb18da88686f50b855637b9b454b4465473))
+
 imports ([6ed4266](https://github.com/MaksymStoianov/appsscript-utils/commit/6ed426619eb071006e0cd0dc79d1d5794fd4256e))
 
 ## [1.5.0](https://github.com/MaksymStoianov/appsscript-utils/compare/v1.4.0...v1.5.0) (2025-09-09)
@@ -87,8 +87,8 @@ imports ([6ed4266](https://github.com/MaksymStoianov/appsscript-utils/commit/6ed
 
 -
 
-imports ([d8b407c](https://github.com/MaksymStoianov/appsscript-utils/commit/d8b407c46eb74a0a7277b435eb22eb7477f830eb))
--
+## imports ([d8b407c](https://github.com/MaksymStoianov/appsscript-utils/commit/d8b407c46eb74a0a7277b435eb22eb7477f830eb))
+
 imports ([528ecc1](https://github.com/MaksymStoianov/appsscript-utils/commit/528ecc1580f84dfe26f4676eb8fbb420ba7cf500))
 
 - src/base/index.ts add
@@ -175,20 +175,20 @@ imports ([528ecc1](https://github.com/MaksymStoianov/appsscript-utils/commit/528
   type ([3d23ad2](https://github.com/MaksymStoianov/appsscript-utils/commit/3d23ad2cdb9eba0bb24bb9f8866ebd0536c0a59a))
 -
 
-src/appsscript/checkMultipleAccount.ts ([1e96039](https://github.com/MaksymStoianov/appsscript-utils/commit/1e960393f9b58fe5e8b6bc5d06e642d33561cb73))
--
-src/appsscript/sheets/isSheet.ts ([bf7b2d3](https://github.com/MaksymStoianov/appsscript-utils/commit/bf7b2d394f730e3ce431c944537135100221b0a4))
--
-src/appsscript/sheets/isSpreadsheet.ts ([1217166](https://github.com/MaksymStoianov/appsscript-utils/commit/1217166e87592af4380ef00a1c14b923d3888d1c))
--
-src/appsscript/sheets/isSpreadsheet.ts ([61de161](https://github.com/MaksymStoianov/appsscript-utils/commit/61de161bec2358c02783c4b2f4fbd430ea5d21f0))
--
-src/appsscript/sheets/isTextStyle.ts ([5d27058](https://github.com/MaksymStoianov/appsscript-utils/commit/5d270581b6002ad120df110879ad858ce897ec89))
--
-src/appsscript/sheets/isValidSheetName.ts ([f843bde](https://github.com/MaksymStoianov/appsscript-utils/commit/f843bdea6f00228bc3bc7dcfb4859495a30cdc57))
--
-src/appsscript/sheets/isValidSpreadsheetId.ts ([053de55](https://github.com/MaksymStoianov/appsscript-utils/commit/053de555102d5efbc4b853fdad7f60314d500d1a))
--
-src/appsscript/sheets/parseA1Notation.ts ([168a2e2](https://github.com/MaksymStoianov/appsscript-utils/commit/168a2e207d4630016371add9c6509485c09ba7ec))
--
+## src/appsscript/checkMultipleAccount.ts ([1e96039](https://github.com/MaksymStoianov/appsscript-utils/commit/1e960393f9b58fe5e8b6bc5d06e642d33561cb73))
+
+## src/appsscript/sheets/isSheet.ts ([bf7b2d3](https://github.com/MaksymStoianov/appsscript-utils/commit/bf7b2d394f730e3ce431c944537135100221b0a4))
+
+## src/appsscript/sheets/isSpreadsheet.ts ([1217166](https://github.com/MaksymStoianov/appsscript-utils/commit/1217166e87592af4380ef00a1c14b923d3888d1c))
+
+## src/appsscript/sheets/isSpreadsheet.ts ([61de161](https://github.com/MaksymStoianov/appsscript-utils/commit/61de161bec2358c02783c4b2f4fbd430ea5d21f0))
+
+## src/appsscript/sheets/isTextStyle.ts ([5d27058](https://github.com/MaksymStoianov/appsscript-utils/commit/5d270581b6002ad120df110879ad858ce897ec89))
+
+## src/appsscript/sheets/isValidSheetName.ts ([f843bde](https://github.com/MaksymStoianov/appsscript-utils/commit/f843bdea6f00228bc3bc7dcfb4859495a30cdc57))
+
+## src/appsscript/sheets/isValidSpreadsheetId.ts ([053de55](https://github.com/MaksymStoianov/appsscript-utils/commit/053de555102d5efbc4b853fdad7f60314d500d1a))
+
+## src/appsscript/sheets/parseA1Notation.ts ([168a2e2](https://github.com/MaksymStoianov/appsscript-utils/commit/168a2e207d4630016371add9c6509485c09ba7ec))
+
 src/appsscript/sheets/toA1Notation.ts ([075fb3c](https://github.com/MaksymStoianov/appsscript-utils/commit/075fb3c81e7d855aff01f34e6a12a88b2f111e6c))
