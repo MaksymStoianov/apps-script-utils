@@ -1,5 +1,6 @@
 // TODO: isDouble
 // TODO: isFloat
+export * from "./isCountable";
 export { isInteger } from "./isInteger";
 // TODO: isSafeInteger
 // TODO: isNaN
@@ -9,6 +10,7 @@ export { isInteger } from "./isInteger";
 // TODO: nonInteger
 // TODO: nonSafeInteger
 // TODO: nonNaN
+export * from "./nonNegative";
 
 // TODO: requireDouble
 // TODO: requireFloat

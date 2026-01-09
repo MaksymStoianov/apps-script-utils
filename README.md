@@ -399,6 +399,11 @@ Functions that enable various operations on Google Sheets.
             <td>Retrieves a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object by its unique ID.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/getSheetByIndex.ts"><code>getSheetByIndex</code></a></td>
+            <td></td>
+            <td>Gets a sheet by its index.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/highlightHtml.ts"><code>highlightHtml</code></a></td>
             <td><code>String</code></td>
             <td>Applies syntax highlighting to an HTML string.</td>
