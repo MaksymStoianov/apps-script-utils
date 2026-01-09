@@ -11,7 +11,6 @@
 # Utilities for Google Apps Script™ projects
 
 [![Built%20with-clasp](https://img.shields.io/badge/Built%20with-clasp-4285f4.svg)](https://github.com/google/clasp)
-[![Tests Status](https://github.com/MaksymStoianov/apps-script-utils/actions/workflows/test.yml/badge.svg)](https://github.com/MaksymStoianov/apps-script-utils/actions/workflows/test.yml)
 [![License](https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License)](LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release)](https://github.com/MaksymStoianov/apps-script-utils/releases)
 
@@ -22,34 +21,34 @@
 <!-- TOC -->
 
 - [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
-  - [Overview](#overview)
-  - [Key Features](#key-features)
-  - [Requirements](#requirements)
-  - [How to Install](#how-to-install)
-  - [Usage Examples](#usage-examples)
-  - [Development](#development)
-    - [Scripts](#scripts)
-    - [Testing](#testing)
-  - [Project Structure](#project-structure)
-  - [Functions by Category](#functions-by-category)
-    - [1. Google Apps Script Module](#1-google-apps-script-module)
-      - [1.1. Google Base Methods](#11-google-base-methods)
-      - [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
-      - [1.3. Google Drive Methods](#13-google-drive-methods)
-      - [1.4. Google Docs Methods](#14-google-docs-methods)
-      - [1.5. Google Forms Methods](#15-google-forms-methods)
-      - [1.6. Google Sheets Methods](#16-google-sheets-methods)
-      - [1.7. Google Slides Methods](#17-google-slides-methods)
-      - [1.8. Google UI Methods](#18-google-ui-methods)
-    - [2. `Base` Utilities](#2-base-utilities)
-    - [3. Exceptions Module](#3-exceptions-module)
-    - [4. `path` Module](#4-path-module)
-    - [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
-  - [Contributing](#contributing)
-  - [Support](#support)
-  - [Roadmap](#roadmap)
-  - [Changelog](#changelog)
-  - [License](#license)
+    - [Overview](#overview)
+    - [Key Features](#key-features)
+    - [Requirements](#requirements)
+    - [How to Install](#how-to-install)
+    - [Usage Examples](#usage-examples)
+    - [Development](#development)
+        - [Scripts](#scripts)
+        - [Testing](#testing)
+    - [Project Structure](#project-structure)
+    - [Functions by Category](#functions-by-category)
+        - [1. Google Apps Script Module](#1-google-apps-script-module)
+            - [1.1. Google Base Methods](#11-google-base-methods)
+            - [1.2. Google Admin SDK Directory Methods](#12-google-admin-sdk-directory-methods)
+            - [1.3. Google Drive Methods](#13-google-drive-methods)
+            - [1.4. Google Docs Methods](#14-google-docs-methods)
+            - [1.5. Google Forms Methods](#15-google-forms-methods)
+            - [1.6. Google Sheets Methods](#16-google-sheets-methods)
+            - [1.7. Google Slides Methods](#17-google-slides-methods)
+            - [1.8. Google UI Methods](#18-google-ui-methods)
+        - [2. `Base` Utilities](#2-base-utilities)
+        - [3. Exceptions Module](#3-exceptions-module)
+        - [4. `path` Module](#4-path-module)
+        - [5. `abstracts` and `interfaces`](#5-abstracts-and-interfaces)
+    - [Contributing](#contributing)
+    - [Support](#support)
+    - [Roadmap](#roadmap)
+    - [Changelog](#changelog)
+    - [License](#license)
   <!-- TOC -->
 
 ## Overview
@@ -96,7 +95,7 @@ npm install github:MaksymStoianov/apps-script-utils#v1.6.0
 Append multiple rows of data efficiently:
 
 ```typescript
-import { appendRows } from "apps-script-utils";
+import {appendRows} from "apps-script-utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 const data = [
@@ -112,7 +111,7 @@ appendRows(sheet, data);
 Check if the current user has administrative privileges:
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import {isAdmin} from "apps-script-utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");
@@ -126,7 +125,7 @@ if (isAdmin()) {
 Parse complex A1 notations into structured objects:
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import {parseA1Notation} from "apps-script-utils";
 
 const rangeInfo = parseA1Notation("'Sheet1'!A1:B10");
 
@@ -400,8 +399,8 @@ Functions that enable various operations on Google Sheets.
         </tr>
         <tr>
             <td><a href="src/appsscript/sheet/getSheetByIndex.ts"><code>getSheetByIndex</code></a></td>
-            <td></td>
-            <td>Gets a sheet by its index.</td>
+            <td><a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> | null</td>
+            <td>Retrieves a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object by its zero-based index.</td>
         </tr>
         <tr>
             <td><a href="src/appsscript/sheet/highlightHtml.ts"><code>highlightHtml</code></a></td>
@@ -661,6 +660,11 @@ This package contains core utility functions that are not tied to a specific App
             <td>Validates if a 2D array has uniform inner array lengths.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/isCountable.ts"><code>isCountable</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a non-negative safe integer.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/string/isEmail.ts"><code>isEmail</code></a></td>
             <td><code>Boolean</code></td>
             <td>Validates if a string follows a proper email format.</td>
@@ -684,6 +688,11 @@ This package contains core utility functions that are not tied to a specific App
             <td><a href="src/lang/base/isFunctionLike.ts"><code>isFunctionLike</code></a></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is "function-like" (e.g., callable).</td>
+        </tr>
+        <tr>
+            <td><a href="src/lang/number/isInteger.ts"><code>isInteger</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a number and an integer.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/isLength.ts"><code>isLength</code></a></td>
@@ -801,6 +810,11 @@ This package contains core utility functions that are not tied to a specific App
             <td>Checks if a value is NOT <code>null</code>.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/nonNegative.ts"><code>nonNegative</code></a></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a non-negative number.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/nonNumber.ts"><code>nonNumber</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT a number.</td>
@@ -824,6 +838,16 @@ This package contains core utility functions that are not tied to a specific App
             <td><a href="src/lang/base/nonUndefined.ts"><code>nonUndefined</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT <code>undefined</code>.</td>
+        </tr>
+        <tr>
+            <td><a href="src/time/now.ts"><code>now</code></a></td>
+            <td><code>Number</code></td>
+            <td>Returns the current timestamp in milliseconds.</td>
+        </tr>
+        <tr>
+            <td><a href="src/lang/object/ObjectTag.ts"><code>ObjectTag</code></a></td>
+            <td><code>Enum</code></td>
+            <td>Enum representing <code>Object#toString</code> result references in uppercase.</td>
         </tr>
         <tr>
             <td><a href="src/json/parseJson.ts"><code>parseJson</code></a></td>
