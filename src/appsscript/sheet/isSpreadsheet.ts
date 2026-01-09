@@ -3,12 +3,11 @@ import { isObject } from "../../lang";
 /**
  * ## isSpreadsheet
  *
- * Checks if the given value is a Google Apps Script [`Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet) object.
+ * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object.
  *
  * @param       value - The value to check.
- * @returns     `true` if the value is a {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet} object, `false` otherwise.
- * @see         {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet}
- * @see         [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
+ * @returns     `true` if the value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object, `false` otherwise.
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a>
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

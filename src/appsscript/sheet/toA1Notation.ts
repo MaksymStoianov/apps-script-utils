@@ -9,7 +9,7 @@ import type { GridRange } from "./types";
 /**
  * ## toA1Notation
  *
- * Converts a {@link GridRange} object back into an A1 notation string.
+ * Converts a <a href="./types/GridRange.ts"><code>GridRange</code></a> object back into an A1 notation string.
  *
  * @example
  * ```javascript
@@ -25,15 +25,13 @@ import type { GridRange } from "./types";
  * console.log(a1Notation); // A1:B2
  * ```
  *
- * @param       gridRange - The {@link GridRange} object to convert.
+ * @param       gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to convert.
  * @returns     The A1 notation string.
- * @throws      {@link IllegalArgumentException}
- * @throws      {@link InvalidGridRangeException}
- * @see         {@link GridRange}
- * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
- * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
- * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
- * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
+ * @throws      <a href="../../exception/appsscript/sheet/InvalidGridRangeException.ts"><code>InvalidGridRangeException</code></a>
+ * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

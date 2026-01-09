@@ -13,7 +13,7 @@ export interface Options {
 /**
  * ## appendRows
  *
- * Appends rows to the bottom of the current data area on a [`sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).
+ * Appends rows to the bottom of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
  * Data is written starting from column 1 of the new rows.
  * If a cell's content in `values` starts with `=`, it is interpreted as a formula.
  *
@@ -28,18 +28,16 @@ export interface Options {
  * ]);
  * ```
  *
- * @param       sheet - The Google Apps Script {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object to which columns will be appended.
+ * @param       sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which columns will be appended.
  * @param       values - A 2D array containing the data to append.
  * @param       [options] - Additional parameters to customize the method's behavior.
- * @returns     The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object.
- * @throws      {@link IllegalArgumentException}
+ * @returns     The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
+ * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @throws      {@link InvalidSheetException}
  * @see         {@link prependRows}
  * @see         {@link appendRow}
- * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
- * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
- * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
- * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
  * @since       1.0.0
  * @version     1.5.0
  * @environment `Google Apps Script`

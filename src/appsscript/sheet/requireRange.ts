@@ -4,14 +4,15 @@ import { isRange } from "./isRange";
 /**
  * ## requireRange
  *
- * Ensures that the provided value is a valid {@link GoogleAppsScript.Spreadsheet.Range|Range} object, throwing an exception otherwise.
+ * Ensures that the provided value is a valid <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object, throwing an exception otherwise.
  *
- * @param   value - The value to validate as a {@link GoogleAppsScript.Spreadsheet.Range|Range} object.
+ * @param   value - The value to validate as a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object.
  * @param   [message] - Optional custom error message if the validation fails.
- * @returns The validated {@link GoogleAppsScript.Spreadsheet.Range|Range} object.
- * @throws  {@link InvalidRangeException}
+ * @returns The validated <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object.
+ * @throws  <a href="../../exception/appsscript/sheet/InvalidRangeException.ts"><code>InvalidRangeException</code></a>
  * @see     {@link isRange}
  * @see     {@link nonRange}
+ * @see     <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @since   1.5.0
  * @version 1.0.0
  */

@@ -3,14 +3,13 @@ import { isObject } from "../../lang";
 /**
  * ## isRange
  *
- * Checks if the given value is a Google Apps Script [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range) object.
+ * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object.
  *
  * @param       value - The value to check.
- * @returns     `true` if the value is a {@link GoogleAppsScript.Spreadsheet.Range|Range} object, `false` otherwise.
+ * @returns     `true` if the value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object, `false` otherwise.
  * @see         {@link nonRange}
  * @see         {@link requireRange}
- * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
- * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

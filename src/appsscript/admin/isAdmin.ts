@@ -9,7 +9,7 @@ import { nonFunction } from "../../lang";
  * **Note:** Requires the [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory) to be enabled.
  *
  * @returns     `true` if the user is an administrator; otherwise, `false`.
- * @see         {@link GoogleAppsScript.AdminDirectory.Schema.User|User}
+ * @see         <a href="https://developers.google.com/apps-script/reference/base/user"><code>User</code></a>
  * @see         [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory)
  * @since       1.5.0
  * @version     1.1.0

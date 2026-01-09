@@ -12,14 +12,12 @@ import { parseA1Notation } from "./parseA1Notation";
  * @param       {string|null} [sheetName] - The new sheet name to set.
  * Pass `null` or `undefined` to remove any existing sheet name and return only the range.
  * @returns     {string} The new A1 notation string with the updated sheet name (e.g., `'New Sheet'!A1:B2` or just `A1:B2`).
- * @throws      {@link IllegalArgumentException}
- * @throws      {@link EmptyStringException}
+ * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
+ * @throws      <a href="../../exception/EmptyStringException.ts"><code>EmptyStringException</code></a>
  * @see         {@link parseA1Notation}
- * @see         {@link GridRange}
- * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
- * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
- * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
- * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
  * @since       1.6.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`
