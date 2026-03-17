@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.8.0...v1.8.1) (2026-03-17)
+
+
+### Bug Fixes
+
+* bump version to 1.8.2 ([dfdd61f](https://github.com/MaksymStoianov/apps-script-utils/commit/dfdd61f467c7880a01a1f5ff27b66ca07439a9af))
+
 ## [1.8.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.7.0...v1.8.0) (2026-03-17)
 
 
