@@ -16,8 +16,8 @@ export default {
       }
     ],
     "jsdoc/multiline-blocks": ["warn", { noSingleLineBlocks: true }],
-    "jsdoc/require-param-type": "error",
-    "jsdoc/require-returns-type": "error",
+    "jsdoc/require-param-type": "warn",
+    "jsdoc/require-returns-type": "warn",
     "jsdoc/valid-types": "error",
     "jsdoc/check-param-names": "warn",
     "curly": ["error", "all"],

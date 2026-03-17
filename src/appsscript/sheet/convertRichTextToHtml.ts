@@ -15,8 +15,8 @@ import { isRichTextValue } from "./isRichTextValue";
  * console.log(html);
  * ```
  *
- * @param       richText - The {@link GoogleAppsScript.Spreadsheet.RichTextValue|RichTextValue} object containing formatted text.
- * @returns     The HTML string representing the formatted text.
+ * @param       {GoogleAppsScript.Spreadsheet.RichTextValue} richText - The {@link GoogleAppsScript.Spreadsheet.RichTextValue|RichTextValue} object containing formatted text.
+ * @returns     {string} The HTML string representing the formatted text.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link GoogleAppsScript.Spreadsheet.RichTextValue|RichTextValue}
  * @see         [Class RichTextValue](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
@@ -117,15 +117,28 @@ export function convertRichTextToHtml(
       attributes["style"] = _toStringStyles(styles);
     }
 
-    html += Utilities.formatString(
-      `<%s%s>%s%s%s</%s>`,
-      tag,
+    const attrString =
       Object.keys(attributes).length > 0
-        ? ` ${_toStringAttrs(attributes)}`
-        : "",
-      tags.length > 0 ? `<${tags.join("><")}>` : "",
-      run.getText().replace(/\r?\n|\r/g, "<br>"),
-      tags.length > 0 ? `</${tags.reverse().join("></")}>` : "",
+        ? " " + _toStringAttrs(attributes)
+        : "";
+
+    const joinedOpenTags = tags.join("><");
+
+    const openTags = tags.length > 0 ? `<${joinedOpenTags}>` : "";
+
+    const text = run.getText().replace(/\r?\n|\r/g, "<br>");
+
+    const joinedCloseTags = tags.reverse().join("></");
+
+    const closeTags = tags.length > 0 ? `</${joinedCloseTags}>` : "";
+
+    html += Utilities.formatString(
+      "<%s%s>%s%s%s</%s>",
+      tag,
+      attrString,
+      openTags,
+      text,
+      closeTags,
       tag
     );
   }
