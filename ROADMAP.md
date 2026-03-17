@@ -30,9 +30,12 @@ Focus on filling gaps in existing modules and improving the reliability of basic
 | Enhanced A1 Notation parsing and manipulation | Sheets   |   🟢   |
 | Admin SDK helpers (`isAdmin`)                 | Admin    |   🟢   |
 | Standardized Exception classes                | Core     |   🟢   |
+| Google Slides utilities                       | Slides   |   🟢   |
+| Network & Authentication helpers              | Net      |   🟢   |
 | `prependColumn` / `prependColumns`            | Sheets   |   🔵   |
 | `sprintf` and `formatDate` helpers            | Base     |   🔵   |
 | Crypto utilities (MD5, SHA, Base64)           | Crypto   |   🔵   |
+| Deprecation of `parseJson`                    | JSON     |   🟢   |
 
 ### v2.0 (The Modern Era)
 
@@ -63,6 +66,16 @@ Focus on higher-level abstractions and broader service support.
 - [ ] `deleteColumnsByConditional(sheet: Sheet, callback: Function)`
 - [ ] `updateFormulas(sheet: Sheet)`
 - [ ] `getNamedRangeByName(name: string)`
+- [x] `requireSpreadsheet`
+
+### 🎞️ Google Slides
+
+- [x] `isSlide` / `isPresentation`
+- [x] `requireSlide`
+- [x] `getSlideIndex` / `getSlideByIndex`
+- [x] `isValidSlideId` / `isValidPresentationId`
+- [x] `findReplaceAllTextInSlide`
+- [x] `convertMarkdownToRichText`
 
 ### 🛠️ Core & Base
 
@@ -79,12 +92,22 @@ Focus on higher-level abstractions and broader service support.
 - [ ] `intersect(arr: Array)`
 - [ ] `merge(text: string, fields: Object)`
 - [ ] `EventEmitter` (Abstract)
+- [x] `nonEmptyString`
+- [x] `requireRepository`
+- [x] `requireService`
+- [x] `AuthenticationException`
+- [x] `SlideNotFoundException`
+- [x] `InvalidPresentationException`
+- [x] `InvalidSpreadsheetException`
+- [x] `RepositoryIsNotDefinedException`
+- [x] `ServiceIsNotDefinedException`
 
 ### 🔐 Crypto & Security
 
 - [ ] `base64decode` / `base64encode`
 - [ ] `md5`
 - [ ] `sha1` / `sha256` / `sha512`
+- [x] `requireValidToken`
 
 ### 🌐 Network & Drive
 

@@ -44,6 +44,7 @@ The project uses [Vitest](https://vitest.dev/) for unit testing.
 
 - **Consistency**: Follow the existing code style. The project uses Prettier and ESLint to enforce formatting and best
   practices.
+- **CHANGELOG**: Do not modify `CHANGELOG.md` manually. It is updated automatically during the release process.
 - **Documentation**: Use JSDoc/KDoc comments for all exported functions. Include `@param`, `@returns`, `@since`, and
   `@version` tags where applicable.
 - **Modules**: The project is organized into logical modules:

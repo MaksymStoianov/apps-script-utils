@@ -39,7 +39,8 @@
       - [1.5. Google Forms Methods](#15-google-forms-methods)
       - [1.6. Google Sheets Methods](#16-google-sheets-methods)
       - [1.7. Google Slides Methods](#17-google-slides-methods)
-      - [1.8. Google UI Methods](#18-google-ui-methods)
+      - [1.8. Network Methods](#18-network-methods)
+      - [1.9. Google UI Methods](#19-google-ui-methods)
     - [2. `Base` Utilities](#2-base-utilities)
     - [3. Exceptions Module](#3-exceptions-module)
     - [4. `path` Module](#4-path-module)
@@ -503,6 +504,11 @@ Functions that enable various operations on Google Sheets.
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>, otherwise throws an exception.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/requireSpreadsheet.ts"><code>requireSpreadsheet</code></a> 🆕</td>
+            <td><a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a></td>
+            <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a>, otherwise throws an exception.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/sortSheets.ts"><code>sortSheets</code></a></td>
             <td><code>void</code></td>
             <td>Alphabetically sorts all sheets within a spreadsheet.</td>
@@ -538,16 +544,81 @@ Functions that enable various operations on Google Slides.
     </thead>
     <tbody>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="src/appsscript/slide/convertMarkdownToRichText.ts"><code>convertMarkdownToRichText</code></a> 🆕</td>
+            <td><code>RichTextRun[]</code></td>
+            <td>Converts Markdown-formatted text to an array of <code>RichTextRun</code> objects.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/findReplaceAllTextInSlide.ts"><code>findReplaceAllTextInSlide</code></a> 🆕</td>
+            <td><code>Number</code></td>
+            <td>Finds and replaces all occurrences of text within a slide.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/getSlideByIndex.ts"><code>getSlideByIndex</code></a> 🆕</td>
+            <td><a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> | <code>null</code></td>
+            <td>Retrieves a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> object by its zero-based index.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/getSlideIndex.ts"><code>getSlideIndex</code></a> 🆕</td>
+            <td><code>Number | null</code></td>
+            <td>Retrieves the zero-based index of a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> within its presentation.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/isPresentation.ts"><code>isPresentation</code></a> 🆕</td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/slides/presentation"><code>Presentation</code></a> object.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/isSlide.ts"><code>isSlide</code></a> 🆕</td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> object.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/isValidPresentationId.ts"><code>isValidPresentationId</code></a> 🆕</td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a string is a valid Google Slides presentation ID.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/isValidSlideId.ts"><code>isValidSlideId</code></a> 🆕</td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a string is a valid Google Slides slide ID.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/requireSlide.ts"><code>requireSlide</code></a> 🆕</td>
+            <td><a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a></td>
+            <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a>, otherwise throws an exception.</td>
         </tr>
     </tbody>
 </table>
 
 </details>
 
-#### 1.8. Google UI Methods
+#### 1.8. Network Methods
+
+Functions that enable various network-related operations.
+
+<details open><summary>Functions</summary>
+
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Return type</th>
+            <th>Brief description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="src/appsscript/net/requireValidToken.ts"><code>requireValidToken</code></a> 🆕</td>
+            <td><code>String</code></td>
+            <td>Ensures that a valid token is provided and matches the allowed keys.</td>
+        </tr>
+    </tbody>
+</table>
+
+</details>
+
+#### 1.9. Google UI Methods
 
 Functions that enable various operations on the user interface, including sidebars, dialogs, and web apps.
 
@@ -581,6 +652,16 @@ Functions that enable various operations on the user interface, including sideba
             <td><a href="src/appsscript/ui/isUi.ts"><code>isUi</code></a></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a> object.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/requireRepository.ts"><code>requireRepository</code></a> 🆕</td>
+            <td><code>T</code></td>
+            <td>Ensures that a repository is defined.</td>
+        </tr>
+        <tr>
+            <td><a href="src/appsscript/requireService.ts"><code>requireService</code></a> 🆕</td>
+            <td><code>T</code></td>
+            <td>Ensures that a service is defined.</td>
         </tr>
     </tbody>
 </table>
@@ -750,6 +831,11 @@ This package contains core utility functions that are not tied to a specific App
             <td>Validates if a value is a symbol.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> 🆕</td>
+            <td><code>String</code></td>
+            <td>Validates that the given value is a non-empty string.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/isUndefined.ts"><code>isUndefined</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is <code>undefined</code>.</td>
@@ -850,7 +936,7 @@ This package contains core utility functions that are not tied to a specific App
             <td>Enum representing <code>Object#toString</code> result references in uppercase.</td>
         </tr>
         <tr>
-            <td><a href="src/json/parseJson.ts"><code>parseJson</code></a></td>
+            <td><a href="src/json/parseJson.ts"><code>parseJson</code></a> ⚠️</td>
             <td><code>Object</code></td>
             <td>Safely parses a JSON string, handling potential errors.</td>
         </tr>
@@ -964,6 +1050,18 @@ This package is for all exception classes.
             <td><a href="src/exception/appsscript/sheet/InvalidSheetException.ts"><code>InvalidSheetException</code></a></td>
             <td>Represents an exception thrown when an invalid <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object is provided.</td>
         </tr>
+        <tr>
+            <td><a href="src/exception/appsscript/sheet/InvalidSpreadsheetException.ts"><code>InvalidSpreadsheetException</code></a> 🆕</td>
+            <td>Represents an exception thrown when an invalid <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object is provided.</td>
+        </tr>
+        <tr>
+            <td><a href="src/exception/appsscript/slide/InvalidPresentationException.ts"><code>InvalidPresentationException</code></a> 🆕</td>
+            <td>Represents an exception thrown when an invalid <a href="https://developers.google.com/apps-script/reference/slides/presentation"><code>Presentation</code></a> object is provided.</td>
+        </tr>
+        <tr>
+            <td><a href="src/exception/appsscript/slide/SlideNotFoundException.ts"><code>SlideNotFoundException</code></a> 🆕</td>
+            <td>Represents an exception thrown when a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> object is not found.</td>
+        </tr>
     </tbody>
 </table>
 
@@ -984,6 +1082,10 @@ This package is for all exception classes.
             <td>Exception thrown during application execution.</td>
         </tr>
         <tr>
+            <td><a href="src/exception/net/AuthenticationException.ts"><code>AuthenticationException</code></a> 🆕</td>
+            <td>Exception thrown during authentication failures.</td>
+        </tr>
+        <tr>
             <td><a href="src/exception/EmptyStringException.ts"><code>EmptyStringException</code></a></td>
             <td>Exception thrown when a non-empty string is required but an empty one is provided.</td>
         </tr>
@@ -1002,6 +1104,14 @@ This package is for all exception classes.
         <tr>
             <td><a href="src/exception/NullPointerException.ts"><code>NullPointerException</code></a></td>
             <td>Exception thrown when <code>null</code> is encountered where an object is required.</td>
+        </tr>
+        <tr>
+            <td><a href="src/exception/RepositoryIsNotDefinedException.ts"><code>RepositoryIsNotDefinedException</code></a> 🆕</td>
+            <td>Exception thrown when a repository is not defined.</td>
+        </tr>
+        <tr>
+            <td><a href="src/exception/ServiceIsNotDefinedException.ts"><code>ServiceIsNotDefinedException</code></a> 🆕</td>
+            <td>Exception thrown when a service is not defined.</td>
         </tr>
     </tbody>
 </table>
@@ -1106,7 +1216,8 @@ Contributions are welcome! If you'd like to contribute, please:
 2. Create a new branch for your feature or bugfix.
 3. Write tests for your changes.
 4. Run `npm run lint` and `npm run format`.
-5. Submit a pull request.
+5. Do not modify `CHANGELOG.md` manually; it's updated automatically.
+6. Submit a pull request.
 
 Please make sure to follow the existing code style and naming conventions.
 
