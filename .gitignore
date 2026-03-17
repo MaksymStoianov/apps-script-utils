@@ -1,5 +1,36 @@
-# Logs
-logs
+# This file specifies intentionally untracked files that Git should ignore.
+# It helps keep the repository clean and prevents sensitive or temporary
+# files from being committed.
+#
+# Reference: https://git-scm.com/docs/gitignore
+
+# Ignore dependency directories and non-essential lock files
+node_modules/
+yarn.lock
+pnpm-lock.yaml
+# Note: package-lock.json is NOT ignored to ensure consistent builds
+# package-lock.json
+
+# Compilation results, build artifacts, and TypeScript cache
+dist/
+build/
+out/
+compiled/
+compiled_app_output/
+*.tsbuildinfo
+
+# Test coverage reports and temporary test framework files
+coverage/
+.coverage
+.nyc_output/
+*.junit.xml
+junit.xml
+test-results.json
+test-results/
+.vitest-reports/
+
+# Various log files from package managers, build tools, and runtimes
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,20 +38,73 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 *storybook.log
+build-storybook.log
+build.log
 
-node_modules
-build
-dist
-dist-ssr
-*.local
+# Configuration files for popular IDEs and editors
 
-# Editor directories and files
-.DS_Store
+# JetBrains (WebStorm, IntelliJ IDEA, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.default.json
+!.vscode/launch.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Other temporary editor files
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.bak
+.editorconfig
+.prettierignore
+.eslintignore
 
-coverage
+# Environment variables, access tokens, and private keys
+.env
+.env.*
+!.env.example
+.secrets/
+google-generated-credentials.json
+.clasp.json
+creds.json
+*.pem
+*.key
 
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Various temporary data and application cache
+.tmp/
+tmp/
+.data/
+.cache/
+.eslintcache
+.stylelintcache
+.npm
+.pnpm-store
+
+# Project-specific reports and temporary files
+*.0x
+nodelinter.config.json
+CHANGELOG-*.md
+*.mdx
+trivy_report*
+!/.gitignore
