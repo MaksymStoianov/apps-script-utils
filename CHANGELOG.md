@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.9.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.8.1...v1.9.0) (2026-03-17)
+
+
+### Features
+
+* improve tsconfig and development environment ([23e4c15](https://github.com/MaksymStoianov/apps-script-utils/commit/23e4c1555030ccbb51c5e520aefacf8c3c70f4e7))
+
+
+### Bug Fixes
+
+* format ([c4e0f5c](https://github.com/MaksymStoianov/apps-script-utils/commit/c4e0f5c51501cfc07552408ded723f02b611eef9))
+
 ## [1.8.1](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.8.0...v1.8.1) (2026-03-17)
 
 
