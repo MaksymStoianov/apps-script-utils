@@ -41,11 +41,13 @@ describe("isEmpty", () => {
   describe("Array-like Objects (based on 'length' property)", () => {
     it("should return true for an object with length: 0 (e.g., arguments, if isObject allows it)", () => {
       const arrayLike = { 0: "a", 1: "b", length: 0 };
+
       expect(isEmpty(arrayLike)).toBe(true);
     });
 
     it("should return false for an object with length > 0", () => {
       const arrayLike = { 0: "a", length: 1 };
+
       expect(isEmpty(arrayLike)).toBe(false);
     });
 
@@ -65,6 +67,7 @@ describe("isEmpty", () => {
 
     it("should return false for an object with non-enumerable properties (still empty)", () => {
       const obj = {};
+
       Object.defineProperty(obj, "key", { value: 1, enumerable: false });
       expect(isEmpty(obj)).toBe(true);
     });
@@ -97,6 +100,7 @@ describe("isEmpty", () => {
       class MyClass {
         constructor(public data = {}) {}
       }
+
       expect(isEmpty(new MyClass())).toBe(false);
     });
   });
