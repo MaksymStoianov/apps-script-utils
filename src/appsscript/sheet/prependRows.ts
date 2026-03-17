@@ -3,6 +3,7 @@ import { isConsistent2DArray } from "../../lang";
 import { requireSheet } from "./requireSheet";
 
 export interface PrependRowsOptions {
+
   /**
    * Determines whether to insert rows after frozen rows.
    * If `true`, rows will be added immediately after the frozen rows, if they exist.
