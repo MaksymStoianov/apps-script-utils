@@ -1,5 +1,5 @@
-import { AuthenticationException } from "@/exception";
-import { isString } from "@/lang";
+import { AuthenticationException } from "../../exception";
+import { isString } from "../../lang";
 
 /**
  * Ensures that a valid token is provided and matches the allowed keys.

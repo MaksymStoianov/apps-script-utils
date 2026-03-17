@@ -1,4 +1,4 @@
-import { RepositoryIsNotDefinedException } from "@/exception";
+import { RepositoryIsNotDefinedException } from "../exception";
 
 /**
  * Ensures that a repository is defined.

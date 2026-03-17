@@ -1,4 +1,4 @@
-import { InvalidSpreadsheetException } from "@/exception";
+import { InvalidSpreadsheetException } from "../../exception";
 import { isSpreadsheet } from "./isSpreadsheet";
 
 /**

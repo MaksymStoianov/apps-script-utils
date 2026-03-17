@@ -1,4 +1,4 @@
-import { isString } from "@/lang";
+import { isString } from "../../lang";
 
 /**
  * Validates if the given string is a valid Google Slides slide ID.
