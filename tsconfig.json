@@ -1,40 +1,213 @@
 {
+  /**
+   * Instructs the TypeScript compiler how to compile the .ts files.
+   * @see https://www.typescriptlang.org/tsconfig#compilerOptions
+   */
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "./dist",
-    "typeRoots": ["node_modules/@types", "./config/types"],
-    "types": ["google-apps-script"],
-    "tsBuildInfoFile": "node_modules/.tmp/tsconfig.appsscript.tsbuildinfo",
-    "target": "ESNext",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "useDefineForClassFields": false,
-    "lib": ["ESNext"],
-    "module": "ESNext",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    /**
+     * Allow importing files with a TypeScript-specific extension (.ts, .tsx, etc.).
+     * @see https://www.typescriptlang.org/tsconfig#allowImportingTsExtensions
+     */
     "allowImportingTsExtensions": false,
-    "isolatedModules": false,
-    "moduleDetection": "force",
-    "noEmit": false,
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
+
+    /**
+     * Disable error reporting for unreachable code.
+     * @see https://www.typescriptlang.org/tsconfig#allowUnreachableCode
+     */
     "allowUnreachableCode": false,
+
+    /**
+     * Disable error reporting for unused labels.
+     * @see https://www.typescriptlang.org/tsconfig#allowUnusedLabels
+     */
     "allowUnusedLabels": false,
-    "composite": false,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+
+    /**
+     * Base directory to resolve non-relative module names.
+     * @see https://www.typescriptlang.org/tsconfig#baseUrl
+     */
     "baseUrl": "src",
+
+    /**
+     * Enable project compilation.
+     * @see https://www.typescriptlang.org/tsconfig#composite
+     */
+    "composite": true,
+
+    /**
+     * Generate .d.ts files from TypeScript and JavaScript files in your project.
+     * @see https://www.typescriptlang.org/tsconfig#declaration
+     */
+    "declaration": true,
+
+    /**
+     * Create sourcemaps for d.ts files.
+     * @see https://www.typescriptlang.org/tsconfig#declarationMap
+     */
+    "declarationMap": true,
+
+    /**
+     * Emit design-type metadata for decorated declarations in source files.
+     * @see https://www.typescriptlang.org/tsconfig#emitDecoratorMetadata
+     */
+    "emitDecoratorMetadata": true,
+
+    /**
+     * Emit additional JavaScript to ease support for importing CommonJS modules.
+     * @see https://www.typescriptlang.org/tsconfig#esModuleInterop
+     */
+    "esModuleInterop": true,
+
+    /**
+     * Enable experimental support for legacy experimental decorators.
+     * @see https://www.typescriptlang.org/tsconfig#experimentalDecorators
+     */
+    "experimentalDecorators": true,
+
+    /**
+     * Ensure that the casing is correct in imports.
+     * @see https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames
+     */
+    "forceConsistentCasingInFileNames": true,
+
+    /**
+     * Ensure each file can be safely transpiled without relying on other imports.
+     * @see https://www.typescriptlang.org/tsconfig#isolatedModules
+     */
+    "isolatedModules": false,
+
+    /**
+     * List of library files to be included in the compilation.
+     * @see https://www.typescriptlang.org/tsconfig#lib
+     */
+    "lib": ["ESNext"],
+
+    /**
+     * Specify what module code is generated.
+     * @see https://www.typescriptlang.org/tsconfig#module
+     */
+    "module": "ESNext",
+
+    /**
+     * Control what method is used to detect whether a file is a script or a module.
+     * @see https://www.typescriptlang.org/tsconfig#moduleDetection
+     */
+    "moduleDetection": "force",
+
+    /**
+     * Specify how TypeScript looks up a file from a given module specifier.
+     * @see https://www.typescriptlang.org/tsconfig#moduleResolution
+     */
+    "moduleResolution": "bundler",
+
+    /**
+     * Disable emitting files from a compilation.
+     * @see https://www.typescriptlang.org/tsconfig#noEmit
+     */
+    "noEmit": false,
+
+    /**
+     * Enable error reporting for fallthrough cases in switch statements.
+     * @see https://www.typescriptlang.org/tsconfig#noFallthroughCasesInSwitch
+     */
+    "noFallthroughCasesInSwitch": true,
+
+    /**
+     * Ensure that any non-relative imports are not only present but also have a valid type definition.
+     * @see https://www.typescriptlang.org/tsconfig#noUncheckedSideEffectImports
+     */
+    "noUncheckedSideEffectImports": true,
+
+    /**
+     * Enable error reporting when local variables aren't read.
+     * @see https://www.typescriptlang.org/tsconfig#noUnusedLocals
+     */
+    "noUnusedLocals": false,
+
+    /**
+     * Raise an error when a function parameter isn't read.
+     * @see https://www.typescriptlang.org/tsconfig#noUnusedParameters
+     */
+    "noUnusedParameters": false,
+
+    /**
+     * Specify an output folder for all emitted files.
+     * @see https://www.typescriptlang.org/tsconfig#outDir
+     */
+    "outDir": "./dist",
+
+    /**
+     * A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.
+     * @see https://www.typescriptlang.org/tsconfig#paths
+     */
     "paths": {
       "@/*": ["*"]
-    }
+    },
+
+    /**
+     * Specify the root folder within your source files.
+     * @see https://www.typescriptlang.org/tsconfig#rootDir
+     */
+    "rootDir": "src",
+
+    /**
+     * Skip type checking all .d.ts files.
+     * @see https://www.typescriptlang.org/tsconfig#skipLibCheck
+     */
+    "skipLibCheck": true,
+
+    /**
+     * Create source map files for emitted JavaScript files.
+     * @see https://www.typescriptlang.org/tsconfig#sourceMap
+     */
+    "sourceMap": true,
+
+    /**
+     * Enable all strict type-checking options.
+     * @see https://www.typescriptlang.org/tsconfig#strict
+     */
+    "strict": true,
+
+    /**
+     * Set the JavaScript language version for emitted JavaScript and include compatible library declarations.
+     * @see https://www.typescriptlang.org/tsconfig#target
+     */
+    "target": "ESNext",
+
+    /**
+     * Specify the file to store incremental compilation information.
+     * @see https://www.typescriptlang.org/tsconfig#tsBuildInfoFile
+     */
+    "tsBuildInfoFile": "node_modules/.tmp/tsconfig.appsscript.tsbuildinfo",
+
+    /**
+     * List of folders to include type definitions from.
+     * @see https://www.typescriptlang.org/tsconfig#typeRoots
+     */
+    "typeRoots": ["node_modules/@types", "./config/types"],
+
+    /**
+     * Specify type package names to be included without being referenced in a source file.
+     * @see https://www.typescriptlang.org/tsconfig#types
+     */
+    "types": ["google-apps-script"],
+
+    /**
+     * Emit ECMAScript-standard-compliant class fields.
+     * @see https://www.typescriptlang.org/tsconfig#useDefineForClassFields
+     */
+    "useDefineForClassFields": false
   },
+
+  /**
+   * Specifies a list of glob patterns that match files to be included in compilation.
+   * @see https://www.typescriptlang.org/tsconfig#include
+   */
   "include": ["src/**/*"],
+
+  /**
+   * Specifies a list of files to be excluded from compilation.
+   * @see https://www.typescriptlang.org/tsconfig#exclude
+   */
   "exclude": ["node_modules", "dist"]
 }
