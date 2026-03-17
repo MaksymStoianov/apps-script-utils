@@ -7,6 +7,7 @@ import json from "./config/eslint/json.ts";
 import markdown from "./config/eslint/markdown.ts";
 import customRules from "./config/eslint/custom-rules.ts";
 import ignores from "./config/eslint/ignores.ts";
+import security from "./config/eslint/security.ts";
 
 export default defineConfig([
   base,
@@ -15,6 +16,7 @@ export default defineConfig([
   prettier,
   ...json,
   markdown,
+  security,
   customRules,
   ignores
 ]);
