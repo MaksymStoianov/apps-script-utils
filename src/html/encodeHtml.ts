@@ -3,8 +3,8 @@ import { requireNonEmptyString } from "../lang";
 /**
  * Encodes characters in a string (from `U+00A0` to `U+9999`) into their corresponding HTML entities.
  *
- * @param   value - The string to encode.
- * @returns The string with HTML-encoded characters.
+ * @param   {string} value - The string to encode.
+ * @returns {string} The string with HTML-encoded characters.
  * @throws  {@link EmptyStringException}
  * @see     {@link decodeHtml}
  * @since   1.0.0

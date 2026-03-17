@@ -3,8 +3,8 @@ import { requireNonEmptyString } from "../lang";
 /**
  * Escapes HTML special characters in a string.
  *
- * @param   value - The string to escape.
- * @returns The string with HTML special characters converted to entities.
+ * @param   {string} value - The string to escape.
+ * @returns {string} The string with HTML special characters converted to entities.
  * @throws  {@link EmptyStringException}
  * @see     {@link escapeRegExp}
  * @see     {@link escapeXml}

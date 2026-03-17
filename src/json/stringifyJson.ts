@@ -4,8 +4,8 @@ import { isObject } from "../lang";
  * Recursively sorts object keys and stringifies a value to ensure a deterministic output.
  * This is crucial for consistent hashing of objects.
  *
- * @param   value - The value to stringify.
- * @returns A stable JSON string representation of the value.
+ * @param   {unknown} value - The value to stringify.
+ * @returns {string} A stable JSON string representation of the value.
  * @see     {@link parseJson}
  * @since   1.0.0
  * @version 1.0.0

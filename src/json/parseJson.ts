@@ -23,8 +23,8 @@ import { requireNonEmptyString } from "../lang";
  * console.log(result3); // null
  * ```
  *
- * @param   value - The string containing the JSON to parse.
- * @returns The parsed object if successful, or `null` if the JSON could not be parsed even after attempted corrections.
+ * @param   {string} value - The string containing the JSON to parse.
+ * @returns {object} The parsed object if successful, or `null` if the JSON could not be parsed even after attempted corrections.
  * @throws  {@link EmptyStringException}
  * @see     {@link stringifyJson}
  * @since   1.0.0
@@ -40,16 +40,18 @@ export function parseJson(value: string): object {
   } catch (err: unknown) {
     /**
      * Checks if a token is a valid key format (either quoted or unquoted alphanumeric).
-     * @param token The token string to check.
-     * @returns `true` if the token is a valid key format; otherwise, `false`.
+     *
+     * @param   {string} token The token string to check.
+     * @returns {boolean} `true` if the token is a valid key format; otherwise, `false`.
      */
     const isValidKey = (token: string): boolean =>
       /^"[^"]*"$/.test(token) || /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(token);
 
     /**
      * Checks if a token is a valid value format (boolean, null, number, or quoted string).
-     * @param token The token string to check.
-     * @returns `true` if the token is a valid value format; otherwise, `false`.
+     *
+     * @param   {string} token The token string to check.
+     * @returns {boolean} `true` if the token is a valid value format; otherwise, `false`.
      */
     const isValidValue = (token: string): boolean =>
       token === "true" ||

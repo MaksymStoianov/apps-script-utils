@@ -3,8 +3,8 @@ import { requireNonEmptyString } from "../lang";
 /**
  * Decodes common HTML entities in a string.
  *
- * @param   value - The string containing HTML entities to decode.
- * @returns The string with decoded HTML entities.
+ * @param   {string} value - The string containing HTML entities to decode.
+ * @returns {string} The string with decoded HTML entities.
  * @throws  {@link EmptyStringException}
  * @see     {@link encodeHtml}
  * @since   1.0.0
