@@ -11,8 +11,6 @@ import { isRange } from "./isRange";
  * @version     1.0.0
  * @environment Google Apps Script
  */
-export function nonRange<T>(
-  value: T | GoogleAppsScript.Spreadsheet.Range
-): value is T {
+export function nonRange<T>(value: T | GoogleAppsScript.Spreadsheet.Range): value is T {
   return !isRange(value);
 }

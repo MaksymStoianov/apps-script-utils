@@ -10,8 +10,6 @@ import { isObject } from "../../lang";
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`
  */
-export function isSpreadsheet(
-  value: unknown
-): value is GoogleAppsScript.Spreadsheet.Spreadsheet {
+export function isSpreadsheet(value: unknown): value is GoogleAppsScript.Spreadsheet.Spreadsheet {
   return isObject(value) && value?.toString() === "Spreadsheet";
 }

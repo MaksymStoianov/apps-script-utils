@@ -42,10 +42,7 @@ interface ToKebabCaseOptions {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toKebabCase(
-  value: string,
-  options: ToKebabCaseOptions = {}
-): string {
+export function toKebabCase(value: string, options: ToKebabCaseOptions = {}): string {
   const effectiveOptions: Required<ToKebabCaseOptions> = {
     clean: false,
     trim: false,

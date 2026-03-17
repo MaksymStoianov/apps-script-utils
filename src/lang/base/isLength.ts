@@ -10,10 +10,5 @@ import { isNumber } from "./isNumber";
  * @version 1.0.0
  */
 export function isLength(value: unknown): boolean {
-  return (
-    isNumber(value) &&
-    value > -1 &&
-    value % 1 == 0 &&
-    value <= Number.MAX_SAFE_INTEGER
-  );
+  return isNumber(value) && value > -1 && value % 1 == 0 && value <= Number.MAX_SAFE_INTEGER;
 }

@@ -39,10 +39,7 @@ interface ToProperCaseOptions {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toProperCase(
-  value: string,
-  options: ToProperCaseOptions = {}
-): string {
+export function toProperCase(value: string, options: ToProperCaseOptions = {}): string {
   const effectiveOptions: Required<ToProperCaseOptions> = {
     trim: false,
     ...options
@@ -50,7 +47,7 @@ export function toProperCase(
 
   let result = requireNonEmptyString(value).replace(
     /\b\w+\b/g,
-    match => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase()
+    (match) => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase()
   );
 
   if (effectiveOptions.trim === true) {

@@ -13,8 +13,7 @@ import { ParsedPath } from "./types";
 export function parse(path: string): ParsedPath {
   const result = requireNonEmptyString(path);
 
-  const reg =
-    /^(?<dir>(?<root>\/)?(?:[^/]+\/)*)?(?<base>(?<name>[^/]+)(?<ext>\.\w+)?)?$/i;
+  const reg = /^(?<dir>(?<root>\/)?(?:[^/]+\/)*)?(?<base>(?<name>[^/]+)(?<ext>\.\w+)?)?$/i;
 
   const match = reg.exec(result);
 

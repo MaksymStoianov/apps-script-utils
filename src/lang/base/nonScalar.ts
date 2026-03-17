@@ -10,8 +10,6 @@ import { isScalar } from "./isScalar";
  * @since   1.4.0
  * @version 1.0.0
  */
-export function nonScalar<T>(
-  value: T | string | number | boolean | symbol | bigint
-): value is T {
+export function nonScalar<T>(value: T | string | number | boolean | symbol | bigint): value is T {
   return !isScalar(value);
 }

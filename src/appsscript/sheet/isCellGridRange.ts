@@ -20,8 +20,7 @@ export function isCellGridRange(gridRange: GridRange): boolean {
     throw new InvalidGridRangeException();
   }
 
-  const { startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } =
-    gridRange;
+  const { startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } = gridRange;
 
   if (
     nonNil(startRowIndex) &&

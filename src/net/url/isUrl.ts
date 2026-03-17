@@ -28,8 +28,7 @@ export function isUrl(value: unknown): value is string {
     return false;
   }
 
-  const PATTERN =
-    /^(https?|ftp):\/\/([^\s/?#]+\.[^\s/?#]+)(:\d+)?(\/\S*)?([?#]\S*)?$/i;
+  const PATTERN = /^(https?|ftp):\/\/([^\s/?#]+\.[^\s/?#]+)(:\d+)?(\/\S*)?([?#]\S*)?$/i;
 
   return PATTERN.test(value);
 }

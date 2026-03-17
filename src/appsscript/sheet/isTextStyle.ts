@@ -10,8 +10,6 @@ import { isObject } from "../../lang";
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`
  */
-export function isTextStyle(
-  value: unknown
-): value is GoogleAppsScript.Spreadsheet.TextStyle {
+export function isTextStyle(value: unknown): value is GoogleAppsScript.Spreadsheet.TextStyle {
   return isObject(value) && value?.toString() === "TextStyle";
 }

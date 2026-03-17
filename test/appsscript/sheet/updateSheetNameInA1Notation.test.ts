@@ -8,15 +8,11 @@ describe("updateSheetNameInA1Notation", () => {
     });
 
     it("should replace an existing simple name with a new simple name", () => {
-      expect(updateSheetNameInA1Notation("OldSheet!A1:C10", "NewSheet")).toBe(
-        "NewSheet!A1:C10"
-      );
+      expect(updateSheetNameInA1Notation("OldSheet!A1:C10", "NewSheet")).toBe("NewSheet!A1:C10");
     });
 
     it("should handle full column ranges correctly", () => {
-      expect(updateSheetNameInA1Notation("A:A", "ColumnData")).toBe(
-        "ColumnData!A:A"
-      );
+      expect(updateSheetNameInA1Notation("A:A", "ColumnData")).toBe("ColumnData!A:A");
     });
   });
 
@@ -30,21 +26,17 @@ describe("updateSheetNameInA1Notation", () => {
     });
 
     it("should enclose a name with a single quote (') but no double quotes (\") in double quotes", () => {
-      expect(updateSheetNameInA1Notation("B2", "Jon's Data")).toBe(
-        '"Jon\'s Data"!B2'
-      );
+      expect(updateSheetNameInA1Notation("B2", "Jon's Data")).toBe('"Jon\'s Data"!B2');
     });
 
     it("should escape a name containing both single and double quotes by doubling single quotes", () => {
-      expect(
-        updateSheetNameInA1Notation("D3:F3", "Data with ' and \"quotes")
-      ).toBe("'Data with '' and \"quotes'!D3:F3");
+      expect(updateSheetNameInA1Notation("D3:F3", "Data with ' and \"quotes")).toBe(
+        "'Data with '' and \"quotes'!D3:F3"
+      );
     });
 
     it("should handle a name that only contains a single quote", () => {
-      expect(updateSheetNameInA1Notation("A1", "O'Malley")).toBe(
-        '"O\'Malley"!A1'
-      );
+      expect(updateSheetNameInA1Notation("A1", "O'Malley")).toBe('"O\'Malley"!A1');
     });
   });
 
@@ -54,9 +46,7 @@ describe("updateSheetNameInA1Notation", () => {
     });
 
     it("should return only the range when sheetName is undefined", () => {
-      expect(updateSheetNameInA1Notation("'Complex Name'!C:C", undefined)).toBe(
-        "C:C"
-      );
+      expect(updateSheetNameInA1Notation("'Complex Name'!C:C", undefined)).toBe("C:C");
     });
 
     it("should return only the range when sheetName is an empty string (invalid)", () => {

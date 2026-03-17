@@ -12,13 +12,7 @@ export class Exception extends Error {
    * @param {unknown} [message] - The error message, an existing Error object, or any other value.
    */
   constructor(message?: unknown) {
-    super(
-      message instanceof Error
-        ? message.message
-        : isString(message)
-          ? message
-          : undefined
-    );
+    super(message instanceof Error ? message.message : isString(message) ? message : undefined);
 
     this.name = new.target.name;
 

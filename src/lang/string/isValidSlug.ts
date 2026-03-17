@@ -9,7 +9,5 @@ import { isEmpty, isString } from "../base";
  * @version 1.0.0
  */
 export function isValidSlug(value: string): boolean {
-  return (
-    isString(value) && !isEmpty(value) && /^[a-z][0-9a-z_-]*$/i.test(value)
-  );
+  return isString(value) && !isEmpty(value) && /^[a-z][0-9a-z_-]*$/i.test(value);
 }

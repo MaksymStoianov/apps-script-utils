@@ -14,10 +14,7 @@ import { requireNonEmptyString } from "./requireNonEmptyString";
  * @since   1.0.0
  * @version 1.0.0
  */
-export function requireValidEmail(
-  email: string | null | undefined,
-  message?: string
-): string {
+export function requireValidEmail(email: string | null | undefined, message?: string): string {
   const value = requireNonEmptyString(email, message);
 
   if (!isEmail(value)) {

@@ -50,10 +50,7 @@ interface ToSnakeCaseOptions {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toSnakeCase(
-  value: string,
-  options?: ToSnakeCaseOptions
-): string {
+export function toSnakeCase(value: string, options?: ToSnakeCaseOptions): string {
   const effectiveOptions: Required<ToSnakeCaseOptions> = {
     clean: false,
     trim: false,

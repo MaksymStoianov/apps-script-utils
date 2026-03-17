@@ -117,10 +117,7 @@ export function convertRichTextToHtml(
       attributes["style"] = _toStringStyles(styles);
     }
 
-    const attrString =
-      Object.keys(attributes).length > 0
-        ? " " + _toStringAttrs(attributes)
-        : "";
+    const attrString = Object.keys(attributes).length > 0 ? " " + _toStringAttrs(attributes) : "";
 
     const joinedOpenTags = tags.join("><");
 

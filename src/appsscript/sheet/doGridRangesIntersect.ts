@@ -1,7 +1,4 @@
-import {
-  IllegalArgumentException,
-  InvalidGridRangeException
-} from "../../exception";
+import { IllegalArgumentException, InvalidGridRangeException } from "../../exception";
 import { isObject } from "../../lang";
 import { isValidSheetId } from "./isValidSheetId";
 import { isValidSheetName } from "./isValidSheetName";
@@ -21,10 +18,7 @@ import type { GridRange } from "./types";
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`
  */
-export function doGridRangesIntersect(
-  gridRange1: GridRange,
-  gridRange2: GridRange
-): boolean {
+export function doGridRangesIntersect(gridRange1: GridRange, gridRange2: GridRange): boolean {
   if (arguments.length === 0) {
     throw new IllegalArgumentException();
   }
@@ -43,8 +37,7 @@ export function doGridRangesIntersect(
       : true;
 
   const sheetNamesMatch =
-    isValidSheetName(gridRange1.sheetName) &&
-    isValidSheetName(gridRange2.sheetName)
+    isValidSheetName(gridRange1.sheetName) && isValidSheetName(gridRange2.sheetName)
       ? gridRange1.sheetName === gridRange2.sheetName
       : true;
 

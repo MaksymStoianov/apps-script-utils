@@ -31,5 +31,5 @@ export function transpose(arr: unknown): Array<Array<unknown>> {
     throw new Error("Input must be a 2D array.");
   }
 
-  return arr[0].map((_, colIndex) => arr.map(row => row[colIndex]));
+  return arr[0].map((_, colIndex) => arr.map((row) => row[colIndex]));
 }

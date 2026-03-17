@@ -38,12 +38,8 @@ export function isGridRangeContainedIn(
 
   if (!sheetIdsMatch || !sheetNamesMatch) {
     if (
-      (containerGridRange.sheetId != null &&
-        gridRange.sheetId != null &&
-        !sheetIdsMatch) ||
-      (containerGridRange.sheetName != null &&
-        gridRange.sheetName != null &&
-        !sheetNamesMatch)
+      (containerGridRange.sheetId != null && gridRange.sheetId != null && !sheetIdsMatch) ||
+      (containerGridRange.sheetName != null && gridRange.sheetName != null && !sheetNamesMatch)
     ) {
       return false;
     }

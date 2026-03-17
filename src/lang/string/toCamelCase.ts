@@ -42,10 +42,7 @@ interface ToCamelCaseOptions {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toCamelCase(
-  value: string,
-  options: ToCamelCaseOptions = {}
-): string {
+export function toCamelCase(value: string, options: ToCamelCaseOptions = {}): string {
   const effectiveOptions: Required<ToCamelCaseOptions> = {
     clean: true,
     firstWordToLowerCase: true,
@@ -53,10 +50,7 @@ export function toCamelCase(
   };
 
   let result = requireNonEmptyString(value)
-    .replace(
-      /\b\w+\b/g,
-      match => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase()
-    )
+    .replace(/\b\w+\b/g, (match) => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase())
     .replace(/[\s-_]+/g, "");
 
   if (effectiveOptions.clean) {

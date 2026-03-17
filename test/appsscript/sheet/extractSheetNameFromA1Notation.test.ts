@@ -9,9 +9,7 @@ describe("extractSheetNameFromA1Notation", () => {
     });
 
     it("should correctly extract the sheet name from a quoted range with spaces", () => {
-      expect(extractSheetNameFromA1Notation("'My Data Sheet'!A1")).toBe(
-        "My Data Sheet"
-      );
+      expect(extractSheetNameFromA1Notation("'My Data Sheet'!A1")).toBe("My Data Sheet");
     });
 
     it("should correctly extract the sheet name from a column-only reference", () => {
@@ -29,9 +27,7 @@ describe("extractSheetNameFromA1Notation", () => {
     });
 
     it("should return null for an empty string input", () => {
-      expect(() => extractSheetNameFromA1Notation("")).toThrow(
-        EmptyStringException
-      );
+      expect(() => extractSheetNameFromA1Notation("")).toThrow(EmptyStringException);
     });
   });
 

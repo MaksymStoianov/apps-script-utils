@@ -7,8 +7,6 @@
  * @since   1.0.0
  * @version 1.0.0
  */
-export function isScalar(
-  value: unknown
-): value is string | number | boolean | symbol | bigint {
+export function isScalar(value: unknown): value is string | number | boolean | symbol | bigint {
   return /string|number|boolean|symbol|bigint/.test(typeof value);
 }

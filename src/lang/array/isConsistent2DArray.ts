@@ -9,9 +9,7 @@ import { is2DArray } from "./is2DArray";
  * @since   1.0.0
  * @version 1.0.0
  */
-export function isConsistent2DArray(
-  arr: unknown
-): arr is Array<Array<unknown>> {
+export function isConsistent2DArray(arr: unknown): arr is Array<Array<unknown>> {
   if (!is2DArray(arr)) {
     throw new Error(
       "Input array must be a non-empty two-dimensional array (all elements must be arrays)."
@@ -20,5 +18,5 @@ export function isConsistent2DArray(
 
   const length = arr[0].length;
 
-  return arr.every(item => length === item.length);
+  return arr.every((item) => length === item.length);
 }

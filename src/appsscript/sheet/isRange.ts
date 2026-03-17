@@ -12,8 +12,6 @@ import { isObject } from "../../lang";
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`
  */
-export function isRange(
-  value: unknown
-): value is GoogleAppsScript.Spreadsheet.Range {
+export function isRange(value: unknown): value is GoogleAppsScript.Spreadsheet.Range {
   return isObject(value) && value?.toString() === "Range";
 }

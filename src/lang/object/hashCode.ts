@@ -1,12 +1,5 @@
 import { stringifyJson } from "../../json";
-import {
-  isBoolean,
-  isNull,
-  isNumber,
-  isObject,
-  isString,
-  isUndefined
-} from "../base";
+import { isBoolean, isNull, isNumber, isObject, isString, isUndefined } from "../base";
 import { objectToString } from "./objectToString";
 
 /**

@@ -9,9 +9,6 @@ import { versionCompare } from "./versionCompare";
  * @since   1.0.0
  * @version 1.0.0
  */
-export function isVersionCompatible(
-  currentVersion: string,
-  requiredVersion: string
-): boolean {
+export function isVersionCompatible(currentVersion: string, requiredVersion: string): boolean {
   return versionCompare(currentVersion, requiredVersion) >= 0;
 }

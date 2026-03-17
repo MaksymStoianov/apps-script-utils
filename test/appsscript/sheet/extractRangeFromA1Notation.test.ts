@@ -24,9 +24,7 @@ describe("extractRangeFromA1Notation", () => {
   describe("Error and Exception Handling", () => {
     it("should throw IllegalArgumentException when called with no arguments", () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      expect(() => (extractRangeFromA1Notation as any)()).toThrow(
-        IllegalArgumentException
-      );
+      expect(() => (extractRangeFromA1Notation as any)()).toThrow(IllegalArgumentException);
     });
 
     it("should throw an exception if the extracted range is an empty string", () => {

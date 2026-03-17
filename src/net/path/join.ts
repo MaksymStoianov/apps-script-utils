@@ -32,10 +32,7 @@ export function join(...paths: string[]): string {
       }
 
       if (segment === "..") {
-        if (
-          resolvedParts.length > 0 &&
-          resolvedParts[resolvedParts.length - 1] !== ".."
-        ) {
+        if (resolvedParts.length > 0 && resolvedParts[resolvedParts.length - 1] !== "..") {
           resolvedParts.pop();
         } else if (!isAbsoluteResult) {
           resolvedParts.push("..");

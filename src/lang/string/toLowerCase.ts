@@ -30,10 +30,7 @@ interface ToLowerCaseOptions {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toLowerCase(
-  value: string,
-  options: ToLowerCaseOptions = {}
-): string {
+export function toLowerCase(value: string, options: ToLowerCaseOptions = {}): string {
   const effectiveOptions: Required<ToLowerCaseOptions> = {
     trim: false,
     ...options

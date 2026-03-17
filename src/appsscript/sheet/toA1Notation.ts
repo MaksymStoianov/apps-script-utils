@@ -1,7 +1,4 @@
-import {
-  IllegalArgumentException,
-  InvalidGridRangeException
-} from "../../exception";
+import { IllegalArgumentException, InvalidGridRangeException } from "../../exception";
 import { isObject } from "../../lang";
 import { getColumnLetterByIndex } from "./getColumnLetterByIndex";
 import type { GridRange } from "./types";
@@ -45,13 +42,7 @@ export function toA1Notation(gridRange: GridRange): string {
     throw new InvalidGridRangeException();
   }
 
-  const {
-    sheetName,
-    startRowIndex,
-    endRowIndex,
-    startColumnIndex,
-    endColumnIndex
-  } = gridRange;
+  const { sheetName, startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } = gridRange;
 
   let rangePart = "";
 
@@ -75,9 +66,7 @@ export function toA1Notation(gridRange: GridRange): string {
 
   const a1EndRowNumber = hasEndRow ? (endRowIndex as number) : "";
 
-  const a1StartColLetter = hasStartCol
-    ? getColumnLetterByIndex(startColumnIndex as number)
-    : "";
+  const a1StartColLetter = hasStartCol ? getColumnLetterByIndex(startColumnIndex as number) : "";
 
   const a1EndColLetter =
     hasEndCol && (endColumnIndex as number) > 0
@@ -93,21 +82,10 @@ export function toA1Notation(gridRange: GridRange): string {
     (endRowIndex as number) === (startRowIndex as number) + 1
   ) {
     rangePart = `${a1StartColLetter}${a1StartRowNumber}`;
-  } else if (
-    hasStartCol &&
-    hasStartRow &&
-    (startRowIndex as number) === 0 &&
-    !hasEndRow
-  ) {
-    if (
-      hasEndCol &&
-      (endColumnIndex as number) > (startColumnIndex as number) + 1
-    ) {
+  } else if (hasStartCol && hasStartRow && (startRowIndex as number) === 0 && !hasEndRow) {
+    if (hasEndCol && (endColumnIndex as number) > (startColumnIndex as number) + 1) {
       rangePart = `${a1StartColLetter}:${a1EndColLetter}`;
-    } else if (
-      hasEndCol &&
-      (endColumnIndex as number) === (startColumnIndex as number) + 1
-    ) {
+    } else if (hasEndCol && (endColumnIndex as number) === (startColumnIndex as number) + 1) {
       rangePart = `${a1StartColLetter}:${a1StartColLetter}`;
     } else if (!hasEndCol) {
       rangePart = `${a1StartColLetter}:${a1StartColLetter}`;
@@ -116,18 +94,10 @@ export function toA1Notation(gridRange: GridRange): string {
         `Invalid or incomplete GridRange object for full column A1 notation conversion.`
       );
     }
-  } else if (
-    hasStartRow &&
-    hasStartCol &&
-    (startColumnIndex as number) === 0 &&
-    !hasEndCol
-  ) {
+  } else if (hasStartRow && hasStartCol && (startColumnIndex as number) === 0 && !hasEndCol) {
     if (hasEndRow && (endRowIndex as number) > (startRowIndex as number) + 1) {
       rangePart = `${a1StartRowNumber}:${a1EndRowNumber}`;
-    } else if (
-      hasEndRow &&
-      (endRowIndex as number) === (startRowIndex as number) + 1
-    ) {
+    } else if (hasEndRow && (endRowIndex as number) === (startRowIndex as number) + 1) {
       rangePart = `${a1StartRowNumber}:${a1StartRowNumber}`;
     } else if (!hasEndRow) {
       rangePart = `${a1StartRowNumber}:${a1StartRowNumber}`;
@@ -141,9 +111,7 @@ export function toA1Notation(gridRange: GridRange): string {
   } else if (hasStartCol && hasStartRow && hasEndCol && hasEndRow) {
     rangePart = `${a1StartColLetter}${a1StartRowNumber}:${a1EndColLetter}${a1EndRowNumber}`;
   } else {
-    throw new Error(
-      `Invalid or incomplete GridRange object for A1 notation conversion.`
-    );
+    throw new Error(`Invalid or incomplete GridRange object for A1 notation conversion.`);
   }
 
   let fullA1Notation = "";

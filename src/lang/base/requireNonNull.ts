@@ -14,10 +14,7 @@ import { isNil } from "./isNil";
  * @since    1.0.0
  * @version  1.0.0
  */
-export function requireNonNull<T>(
-  value?: T | null | undefined,
-  message?: string
-): T {
+export function requireNonNull<T>(value?: T | null | undefined, message?: string): T {
   if (isNil(value)) {
     throw new NullPointerException(message);
   }
