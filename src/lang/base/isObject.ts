@@ -1,8 +1,6 @@
 import { nonNil } from "./nonNil";
 
 /**
- * ## isObject
- *
  * Checks if `value` is the of `Object`.
  *
  * @param   value - The value to check.

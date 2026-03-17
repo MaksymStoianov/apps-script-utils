@@ -1,6 +1,4 @@
 /**
- * ## isSymbol
- *
  * Checks if the provided value is a `Symbol`.
  *
  * @param   value - The value to check.

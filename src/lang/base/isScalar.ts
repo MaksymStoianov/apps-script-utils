@@ -1,6 +1,4 @@
 /**
- * ## isScalar
- *
  * Checks if the provided value is a scalar type (`string`, `number`, `boolean`, or `symbol`).
  *
  * @param   value - The value to check.

@@ -1,8 +1,6 @@
 import { isNumber } from "./isNumber";
 
 /**
- * ## isLength
- *
  * Checks if `value` is a valid array-like length.
  *
  * @param   value - The value to check.

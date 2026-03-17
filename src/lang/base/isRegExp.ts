@@ -1,8 +1,6 @@
 import { ObjectTag, objectToString } from "../object";
 
 /**
- * ## isRegExp
- *
  * Checks if the provided value is a regular expression.
  *
  * @param   value - The value to check.

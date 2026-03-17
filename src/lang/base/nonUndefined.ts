@@ -1,8 +1,6 @@
 import { isUndefined } from "./isUndefined";
 
 /**
- * ## nonUndefined
- *
  * Checks if the provided value is NOT `undefined`.
  *
  * @param   value - The value to check.

@@ -1,8 +1,6 @@
 import { isSymbol } from "./isSymbol";
 
 /**
- * ## nonSymbol
- *
  * Checks if the provided value is NOT `Symbol`.
  *
  * @param   value - The value to check.

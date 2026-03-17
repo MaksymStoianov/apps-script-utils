@@ -6,8 +6,6 @@ interface Options {
 }
 
 /**
- * ## toCamelCase
- *
  * Converts a string to `camelCase` format.
  *
  * `camelCase` is a naming convention where the first letter of each word (except

@@ -1,8 +1,6 @@
 import { isEmpty } from "./isEmpty";
 
 /**
- * ## nonEmpty
- *
  * Checks if a value is not considered "empty".
  *
  * @param   value - The value to check.

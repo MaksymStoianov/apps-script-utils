@@ -1,8 +1,6 @@
 import { isArray } from "./isArray";
 
 /**
- * ## nonArray
- *
  * Checks if the provided value is NOT `Array`.
  *
  * @param   value - The value to check.

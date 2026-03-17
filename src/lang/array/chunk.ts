@@ -2,8 +2,6 @@ import { isArray } from "../base";
 import { isInteger } from "../number";
 
 /**
- * ## chunk
- *
  * Creates an array of elements split into groups the length of `size`.
  * If `array` can't be split evenly, the final chunk will be the remaining elements.
  *
@@ -50,6 +48,7 @@ export function chunk<T>(array: T[], size: number = 1): Array<T[]> {
   const result = new Array(Math.ceil(length / size));
 
   let index = 0;
+
   let resIndex = 0;
 
   while (index < length) {

@@ -4,8 +4,6 @@ import { isNil } from "./isNil";
 import { isObject } from "./isObject";
 
 /**
- * ## isEmpty
- *
  * Checks if a value is considered "empty".
  *
  * This function handles common JavaScript types:

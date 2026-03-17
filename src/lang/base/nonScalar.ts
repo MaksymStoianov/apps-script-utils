@@ -1,8 +1,6 @@
 import { isScalar } from "./isScalar";
 
 /**
- * ## nonScalar
- *
  * Checks if the provided value is NOT `Scalar`.
  *
  * @param   value - The value to check.

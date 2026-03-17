@@ -1,8 +1,6 @@
 import { isNil } from "./isNil";
 
 /**
- * ## nonNil
- *
  * Checks if the provided value is neither `null` nor `undefined` (i.e., "not nil").
  *
  * @param   value - The value to check.

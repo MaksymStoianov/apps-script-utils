@@ -1,8 +1,6 @@
 import { hashCode } from "./index";
 
 /**
- * ## Class
- *
  * Abstract base class providing fundamental functionality for subclasses.
  * Intended to be extended by other classes.
  *
@@ -31,6 +29,7 @@ export abstract class Class {
    */
   clone(): this {
     const proto = Object.getPrototypeOf(this);
+
     const result = Object.create(proto);
 
     Object.assign(result, this);

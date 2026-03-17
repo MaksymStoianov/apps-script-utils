@@ -5,8 +5,6 @@ interface Options {
 }
 
 /**
- * ## toProperCase
- *
  * Returns a new string with the first letter of each word capitalized and the rest lowercased (Proper Case / Title Case).
  *
  * This function processes the input string to capitalize the first letter of every

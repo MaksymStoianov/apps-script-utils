@@ -2,8 +2,6 @@ import { EmptyStringException } from "../../exception";
 import { isEmpty, isString } from "../base";
 
 /**
- * ## escapeRegExp
- *
  * Escapes special characters in a string to be safely used inside a regular expression.
  *
  * @param   value - The string to escape.

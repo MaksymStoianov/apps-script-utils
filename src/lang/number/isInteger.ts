@@ -1,8 +1,6 @@
 import { isNumber } from "../base";
 
 /**
- * ## isInteger
- *
  * Checks if a value is a number and an integer.
  *
  * @param   value - The value to check.

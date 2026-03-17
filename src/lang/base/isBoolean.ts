@@ -1,6 +1,4 @@
 /**
- * ## isBoolean
- *
  * Checks if the provided value is a boolean.
  *
  * @param   value - The value to check.

@@ -1,8 +1,6 @@
 import { isEmpty, isString } from "../base";
 
 /**
- * ## isValidLocale
- *
  * Checks if the provided string is a valid two-letter locale code.
  *
  * @param   value - The string value to validate as a locale code.

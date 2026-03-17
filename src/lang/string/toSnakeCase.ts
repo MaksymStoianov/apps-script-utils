@@ -6,8 +6,6 @@ interface Options {
 }
 
 /**
- * ## toSnakeCase
- *
  * Converts a string to `snake_case` format.
  *
  * `snake_case` is a naming convention where words are separated by underscores (`_`),

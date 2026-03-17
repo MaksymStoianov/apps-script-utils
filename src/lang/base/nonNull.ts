@@ -1,8 +1,6 @@
 import { isNull } from "./isNull";
 
 /**
- * ## nonNull
- *
  * Checks if the provided value is NOT `null`.
  *
  * @param   value - The value to check.

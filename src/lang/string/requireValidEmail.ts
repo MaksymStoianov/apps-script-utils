@@ -3,8 +3,6 @@ import { isEmail } from "./isEmail";
 import { requireNonEmptyString } from "./requireNonEmptyString";
 
 /**
- * ## requireValidEmail
- *
  * Validates that the provided value is a non-empty string and a valid email format.
  *
  * @param   email - The string value representing an email to validate. Can be `null` or `undefined`.

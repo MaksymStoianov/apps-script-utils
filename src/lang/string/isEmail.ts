@@ -2,8 +2,6 @@ import { isValidDomain } from "../../net";
 import { isEmpty, isString } from "../base";
 
 /**
- * ## isEmail
- *
  * Checks if the given input value is a valid email string.
  *
  * @example
@@ -43,6 +41,7 @@ export function isEmail(email: unknown): email is string {
 
   if (plusIndex !== -1) {
     const username = usernamePart.substring(0, plusIndex);
+
     const alias = usernamePart.substring(plusIndex + 1);
 
     const ALIAS_PATTERN = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]*$/;

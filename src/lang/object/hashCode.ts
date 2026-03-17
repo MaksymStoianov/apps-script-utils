@@ -10,8 +10,6 @@ import {
 import { objectToString } from "./objectToString";
 
 /**
- * ## hashCode
- *
  * Computes a 32-bit hash code for a given value.
  *
  * @param   value - The input value to compute the hash for.
@@ -50,6 +48,7 @@ export function hashCode(value: unknown): number {
 
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
+
     hash = (hash << 5) - hash + char;
     hash |= 0;
   }

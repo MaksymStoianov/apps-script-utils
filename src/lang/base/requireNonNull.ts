@@ -2,8 +2,6 @@ import { NullPointerException } from "../../exception";
 import { isNil } from "./isNil";
 
 /**
- * ## requireNonNull
- *
  * Ensures that the provided object is not `null` or `undefined`.
  *
  * @param    value the object to validate.

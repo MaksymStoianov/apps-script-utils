@@ -2,8 +2,6 @@ import { isNumber } from "./isNumber";
 import { isString } from "./isString";
 
 /**
- * ## isNumberLike
- *
  * Checks if the provided value is a number in a broader sense.
  *
  * @param   value - The value to check.

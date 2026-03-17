@@ -1,6 +1,4 @@
 /**
- * ## nonFunction
- *
  * Checks if the provided value is NOT `function`.
  *
  * @param   value - The value to check.

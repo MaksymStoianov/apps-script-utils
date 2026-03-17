@@ -1,6 +1,4 @@
 /**
- * ## isString
- *
  * Checks if the provided value is a string.
  *
  * @param   value - The value to check.

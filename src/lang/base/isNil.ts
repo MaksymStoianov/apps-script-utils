@@ -2,8 +2,6 @@ import { isNull } from "./isNull";
 import { isUndefined } from "./isUndefined";
 
 /**
- * ## isNil
- *
  * Checks if the provided value is `null` or `undefined` (i.e., "nil").
  *
  * @param   value - The value to check.

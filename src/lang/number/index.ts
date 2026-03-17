@@ -1,7 +1,8 @@
 // TODO: isDouble
 // TODO: isFloat
 export * from "./isCountable";
-export { isInteger } from "./isInteger";
+
+export * from "./isInteger";
 // TODO: isSafeInteger
 // TODO: isNaN
 
@@ -24,4 +25,4 @@ export * from "./nonNegative";
 // TODO: requireNonSafeInteger
 // TODO: requireNonNaN
 
-export { toInteger } from "./toInteger";
+export * from "./toInteger";

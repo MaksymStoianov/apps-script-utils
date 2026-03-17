@@ -5,8 +5,6 @@ interface Options {
 }
 
 /**
- * ## toLowerCase
- *
  * Returns a new string converted to lowercase.
  *
  * @example

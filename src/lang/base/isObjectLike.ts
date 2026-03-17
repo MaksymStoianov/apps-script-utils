@@ -2,8 +2,6 @@ import { isFunction } from "./isFunction";
 import { nonNil } from "./nonNil";
 
 /**
- * ## isObjectLike
- *
  * Checks if `value` is an object in a broader sense.
  *
  * @param   value - The value to check.

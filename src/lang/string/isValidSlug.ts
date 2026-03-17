@@ -1,8 +1,6 @@
 import { isEmpty, isString } from "../base";
 
 /**
- * ## isValidSlug
- *
  * Checks if the provided string is a valid slug.
  *
  * @param   value - The string value to validate.

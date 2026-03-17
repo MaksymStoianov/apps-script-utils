@@ -1,8 +1,6 @@
 import { nonNil } from "./nonNil";
 
 /**
- * ## isFunctionLike
- *
  * Checks if `value` is a function in a broader sense.
  *
  * @param   value - The value to check.

@@ -1,8 +1,6 @@
 import { isNumber } from "./isNumber";
 
 /**
- * ## nonNumber
- *
  * Checks if the provided value is NOT `number`.
  *
  * @param   value - The value to check.

@@ -1,12 +1,10 @@
 import { is2DArray } from "./is2DArray";
 
 /**
- * ## isConsistent2DArray
- *
  * Asserts that the given input is a non-empty two-dimensional array where all its rows (subarrays) have the same length.
  *
- * @param   arr - The input to check. It is expected to be an array potentially representing a matrix.
- * @returns
+ * @param   {unknown} arr - The input to check. It is expected to be an array potentially representing a matrix.
+ * @returns {boolean} `true` if the input is a consistent 2D array (a matrix), `false` otherwise.
  * @throws  {@link Error}
  * @since   1.0.0
  * @version 1.0.0

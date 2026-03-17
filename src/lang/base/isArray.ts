@@ -1,6 +1,4 @@
 /**
- * ## isArray
- *
  * Checks if the provided value is an `Array`.
  *
  * @template T - The type of elements within the array.

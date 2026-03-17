@@ -1,8 +1,6 @@
 import { isBoolean } from "./isBoolean";
 
 /**
- * ## nonBoolean
- *
  * Checks if the provided value is NOT `boolean`.
  *
  * @param   value - The value to check.

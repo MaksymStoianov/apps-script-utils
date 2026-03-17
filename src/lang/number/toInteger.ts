@@ -1,8 +1,6 @@
 import { isEmpty, isNil, isNumber, isString } from "../base";
 
 /**
- * ## toInteger
- *
  * Converts a value to an integer if possible.
  *
  * @param   value - The value to convert. Can be a `number`, `string`, `null`, `undefined`, or other types.

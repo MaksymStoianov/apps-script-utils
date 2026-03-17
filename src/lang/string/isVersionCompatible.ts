@@ -1,8 +1,6 @@
 import { versionCompare } from "./versionCompare";
 
 /**
- * ## isVersionCompatible
- *
  * Checks if the current version is compatible with a required minimum version.
  *
  * @param   currentVersion - The version currently in use or being checked.

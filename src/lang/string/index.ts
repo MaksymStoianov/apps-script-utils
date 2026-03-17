@@ -1,8 +1,12 @@
-export { isEmail } from "./isEmail";
-export { isValidLocale } from "./isValidLocale";
-export { isValidSlug } from "./isValidSlug";
-export { isValidVersion } from "./isValidVersion";
-export { isVersionCompatible } from "./isVersionCompatible";
+export * from "./isEmail";
+
+export * from "./isValidLocale";
+
+export * from "./isValidSlug";
+
+export * from "./isValidVersion";
+
+export * from "./isVersionCompatible";
 
 // TODO: nonValidEmail
 // TODO: nonValidLocale
@@ -10,21 +14,29 @@ export { isVersionCompatible } from "./isVersionCompatible";
 // TODO: nonValidVersion
 // TODO: nonVersionCompatible
 
-export { requireNonEmptyString } from "./requireNonEmptyString";
-export { requireValidEmail } from "./requireValidEmail";
+export * from "./requireNonEmptyString";
+
+export * from "./nonEmptyString";
+
+export * from "./requireValidEmail";
 // TODO: requireValidLocale
 // TODO: requireValidSlug
 // TODO: requireValidVersion
 // TODO: requireVersionCompatible
 
-export { toCamelCase } from "./toCamelCase";
-export { toKebabCase } from "./toKebabCase";
-export { toLowerCase } from "./toLowerCase";
-export { toProperCase } from "./toProperCase";
-export { toSnakeCase } from "./toSnakeCase";
-export { toUpperCase } from "./toUpperCase";
+export * from "./toCamelCase";
 
-export { escapeRegExp } from "./escapeRegExp";
+export * from "./toKebabCase";
+
+export * from "./toLowerCase";
+
+export * from "./toProperCase";
+
+export * from "./toSnakeCase";
+
+export * from "./toUpperCase";
+
+export * from "./escapeRegExp";
 
 // TODO: merge(text: string, fields: Object)
-export { versionCompare } from "./versionCompare";
+export * from "./versionCompare";

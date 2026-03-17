@@ -2,8 +2,6 @@ import { Exception } from "../../exception";
 import { isObject } from "./isObject";
 
 /**
- * ## isException
- *
  * Checks if the provided value is an instance of {@link Exception} or a class that extends it.
  *
  * @param   value - The value to check.

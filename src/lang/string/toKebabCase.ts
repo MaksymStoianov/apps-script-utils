@@ -6,8 +6,6 @@ interface Options {
 }
 
 /**
- * ## toKebabCase
- *
  * Converts a string to `kebab-case` format.
  *
  * `kebab-case` is a naming convention where words are separated by hyphens (`-`),

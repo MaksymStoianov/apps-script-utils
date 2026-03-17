@@ -1,6 +1,4 @@
 /**
- * ## isNull
- *
  * Checks if the provided value is `null`.
  *
  * @param   value - The value to check.

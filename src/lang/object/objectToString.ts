@@ -1,6 +1,4 @@
 /**
- * ## objectToString
- *
  * Converts `value` to a string using `Object.prototype.toString`.
  *
  * @param   value - The value to convert.

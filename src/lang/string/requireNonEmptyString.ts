@@ -2,8 +2,6 @@ import { EmptyStringException } from "../../exception";
 import { isEmpty, isString } from "../base";
 
 /**
- * ## requireNonEmptyString
- *
  * Validates that the provided value is a non-empty string.
  *
  * @param   value - The string value to validate. Can be `null` or `undefined`.

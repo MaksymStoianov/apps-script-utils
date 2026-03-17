@@ -2,8 +2,6 @@ import { InvalidStringException } from "../../exception";
 import { nonString } from "./nonString";
 
 /**
- * ## requireString
- *
  * Ensures that the provided value is a string, throwing an error otherwise.
  *
  * @param   value - The value to validate as a string.

@@ -1,8 +1,6 @@
 import { isValidVersion } from "./isValidVersion";
 
 /**
- * ## versionCompare
- *
  * Compares two "standardized" version number strings.
  *
  * This function compares two version strings (e.g., "1.0", "1.2.3")
@@ -35,12 +33,14 @@ export function versionCompare(version1: string, version2: string): number {
       .map(item => (Number.isNaN(item) || !Number.isInteger(item) ? 0 : item));
 
   const parsedVersion1 = parseVersionString(version1);
+
   const parsedVersion2 = parseVersionString(version2);
 
   const maxLength = Math.max(parsedVersion1.length, parsedVersion2.length);
 
   for (let i = 0; i < maxLength; i++) {
     const n1 = parsedVersion1[i] ?? 0;
+
     const n2 = parsedVersion2[i] ?? 0;
 
     if (n1 > n2) {

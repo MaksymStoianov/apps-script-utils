@@ -1,6 +1,4 @@
 /**
- * ## isUndefined
- *
  * Checks if the provided value is `undefined`.
  *
  * @param   value - The value to check.

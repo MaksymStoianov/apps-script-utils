@@ -5,8 +5,6 @@ interface Options {
 }
 
 /**
- * ## toUpperCase
- *
  * Returns a new string converted to uppercase.
  *
  * This function first ensures the input is a non-empty string. It then converts

@@ -1,8 +1,6 @@
 import { isEmpty, isString } from "../base";
 
 /**
- * ## isValidVersion
- *
  * Checks if the provided string is a valid version string.
  *
  * @param   value - The string value to validate as a version.

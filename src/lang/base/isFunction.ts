@@ -2,8 +2,6 @@ import { ObjectTag, objectToString } from "../object";
 import { isObject } from "./isObject";
 
 /**
- * ## isFunction
- *
  * Checks if the provided value is a function.
  *
  * @param   value - The value to check.

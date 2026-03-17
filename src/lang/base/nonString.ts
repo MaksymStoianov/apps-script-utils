@@ -1,8 +1,6 @@
 import { isString } from "./isString";
 
 /**
- * ## nonString
- *
  * Checks if the provided value is NOT `string`.
  *
  * @param   value - The value to check.

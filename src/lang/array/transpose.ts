@@ -2,8 +2,6 @@ import { isConsistent2DArray } from "../array";
 import { isArray } from "../base";
 
 /**
- * ## transpose
- *
  * Transposes a two-dimensional array (matrix), effectively swapping its rows and columns.
  *
  * @example
