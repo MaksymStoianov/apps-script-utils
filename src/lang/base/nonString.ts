@@ -3,8 +3,9 @@ import { isString } from "./isString";
 /**
  * Checks if the provided value is NOT `string`.
  *
- * @param   value - The value to check.
- * @returns `true` if the value is not `string`; otherwise, `false`.
+ * @template T
+ * @param   {T | string} value - The value to check.
+ * @returns {boolean} `true` if the value is not `string`; otherwise, `false`.
  * @see     {@link isString}
  * @see     {@link requireString}
  * @since   1.0.0

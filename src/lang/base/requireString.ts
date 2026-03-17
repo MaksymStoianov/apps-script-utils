@@ -4,9 +4,9 @@ import { nonString } from "./nonString";
 /**
  * Ensures that the provided value is a string, throwing an error otherwise.
  *
- * @param   value - The value to validate as a string.
- * @param   [message] - Optional custom error message if the validation fails.
- * @returns The validated string if the input is a valid string.
+ * @param   {unknown} value - The value to validate as a string.
+ * @param   {string} [message] - Optional custom error message if the validation fails.
+ * @returns {string} The validated string if the input is a valid string.
  * @throws  {@link InvalidStringException}
  * @see     {@link isString}
  * @see     {@link nonString}

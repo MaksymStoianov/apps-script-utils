@@ -42,11 +42,12 @@ export function isEmpty(value: unknown, strict: boolean = false): boolean {
     return value.size === 0;
   }
 
-  if (
+  const isLengthAware =
     isObject(value) &&
     "length" in value &&
-    typeof (value as { length: number }).length === "number"
-  ) {
+    typeof (value as { length: number }).length === "number";
+
+  if (isLengthAware) {
     return (value as { length: number }).length === 0;
   }
 
