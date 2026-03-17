@@ -8,15 +8,21 @@
     </small>
 </p>
 
-# Utilities for Google Apps Script™ projects
+# Utilities for Google Apps Script™
 
-[![Built%20with-clasp](https://img.shields.io/badge/Built%20with-clasp-4285f4.svg)](https://github.com/google/clasp)
-[![License](https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License)](LICENSE)
-[![Latest release](https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release)](https://github.com/MaksymStoianov/apps-script-utils/releases)
+<p align="left">
+  <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License" alt="License"></a>
+  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="ROADMAP.md"><img src="https://img.shields.io/badge/Roadmap-View-blue.svg" alt="Roadmap"></a>
+  <a href="https://github.com/MaksymStoianov/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release" alt="Latest release"></a>
+</p>
 
-[![GitHub Stars](https://img.shields.io/github/stars/MaksymStoianov/apps-script-utils?style=social)](https://github.com/MaksymStoianov/apps-script-utils/stargazers)
-[![GitHub Fork](https://img.shields.io/github/forks/MaksymStoianov/apps-script-utils?style=social)](https://github.com/MaksymStoianov/apps-script-utils/forks)
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github)](https://github.com/sponsors/MaksymStoianov)
+<p align="left">
+  <a href="https://github.com/MaksymStoianov/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/MaksymStoianov/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Fork"></a>
+  <a href="https://github.com/sponsors/MaksymStoianov"><img src="https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github" alt="GitHub Sponsors"></a>
+</p>
 
 <!-- TOC -->
 
@@ -24,7 +30,7 @@
   - [Overview](#overview)
   - [Key Features](#key-features)
   - [Requirements](#requirements)
-  - [How to Install](#how-to-install)
+  - [Installation](#installation)
   - [Usage Examples](#usage-examples)
   - [Development](#development)
     - [Scripts](#scripts)
@@ -73,20 +79,12 @@ one place.
 - [Node.js](https://nodejs.org/) (v20 or higher recommended)
 - [npm](https://www.npmjs.com/)
 
-## How to Install
+## Installation
 
-To install the package from GitHub, run:
-
-```bash
-npm install github:MaksymStoianov/apps-script-utils#main
-```
-
-> **Note:** It's recommended to use tags (`#vX.Y.Z`) for production environments to ensure version stability.
-
-For example:
+Install the package via npm:
 
 ```bash
-npm install github:MaksymStoianov/apps-script-utils#v1.6.0
+npm install apps-script-utils
 ```
 
 ## Usage Examples
