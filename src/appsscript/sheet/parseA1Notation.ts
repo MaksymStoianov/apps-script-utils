@@ -5,10 +5,10 @@ import { getColumnLetterByIndex } from "./getColumnLetterByIndex";
 import type { GridRange } from "./types";
 
 const SHEET_AND_RANGE_REGEX =
-  /^(?:'(?<sQuoteSheet>(?:[^']|'')*)'|"(?<dQuoteSheet>(?:[^"]|"")*)"|(?<simpleSheet>[A-Z]+[A-Z0-9_]*))!(?<a1Range>[A-Z]*\d*(?::[A-Z]*\d*)?)$/i;
+  /^(?:'(?<sQuoteSheet>[^']*(?:''[^']*)*)'|"(?<dQuoteSheet>[^"]*(?:""[^"]*)*)"|(?<simpleSheet>[A-Z][A-Z0-9_]*))!(?<a1Range>.*)$/i;
 
 const A1_RANGE_REGEX =
-  /^(?<startCol>[A-Z]*)(?<startRow>\d*)?(?::(?<endCol>[A-Z]*)(?<endRow>\d*)?)?$/i;
+  /^(?<startCol>[A-Z]*)(?<startRow>\d*)(?::(?<endCol>[A-Z]*)(?<endRow>\d*))?$/i;
 
 /**
  * Parses an A1 notation string into a <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
