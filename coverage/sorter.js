@@ -81,8 +81,9 @@ var addSorting = (function() {
             cols.push(col);
             if (col.sortable) {
                 col.defaultDescSort = col.type === 'number';
-                colNode.innerHTML =
-                    colNode.innerHTML + '<span class="sorter"></span>';
+                const sorterSpan = document.createElement('span');
+                sorterSpan.className = 'sorter';
+                colNode.appendChild(sorterSpan);
             }
         }
         return cols;
@@ -113,15 +114,15 @@ var addSorting = (function() {
             i;
 
         for (i = 0; i < rows.length; i += 1) {
-            rows[i].data = loadRowData(rows[i]);
+            rows[i].__sorter_data__ = loadRowData(rows[i]);
         }
     }
     // sorts the table using the data for the ith column
     function sortByIndex(index, desc) {
         var key = cols[index].key,
             sorter = function(a, b) {
-                a = a.data[key];
-                b = b.data[key];
+                a = a.__sorter_data__[key];
+                b = b.__sorter_data__[key];
                 return a < b ? -1 : a > b ? 1 : 0;
             },
             finalSorter = sorter,
