@@ -11,8 +11,6 @@ import { isSheet } from "./isSheet";
  * @version     1.0.0
  * @environment Google Apps Script
  */
-export function nonSheet<T>(
-  value: T | GoogleAppsScript.Spreadsheet.Sheet
-): value is T {
+export function nonSheet<T>(value: T | GoogleAppsScript.Spreadsheet.Sheet): value is T {
   return !isSheet(value);
 }

@@ -7,7 +7,6 @@
  * @version   1.0.0
  */
 export interface Iterator<T> {
-
   /**
    * Gets the index of the current position in the collection.
    *

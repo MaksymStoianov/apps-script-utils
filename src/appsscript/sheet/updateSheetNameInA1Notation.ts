@@ -22,10 +22,7 @@ import { parseA1Notation } from "./parseA1Notation";
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
  */
-export function updateSheetNameInA1Notation(
-  a1Notation: string,
-  sheetName?: string | null
-): string {
+export function updateSheetNameInA1Notation(a1Notation: string, sheetName?: string | null): string {
   if (arguments.length === 0) {
     throw new IllegalArgumentException();
   }

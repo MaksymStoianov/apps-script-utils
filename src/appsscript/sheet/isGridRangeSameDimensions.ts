@@ -16,19 +16,13 @@ import type { GridRange } from "./types";
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`
  */
-export function isGridRangeSameDimensions(
-  range1: GridRange,
-  range2: GridRange
-): boolean {
+export function isGridRangeSameDimensions(range1: GridRange, range2: GridRange): boolean {
   if (!isObject(range1) || !isObject(range2)) {
     throw new InvalidGridRangeException();
   }
 
-  const getDimensions = (
-    gridRange: GridRange
-  ): { height: number; width: number } | null => {
-    const { startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } =
-      gridRange;
+  const getDimensions = (gridRange: GridRange): { height: number; width: number } | null => {
+    const { startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } = gridRange;
 
     if (
       isNil(startRowIndex) ||
@@ -58,8 +52,5 @@ export function isGridRangeSameDimensions(
     return false;
   }
 
-  return (
-    dimensions1.height === dimensions2.height &&
-    dimensions1.width === dimensions2.width
-  );
+  return dimensions1.height === dimensions2.height && dimensions1.width === dimensions2.width;
 }

@@ -33,7 +33,7 @@ export function sortSheets(
       return;
     }
 
-    const sheetNames = sheets.map(sheet => sheet.getName());
+    const sheetNames = sheets.map((sheet) => sheet.getName());
 
     sheetNames.sort(callback);
 

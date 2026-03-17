@@ -14,10 +14,7 @@ import { isRange } from "./isRange";
  * @since   1.5.0
  * @version 1.0.0
  */
-export function requireRange(
-  value: unknown,
-  message?: string
-): GoogleAppsScript.Spreadsheet.Range {
+export function requireRange(value: unknown, message?: string): GoogleAppsScript.Spreadsheet.Range {
   if (!isRange(value)) {
     throw new InvalidRangeException(message);
   }

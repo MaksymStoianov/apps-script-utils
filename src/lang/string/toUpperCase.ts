@@ -34,10 +34,7 @@ interface ToUpperCaseOptions {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toUpperCase(
-  value: string,
-  options: ToUpperCaseOptions = {}
-): string {
+export function toUpperCase(value: string, options: ToUpperCaseOptions = {}): string {
   const effectiveOptions: Required<ToUpperCaseOptions> = {
     trim: false,
     ...options

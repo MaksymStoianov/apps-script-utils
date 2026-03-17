@@ -16,17 +16,15 @@ export function stringifyJson(value: unknown): string {
   }
 
   if (Array.isArray(value)) {
-    return `[${value.map(element => stringifyJson(element)).join(",")}]`;
+    return `[${value.map((element) => stringifyJson(element)).join(",")}]`;
   }
 
   const keys = Object.keys(value).sort();
 
-  const pairs = keys.map(key => {
+  const pairs = keys.map((key) => {
     const stringifiedKey = JSON.stringify(key);
 
-    const stringifiedValue = stringifyJson(
-      (value as Record<string, unknown>)[key]
-    );
+    const stringifiedValue = stringifyJson((value as Record<string, unknown>)[key]);
 
     return `${stringifiedKey}:${stringifiedValue}`;
   });

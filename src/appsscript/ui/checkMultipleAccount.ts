@@ -11,10 +11,7 @@ import { requireValidEmail } from "../../lang";
  */
 export function checkMultipleAccount(email: string): boolean {
   return (
-    requireValidEmail(
-      email?.toLowerCase(),
-      "The initiator's email address format is invalid."
-    ) !==
+    requireValidEmail(email?.toLowerCase(), "The initiator's email address format is invalid.") !==
     requireValidEmail(
       Session?.getEffectiveUser()?.getEmail()?.toLowerCase(),
       "The effective script user's email address format is invalid."

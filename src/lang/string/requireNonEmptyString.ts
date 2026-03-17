@@ -11,10 +11,7 @@ import { isEmpty, isString } from "../base";
  * @since   1.0.0
  * @version 1.0.0
  */
-export function requireNonEmptyString(
-  value: string | null | undefined,
-  message?: string
-): string {
+export function requireNonEmptyString(value: string | null | undefined, message?: string): string {
   if (!isString(value) || isEmpty(value)) {
     throw new EmptyStringException(message);
   }

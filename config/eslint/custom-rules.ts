@@ -99,8 +99,7 @@ export default {
           "The condition in the if statement is too complex. It's recommended to move it to a separate variable or function for better readability."
       },
       {
-        selector:
-          "ConditionalExpression > LogicalExpression > LogicalExpression",
+        selector: "ConditionalExpression > LogicalExpression > LogicalExpression",
         message:
           "The condition in the ternary operator is too complex. It is recommended to move it to a separate variable."
       },

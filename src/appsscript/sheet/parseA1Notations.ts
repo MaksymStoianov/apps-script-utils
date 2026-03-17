@@ -44,7 +44,7 @@ export function parseA1Notations(
 
   const ranges = trimmedInput
     .split(",")
-    .map(item => item.trim())
+    .map((item) => item.trim())
     .filter(Boolean)
     .map(parseA1Notation);
 
@@ -60,9 +60,7 @@ export function parseA1Notations(
     }
 
     if (includeSheetNames === false && range.sheetName) {
-      throw new Error(
-        `Sheet names are not allowed. Found a sheet name in "${range.a1Notation}".`
-      );
+      throw new Error(`Sheet names are not allowed. Found a sheet name in "${range.a1Notation}".`);
     }
   }
 

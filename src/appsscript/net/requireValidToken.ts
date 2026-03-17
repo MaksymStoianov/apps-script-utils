@@ -20,9 +20,7 @@ export function requireValidToken(
     throw new AuthenticationException("No token provided.");
   }
 
-  const cleanToken = token.startsWith("Bearer ")
-    ? token.replace("Bearer ", "")
-    : token;
+  const cleanToken = token.startsWith("Bearer ") ? token.replace("Bearer ", "") : token;
 
   const keysToCompare: string[] = Array.isArray(allowedKeys)
     ? (allowedKeys as string[])

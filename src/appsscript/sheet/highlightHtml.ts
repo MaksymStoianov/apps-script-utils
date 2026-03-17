@@ -207,11 +207,7 @@ export function highlightHtml(
 
         const attrValueEndIndex = match.index + fullMatchText.length;
 
-        richTextBuilder.setTextStyle(
-          match.index,
-          attrValueEndIndex,
-          textStyles.attrName
-        );
+        richTextBuilder.setTextStyle(match.index, attrValueEndIndex, textStyles.attrName);
 
         const attrValueStartIndex = attrNameEndIndex + '="'.length;
 
@@ -228,9 +224,7 @@ export function highlightHtml(
 
   const richTextValues = range
     .getDisplayValues()
-    .map(cells =>
-      cells.map(cell => _convertHtmlTagsToRichText(cell, textStyles))
-    );
+    .map((cells) => cells.map((cell) => _convertHtmlTagsToRichText(cell, textStyles)));
 
   if (range.getNumRows() === 1 && range.getNumColumns() === 1) {
     range.setRichTextValue(richTextValues[0][0]);

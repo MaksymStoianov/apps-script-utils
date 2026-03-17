@@ -86,19 +86,9 @@ export function parseA1Notation(a1Notation: string): GridRange {
       sRow = 0;
     } else if (isNull(sCol) && isNull(eCol)) {
       sCol = 0;
-    } else if (
-      nonNull(sRow) &&
-      nonNull(sCol) &&
-      nonNull(eCol) &&
-      isNull(eRow)
-    ) {
+    } else if (nonNull(sRow) && nonNull(sCol) && nonNull(eCol) && isNull(eRow)) {
       // Keep eRow as null (unbounded)
-    } else if (
-      isNull(sRow) &&
-      nonNull(sCol) &&
-      nonNull(eCol) &&
-      nonNull(eRow)
-    ) {
+    } else if (isNull(sRow) && nonNull(sCol) && nonNull(eCol) && nonNull(eRow)) {
       sRow = 0;
     }
   } else {
@@ -209,9 +199,7 @@ function generateCanonicalA1(params: {
     endColumnIndex
   } = params;
 
-  const sColLetter = nonNull(startColumnIndex)
-    ? getColumnLetterByIndex(startColumnIndex)
-    : "";
+  const sColLetter = nonNull(startColumnIndex) ? getColumnLetterByIndex(startColumnIndex) : "";
 
   const sRowNum = nonNull(startRowIndex) ? startRowIndex + 1 : "";
 
@@ -292,9 +280,7 @@ function generateCanonicalA1(params: {
   }
 
   if (hasColon) {
-    const eColLetter = nonNull(endColumnIndex)
-      ? getColumnLetterByIndex(endColumnIndex - 1)
-      : "";
+    const eColLetter = nonNull(endColumnIndex) ? getColumnLetterByIndex(endColumnIndex - 1) : "";
 
     const eRowNum = nonNull(endRowIndex) ? endRowIndex : "";
 

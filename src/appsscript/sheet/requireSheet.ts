@@ -14,10 +14,7 @@ import { isSheet } from "./isSheet";
  * @since   1.5.0
  * @version 1.0.0
  */
-export function requireSheet(
-  value: unknown,
-  message?: string
-): GoogleAppsScript.Spreadsheet.Sheet {
+export function requireSheet(value: unknown, message?: string): GoogleAppsScript.Spreadsheet.Sheet {
   if (!isSheet(value)) {
     throw new InvalidSheetException(message);
   }

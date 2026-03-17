@@ -156,18 +156,14 @@ export function parseJson(value: string): object {
         expectingKey = false;
       } else if (expectingValue && isValidValue(token)) {
         correctedTokens.push(
-          token.match(/^'[^']*'$/)
-            ? `"${token.slice(1, -1).replace(/"/g, '\\"')}"`
-            : token
+          token.match(/^'[^']*'$/) ? `"${token.slice(1, -1).replace(/"/g, '\\"')}"` : token
         );
         expectingValue = false;
       } else if (isValidKey(token)) {
         correctedTokens.push(`"${token.replace(/"/g, "")}"`);
       } else if (isValidValue(token)) {
         correctedTokens.push(
-          token.match(/^'[^']*'$/)
-            ? `"${token.slice(1, -1).replace(/"/g, '\\"')}"`
-            : token
+          token.match(/^'[^']*'$/) ? `"${token.slice(1, -1).replace(/"/g, '\\"')}"` : token
         );
       } else {
         throw new Error(`Invalid token: ${token}`);

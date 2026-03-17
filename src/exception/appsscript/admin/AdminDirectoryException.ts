@@ -11,9 +11,7 @@ import { RuntimeException } from "../../RuntimeException";
  */
 export class AdminDirectoryException extends RuntimeException {
   constructor(message?: string | undefined) {
-    super(
-      message || "Admin SDK Directory Service is not available or not enabled."
-    );
+    super(message || "Admin SDK Directory Service is not available or not enabled.");
 
     const target = new.target;
 

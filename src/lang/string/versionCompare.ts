@@ -30,7 +30,7 @@ export function versionCompare(version1: string, version2: string): number {
     versionString
       .split(".")
       .map(Number) // Convert each segment to a number
-      .map(item => (Number.isNaN(item) || !Number.isInteger(item) ? 0 : item));
+      .map((item) => (Number.isNaN(item) || !Number.isInteger(item) ? 0 : item));
 
   const parsedVersion1 = parseVersionString(version1);
 

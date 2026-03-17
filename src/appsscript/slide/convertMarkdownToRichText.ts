@@ -35,10 +35,7 @@ export interface RichTextRun {
  * @returns {RichTextRun[]} An array of RichTextRun objects.
  * @since 1.5.0
  */
-export function convertMarkdownToRichText(
-  text: string,
-  theme: Theme = {}
-): RichTextRun[] {
+export function convertMarkdownToRichText(text: string, theme: Theme = {}): RichTextRun[] {
   const runs: RichTextRun[] = [];
 
   // Дефолтные значения темы
@@ -68,10 +65,7 @@ export function convertMarkdownToRichText(
     for (const rule of rules) {
       const match = rule.regex.exec(input);
 
-      if (
-        match &&
-        (closestMatch === null || match.index < closestMatch.index)
-      ) {
+      if (match && (closestMatch === null || match.index < closestMatch.index)) {
         closestMatch = match;
         activeRule = rule;
       }
@@ -109,8 +103,7 @@ export function convertMarkdownToRichText(
         case "code":
           nextStyle.fontFamily = theme.codeTheme?.fontFamily || "Courier New";
           nextStyle.foregroundColor = theme.codeTheme?.textColor || "#EB5757";
-          nextStyle.backgroundColor =
-            theme.codeTheme?.backgroundColor || "#F3F3F3";
+          nextStyle.backgroundColor = theme.codeTheme?.backgroundColor || "#F3F3F3";
 
           break;
         case "link":
@@ -163,5 +156,5 @@ function optimizeRuns(runs: RichTextRun[]): RichTextRun[] {
 
   optimized.push(current);
 
-  return optimized.filter(r => r.text.length > 0);
+  return optimized.filter((r) => r.text.length > 0);
 }

@@ -1,0 +1,67 @@
+# This file defines path-specific settings for Git, such as line ending
+# normalization, binary file handling, and GitHub-specific display options.
+#
+# https://git-scm.com/docs/gitattributes
+
+# Handle line endings automatically for files detected as text 
+# and ensure that all checked-in text files have the LF newline character.
+* text=auto
+
+# Common source files
+*.js      text
+*.jsx     text
+*.ts      text
+*.tsx     text
+*.json    text
+*.html    text
+*.css     text
+*.scss    text
+*.md      text
+*.yml     text
+*.yaml    text
+*.xml     text
+
+# Force LF for shell scripts and configuration files (Unix-style)
+*.sh      text eol=lf
+*.bash    text eol=lf
+.htaccess text eol=lf
+Makefile  text eol=lf
+
+# Force CRLF for Windows batch files
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+
+# Denote all files that are truly binary and should not be modified by Git.
+# Images
+*.jpg   binary
+*.png   binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+
+# Fonts
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
+
+# Documents
+*.pdf   binary
+
+# Archives
+*.zip   binary
+*.tar   binary
+*.gz    binary
+
+# These settings affect how GitHub calculates language statistics and searches.
+dist/*   linguist-vendored
+build/*  linguist-vendored
+docs/*   linguist-documentation
+vendor/* linguist-vendored
+test/*   linguist-vendored
+
+# Treat lock files as binary during merge to prevent conflicts.
+# These should be managed by their respective package managers.
+package-lock.json  merge=binary
+yarn.lock          merge=binary
+pnpm-lock.yaml     merge=binary
