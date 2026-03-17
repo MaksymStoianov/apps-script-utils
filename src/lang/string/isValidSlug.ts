@@ -3,8 +3,8 @@ import { isEmpty, isString } from "../base";
 /**
  * Checks if the provided string is a valid slug.
  *
- * @param   value - The string value to validate.
- * @returns `true` if the value is a valid slug; otherwise, `false`.
+ * @param   {string} value - The string value to validate.
+ * @returns {boolean} `true` if the value is a valid slug; otherwise, `false`.
  * @since   1.0.0
  * @version 1.0.0
  */

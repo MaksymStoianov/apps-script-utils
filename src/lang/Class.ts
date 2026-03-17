@@ -14,7 +14,7 @@ export abstract class Class {
    * Getter to retrieve a string representing the class instance tag.
    * Used in `Object.prototype.toString`.
    *
-   * @returns The tag string.
+   * @returns {string} The tag string.
    */
   get [Symbol.toStringTag](): string {
     return this.constructor.name;
@@ -25,7 +25,7 @@ export abstract class Class {
    *
    * __Note__ that the constructor is not called.
    *
-   * @returns A new instance with the same properties as the original.
+   * @returns {this} A new instance with the same properties as the original.
    */
   clone(): this {
     const proto = Object.getPrototypeOf(this);
@@ -40,8 +40,8 @@ export abstract class Class {
   /**
    * Checks if this object is equivalent to another.
    *
-   * @param input The object to compare.
-   * @returns
+   * @param   {any} input The object to compare.
+   * @returns {boolean}
    *  - `true` if the objects are equivalent,
    *  - `false` otherwise.
    */
@@ -65,7 +65,7 @@ export abstract class Class {
   /**
    * Calculates a hash code for the current instance of the class.
    *
-   * @returns The calculated hash code for the instance.
+   * @returns {number} The calculated hash code for the instance.
    */
   hashCode(): number {
     return hashCode(this);
@@ -94,7 +94,7 @@ export abstract class Class {
    * Returns a string representing the current instance of the class.
    * Intended to be overridden by subclasses for locale-specific purposes.
    *
-   * @returns A string representation of the current instance.
+   * @returns {string} A string representation of the current instance.
    */
   toLocaleString(): string {
     return this.constructor.name;
@@ -103,7 +103,7 @@ export abstract class Class {
   /**
    * Returns a string representing the current instance of the class.
    *
-   * @returns A string representation of the current instance.
+   * @returns {string} A string representation of the current instance.
    */
   toString(): string {
     return this.constructor.name;
@@ -112,11 +112,11 @@ export abstract class Class {
   /**
    * Called when an instance of a class is converted to a primitive value.
    *
-   * @param [hint] Desired primitive type:
+   * @param   {string} [hint] Desired primitive type:
    *  - `string`
    *  - `number`
    *  - `default`
-   * @returns The primitive value.
+   * @returns {string | number} The primitive value.
    */
   [Symbol.toPrimitive](
     hint: "string" | "number" | "default" | undefined = "default"

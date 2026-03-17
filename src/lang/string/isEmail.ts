@@ -12,8 +12,8 @@ import { isEmpty, isString } from "../base";
  * isEmail("");                 // Returns: false
  * ```
  *
- * @param   email - The value to check, which could be of any type.
- * @returns `true` if the value is a non-empty string and matches a common email format; otherwise, `false`.
+ * @param   {unknown} email - The value to check, which could be of any type.
+ * @returns {boolean} `true` if the value is a non-empty string and matches a common email format; otherwise, `false`.
  * @see     {@link requireValidEmail}
  * @since   1.0.0
  * @version 1.0.0

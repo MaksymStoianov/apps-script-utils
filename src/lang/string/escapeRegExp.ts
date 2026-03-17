@@ -4,8 +4,8 @@ import { isEmpty, isString } from "../base";
 /**
  * Escapes special characters in a string to be safely used inside a regular expression.
  *
- * @param   value - The string to escape.
- * @returns The escaped string, safe for use in a regular expression.
+ * @param   {string} value - The string to escape.
+ * @returns {string} The escaped string, safe for use in a regular expression.
  * @throws  {@link EmptyStringException}
  * @see     {@link escapeHtml}
  * @see     {@link escapeXml}

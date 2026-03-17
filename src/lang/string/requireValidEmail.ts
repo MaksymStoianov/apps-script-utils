@@ -5,9 +5,9 @@ import { requireNonEmptyString } from "./requireNonEmptyString";
 /**
  * Validates that the provided value is a non-empty string and a valid email format.
  *
- * @param   email - The string value representing an email to validate. Can be `null` or `undefined`.
- * @param   [message] - Optional. A custom error message if the validation fails.
- * @returns The validated, non-empty, and validly formatted email string.
+ * @param   {string | null | undefined} email - The string value representing an email to validate. Can be `null` or `undefined`.
+ * @param   {string} [message] - Optional. A custom error message if the validation fails.
+ * @returns {string} The validated, non-empty, and validly formatted email string.
  * @throws  {@link EmptyStringException}
  * @throws  {@link InvalidEmailFormatException}
  * @see     {@link isEmail}

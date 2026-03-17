@@ -1,6 +1,6 @@
 import { requireNonEmptyString } from "./requireNonEmptyString";
 
-interface Options {
+interface ToProperCaseOptions {
   trim?: boolean;
 }
 
@@ -27,9 +27,9 @@ interface Options {
  * console.log(trimmedResult); // Hello World! How Are You?
  * ```
  *
- * @param   value - The input string to convert.
- * @param   [options] - Optional configuration options.
- * @returns The string converted to proper case, with optional whitespace normalization.
+ * @param   {string} value - The input string to convert.
+ * @param   {ToProperCaseOptions} [options] - Optional configuration options.
+ * @returns {string} The string converted to proper case, with optional whitespace normalization.
  * @throws  {@link EmptyStringException}
  * @see     {@link toCamelCase}
  * @see     {@link toKebabCase}
@@ -39,8 +39,11 @@ interface Options {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toProperCase(value: string, options: Options = {}): string {
-  const effectiveOptions: Required<Options> = {
+export function toProperCase(
+  value: string,
+  options: ToProperCaseOptions = {}
+): string {
+  const effectiveOptions: Required<ToProperCaseOptions> = {
     trim: false,
     ...options
   };

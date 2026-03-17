@@ -1,6 +1,6 @@
 import { requireNonEmptyString } from "./requireNonEmptyString";
 
-interface Options {
+interface ToSnakeCaseOptions {
   clean?: boolean;
   trim?: boolean;
 }
@@ -38,9 +38,9 @@ interface Options {
  * console.log(resultTrimmed); // hello_world
  * ```
  *
- * @param   value - The input string to convert.
- * @param   [options] - Optional configuration options.
- * @returns The string converted to snake_case.
+ * @param   {string} value - The input string to convert.
+ * @param   {ToSnakeCaseOptions} [options] - Optional configuration options.
+ * @returns {string} The string converted to snake_case.
  * @throws  {@link EmptyStringException}
  * @see     {@link toCamelCase}
  * @see     {@link toKebabCase}
@@ -50,8 +50,11 @@ interface Options {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toSnakeCase(value: string, options?: Options): string {
-  const effectiveOptions: Required<Options> = {
+export function toSnakeCase(
+  value: string,
+  options?: ToSnakeCaseOptions
+): string {
+  const effectiveOptions: Required<ToSnakeCaseOptions> = {
     clean: false,
     trim: false,
     ...(options || {})

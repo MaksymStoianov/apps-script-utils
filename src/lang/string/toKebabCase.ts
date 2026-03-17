@@ -1,6 +1,6 @@
 import { requireNonEmptyString } from "./requireNonEmptyString";
 
-interface Options {
+interface ToKebabCaseOptions {
   clean?: boolean;
   trim?: boolean;
 }
@@ -30,9 +30,9 @@ interface Options {
  * console.log(result); // hello-world-how-are-you
  * ```
  *
- * @param   value - The input string to convert.
- * @param   [options] - Optional configuration options.
- * @returns The string converted to kebab-case.
+ * @param   {string} value - The input string to convert.
+ * @param   {ToKebabCaseOptions} [options] - Optional configuration options.
+ * @returns {string} The string converted to kebab-case.
  * @throws  {@link EmptyStringException}
  * @see     {@link toCamelCase}
  * @see     {@link toLowerCase}
@@ -42,8 +42,11 @@ interface Options {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toKebabCase(value: string, options: Options = {}): string {
-  const effectiveOptions: Required<Options> = {
+export function toKebabCase(
+  value: string,
+  options: ToKebabCaseOptions = {}
+): string {
+  const effectiveOptions: Required<ToKebabCaseOptions> = {
     clean: false,
     trim: false,
     ...options
