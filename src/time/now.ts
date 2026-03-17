@@ -1,7 +1,7 @@
 /**
  * Returns the number of milliseconds elapsed since the epoch (January 1, 1970, UTC).
  *
- * @returns The current timestamp in milliseconds.
+ * @returns {number} The current timestamp in milliseconds.
  * @since   1.5.0
  * @version 1.0.0
  */

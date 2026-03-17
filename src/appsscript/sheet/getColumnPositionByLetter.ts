@@ -2,12 +2,10 @@ import { IllegalArgumentException } from "../../exception";
 import { getColumnIndexByLetter } from "./getColumnIndexByLetter";
 
 /**
- * ## getColumnPositionByLetter
- *
  * Converts a column letter (or combination of letters) into a column position.
  *
- * @param       letter - The column label (e.g., `'A'`, `'B'`, ..., `'AA'`).
- * @returns     The corresponding column position.
+ * @param       {string} letter - The column label (e.g., `'A'`, `'B'`, ..., `'AA'`).
+ * @returns     {number | null} The corresponding column position.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link getColumnLetterByPosition}
  * @see         {@link getColumnLetterByIndex}
@@ -23,5 +21,6 @@ export function getColumnPositionByLetter(letter: string): number | null {
   }
 
   const index = getColumnIndexByLetter(letter);
+
   return index ? index + 1 : null;
 }

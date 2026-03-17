@@ -3,8 +3,8 @@ import { requireNonEmptyString } from "../../lang";
 /**
  * Checks if a given string represents an absolute path or URL.
  *
- * @param        path - The string path or URL to check.
- * @returns     `true` if the path is absolute; otherwise, `false`.
+ * @param       {string} path - The string path or URL to check.
+ * @returns     {boolean} `true` if the path is absolute; otherwise, `false`.
  * @throws      {@link EmptyStringException}
  * @see         {@link isRelative}
  * @environment `Google Apps Script`, `Browser`

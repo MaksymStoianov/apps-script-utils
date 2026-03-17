@@ -1,8 +1,6 @@
 import { requireNonEmptyString } from "../lang";
 
 /**
- * ## parseJson
- *
  * Parses a JSON string, including handling and attempting to fix common formatting errors
  * that might cause standard JSON.parse to fail (e.g., unquoted keys, single quotes).
  *
@@ -25,12 +23,13 @@ import { requireNonEmptyString } from "../lang";
  * console.log(result3); // null
  * ```
  *
- * @param   value - The string containing the JSON to parse.
- * @returns The parsed object if successful, or `null` if the JSON could not be parsed even after attempted corrections.
+ * @param   {string} value - The string containing the JSON to parse.
+ * @returns {object} The parsed object if successful, or `null` if the JSON could not be parsed even after attempted corrections.
  * @throws  {@link EmptyStringException}
  * @see     {@link stringifyJson}
  * @since   1.0.0
  * @version 1.0.0
+ * @deprecated This function is deprecated and will be removed in future versions.
  */
 export function parseJson(value: string): object {
   const result = requireNonEmptyString(value);
@@ -41,18 +40,20 @@ export function parseJson(value: string): object {
   } catch (err: unknown) {
     /**
      * Checks if a token is a valid key format (either quoted or unquoted alphanumeric).
-     * @param token The token string to check.
-     * @returns `true` if the token is a valid key format; otherwise, `false`.
+     *
+     * @param   {string} token The token string to check.
+     * @returns {boolean} `true` if the token is a valid key format; otherwise, `false`.
      */
-    const isValidKey = (token: string) =>
+    const isValidKey = (token: string): boolean =>
       /^"[^"]*"$/.test(token) || /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(token);
 
     /**
      * Checks if a token is a valid value format (boolean, null, number, or quoted string).
-     * @param token The token string to check.
-     * @returns `true` if the token is a valid value format; otherwise, `false`.
+     *
+     * @param   {string} token The token string to check.
+     * @returns {boolean} `true` if the token is a valid value format; otherwise, `false`.
      */
-    const isValidValue = (token: string) =>
+    const isValidValue = (token: string): boolean =>
       token === "true" ||
       token === "false" ||
       token === "null" ||
@@ -61,9 +62,13 @@ export function parseJson(value: string): object {
       /^'[^']*'$/.test(token);
 
     const tokens = [];
+
     let currentToken = "";
+
     let isString = false;
+
     let isEscaped = false;
+
     let quoteType = null;
 
     for (let i = 0; i < result.length; i++) {
@@ -72,12 +77,14 @@ export function parseJson(value: string): object {
       if (isEscaped) {
         currentToken += char;
         isEscaped = false;
+
         continue;
       }
 
       if (char === "\\") {
         currentToken += char;
         isEscaped = true;
+
         continue;
       }
 
@@ -108,6 +115,7 @@ export function parseJson(value: string): object {
           tokens.push(currentToken);
           currentToken = "";
         }
+
         tokens.push(char);
       } else {
         currentToken += char;
@@ -119,7 +127,9 @@ export function parseJson(value: string): object {
     }
 
     const correctedTokens = [];
+
     let expectingValue = false;
+
     let expectingKey = false;
 
     for (let i = 0; i < tokens.length; i++) {

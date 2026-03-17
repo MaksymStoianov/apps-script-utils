@@ -2,12 +2,10 @@ import { ObjectTag, objectToString } from "../object";
 import { isObject } from "./isObject";
 
 /**
- * ## isFunction
- *
  * Checks if the provided value is a function.
  *
- * @param   value - The value to check.
- * @returns `true` if the value is a function; otherwise, `false`.
+ * @param   {unknown} value - The value to check.
+ * @returns {boolean} `true` if the value is a function; otherwise, `false`.
  * @see     {@link nonFunction}
  * @see     {@link isFunctionLike}
  * @since   1.0.0

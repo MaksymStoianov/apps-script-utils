@@ -3,17 +3,14 @@ import { isObject, nonNil } from "../../lang";
 import type { GridRange } from "./types";
 
 /**
- * ## isCellGridRange
+ * Checks if a given <a href="./types/GridRange.ts"><code>GridRange</code></a> represents a single cell.
  *
- * Checks if a given {@link GridRange} represents a single cell.
- *
- * @param       gridRange - The {@link GridRange} object to check.
- * @returns     `true` if the range represents a single cell, `false` otherwise.
- * @throws      {@link IllegalArgumentException}
- * @see         {@link GridRange}
- * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
- * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
- * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @param       {GridRange} gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
+ * @returns     {boolean} `true` if the range represents a single cell, `false` otherwise.
+ * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
+ * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
  * @since       1.0.0
  * @version     1.2.0
  * @environment `Google Apps Script`, `Browser`
@@ -33,6 +30,7 @@ export function isCellGridRange(gridRange: GridRange): boolean {
     nonNil(endColumnIndex)
   ) {
     const isSingleRow = endRowIndex - startRowIndex === 1;
+
     const isSingleColumn = endColumnIndex - startColumnIndex === 1;
 
     return isSingleRow && isSingleColumn;

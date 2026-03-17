@@ -1,10 +1,9 @@
 /**
- * ## nonFunction
- *
  * Checks if the provided value is NOT `function`.
  *
- * @param   value - The value to check.
- * @returns `true` if the value is not `function`; otherwise, `false`.
+ * @template T
+ * @param   {T} value - The value to check.
+ * @returns {boolean} `true` if the value is not `function`; otherwise, `false`.
  * @see     {@link isFunction}
  * @since   1.4.0
  * @version 1.0.0

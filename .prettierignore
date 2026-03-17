@@ -1,12 +1,33 @@
-# Ignore artifacts:
-dist
-build
-coverage
-
-**/.git
-**/.svn
-**/.hg
-**/node_modules
-
+# This file specifies which files and directories should be ignored by Prettier.
+# It helps prevent formatting of generated files, dependencies, and artifacts.
+#
+# Reference: https://prettier.io/docs/en/ignore.html
+# Ignore compilation results and build artifacts
+dist/
+build/
+out/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+# Ignore external libraries and modules
+node_modules/
+vendor/
+# Ignore test coverage reports
+coverage/
+.coverage
+.nyc_output/
+# Ignore VCS-specific files
+.git/
+.svn/
+.hg/
+# Ignore files that shouldn't be formatted to maintain their original style
+CHANGELOG.md
+LICENSE
+CODE_OF_CONDUCT.md
+.github/
+# Minified files and project-specific ignores
 *.min.js
+*.min.css
 **/output.css
+.eslintcache
+.stylelintcache

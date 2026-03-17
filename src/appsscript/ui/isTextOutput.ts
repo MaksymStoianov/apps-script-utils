@@ -3,13 +3,11 @@ import { isFunction, isObject } from "../../lang";
 type TextOutput = GoogleAppsScript.Content.TextOutput;
 
 /**
- * ## isTextOutput
+ * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a> object.
  *
- * Checks if the given value is a Google Apps Script [`TextOutput`](https://developers.google.com/apps-script/reference/content/text-output) object.
- *
- * @param       value - The value to check.
- * @returns     `true` if the value is an {@link GoogleAppsScript.Content.TextOutput|TextOutput} object, `false` otherwise.
- * @see         [Class TextOutput](https://developers.google.com/apps-script/reference/content/text-output)
+ * @param       {unknown} value - The value to check.
+ * @returns     {boolean} `true` if the value is an <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a> object, `false` otherwise.
+ * @see         <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a>
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`

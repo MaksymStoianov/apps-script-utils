@@ -1,1 +1,1 @@
-export type { GridRange } from "./GridRange";
+export * from "./GridRange";

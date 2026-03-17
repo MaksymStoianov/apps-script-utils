@@ -1,6 +1,8 @@
-export { isHtmlOutput } from "./isHtmlOutput";
-export { isTextOutput } from "./isTextOutput";
-export { isUi } from "./isUi";
+export * from "./isHtmlOutput";
+
+export * from "./isTextOutput";
+
+export * from "./isUi";
 
 // TODO: nonHtmlOutput
 // TODO: nonTextOutput
@@ -10,4 +12,4 @@ export { isUi } from "./isUi";
 // TODO: requireTextOutput
 // TODO: requireUi
 
-export { checkMultipleAccount } from "./checkMultipleAccount";
+export * from "./checkMultipleAccount";

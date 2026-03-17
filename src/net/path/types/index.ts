@@ -1,1 +1,1 @@
-export type { ParsedPath } from "./ParsedPath";
+export * from "./ParsedPath";

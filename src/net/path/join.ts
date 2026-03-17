@@ -3,12 +3,15 @@ import { isString } from "../../lang";
 /**
  * Joins all given path segments into a single normalized path string.
  *
- * @param       paths - A variable number of string path segments to join.
- * @returns     A new string representing the joined, normalized, and URL-encoded path.
+ * @param       {...string} paths - A variable number of string path segments to join.
+ * @returns     {string} A new string representing the joined, normalized, and URL-encoded path.
+ * @since       1.0.0
+ * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`
  */
 export function join(...paths: string[]): string {
   const resolvedParts: string[] = [];
+
   let isAbsoluteResult = false;
 
   for (const path of paths) {

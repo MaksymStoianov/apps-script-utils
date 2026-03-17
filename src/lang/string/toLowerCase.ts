@@ -1,12 +1,10 @@
 import { requireNonEmptyString } from "./requireNonEmptyString";
 
-interface Options {
+interface ToLowerCaseOptions {
   trim?: boolean;
 }
 
 /**
- * ## toLowerCase
- *
  * Returns a new string converted to lowercase.
  *
  * @example
@@ -20,9 +18,9 @@ interface Options {
  * console.log(trimmedResult); // hello world!
  * ```
  *
- * @param   value - The input string to convert.
- * @param   [options] - Optional configuration options.
- * @returns The string converted to lowercase, with optional whitespace normalization.
+ * @param   {string} value - The input string to convert.
+ * @param   {ToLowerCaseOptions} [options] - Optional configuration options.
+ * @returns {string} The string converted to lowercase, with optional whitespace normalization.
  * @throws  {@link EmptyStringException}
  * @see     {@link toCamelCase}
  * @see     {@link toKebabCase}
@@ -32,8 +30,11 @@ interface Options {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toLowerCase(value: string, options: Options = {}): string {
-  const effectiveOptions: Required<Options> = {
+export function toLowerCase(
+  value: string,
+  options: ToLowerCaseOptions = {}
+): string {
+  const effectiveOptions: Required<ToLowerCaseOptions> = {
     trim: false,
     ...options
   };

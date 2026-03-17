@@ -2,8 +2,6 @@ import { IllegalArgumentException } from "../../exception";
 import { requireNonEmptyString } from "../../lang";
 
 /**
- * ## getColumnIndexByLetter
- *
  * Converts a column letter (or combination of letters) into a column index.
  *
  * @example
@@ -13,8 +11,8 @@ import { requireNonEmptyString } from "../../lang";
  * getColumnIndexByLetter("AZ");  // Returns: 52
  * ```
  *
- * @param       letter - The column label (e.g., `'A'`, `'B'`, ..., `'AA'`).
- * @returns     The corresponding column index.
+ * @param       {string} letter - The column label (e.g., `'A'`, `'B'`, ..., `'AA'`).
+ * @returns     {number | null} The corresponding column index.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link getColumnLetterByIndex}
  * @see         {@link getColumnPositionByLetter}
@@ -30,6 +28,7 @@ export function getColumnIndexByLetter(letter: string): number | null {
   }
 
   const upperCaseLetter = requireNonEmptyString(letter).toUpperCase();
+
   const PATTERN = /^[A-Z]+$/;
 
   if (!PATTERN.test(upperCaseLetter)) {
@@ -39,7 +38,9 @@ export function getColumnIndexByLetter(letter: string): number | null {
   }
 
   let index = 0;
+
   const base = 26;
+
   const charCodeA = "A".charCodeAt(0);
 
   for (let i = 0; i < upperCaseLetter.length; i++) {

@@ -3,24 +3,35 @@ export * from "./types";
 // TODO: Abstract Sheet
 // TODO: Abstract Menu
 
-export { isCellGridRange } from "./isCellGridRange";
-export { isGridRangeContainedIn } from "./isGridRangeContainedIn";
-export { isGridRangeSameDimensions } from "./isGridRangeSameDimensions";
-export { isRange } from "./isRange";
-export { isRichTextValue } from "./isRichTextValue";
-export { isSheet } from "./isSheet";
-export { isSpreadsheet } from "./isSpreadsheet";
-export { isTextStyle } from "./isTextStyle";
-export { isValidSheetId } from "./isValidSheetId";
-export { isValidSheetName } from "./isValidSheetName";
-export { isValidSpreadsheetId } from "./isValidSpreadsheetId";
+export * from "./isCellGridRange";
+
+export * from "./isGridRangeContainedIn";
+
+export * from "./isGridRangeSameDimensions";
+
+export * from "./isRange";
+
+export * from "./isRichTextValue";
+
+export * from "./isSheet";
+
+export * from "./isSpreadsheet";
+
+export * from "./isTextStyle";
+
+export * from "./isValidSheetId";
+
+export * from "./isValidSheetName";
+
+export * from "./isValidSpreadsheetId";
 
 // TODO: nonCellGridRange
 // TODO: nonGridRangeContainedIn
 // TODO: nonGridRangeSameDimensions
-export { nonRange } from "./nonRange";
+export * from "./nonRange";
+
 // TODO: nonRichTextValue
-export { nonSheet } from "./nonSheet";
+export * from "./nonSheet";
 // TODO: nonSpreadsheet
 // TODO: nonTextStyle
 // TODO: nonValidSheetName
@@ -29,30 +40,46 @@ export { nonSheet } from "./nonSheet";
 // TODO: requireCellGridRange
 // TODO: requireGridRangeContainedIn
 // TODO: requireGridRangeSameDimensions
-export { requireRange } from "./requireRange";
+export * from "./requireRange";
+
 // TODO: requireRichTextValue
-export { requireSheet } from "./requireSheet";
-// TODO: requireSpreadsheet
+export * from "./requireSheet";
+
+export * from "./requireSpreadsheet";
 // TODO: requireTextStyle
 // TODO: requireValidSheetName
 // TODO: requireValidSpreadsheetId
 
 // TODO: prependColumn
 // TODO: prependColumns
-export { appendColumn } from "./appendColumn";
-export { appendColumns } from "./appendColumns";
-export { prependRow } from "./prependRow";
-export { prependRows } from "./prependRows";
-export { appendRow } from "./appendRow";
-export { appendRows } from "./appendRows";
-export { convertRichTextToHtml } from "./convertRichTextToHtml";
-export { doGridRangesIntersect } from "./doGridRangesIntersect";
-export { extractRangeFromA1Notation } from "./extractRangeFromA1Notation";
-export { extractSheetNameFromA1Notation } from "./extractSheetNameFromA1Notation";
-export { getColumnIndexByLetter } from "./getColumnIndexByLetter";
-export { getColumnLetterByIndex } from "./getColumnLetterByIndex";
+export * from "./appendColumn";
+
+export * from "./appendColumns";
+
+export * from "./prependRow";
+
+export * from "./prependRows";
+
+export * from "./appendRow";
+
+export * from "./appendRows";
+
+export * from "./convertRichTextToHtml";
+
+export * from "./doGridRangesIntersect";
+
+export * from "./extractRangeFromA1Notation";
+
+export * from "./extractSheetNameFromA1Notation";
+
+export * from "./getColumnIndexByLetter";
+
+export * from "./getColumnLetterByIndex";
+
 export * from "./getSheetById";
+
 export * from "./getSheetByIndex";
+
 // TODO: getValues(sheet: Sheet, config: Object)
 // TODO: clearColumnsByConditional(sheet: Sheet, callback: Function)
 // TODO: clearRowsByConditional(sheet: Sheet, callback: Function)
@@ -63,14 +90,14 @@ export * from "./getSheetByIndex";
 // TODO: insertSchema
 // TODO: getSchema(sheet: Sheet)
 // TODO: removeSchema(sheet: Sheet)
-export { highlightHtml } from "./highlightHtml";
-export { sortSheets } from "./sortSheets";
+export * from "./highlightHtml";
 
-export { parseA1Notation } from "./parseA1Notation";
-export {
-  parseA1Notations,
-  type A1NotationParseOptions
-} from "./parseA1Notations";
+export * from "./sortSheets";
 
-export { toA1Notation } from "./toA1Notation";
-export { updateSheetNameInA1Notation } from "./updateSheetNameInA1Notation";
+export * from "./parseA1Notation";
+
+export * from "./parseA1Notations";
+
+export * from "./toA1Notation";
+
+export * from "./updateSheetNameInA1Notation";

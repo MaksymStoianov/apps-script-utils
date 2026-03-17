@@ -1,12 +1,11 @@
 import { isNull } from "./isNull";
 
 /**
- * ## nonNull
- *
  * Checks if the provided value is NOT `null`.
  *
- * @param   value - The value to check.
- * @returns `true` if the value is not `null`; otherwise, `false`.
+ * @template T
+ * @param   {T | null} value - The value to check.
+ * @returns {boolean} `true` if the value is not `null`; otherwise, `false`.
  * @see     {@link isNull}
  * @see     {@link requireNonNull}
  * @since   1.0.0

@@ -1,6 +1,4 @@
 /**
- * ## Iterator
- *
  * Interface for navigating through a collection, where backward navigation is optional.
  *
  * @interface
@@ -9,6 +7,7 @@
  * @version   1.0.0
  */
 export interface Iterator<T> {
+
   /**
    * Gets the index of the current position in the collection.
    *

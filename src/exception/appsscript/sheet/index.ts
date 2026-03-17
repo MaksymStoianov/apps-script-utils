@@ -1,3 +1,7 @@
-export { InvalidGridRangeException } from "./InvalidGridRangeException";
-export { InvalidRangeException } from "./InvalidRangeException";
-export { InvalidSheetException } from "./InvalidSheetException";
+export * from "./InvalidGridRangeException";
+
+export * from "./InvalidRangeException";
+
+export * from "./InvalidSheetException";
+
+export * from "./InvalidSpreadsheetException";

@@ -1,11 +1,9 @@
 import { RuntimeException } from "../../RuntimeException";
 
 /**
- * ## InvalidSheetException
- *
  * Represents an exception thrown when an invalid {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object is provided.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @see     {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
@@ -16,8 +14,11 @@ import { RuntimeException } from "../../RuntimeException";
 export class InvalidSheetException extends RuntimeException {
   constructor(message?: string | undefined) {
     super(message || "Invalid Sheet object provided.");
+
     const target = new.target;
+
     this.name = target.name;
+
     Object.setPrototypeOf(this, target.prototype);
   }
 }

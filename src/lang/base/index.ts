@@ -1,40 +1,66 @@
-export { isArray } from "./isArray";
-export { isBoolean } from "./isBoolean";
-export { isEmpty } from "./isEmpty";
-export { isException } from "./isException";
-export { isFunction } from "./isFunction";
-export { isFunctionLike } from "./isFunctionLike";
-export { isLength } from "./isLength";
-export { isNil } from "./isNil";
-export { isNull } from "./isNull";
-export { isNumber } from "./isNumber";
-export { isNumberLike } from "./isNumberLike";
-export { isObject } from "./isObject";
-export { isObjectLike } from "./isObjectLike";
-export { isRegExp } from "./isRegExp";
-export { isScalar } from "./isScalar";
-export { isString } from "./isString";
-export { isSymbol } from "./isSymbol";
-export { isUndefined } from "./isUndefined";
+export * from "./isArray";
 
-export { nonArray } from "./nonArray";
-export { nonBoolean } from "./nonBoolean";
-export { nonEmpty } from "./nonEmpty";
+export * from "./isBoolean";
+
+export * from "./isEmpty";
+
+export * from "./isException";
+
+export * from "./isFunction";
+
+export * from "./isFunctionLike";
+
+export * from "./isLength";
+
+export * from "./isNil";
+
+export * from "./isNull";
+
+export * from "./isNumber";
+
+export * from "./isNumberLike";
+
+export * from "./isObject";
+
+export * from "./isObjectLike";
+
+export * from "./isRegExp";
+
+export * from "./isScalar";
+
+export * from "./isString";
+
+export * from "./isSymbol";
+
+export * from "./isUndefined";
+
+export * from "./nonArray";
+
+export * from "./nonBoolean";
+
+export * from "./nonEmpty";
+
 // TODO: nonException
-export { nonFunction } from "./nonFunction";
+export * from "./nonFunction";
+
 // TODO: nonFunctionLike
 // TODO: nonLength
-export { nonNil } from "./nonNil";
-export { nonNull } from "./nonNull";
-export { nonNumber } from "./nonNumber";
+export * from "./nonNil";
+
+export * from "./nonNull";
+
+export * from "./nonNumber";
+
 // TODO: nonNumberLike
 // TODO: nonObject
 // TODO: nonObjectLike
 // TODO: nonRegExp
-export { nonScalar } from "./nonScalar";
-export { nonString } from "./nonString";
+export * from "./nonScalar";
+
+export * from "./nonString";
+
 // TODO: nonSymbol
-export { nonUndefined } from "./nonUndefined";
+export * from "./nonUndefined";
 
 // TODO: requireArray
 // TODO: requireBoolean
@@ -51,7 +77,7 @@ export { nonUndefined } from "./nonUndefined";
 // TODO: requireObjectLike
 // TODO: requireRegExp
 // TODO: requireScalar
-export { requireString } from "./requireString";
+export * from "./requireString";
 // TODO: requireSymbol
 // TODO: requireUndefined
 
@@ -63,7 +89,7 @@ export { requireString } from "./requireString";
 // TODO: requireNonFunctionLike
 // TODO: requireNonLength
 // TODO: requireNonNil
-export { requireNonNull } from "./requireNonNull";
+export * from "./requireNonNull";
 // TODO: requireNonNumber
 // TODO: requireNonNumberLike
 // TODO: requireNonObject

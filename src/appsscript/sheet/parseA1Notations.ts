@@ -8,8 +8,6 @@ export interface A1NotationParseOptions {
 }
 
 /**
- * ## parseA1Notations
- *
  * Parses a comma-separated string of A1 notations into an array of {@link GridRange} objects.
  * Validates the format and sheet name requirements based on the provided options.
  *

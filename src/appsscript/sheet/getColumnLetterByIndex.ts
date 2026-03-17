@@ -2,8 +2,6 @@ import { IllegalArgumentException } from "../../exception";
 import { isInteger } from "../../lang";
 
 /**
- * ## getColumnLetterByIndex
- *
  * Converts a column index into its corresponding column letter (or combination of letters).
  *
  * @example
@@ -13,8 +11,8 @@ import { isInteger } from "../../lang";
  * getColumnLetterByIndex(51);  // Returns: AZ
  * ```
  *
- * @param       columnIndex - The zero-based column index (e.g., `0` for 'A').
- * @returns     The alphabetical representation of the column.
+ * @param       {number} columnIndex - The zero-based column index (e.g., `0` for 'A').
+ * @returns     {string} The alphabetical representation of the column.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link getColumnIndexByLetter}
  * @see         {@link getColumnLetterByPosition}
@@ -36,6 +34,7 @@ export function getColumnLetterByIndex(columnIndex: number): string {
   let result = "";
 
   let temp = columnIndex + 1;
+
   while (temp > 0) {
     const remainder = (temp - 1) % 26;
 

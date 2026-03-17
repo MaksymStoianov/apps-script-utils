@@ -1,5 +1,7 @@
-export { decodeHtml } from "./decodeHtml";
-export { encodeHtml } from "./encodeHtml";
+export * from "./decodeHtml";
 
-export { escapeHtml } from "./escapeHtml";
-export { escapeXml } from "./escapeXml";
+export * from "./encodeHtml";
+
+export * from "./escapeHtml";
+
+export * from "./escapeXml";

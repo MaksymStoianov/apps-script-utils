@@ -1,14 +1,11 @@
 import { isObject } from "../../lang";
 
 /**
- * ## isRichTextValue
+ * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a> object.
  *
- * Checks if the given value is a Google Apps Script [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value) object.
- *
- * @param       value - The value to check.
- * @returns     `true` if the value is a {@link GoogleAppsScript.Spreadsheet.RichTextValue|RichTextValue} object, `false` otherwise.
- * @see         {@link GoogleAppsScript.Spreadsheet.RichTextValue|RichTextValue}
- * @see         [Class RichTextValue](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
+ * @param       {unknown} value - The value to check.
+ * @returns     {boolean} `true` if the value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a> object, `false` otherwise.
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a>
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

@@ -1,13 +1,11 @@
 import { requireNonEmptyString } from "./requireNonEmptyString";
 
-interface Options {
+interface ToCamelCaseOptions {
   clean?: boolean;
   firstWordToLowerCase?: boolean;
 }
 
 /**
- * ## toCamelCase
- *
  * Converts a string to `camelCase` format.
  *
  * `camelCase` is a naming convention where the first letter of each word (except
@@ -32,9 +30,9 @@ interface Options {
  * console.log(result); // HelloWorld
  * ```
  *
- * @param   value - The input string to convert.
- * @param   [options] - Optional configuration options.
- * @returns The string converted to camelCase.
+ * @param   {string} value - The input string to convert.
+ * @param   {ToCamelCaseOptions} [options] - Optional configuration options.
+ * @returns {string} The string converted to camelCase.
  * @throws  {@link EmptyStringException}
  * @see     {@link toKebabCase}
  * @see     {@link toLowerCase}
@@ -44,8 +42,11 @@ interface Options {
  * @since   1.0.0
  * @version 1.0.0
  */
-export function toCamelCase(value: string, options: Options = {}): string {
-  const effectiveOptions: Required<Options> = {
+export function toCamelCase(
+  value: string,
+  options: ToCamelCaseOptions = {}
+): string {
+  const effectiveOptions: Required<ToCamelCaseOptions> = {
     clean: true,
     firstWordToLowerCase: true,
     ...options

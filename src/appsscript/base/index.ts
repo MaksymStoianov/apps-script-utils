@@ -1,2 +1,2 @@
-export { getByteSize } from "./getByteSize";
+export * from "./getByteSize";
 // TODO: getTriggerById(id)

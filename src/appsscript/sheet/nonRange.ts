@@ -1,16 +1,12 @@
 import { isRange } from "./isRange";
 
 /**
- * ## nonRange
+ * Checks if the provided value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object.
  *
- * Checks if the provided value is not a [`Google Range`](https://developers.google.com/apps-script/reference/spreadsheet/range) object.
- *
- * @param value - The value to check.
- * @returns `true` if the value is not a {@link GoogleAppsScript.Spreadsheet.Range|Range} object.
+ * @param       {unknown} value - The value to check.
+ * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object.
  * @see         {@link isRange}
- * @see         {@link requireRange}
- * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
- * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @since       1.3.0
  * @version     1.0.0
  * @environment Google Apps Script

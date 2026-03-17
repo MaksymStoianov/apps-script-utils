@@ -1,6 +1,7 @@
-export { ObjectTag } from "./ObjectTag";
+export * from "./ObjectTag";
 
-export { hashCode } from "./hashCode";
-export { objectToString } from "./objectToString";
+export * from "./hashCode";
+
+export * from "./objectToString";
 // TODO: namespace(obj: Object | Array, path: string | number | Array)
 // TODO: flat(value: Array | Object, depth?: number)

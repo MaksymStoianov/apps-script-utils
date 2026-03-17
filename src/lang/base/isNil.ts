@@ -2,12 +2,10 @@ import { isNull } from "./isNull";
 import { isUndefined } from "./isUndefined";
 
 /**
- * ## isNil
- *
  * Checks if the provided value is `null` or `undefined` (i.e., "nil").
  *
- * @param   value - The value to check.
- * @returns `true` if the value is `null` or `undefined`; otherwise, `false`.
+ * @param   {unknown} value - The value to check.
+ * @returns {boolean} `true` if the value is `null` or `undefined`; otherwise, `false`.
  * @see     {@link nonNil}
  * @since   1.0.0
  * @version 1.0.0

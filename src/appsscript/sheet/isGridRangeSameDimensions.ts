@@ -3,18 +3,15 @@ import { isNil, isObject } from "../../lang";
 import type { GridRange } from "./types";
 
 /**
- * ## isGridRangeSameDimensions
+ * Checks if two <a href="./types/GridRange.ts"><code>GridRange</code></a> objects have the exact same number of rows and columns.
  *
- * Checks if two {@link GridRange} objects have the exact same number of rows and columns.
- *
- * @param       range1 - The first {@link GridRange} object.
- * @param       range2 - The second {@link GridRange} object.
- * @returns    `true` if both ranges are well-defined and have the identical height (number of rows) and width (number of columns), `false` otherwise.
- * @throws      {@link IllegalArgumentException}
- * @see         {@link GridRange}
- * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
- * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
- * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @param       {GridRange} range1 - The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
+ * @param       {GridRange} range2 - The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
+ * @returns     {boolean} `true` if both ranges are well-defined and have the identical height (number of rows) and width (number of columns), `false` otherwise.
+ * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
+ * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
+ * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`
@@ -27,7 +24,9 @@ export function isGridRangeSameDimensions(
     throw new InvalidGridRangeException();
   }
 
-  const getDimensions = (gridRange: GridRange) => {
+  const getDimensions = (
+    gridRange: GridRange
+  ): { height: number; width: number } | null => {
     const { startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } =
       gridRange;
 
@@ -41,6 +40,7 @@ export function isGridRangeSameDimensions(
     }
 
     const height = endRowIndex - startRowIndex;
+
     const width = endColumnIndex - startColumnIndex;
 
     if (height < 0 || width < 0) {
@@ -51,6 +51,7 @@ export function isGridRangeSameDimensions(
   };
 
   const dimensions1 = getDimensions(range1);
+
   const dimensions2 = getDimensions(range2);
 
   if (dimensions1 === null || dimensions2 === null) {

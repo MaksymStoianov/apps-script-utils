@@ -2,8 +2,6 @@ import { isArray } from "../base";
 import { isInteger } from "../number";
 
 /**
- * ## chunk
- *
  * Creates an array of elements split into groups the length of `size`.
  * If `array` can't be split evenly, the final chunk will be the remaining elements.
  *
@@ -22,13 +20,13 @@ import { isInteger } from "../number";
  * ```
  *
  * @template T - The type of elements in the input array.
- * @param   array - The array to process.
- * @param   [size = 1] - The length of each chunk. Must be a non-negative integer.
- * @returns A new array of chunks. Each chunk is an array of elements.
- * @throws  {@link TypeError} If `array` is not an array.
- * @throws  {@link TypeError} If `size` is not an integer.
- * @since   1.0.0
- * @version 1.2.0
+ * @param    {T[]} array - The array to process.
+ * @param    {number} [size = 1] - The length of each chunk. Must be a non-negative integer.
+ * @returns  {Array<T[]>} A new array of chunks. Each chunk is an array of elements.
+ * @throws   {@link TypeError} If `array` is not an array.
+ * @throws   {@link TypeError} If `size` is not an integer.
+ * @since    1.0.0
+ * @version  1.2.0
  */
 export function chunk<T>(array: T[], size: number = 1): Array<T[]> {
   if (!isArray(array)) {
@@ -50,6 +48,7 @@ export function chunk<T>(array: T[], size: number = 1): Array<T[]> {
   const result = new Array(Math.ceil(length / size));
 
   let index = 0;
+
   let resIndex = 0;
 
   while (index < length) {

@@ -1,12 +1,10 @@
 import { isNumber } from "../../lang";
 
 /**
- * ## isValidSheetId
- *
  * Checks if the given value is a valid [`Google Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet) ID.
  *
- * @param       value The value to check.
- * @returns     `true` if the value is a valid Sheet ID, `false` otherwise.
+ * @param       {unknown} value - The value to check.
+ * @returns     {boolean} `true` if the value is a valid Sheet ID, `false` otherwise.
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @since       1.5.0

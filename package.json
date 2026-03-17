@@ -2,15 +2,38 @@
   "name": "apps-script-utils",
   "version": "1.7.0",
   "description": "Utilities for Google Apps Script™ projects.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "sideEffects": false,
   "scripts": {
-    "maint": "bash ./scripts/maintenance.sh",
+    "prepare": "husky",
     "dev": "vitest",
-    "format": "prettier --write .",
-    "lint": "eslint --fix .",
+    "type:check": "tsc --noEmit",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "test": "vitest run",
-    "build": "rm -rf dist/* && tsc",
-    "prepare": "husky"
+    "build": "rm -rf dist/* && tsc -b --force"
   },
   "repository": {
     "type": "git",
@@ -48,21 +71,23 @@
     }
   ],
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@eslint/json": "^0.13.2",
-    "@eslint/markdown": "^7.5.0",
-    "@types/google-apps-script": "^2.0.7",
-    "@types/node": "^24.9.1",
-    "eslint": "^9.38.0",
+    "@eslint/js": "^9.39.2",
+    "@eslint/json": "^0.14.0",
+    "@eslint/markdown": "^7.5.1",
+    "@types/eslint-plugin-security": "^3.0.1",
+    "@types/google-apps-script": "^2.0.8",
+    "@types/node": "^25.0.9",
+    "@vitest/coverage-v8": "^4.0.18",
+    "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-googleappsscript": "^1.0.5",
+    "eslint-plugin-jsdoc": "^62.8.0",
+    "eslint-plugin-security": "^4.0.0",
     "husky": "^9.1.7",
-    "prettier": "^3.6.2",
+    "prettier": "^3.8.0",
+    "reflect-metadata": "^0.2.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2",
-    "vitest": "^4.0.4"
-  },
-  "dependencies": {
-    "reflect-metadata": "^0.2.2"
+    "typescript-eslint": "^8.53.0",
+    "vitest": "^4.0.17"
   }
 }

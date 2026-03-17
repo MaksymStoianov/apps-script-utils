@@ -63,8 +63,6 @@ const defaultTheme: Required<Theme> = {
 };
 
 /**
- * ## highlightHtml
- *
  * Applies HTML code formatting to Google Sheets cells, using a theme for colors and fonts.
  *
  * @example
@@ -98,9 +96,9 @@ const defaultTheme: Required<Theme> = {
  * highlightHtml(range, theme);
  * ```
  *
- * @param       range - The range of Google Sheets cells containing the HTML code to be formatted.
- * @param       [theme] An object with theme settings, where you can specify fonts and colors for text, tags, and attributes.
- * @returns     The modified range, allowing for method chaining.
+ * @param       {GoogleAppsScript.Spreadsheet.Range} range - The range of Google Sheets cells containing the HTML code to be formatted.
+ * @param       {Theme} [theme] An object with theme settings, where you can specify fonts and colors for text, tags, and attributes.
+ * @returns     {GoogleAppsScript.Spreadsheet.Range} The modified range, allowing for method chaining.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
@@ -134,11 +132,15 @@ export function highlightHtml(
   const textStyles: Record<string, GoogleAppsScript.Spreadsheet.TextStyle> = {};
 
   for (const key in effectiveTheme) {
-    if (!Object.prototype.hasOwnProperty.call(effectiveTheme, key)) continue;
+    if (!Object.prototype.hasOwnProperty.call(effectiveTheme, key)) {
+      continue;
+    }
 
     const fontProps: Font | null = effectiveTheme[key as keyof Theme];
 
-    if (!fontProps) continue;
+    if (!fontProps) {
+      continue;
+    }
 
     const builder = SpreadsheetApp.newTextStyle();
 
@@ -176,10 +178,12 @@ export function highlightHtml(
     richTextBuilder.setTextStyle(0, html.length, textStyles.text);
 
     const tagRegex = /<!--[\s\S]*?-->|<\/?[a-z0-9]+|(\s+[a-z-]+)="([^"]*)"|>/gi;
+
     let match;
 
     while ((match = tagRegex.exec(html)) !== null) {
       const fullMatchText = match[0];
+
       const startIndex = match.index;
 
       if (fullMatchText.startsWith("<!--") && fullMatchText.endsWith("-->")) {
@@ -200,6 +204,7 @@ export function highlightHtml(
         );
       } else if (match[1]) {
         const attrNameEndIndex = match.index + match[1].length;
+
         const attrValueEndIndex = match.index + fullMatchText.length;
 
         richTextBuilder.setTextStyle(

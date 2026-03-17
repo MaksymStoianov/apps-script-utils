@@ -1,12 +1,10 @@
 import { isEmpty, isString } from "../base";
 
 /**
- * ## isValidLocale
- *
  * Checks if the provided string is a valid two-letter locale code.
  *
- * @param   value - The string value to validate as a locale code.
- * @returns `true` if the input is a valid two-letter locale code; otherwise, `false`.
+ * @param   {string} value - The string value to validate as a locale code.
+ * @returns {boolean} `true` if the input is a valid two-letter locale code; otherwise, `false`.
  * @since   1.0.0
  * @version 1.0.0
  */

@@ -4,8 +4,6 @@ import { isValidSheetName } from "./isValidSheetName";
 import { parseA1Notation } from "./parseA1Notation";
 
 /**
- * ## extractSheetNameFromA1Notation
- *
  * Extracts the sheet name from an A1 notation string (e.g., `Sheet1!A1:B2`).
  *
  * This function returns the sheet name as a clean string, or `null` if the

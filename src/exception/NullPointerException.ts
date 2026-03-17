@@ -1,11 +1,9 @@
 import { RuntimeException } from "./RuntimeException";
 
 /**
- * ## NullPointerException
- *
  * Represents an exception thrown when an application attempts to use `null` or `undefined` in a context where an object is required.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.0.0
@@ -14,8 +12,11 @@ import { RuntimeException } from "./RuntimeException";
 export class NullPointerException extends RuntimeException {
   constructor(message?: string | undefined) {
     super(message || "Object is null or undefined.");
+
     const target = new.target;
+
     this.name = target.name;
+
     Object.setPrototypeOf(this, target.prototype);
   }
 }

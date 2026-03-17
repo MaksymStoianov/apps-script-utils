@@ -1,4 +1,4 @@
-export { now } from "./now";
+export * from "./now";
 // TODO: diff
 // TODO: getDaysInMonth
 // TODO: getDaysLeftInMonth

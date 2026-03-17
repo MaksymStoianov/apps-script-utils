@@ -1,12 +1,10 @@
 import { isNumber } from "../base";
 
 /**
- * ## isInteger
- *
  * Checks if a value is a number and an integer.
  *
- * @param   value - The value to check.
- * @returns `true` if the value is an integer, otherwise `false`.
+ * @param   {unknown} value - The value to check.
+ * @returns {boolean} `true` if the value is an integer, otherwise `false`.
  * @see     {@link isNumber}
  * @since   1.5.0
  * @version 1.0.0
