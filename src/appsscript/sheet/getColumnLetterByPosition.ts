@@ -1,12 +1,10 @@
 import { getColumnLetterByIndex } from "./getColumnLetterByIndex";
 
 /**
- * ## getColumnLetterByPosition
- *
  * Converts a column position into its corresponding column letter (or combination of letters).
  *
- * @param       columnPosition - The zero-based column position (e.g., `1` for 'A').
- * @returns     The alphabetical representation of the column.
+ * @param       {number} columnPosition - The zero-based column position (e.g., `1` for 'A').
+ * @returns     {string} The alphabetical representation of the column.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link getColumnPositionByLetter}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}

@@ -1,12 +1,16 @@
 import { IllegalArgumentException } from "../../exception";
-import { requireNonEmptyString, toInteger } from "../../lang";
+import { isNull, nonNull, requireNonEmptyString, toInteger } from "../../lang";
 import { getColumnIndexByLetter } from "./getColumnIndexByLetter";
 import { getColumnLetterByIndex } from "./getColumnLetterByIndex";
 import type { GridRange } from "./types";
 
+const SHEET_AND_RANGE_REGEX =
+  /^(?:'(?<sQuoteSheet>(?:[^']|'')*)'|"(?<dQuoteSheet>(?:[^"]|"")*)"|(?<simpleSheet>[A-Z]+[A-Z0-9_]*))!(?<a1Range>[A-Z]*\d*(?::[A-Z]*\d*)?)$/i;
+
+const A1_RANGE_REGEX =
+  /^(?<startCol>[A-Z]*)(?<startRow>\d*)?(?::(?<endCol>[A-Z]*)(?<endRow>\d*)?)?$/i;
+
 /**
- * ## parseA1Notation
- *
  * Parses an A1 notation string into a <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
  *
  * @example 1
@@ -53,17 +57,117 @@ export function parseA1Notation(a1Notation: string): GridRange {
 
   const trimmedInput = requireNonEmptyString(a1Notation).trim();
 
-  let sheetName: string | null = null;
-  let rangeA1Part: string;
+  const { sheetName, rangePart } = splitSheetAndRange(trimmedInput);
 
-  const SHEET_AND_RANGE_REGEX =
-    /^(?:'(?<sQuoteSheet>(?:[^']|'')*)'|"(?<dQuoteSheet>(?:[^"]|"")*)"|(?<simpleSheet>[A-Z]+[A-Z0-9_]*))!(?<a1Range>[A-Z]*\d*(?::[A-Z]*\d*)?)$/i;
+  if (rangePart === "") {
+    throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
+  }
 
-  const sheetMatch = trimmedInput.match(SHEET_AND_RANGE_REGEX);
+  const match = rangePart.match(A1_RANGE_REGEX);
 
-  if (sheetMatch && sheetMatch.groups) {
-    const { sQuoteSheet, dQuoteSheet, simpleSheet, a1Range } =
-      sheetMatch.groups;
+  if (!match || !match.groups) {
+    throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
+  }
+
+  const { startCol, startRow, endCol, endRow } = match.groups;
+
+  const hasColon = rangePart.includes(":");
+
+  let sRow = startRow ? toInteger(startRow)! - 1 : null;
+
+  let sCol = startCol ? getColumnIndexByLetter(startCol) : null;
+
+  let eRow = endRow ? toInteger(endRow)! - 1 : null;
+
+  let eCol = endCol ? getColumnIndexByLetter(endCol) : null;
+
+  if (hasColon) {
+    if (isNull(sRow) && isNull(eRow)) {
+      sRow = 0;
+    } else if (isNull(sCol) && isNull(eCol)) {
+      sCol = 0;
+    } else if (
+      nonNull(sRow) &&
+      nonNull(sCol) &&
+      nonNull(eCol) &&
+      isNull(eRow)
+    ) {
+      // Keep eRow as null (unbounded)
+    } else if (
+      isNull(sRow) &&
+      nonNull(sCol) &&
+      nonNull(eCol) &&
+      nonNull(eRow)
+    ) {
+      sRow = 0;
+    }
+  } else {
+    if (nonNull(sCol) && nonNull(sRow)) {
+      eRow = sRow;
+      eCol = sCol;
+    } else if (nonNull(sCol)) {
+      sRow = 0;
+      eCol = sCol;
+    } else if (nonNull(sRow)) {
+      sCol = 0;
+      eRow = sRow;
+    } else {
+      throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
+    }
+  }
+
+  // Normalize: ensure start <= end if both are present
+  if (nonNull(sRow) && nonNull(eRow) && sRow > eRow) {
+    [sRow, eRow] = [eRow, sRow];
+  }
+
+  if (nonNull(sCol) && nonNull(eCol) && sCol > eCol) {
+    [sCol, eCol] = [eCol, sCol];
+  }
+
+  const startRowIndex = sRow;
+
+  const endRowIndex = nonNull(eRow) ? eRow + 1 : null;
+
+  const startColumnIndex = sCol;
+
+  const endColumnIndex = nonNull(eCol) ? eCol + 1 : null;
+
+  const canonicalA1Notation = generateCanonicalA1({
+    startCol: startCol || null,
+    startRow: startRow || null,
+    endCol: endCol || null,
+    endRow: endRow || null,
+    hasColon,
+    startRowIndex,
+    endRowIndex,
+    startColumnIndex,
+    endColumnIndex
+  });
+
+  return {
+    sheetName,
+    a1Notation: canonicalA1Notation,
+    startRowIndex,
+    endRowIndex,
+    startColumnIndex,
+    endColumnIndex
+  };
+}
+
+/**
+ * Splits input into sheet name and range part.
+ */
+function splitSheetAndRange(input: string): {
+  sheetName: string | null;
+  rangePart: string;
+} {
+  const match = input.match(SHEET_AND_RANGE_REGEX);
+
+  if (match && match.groups) {
+    const { sQuoteSheet, dQuoteSheet, simpleSheet, a1Range } = match.groups;
+
+    let sheetName: string | null = null;
 
     if (sQuoteSheet !== undefined) {
       sheetName = sQuoteSheet.replace(/''/g, "'");
@@ -73,206 +177,149 @@ export function parseA1Notation(a1Notation: string): GridRange {
       sheetName = simpleSheet;
     }
 
-    rangeA1Part = a1Range;
-  } else {
-    rangeA1Part = trimmedInput;
+    return { sheetName, rangePart: a1Range };
   }
 
-  if (rangeA1Part === "") {
-    throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
+  return { sheetName: null, rangePart: input };
+}
+
+/**
+ * Generates canonical A1 notation.
+ */
+function generateCanonicalA1(params: {
+  startCol: string | null;
+  startRow: string | null;
+  endCol: string | null;
+  endRow: string | null;
+  hasColon: boolean;
+  startRowIndex: number | null;
+  endRowIndex: number | null;
+  startColumnIndex: number | null;
+  endColumnIndex: number | null;
+}): string {
+  const {
+    startCol,
+    startRow,
+    endCol,
+    endRow,
+    hasColon,
+    startRowIndex,
+    endRowIndex,
+    startColumnIndex,
+    endColumnIndex
+  } = params;
+
+  const sColLetter = nonNull(startColumnIndex)
+    ? getColumnLetterByIndex(startColumnIndex)
+    : "";
+
+  const sRowNum = nonNull(startRowIndex) ? startRowIndex + 1 : "";
+
+  // Single cell case
+  if (
+    !hasColon &&
+    nonNull(startColumnIndex) &&
+    nonNull(startRowIndex) &&
+    nonNull(endColumnIndex) &&
+    nonNull(endRowIndex) &&
+    startColumnIndex === endColumnIndex - 1 &&
+    startRowIndex === endRowIndex - 1
+  ) {
+    return `${sColLetter}${sRowNum}`;
   }
 
-  const upperCasedA1RangePart = rangeA1Part.toUpperCase();
-
-  const A1_RANGE_REGEX =
-    /^(?<startCol>[A-Z]*)(?<startRow>\d*)?(?::(?<endCol>[A-Z]*)(?<endRow>\d*)?)?$/;
-
-  const rangeMatch = upperCasedA1RangePart.match(A1_RANGE_REGEX);
-
-  if (!rangeMatch || !rangeMatch.groups) {
-    throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
+  // Single column case (B -> B:B)
+  if (
+    !hasColon &&
+    nonNull(startColumnIndex) &&
+    nonNull(endColumnIndex) &&
+    startRowIndex === 0 &&
+    isNull(endRowIndex)
+  ) {
+    return `${sColLetter}:${sColLetter}`;
   }
 
-  const { startCol, startRow, endCol, endRow } = rangeMatch.groups;
-
-  const hasColon = upperCasedA1RangePart.includes(":");
-
-  let currentStartRowIndex: number | null = null;
-  if (startRow) {
-    currentStartRowIndex = toInteger(startRow)! - 1;
+  // Single row case (5 -> 5:5)
+  if (
+    !hasColon &&
+    nonNull(startRowIndex) &&
+    nonNull(endRowIndex) &&
+    startColumnIndex === 0 &&
+    isNull(endColumnIndex)
+  ) {
+    return `${sRowNum}:${sRowNum}`;
   }
 
-  let currentStartColumnIndex: number | null = null;
-  if (startCol) {
-    currentStartColumnIndex = getColumnIndexByLetter(startCol);
+  // B2:B2 -> B2
+  if (
+    hasColon &&
+    nonNull(startColumnIndex) &&
+    nonNull(startRowIndex) &&
+    nonNull(endColumnIndex) &&
+    nonNull(endRowIndex) &&
+    startColumnIndex === endColumnIndex - 1 &&
+    startRowIndex === endRowIndex - 1
+  ) {
+    return `${sColLetter}${sRowNum}`;
   }
 
-  let currentEndRowIndex: number | null = null;
-  let currentEndColumnIndex: number | null = null;
+  // Column range (A:B)
+  if (
+    hasColon &&
+    nonNull(startColumnIndex) &&
+    nonNull(endColumnIndex) &&
+    startRowIndex === 0 &&
+    isNull(endRowIndex) &&
+    startCol &&
+    endCol &&
+    !startRow &&
+    !endRow
+  ) {
+    const eColLetter = getColumnLetterByIndex(endColumnIndex - 1);
+
+    return `${sColLetter}:${eColLetter}`;
+  }
+
+  // Special GAS Cases for B:B if it was parsed from B
+  if (
+    !hasColon &&
+    nonNull(startColumnIndex) &&
+    nonNull(endColumnIndex) &&
+    startRowIndex === 0 &&
+    isNull(endRowIndex)
+  ) {
+    return `${sColLetter}:${sColLetter}`;
+  }
 
   if (hasColon) {
-    if (endRow) {
-      currentEndRowIndex = toInteger(endRow)! - 1;
-    }
-    if (endCol) {
-      currentEndColumnIndex = getColumnIndexByLetter(endCol);
-    }
-
-    if (currentStartRowIndex === null && currentEndRowIndex === null) {
-      currentStartRowIndex = 0;
-      currentEndRowIndex = null;
-    } else if (
-      currentStartColumnIndex === null &&
-      currentEndColumnIndex === null
-    ) {
-      currentStartColumnIndex = 0;
-      currentEndColumnIndex = null;
-    } else if (
-      currentStartRowIndex !== null &&
-      currentStartColumnIndex !== null &&
-      currentEndColumnIndex !== null &&
-      currentEndRowIndex === null
-    ) {
-      currentEndRowIndex = null;
-    } else if (
-      currentStartRowIndex === null &&
-      currentStartColumnIndex !== null &&
-      currentEndColumnIndex !== null &&
-      currentEndRowIndex !== null
-    ) {
-      currentStartRowIndex = 0;
-    }
-  } else {
-    if (currentStartColumnIndex !== null && currentStartRowIndex !== null) {
-      currentEndRowIndex = currentStartRowIndex;
-      currentEndColumnIndex = currentStartColumnIndex;
-    } else if (
-      currentStartColumnIndex !== null &&
-      currentStartRowIndex === null
-    ) {
-      currentStartRowIndex = 0;
-      currentEndRowIndex = null;
-      currentEndColumnIndex = currentStartColumnIndex;
-    } else if (
-      currentStartRowIndex !== null &&
-      currentStartColumnIndex === null
-    ) {
-      currentStartColumnIndex = 0;
-      currentEndColumnIndex = null;
-      currentEndRowIndex = currentStartRowIndex;
-    } else {
-      throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
-    }
-  }
-
-  if (
-    currentStartRowIndex !== null &&
-    currentEndRowIndex !== null &&
-    currentStartRowIndex > currentEndRowIndex
-  ) {
-    [currentStartRowIndex, currentEndRowIndex] = [
-      currentEndRowIndex,
-      currentStartRowIndex
-    ];
-  }
-  if (
-    currentStartColumnIndex !== null &&
-    currentEndColumnIndex !== null &&
-    currentStartColumnIndex > currentEndColumnIndex
-  ) {
-    [currentStartColumnIndex, currentEndColumnIndex] = [
-      currentEndColumnIndex,
-      currentStartColumnIndex
-    ];
-  }
-
-  const finalEndRowIndex =
-    currentEndRowIndex !== null ? currentEndRowIndex + 1 : null;
-  const finalEndColumnIndex =
-    currentEndColumnIndex !== null ? currentEndColumnIndex + 1 : null;
-
-  let canonicalA1Notation = "";
-  const normalizedStartColLetter =
-    currentStartColumnIndex !== null
-      ? getColumnLetterByIndex(currentStartColumnIndex)
+    const eColLetter = nonNull(endColumnIndex)
+      ? getColumnLetterByIndex(endColumnIndex - 1)
       : "";
-  const normalizedStartRowNumber =
-    currentStartRowIndex !== null ? currentStartRowIndex + 1 : "";
 
-  if (
-    currentStartColumnIndex !== null &&
-    currentStartRowIndex !== null &&
-    finalEndColumnIndex !== null &&
-    finalEndRowIndex !== null &&
-    currentStartColumnIndex === finalEndColumnIndex - 1 &&
-    currentStartRowIndex === finalEndRowIndex - 1
-  ) {
-    canonicalA1Notation = `${normalizedStartColLetter}${normalizedStartRowNumber}`;
-  } else if (
-    currentStartColumnIndex !== null &&
-    currentEndColumnIndex === null &&
-    currentStartRowIndex === 0 &&
-    currentEndRowIndex === null
-  ) {
-    const endColLetter =
-      finalEndColumnIndex !== null
-        ? getColumnLetterByIndex(finalEndColumnIndex - 1)
-        : normalizedStartColLetter;
-    canonicalA1Notation = `${normalizedStartColLetter}:${endColLetter}`;
-  } else if (
-    currentStartRowIndex !== null &&
-    currentEndRowIndex === null &&
-    currentStartColumnIndex === 0 &&
-    currentEndColumnIndex === null
-  ) {
-    const endRowNumber =
-      finalEndRowIndex !== null ? finalEndRowIndex : normalizedStartRowNumber;
-    canonicalA1Notation = `${normalizedStartRowNumber}:${endRowNumber}`;
-  } else if (hasColon) {
-    const initialEndColLetter =
-      currentEndColumnIndex !== null
-        ? getColumnLetterByIndex(currentEndColumnIndex)
-        : "";
-    const initialEndRowNumber =
-      currentEndRowIndex !== null ? currentEndRowIndex + 1 : "";
+    const eRowNum = nonNull(endRowIndex) ? endRowIndex : "";
 
     if (startCol && startRow && endCol && endRow) {
-      canonicalA1Notation = `${normalizedStartColLetter}${normalizedStartRowNumber}:${initialEndColLetter}${initialEndRowNumber}`;
-    } else if (startCol && endCol && !startRow && !endRow) {
-      canonicalA1Notation = `${normalizedStartColLetter}:${initialEndColLetter}`;
-    } else if (startRow && endRow && !startCol && !endCol) {
-      canonicalA1Notation = `${normalizedStartRowNumber}:${initialEndRowNumber}`;
-    } else if (startCol && startRow && endCol && !endRow) {
-      canonicalA1Notation = `${normalizedStartColLetter}${normalizedStartRowNumber}:${initialEndColLetter}`;
-    } else if (startCol && endCol && endRow && !startRow) {
-      canonicalA1Notation = `${normalizedStartColLetter}:${initialEndColLetter}${initialEndRowNumber}`;
-    } else {
-      throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
+      return `${sColLetter}${sRowNum}:${eColLetter}${eRowNum}`;
     }
-  } else if (
-    currentStartColumnIndex !== null &&
-    currentEndColumnIndex !== null &&
-    currentStartRowIndex === 0 &&
-    currentEndRowIndex === null
-  ) {
-    canonicalA1Notation = `${normalizedStartColLetter}:${normalizedStartColLetter}`;
-  } else if (
-    currentStartRowIndex !== null &&
-    currentEndRowIndex !== null &&
-    currentStartColumnIndex === 0 &&
-    currentEndColumnIndex === null
-  ) {
-    canonicalA1Notation = `${normalizedStartRowNumber}:${normalizedStartRowNumber}`;
-  } else {
-    throw new SyntaxError(`"${a1Notation}" is not a valid A1 notation.`);
+
+    if (startCol && endCol && !startRow && !endRow) {
+      return `${sColLetter}:${eColLetter}`;
+    }
+
+    if (startRow && endRow && !startCol && !endCol) {
+      return `${sRowNum}:${eRowNum}`;
+    }
+
+    if (startCol && startRow && endCol && !endRow) {
+      return `${sColLetter}${sRowNum}:${eColLetter}`;
+    }
+
+    if (startCol && endCol && endRow && !startRow) {
+      return `${sColLetter}:${eColLetter}${eRowNum}`;
+    }
   }
 
-  return {
-    sheetName,
-    a1Notation: canonicalA1Notation,
-    startRowIndex: currentStartRowIndex,
-    endRowIndex: finalEndRowIndex,
-    startColumnIndex: currentStartColumnIndex,
-    endColumnIndex: finalEndColumnIndex
-  };
+  // Fallback for some GAS weirdness if we can't match logic above, but it should be valid A1
+  // But original code throws SyntaxError here if it doesn't match specific combinations.
+  throw new SyntaxError(`Invalid A1 notation.`);
 }

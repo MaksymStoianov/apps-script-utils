@@ -3,14 +3,12 @@ import { isObject } from "../../lang";
 import type { GridRange } from "./types";
 
 /**
- * ## isGridRangeContainedIn
- *
  * Checks if a <a href="./types/GridRange.ts"><code>GridRange</code></a> is entirely contained within another <a href="./types/GridRange.ts"><code>GridRange</code></a>.
  * Both ranges must be located on the same sheet (either by `sheetId` or by `sheetName`).
  *
- * @param       gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a subset (child range).
- * @param       containerGridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range).
- * @returns     `true` if `gridRange` is fully contained within `containerGridRange` and they are on the same sheet;
+ * @param       {GridRange} gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a subset (child range).
+ * @param       {GridRange} containerGridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range).
+ * @returns     {boolean} `true` if `gridRange` is fully contained within `containerGridRange` and they are on the same sheet;
  * `false` otherwise.
  * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
@@ -52,13 +50,19 @@ export function isGridRangeContainedIn(
   }
 
   const outerStartRow = containerGridRange.startRowIndex ?? 0;
+
   const outerEndRow = containerGridRange.endRowIndex ?? Infinity;
+
   const outerStartCol = containerGridRange.startColumnIndex ?? 0;
+
   const outerEndCol = containerGridRange.endColumnIndex ?? Infinity;
 
   const innerStartRow = gridRange.startRowIndex ?? 0;
+
   const innerEndRow = gridRange.endRowIndex ?? Infinity;
+
   const innerStartCol = gridRange.startColumnIndex ?? 0;
+
   const innerEndCol = gridRange.endColumnIndex ?? Infinity;
 
   return (

@@ -2,7 +2,8 @@ import { IllegalArgumentException } from "../../exception";
 import { isConsistent2DArray } from "../../lang";
 import { requireSheet } from "./requireSheet";
 
-export interface Options {
+export interface PrependRowsOptions {
+
   /**
    * Determines whether to insert rows after frozen rows.
    * If `true`, rows will be added immediately after the frozen rows, if they exist.
@@ -11,8 +12,6 @@ export interface Options {
 }
 
 /**
- * ## prependRows
- *
  * Prepends rows to the top of the current data area on a [`sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).
  * Data is written starting from column 1 of the new rows.
  * If a cell's content in `values` starts with `=`, it is interpreted as a formula.
@@ -28,10 +27,10 @@ export interface Options {
  * ]);
  * ```
  *
- * @param       sheet - The Google Apps Script {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object to which columns will be prepended.
- * @param       values - A 2D array containing the data to prepend.
- * @param       [options] - Additional parameters to customize the method's behavior.
- * @returns     The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object to which columns will be prepended.
+ * @param       {any[][]} values - A 2D array containing the data to prepend.
+ * @param       {PrependRowsOptions | null} [options] - Additional parameters to customize the method's behavior.
+ * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object.
  * @throws      {@link IllegalArgumentException}
  * @throws      {@link InvalidSheetException}
  * @see         {@link appendRows}
@@ -49,7 +48,7 @@ export interface Options {
 export function prependRows(
   sheet: GoogleAppsScript.Spreadsheet.Sheet,
   values: unknown,
-  options: Options | null | undefined = {}
+  options: PrependRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet {
   if (arguments.length === 0) {
     throw new IllegalArgumentException();
@@ -63,7 +62,7 @@ export function prependRows(
     );
   }
 
-  const effectiveOptions: Required<Options> = {
+  const effectiveOptions: Required<PrependRowsOptions> = {
     afterFrozenRows: false,
     ...options
   };
@@ -74,10 +73,13 @@ export function prependRows(
     lock?.waitLock(30000);
 
     const numRows: number = values.length;
+
     const numColumns: number = values[0].length;
 
     const lastRow = sheet.getLastRow();
+
     let rowPosition = 1;
+
     const frozenRows = sheet.getFrozenRows();
 
     if (effectiveOptions.afterFrozenRows !== false) {

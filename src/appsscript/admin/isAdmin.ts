@@ -2,8 +2,6 @@ import { AdminDirectoryException } from "../../exception";
 import { nonFunction } from "../../lang";
 
 /**
- * ## isAdmin
- *
  * Checks if the current user is an administrator of the Google Workspace domain.
  *
  * **Note:** Requires the [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory) to be enabled.
@@ -22,6 +20,7 @@ export function isAdmin(): boolean {
     }
 
     const email = Session.getActiveUser().getEmail();
+
     const user = AdminDirectory.Users.get(email);
 
     return !!user.isAdmin;

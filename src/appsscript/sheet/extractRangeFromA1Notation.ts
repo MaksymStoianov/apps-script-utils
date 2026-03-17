@@ -3,8 +3,6 @@ import { isString, requireNonEmptyString } from "../../lang";
 import { parseA1Notation } from "./parseA1Notation";
 
 /**
- * ## extractRangeFromA1Notation
- *
  * Extracts the **range part** from a full A1 notation string (e.g., `'Sheet1!A1:B2'` returns `'A1:B2'`).
  *
  * @param       {string} a1Notation - The A1 notation string (e.g., `'SheetName!A1:B2'`, `'A1:B2'`).

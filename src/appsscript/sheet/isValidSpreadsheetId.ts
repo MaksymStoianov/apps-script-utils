@@ -1,12 +1,10 @@
 import { isString } from "../../lang";
 
 /**
- * ## isValidSpreadsheetId
- *
  * Checks if the given value is a valid [`Google Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet) ID.
  *
- * @param       value The value to check.
- * @returns     `true` if the value is a string with a length greater than 10, `false` otherwise.
+ * @param       {unknown} value - The value to check.
+ * @returns     {boolean} `true` if the value is a string with a length greater than 10, `false` otherwise.
  * @see         {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet}
  * @see         [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
  * @since       1.0.0

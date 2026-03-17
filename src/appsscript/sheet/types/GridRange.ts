@@ -1,12 +1,11 @@
 /**
- * ## GridRange
- *
  * A range on a sheets.
  *
  * @since   1.0.0
  * @version 1.0.0
  */
 export interface GridRange {
+
   /**
    * The sheets this range is on.
    */

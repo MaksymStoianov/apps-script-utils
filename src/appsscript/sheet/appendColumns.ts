@@ -3,6 +3,7 @@ import { isConsistent2DArray } from "../../lang";
 import { requireSheet } from "./requireSheet";
 
 export interface Options {
+
   /**
    * Determines whether to insert columns after frozen columns.
    * If `true`, columns will be added immediately to the right of any frozen columns, if they exist.
@@ -11,8 +12,6 @@ export interface Options {
 }
 
 /**
- * ## appendColumns
- *
  * Appends columns to the right of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
  * If a cell's content starts with `=`, it will be interpreted as a formula.
  *
@@ -28,10 +27,10 @@ export interface Options {
  * ]);
  * ```
  *
- * @param       sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which columns will be appended.
- * @param       values - A 2D array containing the data to append.
- * @param       [options] - Additional parameters to customize the method's behavior.
- * @returns     The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which columns will be appended.
+ * @param       {any[][]} values - A 2D array containing the data to append.
+ * @param       {Options | null} [options] - Additional parameters to customize the method's behavior.
+ * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @throws      {@link InvalidSheetException}
  * @see         {@link appendColumn}
@@ -71,9 +70,11 @@ export function appendColumns(
     lock?.waitLock(30000);
 
     const numRows: number = values.length;
+
     const numColumns: number = values[0].length;
 
     const lastCol: number = sheet.getLastColumn();
+
     let columnPosition: number = lastCol;
 
     if (effectiveOptions.afterFrozenColumns !== false) {

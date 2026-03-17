@@ -3,12 +3,10 @@ import { isObject, nonNil } from "../../lang";
 import type { GridRange } from "./types";
 
 /**
- * ## isCellGridRange
- *
  * Checks if a given <a href="./types/GridRange.ts"><code>GridRange</code></a> represents a single cell.
  *
- * @param       gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
- * @returns     `true` if the range represents a single cell, `false` otherwise.
+ * @param       {GridRange} gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
+ * @returns     {boolean} `true` if the range represents a single cell, `false` otherwise.
  * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
@@ -32,6 +30,7 @@ export function isCellGridRange(gridRange: GridRange): boolean {
     nonNil(endColumnIndex)
   ) {
     const isSingleRow = endRowIndex - startRowIndex === 1;
+
     const isSingleColumn = endColumnIndex - startColumnIndex === 1;
 
     return isSingleRow && isSingleColumn;

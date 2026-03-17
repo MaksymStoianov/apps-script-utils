@@ -2,8 +2,6 @@ import { IllegalArgumentException } from "../../exception";
 import { isRichTextValue } from "./isRichTextValue";
 
 /**
- * ## convertRichTextToHtml
- *
  * Converts a [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value) object into HTML, preserving text formatting.
  *
  * @example
@@ -40,6 +38,7 @@ export function convertRichTextToHtml(
   }
 
   const runs = richText.getRuns();
+
   let html = "";
 
   /**
@@ -60,8 +59,11 @@ export function convertRichTextToHtml(
 
   for (const run of runs) {
     const textStyle = run.getTextStyle();
+
     const attributes: Record<string, string> = {};
+
     const styles: Record<string, string> = {};
+
     const tags: string[] = [];
 
     if (textStyle.isStrikethrough()) {

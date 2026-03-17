@@ -2,13 +2,11 @@ import { IllegalArgumentException } from "../../exception";
 import { isCountable, isEmpty } from "../../lang";
 
 /**
- * ## getSheetById
- *
  * Retrieves a Google Sheet by its position (index) in the spreadsheet
  *
- * @param       sheetIndex - The zero-based index of the sheet (0 is the first sheet).
- * @param       [spreadsheet] - The Spreadsheet object to search within. Defaults to the active Spreadsheet if not provided.
- * @returns     The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object if found, otherwise `null`.
+ * @param       {number} sheetIndex - The zero-based index of the sheet (0 is the first sheet).
+ * @param       {GoogleAppsScript.Spreadsheet.Spreadsheet | null} [spreadsheet] - The Spreadsheet object to search within. Defaults to the active Spreadsheet if not provided.
+ * @returns     {GoogleAppsScript.Spreadsheet.Sheet | null} The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object if found, otherwise `null`.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link getSheetById}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}

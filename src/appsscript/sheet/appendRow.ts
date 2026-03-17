@@ -1,15 +1,13 @@
-import { appendRows, type Options } from "./appendRows";
+import { appendRows, type AppendRowsOptions } from "./appendRows";
 
 /**
- * ## appendRow
- *
  * Appends a single row to the bottom of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
  * If a cell's content starts with `=`, it is interpreted as a formula.
  *
- * @param       sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which the row will be appended.
- * @param       values - A 1D array containing the data for the single row.
- * @param       [options] - Additional parameters to customize the method's behavior.
- * @returns     The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which the row will be appended.
+ * @param       {unknown[]} values - A 1D array containing the data for the single row.
+ * @param       {AppendRowsOptions | null | undefined} [options] - Additional parameters to customize the method's behavior.
+ * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @throws      {@link InvalidSheetException}
  * @see         {@link prependRow}
@@ -25,7 +23,7 @@ import { appendRows, type Options } from "./appendRows";
 export function appendRow(
   sheet: GoogleAppsScript.Spreadsheet.Sheet,
   values: unknown,
-  options: Options | null | undefined = {}
+  options: AppendRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet {
   return appendRows(sheet, [values], options);
 }

@@ -1,15 +1,13 @@
 import { appendColumns, type Options } from "./appendColumns";
 
 /**
- * ## appendColumn
- *
  * Appends a single column to the right of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
  * If a cell's content starts with `=`, it is interpreted as a formula.
  *
- * @param       sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which the column will be appended.
- * @param       values - A 1D array containing the data for the single column.
- * @param       [options] - Additional parameters to customize the method's behavior.
- * @returns     The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which the column will be appended.
+ * @param       {unknown[]} values - A 1D array containing the data for the single column.
+ * @param       {Options | null | undefined} [options] - Additional parameters to customize the method's behavior.
+ * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @throws      {@link InvalidSheetException}
  * @see         {@link appendColumns}

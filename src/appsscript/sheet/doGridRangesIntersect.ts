@@ -8,13 +8,11 @@ import { isValidSheetName } from "./isValidSheetName";
 import type { GridRange } from "./types";
 
 /**
- * ## doGridRangesIntersect
- *
  * Checks if two <a href="./types/GridRange.ts"><code>GridRange</code></a> objects overlap and are on the same sheet.
  *
- * @param       gridRange1 - The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
- * @param       gridRange2 - The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
- * @returns     `true` if the ranges share at least one common cell and are located on the same sheet; `false` otherwise.
+ * @param       {GridRange} gridRange1 - The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
+ * @param       {GridRange} gridRange2 - The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
+ * @returns     {boolean} `true` if the ranges share at least one common cell and are located on the same sheet; `false` otherwise.
  * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @throws      <a href="../../exception/appsscript/sheet/InvalidGridRangeException.ts"><code>InvalidGridRangeException</code></a>
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
@@ -64,13 +62,19 @@ export function doGridRangesIntersect(
   }
 
   const r1_startRow = gridRange1.startRowIndex ?? 0;
+
   const r1_endRow = gridRange1.endRowIndex ?? Infinity;
+
   const r1_startCol = gridRange1.startColumnIndex ?? 0;
+
   const r1_endCol = gridRange1.endColumnIndex ?? Infinity;
 
   const r2_startRow = gridRange2.startRowIndex ?? 0;
+
   const r2_endRow = gridRange2.endRowIndex ?? Infinity;
+
   const r2_startCol = gridRange2.startColumnIndex ?? 0;
+
   const r2_endCol = gridRange2.endColumnIndex ?? Infinity;
 
   return !(

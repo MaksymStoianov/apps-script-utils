@@ -2,7 +2,8 @@ import { IllegalArgumentException } from "../../exception";
 import { isConsistent2DArray } from "../../lang";
 import { requireSheet } from "./requireSheet";
 
-export interface Options {
+export interface AppendRowsOptions {
+
   /**
    * Determines whether to insert rows after frozen rows.
    * If `true`, rows will be added immediately after the frozen rows, if they exist.
@@ -11,8 +12,6 @@ export interface Options {
 }
 
 /**
- * ## appendRows
- *
  * Appends rows to the bottom of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
  * Data is written starting from column 1 of the new rows.
  * If a cell's content in `values` starts with `=`, it is interpreted as a formula.
@@ -28,10 +27,10 @@ export interface Options {
  * ]);
  * ```
  *
- * @param       sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which columns will be appended.
- * @param       values - A 2D array containing the data to append.
- * @param       [options] - Additional parameters to customize the method's behavior.
- * @returns     The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which columns will be appended.
+ * @param       {any[][]} values - A 2D array containing the data to append.
+ * @param       {AppendRowsOptions | null} [options] - Additional parameters to customize the method's behavior.
+ * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @throws      {@link InvalidSheetException}
  * @see         {@link prependRows}
@@ -47,7 +46,7 @@ export interface Options {
 export function appendRows(
   sheet: GoogleAppsScript.Spreadsheet.Sheet,
   values: unknown,
-  options: Options | null | undefined = {}
+  options: AppendRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet {
   if (arguments.length === 0) {
     throw new IllegalArgumentException();
@@ -61,7 +60,7 @@ export function appendRows(
     );
   }
 
-  const effectiveOptions: Required<Options> = {
+  const effectiveOptions: Required<AppendRowsOptions> = {
     afterFrozenRows: false,
     ...options
   };
@@ -72,9 +71,11 @@ export function appendRows(
     lock?.waitLock(30000);
 
     const numRows: number = values.length;
+
     const numColumns: number = values[0].length;
 
     const lastRow: number = sheet.getLastRow();
+
     let rowPosition: number = lastRow;
 
     if (effectiveOptions.afterFrozenRows !== false) {

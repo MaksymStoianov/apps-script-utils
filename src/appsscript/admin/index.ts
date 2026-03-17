@@ -1,1 +1,1 @@
-export { isAdmin } from "./isAdmin";
+export * from "./isAdmin";
