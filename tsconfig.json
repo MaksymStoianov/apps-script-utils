@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./",
+    "rootDir": "src",
     "outDir": "./dist",
     "typeRoots": ["node_modules/@types", "./config/types"],
     "types": ["google-apps-script"],
@@ -27,9 +27,9 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "composite": false,
-    //    "sourceMap": true,
-    //    "declaration": true,
-    //    "declarationMap": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
