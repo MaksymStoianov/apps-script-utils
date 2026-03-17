@@ -33,9 +33,6 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "vitest run",
-    "test:unit": "vitest run test/lang test/path",
-    "test:integration": "vitest run test/appsscript",
-    "test:cov": "npx vitest run --coverage",
     "build": "rm -rf dist/* && tsc -b --force"
   },
   "repository": {
