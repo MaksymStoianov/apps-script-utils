@@ -1,4 +1,4 @@
-import { SlideNotFoundException } from "@/exception";
+import { SlideNotFoundException } from "../../exception";
 import { isSlide } from "./isSlide";
 
 /**

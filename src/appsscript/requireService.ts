@@ -1,4 +1,4 @@
-import { ServiceIsNotDefinedException } from "@/exception";
+import { ServiceIsNotDefinedException } from "../exception";
 
 /**
  * Ensures that a service is defined.

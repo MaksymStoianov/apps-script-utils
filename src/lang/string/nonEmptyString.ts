@@ -1,4 +1,4 @@
-import { InvalidStringException } from "@/exception";
+import { InvalidStringException } from "../../exception";
 import { isString } from "../base/isString";
 
 /**
