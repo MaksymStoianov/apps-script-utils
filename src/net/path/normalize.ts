@@ -4,8 +4,8 @@ import { join } from "./join";
 /**
  * Normalizes a URL path, bringing it to a standard, absolute form.
  *
- * @param       path - The original URL path string to normalize.
- * @returns     A new string representing the normalized, absolute, and URL-encoded path.
+ * @param       {string} path - The original URL path string to normalize.
+ * @returns     {string} A new string representing the normalized, absolute, and URL-encoded path.
  * @throws      {@link EmptyStringException}
  * @environment `Google Apps Script`, `Browser`
  */

@@ -18,8 +18,8 @@ import { isString } from "../../lang";
  * isUrl(123);                              // false
  * ```
  *
- * @param   value - The value to check.
- * @returns `true` if the value is a valid URL string; otherwise, `false`.
+ * @param   {unknown} value - The value to check.
+ * @returns {boolean} `true` if the value is a valid URL string; otherwise, `false`.
  * @since   1.0.0
  * @version 1.0.0
  */

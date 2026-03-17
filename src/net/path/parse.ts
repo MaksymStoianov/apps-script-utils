@@ -4,8 +4,8 @@ import { ParsedPath } from "./types";
 /**
  * Returns an object from a url string.
  *
- * @param       path - The URL path string to evaluate.
- * @returns     An object conforming to {@link ParsedPath} type with the extracted components.
+ * @param       {string} path - The URL path string to evaluate.
+ * @returns     {ParsedPath} An object conforming to {@link ParsedPath} type with the extracted components.
  * @throws      {@link EmptyStringException}
  * @see         {@link ParsedPath}
  * @environment `Google Apps Script`, `Browser`
