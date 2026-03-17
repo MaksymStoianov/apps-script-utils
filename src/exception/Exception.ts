@@ -1,8 +1,6 @@
 import { isObject, isString } from "../lang";
 
 /**
- * ## Exception
- *
  * Base exception class.
  *
  * @extends {@link Error}
@@ -21,7 +19,9 @@ export class Exception extends Error {
           ? message
           : undefined
     );
+
     this.name = new.target.name;
+
     Object.setPrototypeOf(this, new.target.prototype);
   }
 
@@ -30,7 +30,7 @@ export class Exception extends Error {
    *
    * @returns The name of the constructor.
    */
-  get [Symbol.toStringTag]() {
+  get [Symbol.toStringTag](): string {
     return this.constructor.name;
   }
 
@@ -40,7 +40,7 @@ export class Exception extends Error {
    * @param   [message] - The error message or an existing Error object.
    * @returns A new instance of the Exception class.
    */
-  static create(message?: unknown) {
+  static create(message?: unknown): Exception {
     return new Exception(message);
   }
 

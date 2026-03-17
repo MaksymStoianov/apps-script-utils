@@ -1,8 +1,6 @@
 import { RuntimeException } from "../../RuntimeException";
 
 /**
- * ## AdminDirectoryException
- *
  * Represents an exception thrown when the Admin SDK Directory Service is not available or enabled.
  *
  * @extends {@link RuntimeException}
@@ -16,8 +14,11 @@ export class AdminDirectoryException extends RuntimeException {
     super(
       message || "Admin SDK Directory Service is not available or not enabled."
     );
+
     const target = new.target;
+
     this.name = target.name;
+
     Object.setPrototypeOf(this, target.prototype);
   }
 }

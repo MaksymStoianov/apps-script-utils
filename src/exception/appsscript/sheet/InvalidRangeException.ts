@@ -1,8 +1,6 @@
 import { RuntimeException } from "../../RuntimeException";
 
 /**
- * ## InvalidRangeException
- *
  * Represents an exception thrown when an invalid {@link GoogleAppsScript.Spreadsheet.Range|Range} object is provided.
  *
  * @extends {@link RuntimeException}
@@ -16,8 +14,11 @@ import { RuntimeException } from "../../RuntimeException";
 export class InvalidRangeException extends RuntimeException {
   constructor(message?: string | undefined) {
     super(message || "Invalid Range object provided.");
+
     const target = new.target;
+
     this.name = target.name;
+
     Object.setPrototypeOf(this, target.prototype);
   }
 }

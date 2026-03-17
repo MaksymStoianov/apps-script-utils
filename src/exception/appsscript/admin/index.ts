@@ -1,1 +1,1 @@
-export { AdminDirectoryException } from "./AdminDirectoryException";
+export * from "./AdminDirectoryException";
