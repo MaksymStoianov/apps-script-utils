@@ -20,8 +20,8 @@ import { isArray } from "../base";
  * // ]
  * ```
  *
- * @param   arr - The 2D array (matrix) to transpose. Its elements can be of any type.
- * @returns A new 2D array representing the transposed matrix. The elements maintain their original types.
+ * @param   {unknown} arr - The 2D array (matrix) to transpose. Its elements can be of any type.
+ * @returns {Array<Array<unknown>>} A new 2D array representing the transposed matrix. The elements maintain their original types.
  * @throws  {@link Error}
  * @since   1.0.0
  * @version 1.0.0
