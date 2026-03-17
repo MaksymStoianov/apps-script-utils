@@ -4,7 +4,7 @@ import { RuntimeException } from "./RuntimeException";
  * Represents an exception thrown when a string is expected to be an email address
  * but does not conform to a valid email format.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.0.0

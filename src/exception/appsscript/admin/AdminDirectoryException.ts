@@ -3,7 +3,7 @@ import { RuntimeException } from "../../RuntimeException";
 /**
  * Represents an exception thrown when the Admin SDK Directory Service is not available or enabled.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.5.0

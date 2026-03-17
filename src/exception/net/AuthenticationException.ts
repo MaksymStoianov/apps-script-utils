@@ -3,7 +3,7 @@ import { RuntimeException } from "../RuntimeException";
 /**
  * Represents an exception thrown during authentication failures.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.5.0

@@ -3,7 +3,7 @@ import { RuntimeException } from "../../RuntimeException";
 /**
  * Represents an exception thrown when a {@link GoogleAppsScript.Slides.Slide|Slide} object is not found.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @see     {@link GoogleAppsScript.Slides.Slide|Slide}

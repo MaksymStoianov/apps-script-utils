@@ -3,7 +3,7 @@ import { RuntimeException } from "./RuntimeException";
 /**
  * An exception thrown when a function expects a string, but receives a value of a different type.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.0.0

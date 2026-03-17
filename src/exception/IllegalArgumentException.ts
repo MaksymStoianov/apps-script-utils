@@ -3,7 +3,7 @@ import { RuntimeException } from "./RuntimeException";
 /**
  * Represents an exception thrown when a method has been passed an illegal or inappropriate argument.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.0.0

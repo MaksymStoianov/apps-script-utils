@@ -3,7 +3,7 @@ import { RuntimeException } from "./RuntimeException";
 /**
  * Represents an exception thrown when a string is expected but is `null`, `undefined`, or empty.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.0.0

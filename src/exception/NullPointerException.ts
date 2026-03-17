@@ -3,7 +3,7 @@ import { RuntimeException } from "./RuntimeException";
 /**
  * Represents an exception thrown when an application attempts to use `null` or `undefined` in a context where an object is required.
  *
- * @extends {@link RuntimeException}
+ * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
  * @since   1.0.0
