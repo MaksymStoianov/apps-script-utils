@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.8.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.7.0...v1.8.0) (2026-03-17)
+
+
+### Features
+
+* enhance Apps Script utilities (admin, base, sheet, slide, ui) ([853043b](https://github.com/MaksymStoianov/apps-script-utils/commit/853043b48d50dfabf1cdabba9e8487be0d575d23))
+* expand exception hierarchy ([2a4e1bd](https://github.com/MaksymStoianov/apps-script-utils/commit/2a4e1bd9f8ba815bb408d9591176194b0229e898))
+* update and extend language utilities ([e79db8f](https://github.com/MaksymStoianov/apps-script-utils/commit/e79db8f0fef8e1e696eb07d8ac0327d97a809b90))
+* update html, json, net and time utilities ([5ce412e](https://github.com/MaksymStoianov/apps-script-utils/commit/5ce412ef3649da7faa2fbd8856ce0e277f41ddeb))
+
+
+### Bug Fixes
+
+* **appsscript:** resolve ReDoS vulnerability in parseA1Notation ([bd4ea1a](https://github.com/MaksymStoianov/apps-script-utils/commit/bd4ea1a9e358a125480dd5f0beb7a3ddffd26aa8))
+* **coverage:** resolve CodeQL DOM XSS warning in sorter.js ([f82bcfe](https://github.com/MaksymStoianov/apps-script-utils/commit/f82bcfeafeffa37e99492fef8832c49c02358066))
+* package.json ([89e0eeb](https://github.com/MaksymStoianov/apps-script-utils/commit/89e0eeb411ca52c337bb4da574af668fec9eb6ba))
+* package.json ([146e091](https://github.com/MaksymStoianov/apps-script-utils/commit/146e091e2a5c96591a2400ddf2fbd42e64cebfd8))
+
 ## [1.7.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.6.1...v1.7.0) (2026-01-07)
 
 ### Features
