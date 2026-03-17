@@ -1,8 +1,6 @@
 import { isObject } from "../lang";
 
 /**
- * ## stringifyJson
- *
  * Recursively sorts object keys and stringifies a value to ensure a deterministic output.
  * This is crucial for consistent hashing of objects.
  *
@@ -22,6 +20,7 @@ export function stringifyJson(value: unknown): string {
   }
 
   const keys = Object.keys(value).sort();
+
   const pairs = keys.map(key => {
     const stringifiedKey = JSON.stringify(key);
 

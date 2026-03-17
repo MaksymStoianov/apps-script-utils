@@ -1,8 +1,6 @@
 import { requireNonEmptyString } from "../lang";
 
 /**
- * ## encodeHtml
- *
  * Encodes characters in a string (from `U+00A0` to `U+9999`) into their corresponding HTML entities.
  *
  * @param   value - The string to encode.

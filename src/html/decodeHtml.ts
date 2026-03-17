@@ -1,8 +1,6 @@
 import { requireNonEmptyString } from "../lang";
 
 /**
- * ## decodeHtml
- *
  * Decodes common HTML entities in a string.
  *
  * @param   value - The string containing HTML entities to decode.

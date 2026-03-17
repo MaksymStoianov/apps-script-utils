@@ -1,2 +1,3 @@
-export { parseJson } from "./parseJson";
-export { stringifyJson } from "./stringifyJson";
+export * from "./parseJson";
+
+export * from "./stringifyJson";

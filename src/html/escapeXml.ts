@@ -1,8 +1,6 @@
 import { requireNonEmptyString } from "../lang";
 
 /**
- * ## escapeXml
- *
  * Escapes special characters in a string for safe use within XML/HTML content.
  *
  * @param   value - The string containing characters to be escaped for XML.

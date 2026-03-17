@@ -9,6 +9,7 @@ import { isString } from "../../lang";
  */
 export function join(...paths: string[]): string {
   const resolvedParts: string[] = [];
+
   let isAbsoluteResult = false;
 
   for (const path of paths) {

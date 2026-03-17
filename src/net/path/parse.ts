@@ -15,6 +15,7 @@ export function parse(path: string): ParsedPath {
 
   const reg =
     /^(?<dir>(?<root>\/)?(?:[^/]+\/)*)?(?<base>(?<name>[^/]+)(?<ext>\.\w+)?)?$/i;
+
   const match = reg.exec(result);
 
   if (!match || !match.groups) {
@@ -28,6 +29,7 @@ export function parse(path: string): ParsedPath {
   }
 
   const { root, base, name, ext } = match.groups;
+
   let { dir } = match.groups;
 
   if (dir && dir.endsWith("/")) {

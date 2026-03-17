@@ -1,8 +1,13 @@
 export * from "./types";
 
-export { isAbsolute } from "./isAbsolute";
-export { isRelative } from "./isRelative";
-export { isValidDomain } from "./isValidDomain";
-export { join } from "./join";
-export { normalize } from "./normalize";
-export { parse } from "./parse";
+export * from "./isAbsolute";
+
+export * from "./isRelative";
+
+export * from "./isValidDomain";
+
+export * from "./join";
+
+export * from "./normalize";
+
+export * from "./parse";

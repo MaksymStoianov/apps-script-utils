@@ -1,8 +1,6 @@
 import { isString } from "../../lang";
 
 /**
- * ## isUrl
- *
  * Checks if the given value is a valid URL string.
  *
  * @example

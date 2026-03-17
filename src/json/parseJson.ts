@@ -1,8 +1,6 @@
 import { requireNonEmptyString } from "../lang";
 
 /**
- * ## parseJson
- *
  * Parses a JSON string, including handling and attempting to fix common formatting errors
  * that might cause standard JSON.parse to fail (e.g., unquoted keys, single quotes).
  *
@@ -31,6 +29,7 @@ import { requireNonEmptyString } from "../lang";
  * @see     {@link stringifyJson}
  * @since   1.0.0
  * @version 1.0.0
+ * @deprecated This function is deprecated and will be removed in future versions.
  */
 export function parseJson(value: string): object {
   const result = requireNonEmptyString(value);
@@ -44,7 +43,7 @@ export function parseJson(value: string): object {
      * @param token The token string to check.
      * @returns `true` if the token is a valid key format; otherwise, `false`.
      */
-    const isValidKey = (token: string) =>
+    const isValidKey = (token: string): boolean =>
       /^"[^"]*"$/.test(token) || /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(token);
 
     /**
@@ -52,7 +51,7 @@ export function parseJson(value: string): object {
      * @param token The token string to check.
      * @returns `true` if the token is a valid value format; otherwise, `false`.
      */
-    const isValidValue = (token: string) =>
+    const isValidValue = (token: string): boolean =>
       token === "true" ||
       token === "false" ||
       token === "null" ||
@@ -61,9 +60,13 @@ export function parseJson(value: string): object {
       /^'[^']*'$/.test(token);
 
     const tokens = [];
+
     let currentToken = "";
+
     let isString = false;
+
     let isEscaped = false;
+
     let quoteType = null;
 
     for (let i = 0; i < result.length; i++) {
@@ -72,12 +75,14 @@ export function parseJson(value: string): object {
       if (isEscaped) {
         currentToken += char;
         isEscaped = false;
+
         continue;
       }
 
       if (char === "\\") {
         currentToken += char;
         isEscaped = true;
+
         continue;
       }
 
@@ -108,6 +113,7 @@ export function parseJson(value: string): object {
           tokens.push(currentToken);
           currentToken = "";
         }
+
         tokens.push(char);
       } else {
         currentToken += char;
@@ -119,7 +125,9 @@ export function parseJson(value: string): object {
     }
 
     const correctedTokens = [];
+
     let expectingValue = false;
+
     let expectingKey = false;
 
     for (let i = 0; i < tokens.length; i++) {
