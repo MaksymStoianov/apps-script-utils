@@ -1,0 +1,25 @@
+name: Question & Help
+description: Ask a question or get help with your project.
+title: "[Question]: "
+labels: [ "question" ]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What is your question?
+      description: Provide as much detail as possible to help others understand your question.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to achieve? What have you tried so far?
+    validations:
+      required: false
+  - type: textarea
+    id: code-snippet
+    attributes:
+      label: Code snippet
+      description: Provide relevant code if applicable.
+      render: typescript

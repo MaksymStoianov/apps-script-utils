@@ -1,0 +1,31 @@
+name: Ideas & Proposals
+description: Share an idea or a new feature proposal.
+title: "[Idea]: "
+labels: [ "discussion" ]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What is your idea?
+      description: Describe your proposal or improvement in detail.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why do you think this would be a valuable addition to the project?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you thought of any other ways to solve this?
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Any other information or screenshots to share.

@@ -1,0 +1,43 @@
+name: Bug Report
+description: Report a bug report to help us improve.
+title: "[Bug]: "
+labels: [ "bug" ]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-repro
+    attributes:
+      label: Steps to reproduce
+      description: How do we reproduce the bug?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Library version, Node.js version, etc.
+      placeholder: e.g. apps-script-utils@1.9.0, Node.js v22.14.0
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here (e.g. screenshots, logs).
