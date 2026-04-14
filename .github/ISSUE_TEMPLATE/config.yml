@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/MaksymStoianov/apps-script-utils#readme
+    about: Read the official documentation.
+  - name: Roadmap
+    url: https://github.com/MaksymStoianov/apps-script-utils/blob/main/ROADMAP.md
+    about: Check out our future plans.
+  - name: Discussions
+    url: https://github.com/MaksymStoianov/apps-script-utils/discussions
+    about: Ask questions or discuss ideas.
+  - name: Contributing
+    url: https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md
+    about: Learn how to contribute to this project.

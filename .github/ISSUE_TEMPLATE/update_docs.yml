@@ -1,0 +1,24 @@
+name: Documentation Update
+description: Report a mistake or suggest an improvement for the documentation.
+title: "[Docs]: "
+labels: [ "documentation" ]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is wrong with the current documentation or what's missing? Please include links to the relevant pages if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: Proposed changes
+      description: How would you like to improve the documentation?
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots here.
