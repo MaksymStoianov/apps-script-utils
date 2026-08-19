@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.9.0...v1.10.0) (2026-08-19)
+
+
+### Features
+
+* **sheet:** allow custom error messages in parseA1Notations and add JSDoc documentation ([e210153](https://github.com/MaksymStoianov/apps-script-utils/commit/e210153a62bfb02bd367e81faa4146634897cd1e))
+
 ## [1.9.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.8.1...v1.9.0) (2026-03-17)
 
 
