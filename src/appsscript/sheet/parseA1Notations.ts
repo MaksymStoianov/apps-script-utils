@@ -1,10 +1,27 @@
-import { IllegalArgumentException } from "../../exception";
+import { EmptyStringException, IllegalArgumentException } from "../../exception";
 import { isObject, requireNonEmptyString } from "../../lang";
 import { parseA1Notation } from "./parseA1Notation";
 import { GridRange } from "./types";
 
 export interface A1NotationParseOptions {
   includeSheetNames?: boolean;
+
+  /**
+   * Error message when one or more values are not valid ranges.
+   */
+  validationError?: string;
+
+  /**
+   * Error message when a sheet name is missing.
+   * Use `%s` as a placeholder for the A1 notation.
+   */
+  missingSheetNameError?: string;
+
+  /**
+   * Error message when a sheet name is present but not allowed.
+   * Use `%s` as a placeholder for the A1 notation.
+   */
+  unexpectedSheetNameError?: string;
 }
 
 /**
@@ -14,8 +31,12 @@ export interface A1NotationParseOptions {
  * @param       {string} value - The input string to be parsed.
  * @param       {A1NotationParseOptions} options - An object with options for parsing.
  * @returns     {GridRange[]} An array of {@link GridRange} objects.
- * @throws      {@link Error}
- * @throws      {@link IllegalArgumentException}
+ * @throws      {IllegalArgumentException} If the `value` is not a string.
+ * @throws      {EmptyStringException} If the `value` is an empty string.
+ * @throws      {SyntaxError} If one of the A1 notations is invalid.
+ * @throws      {Error} If `validationError` occurs (default: "One or more values are not valid ranges.").
+ * @throws      {Error} If `missingSheetNameError` occurs (default: "Missing sheet name in \"%s\". Ranges must include a sheet name.").
+ * @throws      {Error} If `unexpectedSheetNameError` occurs (default: "Sheet names are not allowed. Found a sheet name in \"%s\".").
  * @see         {@link parseA1Notation}
  * @see         {@link GridRange}
  * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
@@ -28,13 +49,17 @@ export interface A1NotationParseOptions {
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
  */
-export function parseA1Notations(
-  value: string,
-  { includeSheetNames }: A1NotationParseOptions
-): GridRange[] {
+export function parseA1Notations(value: string, options: A1NotationParseOptions = {}): GridRange[] {
   if (arguments.length === 0) {
     throw new IllegalArgumentException();
   }
+
+  const {
+    includeSheetNames,
+    validationError = "One or more values are not valid ranges.",
+    missingSheetNameError = 'Missing sheet name in "%s". Ranges must include a sheet name.',
+    unexpectedSheetNameError = 'Sheet names are not allowed. Found a sheet name in "%s".'
+  } = options;
 
   const trimmedInput = requireNonEmptyString(value).trim();
 
@@ -42,25 +67,23 @@ export function parseA1Notations(
     return [];
   }
 
-  const ranges = trimmedInput
+  const ranges: GridRange[] = trimmedInput
     .split(",")
-    .map((item) => item.trim())
+    .map((item: string): string => item.trim())
     .filter(Boolean)
     .map(parseA1Notation);
 
   if (!ranges.every(isObject)) {
-    throw new Error("One or more values are not valid ranges.");
+    throw new Error(validationError);
   }
 
   for (const range of ranges) {
     if (includeSheetNames === true && !range.sheetName) {
-      throw new Error(
-        `Missing sheet name in "${range.a1Notation}". Ranges must include a sheet name.`
-      );
+      throw new Error(missingSheetNameError.replace(/%s/g, range.a1Notation || "undefined"));
     }
 
     if (includeSheetNames === false && range.sheetName) {
-      throw new Error(`Sheet names are not allowed. Found a sheet name in "${range.a1Notation}".`);
+      throw new Error(unexpectedSheetNameError.replace(/%s/g, range.a1Notation || "undefined"));
     }
   }
 

@@ -44,7 +44,7 @@ export function toA1Notation(gridRange: GridRange): string {
 
   const { sheetName, startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } = gridRange;
 
-  let rangePart = "";
+  let rangePart: string;
 
   const hasStartRow = typeof startRowIndex === "number";
 
