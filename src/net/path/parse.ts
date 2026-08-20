@@ -11,28 +11,54 @@ import { ParsedPath } from "./types";
  * @environment `Google Apps Script`, `Browser`
  */
 export function parse(path: string): ParsedPath {
-  const result = requireNonEmptyString(path);
+  const result: string = requireNonEmptyString(path);
 
-  const reg = /^(?<dir>(?<root>\/)?(?:[^/]+\/)*)?(?<base>(?<name>[^/]+)(?<ext>\.\w+)?)?$/i;
+  let root: string | undefined;
 
-  const match = reg.exec(result);
+  let dir: string | undefined;
 
-  if (!match || !match.groups) {
-    return {
-      root: undefined,
-      dir: undefined,
-      base: undefined,
-      name: undefined,
-      ext: undefined
-    };
+  let base: string | undefined;
+
+  let name: string | undefined;
+
+  let ext: string | undefined;
+
+  if (result.startsWith("/")) {
+    root = "/";
   }
 
-  const { root, base, name, ext } = match.groups;
+  const lastSlashIndex: number = result.lastIndexOf("/");
 
-  let { dir } = match.groups;
+  if (lastSlashIndex === -1) {
+    base = result;
+  } else if (lastSlashIndex === result.length - 1) {
+    let stripped: string = result;
 
-  if (dir && dir.endsWith("/")) {
-    dir = dir.slice(0, -1);
+    while (stripped.length > 1 && stripped.endsWith("/")) {
+      stripped = stripped.slice(0, -1);
+    }
+
+    dir = stripped;
+  } else {
+    base = result.slice(lastSlashIndex + 1);
+
+    if (lastSlashIndex === 0) {
+      dir = "/";
+    } else {
+      dir = result.slice(0, lastSlashIndex);
+    }
+  }
+
+  if (base !== undefined && base.length > 0) {
+    const lastDotIndex: number = base.lastIndexOf(".");
+
+    if (lastDotIndex > 0 && base !== "..") {
+      name = base.slice(0, lastDotIndex);
+      ext = base.slice(lastDotIndex);
+    } else {
+      name = base;
+      ext = undefined;
+    }
   }
 
   return { root, dir, base, name, ext } as ParsedPath;

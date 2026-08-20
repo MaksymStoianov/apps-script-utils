@@ -3,7 +3,6 @@
  * @version 0.1.0
  */
 export type ParsedPath = {
-
   /**
    * The root of the url such as '/'.
    */
@@ -20,12 +19,12 @@ export type ParsedPath = {
   base?: string | undefined;
 
   /**
-   * The file extension (if any) such as '.html'.
-   */
-  ext?: string | undefined;
-
-  /**
    * The filename without extension (if any) such as 'index'.
    */
   name?: string | undefined;
+
+  /**
+   * The file extension (if any) such as '.html'.
+   */
+  ext?: string | undefined;
 };
