@@ -3,6 +3,7 @@
  * @version 0.1.0
  */
 export type ParsedPath = {
+
   /**
    * The root of the url such as '/'.
    */
