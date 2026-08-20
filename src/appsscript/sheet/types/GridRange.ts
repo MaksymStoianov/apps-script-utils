@@ -5,7 +5,6 @@
  * @version 1.0.0
  */
 export interface GridRange {
-
   /**
    * The sheets this range is on.
    */

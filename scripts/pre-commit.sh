@@ -25,16 +25,6 @@ echo " ✓ Done."
 echo ""
 
 
-# Запуск аудита безопасности
-echo "$LOG_TAG: Running npm audit fix..."
-npm audit fix
-if [ $? -ne 0 ]; then
-    # audit fix может вернуть 1, если есть High/Critical уязвимости,
-    # которые не удалось исправить автоматически. Мы продолжаем,
-    # но предупреждаем, что ручной фикс может потребоваться.
-    echo " ✗ Warning: npm audit fix completed, but unfixable vulnerabilities may remain."
-fi
-
 # Проверка оставшихся уязвимостей
 npm audit --audit-level=high
 if [ $? -ne 0 ]; then
