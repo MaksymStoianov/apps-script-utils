@@ -29,19 +29,17 @@ export function versionCompare(version1: string, version2: string): number {
   const parseVersionString = (versionString: string): number[] =>
     versionString
       .split(".")
-      .map(Number) // Convert each segment to a number
-      .map((item) => (Number.isNaN(item) || !Number.isInteger(item) ? 0 : item));
+      .map(Number)
+      .map((item: number): number => (Number.isNaN(item) || !Number.isInteger(item) ? 0 : item));
 
-  const parsedVersion1 = parseVersionString(version1);
+  const parsedVersion1: number[] = parseVersionString(version1);
 
-  const parsedVersion2 = parseVersionString(version2);
+  const parsedVersion2: number[] = parseVersionString(version2);
 
-  const maxLength = Math.max(parsedVersion1.length, parsedVersion2.length);
+  while (parsedVersion1.length > 0 || parsedVersion2.length > 0) {
+    const n1: number = parsedVersion1.shift() ?? 0;
 
-  for (let i = 0; i < maxLength; i++) {
-    const n1 = parsedVersion1[i] ?? 0;
-
-    const n2 = parsedVersion2[i] ?? 0;
+    const n2: number = parsedVersion2.shift() ?? 0;
 
     if (n1 > n2) {
       return 1;
