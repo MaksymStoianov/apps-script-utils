@@ -11,6 +11,8 @@
 # Utilities for Google Apps Script™
 
 <p align="left">
+  <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/v/apps-script-utils?label=npm" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/dm/apps-script-utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License" alt="License"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
@@ -29,6 +31,7 @@
 - [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
   - [Overview](#overview)
   - [Key Features](#key-features)
+  - [AI Agent Skills](#ai-agent-skills)
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage Examples](#usage-examples)
@@ -60,24 +63,51 @@
 
 ## Overview
 
-A set of utilities for **Google Apps Script**, as well as common functions for working with data, strings, validation
-and
-more. This project aims to simplify development in the Apps Script environment and provide frequently used functions in
-one place.
+**apps-script-utils** is a TypeScript utility library purpose-built for **Google Apps Script**. It brings together the
+helpers every GAS project ends up writing by hand — spreadsheet and A1-notation manipulation, type/value validation
+(`isX`/`nonX`/`requireX`), string and array transforms, typed exceptions, and more — in a single, well-documented, and
+fully tested package.
 
 ## Key Features
 
-- 🚀 **Optimized for GAS**: Tailored specifically for Google Apps Script environments and limitations.
-- 🛠️ **Rich Utility Set**: Comprehensive collection of spreadsheet, UI, and admin SDK helpers.
-- 📝 **TypeScript Support**: Full type definitions for better IDE support and safer code.
-- 🧪 **Tested**: Unit tests using Vitest to ensure reliability.
-- 🔗 **Linked Documentation**: Direct links to official Google documentation for all GAS types.
-- 🛡️ **Robust Error Handling**: Custom exception classes for better debugging.
+- **Built for Google Apps Script** — designed around the GAS runtime and its constraints, not adapted from a generic
+  Node.js library.
+- **Broad utility coverage** — spreadsheet, UI, network, and Admin SDK helpers alongside general-purpose string,
+  array, and object utilities.
+- **TypeScript-first** — every function ships with full type definitions for IDE autocompletion and compile-time
+  safety.
+- **Tested** — covered by a Vitest unit test suite.
+- **Linked reference documentation** — every Google Apps Script type used in the API links directly to its official
+  documentation.
+- **Consistent error handling** — a dedicated hierarchy of exception classes replaces ad-hoc thrown errors.
+
+## AI Agent Skills
+
+For teams using an AI coding agent (Claude Code, Gemini CLI, and others), the
+[bootgs/skills](https://github.com/bootgs/skills) repository provides an
+[`apps-script-utils`](https://github.com/bootgs/skills/tree/main/skills/apps-script-utils) Agent Skill documenting
+this library for such agents, including the `isX`/`nonX`/`requireX` validation convention, A1-notation and sheet
+helpers, string/number/array helpers, typed exceptions, and the HTML/JSON/path helpers.
+
+Install with Claude Code:
+
+```bash
+/plugin marketplace add bootgs/skills
+/plugin install apps-script-utils@bootgs-skills
+```
+
+Install with the `npx skills` CLI, which supports multiple agents:
+
+```bash
+npx skills add bootgs/skills --skill apps-script-utils
+```
+
+Once installed, the agent applies the skill automatically when a task involves this library.
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) (v20 or higher recommended)
-- [npm](https://www.npmjs.com/)
+- [Node.js](https://nodejs.org/) v22.14.0 or later
+- [npm](https://www.npmjs.com/) (or another Node package manager, e.g. pnpm)
 
 ## Installation
 
@@ -89,7 +119,7 @@ npm install apps-script-utils
 
 ## Usage Examples
 
-### 📊 Working with Sheets
+### Working with Sheets
 
 Append multiple rows of data efficiently:
 
@@ -105,7 +135,7 @@ const data = [
 appendRows(sheet, data);
 ```
 
-### 🔐 Admin SDK Utilities
+### Admin SDK Utilities
 
 Check if the current user has administrative privileges:
 
@@ -119,7 +149,7 @@ if (isAdmin()) {
 }
 ```
 
-### 📍 A1 Notation Parsing
+### A1 Notation Parsing
 
 Parse complex A1 notations into structured objects:
 
@@ -139,23 +169,29 @@ console.log(rangeInfo.endColumnIndex); // 2
 
 The following scripts are available in `package.json`:
 
-- `npm run build`: Cleans the `dist` directory and compiles the TypeScript source.
-- `npm run dev`: Starts Vitest in watch mode.
-- `npm test`: Runs all tests once.
-- `npm run lint`: Runs ESLint with auto-fix enabled.
-- `npm run format`: Formats the codebase using Prettier.
-- `npm run maint`: Runs the maintenance script (`scripts/maintenance.sh`).
-- `npm run prepare`: Sets up Husky for git hooks.
+| Script               | Description                                                     |
+| :------------------- | :-------------------------------------------------------------- |
+| `npm run build`      | Cleans the `dist` directory and compiles the TypeScript source. |
+| `npm run dev`        | Starts Vitest in watch mode.                                    |
+| `npm test`           | Runs the full test suite once.                                  |
+| `npm run type:check` | Type-checks the project without emitting output.                |
+| `npm run lint`       | Lints the codebase with ESLint.                                 |
+| `npm run lint:fix`   | Lints the codebase and auto-fixes what it can.                  |
+| `npm run format`     | Checks formatting with Prettier.                                |
+| `npm run format:fix` | Formats the codebase with Prettier.                             |
+| `npm run prepare`    | Sets up Husky git hooks (runs automatically after install).     |
 
 ### Testing
 
-The project uses [Vitest](https://vitest.dev/) for testing. You can run tests using:
+The project uses [Vitest](https://vitest.dev/) for unit testing.
+
+Run the full suite once:
 
 ```bash
 npm test
 ```
 
-For development with watch mode:
+Or run it in watch mode while developing:
 
 ```bash
 npm run dev
@@ -184,15 +220,19 @@ npm run dev
 
 ## Functions by Category
 
+The tables below list every public function grouped by module. A <sup>New</sup> marker indicates a function added in
+the latest release; a <sup>Deprecated</sup> marker indicates a function scheduled for removal in a future release.
+
 ### 1. Google Apps Script Module
 
-Functions specifically designed for Google Apps Script environments, including utilities for working with spreadsheets.
+Functions scoped to specific Google Apps Script services: Sheets, Slides, Admin SDK, Drive, Docs, Forms, network
+requests, and the built-in UI classes.
 
 <details open><summary>Functions</summary>
 
 #### 1.1. Google Base Methods
 
-Functions that enable various operations on a collection of base utility methods.
+General-purpose helpers used across the Google Apps Script modules below.
 
 <details open><summary>Functions</summary>
 
@@ -217,8 +257,7 @@ Functions that enable various operations on a collection of base utility methods
 
 #### 1.2. Google Admin SDK Directory Methods
 
-Functions that enable various operations on
-the [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory).
+Helpers for the [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory).
 
 <details open><summary>Functions</summary>
 
@@ -243,82 +282,20 @@ the [Admin SDK Directory Service](https://developers.google.cn/apps-script/advan
 
 #### 1.3. Google Drive Methods
 
-Functions that enable various operations on Google Drive.
-
-<details open><summary>Functions</summary>
-
-<table>
-    <thead>
-        <tr>
-            <th>Function</th>
-            <th>Return type</th>
-            <th>Brief description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-</details>
+Helpers for Google Drive. Not implemented yet; tracked in the [Roadmap](ROADMAP.md).
 
 #### 1.4. Google Docs Methods
 
-Functions that enable various operations on Google Docs.
-
-<details open><summary>Functions</summary>
-
-<table>
-    <thead>
-        <tr>
-            <th>Function</th>
-            <th>Return type</th>
-            <th>Brief description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-</details>
+Helpers for Google Docs. Not implemented yet. Contributions are welcome — see [Contributing](#contributing).
 
 #### 1.5. Google Forms Methods
 
-Functions that enable various operations on Google Forms.
-
-<details open><summary>Functions</summary>
-
-<table>
-    <thead>
-        <tr>
-            <th>Function</th>
-            <th>Return type</th>
-            <th>Brief description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-</details>
+Helpers for Google Forms. Not implemented yet. Contributions are welcome — see [Contributing](#contributing).
 
 #### 1.6. Google Sheets Methods
 
-Functions that enable various operations on Google Sheets.
+Helpers for reading, writing, and validating Google Sheets data: row and column manipulation, A1-notation parsing,
+`GridRange` comparisons, and type guards for `Sheet`, `Spreadsheet`, and `Range` objects.
 
 <details open><summary>Functions</summary>
 
@@ -362,7 +339,7 @@ Functions that enable various operations on Google Sheets.
             <td>Checks if two <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> objects overlap on the same sheet.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/sheet/extractRangeFromA1Notation.ts"><code>extractRangeFromA1Notation</code></a> 🆕</td>
+            <td><a href="src/appsscript/sheet/extractRangeFromA1Notation.ts"><code>extractRangeFromA1Notation</code></a> <sup>New</sup></td>
             <td><code>String | null</code></td>
             <td>Extracts the range part (e.g., <code>A1:B2</code>) from a full A1 notation string.</td>
         </tr>
@@ -472,12 +449,12 @@ Functions that enable various operations on Google Sheets.
             <td>Checks if a value is NOT a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/sheet/parseA1Notation.ts"><code>parseA1Notation</code></a> 🆕</td>
+            <td><a href="src/appsscript/sheet/parseA1Notation.ts"><code>parseA1Notation</code></a> <sup>New</sup></td>
             <td><a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a></td>
             <td>Parses an A1 notation string into a structured <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/sheet/parseA1Notations.ts"><code>parseA1Notations</code></a> 🆕</td>
+            <td><a href="src/appsscript/sheet/parseA1Notations.ts"><code>parseA1Notations</code></a> <sup>New</sup></td>
             <td><a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange[]</code></a></td>
             <td>Parses a list of comma-separated A1 notations into an array of <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> objects.</td>
         </tr>
@@ -502,7 +479,7 @@ Functions that enable various operations on Google Sheets.
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>, otherwise throws an exception.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/sheet/requireSpreadsheet.ts"><code>requireSpreadsheet</code></a> 🆕</td>
+            <td><a href="src/appsscript/sheet/requireSpreadsheet.ts"><code>requireSpreadsheet</code></a> <sup>New</sup></td>
             <td><a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a></td>
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a>, otherwise throws an exception.</td>
         </tr>
@@ -517,7 +494,7 @@ Functions that enable various operations on Google Sheets.
             <td>Converts a <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object back to A1 notation.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/sheet/updateSheetNameInA1Notation.ts"><code>updateSheetNameInA1Notation</code></a> 🆕</td>
+            <td><a href="src/appsscript/sheet/updateSheetNameInA1Notation.ts"><code>updateSheetNameInA1Notation</code></a> <sup>New</sup></td>
             <td><code>String</code></td>
             <td>Updates or sets the sheet name within an A1 notation string while preserving the range.</td>
         </tr>
@@ -528,7 +505,8 @@ Functions that enable various operations on Google Sheets.
 
 #### 1.7. Google Slides Methods
 
-Functions that enable various operations on Google Slides.
+Helpers for Google Slides: slide lookup and indexing, Markdown-to-`RichTextRun` conversion, find-and-replace, and
+type guards for `Presentation` and `Slide` objects.
 
 <details open><summary>Functions</summary>
 
@@ -542,47 +520,47 @@ Functions that enable various operations on Google Slides.
     </thead>
     <tbody>
         <tr>
-            <td><a href="src/appsscript/slide/convertMarkdownToRichText.ts"><code>convertMarkdownToRichText</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/convertMarkdownToRichText.ts"><code>convertMarkdownToRichText</code></a> <sup>New</sup></td>
             <td><code>RichTextRun[]</code></td>
             <td>Converts Markdown-formatted text to an array of <code>RichTextRun</code> objects.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/findReplaceAllTextInSlide.ts"><code>findReplaceAllTextInSlide</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/findReplaceAllTextInSlide.ts"><code>findReplaceAllTextInSlide</code></a> <sup>New</sup></td>
             <td><code>Number</code></td>
             <td>Finds and replaces all occurrences of text within a slide.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/getSlideByIndex.ts"><code>getSlideByIndex</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/getSlideByIndex.ts"><code>getSlideByIndex</code></a> <sup>New</sup></td>
             <td><a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> | <code>null</code></td>
             <td>Retrieves a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> object by its zero-based index.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/getSlideIndex.ts"><code>getSlideIndex</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/getSlideIndex.ts"><code>getSlideIndex</code></a> <sup>New</sup></td>
             <td><code>Number | null</code></td>
             <td>Retrieves the zero-based index of a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> within its presentation.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/isPresentation.ts"><code>isPresentation</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/isPresentation.ts"><code>isPresentation</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/slides/presentation"><code>Presentation</code></a> object.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/isSlide.ts"><code>isSlide</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/isSlide.ts"><code>isSlide</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> object.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/isValidPresentationId.ts"><code>isValidPresentationId</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/isValidPresentationId.ts"><code>isValidPresentationId</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
             <td>Validates if a string is a valid Google Slides presentation ID.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/isValidSlideId.ts"><code>isValidSlideId</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/isValidSlideId.ts"><code>isValidSlideId</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
             <td>Validates if a string is a valid Google Slides slide ID.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/slide/requireSlide.ts"><code>requireSlide</code></a> 🆕</td>
+            <td><a href="src/appsscript/slide/requireSlide.ts"><code>requireSlide</code></a> <sup>New</sup></td>
             <td><a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a></td>
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a>, otherwise throws an exception.</td>
         </tr>
@@ -593,7 +571,7 @@ Functions that enable various operations on Google Slides.
 
 #### 1.8. Network Methods
 
-Functions that enable various network-related operations.
+Helpers for network-related operations, such as validating request tokens.
 
 <details open><summary>Functions</summary>
 
@@ -607,7 +585,7 @@ Functions that enable various network-related operations.
     </thead>
     <tbody>
         <tr>
-            <td><a href="src/appsscript/net/requireValidToken.ts"><code>requireValidToken</code></a> 🆕</td>
+            <td><a href="src/appsscript/net/requireValidToken.ts"><code>requireValidToken</code></a> <sup>New</sup></td>
             <td><code>String</code></td>
             <td>Ensures that a valid token is provided and matches the allowed keys.</td>
         </tr>
@@ -618,7 +596,8 @@ Functions that enable various network-related operations.
 
 #### 1.9. Google UI Methods
 
-Functions that enable various operations on the user interface, including sidebars, dialogs, and web apps.
+Helpers for user-facing output — `Ui`, `HtmlOutput`, and `TextOutput` type guards — plus dependency guards for
+repositories and services used in web apps.
 
 <details open><summary>Functions</summary>
 
@@ -652,12 +631,12 @@ Functions that enable various operations on the user interface, including sideba
             <td>Validates if a value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a> object.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/requireRepository.ts"><code>requireRepository</code></a> 🆕</td>
+            <td><a href="src/appsscript/requireRepository.ts"><code>requireRepository</code></a> <sup>New</sup></td>
             <td><code>T</code></td>
             <td>Ensures that a repository is defined.</td>
         </tr>
         <tr>
-            <td><a href="src/appsscript/requireService.ts"><code>requireService</code></a> 🆕</td>
+            <td><a href="src/appsscript/requireService.ts"><code>requireService</code></a> <sup>New</sup></td>
             <td><code>T</code></td>
             <td>Ensures that a service is defined.</td>
         </tr>
@@ -670,7 +649,8 @@ Functions that enable various operations on the user interface, including sideba
 
 ### 2. `Base` Utilities
 
-This package contains core utility functions that are not tied to a specific Apps Script service.
+Framework-agnostic functions for type checking and validation (`isX`/`nonX`/`requireX`), string, array, and object
+manipulation, and JSON/HTML handling. These do not depend on the Google Apps Script runtime.
 
 <details open><summary>Functions</summary>
 
@@ -829,7 +809,7 @@ This package contains core utility functions that are not tied to a specific App
             <td>Validates if a value is a symbol.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> 🆕</td>
+            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> <sup>New</sup></td>
             <td><code>String</code></td>
             <td>Validates that the given value is a non-empty string.</td>
         </tr>
@@ -879,7 +859,7 @@ This package contains core utility functions that are not tied to a specific App
             <td>Checks if a value is NOT empty.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/base/nonFunction.ts"><code>nonFunction</code></a> 🆕</td>
+            <td><a href="src/lang/base/nonFunction.ts"><code>nonFunction</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT a <code>Function</code>.</td>
         </tr>
@@ -934,7 +914,7 @@ This package contains core utility functions that are not tied to a specific App
             <td>Enum representing <code>Object#toString</code> result references in uppercase.</td>
         </tr>
         <tr>
-            <td><a href="src/json/parseJson.ts"><code>parseJson</code></a> ⚠️</td>
+            <td><a href="src/json/parseJson.ts"><code>parseJson</code></a> <sup>Deprecated</sup></td>
             <td><code>Object</code></td>
             <td>Safely parses a JSON string, handling potential errors.</td>
         </tr>
@@ -1020,7 +1000,8 @@ This package contains core utility functions that are not tied to a specific App
 
 ### 3. Exceptions Module
 
-This package is for all exception classes.
+Typed exception classes used throughout the library. Domain-specific exceptions (Sheets, Slides, Admin SDK, network)
+extend a common `Exception` base class for consistent error handling.
 
 <details open><summary>Functions</summary>
 
@@ -1049,15 +1030,15 @@ This package is for all exception classes.
             <td>Represents an exception thrown when an invalid <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object is provided.</td>
         </tr>
         <tr>
-            <td><a href="src/exception/appsscript/sheet/InvalidSpreadsheetException.ts"><code>InvalidSpreadsheetException</code></a> 🆕</td>
+            <td><a href="src/exception/appsscript/sheet/InvalidSpreadsheetException.ts"><code>InvalidSpreadsheetException</code></a> <sup>New</sup></td>
             <td>Represents an exception thrown when an invalid <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object is provided.</td>
         </tr>
         <tr>
-            <td><a href="src/exception/appsscript/slide/InvalidPresentationException.ts"><code>InvalidPresentationException</code></a> 🆕</td>
+            <td><a href="src/exception/appsscript/slide/InvalidPresentationException.ts"><code>InvalidPresentationException</code></a> <sup>New</sup></td>
             <td>Represents an exception thrown when an invalid <a href="https://developers.google.com/apps-script/reference/slides/presentation"><code>Presentation</code></a> object is provided.</td>
         </tr>
         <tr>
-            <td><a href="src/exception/appsscript/slide/SlideNotFoundException.ts"><code>SlideNotFoundException</code></a> 🆕</td>
+            <td><a href="src/exception/appsscript/slide/SlideNotFoundException.ts"><code>SlideNotFoundException</code></a> <sup>New</sup></td>
             <td>Represents an exception thrown when a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a> object is not found.</td>
         </tr>
     </tbody>
@@ -1080,7 +1061,7 @@ This package is for all exception classes.
             <td>Exception thrown during application execution.</td>
         </tr>
         <tr>
-            <td><a href="src/exception/net/AuthenticationException.ts"><code>AuthenticationException</code></a> 🆕</td>
+            <td><a href="src/exception/net/AuthenticationException.ts"><code>AuthenticationException</code></a> <sup>New</sup></td>
             <td>Exception thrown during authentication failures.</td>
         </tr>
         <tr>
@@ -1104,11 +1085,11 @@ This package is for all exception classes.
             <td>Exception thrown when <code>null</code> is encountered where an object is required.</td>
         </tr>
         <tr>
-            <td><a href="src/exception/RepositoryIsNotDefinedException.ts"><code>RepositoryIsNotDefinedException</code></a> 🆕</td>
+            <td><a href="src/exception/RepositoryIsNotDefinedException.ts"><code>RepositoryIsNotDefinedException</code></a> <sup>New</sup></td>
             <td>Exception thrown when a repository is not defined.</td>
         </tr>
         <tr>
-            <td><a href="src/exception/ServiceIsNotDefinedException.ts"><code>ServiceIsNotDefinedException</code></a> 🆕</td>
+            <td><a href="src/exception/ServiceIsNotDefinedException.ts"><code>ServiceIsNotDefinedException</code></a> <sup>New</sup></td>
             <td>Exception thrown when a service is not defined.</td>
         </tr>
     </tbody>
@@ -1168,6 +1149,8 @@ Functions for working with file paths and URLs.
 
 ### 5. `abstracts` and `interfaces`
 
+Shared abstract classes and interfaces used as building blocks by other modules in the library.
+
 <details open><summary>Abstracts</summary>
 
 <table>
@@ -1208,37 +1191,33 @@ Functions for working with file paths and URLs.
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute, please:
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete guide. In summary:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Write tests for your changes.
-4. Run `npm run lint` and `npm run format`.
-5. Do not modify `CHANGELOG.md` manually; it's updated automatically.
-6. Submit a pull request.
+1. Fork the repository and create a branch for your feature or bug fix.
+2. Add or update tests to cover your changes.
+3. Run `npm run lint` and `npm run format` before committing.
+4. Do not edit `CHANGELOG.md` by hand — it is generated automatically by [release-please](https://github.com/googleapis/release-please).
+5. Open a pull request describing what changed and why.
 
-Please make sure to follow the existing code style and naming conventions.
+Follow the existing code style and naming conventions. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community
+guidelines.
 
 ## Support
 
-If you encounter any issues or have questions, please:
-
-- Open an [issue](https://github.com/MaksymStoianov/apps-script-utils/issues) on GitHub.
-- Check the [Changelog](CHANGELOG.md) for recent updates.
-- Support the project by giving it a ⭐ on GitHub!
+- For bugs or feature requests, search or open an [issue](https://github.com/MaksymStoianov/apps-script-utils/issues)
+  on GitHub.
+- For recent changes, see the [Changelog](CHANGELOG.md).
+- To report a security vulnerability, follow the [Security Policy](SECURITY.md) instead of opening a public issue.
+- To support ongoing development, see [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
 ## Roadmap
 
-For the project development plan and future features, please see the [ROADMAP](ROADMAP.md) file.
+For the project's development plan and upcoming features, see [ROADMAP.md](ROADMAP.md).
 
 ## Changelog
 
-For a detailed list of changes and updates, please refer to the [CHANGELOG](CHANGELOG.md) file.
+For a detailed list of changes by version, see [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
----
-
-⭐ **Like this project?** [Star our awesome repo »](https://github.com/MaksymStoianov/apps-script-utils)
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
