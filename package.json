@@ -1,6 +1,6 @@
 {
   "name": "apps-script-utils",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Utilities for Google Apps Script™ projects.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -80,19 +80,19 @@
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
     "@types/eslint-plugin-security": "^3.0.1",
-    "@types/google-apps-script": "^2.0.8",
+    "@types/google-apps-script": "^2.0.12",
     "@types/node": "^25.0.9",
-    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/coverage-v8": "^4.1.11",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-googleappsscript": "^1.0.5",
     "eslint-plugin-jsdoc": "^62.8.0",
-    "eslint-plugin-security": "^4.0.0",
+    "eslint-plugin-security": "^4.0.1",
     "husky": "^9.1.7",
     "prettier": "^3.8.0",
     "reflect-metadata": "^0.2.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.53.0",
-    "vitest": "^4.0.17"
+    "vitest": "^4.1.11"
   }
 }

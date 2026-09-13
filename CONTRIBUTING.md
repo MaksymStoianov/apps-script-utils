@@ -17,6 +17,7 @@ Great that you are here and you want to contribute to **apps-script-utils**!
     - [Actual Setup](#actual-setup)
   - [Development Cycle](#development-cycle)
     - [Basic Development Workflow](#basic-development-workflow)
+    - [Commit Message Guidelines](#commit-message-guidelines)
     - [Community PR Guidelines](#community-pr-guidelines)
       - [1. General Requirements](#1-general-requirements)
       - [2. PR Specific Requirements](#2-pr-specific-requirements)
@@ -89,7 +90,64 @@ The project is organized as follows:
    ```bash
    npm run test
    ```
-4. Commit your changes and create a Pull Request.
+4. Commit your changes following the [Commit Message Guidelines](#commit-message-guidelines) and create a Pull Request.
+
+### Commit Message Guidelines
+
+We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification. Structured commit messages allow automated tools like [Release Please](https://github.com/googleapis/release-please-action) to generate changelogs and determine semantic version bumps automatically.
+
+#### Commit Format
+
+```text
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+#### Commit Types
+
+| Type       | Description                                                  | Release Impact  |
+| :--------- | :----------------------------------------------------------- | :-------------- |
+| `feat`     | A new feature                                                | Minor (`0.x.0`) |
+| `fix`      | A bug fix                                                    | Patch (`0.0.x`) |
+| `docs`     | Documentation changes only                                   | None            |
+| `style`    | Formatting, missing semi-colons, whitespace (no code change) | None            |
+| `refactor` | Code restructuring without adding features or fixing bugs    | None            |
+| `perf`     | Performance improvements                                     | Patch / None    |
+| `test`     | Adding or updating tests                                     | None            |
+| `build`    | Changes to build configuration or dependencies               | None            |
+| `ci`       | Changes to CI workflows and scripts                          | None            |
+| `chore`    | Routine tasks, maintenance, or tooling changes               | None            |
+
+#### Scopes
+
+The scope specifies the affected module or package (e.g., `core`, `decorators`, `router`, `service`, `domain`, `pipes`, `validation`, `config`). Scope is optional but encouraged for clarity.
+
+#### Breaking Changes
+
+Breaking changes should be indicated by an exclamation mark `!` before the colon in the header or by a `BREAKING CHANGE:` footer. This triggers a Major version bump (`x.0.0`).
+
+```text
+feat(core)!: drop support for legacy handler format
+```
+
+#### Rules & Best Practices
+
+- **Imperative mood**: Use the imperative, present tense ("add", "fix", "change", not "added", "fixes", "changing").
+- **Case**: Start the description in lowercase.
+- **Punctuation**: Do not end the description with a period (`.`).
+- **Issue references**: Reference relevant issue numbers when applicable (e.g., `(fixes #100)`).
+
+#### Examples
+
+- `feat(decorators): add @SheetController and @DocController`
+- `fix(router): resolve route inheritance issues in controllers (fixes #100)`
+- `docs: update README with new response features`
+- `refactor(core): cleanup enums, types and repository helpers`
+- `test: add unit tests for ResponseBuilder`
+- `chore: update dependencies`
 
 ### Community PR Guidelines
 
