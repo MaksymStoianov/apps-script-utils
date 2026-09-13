@@ -61,6 +61,9 @@
   },
   "license": "Apache-2.0",
   "type": "module",
+  "overrides": {
+    "js-yaml": "^4.3.2"
+  },
   "bugs": {
     "url": "https://github.com/MaksymStoianov/apps-script-utils/issues"
   },
