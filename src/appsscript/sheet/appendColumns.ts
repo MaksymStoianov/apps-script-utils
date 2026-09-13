@@ -3,7 +3,6 @@ import { isConsistent2DArray } from "../../lang";
 import { requireSheet } from "./requireSheet";
 
 export interface Options {
-
   /**
    * Determines whether to insert columns after frozen columns.
    * If `true`, columns will be added immediately to the right of any frozen columns, if they exist.
