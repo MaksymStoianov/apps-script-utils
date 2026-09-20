@@ -21,7 +21,8 @@ export * from "./nonEmptyString";
 export * from "./requireValidEmail";
 // TODO: requireValidLocale
 // TODO: requireValidSlug
-// TODO: requireValidVersion
+export * from "./requireValidVersion";
+
 // TODO: requireVersionCompatible
 
 export * from "./toCamelCase";
