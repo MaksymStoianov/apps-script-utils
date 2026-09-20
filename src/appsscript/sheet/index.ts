@@ -46,7 +46,8 @@ export * from "./requireRange";
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
-// TODO: requireTextStyle
+export * from "./requireTextStyle";
+
 // TODO: requireValidSheetName
 // TODO: requireValidSpreadsheetId
 
