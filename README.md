@@ -919,6 +919,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Safely parses a JSON string, handling potential errors.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/base/requireNumberLike.ts"><code>requireNumberLike</code></a> <sup>New</sup></td>
+            <td><code>Number | String</code></td>
+            <td>Ensures a value is numeric in a broader sense (a number or a numeric string), throwing otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/string/requireNonEmptyString.ts"><code>requireNonEmptyString</code></a></td>
             <td><code>String</code></td>
             <td>Ensures a string is not empty, otherwise throws an exception.</td>
