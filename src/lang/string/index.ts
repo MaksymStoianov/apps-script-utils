@@ -19,7 +19,8 @@ export * from "./requireNonEmptyString";
 export * from "./nonEmptyString";
 
 export * from "./requireValidEmail";
-// TODO: requireValidLocale
+export * from "./requireValidLocale";
+
 // TODO: requireValidSlug
 // TODO: requireValidVersion
 // TODO: requireVersionCompatible
