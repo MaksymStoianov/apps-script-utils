@@ -919,6 +919,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Safely parses a JSON string, handling potential errors.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/base/requireBoolean.ts"><code>requireBoolean</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Ensures a value is a boolean, throwing <code>IllegalArgumentException</code> otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/string/requireNonEmptyString.ts"><code>requireNonEmptyString</code></a></td>
             <td><code>String</code></td>
             <td>Ensures a string is not empty, otherwise throws an exception.</td>
