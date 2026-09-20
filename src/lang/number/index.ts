@@ -8,7 +8,8 @@ export * from "./isInteger";
 
 // TODO: nonDouble
 // TODO: nonFloat
-// TODO: nonInteger
+export * from "./nonInteger";
+
 // TODO: nonSafeInteger
 // TODO: nonNaN
 export * from "./nonNegative";
