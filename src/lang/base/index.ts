@@ -62,7 +62,8 @@ export * from "./nonString";
 // TODO: nonSymbol
 export * from "./nonUndefined";
 
-// TODO: requireArray
+export * from "./requireArray";
+
 // TODO: requireBoolean
 // TODO: requireEmpty
 // TODO: requireException
