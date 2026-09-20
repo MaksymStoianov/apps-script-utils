@@ -15,7 +15,8 @@ export * from "./nonNegative";
 
 // TODO: requireDouble
 // TODO: requireFloat
-// TODO: requireInteger
+export * from "./requireInteger";
+
 // TODO: requireSafeInteger
 // TODO: requireNaN
 
