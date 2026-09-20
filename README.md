@@ -564,6 +564,11 @@ type guards for `Presentation` and `Slide` objects.
             <td><a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a></td>
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/slides/slide"><code>Slide</code></a>, otherwise throws an exception.</td>
         </tr>
+        <tr>
+            <td><a href="src/appsscript/slide/requireValidSlideId.ts"><code>requireValidSlideId</code></a> <sup>New</sup></td>
+            <td><code>String</code></td>
+            <td>Ensures a value is a valid slide identifier, throwing otherwise.</td>
+        </tr>
     </tbody>
 </table>
 
