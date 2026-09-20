@@ -70,7 +70,8 @@ export * from "./nonUndefined";
 // TODO: requireFunctionLike
 // TODO: requireLength
 // TODO: requireNil
-// TODO: requireNull
+export * from "./requireNull";
+
 // TODO: requireNumber
 // TODO: requireNumberLike
 // TODO: requireObject
