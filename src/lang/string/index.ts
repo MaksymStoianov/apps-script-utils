@@ -10,7 +10,8 @@ export * from "./isVersionCompatible";
 
 // TODO: nonValidEmail
 // TODO: nonValidLocale
-// TODO: nonValidSlug
+export * from "./nonValidSlug";
+
 // TODO: nonValidVersion
 // TODO: nonVersionCompatible
 
