@@ -90,6 +90,8 @@ export * from "./requireString";
 // TODO: requireNonLength
 // TODO: requireNonNil
 export * from "./requireNonNull";
+
+export * from "./requireState";
 // TODO: requireNonNumber
 // TODO: requireNonNumberLike
 // TODO: requireNonObject
