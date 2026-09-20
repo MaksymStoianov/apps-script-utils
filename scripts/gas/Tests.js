@@ -125,12 +125,13 @@ Harness.prototype.report = function () {
 /**
  * The report file the run leaves in Drive, overwritten on each run.
  */
-Harness.REPORT_NAME = "apps-script-utils-test-report.txt";
+Harness.REPORT_NAME = "apps-script-utils-test-report";
 
 /**
- * Writes the report to a fixed file in Drive. Execution logs are only
+ * Writes the report to a fixed document in Drive. Execution logs are only
  * reachable through a standard Cloud project, so this is what makes the
- * result readable from outside the editor.
+ * result readable from outside the editor. A document rather than a text
+ * file, because that is what the Drive readers can open.
  */
 Harness.prototype.publish = function (text) {
   try {
@@ -143,15 +144,14 @@ Harness.prototype.publish = function (text) {
       (Session.getEffectiveUser().getEmail() || "unknown") +
       "\n\n";
 
-    var body = header + text + "\n";
-
     var existing = DriveApp.getFilesByName(Harness.REPORT_NAME);
 
-    if (existing.hasNext()) {
-      existing.next().setContent(body);
-    } else {
-      DriveApp.createFile(Harness.REPORT_NAME, body, MimeType.PLAIN_TEXT);
-    }
+    var doc = existing.hasNext()
+      ? DocumentApp.openById(existing.next().getId())
+      : DocumentApp.create(Harness.REPORT_NAME);
+
+    doc.getBody().setText(header + text);
+    doc.saveAndClose();
   } catch (err) {
     console.warn("could not write the report to Drive: " + err);
   }
@@ -613,8 +613,6 @@ function testSessionBound(t) {
 
 // ---------------------------------------------------------------- entry point
 
-// The entry point Apps Script calls; nothing in this file references it.
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function runAllTests() {
   var t = new Harness();
 
@@ -631,4 +629,36 @@ function runAllTests() {
   }
 
   return t.report();
+}
+
+/**
+ * Lets the suite be triggered over HTTP, which is the only way to reach it
+ * without opening the editor. Returns the same report as plain text.
+ */
+// The HTTP entry point Apps Script calls; nothing in this file references it.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function doGet() {
+  var report;
+
+  try {
+    report = runAllTests();
+  } catch (err) {
+    var trace = err && err.stack ? err.stack : "";
+
+    return ContentService.createTextOutput("RUN FAILED: " + err + "\n" + trace).setMimeType(
+      ContentService.MimeType.TEXT
+    );
+  }
+
+  var lines = [];
+
+  for (var i = 0; i < report.results.length; i++) {
+    var r = report.results[i];
+
+    lines.push(r.status.toUpperCase() + "  " + r.name + (r.detail ? "\n        " + r.detail : ""));
+  }
+
+  var body = lines.join("\n") + "\n\n" + report.summary;
+
+  return ContentService.createTextOutput(body).setMimeType(ContentService.MimeType.TEXT);
 }

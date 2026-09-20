@@ -53,9 +53,14 @@ cannot be granted from the command line, which is also why `clasp run` will
 not work until the project is attached to a standard Cloud project with its
 own OAuth client.
 
-Each run writes its report to `apps-script-utils-test-report.txt` in the root
-of your Drive, overwriting the previous one, and logs the same text to the
-execution log.
+Each run writes its report to a document called
+`apps-script-utils-test-report` in the root of your Drive, overwriting the
+previous one, and logs the same text to the execution log. A document rather
+than a text file, because that is what Drive's readers can open.
+
+The manifest also deploys a web app entry point, `doGet`, restricted to the
+owner. Once the script has been authorised, a run can be triggered over HTTP
+instead of from the editor.
 
 ## Reading the result
 
