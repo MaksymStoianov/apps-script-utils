@@ -91,7 +91,8 @@ export * from "./requireString";
 // TODO: requireNonNil
 export * from "./requireNonNull";
 // TODO: requireNonNumber
-// TODO: requireNonNumberLike
+export * from "./requireNonNumberLike";
+
 // TODO: requireNonObject
 // TODO: requireNonObjectLike
 // TODO: requireNonRegExp
