@@ -484,6 +484,11 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a>, otherwise throws an exception.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/requireValidSpreadsheetId.ts"><code>requireValidSpreadsheetId</code></a> <sup>New</sup></td>
+            <td><code>String</code></td>
+            <td>Ensures a value is a valid spreadsheet identifier, throwing otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/sortSheets.ts"><code>sortSheets</code></a></td>
             <td><code>void</code></td>
             <td>Alphabetically sorts all sheets within a spreadsheet.</td>
