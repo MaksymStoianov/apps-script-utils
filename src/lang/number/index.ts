@@ -3,7 +3,9 @@
 export * from "./isCountable";
 
 export * from "./isInteger";
-// TODO: isSafeInteger
+
+export * from "./isSafeInteger";
+
 // TODO: isNaN
 
 // TODO: nonDouble
