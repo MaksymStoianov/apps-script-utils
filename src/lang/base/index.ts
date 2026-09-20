@@ -78,7 +78,8 @@ export * from "./nonUndefined";
 // TODO: requireRegExp
 // TODO: requireScalar
 export * from "./requireString";
-// TODO: requireSymbol
+export * from "./requireSymbol";
+
 // TODO: requireUndefined
 
 // TODO: requireNonArray
