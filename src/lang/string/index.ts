@@ -22,7 +22,7 @@ export * from "./requireValidEmail";
 // TODO: requireValidLocale
 // TODO: requireValidSlug
 // TODO: requireValidVersion
-// TODO: requireVersionCompatible
+export * from "./requireVersionCompatible";
 
 export * from "./toCamelCase";
 
