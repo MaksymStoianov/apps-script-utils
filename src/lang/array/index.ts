@@ -6,7 +6,7 @@ export * from "./isConsistent2DArray";
 // TODO: nonConsistent2DArray
 
 // TODO: require2DArray
-// TODO: requireConsistent2DArray
+export * from "./requireConsistent2DArray";
 
 export * from "./chunk";
 
