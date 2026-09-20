@@ -679,6 +679,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Encodes a string for safe rendering in HTML.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/object/equals.ts"><code>equals</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Compares two values deeply and null-safely; the counterpart of <code>hashCode</code>.</td>
+        </tr>
+        <tr>
             <td><a href="src/html/escapeHtml.ts"><code>escapeHtml</code></a></td>
             <td><code>String</code></td>
             <td>Escapes special characters (<code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, etc.) for HTML.</td>
