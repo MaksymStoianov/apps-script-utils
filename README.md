@@ -444,6 +444,11 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
             <td>Checks if a value is NOT a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/nonValidSheetId.ts"><code>nonValidSheetId</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is <b>not</b> a valid sheet identifier.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/nonSheet.ts"><code>nonSheet</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>.</td>
