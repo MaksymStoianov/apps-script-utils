@@ -6,6 +6,8 @@ export * from "./Exception";
 
 export * from "./RuntimeException";
 
+export * from "./AuthorizationException";
+
 export * from "./EmptyStringException";
 
 export * from "./IllegalArgumentException";

@@ -1065,6 +1065,10 @@ extend a common `Exception` base class for consistent error handling.
             <td>Exception thrown during authentication failures.</td>
         </tr>
         <tr>
+            <td><a href="src/exception/AuthorizationException.ts"><code>AuthorizationException</code></a> <sup>New</sup></td>
+            <td>Exception thrown when the current user is known but is not permitted to perform the action.</td>
+        </tr>
+        <tr>
             <td><a href="src/exception/EmptyStringException.ts"><code>EmptyStringException</code></a></td>
             <td>Exception thrown when a non-empty string is required but an empty one is provided.</td>
         </tr>
