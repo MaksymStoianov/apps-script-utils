@@ -10,6 +10,6 @@ export * from "./isUi";
 
 // TODO: requireHtmlOutput
 // TODO: requireTextOutput
-// TODO: requireUi
+export * from "./requireUi";
 
 export * from "./checkMultipleAccount";
