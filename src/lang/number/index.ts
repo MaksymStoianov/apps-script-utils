@@ -11,6 +11,8 @@ export * from "./isInteger";
 // TODO: nonInteger
 // TODO: nonSafeInteger
 // TODO: nonNaN
+export * from "./isNonNegative";
+
 export * from "./nonNegative";
 
 // TODO: requireDouble

@@ -769,6 +769,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Checks if a value is <code>null</code>.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/isNonNegative.ts"><code>isNonNegative</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a number greater than or equal to zero.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/isNumber.ts"><code>isNumber</code></a></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is a number.</td>
@@ -874,9 +879,9 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Checks if a value is NOT <code>null</code>.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/number/nonNegative.ts"><code>nonNegative</code></a></td>
+            <td><a href="src/lang/number/nonNegative.ts"><code>nonNegative</code></a> <sup>Deprecated</sup></td>
             <td><code>Boolean</code></td>
-            <td>Checks if a value is a non-negative number.</td>
+            <td>Checks if a value is a non-negative number. Use <code>isNonNegative</code> instead.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/nonNumber.ts"><code>nonNumber</code></a></td>
