@@ -864,6 +864,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Checks if a value is NOT a <code>Function</code>.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/array/nonConsistent2DArray.ts"><code>nonConsistent2DArray</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a 2D array does <b>not</b> have uniform inner array lengths.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/nonNil.ts"><code>nonNil</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT <code>null</code> or <code>undefined</code>.</td>
