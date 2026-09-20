@@ -73,7 +73,8 @@ export * from "./nonUndefined";
 // TODO: requireNull
 // TODO: requireNumber
 // TODO: requireNumberLike
-// TODO: requireObject
+export * from "./requireObject";
+
 // TODO: requireObjectLike
 // TODO: requireRegExp
 // TODO: requireScalar
