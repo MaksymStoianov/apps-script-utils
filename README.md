@@ -469,6 +469,11 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
             <td>Inserts multiple rows of data at the top of the data area.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/requireCellGridRange.ts"><code>requireCellGridRange</code></a> <sup>New</sup></td>
+            <td><code>GridRange</code></td>
+            <td>Ensures a grid range denotes exactly one cell, throwing otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/requireRange.ts"><code>requireRange</code></a></td>
             <td><a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a></td>
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>, otherwise throws an exception.</td>
