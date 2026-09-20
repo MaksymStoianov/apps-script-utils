@@ -631,6 +631,11 @@ repositories and services used in web apps.
             <td>Validates if a value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a> object.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/ui/requireHtmlOutput.ts"><code>requireHtmlOutput</code></a> <sup>New</sup></td>
+            <td><code>HtmlOutput</code></td>
+            <td>Ensures a value is an <code>HtmlOutput</code> object, throwing otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/requireRepository.ts"><code>requireRepository</code></a> <sup>New</sup></td>
             <td><code>T</code></td>
             <td>Ensures that a repository is defined.</td>

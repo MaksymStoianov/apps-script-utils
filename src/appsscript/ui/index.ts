@@ -8,7 +8,8 @@ export * from "./isUi";
 // TODO: nonTextOutput
 // TODO: nonUi
 
-// TODO: requireHtmlOutput
+export * from "./requireHtmlOutput";
+
 // TODO: requireTextOutput
 // TODO: requireUi
 
