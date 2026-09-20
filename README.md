@@ -919,6 +919,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Safely parses a JSON string, handling potential errors.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/base/requireUndefined.ts"><code>requireUndefined</code></a> <sup>New</sup></td>
+            <td><code>Undefined</code></td>
+            <td>Ensures a value is <code>undefined</code>, throwing <code>IllegalArgumentException</code> otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/string/requireNonEmptyString.ts"><code>requireNonEmptyString</code></a></td>
             <td><code>String</code></td>
             <td>Ensures a string is not empty, otherwise throws an exception.</td>
