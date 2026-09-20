@@ -87,7 +87,8 @@ export * from "./requireString";
 // TODO: requireNonException
 // TODO: requireNonFunction
 // TODO: requireNonFunctionLike
-// TODO: requireNonLength
+export * from "./requireNonLength";
+
 // TODO: requireNonNil
 export * from "./requireNonNull";
 // TODO: requireNonNumber
