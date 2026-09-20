@@ -38,7 +38,8 @@ export * from "./nonSheet";
 // TODO: nonValidSpreadsheetId
 
 // TODO: requireCellGridRange
-// TODO: requireGridRangeContainedIn
+export * from "./requireGridRangeContainedIn";
+
 // TODO: requireGridRangeSameDimensions
 export * from "./requireRange";
 
