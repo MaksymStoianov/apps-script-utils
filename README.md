@@ -1073,6 +1073,10 @@ extend a common `Exception` base class for consistent error handling.
             <td>Exception thrown when an invalid or inappropriate argument is passed to a method.</td>
         </tr>
         <tr>
+            <td><a href="src/exception/IllegalStateException.ts"><code>IllegalStateException</code></a> <sup>New</sup></td>
+            <td>Exception thrown when a method is invoked at an illegal or inappropriate time.</td>
+        </tr>
+        <tr>
             <td><a href="src/exception/InvalidEmailFormatException.ts"><code>InvalidEmailFormatException</code></a></td>
             <td>Exception thrown when an email address does not follow the expected format.</td>
         </tr>
