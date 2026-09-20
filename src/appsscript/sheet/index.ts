@@ -39,7 +39,8 @@ export * from "./nonSheet";
 
 // TODO: requireCellGridRange
 // TODO: requireGridRangeContainedIn
-// TODO: requireGridRangeSameDimensions
+export * from "./requireGridRangeSameDimensions";
+
 export * from "./requireRange";
 
 // TODO: requireRichTextValue
