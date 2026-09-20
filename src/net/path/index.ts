@@ -4,6 +4,8 @@ export * from "./isAbsolute";
 
 export * from "./isRelative";
 
+export * from "./requireRelative";
+
 export * from "./isValidDomain";
 
 export * from "./join";
