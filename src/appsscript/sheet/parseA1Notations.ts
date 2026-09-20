@@ -1,5 +1,5 @@
 import { IllegalArgumentException } from "../../exception";
-import { isObject, requireNonEmptyString } from "../../lang";
+import { isObject, isString, requireNonEmptyString } from "../../lang";
 import { parseA1Notation } from "./parseA1Notation";
 import { GridRange } from "./types";
 
@@ -28,11 +28,15 @@ export interface A1NotationParseOptions {
  * Parses a comma-separated string of A1 notations into an array of {@link GridRange} objects.
  * Validates the format and sheet name requirements based on the provided options.
  *
+ * An empty or whitespace-only string yields an empty array: no ranges is a
+ * valid list of ranges, not malformed input. Anything that is not a string is
+ * still rejected.
+ *
  * @param       {string} value - The input string to be parsed.
  * @param       {A1NotationParseOptions} options - An object with options for parsing.
  * @returns     {GridRange[]} An array of {@link GridRange} objects.
  * @throws      {IllegalArgumentException} If the `value` is not a string.
- * @throws      {EmptyStringException} If the `value` is an empty string.
+ * @throws      {EmptyStringException} If the `value` is not a string.
  * @throws      {SyntaxError} If one of the A1 notations is invalid.
  * @throws      {Error} If `validationError` occurs (default: "One or more values are not valid ranges.").
  * @throws      {Error} If `missingSheetNameError` occurs (default: "Missing sheet name in \"%s\". Ranges must include a sheet name.").
@@ -44,7 +48,7 @@ export interface A1NotationParseOptions {
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @since       1.6.0
- * @version     1.0.1
+ * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
@@ -60,6 +64,10 @@ export function parseA1Notations(value: string, options: A1NotationParseOptions 
     missingSheetNameError = 'Missing sheet name in "%s". Ranges must include a sheet name.',
     unexpectedSheetNameError = 'Sheet names are not allowed. Found a sheet name in "%s".'
   } = options;
+
+  if (isString(value) && value.trim() === "") {
+    return [];
+  }
 
   const trimmedInput = requireNonEmptyString(value).trim();
 
