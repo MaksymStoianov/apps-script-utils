@@ -929,6 +929,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Ensures a value is not <code>null</code>, otherwise throws an exception.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/base/requireNonNil.ts"><code>requireNonNil</code></a> <sup>New</sup></td>
+            <td><code>Any</code></td>
+            <td>Ensures a value is neither <code>null</code> nor <code>undefined</code>, throwing <code>IllegalArgumentException</code>.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/requireString.ts"><code>requireString</code></a></td>
             <td><code>String</code></td>
             <td>Ensures a value is a string, otherwise throws an exception.</td>
