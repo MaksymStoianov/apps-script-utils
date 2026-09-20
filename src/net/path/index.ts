@@ -2,6 +2,8 @@ export * from "./types";
 
 export * from "./isAbsolute";
 
+export * from "./requireAbsolute";
+
 export * from "./isRelative";
 
 export * from "./isValidDomain";
