@@ -939,6 +939,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Ensures a string is a valid email, otherwise throws an exception.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/function/retry.ts"><code>retry</code></a> <sup>New</sup></td>
+            <td><code>T</code></td>
+            <td>Calls a function until it succeeds, waiting longer between each failure.</td>
+        </tr>
+        <tr>
             <td><a href="src/json/stringifyJson.ts"><code>stringifyJson</code></a></td>
             <td><code>String</code></td>
             <td>Safely converts an object to a JSON string.</td>
