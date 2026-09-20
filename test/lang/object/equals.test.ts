@@ -102,6 +102,7 @@ describe("equals", () => {
 
     it("should terminate on a structure that refers to itself", () => {
       const a: Record<string, unknown> = { name: "a" };
+
       const b: Record<string, unknown> = { name: "a" };
 
       a.self = a;
@@ -110,6 +111,7 @@ describe("equals", () => {
       expect(equals(a, b)).toBe(true);
 
       const c: unknown[] = [1];
+
       const d: unknown[] = [1];
 
       c.push(c);

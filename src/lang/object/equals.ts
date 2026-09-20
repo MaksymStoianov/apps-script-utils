@@ -59,7 +59,11 @@ function deepEquals(a: unknown, b: unknown, seen: Pair[]): boolean {
     return true;
   }
 
-  if (isNil(a) || isNil(b) || typeof a !== typeof b || typeof a !== "object") {
+  if (isNil(a) || isNil(b)) {
+    return false;
+  }
+
+  if (typeof a !== typeof b || typeof a !== "object") {
     return false;
   }
 
@@ -158,7 +162,7 @@ function compareIndexed(
   }
 
   for (let i = 0; i < left.length; i++) {
-    if (!deepEquals(left[i], right[i], seen)) {
+    if (!deepEquals(Reflect.get(left, i), Reflect.get(right, i), seen)) {
       return false;
     }
   }
@@ -224,10 +228,11 @@ function compareRecords(
   }
 
   for (const key of keys) {
-    if (
-      !Object.prototype.hasOwnProperty.call(right, key) ||
-      !deepEquals(left[key], right[key], seen)
-    ) {
+    if (!Object.prototype.hasOwnProperty.call(right, key)) {
+      return false;
+    }
+
+    if (!deepEquals(Reflect.get(left, key), Reflect.get(right, key), seen)) {
       return false;
     }
   }
