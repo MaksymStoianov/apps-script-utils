@@ -449,6 +449,11 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
             <td>Checks if a value is NOT a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/nonValidSheetName.ts"><code>nonValidSheetName</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is <b>not</b> a valid sheet name.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/parseA1Notation.ts"><code>parseA1Notation</code></a> <sup>New</sup></td>
             <td><a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a></td>
             <td>Parses an A1 notation string into a structured <a href="src/appsscript/sheet/types/GridRange.ts"><code>GridRange</code></a> object.</td>
