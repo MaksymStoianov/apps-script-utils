@@ -42,7 +42,8 @@ export * from "./nonSheet";
 // TODO: requireGridRangeSameDimensions
 export * from "./requireRange";
 
-// TODO: requireRichTextValue
+export * from "./requireRichTextValue";
+
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";

@@ -474,6 +474,11 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>, otherwise throws an exception.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/requireRichTextValue.ts"><code>requireRichTextValue</code></a> <sup>New</sup></td>
+            <td><code>RichTextValue</code></td>
+            <td>Ensures a value is a <code>RichTextValue</code> object, throwing otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/requireSheet.ts"><code>requireSheet</code></a></td>
             <td><a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a></td>
             <td>Ensures a value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>, otherwise throws an exception.</td>
