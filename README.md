@@ -924,6 +924,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Ensures a string is not empty, otherwise throws an exception.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/array/requireNoNilElements.ts"><code>requireNoNilElements</code></a> <sup>New</sup></td>
+            <td><code>Array</code></td>
+            <td>Throws <code>IllegalArgumentException</code> if an array, <code>Set</code> or <code>Map</code> holds a <code>null</code> or <code>undefined</code> element.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/requireNonNull.ts"><code>requireNonNull</code></a></td>
             <td><code>any</code></td>
             <td>Ensures a value is not <code>null</code>, otherwise throws an exception.</td>
