@@ -914,6 +914,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Enum representing <code>Object#toString</code> result references in uppercase.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/object/objectToString.ts"><code>objectToString</code></a></td>
+            <td><code>String</code></td>
+            <td>Converts a value to its <code>Object#toString</code> tag, e.g. <code>[object Array]</code>.</td>
+        </tr>
+        <tr>
             <td><a href="src/json/parseJson.ts"><code>parseJson</code></a> <sup>Deprecated</sup></td>
             <td><code>Object</code></td>
             <td>Safely parses a JSON string, handling potential errors.</td>
@@ -972,11 +977,6 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td><a href="src/lang/string/toSnakeCase.ts"><code>toSnakeCase</code></a></td>
             <td><code>String</code></td>
             <td>Converts a string to <code>snake_case</code>.</td>
-        </tr>
-        <tr>
-            <td><a href="src/lang/object/objectToString.ts"><code>toString</code></a></td>
-            <td><code>String</code></td>
-            <td>Converts any value to its string representation.</td>
         </tr>
         <tr>
             <td><a href="src/lang/string/toUpperCase.ts"><code>toUpperCase</code></a></td>
