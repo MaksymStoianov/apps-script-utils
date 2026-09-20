@@ -929,6 +929,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Ensures a value is not <code>null</code>, otherwise throws an exception.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/array/require2DArray.ts"><code>require2DArray</code></a> <sup>New</sup></td>
+            <td><code>Array</code></td>
+            <td>Ensures a value is a non-empty two-dimensional array, throwing otherwise.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/requireString.ts"><code>requireString</code></a></td>
             <td><code>String</code></td>
             <td>Ensures a value is a string, otherwise throws an exception.</td>
