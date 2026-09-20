@@ -54,7 +54,8 @@ export * from "./nonNumber";
 // TODO: nonNumberLike
 // TODO: nonObject
 // TODO: nonObjectLike
-// TODO: nonRegExp
+export * from "./nonRegExp";
+
 export * from "./nonScalar";
 
 export * from "./nonString";
