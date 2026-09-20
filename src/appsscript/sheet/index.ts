@@ -26,7 +26,8 @@ export * from "./isValidSheetName";
 export * from "./isValidSpreadsheetId";
 
 // TODO: nonCellGridRange
-// TODO: nonGridRangeContainedIn
+export * from "./nonGridRangeContainedIn";
+
 // TODO: nonGridRangeSameDimensions
 export * from "./nonRange";
 
