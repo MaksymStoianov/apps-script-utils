@@ -439,6 +439,11 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
             <td>Validates the format of a Google Spreadsheet ID.</td>
         </tr>
         <tr>
+            <td><a href="src/appsscript/sheet/nonCellGridRange.ts"><code>nonCellGridRange</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a grid range does <b>not</b> denote exactly one cell.</td>
+        </tr>
+        <tr>
             <td><a href="src/appsscript/sheet/nonRange.ts"><code>nonRange</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>.</td>
