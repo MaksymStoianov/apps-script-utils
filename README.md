@@ -275,6 +275,11 @@ Helpers for the [Admin SDK Directory Service](https://developers.google.cn/apps-
             <td><code>Boolean</code></td>
             <td>Checks if the current user is an administrator of the Google Workspace domain.</td>
         </tr>
+        <tr>
+            <td><a href="src/appsscript/admin/requireAdmin.ts"><code>requireAdmin</code></a> <sup>New</sup></td>
+            <td><code>void</code></td>
+            <td>Ensures the current user is a domain administrator, throwing otherwise.</td>
+        </tr>
     </tbody>
 </table>
 
