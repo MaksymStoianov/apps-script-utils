@@ -40,7 +40,8 @@ export * from "./nonBoolean";
 
 export * from "./nonEmpty";
 
-// TODO: nonException
+export * from "./nonException";
+
 export * from "./nonFunction";
 
 // TODO: nonFunctionLike
