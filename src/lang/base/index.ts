@@ -95,7 +95,8 @@ export * from "./requireNonNull";
 // TODO: requireNonObject
 // TODO: requireNonObjectLike
 // TODO: requireNonRegExp
-// TODO: requireNonScalar
+export * from "./requireNonScalar";
+
 // TODO: requireNonString
 // TODO: requireNonSymbol
 // TODO: requireNonUndefined
