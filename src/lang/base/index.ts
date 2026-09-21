@@ -83,9 +83,9 @@ export * from "./requireNumber";
 export * from "./requireObject";
 
 // TODO: requireObjectLike
-// TODO: requireRegExp
-export * from "./requireScalar";
+export * from "./requireRegExp";
 
+// TODO: requireScalar
 export * from "./requireString";
 export * from "./requireSymbol";
 
