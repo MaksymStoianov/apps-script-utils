@@ -964,9 +964,9 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Ensures a value is not <code>null</code>, otherwise throws an exception.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/base/requireNonRegExp.ts"><code>requireNonRegExp</code></a> <sup>New</sup></td>
+            <td><a href="src/lang/base/requireNonScalar.ts"><code>requireNonScalar</code></a> <sup>New</sup></td>
             <td><code>Any</code></td>
-            <td>Ensures a value is <b>not</b> a regular expression, throwing <code>IllegalArgumentException</code> otherwise.</td>
+            <td>Ensures a value is <b>not</b> a scalar primitive, throwing <code>IllegalArgumentException</code> otherwise.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/requireString.ts"><code>requireString</code></a></td>

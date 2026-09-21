@@ -105,10 +105,9 @@ export * from "./requireNonNumber";
 export * from "./requireNonObject";
 
 // TODO: requireNonObjectLike
-export * from "./requireNonRegExp";
+// TODO: requireNonRegExp
+export * from "./requireNonScalar";
 
-// TODO: requireNonScalar
-export * from "./requireNonString";
-
+// TODO: requireNonString
 // TODO: requireNonSymbol
 // TODO: requireNonUndefined
