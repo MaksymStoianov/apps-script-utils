@@ -97,11 +97,10 @@ export * from "./requireNonBoolean";
 // TODO: requireNonEmpty
 // TODO: requireNonException
 // TODO: requireNonFunction
-export * from "./requireNonFunctionLike";
+// TODO: requireNonFunctionLike
+export * from "./requireNonLength";
 
-// TODO: requireNonLength
-export * from "./requireNonNil";
-
+// TODO: requireNonNil
 export * from "./requireNonNull";
 
 export * from "./requireState";
