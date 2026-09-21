@@ -73,9 +73,9 @@ export * from "./requireBoolean";
 export * from "./requireException";
 
 // TODO: requireFunction
-export * from "./requireFunctionLike";
+// TODO: requireFunctionLike
+export * from "./requireLength";
 
-// TODO: requireLength
 // TODO: requireNil
 // TODO: requireNull
 // TODO: requireNumber
