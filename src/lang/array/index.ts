@@ -3,12 +3,16 @@ export * from "./is2DArray";
 export * from "./isConsistent2DArray";
 
 // TODO: non2DArray
-// TODO: nonConsistent2DArray
+export * from "./nonConsistent2DArray";
+
+export * from "./require2DArray";
 
 // TODO: require2DArray
 export * from "./requireConsistent2DArray";
 
 export * from "./chunk";
+
+export * from "./requireNoNilElements";
 
 export * from "./transpose";
 // TODO: unique(arr: Array)
