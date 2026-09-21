@@ -89,7 +89,8 @@ export * from "./requireString";
 // TODO: requireSymbol
 export * from "./requireUndefined";
 
-// TODO: requireNonArray
+export * from "./requireNonArray";
+
 // TODO: requireNonBoolean
 // TODO: requireNonEmpty
 // TODO: requireNonException
