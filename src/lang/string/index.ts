@@ -13,7 +13,7 @@ export * from "./nonValidLocale";
 
 // TODO: nonValidSlug
 // TODO: nonValidVersion
-// TODO: nonVersionCompatible
+export * from "./nonVersionCompatible";
 
 export * from "./requireNonEmptyString";
 
