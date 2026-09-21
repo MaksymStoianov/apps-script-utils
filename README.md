@@ -809,9 +809,9 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is a symbol.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> <sup>New</sup></td>
+            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> <sup>Deprecated</sup></td>
             <td><code>String</code></td>
-            <td>Validates that the given value is a non-empty string.</td>
+            <td>Validates that the given value is a non-empty string. Use <code>requireNonEmptyString</code> instead.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/isUndefined.ts"><code>isUndefined</code></a></td>
