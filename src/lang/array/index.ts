@@ -10,6 +10,8 @@ export * from "./isConsistent2DArray";
 
 export * from "./chunk";
 
+export * from "./requireNoNilElements";
+
 export * from "./transpose";
 // TODO: unique(arr: Array)
 // TODO: first(arr: Array)
