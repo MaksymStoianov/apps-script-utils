@@ -759,6 +759,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is a valid array-like length.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/isNaN.ts"><code>isNaN</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is the <code>NaN</code> number, without the coercion the global <code>isNaN</code> performs.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/isNil.ts"><code>isNil</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is <code>null</code> or <code>undefined</code>.</td>
