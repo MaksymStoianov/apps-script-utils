@@ -5,9 +5,8 @@ export * from "./isTextOutput";
 export * from "./isUi";
 
 // TODO: nonHtmlOutput
-export * from "./nonTextOutput";
-
-// TODO: nonUi
+// TODO: nonTextOutput
+export * from "./nonUi";
 
 // TODO: requireHtmlOutput
 // TODO: requireTextOutput
