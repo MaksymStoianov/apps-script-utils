@@ -78,11 +78,10 @@ export * from "./requireFunctionLike";
 // TODO: requireLength
 // TODO: requireNil
 // TODO: requireNull
-export * from "./requireNumber";
+// TODO: requireNumber
+export * from "./requireNumberLike";
 
-// TODO: requireNumberLike
-export * from "./requireObject";
-
+// TODO: requireObject
 // TODO: requireObjectLike
 export * from "./requireRegExp";
 
