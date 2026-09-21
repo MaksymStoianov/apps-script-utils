@@ -949,9 +949,9 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Safely parses a JSON string, handling potential errors.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/base/requireFunction.ts"><code>requireFunction</code></a> <sup>New</sup></td>
-            <td><code>Function</code></td>
-            <td>Ensures a value is a function, throwing <code>IllegalArgumentException</code> otherwise.</td>
+            <td><a href="src/lang/base/requireScalar.ts"><code>requireScalar</code></a> <sup>New</sup></td>
+            <td><code>Scalar</code></td>
+            <td>Ensures a value is a scalar primitive, throwing <code>IllegalArgumentException</code> otherwise.</td>
         </tr>
         <tr>
             <td><a href="src/lang/string/requireNonEmptyString.ts"><code>requireNonEmptyString</code></a></td>
