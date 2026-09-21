@@ -40,11 +40,13 @@ export * from "./nonBoolean";
 
 export * from "./nonEmpty";
 
-// TODO: nonException
+export * from "./nonException";
+
 export * from "./nonFunction";
 
 // TODO: nonFunctionLike
-// TODO: nonLength
+export * from "./nonLength";
+
 export * from "./nonNil";
 
 export * from "./nonNull";
@@ -60,7 +62,8 @@ export * from "./nonScalar";
 
 export * from "./nonString";
 
-// TODO: nonSymbol
+export * from "./nonSymbol";
+
 export * from "./nonUndefined";
 
 // TODO: requireArray
