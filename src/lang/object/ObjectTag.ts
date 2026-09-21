@@ -10,6 +10,7 @@ export enum ObjectTag {
   ARGUMENTS = "[object Arguments]",
   ARRAY = "[object Array]",
   ASYNC_FUNCTION = "[object AsyncFunction]",
+  ASYNC_GENERATOR_FUNCTION = "[object AsyncGeneratorFunction]",
   BOOLEAN = "[object Boolean]",
   DATE = "[object Date]",
   DOM_EXCEPTION = "[object DOMException]",
