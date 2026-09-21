@@ -9,7 +9,7 @@ import { isNil } from "./isNil";
  * @see     {@link nonFunction}
  * @see     {@link isFunctionLike}
  * @since   1.0.0
- * @version 1.1.0
+ * @version 1.2.0
  */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function isFunction(value: unknown): value is Function {
@@ -23,6 +23,6 @@ export function isFunction(value: unknown): value is Function {
     ObjectTag.FUNCTION,
     ObjectTag.GENERATOR_FUNCTION,
     ObjectTag.ASYNC_FUNCTION,
-    ObjectTag.PROXY
+    ObjectTag.ASYNC_GENERATOR_FUNCTION
   ].includes(tag);
 }
