@@ -2,9 +2,8 @@ export * from "./is2DArray";
 
 export * from "./isConsistent2DArray";
 
-export * from "./non2DArray";
-
-// TODO: nonConsistent2DArray
+// TODO: non2DArray
+export * from "./nonConsistent2DArray";
 
 export * from "./require2DArray";
 
