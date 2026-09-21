@@ -1,4 +1,3 @@
-import { InvalidGridRangeException } from "../../exception";
 import { isObject } from "../../lang";
 import type { GridRange } from "./types";
 
@@ -10,7 +9,6 @@ import type { GridRange } from "./types";
  * @param       {GridRange} containerGridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range).
  * @returns     {boolean} `true` if `gridRange` is fully contained within `containerGridRange` and they are on the same sheet;
  * `false` otherwise.
- * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
@@ -22,8 +20,8 @@ export function isGridRangeContainedIn(
   gridRange: GridRange,
   containerGridRange: GridRange
 ): boolean {
-  if (!isObject(gridRange)) {
-    throw new InvalidGridRangeException();
+  if (!isObject(gridRange) || !isObject(containerGridRange)) {
+    return false;
   }
 
   const sheetIdsMatch =
