@@ -6,13 +6,13 @@ import { requireNonEmptyString } from "../../lang";
  *
  * @example
  * ```javascript
- * getColumnIndexByLetter("A");   // Returns: 1
- * getColumnIndexByLetter("AA");  // Returns: 27
- * getColumnIndexByLetter("AZ");  // Returns: 52
+ * getColumnIndexByLetter("A");   // Returns: 0
+ * getColumnIndexByLetter("AA");  // Returns: 26
+ * getColumnIndexByLetter("AZ");  // Returns: 51
  * ```
  *
  * @param       {string} letter - The column label (e.g., `'A'`, `'B'`, ..., `'AA'`).
- * @returns     {number | null} The corresponding column index.
+ * @returns     {number | null} The corresponding zero-based column index.
  * @throws      {@link IllegalArgumentException}
  * @see         {@link getColumnLetterByIndex}
  * @see         {@link getColumnPositionByLetter}
