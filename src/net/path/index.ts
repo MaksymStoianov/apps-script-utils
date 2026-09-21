@@ -2,11 +2,15 @@ export * from "./types";
 
 export * from "./isAbsolute";
 
+export * from "./requireAbsolute";
+
 export * from "./isRelative";
 
 export * from "./requireRelative";
 
 export * from "./isValidDomain";
+
+export * from "./requireValidDomain";
 
 export * from "./join";
 
