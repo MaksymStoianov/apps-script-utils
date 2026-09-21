@@ -1,10 +1,11 @@
 // TODO: isDouble
-// TODO: isFloat
+export * from "./isFloat";
+
 export * from "./isCountable";
 
 export * from "./isInteger";
 // TODO: isSafeInteger
-// TODO: isNaN
+export * from "./isNaN";
 
 // TODO: nonDouble
 // TODO: nonFloat

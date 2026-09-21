@@ -739,6 +739,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is an instance of <code>Exception</code> or a derived class.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/isFloat.ts"><code>isFloat</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a finite number carrying a fractional part.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/isFunction.ts"><code>isFunction</code></a></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is a function.</td>
@@ -757,6 +762,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td><a href="src/lang/base/isLength.ts"><code>isLength</code></a></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is a valid array-like length.</td>
+        </tr>
+        <tr>
+            <td><a href="src/lang/number/isNaN.ts"><code>isNaN</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is the <code>NaN</code> number, without the coercion the global <code>isNaN</code> performs.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/isNil.ts"><code>isNil</code></a></td>
@@ -794,6 +804,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is a regular expression.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/isSafeInteger.ts"><code>isSafeInteger</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a number and a safe integer (exactly representable as an IEEE-754 double).</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/isScalar.ts"><code>isScalar</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is a primitive scalar type (string, number, boolean, symbol, bigint).</td>
@@ -809,9 +824,9 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is a symbol.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> <sup>New</sup></td>
+            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> <sup>Deprecated</sup></td>
             <td><code>String</code></td>
-            <td>Validates that the given value is a non-empty string.</td>
+            <td>Validates that the given value is a non-empty string. Use <code>requireNonEmptyString</code> instead.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/isUndefined.ts"><code>isUndefined</code></a></td>
@@ -859,6 +874,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Checks if a value is NOT empty.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/base/nonException.ts"><code>nonException</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a value is <b>not</b> an instance of <code>Exception</code> or a derived class.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/nonFunction.ts"><code>nonFunction</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT a <code>Function</code>.</td>
@@ -887,6 +907,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td><a href="src/lang/base/nonNumber.ts"><code>nonNumber</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT a number.</td>
+        </tr>
+        <tr>
+            <td><a href="src/lang/base/nonRegExp.ts"><code>nonRegExp</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a value is <b>not</b> a regular expression.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/nonScalar.ts"><code>nonScalar</code></a></td>
