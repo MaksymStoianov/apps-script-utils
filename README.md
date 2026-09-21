@@ -739,6 +739,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is an instance of <code>Exception</code> or a derived class.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/isFloat.ts"><code>isFloat</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a finite number carrying a fractional part.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/isFunction.ts"><code>isFunction</code></a></td>
             <td><code>Boolean</code></td>
             <td>Validates if a value is a function.</td>

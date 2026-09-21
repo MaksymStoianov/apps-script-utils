@@ -1,5 +1,6 @@
 // TODO: isDouble
-// TODO: isFloat
+export * from "./isFloat";
+
 export * from "./isCountable";
 
 export * from "./isInteger";
