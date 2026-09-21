@@ -14,6 +14,8 @@ export * from "./nonCountable";
 
 // TODO: nonSafeInteger
 // TODO: nonNaN
+export * from "./isNonNegative";
+
 export * from "./nonNegative";
 
 // TODO: requireDouble
