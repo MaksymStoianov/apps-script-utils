@@ -79,7 +79,8 @@ export * from "./requireBoolean";
 export * from "./requireNumber";
 
 // TODO: requireNumberLike
-// TODO: requireObject
+export * from "./requireObject";
+
 // TODO: requireObjectLike
 // TODO: requireRegExp
 // TODO: requireScalar
