@@ -8,9 +8,9 @@ export * from "./isValidVersion";
 
 export * from "./isVersionCompatible";
 
-export * from "./nonValidEmail";
+// TODO: nonValidEmail
+export * from "./nonValidLocale";
 
-// TODO: nonValidLocale
 // TODO: nonValidSlug
 // TODO: nonValidVersion
 export * from "./nonVersionCompatible";
