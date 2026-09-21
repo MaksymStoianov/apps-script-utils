@@ -70,9 +70,9 @@ export * from "./nonUndefined";
 export * from "./requireBoolean";
 
 // TODO: requireEmpty
-// TODO: requireException
-export * from "./requireFunction";
+export * from "./requireException";
 
+// TODO: requireFunction
 // TODO: requireFunctionLike
 // TODO: requireLength
 // TODO: requireNil
