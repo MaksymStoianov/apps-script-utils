@@ -38,7 +38,7 @@ to [stoianov.maksym@gmail.com](mailto:stoianov.maksym@gmail.com).
 The project is organized as follows:
 
 - [**`config/`**](config/) — Configuration files for build tools and environment.
-- [**`docs/`**](docs/) — Documentation and assets.
+- [**`docs/`**](docs/) — Documentation: shared assets, and the Writerside source of the documentation site under [`docs/writerside/`](docs/writerside/).
 - [**`scripts/`**](scripts/) — Utility scripts for maintenance and development.
 - [**`src/`**](src/) — Source code of the library. Organized into logical modules like `appsscript/`, `lang/`, `net/`, etc.
 - [**`test/`**](test/) — Test suites mirroring the `src` structure.
