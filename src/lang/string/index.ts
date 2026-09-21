@@ -8,7 +8,8 @@ export * from "./isValidVersion";
 
 export * from "./isVersionCompatible";
 
-// TODO: nonValidEmail
+export * from "./nonValidEmail";
+
 // TODO: nonValidLocale
 // TODO: nonValidSlug
 // TODO: nonValidVersion
