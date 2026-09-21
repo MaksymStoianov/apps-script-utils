@@ -6,6 +6,8 @@ export * from "./nonAbsolute";
 
 export * from "./isRelative";
 
+export * from "./nonRelative";
+
 export * from "./isValidDomain";
 
 export * from "./requireValidDomain";
