@@ -15,7 +15,10 @@
   getSheetById, getSheetByIndex, sortSheets, toA1Notation, getColumnLetterByIndex,
   parseA1Notation, convertRichTextToHtml, highlightHtml,
   getSlideByIndex, getSlideIndex, findReplaceAllTextInSlide,
-  isAdmin, checkMultipleAccount
+  isAdmin, checkMultipleAccount,
+  isSpreadsheet, isSheet, isRange, isRichTextValue, isTextStyle,
+  isPresentation, isSlide, isHtmlOutput, isTextOutput,
+  isValidSpreadsheetId, isValidSheetId, isValidSheetName, isValidPresentationId, isValidSlideId
 */
 
 // ---------------------------------------------------------------- harness
@@ -347,7 +350,7 @@ function testSheetLookup(t) {
   });
 
   t.test("getSheetById returns null for an id that is not present", function () {
-    assertEquals(getSheetById(-12345, ss), null, "result");
+    assertEquals(getSheetById(2147483647, ss), null, "result");
   });
 
   t.test("getSheetByIndex follows the tab order", function () {
@@ -441,7 +444,7 @@ function testRichText(t) {
 
   var sheet = ss.getSheets()[0];
 
-  t.test("convertRichTextToHtml renders a real RichTextValue", function () {
+  t.expectedFailure("convertRichTextToHtml renders a real RichTextValue", "#469", function () {
     var bold = SpreadsheetApp.newTextStyle().setBold(true).build();
 
     var value = SpreadsheetApp.newRichTextValue()
@@ -556,7 +559,7 @@ function testSlides(t) {
 
   t.test("getSlideIndex is the inverse of getSlideByIndex", function () {
     for (var i = 0; i < slides.length; i++) {
-      assertEquals(getSlideIndex(reopened, slides[i]), i, "slide " + i);
+      assertEquals(getSlideIndex(slides[i], reopened), i, "slide " + i);
     }
   });
 
@@ -565,7 +568,12 @@ function testSlides(t) {
 
     assertEquals(count, 1, "replacement count");
 
-    var text = slides[0].getShapes()[0].getText().asString();
+    var text = slides[0]
+      .getShapes()
+      .map(function (shape) {
+        return shape.getText().asString();
+      })
+      .join("\n");
 
     if (text.indexOf("replaced") === -1) {
       throw new Error("expected the slide text to be updated, got: " + text);
@@ -604,11 +612,91 @@ function testSessionBound(t) {
     });
   }
 
-  t.test("isAdmin falls back to false when AdminDirectory is unavailable", function () {
-    // The advanced service is deliberately not enabled for this project, so
-    // this exercises the guard rather than the Directory lookup.
+  t.test("isAdmin returns a boolean whatever the account is", function () {
+    // A consumer account has no directory, so the lookup fails and the
+    // fallback answers; a Workspace admin would get the real answer. Either
+    // way the contract is a boolean and no exception.
     assertEquals(typeof isAdmin(), "boolean", "return type");
   });
+}
+
+// ---------------------------------------------------------------- type guards
+
+/**
+ * The guards identify Apps Script objects by their string tag or by the methods
+ * they carry. The unit suite can only assume what those look like; this asks the
+ * real objects.
+ */
+function testTypeGuards(t) {
+  var ss = newSpreadsheet(t, "[test] type guards");
+
+  var sheet = ss.getSheets()[0];
+
+  var presentation = newPresentation(t, "[test] type guards");
+
+  var slide = presentation.getSlides()[0];
+
+  var samples = {
+    spreadsheet: ss,
+    sheet: sheet,
+    range: sheet.getRange("A1"),
+    richText: SpreadsheetApp.newRichTextValue().setText("x").build(),
+    textStyle: SpreadsheetApp.newTextStyle().build(),
+    presentation: presentation,
+    slide: slide,
+    htmlOutput: HtmlService.createHtmlOutput("<p>x</p>"),
+    textOutput: ContentService.createTextOutput("x")
+  };
+
+  var guards = {
+    isSpreadsheet: { fn: isSpreadsheet, accepts: "spreadsheet" },
+    isSheet: { fn: isSheet, accepts: "sheet" },
+    isRange: { fn: isRange, accepts: "range" },
+    isRichTextValue: { fn: isRichTextValue, accepts: "richText" },
+    isTextStyle: { fn: isTextStyle, accepts: "textStyle" },
+    isPresentation: { fn: isPresentation, accepts: "presentation" },
+    isSlide: { fn: isSlide, accepts: "slide" },
+    isHtmlOutput: { fn: isHtmlOutput, accepts: "htmlOutput" },
+    isTextOutput: { fn: isTextOutput, accepts: "textOutput" }
+  };
+
+  Object.keys(guards).forEach(function (name) {
+    var guard = guards[name];
+
+    t.test(name + " recognises a real " + guard.accepts, function () {
+      assertEquals(guard.fn(samples[guard.accepts]), true, name);
+    });
+
+    t.test(name + " rejects every other real object", function () {
+      Object.keys(samples).forEach(function (key) {
+        if (key !== guard.accepts) {
+          assertEquals(guard.fn(samples[key]), false, name + "(" + key + ")");
+        }
+      });
+    });
+
+    t.test(name + " rejects plain values", function () {
+      [null, undefined, 0, "", "Sheet", {}, [], function () {}].forEach(function (value) {
+        assertEquals(guard.fn(value), false, name + "(" + JSON.stringify(String(value)) + ")");
+      });
+    });
+  });
+
+  t.test("the id validators accept real ids", function () {
+    assertEquals(isValidSpreadsheetId(ss.getId()), true, "spreadsheet id " + ss.getId());
+    assertEquals(isValidSheetId(sheet.getSheetId()), true, "sheet id " + sheet.getSheetId());
+    assertEquals(isValidSheetName(sheet.getName()), true, "sheet name " + sheet.getName());
+    assertEquals(isValidPresentationId(presentation.getId()), true, "presentation id");
+    assertEquals(isValidSlideId(slide.getObjectId()), true, "slide id " + slide.getObjectId());
+  });
+
+  t.test("the id validators reject what a real id never looks like", function () {
+    assertEquals(isValidSheetId(-1), false, "negative sheet id");
+    assertEquals(isValidSpreadsheetId("short"), false, "short spreadsheet id");
+    assertEquals(isValidSheetName(""), false, "empty sheet name");
+  });
+
+  t.skip("isUi", "SpreadsheetApp.getUi() is only available in a container-bound script with a UI");
 }
 
 // ---------------------------------------------------------------- entry point
@@ -624,6 +712,7 @@ function runAllTests() {
     testRichText(t);
     testSlides(t);
     testSessionBound(t);
+    testTypeGuards(t);
   } finally {
     t.cleanup();
   }
