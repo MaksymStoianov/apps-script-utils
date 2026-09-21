@@ -59,7 +59,8 @@ export * from "./nonScalar";
 
 export * from "./nonString";
 
-// TODO: nonSymbol
+export * from "./nonSymbol";
+
 export * from "./nonUndefined";
 
 // TODO: requireArray
