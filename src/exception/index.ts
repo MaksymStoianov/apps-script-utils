@@ -10,6 +10,8 @@ export * from "./EmptyStringException";
 
 export * from "./IllegalArgumentException";
 
+export * from "./IllegalStateException";
+
 export * from "./InvalidEmailFormatException";
 
 export * from "./InvalidStringException";
