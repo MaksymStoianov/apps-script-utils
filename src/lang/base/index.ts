@@ -67,45 +67,50 @@ export * from "./nonSymbol";
 export * from "./nonUndefined";
 
 // TODO: requireArray
-export * from "./requireBoolean";
+// TODO: requireBoolean
+export * from "./requireEmpty";
 
-// TODO: requireEmpty
 // TODO: requireException
-export * from "./requireFunction";
-
+// TODO: requireFunction
 // TODO: requireFunctionLike
 // TODO: requireLength
-// TODO: requireNil
+export * from "./requireNil";
+
 // TODO: requireNull
-export * from "./requireNumber";
+// TODO: requireNumber
+export * from "./requireNumberLike";
 
-// TODO: requireNumberLike
-export * from "./requireObject";
+// TODO: requireObject
+export * from "./requireObjectLike";
 
-// TODO: requireObjectLike
 // TODO: requireRegExp
-export * from "./requireScalar";
-
+// TODO: requireScalar
 export * from "./requireString";
-export * from "./requireSymbol";
+// TODO: requireSymbol
+export * from "./requireUndefined";
 
-// TODO: requireUndefined
+export * from "./requireNonArray";
 
 // TODO: requireNonArray
-// TODO: requireNonBoolean
+export * from "./requireNonBoolean";
+
 // TODO: requireNonEmpty
 // TODO: requireNonException
-// TODO: requireNonFunction
+export * from "./requireNonFunction";
+
 // TODO: requireNonFunctionLike
 // TODO: requireNonLength
 // TODO: requireNonNil
 export * from "./requireNonNull";
-// TODO: requireNonNumber
+export * from "./requireNonNumber";
+
 // TODO: requireNonNumberLike
-// TODO: requireNonObject
+export * from "./requireNonObject";
+
 // TODO: requireNonObjectLike
 // TODO: requireNonRegExp
-// TODO: requireNonScalar
+export * from "./requireNonScalar";
+
 // TODO: requireNonString
 // TODO: requireNonSymbol
 // TODO: requireNonUndefined
