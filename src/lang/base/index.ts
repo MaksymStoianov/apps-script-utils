@@ -96,7 +96,8 @@ export * from "./requireNonBoolean";
 
 // TODO: requireNonEmpty
 // TODO: requireNonException
-// TODO: requireNonFunction
+export * from "./requireNonFunction";
+
 // TODO: requireNonFunctionLike
 // TODO: requireNonLength
 // TODO: requireNonNil
@@ -104,11 +105,12 @@ export * from "./requireNonNull";
 export * from "./requireNonNumber";
 
 // TODO: requireNonNumberLike
-// TODO: requireNonObject
+export * from "./requireNonObject";
+
 // TODO: requireNonObjectLike
 // TODO: requireNonRegExp
-// TODO: requireNonScalar
-export * from "./requireNonString";
+export * from "./requireNonScalar";
 
+// TODO: requireNonString
 // TODO: requireNonSymbol
 // TODO: requireNonUndefined
