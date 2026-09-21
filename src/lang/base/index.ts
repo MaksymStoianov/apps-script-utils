@@ -100,7 +100,8 @@ export * from "./requireNonBoolean";
 export * from "./requireNonFunctionLike";
 
 // TODO: requireNonLength
-// TODO: requireNonNil
+export * from "./requireNonNil";
+
 export * from "./requireNonNull";
 
 export * from "./requireState";
