@@ -1,0 +1,107 @@
+# Builds the Writerside documentation in `docs/writerside/` and publishes it to GitHub Pages.
+#
+# https://www.jetbrains.com/help/writerside/deploy-docs-to-github-pages.html
+# https://github.com/JetBrains/writerside-github-action
+
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - "docs/writerside/**"
+      - ".github/workflows/docs.yml"
+  workflow_dispatch:
+
+# Allow one concurrent deployment; queued runs supersede each other rather than
+# racing to publish.
+concurrency:
+  group: docs
+  cancel-in-progress: false
+
+env:
+  # Module directory and instance id, as declared in docs/writerside/asu.tree.
+  INSTANCE: docs/writerside/asu
+  # The instance id in capitals, which is how the builder names its artifact.
+  ARTIFACT: webHelpASU2-all.zip
+  # Writerside builder image version.
+  DOCKER_VERSION: 243.22562
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build docs using the Writerside Docker builder
+        uses: JetBrains/writerside-github-action@v4
+        with:
+          instance: ${{ env.INSTANCE }}
+          docker-version: ${{ env.DOCKER_VERSION }}
+
+      - name: Upload build results
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs
+          path: |
+            artifacts/${{ env.ARTIFACT }}
+            artifacts/report.json
+          retention-days: 7
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Download build results
+        uses: actions/download-artifact@v4
+        with:
+          name: docs
+          path: artifacts
+
+      - name: Check for broken links and other problems
+        uses: JetBrains/writerside-checker-action@v1
+        with:
+          instance: ${{ env.INSTANCE }}
+
+  deploy:
+    # Only the default branch publishes; pull requests stop after build and test.
+    if: github.ref == 'refs/heads/main' && github.server_url == 'https://github.com'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download build results
+        uses: actions/download-artifact@v4
+        with:
+          name: docs
+
+      - name: Unzip the web help artifact
+        run: unzip -qq "${ARTIFACT}" -d dir
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dir
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
