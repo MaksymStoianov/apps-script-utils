@@ -1,5 +1,5 @@
 import { ObjectTag, objectToString } from "../object";
-import { isObject } from "./isObject";
+import { isNil } from "./isNil";
 
 /**
  * Checks if the provided value is a function.
@@ -9,11 +9,11 @@ import { isObject } from "./isObject";
  * @see     {@link nonFunction}
  * @see     {@link isFunctionLike}
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function isFunction(value: unknown): value is Function {
-  if (!isObject(value)) {
+  if (isNil(value)) {
     return false;
   }
 
