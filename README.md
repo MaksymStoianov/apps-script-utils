@@ -869,6 +869,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Checks if a value is NOT a <code>Function</code>.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/base/nonFunctionLike.ts"><code>nonFunctionLike</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a value is <b>not</b> &quot;function-like&quot; (e.g., callable).</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/nonNil.ts"><code>nonNil</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT <code>null</code> or <code>undefined</code>.</td>

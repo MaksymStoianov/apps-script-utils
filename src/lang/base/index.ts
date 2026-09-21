@@ -44,7 +44,8 @@ export * from "./nonException";
 
 export * from "./nonFunction";
 
-// TODO: nonFunctionLike
+export * from "./nonFunctionLike";
+
 // TODO: nonLength
 export * from "./nonNil";
 
