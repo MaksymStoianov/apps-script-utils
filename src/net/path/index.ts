@@ -2,7 +2,7 @@ export * from "./types";
 
 export * from "./isAbsolute";
 
-export * from "./nonAbsolute";
+export * from "./requireAbsolute";
 
 export * from "./isRelative";
 
