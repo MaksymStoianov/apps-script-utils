@@ -794,6 +794,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is a regular expression.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/number/isSafeInteger.ts"><code>isSafeInteger</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Checks if a value is a number and a safe integer (exactly representable as an IEEE-754 double).</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/isScalar.ts"><code>isScalar</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is a primitive scalar type (string, number, boolean, symbol, bigint).</td>
