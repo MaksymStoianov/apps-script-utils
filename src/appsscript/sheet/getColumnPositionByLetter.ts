@@ -4,6 +4,13 @@ import { getColumnIndexByLetter } from "./getColumnIndexByLetter";
 /**
  * Converts a column letter (or combination of letters) into a column position.
  *
+ * @example
+ * ```javascript
+ * getColumnPositionByLetter("A");   // Returns: 1
+ * getColumnPositionByLetter("AA");  // Returns: 27
+ * getColumnPositionByLetter("AZ");  // Returns: 52
+ * ```
+ *
  * @param       {string} letter - The column label (e.g., `'A'`, `'B'`, ..., `'AA'`).
  * @returns     {number | null} The corresponding column position.
  * @throws      {@link IllegalArgumentException}
@@ -12,7 +19,7 @@ import { getColumnIndexByLetter } from "./getColumnIndexByLetter";
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @since       1.0.0
- * @version     1.1.0
+ * @version     1.2.0
  * @environment `Google Apps Script`, `Browser`
  */
 export function getColumnPositionByLetter(letter: string): number | null {
@@ -22,5 +29,5 @@ export function getColumnPositionByLetter(letter: string): number | null {
 
   const index = getColumnIndexByLetter(letter);
 
-  return index ? index + 1 : null;
+  return index === null ? null : index + 1;
 }
