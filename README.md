@@ -859,6 +859,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Checks if a value is NOT empty.</td>
         </tr>
         <tr>
+            <td><a href="src/lang/base/nonException.ts"><code>nonException</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a value is <b>not</b> an instance of <code>Exception</code> or a derived class.</td>
+        </tr>
+        <tr>
             <td><a href="src/lang/base/nonFunction.ts"><code>nonFunction</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT a <code>Function</code>.</td>
