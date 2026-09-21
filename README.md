@@ -809,9 +809,9 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Validates if a value is a symbol.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> <sup>New</sup></td>
+            <td><a href="src/lang/string/nonEmptyString.ts"><code>nonEmptyString</code></a> <sup>Deprecated</sup></td>
             <td><code>String</code></td>
-            <td>Validates that the given value is a non-empty string.</td>
+            <td>Validates that the given value is a non-empty string. Use <code>requireNonEmptyString</code> instead.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/isUndefined.ts"><code>isUndefined</code></a></td>
@@ -857,6 +857,11 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td><a href="src/lang/base/nonEmpty.ts"><code>nonEmpty</code></a></td>
             <td><code>Boolean</code></td>
             <td>Checks if a value is NOT empty.</td>
+        </tr>
+        <tr>
+            <td><a href="src/lang/base/nonException.ts"><code>nonException</code></a> <sup>New</sup></td>
+            <td><code>Boolean</code></td>
+            <td>Validates if a value is <b>not</b> an instance of <code>Exception</code> or a derived class.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/nonFunction.ts"><code>nonFunction</code></a> <sup>New</sup></td>
