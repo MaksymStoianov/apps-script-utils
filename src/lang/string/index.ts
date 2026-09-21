@@ -9,10 +9,11 @@ export * from "./isValidVersion";
 export * from "./isVersionCompatible";
 
 // TODO: nonValidEmail
-// TODO: nonValidLocale
+export * from "./nonValidLocale";
+
 // TODO: nonValidSlug
 // TODO: nonValidVersion
-// TODO: nonVersionCompatible
+export * from "./nonVersionCompatible";
 
 export * from "./requireNonEmptyString";
 
