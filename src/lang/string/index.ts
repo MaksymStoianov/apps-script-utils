@@ -11,9 +11,9 @@ export * from "./isVersionCompatible";
 export * from "./nonValidEmail";
 
 // TODO: nonValidLocale
-export * from "./nonValidSlug";
+// TODO: nonValidSlug
+export * from "./nonValidVersion";
 
-// TODO: nonValidVersion
 // TODO: nonVersionCompatible
 
 export * from "./requireNonEmptyString";
