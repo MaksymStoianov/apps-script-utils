@@ -6,6 +6,8 @@ export * from "./isRelative";
 
 export * from "./isValidDomain";
 
+export * from "./nonValidDomain";
+
 export * from "./join";
 
 export * from "./normalize";
