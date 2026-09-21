@@ -108,7 +108,8 @@ export * from "./requireState";
 export * from "./requireNonNumberLike";
 
 // TODO: requireNonObject
-// TODO: requireNonObjectLike
+export * from "./requireNonObjectLike";
+
 // TODO: requireNonRegExp
 // TODO: requireNonScalar
 // TODO: requireNonString
