@@ -99,7 +99,8 @@ export * from "./requireNonArray";
 // TODO: requireNonLength
 // TODO: requireNonNil
 export * from "./requireNonNull";
-// TODO: requireNonNumber
+export * from "./requireNonNumber";
+
 // TODO: requireNonNumberLike
 // TODO: requireNonObject
 // TODO: requireNonObjectLike
