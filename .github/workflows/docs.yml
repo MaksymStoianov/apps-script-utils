@@ -22,8 +22,11 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # Module directory and instance id, as declared in docs/writerside/asu.tree.
-  INSTANCE: docs/writerside/asu
+  # The builder locates the module as `<module>/<instance>`, a single path
+  # segment plus the instance id from docs/writerside/asu.tree, resolved against
+  # the source directory. The rest of the path goes to the action's `location`.
+  LOCATION: docs
+  INSTANCE: writerside/asu
   # The instance id in capitals, which is how the builder names its artifact.
   ARTIFACT: webHelpASU2-all.zip
   # Writerside builder image version.
@@ -41,6 +44,7 @@ jobs:
       - name: Build docs using the Writerside Docker builder
         uses: JetBrains/writerside-github-action@v4
         with:
+          location: ${{ env.LOCATION }}
           instance: ${{ env.INSTANCE }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
