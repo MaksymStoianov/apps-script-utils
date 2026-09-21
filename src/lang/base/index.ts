@@ -93,7 +93,8 @@ export * from "./requireNonArray";
 
 // TODO: requireNonBoolean
 // TODO: requireNonEmpty
-// TODO: requireNonException
+export * from "./requireNonException";
+
 // TODO: requireNonFunction
 // TODO: requireNonFunctionLike
 // TODO: requireNonLength
