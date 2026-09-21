@@ -20,7 +20,8 @@ export * from "./requireNonEmptyString";
 export * from "./nonEmptyString";
 
 export * from "./requireValidEmail";
-// TODO: requireValidLocale
+export * from "./requireValidLocale";
+
 // TODO: requireValidSlug
 export * from "./requireValidVersion";
 
