@@ -67,11 +67,10 @@ export * from "./nonSymbol";
 export * from "./nonUndefined";
 
 // TODO: requireArray
-export * from "./requireBoolean";
+// TODO: requireBoolean
+export * from "./requireEmpty";
 
-// TODO: requireEmpty
-export * from "./requireException";
-
+// TODO: requireException
 // TODO: requireFunction
 // TODO: requireFunctionLike
 // TODO: requireLength
