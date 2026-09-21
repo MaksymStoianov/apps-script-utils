@@ -1,4 +1,4 @@
-import { EmptyStringException, IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException } from "../../exception";
 import { isObject, requireNonEmptyString } from "../../lang";
 import { parseA1Notation } from "./parseA1Notation";
 import { GridRange } from "./types";
@@ -44,7 +44,7 @@ export interface A1NotationParseOptions {
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @since       1.6.0
- * @version     1.0.0
+ * @version     1.0.1
  * @environment `Google Apps Script`, `Browser`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
@@ -62,10 +62,6 @@ export function parseA1Notations(value: string, options: A1NotationParseOptions 
   } = options;
 
   const trimmedInput = requireNonEmptyString(value).trim();
-
-  if (trimmedInput === "") {
-    return [];
-  }
 
   const ranges: GridRange[] = trimmedInput
     .split(",")
