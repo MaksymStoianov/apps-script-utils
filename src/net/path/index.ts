@@ -6,7 +6,7 @@ export * from "./isRelative";
 
 export * from "./isValidDomain";
 
-export * from "./nonValidDomain";
+export * from "./requireValidDomain";
 
 export * from "./join";
 
