@@ -18,11 +18,13 @@ fi
 cd "$PROJECT_ROOT" || exit 1
 
 if ! git config merge.reference-tables.name "Row-aware merge of the documentation reference tables" ||
-  ! git config merge.reference-tables.driver "node scripts/merge-reference-tables.mjs %O %A %B %L %P"; then
+  ! git config merge.reference-tables.driver "node scripts/merge-reference-tables.mjs %O %A %B %L %P" ||
+  ! git config merge.module-index.name "Entry-aware merge of the module index files" ||
+  ! git config merge.module-index.driver "node scripts/merge-module-index.mjs %O %A %B %L %P"; then
   echo "$LOG_TAG: ✗ could not write to the repository config."
-  echo "$LOG_TAG:   The reference tables will merge line by line until this runs."
+  echo "$LOG_TAG:   The tables and index files will merge line by line until this runs."
   exit 1
 fi
 
-echo "$LOG_TAG: merge.reference-tables registered."
+echo "$LOG_TAG: merge.reference-tables and merge.module-index registered."
 exit 0

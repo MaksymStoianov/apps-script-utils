@@ -72,3 +72,9 @@ pnpm-lock.yaml     merge=binary
 # The driver is registered by scripts/setup-merge-driver.sh, which `npm run
 # prepare` runs.
 docs/writerside/topics/reference-*.md merge=reference-tables
+
+# Merge the module index files entry by entry, for the same reason: a branch
+# flips one `// TODO:` line into an export, and two branches adding neighbouring
+# members flip neighbouring lines.
+src/**/index.ts merge=module-index
+src/index.ts    merge=module-index

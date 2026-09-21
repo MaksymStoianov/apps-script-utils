@@ -21,11 +21,9 @@
  *   %B  theirs            %L  conflict marker size   %P  the real pathname
  */
 
-import { execFileSync } from "node:child_process";
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { readFileSync, writeFileSync } from "node:fs";
+
+import { byName, format, mergeEntries, mergeFile } from "./lib/three-way-merge.mjs";
 
 const ROW = /^\|\s*\[`([^`]+)`\]/;
 
@@ -39,12 +37,12 @@ const [ancestorPath, oursPath, theirsPath, markerSize = "7", pathname] = process
  * Splits a file into tables and the text around them.
  *
  * A table is a run of lines starting with `|`; its first two lines are the
- * header and the alignment separator, and the rest are rows. Runs that carry no
- * named row are left as text, so tables of anything but functions pass through
- * untouched.
+ * header and the alignment separator, and the rest are rows. Runs shaped any
+ * other way are left as text, so a table of anything but functions passes
+ * through untouched.
  *
  * @param {string} text
- * @returns {{ skeleton: string, tables: { head: string[], rows: { name: string, line: string }[] }[] }}
+ * @returns {{ skeleton: string, tables: { head: string[], rows: { name: string, text: string }[] }[] }}
  */
 function parse(text) {
   const lines = text.split("\n");
@@ -77,14 +75,12 @@ function parse(text) {
       const match = ROW.exec(line);
 
       if (match && head.length) {
-        rows.push({ name: match[1], line });
+        rows.push({ name: match[1], text: line });
       } else {
         head.push(line);
       }
     }
 
-    // A header, an alignment separator and at least one named row: anything else
-    // is prose that happens to start with a pipe.
     if (rows.length && head.length === 2 && SEPARATOR.test(head[1])) {
       skeleton.push(PLACEHOLDER(tables.length));
       tables.push({ head, rows });
@@ -98,190 +94,6 @@ function parse(text) {
   return { skeleton: skeleton.join("\n"), tables };
 }
 
-/**
- * Three-way merges one table's rows, or returns null when the sides disagree.
- *
- * @param {{ name: string, line: string }[]} ancestor
- * @param {{ name: string, line: string }[]} ours
- * @param {{ name: string, line: string }[]} theirs
- * @returns {{ name: string, line: string }[] | null}
- */
-function mergeRows(ancestor, ours, theirs) {
-  const index = (rows) => new Map(rows.map((row) => [row.name, row]));
-
-  const base = index(ancestor);
-
-  const mine = index(ours);
-
-  const yours = index(theirs);
-
-  const merged = [];
-
-  for (const row of ancestor) {
-    const o = mine.get(row.name);
-
-    const t = yours.get(row.name);
-
-    // Deleted on one side: dropping it is only safe while the other side left it
-    // alone.
-    if (!o || !t) {
-      const survivor = o ?? t;
-
-      if (survivor && survivor.line !== row.line) {
-        return null;
-      }
-
-      continue;
-    }
-
-    const changedByUs = o.line !== row.line;
-
-    const changedByThem = t.line !== row.line;
-
-    if (changedByUs && changedByThem && o.line !== t.line) {
-      return null;
-    }
-
-    merged.push(changedByUs ? o : t);
-  }
-
-  const kept = new Set(merged.map((row) => row.name));
-
-  const added = new Map();
-
-  for (const rows of [ours, theirs]) {
-    for (let i = 0; i < rows.length; i += 1) {
-      const row = rows[i];
-
-      if (base.has(row.name) || kept.has(row.name)) {
-        continue;
-      }
-
-      const seen = added.get(row.name);
-
-      if (seen) {
-        // Both sides added the row. Identical text is the same edit twice;
-        // different text is a disagreement only a human can settle.
-        if (seen.row.line !== row.line) {
-          return null;
-        }
-
-        continue;
-      }
-
-      let anchor = null;
-
-      for (let j = i - 1; j >= 0; j -= 1) {
-        if (kept.has(rows[j].name)) {
-          anchor = rows[j].name;
-
-          break;
-        }
-      }
-
-      added.set(row.name, { row, anchor });
-    }
-  }
-
-  const byAnchor = new Map();
-
-  for (const { row, anchor } of added.values()) {
-    if (!byAnchor.has(anchor)) {
-      byAnchor.set(anchor, []);
-    }
-
-    byAnchor.get(anchor).push(row);
-  }
-
-  for (const [anchor, rows] of byAnchor) {
-    rows.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
-
-    const at = anchor === null ? 0 : merged.findIndex((row) => row.name === anchor) + 1;
-
-    merged.splice(at, 0, ...rows);
-  }
-
-  return merged;
-}
-
-/**
- * Runs `git merge-file` and reports whether it left conflict markers behind.
- *
- * @param {string} ancestor
- * @param {string} ours
- * @param {string} theirs
- * @returns {{ text: string, conflicted: boolean }}
- */
-function mergeFile(ancestor, ours, theirs) {
-  const dir = mkdtempSync(join(tmpdir(), "reference-tables-"));
-
-  try {
-    const paths = {
-      ancestor: join(dir, "base"),
-      ours: join(dir, "ours"),
-      theirs: join(dir, "theirs")
-    };
-
-    writeFileSync(paths.ancestor, ancestor);
-    writeFileSync(paths.ours, ours);
-    writeFileSync(paths.theirs, theirs);
-
-    try {
-      const text = execFileSync(
-        "git",
-        [
-          "merge-file",
-          "--stdout",
-          `--marker-size=${markerSize}`,
-          paths.ours,
-          paths.ancestor,
-          paths.theirs
-        ],
-        { encoding: "utf8" }
-      );
-
-      return { text, conflicted: false };
-    } catch (error) {
-      // A positive status is the number of conflicts; anything else is a failure
-      // to merge at all, which the caller handles the same way.
-      return { text: error.stdout ?? "", conflicted: true };
-    }
-  } finally {
-    rmSync(dir, { recursive: true, force: true });
-  }
-}
-
-/**
- * Repads the merged tables the way Prettier writes them.
- *
- * A row is inserted carrying the padding it had on its own side, which rarely
- * matches the column widths of the table it lands in. Prettier is told the real
- * pathname rather than handed the file, because the file Git passes to a merge
- * driver is a temporary one whose name carries no extension for Prettier to
- * infer a parser from.
- *
- * @param {string} text
- * @returns {string} the formatted text, or the text unchanged if Prettier cannot run
- */
-function format(text) {
-  if (!pathname) {
-    return text;
-  }
-
-  try {
-    const prettier = fileURLToPath(new URL("../node_modules/.bin/prettier", import.meta.url));
-
-    return execFileSync(prettier, ["--stdin-filepath", pathname], {
-      input: text,
-      encoding: "utf8"
-    });
-  } catch {
-    // Prettier is a convenience here, not a requirement: an unpadded merge is
-    // still a correct one, and `npm run format` reports the drift.
-    return text;
-  }
-}
-
 function main() {
   const ancestor = readFileSync(ancestorPath, "utf8");
 
@@ -290,7 +102,7 @@ function main() {
   const theirs = readFileSync(theirsPath, "utf8");
 
   const fallback = () => {
-    const { text, conflicted } = mergeFile(ancestor, ours, theirs);
+    const { text, conflicted } = mergeFile(ancestor, ours, theirs, markerSize);
 
     writeFileSync(oursPath, text);
 
@@ -312,7 +124,7 @@ function main() {
   const tables = [];
 
   for (let i = 0; i < a.tables.length; i += 1) {
-    const rows = mergeRows(a.tables[i].rows, o.tables[i].rows, t.tables[i].rows);
+    const rows = mergeEntries(a.tables[i].rows, o.tables[i].rows, t.tables[i].rows, byName);
 
     if (!rows) {
       return fallback();
@@ -323,10 +135,10 @@ function main() {
         ? t.tables[i].head
         : o.tables[i].head;
 
-    tables.push([...head, ...rows.map((row) => row.line)].join("\n"));
+    tables.push([...head, ...rows.map((row) => row.text)].join("\n"));
   }
 
-  const skeleton = mergeFile(a.skeleton, o.skeleton, t.skeleton);
+  const skeleton = mergeFile(a.skeleton, o.skeleton, t.skeleton, markerSize);
 
   if (skeleton.conflicted) {
     return fallback();
@@ -348,7 +160,7 @@ function main() {
     return fallback();
   }
 
-  writeFileSync(oursPath, format(merged));
+  writeFileSync(oursPath, format(merged, pathname));
 
   return 0;
 }
