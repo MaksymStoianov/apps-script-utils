@@ -894,9 +894,9 @@ manipulation, and JSON/HTML handling. These do not depend on the Google Apps Scr
             <td>Checks if a value is NOT a number.</td>
         </tr>
         <tr>
-            <td><a href="src/lang/base/nonObjectLike.ts"><code>nonObjectLike</code></a> <sup>New</sup></td>
+            <td><a href="src/lang/base/nonRegExp.ts"><code>nonRegExp</code></a> <sup>New</sup></td>
             <td><code>Boolean</code></td>
-            <td>Validates if a value is <b>not</b> an object in a broader sense (functions included).</td>
+            <td>Validates if a value is <b>not</b> a regular expression.</td>
         </tr>
         <tr>
             <td><a href="src/lang/base/nonScalar.ts"><code>nonScalar</code></a></td>
