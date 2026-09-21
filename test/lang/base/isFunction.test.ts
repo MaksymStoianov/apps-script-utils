@@ -18,6 +18,18 @@ describe("isFunction", () => {
       expect(isFunction(async function asyncFn() {})).toBe(true);
     });
 
+    it("should return true for async generator functions", () => {
+      expect(isFunction(async function* asyncGenerator() {})).toBe(true);
+    });
+
+    it("should return true for a proxy wrapping a function", () => {
+      expect(isFunction(new Proxy(() => {}, {}))).toBe(true);
+    });
+
+    it("should return false for a proxy wrapping a plain object", () => {
+      expect(isFunction(new Proxy({}, {}))).toBe(false);
+    });
+
     it("should return true for classes and built-in constructors", () => {
       expect(isFunction(class Sample {})).toBe(true);
       expect(isFunction(Array)).toBe(true);

@@ -5,10 +5,13 @@ export * from "./isConsistent2DArray";
 // TODO: non2DArray
 export * from "./nonConsistent2DArray";
 
-// TODO: require2DArray
+export * from "./require2DArray";
+
 // TODO: requireConsistent2DArray
 
 export * from "./chunk";
+
+export * from "./requireNoNilElements";
 
 export * from "./transpose";
 // TODO: unique(arr: Array)
