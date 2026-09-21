@@ -12,7 +12,7 @@ interface RunSpec {
   bold?: boolean;
   italic?: boolean;
   fontFamily?: string;
-  fontSize?: number;
+  fontSize?: number | null;
   color?: string | null;
 }
 
@@ -33,7 +33,7 @@ function richTextMock(runs: RunSpec[]): GoogleAppsScript.Spreadsheet.RichTextVal
           isBold: () => run.bold ?? false,
           isItalic: () => run.italic ?? false,
           getFontFamily: () => run.fontFamily ?? "Arial",
-          getFontSize: () => run.fontSize ?? 10,
+          getFontSize: () => (run.fontSize === undefined ? 10 : run.fontSize),
           getForegroundColor: () => (run.color === undefined ? "#000000" : run.color)
         })
       }))
@@ -115,6 +115,16 @@ describe("convertRichTextToHtml", () => {
           richTextMock([{ text: "x", fontFamily: "Arial", fontSize: 10, color: "#000000" }])
         )
       ).toBe("<span>x</span>");
+    });
+
+    it("should omit the size when the run has no explicit size", () => {
+      expect(convertRichTextToHtml(richTextMock([{ text: "x", fontSize: null }]))).toBe(
+        "<span>x</span>"
+      );
+
+      expect(convertRichTextToHtml(richTextMock([{ text: "x", fontSize: null, bold: true }]))).toBe(
+        "<b>x</b>"
+      );
     });
 
     it("should replace the line breaks with br", () => {
