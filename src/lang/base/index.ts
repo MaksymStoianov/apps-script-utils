@@ -74,11 +74,10 @@ export * from "./requireException";
 
 // TODO: requireFunction
 // TODO: requireFunctionLike
-export * from "./requireLength";
+// TODO: requireLength
+export * from "./requireNil";
 
-// TODO: requireNil
-export * from "./requireNull";
-
+// TODO: requireNull
 // TODO: requireNumber
 export * from "./requireNumberLike";
 
