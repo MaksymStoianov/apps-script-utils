@@ -47,8 +47,20 @@ describe("parseA1Notations", () => {
     ).toThrow("Custom error: A1 has unexpected sheet");
   });
 
-  it("should throw EmptyStringException for empty string", () => {
-    // @ts-expect-error: Testing empty string
-    expect(() => parseA1Notations("", {})).toThrow(EmptyStringException);
+  it("should return an empty array for an empty string", () => {
+    expect(parseA1Notations("", {})).toEqual([]);
+    expect(parseA1Notations("")).toEqual([]);
+  });
+
+  it("should return an empty array for a whitespace-only string", () => {
+    expect(parseA1Notations("   ")).toEqual([]);
+    expect(parseA1Notations("\t\n")).toEqual([]);
+  });
+
+  it("should still throw EmptyStringException for non-string input", () => {
+    // @ts-expect-error: Testing invalid types
+    expect(() => parseA1Notations(null)).toThrow(EmptyStringException);
+    // @ts-expect-error: Testing invalid types
+    expect(() => parseA1Notations(42)).toThrow(EmptyStringException);
   });
 });
