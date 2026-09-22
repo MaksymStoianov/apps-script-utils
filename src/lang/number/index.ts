@@ -1,9 +1,11 @@
-// TODO: isDouble
+export * from "./isDouble";
+
 export * from "./isFloat";
 
 export * from "./isCountable";
 
 export * from "./isInteger";
+
 export * from "./isSafeInteger";
 
 export * from "./isNaN";
