@@ -275,3 +275,9 @@ For a detailed list of changes by version, see [CHANGELOG.md](CHANGELOG.md).
 ## License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+## Trademarks
+
+Google Apps Script, Google Sheets, Google Slides, Google Docs, Google Forms and Google Drive are trademarks of
+Google LLC. This project is an independent library. It is not affiliated with, endorsed by, or sponsored by Google
+LLC, and the trademarks are used only to describe what the library works with.
