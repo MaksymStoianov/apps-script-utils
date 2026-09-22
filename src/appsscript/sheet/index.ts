@@ -104,11 +104,11 @@ export * from "./getSheetById";
 export * from "./getSheetByIndex";
 
 // TODO: getValues(sheet: Sheet, config: Object)
-// TODO: clearColumnsByConditional(sheet: Sheet, callback: Function)
-
 export * from "./clearRowsByConditional";
 
 export * from "./deleteRowsByConditional";
+
+export * from "./clearColumnsByConditional";
 
 // TODO: deleteColumnsByConditional(sheet: Sheet, callback: Function)
 export * from "./getNamedRangeByName";
