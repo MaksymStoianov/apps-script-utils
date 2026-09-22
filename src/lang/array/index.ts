@@ -25,5 +25,6 @@ export * from "./first";
 export * from "./last";
 
 export * from "./compact";
-// TODO: without(arr: Array, ...values: any)
+
+export * from "./without";
 // TODO: intersect(arr: Array)
