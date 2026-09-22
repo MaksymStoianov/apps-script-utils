@@ -30,7 +30,13 @@ import { format, mergeEntries, mergeFile } from "./lib/three-way-merge.mjs";
 
 const EXPORT = /^export \* from "\.\/(.+)";$/;
 
-const TODO = /^\/\/ TODO: (\S+)$/;
+// A placeholder names one member, and often sketches the signature it will
+// have. The name is what keys the entry; everything in the parentheses is a
+// note to the reader and varies freely between branches.
+//
+// A note that names no member — `// TODO: Abstract EventEmitter` — deliberately
+// does not match: it would key on `Abstract`, which its siblings share.
+const TODO = /^\/\/ TODO: ([A-Za-z_$][\w$]*)(?:\(|$)/;
 
 const [ancestorPath, oursPath, theirsPath, markerSize = "7", pathname] = process.argv.slice(2);
 
