@@ -53,9 +53,9 @@ export * from "./requireRichTextValue";
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
-export * from "./requireTextStyle";
+// TODO: requireTextStyle
+export * from "./requireValidSheetName";
 
-// TODO: requireValidSheetName
 // TODO: requireValidSpreadsheetId
 
 // TODO: prependColumn
