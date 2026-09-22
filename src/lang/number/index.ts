@@ -21,7 +21,8 @@ export * from "./isNonNegative";
 export * from "./nonNegative";
 
 // TODO: requireDouble
-// TODO: requireFloat
+export * from "./requireFloat";
+
 export * from "./requireInteger";
 
 export * from "./requireCountable";
