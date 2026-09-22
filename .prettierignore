@@ -40,3 +40,9 @@ CODE_OF_CONDUCT.md
 
 # Generated Apps Script bundle
 scripts/gas/Library.js
+
+# Vendored agent skills, kept byte-for-byte as their source publishes them
+.agents/
+.claude/
+.junie/
+skills-lock.json
