@@ -117,8 +117,10 @@ export * from "./deleteColumnsByConditional";
 
 export * from "./getValues";
 
-// TODO: insertSchema
-// TODO: getSchema(sheet: Sheet)
+export * from "./insertSchema";
+
+export * from "./getSchema";
+
 // TODO: removeSchema(sheet: Sheet)
 export * from "./highlightHtml";
 
