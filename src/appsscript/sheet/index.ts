@@ -121,7 +121,8 @@ export * from "./insertSchema";
 
 export * from "./getSchema";
 
-// TODO: removeSchema(sheet: Sheet)
+export * from "./removeSchema";
+
 export * from "./highlightHtml";
 
 export * from "./nonValidSheetId";
