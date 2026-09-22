@@ -14,7 +14,8 @@ export * from "./nonInteger";
 
 export * from "./nonCountable";
 
-// TODO: nonSafeInteger
+export * from "./nonSafeInteger";
+
 // TODO: nonNaN
 export * from "./isNonNegative";
 
