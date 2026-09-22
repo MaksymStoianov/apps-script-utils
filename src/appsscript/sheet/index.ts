@@ -21,7 +21,7 @@ export * from "./isTextStyle";
 
 export * from "./isValidSheetId";
 
-export * from "./nonValidSheetId";
+export * from "./requireValidSheetId";
 
 export * from "./isValidSheetName";
 
