@@ -107,7 +107,6 @@ export * from "./requireUndefined";
 
 export * from "./requireNonArray";
 
-// TODO: requireNonArray
 export * from "./requireNonBoolean";
 
 export * from "./requireNonEmpty";
