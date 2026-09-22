@@ -16,7 +16,7 @@
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License" alt="License"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
-  <a href="https://github.com/users/MaksymStoianov/projects/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
+  <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/MaksymStoianov/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release" alt="Latest release"></a>
 </p>
 
@@ -266,7 +266,7 @@ guidelines.
 
 ## Roadmap
 
-What is planned, in progress or done is on the [project board](https://github.com/users/MaksymStoianov/projects/2),
+What is planned, in progress or done is on the [project board](https://github.com/users/MaksymStoianov/projects/2/views/2),
 built from the issue tracker itself. There is no separate roadmap document to fall out of step with it: to propose
 something, open an [issue](https://github.com/MaksymStoianov/apps-script-utils/issues).
 
