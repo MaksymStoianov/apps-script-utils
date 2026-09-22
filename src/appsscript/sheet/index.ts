@@ -37,9 +37,9 @@ export * from "./nonRichTextValue";
 
 export * from "./nonSheet";
 // TODO: nonSpreadsheet
-export * from "./nonTextStyle";
+// TODO: nonTextStyle
+export * from "./nonValidSheetName";
 
-// TODO: nonValidSheetName
 // TODO: nonValidSpreadsheetId
 
 // TODO: requireCellGridRange
