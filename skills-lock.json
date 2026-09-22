@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "create-pr": {
+      "source": "MaksymStoianov/skills",
+      "sourceType": "github",
+      "skillPath": "skills/create-pr/SKILL.md",
+      "computedHash": "0a17d9d3e9039ef6fb9e027f91be2de8aa33ed0dfc4d48bdd2e3a29d121e12e5"
+    }
+  }
+}
