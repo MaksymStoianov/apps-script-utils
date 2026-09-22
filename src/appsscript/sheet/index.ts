@@ -103,7 +103,6 @@ export * from "./getSheetById";
 
 export * from "./getSheetByIndex";
 
-// TODO: getValues(sheet: Sheet, config: Object)
 export * from "./clearRowsByConditional";
 
 export * from "./deleteRowsByConditional";
@@ -115,6 +114,8 @@ export * from "./getNamedRangeByName";
 export * from "./updateFormulas";
 
 export * from "./deleteColumnsByConditional";
+
+export * from "./getValues";
 
 // TODO: insertSchema
 // TODO: getSchema(sheet: Sheet)
