@@ -12,7 +12,6 @@ export * from "./nonUi";
 
 export * from "./requireHtmlOutput";
 
-// TODO: requireHtmlOutput
 export * from "./requireTextOutput";
 
 export * from "./requireUi";
