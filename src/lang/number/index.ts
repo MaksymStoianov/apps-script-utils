@@ -10,7 +10,8 @@ export * from "./isSafeInteger";
 
 export * from "./isNaN";
 
-// TODO: nonDouble
+export * from "./nonDouble";
+
 export * from "./nonFloat";
 
 export * from "./nonInteger";
