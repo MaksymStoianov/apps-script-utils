@@ -1,2 +1,3 @@
 export * from "./getByteSize";
-// TODO: getTriggerById(id)
+
+export * from "./getTriggerById";
