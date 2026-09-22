@@ -9,20 +9,22 @@ export * from "./isValidVersion";
 export * from "./isVersionCompatible";
 
 // TODO: nonValidEmail
-// TODO: nonValidLocale
+export * from "./nonValidLocale";
+
 // TODO: nonValidSlug
 // TODO: nonValidVersion
-// TODO: nonVersionCompatible
+export * from "./nonVersionCompatible";
 
 export * from "./requireNonEmptyString";
 
 export * from "./nonEmptyString";
 
 export * from "./requireValidEmail";
-// TODO: requireValidLocale
+export * from "./requireValidLocale";
+
 // TODO: requireValidSlug
 // TODO: requireValidVersion
-// TODO: requireVersionCompatible
+export * from "./requireVersionCompatible";
 
 export * from "./toCamelCase";
 
