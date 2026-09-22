@@ -33,6 +33,6 @@ export * from "./requireCountable";
 // TODO: requireNonFloat
 // TODO: requireNonInteger
 // TODO: requireNonSafeInteger
-// TODO: requireNonNaN
+export * from "./requireNonNaN";
 
 export * from "./toInteger";
