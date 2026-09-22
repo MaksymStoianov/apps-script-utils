@@ -8,6 +8,6 @@ export * from "./diff";
 
 export * from "./getDaysInMonth";
 
-// TODO: getDaysLeftInMonth
+export * from "./getDaysLeftInMonth";
 
 export * from "./offset";
