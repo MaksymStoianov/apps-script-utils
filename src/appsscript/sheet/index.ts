@@ -21,16 +21,20 @@ export * from "./isTextStyle";
 
 export * from "./isValidSheetId";
 
+export * from "./requireValidSheetId";
+
 export * from "./isValidSheetName";
 
 export * from "./isValidSpreadsheetId";
 
 // TODO: nonCellGridRange
-// TODO: nonGridRangeContainedIn
+export * from "./nonGridRangeContainedIn";
+
 // TODO: nonGridRangeSameDimensions
 export * from "./nonRange";
 
-// TODO: nonRichTextValue
+export * from "./nonRichTextValue";
+
 export * from "./nonSheet";
 // TODO: nonSpreadsheet
 // TODO: nonTextStyle
@@ -38,16 +42,19 @@ export * from "./nonSheet";
 export * from "./nonValidSpreadsheetId";
 
 // TODO: requireCellGridRange
-// TODO: requireGridRangeContainedIn
+export * from "./requireGridRangeContainedIn";
+
 // TODO: requireGridRangeSameDimensions
 export * from "./requireRange";
 
-// TODO: requireRichTextValue
+export * from "./requireRichTextValue";
+
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
 // TODO: requireTextStyle
-// TODO: requireValidSheetName
+export * from "./requireValidSheetName";
+
 // TODO: requireValidSpreadsheetId
 
 // TODO: prependColumn
@@ -75,6 +82,8 @@ export * from "./extractSheetNameFromA1Notation";
 export * from "./getColumnIndexByLetter";
 
 export * from "./getColumnLetterByIndex";
+
+export * from "./getColumnPositionByLetter";
 
 export * from "./getSheetById";
 
