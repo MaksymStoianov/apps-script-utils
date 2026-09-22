@@ -5,5 +5,6 @@ export * from "./StopWatch";
 
 export * from "./getDaysInMonth";
 
-// TODO: getDaysLeftInMonth
+export * from "./getDaysLeftInMonth";
+
 // TODO: offset
