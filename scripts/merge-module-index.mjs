@@ -30,7 +30,13 @@ import { format, mergeEntries, mergeFile } from "./lib/three-way-merge.mjs";
 
 const EXPORT = /^export \* from "\.\/(.+)";$/;
 
-const TODO = /^\/\/ TODO: (\S+)$/;
+// A placeholder names one member, and often sketches the signature it will
+// have. The name is what keys the entry; everything in the parentheses is a
+// note to the reader and varies freely between branches.
+//
+// A note that names no member — `// TODO: Abstract EventEmitter` — deliberately
+// does not match: it would key on `Abstract`, which its siblings share.
+const TODO = /^\/\/ TODO: ([A-Za-z_$][\w$]*)(?:\(|$)/;
 
 const [ancestorPath, oursPath, theirsPath, markerSize = "7", pathname] = process.argv.slice(2);
 
@@ -117,12 +123,35 @@ function restoreExports(...sides) {
   }
 
   for (const side of sides) {
-    for (const entry of side) {
+    const ownExports = new Set(
+      side.filter((entry) => EXPORT.test(entry.text.split("\n")[0])).map((entry) => entry.name)
+    );
+
+    // Backwards, so that removing an entry does not move the ones still to
+    // come.
+    for (let i = side.length - 1; i >= 0; i -= 1) {
+      const entry = side[i];
+
+      if (!TODO.test(entry.text.split("\n")[0])) {
+        continue;
+      }
+
       const known = exported.get(entry.name);
 
-      if (known && TODO.test(entry.text.split("\n")[0])) {
-        entry.text = known.text;
+      if (!known) {
+        continue;
       }
+
+      // A placeholder sitting beside an export of the same member, on the same
+      // side, is a leftover from a merge that should have replaced it. Adopting
+      // the export line here would write that line twice.
+      if (ownExports.has(entry.name)) {
+        side.splice(i, 1);
+
+        continue;
+      }
+
+      entry.text = known.text;
     }
   }
 }
