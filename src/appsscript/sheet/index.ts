@@ -30,7 +30,8 @@ export * from "./isValidSpreadsheetId";
 // TODO: nonGridRangeSameDimensions
 export * from "./nonRange";
 
-// TODO: nonRichTextValue
+export * from "./nonRichTextValue";
+
 export * from "./nonSheet";
 export * from "./nonSpreadsheet";
 
