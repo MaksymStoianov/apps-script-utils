@@ -3,6 +3,9 @@ contact_links:
   - name: Documentation
     url: https://github.com/MaksymStoianov/apps-script-utils#readme
     about: Read the official documentation.
+  - name: Roadmap
+    url: https://github.com/users/MaksymStoianov/projects/2
+    about: See what is planned, in progress and done.
   - name: Discussions
     url: https://github.com/MaksymStoianov/apps-script-utils/discussions
     about: Ask questions or discuss ideas.
