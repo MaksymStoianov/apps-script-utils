@@ -30,7 +30,8 @@ export * from "./requireInteger";
 
 export * from "./requireCountable";
 
-// TODO: requireSafeInteger
+export * from "./requireSafeInteger";
+
 // TODO: requireNaN
 
 // TODO: requireNonDouble
