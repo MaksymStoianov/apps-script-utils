@@ -275,3 +275,12 @@ For a detailed list of changes by version, see [CHANGELOG.md](CHANGELOG.md).
 ## License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+The banner artwork is not part of that licence. It is the work of its author, may be reused unmodified with the
+author credited and the credit linked, and is covered by [docs/assets/images/README.md](docs/assets/images/README.md).
+
+## Trademarks
+
+Google Apps Script, Google Sheets, Google Slides, Google Docs, Google Forms and Google Drive are trademarks of
+Google LLC. This project is an independent library. It is not affiliated with, endorsed by, or sponsored by Google
+LLC, and the trademarks are used only to describe what the library works with.
