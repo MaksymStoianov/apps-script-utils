@@ -108,7 +108,8 @@ export * from "./getSheetByIndex";
 
 export * from "./clearRowsByConditional";
 
-// TODO: deleteRowsByConditional(sheet: Sheet, callback: Function)
+export * from "./deleteRowsByConditional";
+
 // TODO: deleteColumnsByConditional(sheet: Sheet, callback: Function)
 export * from "./getNamedRangeByName";
 
