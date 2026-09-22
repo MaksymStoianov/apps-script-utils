@@ -18,7 +18,9 @@ export * from "./requireNoNilElements";
 export * from "./transpose";
 // TODO: unique(arr: Array)
 // TODO: first(arr: Array)
-// TODO: last(arr: Array)
+
+export * from "./last";
+
 // TODO: compact(arr: Array)
 // TODO: without(arr: Array, ...values: any)
 // TODO: intersect(arr: Array)
