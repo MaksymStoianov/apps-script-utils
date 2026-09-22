@@ -8,8 +8,6 @@ export * from "./nonConsistent2DArray";
 
 export * from "./require2DArray";
 
-export * from "./require2DArray";
-
 export * from "./requireConsistent2DArray";
 
 export * from "./chunk";
