@@ -12,7 +12,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky && bash ./scripts/setup-merge-driver.sh",
     "dev": "vitest",
     "type:check": "tsc --noEmit",
     "format": "prettier --check .",
@@ -20,7 +20,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "vitest run",
-    "build": "rm -rf dist/* && tsc -b --force"
+    "build": "rm -rf dist/* && tsc -b --force",
+    "build:gas": "npm run build && node scripts/gas/bundle.mjs scripts/gas/Library.js"
   },
   "repository": {
     "type": "git",
@@ -61,6 +62,9 @@
   },
   "license": "Apache-2.0",
   "type": "module",
+  "overrides": {
+    "js-yaml": "^4.3.2"
+  },
   "bugs": {
     "url": "https://github.com/MaksymStoianov/apps-script-utils/issues"
   },

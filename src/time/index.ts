@@ -1,5 +1,13 @@
+export * from "./types";
+
 export * from "./now";
-// TODO: diff
-// TODO: getDaysInMonth
-// TODO: getDaysLeftInMonth
-// TODO: offset
+
+export * from "./StopWatch";
+
+export * from "./diff";
+
+export * from "./getDaysInMonth";
+
+export * from "./getDaysLeftInMonth";
+
+export * from "./offset";

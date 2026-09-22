@@ -19,12 +19,12 @@ export type ParsedPath = {
   base?: string | undefined;
 
   /**
-   * The file extension (if any) such as '.html'.
-   */
-  ext?: string | undefined;
-
-  /**
    * The filename without extension (if any) such as 'index'.
    */
   name?: string | undefined;
+
+  /**
+   * The file extension (if any) such as '.html'.
+   */
+  ext?: string | undefined;
 };

@@ -8,21 +8,28 @@ export * from "./isValidVersion";
 
 export * from "./isVersionCompatible";
 
-// TODO: nonValidEmail
-// TODO: nonValidLocale
-// TODO: nonValidSlug
-// TODO: nonValidVersion
-// TODO: nonVersionCompatible
+export * from "./nonValidEmail";
+
+export * from "./nonValidLocale";
+
+export * from "./nonValidSlug";
+
+export * from "./nonValidVersion";
+
+export * from "./nonVersionCompatible";
 
 export * from "./requireNonEmptyString";
 
 export * from "./nonEmptyString";
 
 export * from "./requireValidEmail";
-// TODO: requireValidLocale
-// TODO: requireValidSlug
-// TODO: requireValidVersion
-// TODO: requireVersionCompatible
+export * from "./requireValidLocale";
+
+export * from "./requireValidSlug";
+
+export * from "./requireValidVersion";
+
+export * from "./requireVersionCompatible";
 
 export * from "./toCamelCase";
 
@@ -38,5 +45,6 @@ export * from "./toUpperCase";
 
 export * from "./escapeRegExp";
 
-// TODO: merge(text: string, fields: Object)
+export * from "./merge";
+
 export * from "./versionCompare";

@@ -21,37 +21,56 @@ export * from "./isTextStyle";
 
 export * from "./isValidSheetId";
 
+export * from "./requireValidSheetId";
+
 export * from "./isValidSheetName";
 
 export * from "./isValidSpreadsheetId";
 
-// TODO: nonCellGridRange
-// TODO: nonGridRangeContainedIn
-// TODO: nonGridRangeSameDimensions
+export * from "./nonCellGridRange";
+
+export * from "./nonGridRangeContainedIn";
+
+export * from "./nonGridRangeSameDimensions";
+
 export * from "./nonRange";
 
-// TODO: nonRichTextValue
-export * from "./nonSheet";
-// TODO: nonSpreadsheet
-// TODO: nonTextStyle
-// TODO: nonValidSheetName
-// TODO: nonValidSpreadsheetId
+export * from "./nonRichTextValue";
 
-// TODO: requireCellGridRange
-// TODO: requireGridRangeContainedIn
-// TODO: requireGridRangeSameDimensions
+export * from "./nonSheet";
+
+export * from "./nonSpreadsheet";
+
+export * from "./nonTextStyle";
+
+export * from "./nonValidSheetName";
+
+export * from "./nonValidSpreadsheetId";
+
+export * from "./requireCellGridRange";
+
+export * from "./requireGridRangeContainedIn";
+
+export * from "./requireGridRangeSameDimensions";
+
 export * from "./requireRange";
 
-// TODO: requireRichTextValue
+export * from "./requireRichTextValue";
+
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
-// TODO: requireTextStyle
-// TODO: requireValidSheetName
-// TODO: requireValidSpreadsheetId
 
-// TODO: prependColumn
-// TODO: prependColumns
+export * from "./requireTextStyle";
+
+export * from "./requireValidSheetName";
+
+export * from "./requireValidSpreadsheetId";
+
+export * from "./prependColumn";
+
+export * from "./prependColumns";
+
 export * from "./appendColumn";
 
 export * from "./appendColumns";
@@ -76,21 +95,37 @@ export * from "./getColumnIndexByLetter";
 
 export * from "./getColumnLetterByIndex";
 
+export * from "./getColumnLetterByPosition";
+
+export * from "./getColumnPositionByLetter";
+
 export * from "./getSheetById";
 
 export * from "./getSheetByIndex";
 
-// TODO: getValues(sheet: Sheet, config: Object)
-// TODO: clearColumnsByConditional(sheet: Sheet, callback: Function)
-// TODO: clearRowsByConditional(sheet: Sheet, callback: Function)
-// TODO: deleteRowsByConditional(sheet: Sheet, callback: Function)
-// TODO: deleteColumnsByConditional(sheet: Sheet, callback: Function)
-// TODO: updateFormulas(sheet: Sheet)
-// TODO: getNamedRangeByName(name: string)
-// TODO: insertSchema
-// TODO: getSchema(sheet: Sheet)
-// TODO: removeSchema(sheet: Sheet)
+export * from "./clearRowsByConditional";
+
+export * from "./deleteRowsByConditional";
+
+export * from "./clearColumnsByConditional";
+
+export * from "./getNamedRangeByName";
+
+export * from "./updateFormulas";
+
+export * from "./deleteColumnsByConditional";
+
+export * from "./getValues";
+
+export * from "./insertSchema";
+
+export * from "./getSchema";
+
+export * from "./removeSchema";
+
 export * from "./highlightHtml";
+
+export * from "./nonValidSheetId";
 
 export * from "./sortSheets";
 

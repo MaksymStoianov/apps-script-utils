@@ -16,11 +16,11 @@ We aim to provide security updates for the following versions of **apps-script-u
   </thead>
   <tbody>
     <tr>
-      <td><code>>= 1.0.0</code></td>
+      <td><code>>= 2.0.0</code></td>
       <td>:white_check_mark:</td>
     </tr>
     <tr>
-      <td><code>< 1.0.0</code></td>
+      <td><code>< 2.0.0</code></td>
       <td>:x:</td>
     </tr>
   </tbody>

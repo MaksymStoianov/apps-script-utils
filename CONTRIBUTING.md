@@ -22,7 +22,6 @@ Great that you are here and you want to contribute to **apps-script-utils**!
       - [1. General Requirements](#1-general-requirements)
       - [2. PR Specific Requirements](#2-pr-specific-requirements)
     - [Test Suite](#test-suite)
-  - [Roadmap](#roadmap)
   - [License](#license)
 
 <!-- TOC -->
@@ -38,7 +37,7 @@ to [stoianov.maksym@gmail.com](mailto:stoianov.maksym@gmail.com).
 The project is organized as follows:
 
 - [**`config/`**](config/) — Configuration files for build tools and environment.
-- [**`docs/`**](docs/) — Documentation and assets.
+- [**`docs/`**](docs/) — Documentation: shared assets, and the Writerside source of the documentation site under [`docs/writerside/`](docs/writerside/).
 - [**`scripts/`**](scripts/) — Utility scripts for maintenance and development.
 - [**`src/`**](src/) — Source code of the library. Organized into logical modules like `appsscript/`, `lang/`, `net/`, etc.
 - [**`test/`**](test/) — Test suites mirroring the `src` structure.
@@ -179,11 +178,6 @@ The project uses [Vitest](https://vitest.dev/) for testing.
   ```bash
   npm run dev
   ```
-
-## Roadmap
-
-The current vision for the project's development can be found in the [Roadmap](ROADMAP.md). Please note that the
-roadmap is for informational purposes and is subject to change.
 
 ## License
 

@@ -1,28 +1,51 @@
-// TODO: isDouble
-// TODO: isFloat
+export * from "./isDouble";
+
+export * from "./isFloat";
+
 export * from "./isCountable";
 
 export * from "./isInteger";
-// TODO: isSafeInteger
-// TODO: isNaN
 
-// TODO: nonDouble
-// TODO: nonFloat
-// TODO: nonInteger
-// TODO: nonSafeInteger
-// TODO: nonNaN
+export * from "./isSafeInteger";
+
+export * from "./isNaN";
+
+export * from "./nonDouble";
+
+export * from "./nonFloat";
+
+export * from "./nonInteger";
+
+export * from "./nonCountable";
+
+export * from "./nonSafeInteger";
+
+export * from "./nonNaN";
+
+export * from "./isNonNegative";
+
 export * from "./nonNegative";
 
-// TODO: requireDouble
-// TODO: requireFloat
-// TODO: requireInteger
-// TODO: requireSafeInteger
-// TODO: requireNaN
+export * from "./requireDouble";
 
-// TODO: requireNonDouble
-// TODO: requireNonFloat
-// TODO: requireNonInteger
-// TODO: requireNonSafeInteger
-// TODO: requireNonNaN
+export * from "./requireFloat";
+
+export * from "./requireInteger";
+
+export * from "./requireCountable";
+
+export * from "./requireSafeInteger";
+
+export * from "./requireNaN";
+
+export * from "./requireNonDouble";
+
+export * from "./requireNonFloat";
+
+export * from "./requireNonInteger";
+
+export * from "./requireNonSafeInteger";
+
+export * from "./requireNonNaN";
 
 export * from "./toInteger";

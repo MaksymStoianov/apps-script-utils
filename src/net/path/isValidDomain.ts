@@ -16,25 +16,30 @@ export function isValidDomain(domain: string): domain is string {
     return false;
   }
 
-  if (
+  const hasInvalidEdge: boolean =
     domain.startsWith("-") ||
     domain.endsWith("-") ||
     domain.startsWith(".") ||
-    domain.endsWith(".")
-  ) {
+    domain.endsWith(".");
+
+  if (hasInvalidEdge) {
     return false;
   }
 
-  const parts = domain.split(".");
+  const parts: Array<string> = domain.split(".");
 
   if (parts.length < 2) {
     return false;
   }
 
-  const LABEL_PATTERN = /^[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/;
+  const LABEL_PATTERN = /^[a-zA-Z0-9-]+$/;
 
   for (const part of parts) {
     if (part.length === 0) {
+      return false;
+    }
+
+    if (part.startsWith("-") || part.endsWith("-")) {
       return false;
     }
 
@@ -43,7 +48,7 @@ export function isValidDomain(domain: string): domain is string {
     }
   }
 
-  const tld = parts[parts.length - 1];
+  const tld: string = parts[parts.length - 1];
 
   return !(tld.length < 2 || !/^[a-zA-Z]+$/.test(tld));
 }
