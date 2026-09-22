@@ -46,7 +46,8 @@ export * from "./nonTextStyle";
 export * from "./requireCellGridRange";
 
 // TODO: requireGridRangeContainedIn
-// TODO: requireGridRangeSameDimensions
+export * from "./requireGridRangeSameDimensions";
+
 export * from "./requireRange";
 
 export * from "./requireRichTextValue";
