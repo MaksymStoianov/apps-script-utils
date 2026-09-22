@@ -1,3 +1,5 @@
+export * from "./types";
+
 export * from "./now";
 
 export * from "./StopWatch";
@@ -6,4 +8,5 @@ export * from "./StopWatch";
 export * from "./getDaysInMonth";
 
 // TODO: getDaysLeftInMonth
-// TODO: offset
+
+export * from "./offset";
