@@ -42,11 +42,10 @@ export * from "./nonTextStyle";
 // TODO: nonValidSheetName
 // TODO: nonValidSpreadsheetId
 
-export * from "./requireCellGridRange";
+// TODO: requireCellGridRange
+export * from "./requireGridRangeContainedIn";
 
-// TODO: requireGridRangeContainedIn
-export * from "./requireGridRangeSameDimensions";
-
+// TODO: requireGridRangeSameDimensions
 export * from "./requireRange";
 
 export * from "./requireRichTextValue";
