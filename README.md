@@ -16,7 +16,6 @@
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License" alt="License"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
-  <a href="ROADMAP.md"><img src="https://img.shields.io/badge/Roadmap-View-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/MaksymStoianov/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release" alt="Latest release"></a>
 </p>
 
@@ -43,7 +42,6 @@
   - [Functions by Category](#functions-by-category)
   - [Contributing](#contributing)
   - [Support](#support)
-  - [Roadmap](#roadmap)
   - [Changelog](#changelog)
   - [License](#license)
   <!-- TOC -->
@@ -263,10 +261,6 @@ guidelines.
 - For recent changes, see the [Changelog](CHANGELOG.md).
 - To report a security vulnerability, follow the [Security Policy](SECURITY.md) instead of opening a public issue.
 - To support ongoing development, see [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
-
-## Roadmap
-
-For the project's development plan and upcoming features, see [ROADMAP.md](ROADMAP.md).
 
 ## Changelog
 
