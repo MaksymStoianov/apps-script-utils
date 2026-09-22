@@ -27,11 +27,10 @@ export * from "./isValidSheetName";
 
 export * from "./isValidSpreadsheetId";
 
-export * from "./nonCellGridRange";
+// TODO: nonCellGridRange
+export * from "./nonGridRangeContainedIn";
 
-// TODO: nonGridRangeContainedIn
-export * from "./nonGridRangeSameDimensions";
-
+// TODO: nonGridRangeSameDimensions
 export * from "./nonRange";
 
 export * from "./nonRichTextValue";
