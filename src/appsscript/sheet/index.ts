@@ -32,10 +32,12 @@ export * from "./isValidSpreadsheetId";
 // TODO: nonGridRangeSameDimensions
 export * from "./nonRange";
 
-// TODO: nonRichTextValue
+export * from "./nonRichTextValue";
+
 export * from "./nonSheet";
 // TODO: nonSpreadsheet
-// TODO: nonTextStyle
+export * from "./nonTextStyle";
+
 // TODO: nonValidSheetName
 // TODO: nonValidSpreadsheetId
 
@@ -44,11 +46,13 @@ export * from "./nonSheet";
 // TODO: requireGridRangeSameDimensions
 export * from "./requireRange";
 
-// TODO: requireRichTextValue
+export * from "./requireRichTextValue";
+
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
-// TODO: requireTextStyle
+export * from "./requireTextStyle";
+
 // TODO: requireValidSheetName
 // TODO: requireValidSpreadsheetId
 
@@ -77,6 +81,8 @@ export * from "./extractSheetNameFromA1Notation";
 export * from "./getColumnIndexByLetter";
 
 export * from "./getColumnLetterByIndex";
+
+export * from "./getColumnPositionByLetter";
 
 export * from "./getSheetById";
 
