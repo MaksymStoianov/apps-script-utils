@@ -105,7 +105,9 @@ export * from "./getSheetByIndex";
 
 // TODO: getValues(sheet: Sheet, config: Object)
 // TODO: clearColumnsByConditional(sheet: Sheet, callback: Function)
-// TODO: clearRowsByConditional(sheet: Sheet, callback: Function)
+
+export * from "./clearRowsByConditional";
+
 // TODO: deleteRowsByConditional(sheet: Sheet, callback: Function)
 // TODO: deleteColumnsByConditional(sheet: Sheet, callback: Function)
 export * from "./getNamedRangeByName";
