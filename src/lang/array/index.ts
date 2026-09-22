@@ -20,5 +20,7 @@ export * from "./transpose";
 // TODO: first(arr: Array)
 // TODO: last(arr: Array)
 // TODO: compact(arr: Array)
-// TODO: without(arr: Array, ...values: any)
+
+export * from "./without";
+
 // TODO: intersect(arr: Array)
