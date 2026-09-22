@@ -1,4 +1,3 @@
-import { InvalidGridRangeException } from "../../exception";
 import { isNil, isObject } from "../../lang";
 import type { GridRange } from "./types";
 
@@ -8,7 +7,6 @@ import type { GridRange } from "./types";
  * @param       {GridRange} range1 - The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
  * @param       {GridRange} range2 - The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
  * @returns     {boolean} `true` if both ranges are well-defined and have the identical height (number of rows) and width (number of columns), `false` otherwise.
- * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
@@ -18,7 +16,7 @@ import type { GridRange } from "./types";
  */
 export function isGridRangeSameDimensions(range1: GridRange, range2: GridRange): boolean {
   if (!isObject(range1) || !isObject(range2)) {
-    throw new InvalidGridRangeException();
+    return false;
   }
 
   const getDimensions = (gridRange: GridRange): { height: number; width: number } | null => {

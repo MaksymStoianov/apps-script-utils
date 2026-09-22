@@ -2,6 +2,8 @@ export * from "./base";
 
 export * from "./array";
 
+export * from "./function";
+
 export * from "./number";
 
 export * from "./object";
