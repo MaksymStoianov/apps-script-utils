@@ -3,6 +3,12 @@ import { getColumnLetterByIndex } from "./getColumnLetterByIndex";
 /**
  * Converts a column position into its corresponding column letter (or combination of letters).
  *
+ * @example
+ * ```javascript
+ * getColumnLetterByPosition(1); // => "A"
+ * getColumnLetterByPosition(27); // => "AA"
+ * ```
+ *
  * @param       {number} columnPosition - The zero-based column position (e.g., `1` for 'A').
  * @returns     {string} The alphabetical representation of the column.
  * @throws      {@link IllegalArgumentException}

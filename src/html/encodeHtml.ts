@@ -3,6 +3,11 @@ import { requireNonEmptyString } from "../lang";
 /**
  * Encodes characters in a string (from `U+00A0` to `U+9999`) into their corresponding HTML entities.
  *
+ * @example
+ * ```javascript
+ * encodeHtml("<a>"); // => "&#60;a&#62;"
+ * ```
+ *
  * @param   {string} value - The string to encode.
  * @returns {string} The string with HTML-encoded characters.
  * @throws  {@link EmptyStringException}

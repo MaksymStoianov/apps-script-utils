@@ -8,6 +8,19 @@ import { RuntimeException } from "./RuntimeException";
  * establish who the caller is. The remedies differ: re-authenticating does not
  * grant a missing role.
  *
+ * @example
+ * ```javascript
+ * throw new AuthorizationException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof AuthorizationException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link AuthenticationException}
  * @see     {@link Exception}

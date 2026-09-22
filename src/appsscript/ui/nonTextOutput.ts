@@ -5,6 +5,15 @@ type TextOutput = GoogleAppsScript.Content.TextOutput;
 /**
  * Checks if the provided value is NOT a <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const output = ContentService.createTextOutput("hi");
+ *
+ * nonTextOutput({}); // => true
+ * nonTextOutput(null); // => true
+ * nonTextOutput(output); // => false
+ * ```
+ *
  * @template T
  * @param       {T | GoogleAppsScript.Content.TextOutput} value - The value to check.
  * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a> object; otherwise, `false`.

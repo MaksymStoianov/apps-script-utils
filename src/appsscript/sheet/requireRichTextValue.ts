@@ -8,6 +8,15 @@ import { isRichTextValue } from "./isRichTextValue";
  * The guard to place in front of {@link convertRichTextToHtml}, which assumes
  * its input without checking it.
  *
+ * @example
+ * ```javascript
+ * const value = SpreadsheetApp.newRichTextValue().setText("a").build();
+ *
+ * requireRichTextValue(value); // => value
+ * requireRichTextValue({}); // throws IllegalArgumentException
+ * requireRichTextValue(null); // throws IllegalArgumentException
+ * ```
+ *
  * @param       {unknown} value - The value to validate.
  * @param       {string} [message="Expected a RichTextValue object."] - Optional custom error message if the validation fails.
  * @returns     {GoogleAppsScript.Spreadsheet.RichTextValue} The validated <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a> object.

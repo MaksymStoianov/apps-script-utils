@@ -3,6 +3,19 @@ import { RuntimeException } from "../../RuntimeException";
 /**
  * Represents an exception thrown when an invalid {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object is provided.
  *
+ * @example
+ * ```javascript
+ * throw new InvalidSheetException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof InvalidSheetException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}

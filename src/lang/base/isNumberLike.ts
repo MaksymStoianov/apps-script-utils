@@ -4,6 +4,17 @@ import { isString } from "./isString";
 /**
  * Checks if the provided value is a number in a broader sense.
  *
+ * @example
+ * ```javascript
+ * isNumberLike(1); // => true
+ * isNumberLike("1.5"); // => true
+ * isNumberLike(" 42 "); // => true
+ * isNumberLike(NaN); // => false
+ * isNumberLike(Infinity); // => false
+ * isNumberLike(""); // => false
+ * isNumberLike(null); // => false
+ * ```
+ *
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a number; otherwise, `false`.
  * @see     {@link isNumber}

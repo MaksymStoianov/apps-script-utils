@@ -4,6 +4,16 @@ import { nonNil } from "./nonNil";
 /**
  * Checks if `value` is an object in a broader sense.
  *
+ * @example
+ * ```javascript
+ * isObjectLike({}); // => true
+ * isObjectLike([]); // => true
+ * isObjectLike(function () {}); // => true
+ * isObjectLike(null); // => false
+ * isObjectLike("abc"); // => false
+ * isObjectLike(1); // => false
+ * ```
+ *
  * @param   {boolean} value - The value to check.
  * @returns {unknown} `true` if `value` is an `Object`, else `false`.
  * @see     {@link isObject}

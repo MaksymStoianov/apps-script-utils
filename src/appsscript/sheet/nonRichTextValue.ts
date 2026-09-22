@@ -3,6 +3,15 @@ import { isRichTextValue } from "./isRichTextValue";
 /**
  * Checks if the provided value is NOT a <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const value = SpreadsheetApp.newRichTextValue().setText("a").build();
+ *
+ * nonRichTextValue({}); // => true
+ * nonRichTextValue(null); // => true
+ * nonRichTextValue(value); // => false
+ * ```
+ *
  * @template T
  * @param       {T | GoogleAppsScript.Spreadsheet.RichTextValue} value - The value to check.
  * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value"><code>RichTextValue</code></a> object; otherwise, `false`.

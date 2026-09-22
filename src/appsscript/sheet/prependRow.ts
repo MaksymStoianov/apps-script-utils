@@ -4,6 +4,13 @@ import { prependRows, type PrependRowsOptions } from "./prependRows";
  * Prepends a single row to the top of the current data area on a [`sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet).
  * If a cell's content starts with `=`, it is interpreted as a formula.
  *
+ * @example
+ * ```javascript
+ * const sheet = SpreadsheetApp.getActiveSheet();
+ *
+ * prependRow(sheet, ["id", "name", "email"]);
+ * ```
+ *
  * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object to which the row will be prepended.
  * @param       {any[]} values - A 1D array containing the data for the single row.
  * @param       {PrependRowsOptions | null} [options] - Additional parameters to customize the method's behavior.

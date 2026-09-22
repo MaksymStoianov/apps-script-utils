@@ -3,6 +3,15 @@ import { isFunctionLike } from "./isFunctionLike";
 /**
  * Checks if the provided value is NOT a function in a broader sense.
  *
+ * @example
+ * ```javascript
+ * nonFunctionLike(null); // => true
+ * nonFunctionLike({}); // => true
+ * nonFunctionLike("fn"); // => true
+ * nonFunctionLike(function () {}); // => false
+ * nonFunctionLike(Math.max); // => false
+ * ```
+ *
  * @template T
  * @param   {T | Function} value - The value to check.
  * @returns {boolean} `true` if the value is not a function; otherwise, `false`.

@@ -8,6 +8,15 @@ import { isTextStyle } from "./isTextStyle";
  * A `TextStyleBuilder` does not qualify. `SpreadsheetApp.newTextStyle()`
  * returns the builder; only `.build()` produces the style.
  *
+ * @example
+ * ```javascript
+ * const style = SpreadsheetApp.newTextStyle().setBold(true).build();
+ *
+ * requireTextStyle(style); // => style
+ * requireTextStyle({}); // throws IllegalArgumentException
+ * requireTextStyle(null); // throws IllegalArgumentException
+ * ```
+ *
  * @param       {unknown} value - The value to validate.
  * @param       {string} [message="Expected a TextStyle object."] - Optional custom error message if the validation fails.
  * @returns     {GoogleAppsScript.Spreadsheet.TextStyle} The validated <a href="https://developers.google.com/apps-script/reference/spreadsheet/text-style"><code>TextStyle</code></a> object.

@@ -8,6 +8,14 @@ import { isValidSlideId } from "./isValidSlideId";
  * single character passes. Contrast {@link isValidPresentationId}, which also
  * requires at least 25 characters.
  *
+ * @example
+ * ```javascript
+ * nonValidSlideId("has space"); // => true
+ * nonValidSlideId(""); // => true
+ * nonValidSlideId("p1"); // => false
+ * nonValidSlideId("SLIDES_api123"); // => false
+ * ```
+ *
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is not a valid slide identifier; otherwise, `false`.
  * @see         {@link isValidSlideId}

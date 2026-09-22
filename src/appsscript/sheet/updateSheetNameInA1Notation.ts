@@ -6,6 +6,11 @@ import { parseA1Notation } from "./parseA1Notation";
 /**
  * Updates or sets the sheet name within an A1 notation string, while preserving the range information (e.g., `A1:B2`).
  *
+ * @example
+ * ```javascript
+ * updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
+ * ```
+ *
  * @param       {string} a1Notation - The source A1 notation, which may or may not include a sheet name (e.g., `'Sheet Name'!A1:B2` or `A1:B2`).
  * @param       {string|null} [sheetName] - The new sheet name to set.
  * Pass `null` or `undefined` to remove any existing sheet name and return only the range.

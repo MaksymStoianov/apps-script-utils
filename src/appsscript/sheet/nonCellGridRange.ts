@@ -8,6 +8,14 @@ import type { GridRange } from "./types";
  * whose bounds are open-ended or missing, since neither can be shown to be a
  * single cell.
  *
+ * @example
+ * ```javascript
+ * nonCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // => true
+ * nonCellGridRange({}); // => true
+ * nonCellGridRange(null); // => true
+ * nonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => false
+ * ```
+ *
  * @param       {GridRange} gridRange - The grid range to check.
  * @returns     {boolean} `true` if the grid range does not denote a single cell; otherwise, `false`.
  * @see         {@link isCellGridRange}

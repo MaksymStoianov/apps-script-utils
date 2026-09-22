@@ -3,6 +3,11 @@ import { requireNonEmptyString } from "../lang";
 /**
  * Escapes HTML special characters in a string.
  *
+ * @example
+ * ```javascript
+ * escapeHtml("<a>&"); // => "&lt;a&gt;&amp;"
+ * ```
+ *
  * @param   {string} value - The string to escape.
  * @returns {string} The string with HTML special characters converted to entities.
  * @throws  {@link EmptyStringException}

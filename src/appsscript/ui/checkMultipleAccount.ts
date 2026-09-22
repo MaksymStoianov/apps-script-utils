@@ -3,6 +3,15 @@ import { requireValidEmail } from "../../lang";
 /**
  * If the user is logged into multiple accounts in the same browser session, `google.script.run` might execute under a different account than the one that initiated the UI display.
  *
+ * @example
+ * ```javascript
+ * function onOpen(event) {
+ *   if (checkMultipleAccount(event.user.getEmail())) {
+ *     SpreadsheetApp.getUi().alert("You are signed in to more than one Google account.");
+ *   }
+ * }
+ * ```
+ *
  * @param       {string} email - The email address of the account that initiated the display of the user interface.
  * @returns     {boolean} `true` if the initiating account's email does not match the effective user's email, indicating a multi-account conflict; `false` otherwise.
  * @since       1.0.0

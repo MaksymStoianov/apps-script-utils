@@ -3,6 +3,16 @@ import { isNumber } from "../base";
 /**
  * Checks if a value is a number and an integer.
  *
+ * @example
+ * ```javascript
+ * isInteger(42); // => true
+ * isInteger(-7); // => true
+ * isInteger(0); // => true
+ * isInteger(1.5); // => false
+ * isInteger(NaN); // => false
+ * isInteger("42"); // => false
+ * ```
+ *
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is an integer, otherwise `false`.
  * @see     {@link isNumber}

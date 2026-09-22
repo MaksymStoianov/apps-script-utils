@@ -3,6 +3,19 @@ import { RuntimeException } from "../../RuntimeException";
 /**
  * Represents an exception thrown when an invalid {@link GoogleAppsScript.Spreadsheet.Range|Range} object is provided.
  *
+ * @example
+ * ```javascript
+ * throw new InvalidRangeException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof InvalidRangeException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}

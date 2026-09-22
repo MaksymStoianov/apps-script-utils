@@ -1,6 +1,11 @@
 /**
  * What a column holds, as far as a schema is concerned.
  *
+ * @example
+ * ```javascript
+ * const type = "date";
+ * ```
+ *
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -8,6 +13,11 @@ export type SheetColumnType = "string" | "number" | "boolean" | "date";
 
 /**
  * One column of a sheet's schema.
+ *
+ * @example
+ * ```javascript
+ * const column = { name: "created", type: "date" };
+ * ```
  *
  * @since   1.11.0
  * @version 1.0.0
@@ -61,6 +71,18 @@ export interface SheetColumnSchema {
  * A schema is stored on the sheet as developer metadata rather than in a
  * hidden sheet or re-derived from the header row, which keeps it invisible to
  * the people using the spreadsheet and unaffected by their row edits.
+ *
+ * @example
+ * ```javascript
+ * const schema = {
+ *   version: 1,
+ *   headerRow: 1,
+ *   columns: [
+ *     { name: "id", type: "number" },
+ *     { name: "email", type: "string" }
+ *   ]
+ * };
+ * ```
  *
  * @since   1.11.0
  * @version 1.0.0

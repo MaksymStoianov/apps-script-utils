@@ -3,6 +3,15 @@ import { isObject } from "../../lang";
 /**
  * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const range = SpreadsheetApp.getActiveRange();
+ *
+ * isRange(range); // => true
+ * isRange({}); // => false
+ * isRange(null); // => false
+ * ```
+ *
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object, `false` otherwise.
  * @see         {@link nonRange}

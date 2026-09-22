@@ -7,6 +7,13 @@ import { isValidVersion } from "./isValidVersion";
  * segment by segment. It expects the version strings to be valid
  * as per `isValidVersion`.
  *
+ * @example
+ * ```javascript
+ * versionCompare("1.2.0", "1.10.0"); // => -1
+ * versionCompare("2.0", "2"); // => 0
+ * versionCompare("1.2.3", "1.2.3-beta"); // throws TypeError
+ * ```
+ *
  * @param   {string} version1 - The first version string to compare.
  * @param   {string} version2 - The second version string to compare.
  * @returns {number}

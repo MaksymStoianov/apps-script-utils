@@ -3,6 +3,19 @@ import { RuntimeException } from "../../RuntimeException";
 /**
  * Represents an exception thrown when an invalid {@link GoogleAppsScript.Slides.Presentation|Presentation} object is provided.
  *
+ * @example
+ * ```javascript
+ * throw new InvalidPresentationException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof InvalidPresentationException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}

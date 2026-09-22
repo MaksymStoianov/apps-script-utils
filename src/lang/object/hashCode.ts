@@ -5,6 +5,12 @@ import { objectToString } from "./objectToString";
 /**
  * Computes a 32-bit hash code for a given value.
  *
+ * @example
+ * ```javascript
+ * hashCode("abc"); // => 96354
+ * hashCode(""); // => 0
+ * ```
+ *
  * @param   {unknown} value - The input value to compute the hash for.
  * @returns {number} The computed 32-bit hash code.
  * @throws  {@link TypeError}

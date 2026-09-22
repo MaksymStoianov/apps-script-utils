@@ -1,6 +1,18 @@
 /**
  * A range on a sheets.
  *
+ * @example
+ * ```javascript
+ * // A1:B2 on the first sheet.
+ * const range = {
+ *   sheetId: 0,
+ *   startRowIndex: 0,
+ *   endRowIndex: 2,
+ *   startColumnIndex: 0,
+ *   endColumnIndex: 2
+ * };
+ * ```
+ *
  * @since   1.0.0
  * @version 1.0.0
  */

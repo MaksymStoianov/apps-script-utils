@@ -3,6 +3,19 @@ import { RuntimeException } from "./RuntimeException";
 /**
  * Represents an exception thrown when a repository is not defined.
  *
+ * @example
+ * ```javascript
+ * throw new RepositoryIsNotDefinedException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof RepositoryIsNotDefinedException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}

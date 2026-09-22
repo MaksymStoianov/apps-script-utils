@@ -3,6 +3,19 @@ import { RuntimeException } from "./RuntimeException";
 /**
  * Represents an exception thrown when a string is expected but is `null`, `undefined`, or empty.
  *
+ * @example
+ * ```javascript
+ * throw new EmptyStringException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof EmptyStringException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}

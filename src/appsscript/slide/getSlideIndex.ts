@@ -4,6 +4,14 @@ import { isSlide } from "./isSlide";
 /**
  * Gets the index of a slide in its presentation.
  *
+ * @example
+ * ```javascript
+ * const presentation = SlidesApp.getActivePresentation();
+ * const slide = presentation.getSlides()[2];
+ *
+ * getSlideIndex(slide, presentation); // => 2
+ * ```
+ *
  * @param {GoogleAppsScript.Slides.Slide} slide The slide object.
  * @param {GoogleAppsScript.Slides.Presentation} presentation The presentation object.
  * @returns {number | null} The zero-based index of the slide, or `null` if the slide is not found in the presentation.

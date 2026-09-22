@@ -4,6 +4,15 @@ import { isSpreadsheet } from "./isSpreadsheet";
 /**
  * Sorts all sheets in a spreadsheet alphabetically by name.
  *
+ * @example
+ * ```javascript
+ * const spreadsheet = SpreadsheetApp.getActive();
+ *
+ * sortSheets(spreadsheet); // alphabetically by name
+ *
+ * sortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed
+ * ```
+ *
  * @param       {GoogleAppsScript.Spreadsheet.Spreadsheet} spreadsheet - The spreadsheet object.
  * @param       {(a: string, b: string) => number} [callback] - An optional callback function for custom sorting.
  * @returns     {void}

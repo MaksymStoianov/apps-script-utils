@@ -3,6 +3,11 @@ import { requireNonEmptyString } from "../lang";
 /**
  * Escapes special characters in a string for safe use within XML/HTML content.
  *
+ * @example
+ * ```javascript
+ * escapeXml("<a>&"); // => "&lt;a&gt;&amp;"
+ * ```
+ *
  * @param   {string} value - The string containing characters to be escaped for XML.
  * @returns {string} The escaped string, safe for use in XML/HTML text content or attribute values.
  * @throws  {@link EmptyStringException}

@@ -5,6 +5,14 @@ import { requireNonEmptyString } from "./requireNonEmptyString";
 /**
  * Validates that the provided value is a non-empty string and a valid email format.
  *
+ * @example
+ * ```javascript
+ * requireValidEmail("user@example.com"); // => "user@example.com"
+ * requireValidEmail("first.last@sub.example.co.uk"); // => "first.last@sub.example.co.uk"
+ * requireValidEmail("user@@example.com"); // throws InvalidEmailFormatException
+ * requireValidEmail("user@"); // throws InvalidEmailFormatException
+ * ```
+ *
  * @param   {string | null | undefined} email - The string value representing an email to validate. Can be `null` or `undefined`.
  * @param   {string} [message] - Optional. A custom error message if the validation fails.
  * @returns {string} The validated, non-empty, and validly formatted email string.

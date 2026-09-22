@@ -7,6 +7,11 @@ import { requireSheet } from "./requireSheet";
  *
  * Returning the formula unchanged leaves the cell alone.
  *
+ * @example
+ * ```javascript
+ * const rewrite = (formula, row, column) => formula.replace("Sheet1", "Data");
+ * ```
+ *
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -3,6 +3,12 @@ import { requireNonEmptyString } from "../lang";
 /**
  * Decodes common HTML entities in a string.
  *
+ * @example
+ * ```javascript
+ * decodeHtml("&#60;a&#62;"); // => "<a>"
+ * decodeHtml("&amp;"); // => "&amp;"
+ * ```
+ *
  * @param   {string} value - The string containing HTML entities to decode.
  * @returns {string} The string with decoded HTML entities.
  * @throws  {@link EmptyStringException}

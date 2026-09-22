@@ -9,6 +9,14 @@ import type { GridRange } from "./types";
  * not an object at all. Note that a range equal to its container **is**
  * contained, so an identical pair reports `false`.
  *
+ * @example
+ * ```javascript
+ * const inner = { startRowIndex: 1, endRowIndex: 2, startColumnIndex: 1, endColumnIndex: 2 };
+ * const outer = { startRowIndex: 0, endRowIndex: 5, startColumnIndex: 0, endColumnIndex: 5 };
+ *
+ * nonGridRangeContainedIn(outer, inner); // => true
+ * ```
+ *
  * @param       {GridRange} gridRange - The grid range to test.
  * @param       {GridRange} containerGridRange - The grid range expected to contain it.
  * @returns     {boolean} `true` if the first range is not contained within the second; otherwise, `false`.

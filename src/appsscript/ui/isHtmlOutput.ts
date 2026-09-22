@@ -5,6 +5,15 @@ type HtmlOutput = GoogleAppsScript.HTML.HtmlOutput;
 /**
  * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/html/html-output"><code>HtmlOutput</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const output = HtmlService.createHtmlOutput("<p>hi</p>");
+ *
+ * isHtmlOutput(output); // => true
+ * isHtmlOutput({}); // => false
+ * isHtmlOutput(null); // => false
+ * ```
+ *
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is an <a href="https://developers.google.com/apps-script/reference/html/html-output"><code>HtmlOutput</code></a> object, `false` otherwise.
  * @see         <a href="https://developers.google.com/apps-script/reference/html/html-output"><code>HtmlOutput</code></a>

@@ -3,6 +3,13 @@ import { isSlide } from "./isSlide";
 /**
  * Finds and replaces all occurrences of text within a slide.
  *
+ * @example
+ * ```javascript
+ * const slide = SlidesApp.getActivePresentation().getSlides()[0];
+ *
+ * const replaced = findReplaceAllTextInSlide(slide, "{{ client }}", "Acme", false);
+ * ```
+ *
  * @param {GoogleAppsScript.Slides.Slide} slide The slide object.
  * @param {string} findText The text to find.
  * @param {string} replaceText The text to replace with.
