@@ -10,9 +10,10 @@ scheduled for removal in a future release.
 
 General-purpose helpers used across the Google Apps Script modules below.
 
-| Function                                                                                                          | Return type | Brief description                                 |
-| :---------------------------------------------------------------------------------------------------------------- | :---------- | :------------------------------------------------ |
-| [`getByteSize`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts) | `Number`    | Calculates the size of a string in bytes (UTF-8). |
+| Function                                                                                                                        | Return type       | Brief description                                                                  |
+| :------------------------------------------------------------------------------------------------------------------------------ | :---------------- | :--------------------------------------------------------------------------------- |
+| [`getByteSize`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)               | `Number`          | Calculates the size of a string in bytes (UTF-8).                                  |
+| [`getTriggerById`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getTriggerById.ts) **New** | `Trigger \| null` | Retrieves a project trigger by its unique id, or `null` when the project has none. |
 
 ## Google Admin SDK Directory Methods
 
