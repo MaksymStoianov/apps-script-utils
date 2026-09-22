@@ -1,16 +1,34 @@
 import { isString } from "../../lang";
 
+/** Drive file ids are at least 25 characters from an unreserved alphabet. */
+const PATTERN = /^[a-zA-Z0-9-_]{25,}$/;
+
 /**
- * Checks if the given value is a valid [`Google Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet) ID.
+ * Checks if the provided value is a valid spreadsheet identifier.
+ *
+ * A spreadsheet id is a Drive file id: at least 25 characters drawn from
+ * letters, digits, hyphens and underscores. A full Sheets URL therefore fails
+ * — extract the id from it first.
+ *
+ * The check is on shape, not existence: a value that passes may still refer to
+ * no file, or to one the script cannot open.
+ *
+ * @example
+ * ```javascript
+ * isValidSpreadsheetId("1AbCdEfGhIjKlMnOpQrStUvWx");  // => true
+ * isValidSpreadsheetId("hello world!");                // => false
+ * isValidSpreadsheetId("https://docs.google.com/…");   // => false
+ * ```
  *
  * @param       {unknown} value - The value to check.
- * @returns     {boolean} `true` if the value is a string with a length greater than 10, `false` otherwise.
- * @see         {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet}
- * @see         [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
- * @since       1.0.0
- * @version     1.0.0
+ * @returns     {boolean} `true` if the value is a valid spreadsheet identifier; otherwise, `false`.
+ * @see         {@link nonValidSpreadsheetId}
+ * @see         {@link requireValidSpreadsheetId}
+ * @see         {@link isValidPresentationId}
+ * @since       1.5.0
+ * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`
  */
 export function isValidSpreadsheetId(value: unknown): value is string {
-  return isString(value) && value.length > 10;
+  return isString(value) && PATTERN.test(value);
 }
