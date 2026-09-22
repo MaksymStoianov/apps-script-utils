@@ -22,7 +22,7 @@ export * from "./unique";
 
 export * from "./first";
 
-// TODO: last(arr: Array)
+export * from "./last";
 // TODO: compact(arr: Array)
 // TODO: without(arr: Array, ...values: any)
 // TODO: intersect(arr: Array)
