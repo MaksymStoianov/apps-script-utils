@@ -110,10 +110,11 @@ export * from "./deleteRowsByConditional";
 
 export * from "./clearColumnsByConditional";
 
-// TODO: deleteColumnsByConditional(sheet: Sheet, callback: Function)
 export * from "./getNamedRangeByName";
 
 export * from "./updateFormulas";
+
+export * from "./deleteColumnsByConditional";
 
 // TODO: insertSchema
 // TODO: getSchema(sheet: Sheet)
