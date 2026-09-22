@@ -4,7 +4,8 @@
 export * from "./isUrl";
 // TODO: isUrlLike
 
-// TODO: nonUrl
+export * from "./nonUrl";
+
 // TODO: nonUrlLike
 
 // TODO: requireUrl
