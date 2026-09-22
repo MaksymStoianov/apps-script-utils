@@ -27,7 +27,11 @@ Helpers for the [Admin SDK Directory Service](https://developers.google.cn/apps-
 
 ## Google Drive Methods
 
-Helpers for Google Drive. Not implemented yet; tracked in the [Roadmap](https://github.com/MaksymStoianov/apps-script-utils/blob/main/ROADMAP.md).
+Helpers for [Google Drive](https://developers.google.com/apps-script/reference/drive).
+
+| Function                                                                                                                     | Return type | Brief description                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------------------------------------------------------------------------------- |
+| [`createFolder`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/drive/createFolder.ts) **New** | `Folder`    | Creates a nested folder tree from a path, reusing the folders that already exist. |
 
 ## Google Docs Methods
 
