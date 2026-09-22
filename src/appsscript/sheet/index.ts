@@ -108,9 +108,9 @@ export * from "./getSheetByIndex";
 // TODO: clearRowsByConditional(sheet: Sheet, callback: Function)
 // TODO: deleteRowsByConditional(sheet: Sheet, callback: Function)
 // TODO: deleteColumnsByConditional(sheet: Sheet, callback: Function)
-// TODO: updateFormulas(sheet: Sheet)
-
 export * from "./getNamedRangeByName";
+
+export * from "./updateFormulas";
 
 // TODO: insertSchema
 // TODO: getSchema(sheet: Sheet)
