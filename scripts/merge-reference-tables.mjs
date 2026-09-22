@@ -13,6 +13,12 @@
  * both sides, or conflicting prose — falls back to `git merge-file` over the
  * whole file so that the conflict is resolved by hand.
  *
+ * The tables of the three sides are paired by the heading above them rather
+ * than by position, because a module's first function gives its section its
+ * first table and pairing by position would then line every later table up
+ * against the wrong one. A table only one side has passes through; a heading
+ * that repeats in one file, or a table under no heading at all, falls back.
+ *
  * Registered by `.gitattributes` plus the config that
  * `scripts/setup-merge-driver.sh` writes.
  *
@@ -29,7 +35,22 @@ const ROW = /^\|\s*\[`([^`]+)`\]/;
 
 const SEPARATOR = /^\|[\s:-]+\|/;
 
-const PLACEHOLDER = (index) => `<!--@@REFERENCE_TABLE_${index}@@-->`;
+const HEADING = /^#{1,6}\s+(.+)$/;
+
+const PLACEHOLDER = (key) => `<!--@@REFERENCE_TABLE_${key}@@-->`;
+
+/**
+ * Turns a heading into a token that survives being written into the skeleton
+ * and merged as ordinary text.
+ *
+ * @param {string} heading
+ * @returns {string | null} the key, or null for a heading that yields none
+ */
+function keyOf(heading) {
+  const key = heading.replace(/[^A-Za-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+
+  return key === "" ? null : key;
+}
 
 const [ancestorPath, oursPath, theirsPath, markerSize = "7", pathname] = process.argv.slice(2);
 
@@ -41,17 +62,29 @@ const [ancestorPath, oursPath, theirsPath, markerSize = "7", pathname] = process
  * other way are left as text, so a table of anything but functions passes
  * through untouched.
  *
+ * Each table is keyed by the heading above it. Returns null when a table has no
+ * heading to key it by, or when two tables would claim the same key, either of
+ * which sends the merge down the fallback path.
+ *
  * @param {string} text
- * @returns {{ skeleton: string, tables: { head: string[], rows: { name: string, text: string }[] }[] }}
+ * @returns {{ skeleton: string, tables: Map<string, { head: string[], rows: { name: string, text: string }[] }> }|null}
  */
 function parse(text) {
   const lines = text.split("\n");
 
   const skeleton = [];
 
-  const tables = [];
+  const tables = new Map();
+
+  let heading = "";
 
   for (let i = 0; i < lines.length; ) {
+    const title = HEADING.exec(lines[i]);
+
+    if (title) {
+      heading = title[1].trim();
+    }
+
     if (!lines[i].startsWith("|")) {
       skeleton.push(lines[i]);
       i += 1;
@@ -81,9 +114,17 @@ function parse(text) {
       }
     }
 
-    if (rows.length && head.length === 2 && SEPARATOR.test(head[1])) {
-      skeleton.push(PLACEHOLDER(tables.length));
-      tables.push({ head, rows });
+    const shaped = rows.length && head.length === 2 && SEPARATOR.test(head[1]);
+
+    if (shaped) {
+      const key = keyOf(heading);
+
+      if (key === null || tables.has(key)) {
+        return null;
+      }
+
+      skeleton.push(PLACEHOLDER(key));
+      tables.set(key, { head, rows });
     } else {
       skeleton.push(...block);
     }
@@ -92,6 +133,47 @@ function parse(text) {
   }
 
   return { skeleton: skeleton.join("\n"), tables };
+}
+
+/**
+ * Merges the one table that all three sides, or only some of them, carry under
+ * a given heading.
+ *
+ * @param {{ head: string[], rows: { name: string, text: string }[] }|undefined} base
+ * @param {{ head: string[], rows: { name: string, text: string }[] }|undefined} mine
+ * @param {{ head: string[], rows: { name: string, text: string }[] }|undefined} yours
+ * @returns {string | null | undefined} the table's text, undefined when it is gone, null to fall back
+ */
+function mergeTable(base, mine, yours) {
+  // Gone from both sides: the section lost its table, and nothing is written.
+  if (!mine && !yours) {
+    return undefined;
+  }
+
+  if (!mine || !yours) {
+    const kept = mine ?? yours;
+
+    // Added on one side only: it passes through as that side wrote it.
+    if (!base) {
+      return [...kept.head, ...kept.rows.map((row) => row.text)].join("\n");
+    }
+
+    // Removed on one side: dropping it is only safe while the other side left
+    // its rows alone.
+    const before = base.rows.map((row) => row.text).join("\n");
+
+    return kept.rows.map((row) => row.text).join("\n") === before ? undefined : null;
+  }
+
+  const rows = mergeEntries(base ? base.rows : [], mine.rows, yours.rows, byName);
+
+  if (!rows) {
+    return null;
+  }
+
+  const head = base && base.head.join("\n") === mine.head.join("\n") ? yours.head : mine.head;
+
+  return [...head, ...rows.map((row) => row.text)].join("\n");
 }
 
 function main() {
@@ -115,27 +197,24 @@ function main() {
 
   const t = parse(theirs);
 
-  // Tables added or removed wholesale are rare enough not to be worth guessing
-  // at which one lines up with which.
-  if (a.tables.length !== o.tables.length || a.tables.length !== t.tables.length) {
+  if (!a || !o || !t) {
     return fallback();
   }
 
-  const tables = [];
+  const keys = new Set([...a.tables.keys(), ...o.tables.keys(), ...t.tables.keys()]);
 
-  for (let i = 0; i < a.tables.length; i += 1) {
-    const rows = mergeEntries(a.tables[i].rows, o.tables[i].rows, t.tables[i].rows, byName);
+  const tables = new Map();
 
-    if (!rows) {
+  for (const key of keys) {
+    const table = mergeTable(a.tables.get(key), o.tables.get(key), t.tables.get(key));
+
+    if (table === null) {
       return fallback();
     }
 
-    const head =
-      a.tables[i].head.join("\n") === o.tables[i].head.join("\n")
-        ? t.tables[i].head
-        : o.tables[i].head;
-
-    tables.push([...head, ...rows.map((row) => row.text)].join("\n"));
+    if (table !== undefined) {
+      tables.set(key, table);
+    }
   }
 
   const skeleton = mergeFile(a.skeleton, o.skeleton, t.skeleton, markerSize);
@@ -146,14 +225,14 @@ function main() {
 
   let merged = skeleton.text;
 
-  for (let i = 0; i < tables.length; i += 1) {
-    const placeholder = PLACEHOLDER(i);
+  for (const [key, table] of tables) {
+    const placeholder = PLACEHOLDER(key);
 
     if (!merged.includes(placeholder)) {
       return fallback();
     }
 
-    merged = merged.replace(placeholder, () => tables[i]);
+    merged = merged.replace(placeholder, () => table);
   }
 
   if (merged.includes("<!--@@REFERENCE_TABLE_")) {
