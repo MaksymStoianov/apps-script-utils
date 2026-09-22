@@ -23,6 +23,7 @@ export * from "./unique";
 export * from "./first";
 
 export * from "./last";
-// TODO: compact(arr: Array)
+
+export * from "./compact";
 // TODO: without(arr: Array, ...values: any)
 // TODO: intersect(arr: Array)
