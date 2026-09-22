@@ -109,7 +109,8 @@ export * from "./getSheetByIndex";
 
 export * from "./insertSchema";
 
-// TODO: getSchema(sheet: Sheet)
+export * from "./getSchema";
+
 // TODO: removeSchema(sheet: Sheet)
 export * from "./highlightHtml";
 
