@@ -22,7 +22,6 @@ Great that you are here and you want to contribute to **apps-script-utils**!
       - [1. General Requirements](#1-general-requirements)
       - [2. PR Specific Requirements](#2-pr-specific-requirements)
     - [Test Suite](#test-suite)
-  - [Roadmap](#roadmap)
   - [License](#license)
 
 <!-- TOC -->
@@ -179,11 +178,6 @@ The project uses [Vitest](https://vitest.dev/) for testing.
   ```bash
   npm run dev
   ```
-
-## Roadmap
-
-The current vision for the project's development can be found in the [Roadmap](ROADMAP.md). Please note that the
-roadmap is for informational purposes and is subject to change.
 
 ## License
 
