@@ -1,5 +1,9 @@
 # exception
 
+<link-summary>The exception classes and how to extend them.</link-summary>
+
+<web-summary>The exception module of apps-script-utils: the Exception base class, the classes derived from it, and how to add your own to the hierarchy.</web-summary>
+
 `exception` holds the error classes the rest of the library throws. Nothing in it depends on the Apps Script
 runtime.
 

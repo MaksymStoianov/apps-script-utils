@@ -1,5 +1,13 @@
 # Overview
 
+<link-summary>What apps-script-utils is, what it covers, and how this documentation is organised.</link-summary>
+
+<web-summary>apps-script-utils is a TypeScript utility library for Google Apps Script: spreadsheet and A1-notation helpers, isX/nonX/requireX validation, and typed exceptions.</web-summary>
+
+![Project banner for Google Apps Script Utils](banner-1280x640.jpg)
+
+<p align="right"><small><i>Artist: <a href="https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=overview&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit" title="Portfolio of Daryna Mikhailenko, the artist">Daryna Mikhailenko</a></i></small></p>
+
 **apps-script-utils** is a TypeScript utility library purpose-built for **Google Apps Script**. It brings together the
 helpers every GAS project ends up writing by hand — spreadsheet and A1-notation manipulation, type/value validation
 (`isX`/`nonX`/`requireX`), string and array transforms, typed exceptions, and more — in a single, well-documented, and
@@ -27,7 +35,12 @@ fully tested package.
   [](module-net.md), and [](module-exception.md).
 - **Function reference** lists every exported function, grouped the way the package itself is grouped:
   [](reference-appsscript.md), [](reference-base.md), [](reference-exception.md), [](reference-path.md), and
-  [](reference-abstracts.md).
+  [](reference-abstracts.md). Every entry in those tables links to a page of its own — signature, parameters,
+  return value, what it throws, and worked examples — and every exported function, class and type has one.
+- [](ecosystem.md) — the boot.gs framework, which depends on this library, and the Agent Skills that teach an AI
+  coding agent to use it.
+
+Press <shortcut>/</shortcut> anywhere on this site to search it.
 
 ## Where the library runs
 

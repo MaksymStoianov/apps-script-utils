@@ -1,5 +1,9 @@
 # appsscript
 
+<link-summary>The Google Apps Script helpers: spreadsheets, A1 notation, UI, Drive, and the Admin SDK.</link-summary>
+
+<web-summary>The appsscript module of apps-script-utils: spreadsheet and A1-notation helpers, sheet validation, UI, Drive, Slides and Admin SDK utilities for Google Apps Script.</web-summary>
+
 `appsscript` holds everything that touches a Google service. It is the part of the library that only runs inside the
 Apps Script runtime — see [](apps-script-runtime.md) for what that means when testing.
 
@@ -169,9 +173,9 @@ if (isAdmin()) {
 }
 ```
 
-`isAdmin` throws `AdminDirectoryException` when the Admin SDK Directory Service is not enabled for the project, which
-is a different failure from the user simply not being an administrator. Enable the advanced service before calling
-it.
+`isAdmin` answers `false` when the Admin SDK Directory Service is not enabled for the project, logging the reason
+rather than throwing — which makes it safe to call while building a menu, but means a `false` does not by itself
+prove the user is not an administrator. Enable the advanced service before relying on the answer.
 
 ## Full list
 

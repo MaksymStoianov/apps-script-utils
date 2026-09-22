@@ -1,5 +1,9 @@
 # net
 
+<link-summary>URL, path, and domain helpers.</link-summary>
+
+<web-summary>The net module of apps-script-utils: URL validation, path parsing, joining and normalisation, and domain checks that work inside Google Apps Script.</web-summary>
+
 `net` covers paths, URLs, and the pieces around them. Like `lang`, it does not depend on the Apps Script runtime.
 
 ## Packages

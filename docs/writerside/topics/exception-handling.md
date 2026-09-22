@@ -1,5 +1,9 @@
 # Exception handling
 
+<link-summary>The exception hierarchy, when each class is thrown, and how to catch them.</link-summary>
+
+<web-summary>Typed exceptions in apps-script-utils: the hierarchy under Exception, which guard throws which class, and how to catch them in a Google Apps Script project.</web-summary>
+
 Every error this library raises is an instance of one class, `Exception`, or of something that extends it. A single
 `catch` clause can therefore tell the library's own failures apart from anything else the runtime throws.
 
@@ -101,7 +105,7 @@ Object.prototype.toString.call(error); // "[object EmptyStringException]"
 | `RepositoryIsNotDefinedException` | `requireRepository`                                                                                                                                               |
 | `ServiceIsNotDefinedException`    | `requireService`                                                                                                                                                  |
 | `AuthenticationException`         | `requireValidToken`                                                                                                                                               |
-| `AdminDirectoryException`         | `isAdmin`, when the Admin SDK Directory Service is not enabled                                                                                                    |
+| `AdminDirectoryException`         | constructed inside `isAdmin` when the Admin SDK Directory Service is not enabled, and logged there rather than propagated                                         |
 | `InvalidSheetException`           | `requireSheet`                                                                                                                                                    |
 | `InvalidSpreadsheetException`     | `requireSpreadsheet`                                                                                                                                              |
 | `InvalidRangeException`           | `requireRange`                                                                                                                                                    |
