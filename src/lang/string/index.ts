@@ -8,11 +8,14 @@ export * from "./isValidVersion";
 
 export * from "./isVersionCompatible";
 
-// TODO: nonValidEmail
+export * from "./nonValidEmail";
+
 export * from "./nonValidLocale";
 
-// TODO: nonValidSlug
-// TODO: nonValidVersion
+export * from "./nonValidSlug";
+
+export * from "./nonValidVersion";
+
 export * from "./nonVersionCompatible";
 
 export * from "./requireNonEmptyString";
@@ -22,8 +25,10 @@ export * from "./nonEmptyString";
 export * from "./requireValidEmail";
 export * from "./requireValidLocale";
 
-// TODO: requireValidSlug
-// TODO: requireValidVersion
+export * from "./requireValidSlug";
+
+export * from "./requireValidVersion";
+
 export * from "./requireVersionCompatible";
 
 export * from "./toCamelCase";

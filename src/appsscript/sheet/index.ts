@@ -27,24 +27,31 @@ export * from "./isValidSheetName";
 
 export * from "./isValidSpreadsheetId";
 
-// TODO: nonCellGridRange
+export * from "./nonCellGridRange";
+
 export * from "./nonGridRangeContainedIn";
 
-// TODO: nonGridRangeSameDimensions
+export * from "./nonGridRangeSameDimensions";
+
 export * from "./nonRange";
 
 export * from "./nonRichTextValue";
 
 export * from "./nonSheet";
-// TODO: nonSpreadsheet
-// TODO: nonTextStyle
-// TODO: nonValidSheetName
+export * from "./nonSpreadsheet";
+
+export * from "./nonTextStyle";
+
+export * from "./nonValidSheetName";
+
 export * from "./nonValidSpreadsheetId";
 
-// TODO: requireCellGridRange
+export * from "./requireCellGridRange";
+
 export * from "./requireGridRangeContainedIn";
 
-// TODO: requireGridRangeSameDimensions
+export * from "./requireGridRangeSameDimensions";
+
 export * from "./requireRange";
 
 export * from "./requireRichTextValue";
@@ -52,8 +59,10 @@ export * from "./requireRichTextValue";
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
-// TODO: requireTextStyle
-// TODO: requireValidSheetName
+export * from "./requireTextStyle";
+
+export * from "./requireValidSheetName";
+
 export * from "./requireValidSpreadsheetId";
 
 // TODO: prependColumn
@@ -82,6 +91,8 @@ export * from "./getColumnIndexByLetter";
 
 export * from "./getColumnLetterByIndex";
 
+export * from "./getColumnLetterByPosition";
+
 export * from "./getColumnPositionByLetter";
 
 export * from "./getSheetById";
@@ -99,6 +110,8 @@ export * from "./getSheetByIndex";
 // TODO: getSchema(sheet: Sheet)
 // TODO: removeSchema(sheet: Sheet)
 export * from "./highlightHtml";
+
+export * from "./nonValidSheetId";
 
 export * from "./sortSheets";
 
