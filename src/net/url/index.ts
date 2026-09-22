@@ -8,5 +8,6 @@ export * from "./nonUrl";
 
 // TODO: nonUrlLike
 
-// TODO: requireUrl
+export * from "./requireUrl";
+
 // TODO: requireUrlLike
