@@ -53,9 +53,8 @@ export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
 // TODO: requireTextStyle
-export * from "./requireValidSheetName";
-
-// TODO: requireValidSpreadsheetId
+// TODO: requireValidSheetName
+export * from "./requireValidSpreadsheetId";
 
 // TODO: prependColumn
 // TODO: prependColumns
