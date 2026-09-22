@@ -19,6 +19,8 @@ export * from "./transpose";
 // TODO: unique(arr: Array)
 // TODO: first(arr: Array)
 // TODO: last(arr: Array)
-// TODO: compact(arr: Array)
+
+export * from "./compact";
+
 // TODO: without(arr: Array, ...values: any)
 // TODO: intersect(arr: Array)
