@@ -37,7 +37,8 @@ export * from "./requireNaN";
 // TODO: requireNonDouble
 export * from "./requireNonFloat";
 
-// TODO: requireNonInteger
+export * from "./requireNonInteger";
+
 // TODO: requireNonSafeInteger
 // TODO: requireNonNaN
 
