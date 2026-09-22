@@ -33,7 +33,8 @@ export * from "./nonRange";
 export * from "./nonRichTextValue";
 
 export * from "./nonSheet";
-// TODO: nonSpreadsheet
+export * from "./nonSpreadsheet";
+
 // TODO: nonTextStyle
 // TODO: nonValidSheetName
 // TODO: nonValidSpreadsheetId
@@ -76,6 +77,8 @@ export * from "./extractSheetNameFromA1Notation";
 export * from "./getColumnIndexByLetter";
 
 export * from "./getColumnLetterByIndex";
+
+export * from "./getColumnPositionByLetter";
 
 export * from "./getSheetById";
 
