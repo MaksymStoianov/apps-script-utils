@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение числом с дробной частью.",
+  "description": [
+    "Синоним семейства `Float` под именем, к которому тянется рука первым делом. В JavaScript каждое число и так double, поэтому `double` не обозначает отдельного случая во время выполнения.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является числом с дробной частью; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisDouble(1.5); // => true\nisDouble(-0.1); // => true\nisDouble(42); // => false\nisDouble(1.0); // => false\nisDouble(Infinity); // => false\nisDouble(\"1.5\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonDouble"
+    },
+    {
+      "name": "requireDouble"
+    },
+    {
+      "name": "requireNonDouble"
+    }
+  ]
+}

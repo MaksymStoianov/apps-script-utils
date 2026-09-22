@@ -1,0 +1,28 @@
+{
+  "summary": "Gibt den Bereich zurück, sobald er nachweislich in einem anderen liegt, sonst wirft er.",
+  "description": [
+    "Die behauptende Form von `isGridRangeContainedIn`. Die Standardmeldung nennt beide Bereiche in A1-Notation, was den Fehlschlag im Ausführungsprotokoll lesbar macht."
+  ],
+  "params": {
+    "range1": "Der zu prüfende Bereich.",
+    "range2": "Der Bereich, mit dem verglichen wird.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine genannte Standardmeldung mit beiden Bereichen verwendet."
+  },
+  "returns": "den ersten Bereich, unverändert.",
+  "throws": {
+    "InvalidGridRangeException": "der erste Bereich liegt nicht im zweiten."
+  },
+  "examples": [
+    {
+      "title": "Einen Schreibvorgang absichern"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "nonGridRangeContainedIn"
+    }
+  ]
+}

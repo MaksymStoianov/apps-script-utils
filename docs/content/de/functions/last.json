@@ -1,0 +1,32 @@
+{
+  "summary": "Nimmt das letzte Element eines Arrays oder dessen letzte n Elemente in ursprünglicher Reihenfolge.",
+  "description": [
+    "Dafür schreibt man sonst `array[array.length - 1]` — ein Ausdruck, der bei einem leeren Array `undefined` liefert und dabei aussieht, als wäre es Absicht. `last` sagt es geradeheraus und liefert im selben Fall `undefined`.",
+    "Die Form mit `n` nimmt vom Ende, behält aber die Reihenfolge: `last([1, 2, 3], 2)` ist `[2, 3]`, nicht `[3, 2]`. `n` wird begrenzt: negativ ergibt ein leeres Array, größer als die Länge das ganze Array. Die Eingabe bleibt unverändert."
+  ],
+  "params": {
+    "array": "Das Array, aus dem gelesen wird. Bleibt unverändert.",
+    "n": "Wie viele Elemente genommen werden. Eine ganze Zahl; weglassen für ein einzelnes Element."
+  },
+  "returns": "das letzte Element oder ein neues Array mit höchstens `n` Elementen in ursprünglicher Reihenfolge.",
+  "throws": {
+    "TypeError": ["`array` ist kein Array.", "`n` wurde angegeben und ist keine ganze Zahl."]
+  },
+  "examples": [
+    {
+      "title": "Ein Element oder mehrere"
+    },
+    {
+      "title": "Die jüngsten Einträge eines Protokollblatts lesen"
+    },
+    {
+      "title": "Begrenzung"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "first",
+      "note": "dieselben zwei Formen, vom Anfang her."
+    }
+  ]
+}

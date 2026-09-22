@@ -1,0 +1,28 @@
+{
+  "summary": "Liest A1-Notation in einen Rasterbereich.",
+  "description": [
+    "Das Ergebnis trägt den Blattnamen, wenn die Notation einen hatte, sonst `null`, den Bereichsteil für sich und die vier nullbasierten Grenzen, in denen die Sheets-API rechnet.",
+    "Offene Notationen werden verstanden: `\"A:A\"` ist eine ganze Spalte und lässt die Zeilengrenzen weg, `\"1:1\"` eine ganze Zeile."
+  ],
+  "params": {
+    "a1Notation": "Die zu lesende Notation, mit oder ohne Blattnamen."
+  },
+  "returns": "den gelesenen Bereich.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "A1-Notation lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notations"
+    },
+    {
+      "name": "toA1Notation"
+    },
+    {
+      "name": "extractRangeFromA1Notation"
+    }
+  ]
+}

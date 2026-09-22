@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est un identifiant de feuille.",
+  "description": [
+    "Apps Script numérote les feuilles à partir de zéro : un identifiant de feuille est un entier sûr non négatif — la règle qu'applique `isCountable`. La première feuille d'un classeur porte l'identifiant `0`.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un identifiant de feuille ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisValidSheetId(0); // => true\nisValidSheetId(1234567890); // => true\nisValidSheetId(-1); // => false\nisValidSheetId(1.5); // => false\nisValidSheetId(\"0\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSheetId"
+    },
+    {
+      "name": "requireValidSheetId"
+    }
+  ]
+}

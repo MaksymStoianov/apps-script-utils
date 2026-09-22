@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення абсолютним шляхом.",
+  "description": [
+    "Шлях, що починається від кореня: провідний `/` або схема на кшталт `https://` чи `mailto:`. Усе інше, включно з порожнім рядком, відносне.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є абсолютним шляхом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisAbsolute(\"/var/log\"); // => true\nisAbsolute(\"https://example.com/a\"); // => true\nisAbsolute(\"mailto:a@example.com\"); // => true\nisAbsolute(\"docs/readme.md\"); // => false\nisAbsolute(\"./a\"); // => false\nisAbsolute(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonAbsolute"
+    },
+    {
+      "name": "requireAbsolute"
+    }
+  ]
+}

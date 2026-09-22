@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine Zahl ist.",
+  "description": [
+    "Geprüft wird `typeof value === \"number\"`, was auch `NaN` und beide Unendlichkeiten erfüllen. Für diese Fälle sind `isFloat`, `isInteger` oder `isNaN` gedacht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Zahl ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisNumber(0); // => true\nisNumber(1.5); // => true\nisNumber(NaN); // => true\nisNumber(Infinity); // => true\nisNumber(\"1\"); // => false\nisNumber(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNumber"
+    },
+    {
+      "name": "requireNumber"
+    },
+    {
+      "name": "requireNonNumber"
+    }
+  ]
+}

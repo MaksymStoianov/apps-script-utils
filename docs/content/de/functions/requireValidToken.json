@@ -1,0 +1,28 @@
+{
+  "summary": "Gibt ein Token zurück, sobald es einem erlaubten Schlüssel entspricht, sonst wirft es.",
+  "description": [
+    "Die erlaubten Schlüssel dürfen eine einzelne Zeichenkette, eine Liste oder ein Objekt sein, dessen Schlüssel die Token sind. Das ist die Prüfung an der Tür einer Web-App: sie gibt das Token zurück, damit der Aufruf ein Ausdruck bleibt, und wirft sonst eine benannte Ausnahme."
+  ],
+  "params": {
+    "token": "Das vom Aufrufer vorgelegte Token.",
+    "allowedKeys": "Ein Schlüssel, eine Liste von Schlüsseln oder ein danach indiziertes Objekt.",
+    "message": "Die Meldung der Ausnahme. Standardmäßig `\"Invalid API key.\"`."
+  },
+  "returns": "das Token, unverändert.",
+  "throws": {
+    "AuthenticationException": "das Token fehlt oder passt zu keinem erlaubten Schlüssel."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    },
+    {
+      "name": "AuthorizationException"
+    }
+  ]
+}

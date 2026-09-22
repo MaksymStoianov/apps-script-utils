@@ -1,0 +1,36 @@
+{
+  "summary": "Returns the value after checking that it is not `null` or `undefined`.",
+  "description": [
+    "The absent values, and only those: `0`, `\"\"` and `false` are present values and do not qualify.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with `null` or `undefined` excluded from its type.",
+  "throws": {
+    "NullPointerException": "the value is `null` or `undefined`."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonNull(0); // => 0\nrequireNonNull(\"\"); // => \"\"\nrequireNonNull(null); // throws NullPointerException\nrequireNonNull(undefined); // throws NullPointerException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNull"
+    },
+    {
+      "name": "nonNull"
+    },
+    {
+      "name": "requireNull"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

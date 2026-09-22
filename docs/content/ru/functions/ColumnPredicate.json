@@ -1,0 +1,25 @@
+{
+  "summary": "Решает, относится ли столбец к тем, с которыми нужно что-то сделать.",
+  "description": [
+    "То же, что `RowPredicate`, но по столбцам: ячейки столбца, его позиция от единицы и — если указан столбец заголовков — столбец с ключами по именам строк. Возврат `true` выбирает столбец."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Форма"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnConditionalOptions"
+    }
+  ]
+}

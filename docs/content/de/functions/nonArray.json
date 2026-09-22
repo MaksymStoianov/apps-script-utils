@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Array ist.",
+  "description": [
+    "`nonArray(value)` ist dieselbe Prüfung wie `!isArray(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Die Prüfung ist genau `Array.isArray`: ein Array aus einem anderen Frame zählt, ein array-ähnliches Objekt — `arguments`, eine `NodeList`, `{ length: 0 }` — nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Array ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonArray(\"abc\"); // => true\nnonArray({ length: 0 }); // => true\nnonArray(null); // => true\nnonArray([]); // => false\nnonArray([1, 2, 3]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isArray"
+    },
+    {
+      "name": "requireArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

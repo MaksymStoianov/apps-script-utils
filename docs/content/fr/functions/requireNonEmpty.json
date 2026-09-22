@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur après avoir vérifié qu'elle n'est pas vide.",
+  "description": [
+    "La vacuité se lit selon le type : `null` et `undefined`, une chaîne faite d'espaces, un tableau, `Set` ou `Map` sans entrée, un objet sans clé propre. `0` et `false` sont des valeurs, pas du vide.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur ; après le test, elle n'est pas vide.",
+  "throws": {
+    "IllegalArgumentException": "la valeur est vide."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNonEmpty(0); // => 0\nrequireNonEmpty(false); // => false\nrequireNonEmpty(null); // throws IllegalArgumentException\nrequireNonEmpty(\"\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение идентификатором таблицы.",
+  "description": [
+    "Не меньше 25 символов из букв, цифр, дефисов и подчёркиваний — тот идентификатор, что стоит в URL таблицы между `/d/` и `/edit`. Никаких запросов не делается, проверяется только формат.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является идентификатором таблицы; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => true\nisValidSpreadsheetId(\"short-id\"); // => false\nisValidSpreadsheetId(\"has space in it and is long enough to pass\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSpreadsheetId"
+    },
+    {
+      "name": "requireValidSpreadsheetId"
+    }
+  ]
+}

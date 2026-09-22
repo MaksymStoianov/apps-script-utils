@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est appelable.",
+  "description": [
+    "Le test bon marché — `typeof value === \"function\"` — celui qu'on veut avant d'appeler quelque chose. `isFunction` lit la même question plus strictement.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est appelable ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisFunctionLike(function () {}); // => true\nisFunctionLike(Math.max); // => true\nisFunctionLike(null); // => false\nisFunctionLike({}); // => false\nisFunctionLike(\"fn\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    },
+    {
+      "name": "requireNonFunctionLike"
+    }
+  ]
+}

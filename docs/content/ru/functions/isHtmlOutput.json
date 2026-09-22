@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение объектом HtmlOutput.",
+  "description": [
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка ищет методы, определяющие тип, — `getContent`, `setTitle`, `setXFrameOptionsMode`. Заглушка, реализующая их, проходит, и именно это позволяет тестировать такой код вне среды выполнения.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является объектом HtmlOutput; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst output = HtmlService.createHtmlOutput(\"<p>hi</p>\");\n\nisHtmlOutput(output); // => true\nisHtmlOutput({}); // => false\nisHtmlOutput(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonHtmlOutput"
+    },
+    {
+      "name": "requireHtmlOutput"
+    }
+  ]
+}

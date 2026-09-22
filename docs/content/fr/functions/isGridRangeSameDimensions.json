@@ -1,0 +1,25 @@
+{
+  "summary": "Vérifie si deux plages de grille ont la même hauteur et la même largeur.",
+  "description": [
+    "Leur emplacement importe peu, seule compte leur taille — la question à poser avant de copier des valeurs d'une plage vers une autre, puisque `setValues` refuse un écart."
+  ],
+  "params": {
+    "range1": "La première plage.",
+    "range2": "La seconde plage."
+  },
+  "returns": "`true` si les deux ont la même taille.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Comparer les tailles"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonGridRangeSameDimensions"
+    },
+    {
+      "name": "requireGridRangeSameDimensions"
+    }
+  ]
+}

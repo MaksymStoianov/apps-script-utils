@@ -1,0 +1,33 @@
+{
+  "summary": "Повертає значення як масив або викидає виняток.",
+  "description": [
+    "Перевірка цілком зводиться до `Array.isArray`, тому масив з іншого фрейму підходить, а схожий на масив об'єкт — `arguments`, `NodeList`, `{ length: 0 }` — ні.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як масив.",
+  "throws": {
+    "IllegalArgumentException": "значення не є масивом."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireArray([]); // => []\nrequireArray([1, 2, 3]); // => [1, 2, 3]\nrequireArray(\"abc\"); // throws IllegalArgumentException\nrequireArray({ length: 0 }); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isArray"
+    },
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

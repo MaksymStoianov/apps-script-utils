@@ -1,0 +1,22 @@
+{
+  "summary": "Jusqu'où va `removeSchema`.",
+  "description": [
+    "`validation` efface aussi la validation des données sur les colonnes décrites. Désactivé par défaut à dessein : Apps Script ne permet pas de distinguer une règle issue du schéma d'une règle ajoutée à la main, et l'effacement emporte les deux."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "removeSchema"
+    },
+    {
+      "name": "SheetSchema"
+    }
+  ]
+}

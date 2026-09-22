@@ -1,0 +1,27 @@
+{
+  "summary": "Schreibt eine Zeichenkette groß und räumt auf Wunsch den Leerraum auf.",
+  "description": [
+    "Das Gegenstück zu `toLowerCase`, mit derselben Prüfung und demselben optionalen `trim`."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein.",
+    "options": "`trim` schneidet die Zeichenkette und fasst Folgen von Leerraum zu einem Leerzeichen zusammen."
+  },
+  "returns": "die groß geschriebene Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toLowerCase"
+    },
+    {
+      "name": "toProperCase"
+    }
+  ]
+}

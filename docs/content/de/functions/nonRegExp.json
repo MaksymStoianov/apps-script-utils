@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein regulärer Ausdruck ist.",
+  "description": [
+    "`nonRegExp(value)` ist dieselbe Prüfung wie `!isRegExp(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Über den internen Tag bestimmt statt über `instanceof`, sodass auch ein regulärer Ausdruck aus einem anderen Frame erkannt wird.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein regulärer Ausdruck ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonRegExp(\"/a/\"); // => true\nnonRegExp({}); // => true\nnonRegExp(null); // => true\nnonRegExp(/a/); // => false\nnonRegExp(new RegExp(\"a\")); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRegExp"
+    },
+    {
+      "name": "requireRegExp"
+    },
+    {
+      "name": "requireNonRegExp"
+    }
+  ]
+}

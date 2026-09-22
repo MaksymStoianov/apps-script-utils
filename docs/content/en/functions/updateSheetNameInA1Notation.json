@@ -1,0 +1,26 @@
+{
+  "summary": "Replaces the sheet name in an A1 notation, keeping the range.",
+  "description": [
+    "What a formula rewrite needs after a sheet is renamed or copied. A name that needs quoting is quoted; a notation that had no sheet name gets one."
+  ],
+  "params": {
+    "a1Notation": "The notation to rewrite.",
+    "sheetName": "The sheet name to put in."
+  },
+  "returns": "the rewritten notation.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Renaming",
+      "body": "```javascript\nupdateSheetNameInA1Notation(\"Sheet1!A1\", \"Data\"); // => \"Data!A1\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractSheetNameFromA1Notation"
+    },
+    {
+      "name": "isValidSheetName"
+    }
+  ]
+}

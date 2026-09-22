@@ -1,0 +1,25 @@
+{
+  "summary": "A string was expected to carry something and was null, undefined or empty.",
+  "description": [
+    "A string was expected to carry something and was `null`, `undefined` or empty.",
+    "Thrown by [`requireNonEmptyString`](requireNonEmptyString.md).",
+    "Every class in this hierarchy takes an optional message, another exception whose message it reuses, or nothing at all. `isException` recognises all of them; a plain `Error` is not one."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Throwing and catching",
+      "body": "```javascript\nthrow new EmptyStringException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof EmptyStringException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

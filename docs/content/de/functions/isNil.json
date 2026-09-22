@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert `null` oder `undefined` ist.",
+  "description": [
+    "Nur die abwesenden Werte: `0`, `\"\"` und `false` sind vorhandene Werte und zählen nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert `null` oder `undefined` ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisNil(null); // => true\nisNil(undefined); // => true\nisNil(0); // => false\nisNil(\"\"); // => false\nisNil(false); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNil"
+    },
+    {
+      "name": "requireNil"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

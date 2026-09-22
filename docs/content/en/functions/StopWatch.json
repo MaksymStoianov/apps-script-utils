@@ -1,0 +1,27 @@
+{
+  "summary": "Times a sequence of named tasks.",
+  "description": [
+    "`start` begins a task and `stop` ends it; only one runs at a time. Afterwards the watch reports the last task, the whole list and the total, in milliseconds or in seconds.",
+    "It is for finding where an execution spends its six minutes: name the steps, run it once, read the totals. `setKeepTaskList(false)` stops the list growing when a loop times thousands of steps."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Timing a run",
+      "body": "```javascript\nconst watch = new StopWatch(\"import\");\n\nwatch.start(\"fetch\");\n// … fetch …\nwatch.stop();\n\nwatch.start(\"write\");\n// … write …\nwatch.stop();\n\nwatch.getTotalTimeMillis();\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "TaskInfo"
+    },
+    {
+      "name": "now"
+    },
+    {
+      "name": "diff"
+    }
+  ]
+}

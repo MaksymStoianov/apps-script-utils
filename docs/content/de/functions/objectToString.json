@@ -1,0 +1,24 @@
+{
+  "summary": "Gibt den internen Tag eines Werts zurück.",
+  "description": [
+    "`Object.prototype.toString.call(value)`, in einer Form, die sich auf alles anwenden lässt, auch auf `null` und `undefined`. Mehrere Prüfungen dieser Bibliothek bauen darauf, denn der Tag übersteht einen Frame-Wechsel, den `instanceof` nicht übersteht."
+  ],
+  "params": {
+    "value": "Der Wert, dessen Tag gesucht ist."
+  },
+  "returns": "den Tag, etwa `\"[object Array]\"`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Den Tag lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObject"
+    },
+    {
+      "name": "isRegExp"
+    }
+  ]
+}

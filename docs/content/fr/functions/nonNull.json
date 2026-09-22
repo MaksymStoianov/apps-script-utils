@@ -1,0 +1,30 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** `null`.",
+  "description": [
+    "`nonNull(value)` est le même test que `!isNull(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Strictement `null`. `undefined` est un cas distinct — `isNil` couvre les deux.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas `null` ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonNull(undefined); // => true\nnonNull(0); // => true\nnonNull(\"\"); // => true\nnonNull(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNull"
+    },
+    {
+      "name": "requireNull"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

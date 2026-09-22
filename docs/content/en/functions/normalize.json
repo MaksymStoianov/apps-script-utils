@@ -1,0 +1,26 @@
+{
+  "summary": "Resolves the `.` and `..` segments of a path.",
+  "description": [
+    "A `.` is dropped, a `..` removes the segment before it, repeated separators collapse, and a trailing separator is removed.",
+    "The result always starts at the root: `normalize(\"a/b\")` is `\"/a/b\"`. Use `join` when a relative path has to stay relative."
+  ],
+  "params": {
+    "path": "The path to normalise."
+  },
+  "returns": "the normalised path.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Normalising",
+      "body": "```javascript\nnormalize(\"a/./b/../c\"); // => \"/a/c\"\nnormalize(\"/a/b/../c/\"); // => \"/a/c\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "parse"
+    }
+  ]
+}

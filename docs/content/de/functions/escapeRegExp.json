@@ -1,0 +1,23 @@
+{
+  "summary": "Maskiert die Zeichen, die in einem regulären Ausdruck eine Bedeutung tragen.",
+  "description": [
+    "Schicken Sie Benutzereingaben hier hindurch, bevor Sie daraus ein `RegExp` bauen: ein Punkt bleibt dann ein Punkt und passt nicht auf jedes Zeichen."
+  ],
+  "params": {
+    "value": "Die zu maskierende Zeichenkette. Sie darf nicht leer sein."
+  },
+  "returns": "die maskierte Zeichenkette, die sich gefahrlos in ein Muster einsetzen lässt.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Maskieren"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "merge"
+    }
+  ]
+}

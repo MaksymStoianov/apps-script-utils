@@ -1,0 +1,23 @@
+{
+  "summary": "Findet einen Trigger des Projekts anhand seiner Id.",
+  "description": [
+    "Apps Script vergibt beim Anlegen eines Triggers eine Id, bietet aber keine Suche danach, also werden die Trigger des Projekts durchlaufen und verglichen. Ein inzwischen gelöschter Trigger ergibt `null` — der Fall, den eine gespeicherte Id behandeln muss."
+  ],
+  "params": {
+    "id": "Die Trigger-Id. Sie darf nicht leer sein."
+  },
+  "returns": "den Trigger oder `null`, wenn das Projekt keinen mit dieser Id hat.",
+  "throws": {
+    "EmptyStringException": "die Id ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Nachschlagen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    }
+  ]
+}

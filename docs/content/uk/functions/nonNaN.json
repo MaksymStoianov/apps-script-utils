@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є числом `NaN`.",
+  "description": [
+    "`nonNaN(value)` — та сама перевірка, що й `!isNaN(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Аргумент не приводиться до числа — цим перевірка й відрізняється від глобального `isNaN`, який спершу перетворює значення, тож `isNaN(\"abc\")` і `isNaN(undefined)` дають `true`.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є числом `NaN`; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonNaN(0); // => true\nnonNaN(\"abc\"); // => true\nnonNaN(undefined); // => true\nnonNaN(NaN); // => false\nnonNaN(0 / 0); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNaN"
+    },
+    {
+      "name": "requireNaN"
+    },
+    {
+      "name": "requireNonNaN"
+    }
+  ]
+}

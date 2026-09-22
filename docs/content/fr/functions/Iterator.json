@@ -1,0 +1,26 @@
+{
+  "summary": "Un curseur sur une suite, capable aussi de reculer.",
+  "description": [
+    "Seuls `next` et `hasNext` sont obligatoires. Le reste — `previous`, `hasPrevious`, `index`, `moveTo`, `size`, `toStart`, `toEnd` — est facultatif : une source qui ne va que vers l'avant satisfait l'interface sans prétendre en faire plus.",
+    "C'est la forme d'un lecteur paginé : des lignes arrivant d'un service par lots ressemblent à une seule suite pour le code qui les consomme."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "Class"
+    },
+    {
+      "name": "first"
+    },
+    {
+      "name": "last"
+    }
+  ]
+}

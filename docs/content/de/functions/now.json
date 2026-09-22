@@ -1,0 +1,22 @@
+{
+  "summary": "Gibt die aktuelle Zeit in Millisekunden seit der Epoche zurück.",
+  "description": [
+    "Eine benannte Funktion statt über den Code verstreuter `Date.now()`-Aufrufe, damit die Zeitmessung eine Stelle ist, die ein Test ersetzen kann."
+  ],
+  "params": {},
+  "returns": "den aktuellen Zeitstempel in Millisekunden.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Vergangene Zeit messen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

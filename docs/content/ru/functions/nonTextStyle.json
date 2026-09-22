@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является стилем текста.",
+  "description": [
+    "`nonTextStyle(value)` — та же проверка, что и `!isTextStyle(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка читает тег, который объект сообщает о себе сам: `value.toString() === \"TextStyle\"`. Обычный объект с таким же тегом тоже пройдёт — на практике это тестовый дубль.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является стилем текста; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst style = SpreadsheetApp.newTextStyle().setBold(true).build();\n\nnonTextStyle({}); // => true\nnonTextStyle(null); // => true\nnonTextStyle(style); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isTextStyle"
+    },
+    {
+      "name": "requireTextStyle"
+    }
+  ]
+}

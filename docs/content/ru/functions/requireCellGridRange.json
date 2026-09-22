@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как диапазон из одной ячейки или выбрасывает исключение.",
+  "description": [
+    "Одна строка и один столбец, считая по границам, а не по тому, как диапазон записали: конечные индексы не включаются, поэтому одна ячейка — это `endRowIndex - startRowIndex === 1` и то же для столбцов. Диапазон с пропущенной границей открыт в эту сторону и одной ячейкой не бывает.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как диапазон из одной ячейки.",
+  "throws": {
+    "InvalidGridRangeException": "значение не является диапазоном из одной ячейки."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => { startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }\nrequireCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // throws InvalidGridRangeException\nrequireCellGridRange({}); // throws InvalidGridRangeException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isCellGridRange"
+    },
+    {
+      "name": "nonCellGridRange"
+    }
+  ]
+}

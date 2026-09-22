@@ -1,0 +1,76 @@
+# Überblick
+
+<link-summary>Was apps-script-utils ist, was die Bibliothek abdeckt und wie diese Dokumentation aufgebaut ist.</link-summary>
+
+<web-summary>apps-script-utils ist eine TypeScript-Bibliothek für Google Apps Script: Tabellen- und A1-Notation-Helfer, isX/nonX/requireX-Validierung und typisierte Ausnahmen.</web-summary>
+
+![Projektbanner für Google Apps Script Utils](banner-1280x640.jpg)
+
+<p align="right"><small><i>Künstlerin: <a href="https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=overview&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit" title="Portfolio der Künstlerin Daryna Mikhailenko">Daryna Mikhailenko</a></i></small></p>
+
+**apps-script-utils** ist eine TypeScript-Bibliothek, die eigens für **Google Apps Script** gebaut wurde. Sie
+versammelt in einem getesteten Paket, was in jedem GAS-Projekt am Ende doch von Hand geschrieben wird: Arbeit mit
+Tabellen und A1-Notation, Typ- und Wertprüfungen (`isX`/`nonX`/`requireX`), String- und Array-Transformationen,
+typisierte Ausnahmen und mehr.
+
+## Wesentliche Eigenschaften
+
+- **Für Google Apps Script gebaut** — entworfen für die GAS-Laufzeit und ihre Grenzen, nicht aus einer
+  Node.js-Bibliothek übernommen.
+- **Breite Abdeckung** — Helfer für Tabellen, Oberfläche, Netzwerk und Admin SDK neben allgemeinen Werkzeugen für
+  Strings, Arrays und Objekte.
+- **TypeScript zuerst** — jede Funktion bringt vollständige Typdefinitionen für Autovervollständigung und
+  Übersetzungszeit-Sicherheit mit.
+- **Getestet** — abgedeckt durch eine Unit-Test-Suite mit Vitest.
+- **Verlinkte Referenz** — jeder verwendete Google-Apps-Script-Typ verweist direkt auf seine offizielle
+  Dokumentation.
+- **Einheitliche Fehlerbehandlung** — eine Hierarchie von Ausnahmeklassen statt verstreuter `throw new Error`.
+
+## Wie diese Dokumentation aufgebaut ist
+
+- [](getting-started.md) — Voraussetzungen, Installation und ein erstes lauffähiges Skript.
+- **Anleitungen** erklären die Ideen, die die ganze Bibliothek durchziehen: [](validation-conventions.md),
+  [](exception-handling.md) und [](apps-script-runtime.md).
+- **Module** beschreiben jedes Paket und zeigen es im Einsatz: [](module-lang.md), [](module-appsscript.md),
+  [](module-net.md) und [](module-exception.md).
+- **Die Funktionsreferenz** listet jede exportierte Funktion in derselben Gliederung wie das Paket selbst:
+  [](reference-appsscript.md), [](reference-base.md), [](reference-exception.md), [](reference-path.md) und
+  [](reference-abstracts.md). Jede Zeile dieser Tabellen hat eine eigene Seite — Signatur, Parameter, Rückgabewert,
+  Ausnahmen und durchgearbeitete Beispiele — und jede exportierte Funktion, Klasse und jeder Typ hat eine solche
+  Seite.
+- [](ecosystem.md) — das boot.gs-Framework, das von dieser Bibliothek abhängt, und die Agent Skills, die einem
+  KI-Agenten den Umgang damit beibringen.
+
+Drücken Sie auf jeder Seite <shortcut>/</shortcut>, um die Suche zu öffnen.
+
+## Wo die Bibliothek läuft
+
+Das Paket zerfällt sauber in zwei Teile, und diese Trennung entscheidet, von wo eine Funktion aufgerufen werden kann:
+
+| Teil                                               | Hängt von der Apps-Script-Laufzeit ab   | Wo es läuft                 |
+| :------------------------------------------------- | :-------------------------------------- | :-------------------------- |
+| `lang`, `net`, `json`, `html`, `time`, `exception` | Nein                                    | Apps Script, Node.js, Tests |
+| `appsscript`                                       | Ja, für die dienstgebundenen Funktionen | Nur Apps Script             |
+
+[](apps-script-runtime.md) behandelt, welche Funktionen auf welche Seite fallen und was das praktisch bedeutet.
+
+## Projektaufbau
+
+```text
+.
+├── config/           # Konfigurationsdateien
+├── dist/             # Übersetzungsergebnis
+├── docs/             # Dokumentation: Material und Quellen dieser Website
+├── scripts/          # Wartungs- und Hilfsskripte
+├── src/              # Quellcode
+│   ├── appsscript/   # Werkzeuge für Google Apps Script
+│   ├── exception/    # Ausnahmeklassen
+│   ├── html/         # HTML-Werkzeuge
+│   ├── json/         # JSON-Werkzeuge
+│   ├── lang/         # Sprachnahe Werkzeuge (Arrays, Strings usw.)
+│   ├── net/          # Netzwerk und Pfade
+│   ├── time/         # Zeit
+│   └── index.ts      # Einstiegspunkt
+├── test/             # Unit-Tests
+└── vitest.config.ts  # Vitest-Konfiguration
+```

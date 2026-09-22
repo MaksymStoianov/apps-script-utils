@@ -1,0 +1,29 @@
+{
+  "summary": "Schreibt eine verschachtelte Eigenschaft über einen Pfad und legt Fehlendes an.",
+  "description": [
+    "Fehlende Glieder entstehen unterwegs: ein numerisches Segment erzeugt ein Array, ein Zeichenketten-Segment ein Objekt. `setPath({}, [\"rows\", 0, \"id\"], 7)` ergibt daher `{ rows: [{ id: 7 }] }`.",
+    "**Das Ziel wird an Ort und Stelle verändert** und zurückgegeben; der Aufruf lässt sich einsetzen, kopiert aber nicht."
+  ],
+  "params": {
+    "target": "Das Objekt, in das geschrieben wird. Es wird verändert.",
+    "path": "Eine Punkt-Zeichenkette oder ein Array aus Schlüsseln und Indizes.",
+    "value": "Der zu schreibende Wert."
+  },
+  "returns": "dasselbe Objekt, nun mit dem Wert.",
+  "throws": {
+    "IllegalArgumentException": "das Ziel ist kein Objekt oder der Pfad ist leer."
+  },
+  "examples": [
+    {
+      "title": "Schreiben"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getPath"
+    },
+    {
+      "name": "flat"
+    }
+  ]
+}

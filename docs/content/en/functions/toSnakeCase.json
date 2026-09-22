@@ -1,0 +1,29 @@
+{
+  "summary": "Rewrites a string in snake_case.",
+  "description": [
+    "The kebab-case rules with underscores in place of hyphens: spaces and hyphens become underscores, an underscore is inserted where a lower-case letter meets an upper-case one, and the result is lowered.",
+    "`clean` removes anything that is not a letter, a digit or an underscore; `trim` collapses the surrounding whitespace first."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty.",
+    "options": "`clean` removes the remaining punctuation; `trim` trims and collapses whitespace."
+  },
+  "returns": "the converted string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ntoSnakeCase(\"Hello World\"); // => \"hello_world\"\ntoSnakeCase(\"userFirstName\"); // => \"user_first_name\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toKebabCase"
+    },
+    {
+      "name": "toCamelCase"
+    }
+  ]
+}

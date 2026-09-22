@@ -1,0 +1,25 @@
+{
+  "summary": "Zerlegt einen Pfad in seine Teile.",
+  "description": [
+    "Das Ergebnis trägt `root`, `dir`, `base`, `name` und `ext` — dieselben fünf Teile, die Nodes `path.parse` meldet. Ein Teil, den der Pfad nicht hat, fehlt im Objekt schlicht, ein blanker Dateiname kommt also nur mit `base`, `name` und `ext` zurück.",
+    "`ext` enthält den Punkt, und ein Name, der mit einem beginnt — `.gitignore` — ist ein Name, keine Endung."
+  ],
+  "params": {
+    "path": "Der zu zerlegende Pfad."
+  },
+  "returns": "ein Objekt mit den Teilen, die der Pfad hat.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Einen Pfad zerlegen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение как число или выбрасывает исключение.",
+  "description": [
+    "Проверяется `typeof value === \"number\"`, чему удовлетворяют и `NaN`, и обе бесконечности. Когда эти случаи нужно различать, берите `isFloat`, `isInteger` или `isNaN`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как число.",
+  "throws": {
+    "IllegalArgumentException": "значение не является числом."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireNumber(0); // => 0\nrequireNumber(1.5); // => 1.5\nrequireNumber(\"1\"); // throws IllegalArgumentException\nrequireNumber(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumber"
+    },
+    {
+      "name": "nonNumber"
+    },
+    {
+      "name": "requireNonNumber"
+    }
+  ]
+}

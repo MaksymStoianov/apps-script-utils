@@ -1,0 +1,35 @@
+{
+  "summary": "Takes the first element of an array, or its first n elements, without an emptiness check.",
+  "description": [
+    "With one argument `first` returns a single element, and `undefined` for an empty array rather than throwing — which\nis what spares every call site its own emptiness check. With a count it returns a new array instead, so the two\nforms never have to be told apart at runtime.",
+    "`n` is clamped the way `Array#slice` clamps: a negative count yields an empty array, a count beyond the length\nyields the whole array. The input is not modified."
+  ],
+  "params": {
+    "array": "The array to read from. Left untouched.",
+    "n": "How many elements to take. An integer; omit it to take a single one."
+  },
+  "returns": "`T | undefined` when `n` is omitted — the first element, or `undefined` for an empty array. `T[]` when `n` is given — a new array of at most `n` elements.",
+  "throws": {
+    "TypeError": ["`array` is not an array.", "`n` is given and is not an integer."]
+  },
+  "examples": [
+    {
+      "title": "One element, or several",
+      "body": "```javascript\nfirst([1, 2, 3]); // => 1\nfirst([]); // => undefined\nfirst([1, 2, 3], 2); // => [1, 2]\n```"
+    },
+    {
+      "title": "Separating a header row from the data",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"first.ts\" include-symbol=\"readTable\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction readTable(sheet) {\n  const values = sheet.getDataRange().getValues();\n  const header = first(values);\n  if (!header) {\n    throw new Error(\"The sheet is empty.\");\n  }\n  return { header: header, rows: values.slice(1) };\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "Clamping",
+      "body": "```javascript\nfirst([1, 2], 10); // => [1, 2] — never more than the array holds\nfirst([1, 2], -1); // => []\nfirst([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "last",
+      "note": "the same two forms, taken from the end."
+    }
+  ]
+}

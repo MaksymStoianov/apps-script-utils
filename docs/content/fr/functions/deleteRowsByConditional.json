@@ -1,0 +1,30 @@
+{
+  "summary": "Supprime les lignes que le prédicat sélectionne.",
+  "description": [
+    "Chaque ligne est jugée sur la feuille telle qu'elle a été lue, puis les suppressions se font de bas en haut par blocs consécutifs. C'est ce qui évite l'erreur d'une boucle écrite à la main qui supprime les mauvaises lignes dès que les positions se décalent.",
+    "Les lignes disparaissent pour de bon : `clearRowsByConditional` se contente de les vider."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler.",
+    "predicate": "Reçoit les cellules de la ligne, sa position à base un et — si `headerRow` est défini — la ligne indexée par les noms de colonnes. Renvoyez `true` pour les lignes à traiter.",
+    "options": "`headerRow` désigne la ligne portant les noms de colonnes. Définie, elle indexe chaque ligne par ces noms et exclut la ligne d'en-tête des candidates."
+  },
+  "returns": "combien ont été traitées.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille.",
+    "IllegalArgumentException": "le prédicat n'est pas une fonction, ou la position d'en-tête n'est pas un entier positif."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    }
+  ]
+}

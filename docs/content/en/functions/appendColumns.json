@@ -1,0 +1,34 @@
+{
+  "summary": "Adds columns to the right of the data already on a sheet.",
+  "description": [
+    "The matrix is read as columns: one array per column, written from row 1 rightwards of the last column that holds data. `transpose` is what turns rows into that shape.",
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+  ],
+  "params": {
+    "sheet": "The sheet to write into.",
+    "values": "A matrix of rows: one array per row, all of the same length.",
+    "options": "`afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top."
+  },
+  "returns": "the same sheet, so calls can be chained.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet.",
+    "TypeError": "the values are not a matrix with rows of equal length."
+  },
+  "examples": [
+    {
+      "title": "Writing",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendColumns(sheet, [[\"total\", \"=SUM(A2:A)\"]]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendColumn"
+    },
+    {
+      "name": "prependColumns"
+    },
+    {
+      "name": "transpose"
+    }
+  ]
+}

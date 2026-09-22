@@ -1,0 +1,34 @@
+{
+  "summary": "Adds rows below the data already on a sheet.",
+  "description": [
+    "Writing starts in column 1 of the first new row, and the sheet is grown by exactly as many rows as the matrix has. Unlike `Sheet#appendRow`, which takes one row at a time, the whole block is written in a single call.",
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+  ],
+  "params": {
+    "sheet": "The sheet to write into.",
+    "values": "A matrix of rows: one array per row, all of the same length.",
+    "options": "`afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top."
+  },
+  "returns": "the same sheet, so calls can be chained.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet.",
+    "TypeError": "the values are not a matrix with rows of equal length."
+  },
+  "examples": [
+    {
+      "title": "Writing",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRows(sheet, [\n  [\"Ada\", \"ada@example.com\"],\n  [\"Grace\", \"grace@example.com\"]\n]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendRow"
+    },
+    {
+      "name": "prependRows"
+    },
+    {
+      "name": "requireConsistent2DArray"
+    }
+  ]
+}

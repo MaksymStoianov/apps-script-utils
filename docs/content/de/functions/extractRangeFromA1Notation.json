@@ -1,0 +1,24 @@
+{
+  "summary": "Holt den Bereichsteil aus einer A1-Notation.",
+  "description": [
+    "Alles nach dem `!` — und die ganze Zeichenkette, wenn es gar kein `!` gibt, denn eine blanke Notation besteht ohnehin nur aus einem Bereich."
+  ],
+  "params": {
+    "a1Notation": "Die zu lesende Notation."
+  },
+  "returns": "den Bereichsteil.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Herauslösen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractSheetNameFromA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

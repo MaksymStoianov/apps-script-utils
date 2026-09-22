@@ -1,0 +1,31 @@
+{
+  "summary": "Returns the interval between two dates in a chosen unit.",
+  "description": [
+    "The result is the first date minus the second, so it is negative when the second is later. Whole units are reported by default; pass `float` to get the fraction as well.",
+    "Milliseconds, seconds, minutes and hours are fixed lengths and are divided out exactly. Days, months and years are counted as whole elapsed units, which is why two hours across midnight is `0` days and not `1`."
+  ],
+  "params": {
+    "left": "The date the interval is measured from.",
+    "right": "The date subtracted from it.",
+    "unit": "`\"millisecond\"`, `\"second\"`, `\"minute\"`, `\"hour\"`, `\"day\"`, `\"month\"` or `\"year\"`.",
+    "float": "Keep the fractional part instead of truncating. Fixed-length units only."
+  },
+  "returns": "the interval, negative when the second date is later.",
+  "throws": {
+    "IllegalArgumentException": "an argument is not a valid `Date`, or the unit is unknown."
+  },
+  "examples": [
+    {
+      "title": "Measuring an interval",
+      "body": "```javascript\ndiff(new Date(2026, 0, 31), new Date(2026, 0, 1), \"day\"); // => 30\ndiff(new Date(2026, 0, 1), new Date(2026, 0, 1, 12), \"hour\"); // => -12\ndiff(new Date(2026, 0, 2, 1), new Date(2026, 0, 1, 23), \"day\"); // => 0\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "offset"
+    },
+    {
+      "name": "getDaysInMonth"
+    }
+  ]
+}

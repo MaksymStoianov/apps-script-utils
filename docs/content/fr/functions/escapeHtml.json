@@ -1,0 +1,29 @@
+{
+  "summary": "Remplace les cinq caractères qui seraient autrement lus comme du balisage.",
+  "description": [
+    "`<`, `>`, `&`, `\"` et `'` deviennent des entités nommées. C'est ce qu'il faut appeler sur tout ce qui vient d'un utilisateur avant que cela n'atteigne un `HtmlOutput` ou un gabarit."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide."
+  },
+  "returns": "la chaîne échappée.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "encodeHtml"
+    },
+    {
+      "name": "escapeXml"
+    },
+    {
+      "name": "merge"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert ein Blattname ist.",
+  "description": [
+    "Was Google Tabellen akzeptiert: höchstens 100 Zeichen, nicht leer, keines von `\\ / ? * [ ]` und nicht der reservierte Name `history` in beliebiger Schreibweise.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Blattname ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisValidSheetName(\"Data\"); // => true\nisValidSheetName(\"Report 2026\"); // => true\nisValidSheetName(\"history\"); // => false\nisValidSheetName(\"Data/2026\"); // => false\nisValidSheetName(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSheetName"
+    },
+    {
+      "name": "requireValidSheetName"
+    }
+  ]
+}

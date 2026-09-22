@@ -1,0 +1,25 @@
+{
+  "summary": "Findet die Position einer Folie in einer Präsentation.",
+  "description": [
+    "Die Folien werden über ihre Objekt-Id verglichen, eine früher gelesene Folie wird also weiterhin erkannt. Eine Folie aus einer anderen Präsentation oder eine inzwischen gelöschte ergibt `null`."
+  ],
+  "params": {
+    "slide": "Die zu findende Folie.",
+    "presentation": "Die Präsentation, in der gesucht wird."
+  },
+  "returns": "die nullbasierte Position oder `null`, wenn die Folie nicht da ist.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Nachschlagen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideByIndex"
+    },
+    {
+      "name": "isSlide"
+    }
+  ]
+}

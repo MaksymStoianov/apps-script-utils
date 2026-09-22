@@ -1,0 +1,30 @@
+{
+  "summary": "Supprime les colonnes que le prédicat sélectionne.",
+  "description": [
+    "Jugé sur la feuille telle que lue, puis supprimé du bord droit vers l'intérieur par blocs consécutifs, pour que le décalage des positions n'emporte pas la mauvaise colonne.",
+    "Les colonnes disparaissent pour de bon : `clearColumnsByConditional` se contente de les vider."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler.",
+    "predicate": "Reçoit les cellules de la colonne, sa position à base un et — si `headerColumn` est défini — la colonne indexée par les noms de lignes. Renvoyez `true` pour les colonnes à traiter.",
+    "options": "`headerColumn` désigne la colonne portant les noms de lignes et l'exclut des candidates."
+  },
+  "returns": "combien ont été traitées.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille.",
+    "IllegalArgumentException": "le prédicat n'est pas une fonction, ou la position d'en-tête n'est pas un entier positif."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    }
+  ]
+}

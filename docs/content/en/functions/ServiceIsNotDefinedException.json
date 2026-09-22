@@ -1,0 +1,25 @@
+{
+  "summary": "A service the script expected to be available is not: an advanced service left disabled, or a global that never got defined.",
+  "description": [
+    "A service the script expected to be available is not: an advanced service left disabled, or a global that never got defined.",
+    "Thrown by [`requireService`](requireService.md).",
+    "Every class in this hierarchy takes an optional message, another exception whose message it reuses, or nothing at all. `isException` recognises all of them; a plain `Error` is not one."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Throwing and catching",
+      "body": "```javascript\nthrow new ServiceIsNotDefinedException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof ServiceIsNotDefinedException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

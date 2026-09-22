@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert ein boolescher Wert ist.",
+  "description": [
+    "Nur die beiden Primitiven bestehen. `new Boolean(false)` ist ein Objekt, und die Zeichenketten `\"true\"` und `\"false\"` bleiben Zeichenketten.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein boolescher Wert ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisBoolean(true); // => true\nisBoolean(false); // => true\nisBoolean(\"true\"); // => false\nisBoolean(1); // => false\nisBoolean(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    },
+    {
+      "name": "requireNonBoolean"
+    }
+  ]
+}

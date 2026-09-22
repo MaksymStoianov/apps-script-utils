@@ -1,0 +1,25 @@
+{
+  "summary": "Ersetzt den Blattnamen in einer A1-Notation und behält den Bereich.",
+  "description": [
+    "Was ein Umschreiben von Formeln braucht, nachdem ein Blatt umbenannt oder kopiert wurde. Ein Name, der Anführungszeichen braucht, bekommt sie; eine Notation ohne Blattnamen erhält einen."
+  ],
+  "params": {
+    "a1Notation": "Die umzuschreibende Notation.",
+    "sheetName": "Der einzusetzende Blattname."
+  },
+  "returns": "die umgeschriebene Notation.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Umbenennen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractSheetNameFromA1Notation"
+    },
+    {
+      "name": "isValidSheetName"
+    }
+  ]
+}

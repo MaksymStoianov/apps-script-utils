@@ -1,0 +1,19 @@
+{
+  "summary": "Проверяет, является ли значение неотрицательным числом.",
+  "description": [
+    "`NaN` не подходит: это число, но оно не является ни отрицательным, ни неотрицательным. Бесконечности ведут себя по знаку: `Infinity` подходит, `-Infinity` — нет.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является неотрицательным числом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisNonNegative(0); // => true\nisNonNegative(-0); // => true\nisNonNegative(42); // => true\nisNonNegative(Infinity); // => true\nisNonNegative(-1); // => false\nisNonNegative(NaN); // => false\nisNonNegative(\"1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": []
+}

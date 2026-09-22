@@ -1,0 +1,29 @@
+{
+  "summary": "Returns the version once it is known to meet the requirement, or throws.",
+  "description": [
+    "The assertion form. The default message names both versions, which is what makes an unmet dependency readable in an execution log."
+  ],
+  "params": {
+    "currentVersion": "The version in hand.",
+    "requiredVersion": "The minimum that is acceptable.",
+    "message": "The message of the exception. A default naming both versions is used when omitted."
+  },
+  "returns": "the current version, unchanged.",
+  "throws": {
+    "IllegalArgumentException": "the current version is lower than required."
+  },
+  "examples": [
+    {
+      "title": "Guarding a dependency",
+      "body": "```javascript\nrequireVersionCompatible(\"1.3.0\", \"1.2.0\"); // => \"1.3.0\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "nonVersionCompatible"
+    }
+  ]
+}

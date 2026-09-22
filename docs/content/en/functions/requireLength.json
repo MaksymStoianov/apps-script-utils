@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value as a valid array-like length, or throws.",
+  "description": [
+    "A whole number from `0` up to `Number.MAX_SAFE_INTEGER` — the range a `length` property may hold.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a valid array-like length.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a valid array-like length."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireLength(0); // => 0\nrequireLength(42); // => 42\nrequireLength(-1); // throws IllegalArgumentException\nrequireLength(1.5); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "nonLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

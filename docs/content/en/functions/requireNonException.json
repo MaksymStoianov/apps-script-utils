@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value after checking that it is not an `Exception`.",
+  "description": [
+    "The library's own hierarchy only. A plain `Error` does not qualify, which is exactly what makes the check useful in a `catch` block that has to tell the two apart.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with an `Exception` excluded from its type.",
+  "throws": {
+    "IllegalArgumentException": "the value is an `Exception`."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonException(new Error()); // => new Error()\nrequireNonException({}); // => {}\nrequireNonException(new IllegalArgumentException()); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "nonException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

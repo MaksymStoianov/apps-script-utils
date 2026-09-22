@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a sheet.",
+  "description": [
+    "An Apps Script service object has no constructor a script can test against, so the guard reads the tag the object reports for itself: `value.toString() === \"Sheet\"`. A plain object that reports the same tag passes too, which in practice means a test double.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a sheet; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nisSheet(sheet); // => true\nisSheet({}); // => false\nisSheet(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSheet"
+    },
+    {
+      "name": "requireSheet"
+    }
+  ]
+}

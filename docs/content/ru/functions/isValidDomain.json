@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение доменным именем.",
+  "description": [
+    "Метки, разделённые одиночными точками, без точки или дефиса в начале и в конце и без пустых меток. Это проверка синтаксиса: резолвится ли домен — отдельный вопрос.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является доменным именем; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisValidDomain(\"example.com\"); // => true\nisValidDomain(\"sub.example.co.uk\"); // => true\nisValidDomain(\"-example.com\"); // => false\nisValidDomain(\"example..com\"); // => false\nisValidDomain(\"example.com.\"); // => false\nisValidDomain(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

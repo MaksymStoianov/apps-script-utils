@@ -1,0 +1,26 @@
+{
+  "summary": "Encode chaque caractère en référence numérique.",
+  "description": [
+    "Contrairement à `escapeHtml`, qui ne touche que les cinq caractères dangereux, celle-ci réécrit toute la chaîne en références `&#NN;`. `decodeHtml` en est l'inverse."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide."
+  },
+  "returns": "la chaîne encodée.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "decodeHtml"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

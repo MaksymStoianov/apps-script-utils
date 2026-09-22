@@ -1,0 +1,27 @@
+{
+  "summary": "Returns how many days remain between a date and the end of its month.",
+  "description": [
+    "The date itself is not counted: on the last day of a month the answer is `0`. It is the number of days still to come, which is what a quota or a billing period usually wants."
+  ],
+  "params": {
+    "date": "The date to read. It must be a valid `Date`."
+  },
+  "returns": "the number of days left, `0` on the last day.",
+  "throws": {
+    "IllegalArgumentException": "an argument is not a valid `Date`."
+  },
+  "examples": [
+    {
+      "title": "Counting",
+      "body": "```javascript\ngetDaysLeftInMonth(new Date(2026, 0, 20)); // => 11\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getDaysInMonth"
+    },
+    {
+      "name": "diff"
+    }
+  ]
+}

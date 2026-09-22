@@ -1,0 +1,27 @@
+{
+  "summary": "Returns the length of a string in code units.",
+  "description": [
+    "**Read the caveat before using this.** The name and the original intent are the UTF-8 byte length, but as it stands the function counts UTF-16 code units and only widens the first surrogate it meets. An ASCII string measures correctly; anything outside ASCII — Cyrillic, Greek, CJK, an emoji — measures short. Until that is fixed, measure a payload with `Utilities.newBlob(text).getBytes().length` instead."
+  ],
+  "params": {
+    "value": "The string to measure."
+  },
+  "returns": "the length, in code units.",
+  "throws": {
+    "InvalidStringException": "the value is not a string."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\ngetByteSize(\"abc\"); // => 3\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    }
+  ]
+}

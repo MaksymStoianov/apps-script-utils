@@ -1,0 +1,28 @@
+{
+  "summary": "Extrait un nombre d'une valeur, ou signale qu'il n'y en a pas.",
+  "description": [
+    "Une chaîne est lue par `parseInt`, qui prend les chiffres de tête et s'arrête : `\"12abc\"` donne `12`. Un texte sans chiffre initial, la chaîne vide, `null` et `undefined` donnent `null` : l'échec est donc une valeur vérifiable, pas un `NaN` qui se propage.",
+    "Un nombre passe intact, y compris fractionnaire : `toInteger(1.9)` vaut `1.9`, pas `1`. Utilisez `Math.trunc` ou `requireInteger` lorsqu'un entier est réellement attendu."
+  ],
+  "params": {
+    "value": "La valeur à lire."
+  },
+  "returns": "le nombre, ou `null` s'il n'y a rien à lire.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lire un nombre"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isInteger"
+    },
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "requireInteger"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Checks whether a value is **not** a relative path.",
+  "description": [
+    "`nonRelative(value)` is the same test as `!isRelative(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "The exact complement of `isAbsolute`: anything that does not start at a root, which includes the empty string.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a relative path; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonRelative(\"/var/log\"); // => true\nnonRelative(\"https://example.com/a\"); // => true\nnonRelative(\"docs/readme.md\"); // => false\nnonRelative(\"./a\"); // => false\nnonRelative(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRelative"
+    },
+    {
+      "name": "requireRelative"
+    }
+  ]
+}

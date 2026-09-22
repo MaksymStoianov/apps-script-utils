@@ -1,0 +1,26 @@
+{
+  "summary": "Un bloc de cellules, décrit comme le fait l'API Sheets.",
+  "description": [
+    "Quatre bornes et, facultativement, la feuille : `startRowIndex`, `endRowIndex`, `startColumnIndex`, `endColumnIndex`, plus `sheetId` ou `sheetName`. Les indices comptent à partir de zéro, les bornes de début sont incluses et celles de fin ne le sont pas — une cellule unique couvre donc un indice, pas zéro.",
+    "Une borne omise signifie que la plage est ouverte de ce côté : sans bornes de lignes, une colonne entière ; sans bornes de colonnes, une ligne entière ; sans aucune, toute la feuille. `toA1Notation` et `parseA1Notation` traduisent entre cette forme et la notation que lit une personne."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    },
+    {
+      "name": "isCellGridRange"
+    }
+  ]
+}

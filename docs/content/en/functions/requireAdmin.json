@@ -1,0 +1,30 @@
+{
+  "summary": "Stops the call unless the current user is a Workspace administrator.",
+  "description": [
+    "The assertion form of `isAdmin`, and the one to put at the top of anything destructive. It returns nothing: either the call continues or it does not."
+  ],
+  "params": {
+    "message": "The message of the exception. A default is used when omitted."
+  },
+  "returns": "nothing; it either passes or throws.",
+  "throws": {
+    "AuthorizationException": "the active user is not an administrator."
+  },
+  "examples": [
+    {
+      "title": "Guarding an action",
+      "body": "```javascript\nfunction deleteEverything() {\n  requireAdmin(\"Only an administrator may run this.\");\n\n  // …\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAdmin"
+    },
+    {
+      "name": "nonAdmin"
+    },
+    {
+      "name": "AuthorizationException"
+    }
+  ]
+}

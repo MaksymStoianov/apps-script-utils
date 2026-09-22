@@ -1,0 +1,28 @@
+{
+  "summary": "Takes the sheet name out of an A1 notation.",
+  "description": [
+    "The quoting Sheets uses for names with spaces or punctuation is undone, so `\"'My Sheet'!A1\"` yields `My Sheet`. A notation without a sheet name yields nothing."
+  ],
+  "params": {
+    "a1Notation": "The notation to read."
+  },
+  "returns": "the sheet name, when the notation carries one.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Extracting",
+      "body": "```javascript\nextractSheetNameFromA1Notation(\"Sheet1!A1:B2\"); // => \"Sheet1\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractRangeFromA1Notation"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

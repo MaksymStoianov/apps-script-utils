@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is a valid array-like length.",
+  "description": [
+    "A whole number from `0` up to `Number.MAX_SAFE_INTEGER` — the range a `length` property may hold.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a valid array-like length; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisLength(0); // => true\nisLength(42); // => true\nisLength(Number.MAX_SAFE_INTEGER); // => true\nisLength(-1); // => false\nisLength(1.5); // => false\nisLength(\"3\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonLength"
+    },
+    {
+      "name": "requireLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

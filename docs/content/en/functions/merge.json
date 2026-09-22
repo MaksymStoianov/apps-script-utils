@@ -1,0 +1,30 @@
+{
+  "summary": "Fills the `{{ key }}` placeholders of a template from an object.",
+  "description": [
+    "Whitespace inside the braces is ignored, so `{{name}}` and `{{ name }}` are the same placeholder. A key that the object does not carry is left as it stands, which makes a missing value visible rather than silently blank; `onMissing: \"empty\"` removes it instead.",
+    "`escape` takes a function applied to every substituted value — pass `escapeHtml` when the result goes into a page."
+  ],
+  "params": {
+    "template": "The template string with `{{ key }}` placeholders.",
+    "data": "The object the values come from.",
+    "options": "`onMissing` is `\"keep\"` or `\"empty\"`; `escape` is a function applied to each value."
+  },
+  "returns": "the template with its placeholders filled.",
+  "throws": {
+    "IllegalArgumentException": "the template is not a string, or the data is not an object."
+  },
+  "examples": [
+    {
+      "title": "Filling a template",
+      "body": "```javascript\nmerge(\"Hi {{ name }}!\", { name: \"Ada\" }); // => \"Hi Ada!\"\nmerge(\"Hi {{ name }}!\", {}); // => \"Hi {{ name }}!\"\nmerge(\"Hi {{ name }}!\", {}, { onMissing: \"empty\" }); // => \"Hi !\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    },
+    {
+      "name": "getPath"
+    }
+  ]
+}

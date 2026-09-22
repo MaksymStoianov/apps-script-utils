@@ -1,0 +1,30 @@
+{
+  "summary": "Insère des colonnes à gauche des données déjà présentes sur une feuille.",
+  "description": [
+    "De la place est faite avant la première colonne de la zone de données et la matrice y est écrite, un tableau par colonne : rien d'existant n'est écrasé.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur."
+  ],
+  "params": {
+    "sheet": "La feuille où écrire.",
+    "values": "Une matrice de lignes : un tableau par ligne, toutes de même longueur.",
+    "options": "`afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début."
+  },
+  "returns": "la même feuille, ce qui permet d'enchaîner les appels.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille.",
+    "TypeError": "les valeurs ne forment pas une matrice à lignes de même longueur."
+  },
+  "examples": [
+    {
+      "title": "Écriture"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependColumn"
+    },
+    {
+      "name": "appendColumns"
+    }
+  ]
+}

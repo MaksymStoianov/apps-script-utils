@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Rasterbereich vollständig in einem anderen liegt.",
+  "description": [
+    "Die Enthaltung ist einschließend: ein Bereich enthält sich selbst. Eine fehlende Grenze am äußeren Bereich heißt, er ist in diese Richtung offen und enthält auf dieser Achse alles — so wird eine ganze Spalte oder ein ganzes Blatt ausgedrückt.",
+    "Das ist die Prüfung vor dem Schreiben in einen vom Nutzer gewählten Bereich, damit ein Schreibvorgang nicht über das Gebiet hinausläuft, das dem Skript gehört."
+  ],
+  "params": {
+    "range1": "Der zu prüfende Bereich.",
+    "range2": "Der Bereich, mit dem verglichen wird."
+  },
+  "returns": "`true`, wenn der erste Bereich im zweiten liegt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Enthaltung prüfen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonGridRangeContainedIn"
+    },
+    {
+      "name": "requireGridRangeContainedIn"
+    },
+    {
+      "name": "doGridRangesIntersect"
+    }
+  ]
+}

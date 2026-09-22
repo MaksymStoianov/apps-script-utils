@@ -1,0 +1,25 @@
+{
+  "summary": "Від рядка очікувалася адреса електронної пошти, а її форма їй не відповідає.",
+  "description": [
+    "Від рядка очікувалася адреса електронної пошти, а її форма їй не відповідає.",
+    "Кидається функціями [`requireValidEmail`](requireValidEmail.md).",
+    "Будь-який клас цієї ієрархії приймає необов'язкове повідомлення, інший виняток, чиє повідомлення буде перевикористано, або взагалі нічого. `isException` розпізнає їх усі; звичайний `Error` до них не належить."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Кинути й упіймати",
+      "body": "```javascript\nthrow new InvalidEmailFormatException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof InvalidEmailFormatException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

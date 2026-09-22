@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення діапазоном з однієї комірки.",
+  "description": [
+    "Один рядок і один стовпець, рахуючи за межами, а не за тим, як діапазон записали: кінцеві індекси не включаються, тому одна комірка — це `endRowIndex - startRowIndex === 1` і те саме для стовпців. Діапазон із пропущеною межею відкритий у цей бік і однією коміркою не буває.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є діапазоном з однієї комірки; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => true\nisCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // => false\nisCellGridRange({}); // => false\nisCellGridRange(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonCellGridRange"
+    },
+    {
+      "name": "requireCellGridRange"
+    }
+  ]
+}

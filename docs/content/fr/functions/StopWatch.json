@@ -1,0 +1,26 @@
+{
+  "summary": "Chronomètre une suite de tâches nommées.",
+  "description": [
+    "`start` ouvre une tâche et `stop` la ferme ; une seule court à la fois. Ensuite, le chronomètre rapporte la dernière tâche, la liste entière et le total, en millisecondes ou en secondes.",
+    "Il sert à trouver où passent les six minutes d'une exécution : nommer les étapes, exécuter une fois, lire les totaux. `setKeepTaskList(false)` empêche la liste d'enfler quand une boucle chronomètre des milliers d'étapes."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Chronométrer une exécution"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "TaskInfo"
+    },
+    {
+      "name": "now"
+    },
+    {
+      "name": "diff"
+    }
+  ]
+}

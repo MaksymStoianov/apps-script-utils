@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как доменное имя или выбрасывает исключение.",
+  "description": [
+    "Метки, разделённые одиночными точками, без точки или дефиса в начале и в конце и без пустых меток. Это проверка синтаксиса: резолвится ли домен — отдельный вопрос.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как доменное имя.",
+  "throws": {
+    "IllegalArgumentException": "значение не является доменным именем."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireValidDomain(\"example.com\"); // => \"example.com\"\nrequireValidDomain(\"sub.example.co.uk\"); // => \"sub.example.co.uk\"\nrequireValidDomain(\"-example.com\"); // throws IllegalArgumentException\nrequireValidDomain(\"example..com\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "nonValidDomain"
+    }
+  ]
+}

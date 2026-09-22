@@ -1,0 +1,30 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** un nombre.",
+  "description": [
+    "`nonNumber(value)` est le même test que `!isNumber(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Le test est `typeof value === \"number\"`, que `NaN` et les deux infinis satisfont également. Utilisez `isFloat`, `isInteger` ou `isNaN` quand ces cas doivent être distingués.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un nombre ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonNumber(\"1\"); // => true\nnonNumber(null); // => true\nnonNumber(0); // => false\nnonNumber(1.5); // => false\nnonNumber(NaN); // => false\nnonNumber(Infinity); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumber"
+    },
+    {
+      "name": "requireNumber"
+    },
+    {
+      "name": "requireNonNumber"
+    }
+  ]
+}

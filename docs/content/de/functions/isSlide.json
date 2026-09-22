@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert eine Folie ist.",
+  "description": [
+    "Ein Apps-Script-Dienstobjekt hat keinen Konstruktor, gegen den ein Skript prüfen könnte, also sucht die Prüfung die Methoden, die den Typ ausmachen — `getObjectId`, `getPageElementById`. Ein Stub, der sie umsetzt, besteht, und genau das macht Code mit dieser Prüfung außerhalb der Laufzeit testbar.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Folie ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[0];\n\nisSlide(slide); // => true\nisSlide({}); // => false\nisSlide(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSlide"
+    },
+    {
+      "name": "requireSlide"
+    }
+  ]
+}

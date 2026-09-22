@@ -1,0 +1,28 @@
+{
+  "summary": "Returns a service once it is known to exist, or throws.",
+  "description": [
+    "An advanced service that was never enabled is simply an undefined global, and the failure that follows is a `ReferenceError` far from its cause. This turns it into a named exception with a message that says what to switch on."
+  ],
+  "params": {
+    "service": "The service to check.",
+    "message": "The message of the exception. A default is used when omitted."
+  },
+  "returns": "the same service.",
+  "throws": {
+    "ServiceIsNotDefinedException": "the service is `null` or `undefined`."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\n// An advanced service is a global that only exists once it has been enabled.\nconst directory = requireService(AdminDirectory, \"Enable the Admin SDK service.\");\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireRepository"
+    },
+    {
+      "name": "ServiceIsNotDefinedException"
+    }
+  ]
+}

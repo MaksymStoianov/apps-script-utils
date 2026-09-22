@@ -1,0 +1,22 @@
+{
+  "summary": "Reads a comma-separated list of A1 notations.",
+  "description": [
+    "Each entry is read exactly as `parseA1Notation` reads one, so a list may mix sheet-qualified and bare notations. Whitespace around the commas is ignored."
+  ],
+  "params": {
+    "a1Notations": "The notations, separated by commas."
+  },
+  "returns": "one parsed range per entry.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Reading a list",
+      "body": "```javascript\nparseA1Notations(\"A1:B2, C3\").length; // => 2\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

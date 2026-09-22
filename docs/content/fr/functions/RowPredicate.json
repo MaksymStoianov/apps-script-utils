@@ -1,0 +1,25 @@
+{
+  "summary": "Décide si une ligne fait partie de celles à traiter.",
+  "description": [
+    "Il reçoit les cellules de la ligne, sa position à base un et — si une ligne d'en-tête a été désignée — la ligne indexée par les noms de colonnes, `null` sinon. Renvoyer `true` sélectionne la ligne."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowConditionalOptions"
+    }
+  ]
+}

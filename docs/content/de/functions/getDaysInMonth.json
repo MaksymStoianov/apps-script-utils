@@ -1,0 +1,26 @@
+{
+  "summary": "Gibt zurück, wie viele Tage der Monat eines Datums hat.",
+  "description": [
+    "Schaltjahre erledigt der Kalender selbst, der Februar hat also 29 Tage, wo er sie haben soll. Nur Monat und Jahr des Datums zählen; Tag und Uhrzeit bleiben unbeachtet."
+  ],
+  "params": {
+    "date": "Das zu lesende Datum. Es muss ein gültiges `Date` sein."
+  },
+  "returns": "die Anzahl der Tage, 28 bis 31.",
+  "throws": {
+    "IllegalArgumentException": "ein Argument ist kein gültiges `Date`."
+  },
+  "examples": [
+    {
+      "title": "Zählen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getDaysLeftInMonth"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

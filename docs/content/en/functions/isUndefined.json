@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is `undefined`.",
+  "description": [
+    "The test is `typeof value === \"undefined\"`, which is safe for a variable that was never declared, unlike a bare comparison.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is `undefined`; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisUndefined(undefined); // => true\nisUndefined(null); // => false\nisUndefined(0); // => false\nisUndefined(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonUndefined"
+    },
+    {
+      "name": "requireUndefined"
+    },
+    {
+      "name": "requireNonUndefined"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Funktion ist.",
+  "description": [
+    "Anhand des internen Tags bestimmt: gewöhnliche, `async`-, Generator- und Async-Generator-Funktionen bestehen alle. Eine Klasse ist ebenfalls eine Funktion.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht eine Funktion ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist eine Funktion."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonFunction(null); // => null\nrequireNonFunction(\"fn\"); // => \"fn\"\nrequireNonFunction(function () {}); // throws IllegalArgumentException\nrequireNonFunction(async function () {}); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunction"
+    },
+    {
+      "name": "nonFunction"
+    },
+    {
+      "name": "requireFunction"
+    }
+  ]
+}

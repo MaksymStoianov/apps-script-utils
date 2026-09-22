@@ -1,0 +1,36 @@
+{
+  "summary": "Повертає значення, переконавшись, що воно не є значенням `null` або `undefined`.",
+  "description": [
+    "Лише відсутні значення: `0`, `\"\"` і `false` — це наявні значення, вони не підходять.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення; після перевірки відомо, що воно не є значенням `null` або `undefined`.",
+  "throws": {
+    "NullPointerException": "значення є значенням `null` або `undefined`."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireNonNull(0); // => 0\nrequireNonNull(\"\"); // => \"\"\nrequireNonNull(null); // throws NullPointerException\nrequireNonNull(undefined); // throws NullPointerException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNull"
+    },
+    {
+      "name": "nonNull"
+    },
+    {
+      "name": "requireNull"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

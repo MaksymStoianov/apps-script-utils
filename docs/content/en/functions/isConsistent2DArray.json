@@ -1,0 +1,36 @@
+{
+  "summary": "Checks whether a value is a non-empty matrix whose rows all have the same length.",
+  "description": [
+    "This is the check to run before `Range#setValues`, which rejects a ragged matrix with a message that names neither\nthe offending row nor the reason. Everything [`is2DArray`](is2DArray.md) requires holds here as well — a non-empty\narray of arrays — plus the rule that every row is as wide as the first.",
+    "As a TypeScript type predicate it narrows the value to `Array<Array<unknown>>` inside the branch."
+  ],
+  "params": {
+    "arr": "The value to check."
+  },
+  "returns": "`true` if the value is a non-empty array of arrays of equal length; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Uniform rows, ragged rows, and non-matrices",
+      "body": "```javascript\nisConsistent2DArray([\n  [1, 2],\n  [3, 4]\n]); // => true\nisConsistent2DArray([[1, 2], [3]]); // => false — rows differ in length\nisConsistent2DArray([1, 2]); // => false — not 2D at all\nisConsistent2DArray([]); // => false\n```"
+    },
+    {
+      "title": "Before writing to a range",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"isConsistent2DArray.ts\" include-symbol=\"write\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction write(sheet, rows) {\n  if (!isConsistent2DArray(rows)) {\n    throw new Error(\"Every row must have the same number of columns.\");\n  }\n  sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);\n}\n</code-block>\n</tab>\n</tabs>"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "the shape check without the row length rule."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "the same test, negated."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "throws, and names the offending row."
+    }
+  ]
+}

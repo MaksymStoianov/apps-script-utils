@@ -1,0 +1,23 @@
+{
+  "summary": "Returns the current time in milliseconds since the epoch.",
+  "description": [
+    "A named function instead of `Date.now()` scattered through the code, so that measuring time is one thing a test can replace."
+  ],
+  "params": {},
+  "returns": "the current timestamp in milliseconds.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Measuring elapsed time",
+      "body": "```javascript\nconst started = now();\n\n// … work …\n\nconst elapsed = now() - started; // milliseconds\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

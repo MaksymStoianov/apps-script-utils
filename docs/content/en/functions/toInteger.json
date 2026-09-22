@@ -1,0 +1,29 @@
+{
+  "summary": "Reads a number out of a value, or reports that there is none.",
+  "description": [
+    "A string is read with `parseInt`, which takes the leading digits and stops: `\"12abc\"` gives `12`. Text with no leading digits, an empty string, `null` and `undefined` all give `null`, so the failure is a value you can check rather than a `NaN` that spreads.",
+    "A number passes through untouched — including a fractional one, which is why `toInteger(1.9)` is `1.9` and not `1`. Reach for `Math.trunc` or `requireInteger` when a whole number is what the call actually needs."
+  ],
+  "params": {
+    "value": "The value to read."
+  },
+  "returns": "the number, or `null` when there is none to read.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Reading a number",
+      "body": "```javascript\ntoInteger(\" 42 \"); // => 42\ntoInteger(\"12abc\"); // => 12\ntoInteger(\"abc\"); // => null\ntoInteger(null); // => null\ntoInteger(1.9); // => 1.9\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isInteger"
+    },
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "requireInteger"
+    }
+  ]
+}

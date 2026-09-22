@@ -1,0 +1,26 @@
+{
+  "summary": "The values JavaScript treats as false in a boolean context.",
+  "description": [
+    "`false`, `null`, `undefined`, `0`, `0n` and the empty string. The type exists so that `compact` can say what it removes and return a narrowed array without a cast; `NaN` is falsy too but has no place in a type, since its type is `number`."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst values = [0, \"\", false, null, undefined];\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact"
+    },
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "nonNil"
+    }
+  ]
+}

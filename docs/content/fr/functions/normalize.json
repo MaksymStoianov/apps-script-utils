@@ -1,0 +1,25 @@
+{
+  "summary": "Résout les segments `.` et `..` d'un chemin.",
+  "description": [
+    "Un `.` disparaît, un `..` supprime le segment précédent, les séparateurs répétés se réduisent, et un séparateur final est retiré.",
+    "Le résultat part toujours de la racine : `normalize(\"a/b\")` donne `\"/a/b\"`. Si un chemin relatif doit le rester, utilisez `join`."
+  ],
+  "params": {
+    "path": "Le chemin à normaliser."
+  },
+  "returns": "le chemin normalisé.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Normalisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "parse"
+    }
+  ]
+}

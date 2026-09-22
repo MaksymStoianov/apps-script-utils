@@ -1,0 +1,23 @@
+{
+  "summary": "Rewrites one formula.",
+  "description": [
+    "It receives the formula and the row and column it sits in, and returns the formula to put back. Returning the one it was given leaves the cell untouched, and `updateFormulas` writes only the cells that actually changed."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst rewrite = (formula, row, column) => formula.replace(\"Sheet1\", \"Data\");\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateFormulas"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является преобразуемым в число.",
+  "description": [
+    "`nonNumberLike(value)` — та же проверка, что и `!isNumberLike(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Конечное число или строка, которая в него превращается. `NaN`, бесконечности и пустая строка исключены — этим проверка и отличается от простого `Number(value)`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является преобразуемым в число; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonNumberLike(NaN); // => true\nnonNumberLike(Infinity); // => true\nnonNumberLike(\"\"); // => true\nnonNumberLike(null); // => true\nnonNumberLike(1); // => false\nnonNumberLike(\"1.5\"); // => false\nnonNumberLike(\" 42 \"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "requireNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

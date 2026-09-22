@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є викликаним значенням.",
+  "description": [
+    "`nonFunctionLike(value)` — та сама перевірка, що й `!isFunctionLike(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Дешева перевірка — `typeof value === \"function\"`, — саме те, що потрібно перед викликом. `isFunction` відповідає на те саме питання суворіше.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є викликаним значенням; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonFunctionLike(null); // => true\nnonFunctionLike({}); // => true\nnonFunctionLike(\"fn\"); // => true\nnonFunctionLike(function () {}); // => false\nnonFunctionLike(Math.max); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    },
+    {
+      "name": "requireNonFunctionLike"
+    }
+  ]
+}

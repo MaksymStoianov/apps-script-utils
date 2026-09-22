@@ -1,0 +1,28 @@
+{
+  "summary": "Behauptet, dass eine Bedingung gilt, und wirft, wenn nicht.",
+  "description": [
+    "Für Prüfungen, bei denen es um den Zeitpunkt geht und nicht um die Argumente: eine bereits geschlossene Verbindung, ein noch nicht vorbereitetes Blatt, ein Wert, der längst im Cache liegen sollte.",
+    "Sie ist als TypeScript-Assertion deklariert, nach dem Aufruf hält der Compiler die Bedingung für den Rest der Funktion für wahr."
+  ],
+  "params": {
+    "condition": "Die Bedingung, die gelten muss.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet."
+  },
+  "returns": "nichts; der Aufruf besteht oder wirft.",
+  "throws": {
+    "IllegalStateException": "die Bedingung ist unwahr."
+  },
+  "examples": [
+    {
+      "title": "Einen Zustand absichern"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonNull"
+    },
+    {
+      "name": "IllegalStateException"
+    }
+  ]
+}

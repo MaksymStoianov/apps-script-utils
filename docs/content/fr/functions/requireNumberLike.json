@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur en tant que une valeur numérique, ou lève une exception.",
+  "description": [
+    "Un nombre fini, ou une chaîne qui se convertit en un nombre fini. `NaN`, les infinis et la chaîne vide sont exclus, ce qui distingue ce test d'un simple `Number(value)`.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme une valeur numérique.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas convertible en nombre."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNumberLike(1); // => 1\nrequireNumberLike(\"1.5\"); // => \"1.5\"\nrequireNumberLike(NaN); // throws IllegalArgumentException\nrequireNumberLike(Infinity); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "nonNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

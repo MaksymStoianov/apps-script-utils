@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht objektartig ist.",
+  "description": [
+    "Alles, was `isObject` akzeptiert, und zusätzlich Funktionen: die Frage ist, ob sich am Wert überhaupt Eigenschaften lesen lassen.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht objektartig ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist objektartig."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonObjectLike(null); // => null\nrequireNonObjectLike(\"abc\"); // => \"abc\"\nrequireNonObjectLike({}); // throws IllegalArgumentException\nrequireNonObjectLike([]); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObjectLike"
+    },
+    {
+      "name": "nonObjectLike"
+    },
+    {
+      "name": "requireObjectLike"
+    }
+  ]
+}

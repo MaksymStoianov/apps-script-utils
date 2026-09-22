@@ -1,0 +1,25 @@
+{
+  "summary": "La base abstraite dont héritent les classes de la bibliothèque.",
+  "description": [
+    "Elle porte le comportement attendu de toute classe d'ici plutôt qu'une logique propre, et ne s'instancie pas. Héritez-en lorsqu'un objet-valeur à vous doit se comporter comme ceux de la bibliothèque : reconnu par les gardes et comparé par `equals` plutôt que par identité."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "Iterator"
+    },
+    {
+      "name": "equals"
+    },
+    {
+      "name": "hashCode"
+    }
+  ]
+}

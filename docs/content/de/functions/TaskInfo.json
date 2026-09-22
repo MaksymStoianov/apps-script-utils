@@ -1,0 +1,19 @@
+{
+  "summary": "Eine gemessene Aufgabe, wie eine `StopWatch` sie festgehalten hat.",
+  "description": [
+    "Der Name, mit dem die Aufgabe gestartet wurde — leer, wenn keiner angegeben war — und ihre Dauer in Millisekunden und in Sekunden. Dieselbe Messung in zwei Einheiten, damit weder die Protokollzeile noch die Rechnung umrechnen muss."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "StopWatch"
+    }
+  ]
+}

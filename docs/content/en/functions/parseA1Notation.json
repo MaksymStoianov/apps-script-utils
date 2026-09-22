@@ -1,0 +1,29 @@
+{
+  "summary": "Reads A1 notation into a grid range.",
+  "description": [
+    "The result carries the sheet name when the notation had one and `null` when it did not, the range part on its own, and the four zero-based bounds the Sheets API works in.",
+    "Open notations are understood: `\"A:A\"` is a whole column and leaves the row bounds out, `\"1:1\"` a whole row."
+  ],
+  "params": {
+    "a1Notation": "The notation to read, with or without a sheet name."
+  },
+  "returns": "the parsed range.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Reading A1 notation",
+      "body": "```javascript\nparseA1Notation(\"Sheet1!A1:B2\");\n// => { sheetName: \"Sheet1\", a1Notation: \"A1:B2\",\n//      startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 }\n\nparseA1Notation(\"A1\").sheetName; // => null\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notations"
+    },
+    {
+      "name": "toA1Notation"
+    },
+    {
+      "name": "extractRangeFromA1Notation"
+    }
+  ]
+}

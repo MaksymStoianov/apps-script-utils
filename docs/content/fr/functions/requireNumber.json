@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur en tant que un nombre, ou lève une exception.",
+  "description": [
+    "Le test est `typeof value === \"number\"`, que `NaN` et les deux infinis satisfont également. Utilisez `isFloat`, `isInteger` ou `isNaN` quand ces cas doivent être distingués.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un nombre.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un nombre."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNumber(0); // => 0\nrequireNumber(1.5); // => 1.5\nrequireNumber(\"1\"); // throws IllegalArgumentException\nrequireNumber(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumber"
+    },
+    {
+      "name": "nonNumber"
+    },
+    {
+      "name": "requireNonNumber"
+    }
+  ]
+}

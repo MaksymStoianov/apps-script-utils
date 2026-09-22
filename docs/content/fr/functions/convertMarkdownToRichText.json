@@ -1,0 +1,25 @@
+{
+  "summary": "Transforme un petit sous-ensemble de Markdown en segments de texte stylés.",
+  "description": [
+    "Gras, italique, code et liens sont reconnus et deviennent des segments portant le style correspondant, prêts à être écrits dans une diapositive ou une cellule. Un thème permet de changer ces styles — la police d'un segment de code, par exemple — sans toucher au texte."
+  ],
+  "params": {
+    "text": "Le Markdown à convertir.",
+    "theme": "Les styles attribués à chaque type de segment."
+  },
+  "returns": "les segments, dans l'ordre, chacun avec son texte et son style.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertRichTextToHtml"
+    },
+    {
+      "name": "isRichTextValue"
+    }
+  ]
+}

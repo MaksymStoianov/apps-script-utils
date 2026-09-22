@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als einen Gebietsschema-Code zurück oder wirft.",
+  "description": [
+    "Genau zwei ASCII-Buchstaben in beliebiger Schreibweise — `\"en\"`, `\"UK\"`. Ein Regions- oder Schrift-Subtag wie in `\"en-US\"` wird abgelehnt: gemeint ist der kurze Sprachcode, nicht ein vollständiges BCP-47-Tag.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als einen Gebietsschema-Code.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein Gebietsschema-Code."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireValidLocale(\"en\"); // => \"en\"\nrequireValidLocale(\"UK\"); // => \"UK\"\nrequireValidLocale(\"en-US\"); // throws IllegalArgumentException\nrequireValidLocale(\"eng\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidLocale"
+    },
+    {
+      "name": "nonValidLocale"
+    }
+  ]
+}

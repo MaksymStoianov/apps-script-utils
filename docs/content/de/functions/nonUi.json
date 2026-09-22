@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Ui-Objekt ist.",
+  "description": [
+    "`nonUi(value)` ist dieselbe Prüfung wie `!isUi(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Ein Apps-Script-Dienstobjekt hat keinen Konstruktor, gegen den ein Skript prüfen könnte, also liest die Prüfung den Tag, den das Objekt über sich selbst meldet: `value.toString() === \"Ui\"`. Ein einfaches Objekt mit demselben Tag besteht ebenfalls — in der Praxis ist das ein Test-Double.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Ui-Objekt ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nconst ui = SpreadsheetApp.getUi();\n\nnonUi({}); // => true\nnonUi(null); // => true\nnonUi(ui); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isUi"
+    },
+    {
+      "name": "requireUi"
+    }
+  ]
+}

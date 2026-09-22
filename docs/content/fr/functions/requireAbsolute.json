@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que un chemin absolu, ou lève une exception.",
+  "description": [
+    "Un chemin qui part d'une racine : un `/` initial, ou un schéma comme `https://` ou `mailto:`. Tout le reste, chaîne vide comprise, est relatif.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un chemin absolu.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un chemin absolu."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireAbsolute(\"/var/log\"); // => \"/var/log\"\nrequireAbsolute(\"https://example.com/a\"); // => \"https://example.com/a\"\nrequireAbsolute(\"docs/readme.md\"); // throws IllegalArgumentException\nrequireAbsolute(\"./a\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAbsolute"
+    },
+    {
+      "name": "nonAbsolute"
+    }
+  ]
+}

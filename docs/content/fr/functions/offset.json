@@ -1,0 +1,29 @@
+{
+  "summary": "Décale une date d'un certain nombre d'unités.",
+  "description": [
+    "Un nouveau `Date` est renvoyé ; celui passé en argument reste intact. Un montant négatif recule.",
+    "Ajouter un mois conserve le quantième là où il existe et le ramène en fin de mois sinon : le 31 janvier plus un mois donne le 28 février, pas le 3 mars."
+  ],
+  "params": {
+    "date": "La date à lire. Ce doit être un `Date` valide.",
+    "amount": "De combien d'unités décaler. Un nombre négatif recule.",
+    "unit": "De `\"millisecond\"` à `\"year\"`, comme pour `diff`."
+  },
+  "returns": "une nouvelle date, décalée.",
+  "throws": {
+    "IllegalArgumentException": "un argument n'est pas un `Date` valide."
+  },
+  "examples": [
+    {
+      "title": "Décaler une date"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "getDaysInMonth"
+    }
+  ]
+}

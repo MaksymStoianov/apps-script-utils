@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение таблицей.",
+  "description": [
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка читает тег, который объект сообщает о себе сам: `value.toString() === \"Spreadsheet\"`. Обычный объект с таким же тегом тоже пройдёт — на практике это тестовый дубль.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является таблицей; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst spreadsheet = SpreadsheetApp.getActive();\n\nisSpreadsheet(spreadsheet); // => true\nisSpreadsheet({}); // => false\nisSpreadsheet(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSpreadsheet"
+    },
+    {
+      "name": "requireSpreadsheet"
+    }
+  ]
+}

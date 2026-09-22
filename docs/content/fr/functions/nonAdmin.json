@@ -1,0 +1,22 @@
+{
+  "summary": "Indique que l'utilisateur courant n'est **pas** administrateur Workspace.",
+  "description": [
+    "La négation d'`isAdmin`, pour la clause de garde qui sort tôt. Comme une recherche en échec y répond `false`, elle répond `true` ici : un Admin SDK indisponible est traité comme « pas administrateur », lecture la plus sûre."
+  ],
+  "params": {},
+  "returns": "`true` si l'utilisateur actif n'est pas administrateur.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Sortir tôt"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAdmin"
+    },
+    {
+      "name": "requireAdmin"
+    }
+  ]
+}

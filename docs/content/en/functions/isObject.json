@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is an object.",
+  "description": [
+    "The test is `typeof value === \"object\"` with `null` excluded, so arrays, dates and class instances all count, while a function does not. `isObjectLike` is the one that also accepts functions.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is an object; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisObject({}); // => true\nisObject([]); // => true\nisObject(new Date()); // => true\nisObject(null); // => false\nisObject(\"abc\"); // => false\nisObject(function () {}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonObject"
+    },
+    {
+      "name": "requireObject"
+    },
+    {
+      "name": "requireNonObject"
+    }
+  ]
+}

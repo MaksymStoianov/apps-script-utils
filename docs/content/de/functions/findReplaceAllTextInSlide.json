@@ -1,0 +1,29 @@
+{
+  "summary": "Ersetzt jedes Vorkommen eines Textes auf einer Folie.",
+  "description": [
+    "Slides bietet Suchen und Ersetzen über eine ganze Präsentation; hier ist es auf eine einzelne Folie eingegrenzt — genau das, was das Füllen einer Vorlagenseite nach der anderen braucht. Groß- und Kleinschreibung zählen, sofern nicht anders angegeben."
+  ],
+  "params": {
+    "slide": "Die zu bearbeitende Folie.",
+    "findText": "Der zu suchende Text.",
+    "replaceText": "Der Text, der an seine Stelle tritt.",
+    "matchCase": "Ob Groß- und Kleinschreibung zählt. Standardmäßig `true`."
+  },
+  "returns": "wie viele Vorkommen ersetzt wurden.",
+  "throws": {
+    "SlideNotFoundException": "das erste Argument ist keine Folie."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideByIndex"
+    },
+    {
+      "name": "requireSlide"
+    }
+  ]
+}

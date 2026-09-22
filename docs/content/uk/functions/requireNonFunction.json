@@ -1,0 +1,33 @@
+{
+  "summary": "Повертає значення, переконавшись, що воно не є функцією.",
+  "description": [
+    "Визначається за внутрішнім тегом, тому підходять звичайні, `async`, генератори та асинхронні генератори. Клас — теж функція.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення; після перевірки відомо, що воно не є функцією.",
+  "throws": {
+    "IllegalArgumentException": "значення є функцією."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireNonFunction(null); // => null\nrequireNonFunction(\"fn\"); // => \"fn\"\nrequireNonFunction(function () {}); // throws IllegalArgumentException\nrequireNonFunction(async function () {}); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunction"
+    },
+    {
+      "name": "nonFunction"
+    },
+    {
+      "name": "requireFunction"
+    }
+  ]
+}

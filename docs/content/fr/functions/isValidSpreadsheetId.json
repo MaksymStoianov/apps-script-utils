@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est un identifiant de classeur.",
+  "description": [
+    "Au moins 25 caractères parmi lettres, chiffres, tirets et tirets bas — l'identifiant qui figure dans l'URL du classeur entre `/d/` et `/edit`. Rien n'est récupéré : seul le format est vérifié.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un identifiant de classeur ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => true\nisValidSpreadsheetId(\"short-id\"); // => false\nisValidSpreadsheetId(\"has space in it and is long enough to pass\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSpreadsheetId"
+    },
+    {
+      "name": "requireValidSpreadsheetId"
+    }
+  ]
+}

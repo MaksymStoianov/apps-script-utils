@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є абсолютним шляхом.",
+  "description": [
+    "`nonAbsolute(value)` — та сама перевірка, що й `!isAbsolute(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Шлях, що починається від кореня: провідний `/` або схема на кшталт `https://` чи `mailto:`. Усе інше, включно з порожнім рядком, відносне.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є абсолютним шляхом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonAbsolute(\"docs/readme.md\"); // => true\nnonAbsolute(\"./a\"); // => true\nnonAbsolute(\"\"); // => true\nnonAbsolute(\"/var/log\"); // => false\nnonAbsolute(\"https://example.com/a\"); // => false\nnonAbsolute(\"mailto:a@example.com\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAbsolute"
+    },
+    {
+      "name": "requireAbsolute"
+    }
+  ]
+}

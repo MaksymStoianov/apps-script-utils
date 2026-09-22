@@ -1,0 +1,27 @@
+{
+  "summary": "A cursor over a sequence, which may also walk backwards.",
+  "description": [
+    "`next` and `hasNext` are all an implementation has to provide. The rest — `previous`, `hasPrevious`, `index`, `moveTo`, `size`, `toStart`, `toEnd` — is optional, so a forward-only source can satisfy the interface without pretending to do more than it can.",
+    "It is the shape a paged reader takes: rows arriving from a service in batches look like one sequence to the code that consumes them."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nwhile (iterator.hasNext()) {\n  const value = iterator.next();\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "Class"
+    },
+    {
+      "name": "first"
+    },
+    {
+      "name": "last"
+    }
+  ]
+}

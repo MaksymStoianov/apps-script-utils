@@ -1,0 +1,26 @@
+{
+  "summary": "One column of a sheet's schema.",
+  "description": [
+    "`name` is the heading written into the header row; `type` says what the column holds and is what `insertSchema` turns into formatting and data validation. A column with no type is left unconstrained."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst column = { name: \"created\", type: \"date\" };\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "SheetSchema"
+    },
+    {
+      "name": "SheetColumnType"
+    },
+    {
+      "name": "insertSchema"
+    }
+  ]
+}

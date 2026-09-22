@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est le nombre `NaN`.",
+  "description": [
+    "Rien n'est converti au préalable, et c'est là que ce test diffère du `isNaN` global : celui-ci convertit son argument, si bien que `isNaN(\"abc\")` et `isNaN(undefined)` renvoient `true`.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est le nombre `NaN` ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisNaN(NaN); // => true\nisNaN(0 / 0); // => true\nisNaN(0); // => false\nisNaN(\"abc\"); // => false\nisNaN(undefined); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNaN"
+    },
+    {
+      "name": "requireNaN"
+    },
+    {
+      "name": "requireNonNaN"
+    }
+  ]
+}

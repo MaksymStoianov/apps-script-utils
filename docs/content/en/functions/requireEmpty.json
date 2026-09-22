@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value as an empty value, or throws.",
+  "description": [
+    "Emptiness is read per kind: `null` and `undefined`, a string with nothing but whitespace, an array, `Set` or `Map` with no entries, an object with no own keys. `0` and `false` are values, not emptiness.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as an empty value.",
+  "throws": {
+    "IllegalArgumentException": "the value is not empty."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireEmpty(null); // => null\nrequireEmpty(\"\"); // => \"\"\nrequireEmpty(0); // throws IllegalArgumentException\nrequireEmpty(false); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

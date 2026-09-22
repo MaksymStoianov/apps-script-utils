@@ -1,0 +1,25 @@
+{
+  "summary": "Erzeugt einen numerischen Hash für einen beliebigen Wert.",
+  "description": [
+    "Der Wert wird zuerst zu einer Zeichenkette — ein Objekt über die schlüsselsortierte Form von `stringifyJson` — und die Zeichenkette zu einer 32-Bit-Ganzzahl gefaltet. Zwei Werte, die `equals` für gleich hält, hashen gleich.",
+    "Es ist ein Eimerschlüssel, keine Prüfsumme: verschiedene Werte können kollidieren, und das Ergebnis ist über Versionen der Bibliothek hinweg nicht garantiert."
+  ],
+  "params": {
+    "value": "Der zu hashende Wert."
+  },
+  "returns": "eine 32-Bit-Ganzzahl; `0` bei leerer Zeichenkette.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Hashen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "equals"
+    },
+    {
+      "name": "stringifyJson"
+    }
+  ]
+}

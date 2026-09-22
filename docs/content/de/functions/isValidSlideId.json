@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert eine Folien-Id ist.",
+  "description": [
+    "Buchstaben, Ziffern, Bindestriche und Unterstriche, mindestens eines davon. Folien-Ids sind kurz — `p1` ist eine ganz gewöhnliche — daher gibt es keine Mindestlänge.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Folien-Id ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisValidSlideId(\"p1\"); // => true\nisValidSlideId(\"SLIDES_api123\"); // => true\nisValidSlideId(\"has space\"); // => false\nisValidSlideId(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSlideId"
+    },
+    {
+      "name": "requireValidSlideId"
+    }
+  ]
+}

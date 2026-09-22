@@ -1,0 +1,26 @@
+{
+  "summary": "Ein Zellblock, beschrieben wie ihn die Sheets-API beschreibt.",
+  "description": [
+    "Vier Grenzen und, optional, das Blatt: `startRowIndex`, `endRowIndex`, `startColumnIndex`, `endColumnIndex` sowie `sheetId` oder `sheetName`. Indizes zählen ab null, die Startgrenzen gehören dazu, die Endgrenzen nicht — eine einzelne Zelle umfasst also eins, nicht null.",
+    "Eine weggelassene Grenze heißt, der Bereich ist in diese Richtung offen: ohne Zeilengrenzen eine ganze Spalte, ohne Spaltengrenzen eine ganze Zeile, ohne alle das ganze Blatt. `toA1Notation` und `parseA1Notation` übersetzen zwischen dieser Form und der Notation, die ein Mensch liest."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    },
+    {
+      "name": "isCellGridRange"
+    }
+  ]
+}

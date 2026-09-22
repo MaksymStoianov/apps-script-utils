@@ -1,0 +1,23 @@
+{
+  "summary": "Vergleicht zwei Werte tief und null-sicher.",
+  "description": [
+    "Objekte und Arrays werden Schlüssel für Schlüssel durchlaufen, Daten über ihren Zeitpunkt verglichen, Primitive über `SameValueZero` — `NaN` ist damit gleich `NaN`, was `===` nie zugesteht. Trägt ein Wert eine eigene `equals`-Methode, wird sie gefragt, statt den Wert zu zerlegen.",
+    "Zyklen sind erlaubt: eine Struktur, die auf sich selbst verweist, wird ohne Endlosschleife verglichen."
+  ],
+  "params": {
+    "a": "Der erste Wert.",
+    "b": "Der zweite Wert."
+  },
+  "returns": "`true`, wenn beide bis in die Tiefe gleich sind.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Vergleichen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "hashCode"
+    }
+  ]
+}

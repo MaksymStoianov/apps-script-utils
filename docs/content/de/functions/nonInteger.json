@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine ganze Zahl ist.",
+  "description": [
+    "`nonInteger(value)` ist dieselbe Prüfung wie `!isInteger(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Eine Zahl ohne Nachkommateil. Es wird nichts umgewandelt: die Zeichenkette `\"42\"` ist keine ganze Zahl, `NaN` ebenso wenig.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine ganze Zahl ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonInteger(1.5); // => true\nnonInteger(NaN); // => true\nnonInteger(\"42\"); // => true\nnonInteger(42); // => false\nnonInteger(-7); // => false\nnonInteger(0); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isInteger"
+    },
+    {
+      "name": "requireInteger"
+    },
+    {
+      "name": "requireNonInteger"
+    }
+  ]
+}

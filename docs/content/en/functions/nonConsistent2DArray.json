@@ -1,0 +1,37 @@
+{
+  "summary": "Checks whether a value is not a matrix with uniform row lengths.",
+  "description": [
+    "`nonConsistent2DArray(value)` is the same test as `!isConsistent2DArray(value)`, written so that a guard clause\nreads forwards — see [](validation-conventions.md).",
+    "Like [`non2DArray`](non2DArray.md), it is best used for its boolean answer: after the check TypeScript does not\nhand back a usable matrix type. [`requireConsistent2DArray`](requireConsistent2DArray.md) is what validates and\nreturns the matrix.",
+    "It reports `true` for two different situations: a matrix whose rows differ in length, and a value that is not a\nmatrix at all. They are indistinguishable from the result alone, so use [`non2DArray`](non2DArray.md) when the\ndifference matters."
+  ],
+  "params": {
+    "arr": "Array<Array<unknown>>`"
+  },
+  "returns": "`true` if the value is not a non-empty array of arrays of equal length; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Both failing cases",
+      "body": "```javascript\nnonConsistent2DArray([[1, 2], [3]]); // => true — ragged\nnonConsistent2DArray([1, 2]); // => true — not 2D\nnonConsistent2DArray([\n  [1, 2],\n  [3, 4]\n]); // => false\n```"
+    },
+    {
+      "title": "Telling the two apart",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"nonConsistent2DArray.ts\" include-symbol=\"describeShape\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction describeShape(rows) {\n  if (non2DArray(rows)) {\n    return \"not a matrix\";\n  }\n  if (nonConsistent2DArray(rows)) {\n    return \"a matrix, but the rows differ in length\";\n  }\n  return \"ready for setValues\";\n}\n</code-block>\n</tab>\n</tabs>"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "the positive form."
+    },
+    {
+      "name": "non2DArray",
+      "note": "rejects only the non-matrices."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "throws, and names the offending row."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "summary": "Checks whether a value is not a non-empty two-dimensional array.",
+  "description": [
+    "`non2DArray(value)` is the same test as `!is2DArray(value)`. The prefix exists so that a guard clause reads as a\nsentence rather than as a negation — see [](validation-conventions.md).",
+    "An empty array qualifies as \"not two-dimensional\", because [`is2DArray`](is2DArray.md) requires at least one row.",
+    "A caveat on types: the guard is declared as a type predicate, but it only narrows usefully when the value's own\ntype already names `unknown[][]` as one of its cases. In the branch where the value _is_ a matrix, TypeScript is\nleft with `never` rather than a matrix type, so reach for [`is2DArray`](is2DArray.md) or\n[`require2DArray`](require2DArray.md) when the matrix has to be used after the check. As a plain boolean answer,\n`non2DArray` is exact in every case."
+  ],
+  "params": {
+    "arr": "Array<Array<unknown>>`"
+  },
+  "returns": "`true` if the value is not a non-empty array of arrays; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What counts as not two-dimensional",
+      "body": "```javascript\nnon2DArray([1, 2]); // => true — flat\nnon2DArray([]); // => true — no rows\nnon2DArray(\"abc\"); // => true\nnon2DArray([[1], [2]]); // => false\n```"
+    },
+    {
+      "title": "Reporting why a value was rejected",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"non2DArray.ts\" include-symbol=\"validateShape\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction validateShape(rows) {\n  if (non2DArray(rows)) {\n    return \"Expected a matrix: a non-empty array of rows.\";\n  }\n  if (nonConsistent2DArray(rows)) {\n    return \"Every row must have the same number of columns.\";\n  }\n  return null;\n}\n</code-block>\n</tab>\n</tabs>"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "the positive form."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "also rejects a ragged matrix."
+    },
+    {
+      "name": "require2DArray",
+      "note": "throws instead of answering."
+    }
+  ]
+}

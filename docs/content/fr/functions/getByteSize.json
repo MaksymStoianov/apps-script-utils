@@ -1,0 +1,26 @@
+{
+  "summary": "Renvoie la longueur d'une chaîne en unités de code.",
+  "description": [
+    "**Lisez la réserve avant d'utiliser ceci.** Le nom et l'intention d'origine visent la longueur en octets UTF-8, mais en l'état la fonction compte des unités de code UTF-16 et n'élargit que le premier substitut rencontré. Pour de l'ASCII, la mesure est juste ; pour le reste — cyrillique, grec, CJK, emoji — elle est sous-évaluée. En attendant un correctif, mesurez avec `Utilities.newBlob(text).getBytes().length`."
+  ],
+  "params": {
+    "value": "La chaîne à mesurer."
+  },
+  "returns": "la longueur, en unités de code.",
+  "throws": {
+    "InvalidStringException": "la valeur n'est pas une chaîne."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    }
+  ]
+}

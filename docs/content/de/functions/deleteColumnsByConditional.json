@@ -1,0 +1,30 @@
+{
+  "summary": "Löscht die vom Prädikat gewählten Spalten.",
+  "description": [
+    "Beurteilt wird am gelesenen Blatt, gelöscht vom rechten Rand nach innen in zusammenhängenden Blöcken, damit verschobene Positionen nicht die falsche Spalte mitnehmen.",
+    "Die Spalten sind dann fort: `clearColumnsByConditional` leert sie nur."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird.",
+    "predicate": "Bekommt die Zellen der Spalte, ihre einsbasierte Position und — wenn `headerColumn` gesetzt ist — die Spalte mit den Zeilennamen als Schlüsseln. `true` für die Spalten, auf die gewirkt werden soll.",
+    "options": "`headerColumn` benennt die Spalte mit den Zeilennamen und nimmt diese Spalte aus den Kandidaten heraus."
+  },
+  "returns": "wie viele betroffen waren.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt.",
+    "IllegalArgumentException": "das Prädikat ist keine Funktion oder die Kopfposition keine positive ganze Zahl."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    }
+  ]
+}

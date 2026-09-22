@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine Zahl mit Nachkommateil ist.",
+  "description": [
+    "Ein Synonym der `Float`-Familie unter dem Namen, zu dem man zuerst greift. In JavaScript ist jede Zahl ohnehin ein Double, `double` benennt also keinen eigenen Laufzeitfall.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Zahl mit Nachkommateil ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisDouble(1.5); // => true\nisDouble(-0.1); // => true\nisDouble(42); // => false\nisDouble(1.0); // => false\nisDouble(Infinity); // => false\nisDouble(\"1.5\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonDouble"
+    },
+    {
+      "name": "requireDouble"
+    },
+    {
+      "name": "requireNonDouble"
+    }
+  ]
+}

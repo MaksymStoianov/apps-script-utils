@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als ein Ui-Objekt zurück oder wirft.",
+  "description": [
+    "Ein Apps-Script-Dienstobjekt hat keinen Konstruktor, gegen den ein Skript prüfen könnte, also liest die Prüfung den Tag, den das Objekt über sich selbst meldet: `value.toString() === \"Ui\"`. Ein einfaches Objekt mit demselben Tag besteht ebenfalls — in der Praxis ist das ein Test-Double.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als ein Ui-Objekt.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein Ui-Objekt."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nconst ui = SpreadsheetApp.getUi();\n\nrequireUi(ui); // => ui\nrequireUi({}); // throws IllegalArgumentException\nrequireUi(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isUi"
+    },
+    {
+      "name": "nonUi"
+    }
+  ]
+}

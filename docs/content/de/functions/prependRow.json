@@ -1,0 +1,30 @@
+{
+  "summary": "Fügt eine Zeile über den bereits vorhandenen Daten eines Blattes ein.",
+  "description": [
+    "`prependRows` für eine einzelne Zeile. Die Werte kommen als flaches Array von Zellen statt als Matrix.",
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+  ],
+  "params": {
+    "sheet": "Das Blatt, in das geschrieben wird.",
+    "values": "Die Zellen der einen Zeile.",
+    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+  },
+  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt.",
+    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+  },
+  "examples": [
+    {
+      "title": "Schreiben"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependRows"
+    },
+    {
+      "name": "appendRow"
+    }
+  ]
+}

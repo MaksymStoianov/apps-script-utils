@@ -1,0 +1,22 @@
+{
+  "summary": "Wie weit `removeSchema` geht.",
+  "description": [
+    "`validation` löscht zusätzlich die Datenprüfung der beschriebenen Spalten. Absichtlich standardmäßig aus: Apps Script bietet keine Möglichkeit, eine Regel aus dem Schema von einer handgemachten zu unterscheiden, also trifft das Löschen beide."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "removeSchema"
+    },
+    {
+      "name": "SheetSchema"
+    }
+  ]
+}

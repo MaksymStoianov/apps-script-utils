@@ -1,0 +1,25 @@
+{
+  "summary": "Écrit une plage de grille en notation A1.",
+  "description": [
+    "Les bornes sont lues comme l'entend l'API Sheets : les indices de début sont inclus, ceux de fin ne le sont pas. Une plage d'une ligne et d'une colonne s'écrit comme une cellule unique, `\"A1\"`, et non `\"A1:A1\"`.",
+    "Un indice omis signifie que la plage est ouverte de ce côté, ce qui donne une notation A1 sans cette borne — une colonne entière ou une ligne entière."
+  ],
+  "params": {
+    "range": "La plage de grille à écrire."
+  },
+  "returns": "la notation A1.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Écrire la notation A1"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notation"
+    },
+    {
+      "name": "getColumnLetterByIndex"
+    }
+  ]
+}

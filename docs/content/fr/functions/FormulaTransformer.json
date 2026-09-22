@@ -1,0 +1,22 @@
+{
+  "summary": "Réécrit une formule.",
+  "description": [
+    "Elle reçoit la formule ainsi que la ligne et la colonne où elle se trouve, et renvoie la formule à réécrire. Renvoyer celle qu'elle a reçue laisse la cellule intacte, et `updateFormulas` n'écrit que les cellules réellement modifiées."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateFormulas"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    }
+  ]
+}

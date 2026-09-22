@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is a number.",
+  "description": [
+    "The test is `typeof value === \"number\"`, which `NaN` and both infinities satisfy. Use `isFloat`, `isInteger` or `isNaN` when those cases have to be told apart.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a number; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisNumber(0); // => true\nisNumber(1.5); // => true\nisNumber(NaN); // => true\nisNumber(Infinity); // => true\nisNumber(\"1\"); // => false\nisNumber(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNumber"
+    },
+    {
+      "name": "requireNumber"
+    },
+    {
+      "name": "requireNonNumber"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение объектоподобным значением.",
+  "description": [
+    "Всё, что принимает `isObject`, плюс функции: вопрос здесь в том, можно ли вообще читать у значения свойства.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является объектоподобным значением; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisObjectLike({}); // => true\nisObjectLike([]); // => true\nisObjectLike(function () {}); // => true\nisObjectLike(null); // => false\nisObjectLike(\"abc\"); // => false\nisObjectLike(1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonObjectLike"
+    },
+    {
+      "name": "requireObjectLike"
+    },
+    {
+      "name": "requireNonObjectLike"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "summary": "Reports whether the current user is **not** a Workspace administrator.",
+  "description": [
+    "The negation of `isAdmin`, for the guard clause that leaves early. Because a failed lookup answers `false` there, it answers `true` here: an unavailable Admin SDK is treated as “not an administrator”, which is the safe reading."
+  ],
+  "params": {},
+  "returns": "`true` when the active user is not an administrator.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Leaving early",
+      "body": "```javascript\nif (nonAdmin()) {\n  return;\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAdmin"
+    },
+    {
+      "name": "requireAdmin"
+    }
+  ]
+}

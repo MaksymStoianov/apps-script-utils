@@ -1,0 +1,25 @@
+{
+  "summary": "Une colonne du schéma d'une feuille.",
+  "description": [
+    "`name` est l'intitulé écrit dans la ligne d'en-tête ; `type` dit ce que contient la colonne et c'est de lui qu'`insertSchema` tire le format et la validation. Une colonne sans type reste sans contrainte."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "SheetSchema"
+    },
+    {
+      "name": "SheetColumnType"
+    },
+    {
+      "name": "insertSchema"
+    }
+  ]
+}

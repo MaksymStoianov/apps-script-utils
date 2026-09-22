@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a safe integer.",
+  "description": [
+    "`nonSafeInteger(value)` is the same test as `!isSafeInteger(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "An integer that an IEEE-754 double represents exactly. Beyond that range distinct mathematical integers collapse onto the same value and arithmetic quietly stops being exact.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a safe integer; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => true\nnonSafeInteger(1.5); // => true\nnonSafeInteger(\"42\"); // => true\nnonSafeInteger(42); // => false\nnonSafeInteger(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

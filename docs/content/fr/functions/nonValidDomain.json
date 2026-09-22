@@ -1,0 +1,27 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** un nom de domaine.",
+  "description": [
+    "`nonValidDomain(value)` est le même test que `!isValidDomain(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Des labels séparés par des points simples, sans point ni tiret en tête ou en fin, et sans label vide. C'est un contrôle de syntaxe : savoir si le domaine résout est une autre question.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un nom de domaine ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonValidDomain(\"-example.com\"); // => true\nnonValidDomain(\"example..com\"); // => true\nnonValidDomain(\"example.com.\"); // => true\nnonValidDomain(\"\"); // => true\nnonValidDomain(\"example.com\"); // => false\nnonValidDomain(\"sub.example.co.uk\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

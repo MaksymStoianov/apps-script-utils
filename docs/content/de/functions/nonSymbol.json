@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Symbol ist.",
+  "description": [
+    "`nonSymbol(value)` ist dieselbe Prüfung wie `!isSymbol(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Registrierte Symbole aus `Symbol.for` und die wohlbekannten Symbole bestehen beide; sonst nichts.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Symbol ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonSymbol(\"id\"); // => true\nnonSymbol(null); // => true\nnonSymbol(Symbol(\"id\")); // => false\nnonSymbol(Symbol.iterator); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSymbol"
+    },
+    {
+      "name": "requireSymbol"
+    },
+    {
+      "name": "requireNonSymbol"
+    }
+  ]
+}

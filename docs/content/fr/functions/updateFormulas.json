@@ -1,0 +1,28 @@
+{
+  "summary": "Réécrit les formules d'une feuille.",
+  "description": [
+    "Passez une table pour remplacer des noms de feuille en bloc — le besoin habituel après un renommage ou une copie — ou une fonction pour décider de chaque formule. La fonction reçoit la formule et renvoie celle à réécrire.",
+    "Seules les cellules contenant une formule sont visitées, et seules celles qui changent réellement sont écrites : un appel sans effet coûte une lecture et rien de plus."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler.",
+    "rewrite": "Une table ancien nom de feuille → nouveau, ou une fonction prenant une formule et renvoyant son remplacement."
+  },
+  "returns": "le nombre de formules réécrites.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille."
+  },
+  "examples": [
+    {
+      "title": "Réécrire des formules"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

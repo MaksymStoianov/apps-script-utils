@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є значенням `null` або `undefined`.",
+  "description": [
+    "`nonNil(value)` — та сама перевірка, що й `!isNil(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Лише відсутні значення: `0`, `\"\"` і `false` — це наявні значення, вони не підходять.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є значенням `null` або `undefined`; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonNil(0); // => true\nnonNil(\"\"); // => true\nnonNil(false); // => true\nnonNil(null); // => false\nnonNil(undefined); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNil"
+    },
+    {
+      "name": "requireNil"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

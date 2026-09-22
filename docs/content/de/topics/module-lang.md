@@ -1,0 +1,128 @@
+# lang
+
+<link-summary>Die laufzeitunabhängigen Sprachwerkzeuge: Prüfungen, Arrays, Zahlen, Objekte, Zeichenketten.</link-summary>
+
+<web-summary>Das lang-Modul von apps-script-utils: Typprüfungen, Array- und Matrixhelfer, Zahleneinordnung, Objekt-Hashing und String-Umwandlung — alles unabhängig von der Laufzeit.</web-summary>
+
+`lang` sind die sprachnahen Werkzeuge — der Teil der Bibliothek, der nichts von Google Apps Script weiß und überall
+läuft, wo JavaScript läuft.
+
+## Pakete
+
+| Paket         | Enthält                                                             |
+| :------------ | :------------------------------------------------------------------ |
+| `lang/base`   | die Prüfungen `isX` / `nonX` / `requireX` für die eingebauten Typen |
+| `lang/array`  | Formprüfungen für Arrays und Umformungen                            |
+| `lang/number` | Einordnung und Umwandlung von Zahlen                                |
+| `lang/object` | Hashing, Vergleich und Pfadzugriff in Objekten                      |
+| `lang/string` | Schreibweisen, Prüfungen und Versionsvergleich                      |
+
+Neben `lang` liefert die Bibliothek `html`, `json` und `time`. Sie sind ebenso laufzeitunabhängig und stehen
+gemeinsam mit `lang` in [](reference-base.md).
+
+## Typprüfungen
+
+`lang/base` ist das größte Paket und dasjenige, das fast jeder Code berührt. Vollständig behandelt wird es in
+[](validation-conventions.md); kurz gesagt: `isX` und `nonX` beantworten eine Frage, `requireX` prüft und gibt
+zurück.
+
+```typescript
+import { requireString, toKebabCase } from "apps-script-utils";
+
+function slugify(input: unknown): string {
+  return toKebabCase(requireString(input));
+}
+```
+
+## Arrays
+
+```typescript
+import { chunk, transpose, is2DArray, isConsistent2DArray } from "apps-script-utils";
+
+chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
+
+transpose([
+  ["a", "b"],
+  ["c", "d"]
+]); // [["a", "c"], ["b", "d"]]
+
+is2DArray([[1], [2]]); // true
+isConsistent2DArray([[1, 2], [3]]); // false — die Zeilen sind unterschiedlich lang
+```
+
+`isConsistent2DArray` ist die Prüfung, die vor dem Schreiben in ein Blatt lohnt: `Range.setValues()` verlangt, dass
+alle Zeilen gleich lang sind, und eine ungleichmäßige Matrix scheitert erst an der Dienstgrenze, mit einer Meldung,
+die die betroffene Zeile nicht nennt.
+
+## Zahlen
+
+```typescript
+import { isCountable, isFloat, isInteger, toInteger } from "apps-script-utils";
+
+isInteger(42); // true
+isInteger(42.5); // false
+isFloat(42.5); // true
+isCountable(3); // true — eine nicht negative ganze Zahl
+isCountable(-1); // false
+```
+
+Zeilen- und Spaltenargumente der Sheets-API sind Anzahlen, keine beliebigen Zahlen — dafür gibt es `isCountable` und
+`requireCountable`.
+
+## Zeichenketten
+
+Schreibweisen:
+
+```typescript
+import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "apps-script-utils";
+
+toCamelCase("user name"); // "userName"
+toKebabCase("User Name"); // "user-name"
+toSnakeCase("User Name"); // "user_name"
+toProperCase("user name"); // "User Name"
+```
+
+Prüfungen:
+
+```typescript
+import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "apps-script-utils";
+
+isEmail("ada@example.com"); // true
+isValidSlug("my-post"); // true
+isValidVersion("1.10.0"); // true
+
+requireValidEmail(formResponse); // gibt den Wert zurück oder wirft InvalidEmailFormatException
+```
+
+Versionsvergleich, für Skripte, die ihr Verhalten von einer Bibliotheksversion abhängig machen:
+
+```typescript
+import { versionCompare, isVersionCompatible } from "apps-script-utils";
+
+versionCompare("1.10.0", "1.9.0"); // 1
+versionCompare("1.9.0", "1.10.0"); // -1
+versionCompare("1.9.0", "1.9.0"); // 0
+```
+
+`escapeRegExp` macht eine vom Nutzer gelieferte Zeichenkette sicher für ein Muster — lohnt sich immer, wenn ein
+Suchbegriff aus einer Zelle oder einem Formular kommt:
+
+```typescript
+import { escapeRegExp } from "apps-script-utils";
+
+const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
+```
+
+## Objekte
+
+```typescript
+import { hashCode, objectToString } from "apps-script-utils";
+
+objectToString([]); // "[object Array]"
+objectToString(null); // "[object Null]"
+hashCode("apps-script-utils"); // ein stabiler numerischer Hash
+```
+
+`objectToString` meldet den internen Tag statt `String(value)` und ist damit der verlässliche Weg, ein Array von
+einem Datum und von einem einfachen Objekt zu unterscheiden — der Tag übersteht einen Frame-Wechsel, `instanceof`
+nicht.

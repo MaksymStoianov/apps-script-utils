@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert ein Symbol ist.",
+  "description": [
+    "Registrierte Symbole aus `Symbol.for` und die wohlbekannten Symbole bestehen beide; sonst nichts.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Symbol ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisSymbol(Symbol(\"id\")); // => true\nisSymbol(Symbol.iterator); // => true\nisSymbol(\"id\"); // => false\nisSymbol(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSymbol"
+    },
+    {
+      "name": "requireSymbol"
+    },
+    {
+      "name": "requireNonSymbol"
+    }
+  ]
+}

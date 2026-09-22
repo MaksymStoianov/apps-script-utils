@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether two grid ranges have the same height and width.",
+  "description": [
+    "Where they sit does not matter, only how big they are — the question to ask before copying values from one range into another, since `setValues` rejects a mismatch."
+  ],
+  "params": {
+    "range1": "The first range.",
+    "range2": "The second range."
+  },
+  "returns": "`true` when both are the same size.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Comparing sizes",
+      "body": "```javascript\nconst source = { startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 };\nconst target = { startRowIndex: 5, endRowIndex: 7, startColumnIndex: 5, endColumnIndex: 7 };\n\nisGridRangeSameDimensions(source, target); // => true\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonGridRangeSameDimensions"
+    },
+    {
+      "name": "requireGridRangeSameDimensions"
+    }
+  ]
+}

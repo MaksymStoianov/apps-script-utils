@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є діапазоном з однієї комірки.",
+  "description": [
+    "`nonCellGridRange(value)` — та сама перевірка, що й `!isCellGridRange(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Один рядок і один стовпець, рахуючи за межами, а не за тим, як діапазон записали: кінцеві індекси не включаються, тому одна комірка — це `endRowIndex - startRowIndex === 1` і те саме для стовпців. Діапазон із пропущеною межею відкритий у цей бік і однією коміркою не буває.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є діапазоном з однієї комірки; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // => true\nnonCellGridRange({}); // => true\nnonCellGridRange(null); // => true\nnonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isCellGridRange"
+    },
+    {
+      "name": "requireCellGridRange"
+    }
+  ]
+}

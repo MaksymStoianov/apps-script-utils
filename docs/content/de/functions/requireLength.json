@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als eine gültige Array-Länge zurück oder wirft.",
+  "description": [
+    "Eine ganze Zahl von `0` bis `Number.MAX_SAFE_INTEGER` — der Bereich, den eine `length`-Eigenschaft annehmen darf.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als eine gültige Array-Länge.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht eine gültige Array-Länge."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireLength(0); // => 0\nrequireLength(42); // => 42\nrequireLength(-1); // throws IllegalArgumentException\nrequireLength(1.5); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "nonLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

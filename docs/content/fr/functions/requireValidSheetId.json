@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que un identifiant de feuille, ou lève une exception.",
+  "description": [
+    "Apps Script numérote les feuilles à partir de zéro : un identifiant de feuille est un entier sûr non négatif — la règle qu'applique `isCountable`. La première feuille d'un classeur porte l'identifiant `0`.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un identifiant de feuille.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un identifiant de feuille."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireValidSheetId(0); // => 0\nrequireValidSheetId(1234567890); // => 1234567890\nrequireValidSheetId(-1); // throws IllegalArgumentException\nrequireValidSheetId(1.5); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "nonValidSheetId"
+    }
+  ]
+}

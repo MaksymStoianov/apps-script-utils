@@ -1,0 +1,25 @@
+{
+  "summary": "Prüft, ob zwei Rasterbereiche sich in Höhe oder Breite unterscheiden.",
+  "description": [
+    "Die Verneinung von `isGridRangeSameDimensions`, für die Wächterklausel, die früh zurückkehrt, wenn eine Kopie nicht passt."
+  ],
+  "params": {
+    "range1": "Der erste Bereich.",
+    "range2": "Der zweite Bereich."
+  },
+  "returns": "`true`, wenn die Größen sich unterscheiden.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Größen vergleichen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeSameDimensions"
+    },
+    {
+      "name": "requireGridRangeSameDimensions"
+    }
+  ]
+}

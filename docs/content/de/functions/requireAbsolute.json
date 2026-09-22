@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als einen absoluten Pfad zurück oder wirft.",
+  "description": [
+    "Ein Pfad, der an einer Wurzel beginnt: ein führender `/` oder ein Schema wie `https://` oder `mailto:`. Alles andere, auch die leere Zeichenkette, ist relativ.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als einen absoluten Pfad.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein absoluter Pfad."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireAbsolute(\"/var/log\"); // => \"/var/log\"\nrequireAbsolute(\"https://example.com/a\"); // => \"https://example.com/a\"\nrequireAbsolute(\"docs/readme.md\"); // throws IllegalArgumentException\nrequireAbsolute(\"./a\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAbsolute"
+    },
+    {
+      "name": "nonAbsolute"
+    }
+  ]
+}

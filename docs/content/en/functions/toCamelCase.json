@@ -1,0 +1,32 @@
+{
+  "summary": "Joins the words of a string into camelCase.",
+  "description": [
+    "Each word is capitalised, the separators between words are dropped, and the first letter is lowered unless `firstWordToLowerCase` is `false`. With `clean` left on, anything that is not a letter or a digit is removed as well.",
+    "Word boundaries are the ones a regular expression sees, so spaces and hyphens separate words but an underscore does not: `\"user_first_name\"` comes back as `\"userfirstname\"`, not `\"userFirstName\"`."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty.",
+    "options": "`clean` strips non-alphanumeric characters (on by default); `firstWordToLowerCase` lowers the first letter (on by default)."
+  },
+  "returns": "the converted string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ntoCamelCase(\"Hello world! How are you?\"); // => \"helloWorldHowAreYou\"\ntoCamelCase(\"Hello world!\", { firstWordToLowerCase: false }); // => \"HelloWorld\"\ntoCamelCase(\"user_first_name\"); // => \"userfirstname\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toKebabCase"
+    },
+    {
+      "name": "toSnakeCase"
+    },
+    {
+      "name": "toProperCase"
+    }
+  ]
+}

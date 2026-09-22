@@ -1,0 +1,25 @@
+{
+  "summary": "Wie die Zeilen gelesen werden und welche als Kandidaten gelten.",
+  "description": [
+    "`headerRow` ist die einsbasierte Zeile mit den Spaltennamen. Sie zu setzen bewirkt zweierlei: das Prädikat bekommt jede Zeile mit diesen Namen als Schlüsseln, und die Kopfzeile selbst scheidet als Kandidat aus — die Überschriften zu leeren oder zu löschen war nie gemeint."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowPredicate"
+    }
+  ]
+}

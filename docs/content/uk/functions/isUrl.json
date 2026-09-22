@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення URL-адресою.",
+  "description": [
+    "Адреса за схемою `http`, `https` або `ftp`, у якої після схеми щось є і ніде немає пробілів. Голий хост на кшталт `\"example.com\"` нею не є.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є URL-адресою; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisUrl(\"https://example.com\"); // => true\nisUrl(\"http://example.com/a?b=1\"); // => true\nisUrl(\"example.com\"); // => false\nisUrl(\"https://\"); // => false\nisUrl(\"https://exa mple.com\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonUrl"
+    },
+    {
+      "name": "requireUrl"
+    }
+  ]
+}

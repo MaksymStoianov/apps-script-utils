@@ -1,0 +1,33 @@
+{
+  "summary": "Повертає значення, переконавшись, що воно не є скалярним значенням.",
+  "description": [
+    "Примітив, що несе одне значення: рядок, число, логічне значення, символ або bigint. `null` і `undefined` теж примітиви, але значення не несуть і не підходять.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення; після перевірки відомо, що воно не є скалярним значенням.",
+  "throws": {
+    "IllegalArgumentException": "значення є скалярним значенням."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireNonScalar({}); // => {}\nrequireNonScalar([]); // => []\nrequireNonScalar(\"abc\"); // throws IllegalArgumentException\nrequireNonScalar(1); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireScalar"
+    }
+  ]
+}

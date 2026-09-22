@@ -1,0 +1,25 @@
+{
+  "summary": "Проверяет, что версия ниже требуемой.",
+  "description": [
+    "Отрицание `isVersionCompatible` — для охранного условия, которое останавливается раньше, если окружение слишком старое."
+  ],
+  "params": {
+    "currentVersion": "Имеющаяся версия.",
+    "requiredVersion": "Минимально приемлемая версия."
+  },
+  "returns": "`true`, если имеющаяся версия ниже требуемой.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ранний выход"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "requireVersionCompatible"
+    }
+  ]
+}

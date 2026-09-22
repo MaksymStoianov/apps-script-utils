@@ -1,0 +1,33 @@
+{
+  "summary": "Vérifie qu'une valeur est une matrice non vide dont toutes les lignes ont la même longueur.",
+  "description": [
+    "C'est la vérification à faire avant `Range#setValues`, qui rejette une matrice irrégulière avec un message ne nommant ni la ligne fautive ni la raison. Tout ce qu'exige [`is2DArray`](is2DArray.md) vaut également ici — un tableau non vide de tableaux — plus la règle que chaque ligne est aussi large que la première."
+  ],
+  "params": {
+    "arr": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un tableau non vide de tableaux de même longueur ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lignes régulières, lignes irrégulières et non-matrices"
+    },
+    {
+      "title": "Avant d'écrire dans une plage"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "le contrôle de forme sans la règle de longueur."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "la même vérification, niée."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "lève et nomme la ligne fautive."
+    }
+  ]
+}

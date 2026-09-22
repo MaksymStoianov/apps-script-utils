@@ -1,0 +1,28 @@
+{
+  "summary": "Schreibt eine Zeichenkette in snake_case.",
+  "description": [
+    "Dieselben Regeln wie bei kebab-case, nur mit Unterstrichen statt Bindestrichen: Leerzeichen und Bindestriche werden zu Unterstrichen, an der Grenze von Klein- zu Großbuchstabe kommt ein Unterstrich hinzu, das Ergebnis wird klein geschrieben.",
+    "`clean` entfernt alles außer Buchstaben, Ziffern und Unterstrichen; `trim` fasst zuvor den umgebenden Leerraum zusammen."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein.",
+    "options": "`clean` entfernt die restliche Zeichensetzung; `trim` schneidet Leerraum ab und fasst ihn zusammen."
+  },
+  "returns": "die umgewandelte Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toKebabCase"
+    },
+    {
+      "name": "toCamelCase"
+    }
+  ]
+}

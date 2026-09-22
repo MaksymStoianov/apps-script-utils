@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення символом.",
+  "description": [
+    "Підходять і символи з `Symbol.for`, і загальновідомі символи; більше нічого.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є символом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisSymbol(Symbol(\"id\")); // => true\nisSymbol(Symbol.iterator); // => true\nisSymbol(\"id\"); // => false\nisSymbol(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSymbol"
+    },
+    {
+      "name": "requireSymbol"
+    },
+    {
+      "name": "requireNonSymbol"
+    }
+  ]
+}

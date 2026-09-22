@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является диапазоном из одной ячейки.",
+  "description": [
+    "`nonCellGridRange(value)` — та же проверка, что и `!isCellGridRange(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Одна строка и один столбец, считая по границам, а не по тому, как диапазон записали: конечные индексы не включаются, поэтому одна ячейка — это `endRowIndex - startRowIndex === 1` и то же для столбцов. Диапазон с пропущенной границей открыт в эту сторону и одной ячейкой не бывает.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является диапазоном из одной ячейки; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // => true\nnonCellGridRange({}); // => true\nnonCellGridRange(null); // => true\nnonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isCellGridRange"
+    },
+    {
+      "name": "requireCellGridRange"
+    }
+  ]
+}

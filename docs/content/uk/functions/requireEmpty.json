@@ -1,0 +1,33 @@
+{
+  "summary": "Повертає значення як порожнє значення або викидає виняток.",
+  "description": [
+    "Порожнеча визначається за типом: `null` і `undefined`, рядок з самих пробілів, масив, `Set` чи `Map` без елементів, об'єкт без власних ключів. `0` і `false` — це значення, а не порожнеча.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як порожнє значення.",
+  "throws": {
+    "IllegalArgumentException": "значення не є порожнім значенням."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireEmpty(null); // => null\nrequireEmpty(\"\"); // => \"\"\nrequireEmpty(0); // throws IllegalArgumentException\nrequireEmpty(false); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": "Returns a repository once it is known to exist, or throws.",
+  "description": [
+    "`requireService` for the layer above the services: a data source that a container was supposed to provide and did not. The exception names the situation instead of leaving a `null` to travel further."
+  ],
+  "params": {
+    "repository": "The repository to check.",
+    "message": "The message of the exception. A default is used when omitted."
+  },
+  "returns": "the same repository.",
+  "throws": {
+    "RepositoryIsNotDefinedException": "the repository is `null` or `undefined`."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst users = requireRepository(registry.users, \"The user repository is not wired up.\");\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireService"
+    },
+    {
+      "name": "RepositoryIsNotDefinedException"
+    }
+  ]
+}

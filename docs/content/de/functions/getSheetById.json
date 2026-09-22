@@ -1,0 +1,29 @@
+{
+  "summary": "Findet ein Blatt anhand seiner Id.",
+  "description": [
+    "Eine Id übersteht Umbenennen und Umsortieren — deshalb gehört sie in eine Property oder eine Konfiguration. Apps Script bietet keine Suche nach Id, also werden die Blätter durchlaufen und verglichen.",
+    "Die Tabelle ist standardmäßig die aktive. Ein nicht vorhandenes Blatt ergibt `null` statt einer Ausnahme: eine gespeicherte Id, die nicht mehr auflöst, ist ein Fall zum Behandeln, kein Absturz."
+  ],
+  "params": {
+    "sheetId": "Die gesuchte Blatt-Id.",
+    "ss": "Die Tabelle, in der gesucht wird. Standardmäßig die aktive."
+  },
+  "returns": "das Blatt oder `null`, wenn kein Blatt diese Id trägt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Nachschlagen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetByIndex"
+    },
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "requireSheet"
+    }
+  ]
+}

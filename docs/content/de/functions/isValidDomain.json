@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert ein Domainname ist.",
+  "description": [
+    "Labels, durch einzelne Punkte getrennt, ohne führenden oder abschließenden Punkt oder Bindestrich und ohne leeres Label. Eine Syntaxprüfung: ob die Domain auflöst, ist eine andere Frage.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Domainname ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisValidDomain(\"example.com\"); // => true\nisValidDomain(\"sub.example.co.uk\"); // => true\nisValidDomain(\"-example.com\"); // => false\nisValidDomain(\"example..com\"); // => false\nisValidDomain(\"example.com.\"); // => false\nisValidDomain(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

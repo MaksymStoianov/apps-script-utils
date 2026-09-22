@@ -1,0 +1,21 @@
+{
+  "summary": "Liest eine durch Kommas getrennte Liste von A1-Notationen.",
+  "description": [
+    "Jeder Eintrag wird genau so gelesen, wie `parseA1Notation` einen liest; eine Liste darf blattqualifizierte und blanke Notationen mischen. Leerraum um die Kommas wird ignoriert."
+  ],
+  "params": {
+    "a1Notations": "Die Notationen, durch Kommas getrennt."
+  },
+  "returns": "einen gelesenen Bereich je Eintrag.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Eine Liste lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

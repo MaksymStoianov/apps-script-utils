@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение слайдом.",
+  "description": [
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка ищет методы, определяющие тип, — `getObjectId`, `getPageElementById`. Заглушка, реализующая их, проходит, и именно это позволяет тестировать такой код вне среды выполнения.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является слайдом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[0];\n\nisSlide(slide); // => true\nisSlide({}); // => false\nisSlide(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSlide"
+    },
+    {
+      "name": "requireSlide"
+    }
+  ]
+}

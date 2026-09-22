@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a boolean.",
+  "description": [
+    "`nonBoolean(value)` is the same test as `!isBoolean(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Only the two primitives pass. `new Boolean(false)` is an object, and the strings `\"true\"` and `\"false\"` are strings.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a boolean; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonBoolean(\"true\"); // => true\nnonBoolean(1); // => true\nnonBoolean(null); // => true\nnonBoolean(true); // => false\nnonBoolean(false); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    },
+    {
+      "name": "requireNonBoolean"
+    }
+  ]
+}

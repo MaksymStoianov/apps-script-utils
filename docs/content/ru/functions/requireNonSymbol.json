@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение, убедившись, что оно не является символом.",
+  "description": [
+    "Подходят и символы из `Symbol.for`, и общеизвестные символы; больше ничего.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение; после проверки известно, что оно не является символом.",
+  "throws": {
+    "IllegalArgumentException": "значение является символом."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireNonSymbol(\"id\"); // => \"id\"\nrequireNonSymbol(null); // => null\nrequireNonSymbol(Symbol(\"id\")); // throws IllegalArgumentException\nrequireNonSymbol(Symbol.iterator); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSymbol"
+    },
+    {
+      "name": "nonSymbol"
+    },
+    {
+      "name": "requireSymbol"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Fügt Spalten rechts neben den bereits vorhandenen Daten eines Blattes ein.",
+  "description": [
+    "Die Matrix wird als Spalten gelesen: ein Array je Spalte, geschrieben ab Zeile 1 rechts neben der letzten Spalte mit Daten. `transpose` bringt Zeilen in diese Form.",
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+  ],
+  "params": {
+    "sheet": "Das Blatt, in das geschrieben wird.",
+    "values": "Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.",
+    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+  },
+  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt.",
+    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+  },
+  "examples": [
+    {
+      "title": "Schreiben"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendColumn"
+    },
+    {
+      "name": "prependColumns"
+    },
+    {
+      "name": "transpose"
+    }
+  ]
+}

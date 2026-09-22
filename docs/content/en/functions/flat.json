@@ -1,0 +1,29 @@
+{
+  "summary": "Flattens a nested object into one level of dotted keys.",
+  "description": [
+    "Nested objects become dotted paths; arrays are kept whole, because their indices are data rather than structure. `depth` stops the descent — `1` flattens the first level only.",
+    "The inverse walk is `getPath`, which reads a value back out by the same kind of path."
+  ],
+  "params": {
+    "source": "The object to flatten. It must not be an array.",
+    "depth": "How many levels to descend. Any whole number; unlimited by default."
+  },
+  "returns": "a new flat object keyed by dotted paths.",
+  "throws": {
+    "IllegalArgumentException": "the value is not an object."
+  },
+  "examples": [
+    {
+      "title": "Flattening",
+      "body": "```javascript\nflat({ a: { b: 1 }, c: [1, 2] }); // => { \"a.b\": 1, \"c\": [1, 2] }\nflat({ a: { b: { c: 1 } } }, 1); // => { \"a.b\": { \"c\": 1 } }\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getPath"
+    },
+    {
+      "name": "setPath"
+    }
+  ]
+}

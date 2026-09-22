@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является относительным путём.",
+  "description": [
+    "`nonRelative(value)` — та же проверка, что и `!isRelative(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Точное дополнение `isAbsolute`: всё, что не начинается от корня, включая пустую строку.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является относительным путём; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonRelative(\"/var/log\"); // => true\nnonRelative(\"https://example.com/a\"); // => true\nnonRelative(\"docs/readme.md\"); // => false\nnonRelative(\"./a\"); // => false\nnonRelative(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRelative"
+    },
+    {
+      "name": "requireRelative"
+    }
+  ]
+}

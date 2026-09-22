@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a sheet id.",
+  "description": [
+    "Apps Script numbers its sheets from zero, so a sheet id is a non-negative safe integer — the same rule `isCountable` applies. The id of the first sheet in a spreadsheet is `0`.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a sheet id; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisValidSheetId(0); // => true\nisValidSheetId(1234567890); // => true\nisValidSheetId(-1); // => false\nisValidSheetId(1.5); // => false\nisValidSheetId(\"0\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSheetId"
+    },
+    {
+      "name": "requireValidSheetId"
+    }
+  ]
+}

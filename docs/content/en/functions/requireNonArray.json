@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value after checking that it is not an array.",
+  "description": [
+    "`Array.isArray` is the whole test, so an array from another frame counts and an array-like object — `arguments`, a `NodeList`, `{ length: 0 }` — does not.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with an array excluded from its type.",
+  "throws": {
+    "IllegalArgumentException": "the value is an array."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonArray(\"abc\"); // => \"abc\"\nrequireNonArray({ length: 0 }); // => { length: 0 }\nrequireNonArray([]); // throws IllegalArgumentException\nrequireNonArray([1, 2, 3]); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isArray"
+    },
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireArray"
+    }
+  ]
+}

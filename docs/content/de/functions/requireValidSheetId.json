@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als eine Blatt-Id zurück oder wirft.",
+  "description": [
+    "Apps Script nummeriert Blätter ab null, eine Blatt-Id ist also eine nicht negative sichere Ganzzahl — dieselbe Regel wie bei `isCountable`. Das erste Blatt einer Tabelle hat die Id `0`.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als eine Blatt-Id.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht eine Blatt-Id."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireValidSheetId(0); // => 0\nrequireValidSheetId(1234567890); // => 1234567890\nrequireValidSheetId(-1); // throws IllegalArgumentException\nrequireValidSheetId(1.5); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "nonValidSheetId"
+    }
+  ]
+}

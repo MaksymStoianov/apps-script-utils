@@ -1,0 +1,23 @@
+{
+  "summary": "Maskiert die von XML reservierten Zeichen.",
+  "description": [
+    "Dieselben fünf Zeichen wie bei `escapeHtml`, für Inhalt, der in ein XML-Dokument statt auf eine Seite geht."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein."
+  },
+  "returns": "die maskierte Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення порожнім значенням.",
+  "description": [
+    "Порожнеча визначається за типом: `null` і `undefined`, рядок з самих пробілів, масив, `Set` чи `Map` без елементів, об'єкт без власних ключів. `0` і `false` — це значення, а не порожнеча.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є порожнім значенням; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisEmpty(null); // => true\nisEmpty(\"\"); // => true\nisEmpty(\"   \"); // => true\nisEmpty([]); // => true\nisEmpty({}); // => true\nisEmpty(new Map()); // => true\nisEmpty(0); // => false\nisEmpty(false); // => false\nisEmpty(\"a\"); // => false\nisEmpty([0]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

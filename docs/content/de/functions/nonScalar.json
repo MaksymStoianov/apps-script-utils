@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Skalar ist.",
+  "description": [
+    "`nonScalar(value)` ist dieselbe Prüfung wie `!isScalar(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Ein Primitivwert, der genau einen Wert trägt: String, Zahl, Boolean, Symbol oder BigInt. `null` und `undefined` sind ebenfalls primitiv, tragen aber keinen Wert und zählen nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Skalar ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonScalar({}); // => true\nnonScalar([]); // => true\nnonScalar(null); // => true\nnonScalar(\"abc\"); // => false\nnonScalar(1); // => false\nnonScalar(true); // => false\nnonScalar(10n); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "requireScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

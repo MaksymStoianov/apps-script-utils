@@ -1,0 +1,23 @@
+{
+  "summary": "Une ligne, telle que `getValues` la remet à un filtre ou à un mappeur.",
+  "description": [
+    "`values` ce sont les cellules de gauche à droite, `position` la ligne à base un sur la feuille — le numéro que l'on voit dans la marge — et la ligne indexée par les noms de colonnes lorsqu'une ligne d'en-tête a été désignée.",
+    "Disposer de la position est ce qui permet ensuite à un filtre de désigner une ligne précise ou d'agir sur elle."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getValues"
+    },
+    {
+      "name": "RowPredicate"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": "Fügt Pfadsegmente mit genau einem Trenner dazwischen zusammen.",
+  "description": [
+    "Leere Segmente entfallen, doppelte Trenner fallen zu einem zusammen, und das Ergebnis wird anschließend normalisiert — ein `..` mitten im Pfad wird also aufgelöst statt mitgeschleppt.",
+    "Das ist Zeichenkettenarbeit, keine Dateisystemarbeit: auf Existenz wird nichts geprüft."
+  ],
+  "params": {
+    "paths": "Die zu verbindenden Segmente."
+  },
+  "returns": "den zusammengefügten, normalisierten Pfad.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Zusammenfügen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "normalize"
+    },
+    {
+      "name": "parse"
+    },
+    {
+      "name": "isAbsolute"
+    }
+  ]
+}

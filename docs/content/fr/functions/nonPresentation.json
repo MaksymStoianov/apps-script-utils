@@ -1,0 +1,27 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** une présentation.",
+  "description": [
+    "`nonPresentation(value)` est le même test que `!isPresentation(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Un objet de service Apps Script n'a pas de constructeur contre lequel un script pourrait tester, alors le garde cherche les méthodes qui définissent le type — `getId`, `getSlides`. Un bouchon qui les implémente passe, et c'est ce qui rend ce code testable hors de l'environnement d'exécution.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas une présentation ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nconst presentation = SlidesApp.getActivePresentation();\n\nnonPresentation({}); // => true\nnonPresentation(null); // => true\nnonPresentation(presentation); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isPresentation"
+    },
+    {
+      "name": "requirePresentation"
+    }
+  ]
+}

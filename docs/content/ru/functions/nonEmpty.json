@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является пустым значением.",
+  "description": [
+    "`nonEmpty(value)` — та же проверка, что и `!isEmpty(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Пустота понимается по типу: `null` и `undefined`, строка из одних пробелов, массив, `Set` или `Map` без элементов, объект без собственных ключей. `0` и `false` — это значения, а не пустота.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является пустым значением; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonEmpty(0); // => true\nnonEmpty(false); // => true\nnonEmpty(\"a\"); // => true\nnonEmpty([0]); // => true\nnonEmpty(null); // => false\nnonEmpty(\"\"); // => false\nnonEmpty(\"   \"); // => false\nnonEmpty([]); // => false\nnonEmpty({}); // => false\nnonEmpty(new Map()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

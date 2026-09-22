@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht in eine Zahl umwandelbar ist.",
+  "description": [
+    "Eine endliche Zahl oder eine Zeichenkette, die sich in eine solche umwandelt. `NaN`, die Unendlichkeiten und die leere Zeichenkette sind ausgeschlossen — das unterscheidet die Prüfung von einem bloßen `Number(value)`.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht in eine Zahl umwandelbar ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist in eine Zahl umwandelbar."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonNumberLike(NaN); // => NaN\nrequireNonNumberLike(Infinity); // => Infinity\nrequireNonNumberLike(1); // throws IllegalArgumentException\nrequireNonNumberLike(\"1.5\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "nonNumberLike"
+    },
+    {
+      "name": "requireNumberLike"
+    }
+  ]
+}

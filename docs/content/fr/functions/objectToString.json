@@ -1,0 +1,24 @@
+{
+  "summary": "Renvoie le tag interne d'une valeur.",
+  "description": [
+    "`Object.prototype.toString.call(value)`, sous une forme appelable sur n'importe quoi, y compris `null` et `undefined`. Plusieurs gardes de cette bibliothèque s'appuient dessus, car le tag survit au passage d'un frame à l'autre, contrairement à `instanceof`."
+  ],
+  "params": {
+    "value": "La valeur dont on veut le tag."
+  },
+  "returns": "le tag, par exemple `\"[object Array]\"`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lire le tag"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObject"
+    },
+    {
+      "name": "isRegExp"
+    }
+  ]
+}

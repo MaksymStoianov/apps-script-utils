@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert eine URL ist.",
+  "description": [
+    "Eine `http`-, `https`- oder `ftp`-URL, bei der nach dem Schema etwas folgt und nirgends Leerraum steht. Ein blanker Host wie `\"example.com\"` ist keine.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine URL ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisUrl(\"https://example.com\"); // => true\nisUrl(\"http://example.com/a?b=1\"); // => true\nisUrl(\"example.com\"); // => false\nisUrl(\"https://\"); // => false\nisUrl(\"https://exa mple.com\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonUrl"
+    },
+    {
+      "name": "requireUrl"
+    }
+  ]
+}

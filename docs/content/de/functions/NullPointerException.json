@@ -1,0 +1,25 @@
+{
+  "summary": "null oder undefined tauchte dort auf, wo ein Objekt verlangt war.",
+  "description": [
+    "`null` oder `undefined` tauchte dort auf, wo ein Objekt verlangt war.",
+    "Wird geworfen von [`requireNonNull`](requireNonNull.md).",
+    "Jede Klasse dieser Hierarchie nimmt eine optionale Meldung, eine andere Ausnahme, deren Meldung übernommen wird, oder gar nichts. `isException` erkennt sie alle; ein einfacher `Error` gehört nicht dazu."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Werfen und fangen",
+      "body": "```javascript\nthrow new NullPointerException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof NullPointerException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

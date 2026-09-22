@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value as a regular expression, or throws.",
+  "description": [
+    "Identified by its internal tag rather than by `instanceof`, so a regular expression from another frame is recognised too.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a regular expression.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a regular expression."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireRegExp(/a/); // => /a/\nrequireRegExp(new RegExp(\"a\")); // => new RegExp(\"a\")\nrequireRegExp(\"/a/\"); // throws IllegalArgumentException\nrequireRegExp({}); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRegExp"
+    },
+    {
+      "name": "nonRegExp"
+    },
+    {
+      "name": "requireNonRegExp"
+    }
+  ]
+}

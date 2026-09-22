@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є об'єктом.",
+  "description": [
+    "`nonObject(value)` — та сама перевірка, що й `!isObject(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Перевіряється `typeof value === \"object\"` з винятком для `null`, тому масиви, дати та екземпляри класів підходять, а функція — ні. Функції приймає `isObjectLike`.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є об'єктом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonObject(null); // => true\nnonObject(\"abc\"); // => true\nnonObject(function () {}); // => true\nnonObject({}); // => false\nnonObject([]); // => false\nnonObject(new Date()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObject"
+    },
+    {
+      "name": "requireObject"
+    },
+    {
+      "name": "requireNonObject"
+    }
+  ]
+}

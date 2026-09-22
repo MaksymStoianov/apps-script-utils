@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является URL-адресом.",
+  "description": [
+    "`nonUrl(value)` — та же проверка, что и `!isUrl(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Адрес по схеме `http`, `https` или `ftp`, у которого после схемы что-то есть и нигде нет пробелов. Голый хост вроде `\"example.com\"` таковым не является.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является URL-адресом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonUrl(\"example.com\"); // => true\nnonUrl(\"https://\"); // => true\nnonUrl(\"https://exa mple.com\"); // => true\nnonUrl(\"https://example.com\"); // => false\nnonUrl(\"http://example.com/a?b=1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isUrl"
+    },
+    {
+      "name": "requireUrl"
+    }
+  ]
+}

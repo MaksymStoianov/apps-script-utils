@@ -1,0 +1,20 @@
+{
+  "summary": "Comment `retry` attend et quand il renonce.",
+  "description": [
+    "`attempts` plafonne les essais, `delay` est l'attente avant le second, `multiplier` fait croître chaque attente suivante et `maxDelay` borne une attente unique.",
+    "`shouldRetry` reçoit l'erreur et la tentative échouée et décide si réessayer en vaut la peine ; `sleep` réalise l'attente et vaut par défaut `Utilities.sleep` là où il existe — ce qui permet à un test de ne pas attendre."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "retry"
+    }
+  ]
+}

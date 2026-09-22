@@ -1,0 +1,32 @@
+{
+  "summary": "Prend le dernier élément d'un tableau, ou ses n derniers éléments dans leur ordre d'origine.",
+  "description": [
+    "C'est ce pour quoi l'on écrit `array[array.length - 1]` — une expression qui renvoie `undefined` sur un tableau vide tout en ayant l'air délibérée. `last` le dit franchement et renvoie `undefined` dans le même cas.",
+    "La forme avec `n` prend par la fin mais conserve l'ordre : `last([1, 2, 3], 2)` vaut `[2, 3]`, pas `[3, 2]`. `n` est borné : un nombre négatif donne un tableau vide, un nombre supérieur à la longueur donne tout le tableau. L'entrée n'est pas modifiée."
+  ],
+  "params": {
+    "array": "Le tableau dans lequel lire. Il n'est pas modifié.",
+    "n": "Combien d'éléments prendre. Un entier ; omettez-le pour n'en prendre qu'un."
+  },
+  "returns": "le dernier élément, ou un nouveau tableau d'au plus `n` éléments dans leur ordre d'origine.",
+  "throws": {
+    "TypeError": ["`array` n'est pas un tableau.", "`n` est fourni et n'est pas un entier."]
+  },
+  "examples": [
+    {
+      "title": "Un élément, ou plusieurs"
+    },
+    {
+      "title": "Lire les dernières entrées d'une feuille de journal"
+    },
+    {
+      "title": "Bornage"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "first",
+      "note": "les deux mêmes formes, prises par le début."
+    }
+  ]
+}

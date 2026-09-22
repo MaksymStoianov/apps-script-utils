@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur en tant que une `Exception`, ou lève une exception.",
+  "description": [
+    "Uniquement la hiérarchie propre à la bibliothèque. Un `Error` ordinaire ne compte pas, ce qui rend le test utile dans un `catch` qui doit distinguer les deux.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme une `Exception`.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas une `Exception`."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireException(new IllegalArgumentException()); // => new IllegalArgumentException()\nrequireException(new Error()); // throws IllegalArgumentException\nrequireException({}); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "nonException"
+    },
+    {
+      "name": "requireNonException"
+    }
+  ]
+}

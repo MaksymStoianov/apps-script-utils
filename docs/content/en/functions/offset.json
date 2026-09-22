@@ -1,0 +1,30 @@
+{
+  "summary": "Shifts a date by an amount of a unit.",
+  "description": [
+    "A new `Date` is returned; the one passed in is untouched. A negative amount moves backwards.",
+    "Adding a month keeps the day of the month where it exists and clamps it where it does not: 31 January plus one month is 28 February, not 3 March."
+  ],
+  "params": {
+    "date": "The date to read. It must be a valid `Date`.",
+    "amount": "How many units to move. Negative moves backwards.",
+    "unit": "`\"millisecond\"` through `\"year\"`, as for `diff`."
+  },
+  "returns": "a new date, shifted.",
+  "throws": {
+    "IllegalArgumentException": "an argument is not a valid `Date`."
+  },
+  "examples": [
+    {
+      "title": "Shifting a date",
+      "body": "```javascript\nconst start = new Date(2026, 0, 31);\n\noffset(start, 1, \"month\"); // 28 February 2026 — the day is clamped\noffset(start, -1, \"day\"); // 30 January 2026\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "getDaysInMonth"
+    }
+  ]
+}

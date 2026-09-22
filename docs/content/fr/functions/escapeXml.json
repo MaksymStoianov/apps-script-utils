@@ -1,0 +1,23 @@
+{
+  "summary": "Échappe les caractères réservés par XML.",
+  "description": [
+    "Les mêmes cinq caractères qu'`escapeHtml`, pour du contenu destiné à un document XML plutôt qu'à une page."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide."
+  },
+  "returns": "la chaîne échappée.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є функцією.",
+  "description": [
+    "`nonFunction(value)` — та сама перевірка, що й `!isFunction(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Визначається за внутрішнім тегом, тому підходять звичайні, `async`, генератори та асинхронні генератори. Клас — теж функція.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є функцією; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonFunction(null); // => true\nnonFunction(\"fn\"); // => true\nnonFunction({}); // => true\nnonFunction(function () {}); // => false\nnonFunction(async function () {}); // => false\nnonFunction(Math.max); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunction"
+    },
+    {
+      "name": "requireFunction"
+    },
+    {
+      "name": "requireNonFunction"
+    }
+  ]
+}

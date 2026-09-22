@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is an absolute path.",
+  "description": [
+    "A path that starts at a root: a leading `/`, or a scheme such as `https://` or `mailto:`. Everything else, the empty string included, is relative.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is an absolute path; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisAbsolute(\"/var/log\"); // => true\nisAbsolute(\"https://example.com/a\"); // => true\nisAbsolute(\"mailto:a@example.com\"); // => true\nisAbsolute(\"docs/readme.md\"); // => false\nisAbsolute(\"./a\"); // => false\nisAbsolute(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonAbsolute"
+    },
+    {
+      "name": "requireAbsolute"
+    }
+  ]
+}

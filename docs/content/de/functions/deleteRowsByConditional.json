@@ -1,0 +1,30 @@
+{
+  "summary": "Löscht die vom Prädikat gewählten Zeilen.",
+  "description": [
+    "Jede Zeile wird an dem Blatt gemessen, wie es gelesen wurde; gelöscht wird anschließend von unten nach oben in zusammenhängenden Blöcken. Genau das verhindert den Fehler einer selbstgeschriebenen Schleife, die die falschen Zeilen trifft, sobald die Positionen sich verschieben.",
+    "Die Zeilen sind dann fort: nur leeren tut sie `clearRowsByConditional`."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird.",
+    "predicate": "Bekommt die Zellen der Zeile, ihre einsbasierte Position und — wenn `headerRow` gesetzt ist — die Zeile mit den Spaltennamen als Schlüsseln. `true` für die Zeilen, auf die gewirkt werden soll.",
+    "options": "`headerRow` benennt die Zeile mit den Spaltennamen. Ist sie gesetzt, kommt jede Zeile mit diesen Namen als Schlüsseln, und die Kopfzeile selbst scheidet als Kandidat aus."
+  },
+  "returns": "wie viele betroffen waren.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt.",
+    "IllegalArgumentException": "das Prädikat ist keine Funktion oder die Kopfposition keine positive ganze Zahl."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    }
+  ]
+}

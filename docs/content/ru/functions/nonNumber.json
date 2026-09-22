@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является числом.",
+  "description": [
+    "`nonNumber(value)` — та же проверка, что и `!isNumber(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Проверяется `typeof value === \"number\"`, чему удовлетворяют и `NaN`, и обе бесконечности. Когда эти случаи нужно различать, берите `isFloat`, `isInteger` или `isNaN`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является числом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonNumber(\"1\"); // => true\nnonNumber(null); // => true\nnonNumber(0); // => false\nnonNumber(1.5); // => false\nnonNumber(NaN); // => false\nnonNumber(Infinity); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumber"
+    },
+    {
+      "name": "requireNumber"
+    },
+    {
+      "name": "requireNonNumber"
+    }
+  ]
+}

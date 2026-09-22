@@ -1,0 +1,25 @@
+{
+  "summary": "Meldet, ob zwei Rasterbereiche sich in einer Zelle überschneiden.",
+  "description": [
+    "Bereiche, die sich nur an einer Kante berühren, überschneiden sich nicht: die Endgrenzen gehören nicht dazu, `A1:B2` und `C1:D2` sind also Nachbarn, keine Überschneidung. Eine weggelassene Grenze heißt, der Bereich ist in diese Richtung offen und überschneidet auf dieser Achse alles."
+  ],
+  "params": {
+    "range1": "Der erste Bereich.",
+    "range2": "Der zweite Bereich."
+  },
+  "returns": "`true`, wenn mindestens eine Zelle zu beiden gehört.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Eine Überschneidung prüfen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "isCellGridRange"
+    }
+  ]
+}

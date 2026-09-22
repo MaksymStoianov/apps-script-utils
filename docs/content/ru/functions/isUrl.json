@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение URL-адресом.",
+  "description": [
+    "Адрес по схеме `http`, `https` или `ftp`, у которого после схемы что-то есть и нигде нет пробелов. Голый хост вроде `\"example.com\"` таковым не является.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является URL-адресом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisUrl(\"https://example.com\"); // => true\nisUrl(\"http://example.com/a?b=1\"); // => true\nisUrl(\"example.com\"); // => false\nisUrl(\"https://\"); // => false\nisUrl(\"https://exa mple.com\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonUrl"
+    },
+    {
+      "name": "requireUrl"
+    }
+  ]
+}

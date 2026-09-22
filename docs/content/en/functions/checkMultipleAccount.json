@@ -1,0 +1,27 @@
+{
+  "summary": "Reports whether the script runs as a different account than the one that started it.",
+  "description": [
+    "Signed in to several Google accounts in one browser, a person can trigger a script that then runs as another of their accounts — and writes, shares or mails as that one. Comparing the initiator's address with the effective user's is what catches it, so the script can say so instead of doing something surprising."
+  ],
+  "params": {
+    "email": "The address of the person who triggered the script."
+  },
+  "returns": "`true` when the two addresses differ.",
+  "throws": {
+    "InvalidEmailFormatException": "either address is missing or malformed."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nfunction onOpen(event) {\n  if (checkMultipleAccount(event.user.getEmail())) {\n    SpreadsheetApp.getUi().alert(\"You are signed in to more than one Google account.\");\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireValidEmail"
+    },
+    {
+      "name": "isEmail"
+    }
+  ]
+}

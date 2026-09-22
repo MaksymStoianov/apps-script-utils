@@ -1,0 +1,23 @@
+{
+  "summary": "Comment `getValues` lit une feuille.",
+  "description": [
+    "`headerRow` désigne la ligne des noms de colonnes et indexe chaque ligne par eux. `display` lit les valeurs telles qu'une personne les voit plutôt que telles qu'elles sont stockées. `filter` retient des lignes, `offset` et `limit` paginent ce qui reste, `mapper` décide de ce que devient chacune.",
+    "L'ordre est fixe : filtre, puis décalage, puis limite, puis transformation — une limite compte donc les lignes retenues, pas les lignes lues."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getValues"
+    },
+    {
+      "name": "Row"
+    }
+  ]
+}

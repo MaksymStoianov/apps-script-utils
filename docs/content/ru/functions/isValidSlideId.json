@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение идентификатором слайда.",
+  "description": [
+    "Буквы, цифры, дефисы и подчёркивания, хотя бы один символ. Идентификаторы слайдов короткие — `p1` вполне обычный, — поэтому минимальная длина не задаётся.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является идентификатором слайда; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisValidSlideId(\"p1\"); // => true\nisValidSlideId(\"SLIDES_api123\"); // => true\nisValidSlideId(\"has space\"); // => false\nisValidSlideId(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSlideId"
+    },
+    {
+      "name": "requireValidSlideId"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "Prüft, ob ein Rasterbereich **nicht** vollständig in einem anderen liegt.",
+  "description": [
+    "Die Verneinung von `isGridRangeContainedIn`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest: ein nur teilweise überlappender Bereich und einer ganz woanders liefern beide `true`."
+  ],
+  "params": {
+    "range1": "Der zu prüfende Bereich.",
+    "range2": "Der Bereich, mit dem verglichen wird."
+  },
+  "returns": "`true`, wenn der erste Bereich nicht im zweiten liegt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Enthaltung prüfen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "requireGridRangeContainedIn"
+    }
+  ]
+}

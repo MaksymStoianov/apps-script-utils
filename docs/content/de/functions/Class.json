@@ -1,0 +1,25 @@
+{
+  "summary": "Die abstrakte Basis, von der die eigenen Klassen der Bibliothek erben.",
+  "description": [
+    "Sie trägt das Verhalten, das von jeder Klasse hier erwartet wird, und keine eigene Logik; instanziieren lässt sie sich nicht. Erben Sie davon, wenn ein eigenes Wertobjekt sich wie die der Bibliothek verhalten soll — von den Prüfungen erkannt und über `equals` statt über die Identität verglichen."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "Iterator"
+    },
+    {
+      "name": "equals"
+    },
+    {
+      "name": "hashCode"
+    }
+  ]
+}

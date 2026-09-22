@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur en tant que un nombre avec une partie fractionnaire, ou lève une exception.",
+  "description": [
+    "JavaScript n'a qu'un type numérique : `1.0` et `1` sont la même valeur. La question est de savoir s'il reste une fraction à l'exécution, pas comment le littéral a été écrit. Les infinis n'ont pas de fraction et sont exclus.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un nombre avec une partie fractionnaire.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un nombre avec une partie fractionnaire."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireFloat(1.5); // => 1.5\nrequireFloat(-0.1); // => -0.1\nrequireFloat(42); // throws IllegalArgumentException\nrequireFloat(1.0); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFloat"
+    },
+    {
+      "name": "nonFloat"
+    },
+    {
+      "name": "requireNonFloat"
+    }
+  ]
+}

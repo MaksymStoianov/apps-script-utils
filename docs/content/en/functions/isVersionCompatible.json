@@ -1,0 +1,31 @@
+{
+  "summary": "Checks whether a version is at least the one required.",
+  "description": [
+    "`versionCompare` decides it, so the comparison is numeric group by group and `1.10` counts as above `1.2`. Both arguments have to be plain dotted numbers; a pre-release suffix is rejected rather than ordered."
+  ],
+  "params": {
+    "currentVersion": "The version in hand.",
+    "requiredVersion": "The minimum that is acceptable."
+  },
+  "returns": "`true` when the current version is the required one or higher.",
+  "throws": {
+    "TypeError": "either argument is not a valid version string."
+  },
+  "examples": [
+    {
+      "title": "Checking a requirement",
+      "body": "```javascript\nisVersionCompatible(\"1.3.0\", \"1.2.0\"); // => true\nisVersionCompatible(\"1.2.0\", \"1.3.0\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "versionCompare"
+    },
+    {
+      "name": "nonVersionCompatible"
+    },
+    {
+      "name": "requireVersionCompatible"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є доменним іменем.",
+  "description": [
+    "`nonValidDomain(value)` — та сама перевірка, що й `!isValidDomain(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Мітки, розділені одиночними крапками, без крапки чи дефіса на початку й у кінці та без порожніх міток. Це перевірка синтаксису: чи резолвиться домен — окреме питання.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є доменним іменем; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonValidDomain(\"-example.com\"); // => true\nnonValidDomain(\"example..com\"); // => true\nnonValidDomain(\"example.com.\"); // => true\nnonValidDomain(\"\"); // => true\nnonValidDomain(\"example.com\"); // => false\nnonValidDomain(\"sub.example.co.uk\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

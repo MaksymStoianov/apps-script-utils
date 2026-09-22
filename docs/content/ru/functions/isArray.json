@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение массивом.",
+  "description": [
+    "Проверка целиком сводится к `Array.isArray`, поэтому массив из другого фрейма подходит, а похожий на массив объект — `arguments`, `NodeList`, `{ length: 0 }` — нет.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является массивом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisArray([]); // => true\nisArray([1, 2, 3]); // => true\nisArray(\"abc\"); // => false\nisArray({ length: 0 }); // => false\nisArray(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

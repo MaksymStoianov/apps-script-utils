@@ -1,0 +1,28 @@
+{
+  "summary": "Stocke un schéma sur une feuille et applique ce qu'il décrit.",
+  "description": [
+    "Le schéma est écrit dans les métadonnées développeur de la feuille : il voyage donc avec elle — une copie du classeur l'emporte, et `getSchema` le retrouve sans lire une seule cellule.",
+    "La description est aussi mise en œuvre : la ligne d'en-tête est écrite et les colonnes reçoivent le format et la validation qu'impliquent leurs types."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler.",
+    "schema": "Le schéma : `version`, `headerRow` et `columns`."
+  },
+  "returns": "la même feuille.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille."
+  },
+  "examples": [
+    {
+      "title": "Déclarer un schéma"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "removeSchema"
+    }
+  ]
+}

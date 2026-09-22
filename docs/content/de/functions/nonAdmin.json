@@ -1,0 +1,22 @@
+{
+  "summary": "Meldet, ob der aktuelle Nutzer **kein** Workspace-Administrator ist.",
+  "description": [
+    "Die Verneinung von `isAdmin`, für die Wächterklausel, die früh aussteigt. Da eine fehlgeschlagene Abfrage dort `false` liefert, liefert sie hier `true`: ein nicht verfügbares Admin SDK gilt als „kein Administrator“, und das ist die sichere Lesart."
+  ],
+  "params": {},
+  "returns": "`true`, wenn der aktive Nutzer kein Administrator ist.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Früh aussteigen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAdmin"
+    },
+    {
+      "name": "requireAdmin"
+    }
+  ]
+}

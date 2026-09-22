@@ -1,0 +1,127 @@
+# lang
+
+<link-summary>Мовні утиліти, що не залежать від середовища: перевірки, масиви, числа, об'єкти, рядки.</link-summary>
+
+<web-summary>Модуль lang в apps-script-utils: перевірки типів, помічники для масивів і матриць, класифікація чисел, хешування об'єктів і перетворення рядків — усе незалежно від середовища виконання.</web-summary>
+
+`lang` — це мовні утиліти, та частина бібліотеки, яка нічого не знає про Google Apps Script і працює всюди, де
+працює JavaScript.
+
+## Пакети
+
+| Пакет         | Містить                                                 |
+| :------------ | :------------------------------------------------------ |
+| `lang/base`   | стражі `isX` / `nonX` / `requireX` для вбудованих типів |
+| `lang/array`  | перевірки форми масивів і перетворення                  |
+| `lang/number` | класифікацію та перетворення чисел                      |
+| `lang/object` | хешування, порівняння й роботу зі шляхами в об'єктах    |
+| `lang/string` | зміну регістру, перевірки та порівняння версій          |
+
+Поряд з `lang` бібліотека постачає `html`, `json` і `time`. Вони так само не залежать від середовища виконання й
+перелічені разом з `lang` у [](reference-base.md).
+
+## Стражі типів
+
+`lang/base` — найбільший пакет і той, якого торкається майже будь-який код. Його повністю розібрано в
+[](validation-conventions.md); якщо коротко: `isX` і `nonX` відповідають на питання, а `requireX` перевіряє й
+повертає.
+
+```typescript
+import { requireString, toKebabCase } from "apps-script-utils";
+
+function slugify(input: unknown): string {
+  return toKebabCase(requireString(input));
+}
+```
+
+## Масиви
+
+```typescript
+import { chunk, transpose, is2DArray, isConsistent2DArray } from "apps-script-utils";
+
+chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
+
+transpose([
+  ["a", "b"],
+  ["c", "d"]
+]); // [["a", "c"], ["b", "d"]]
+
+is2DArray([[1], [2]]); // true
+isConsistent2DArray([[1, 2], [3]]); // false — рядки різної довжини
+```
+
+`isConsistent2DArray` — та перевірка, яку варто робити перед записом в аркуш: `Range.setValues()` вимагає, щоб усі
+рядки були однієї довжини, а рваний масив падає вже на межі сервісу з повідомленням, яке не називає проблемного
+рядка.
+
+## Числа
+
+```typescript
+import { isCountable, isFloat, isInteger, toInteger } from "apps-script-utils";
+
+isInteger(42); // true
+isInteger(42.5); // false
+isFloat(42.5); // true
+isCountable(3); // true — невід'ємне ціле
+isCountable(-1); // false
+```
+
+Аргументи рядків і стовпців у Sheets API — це кількості, а не довільні числа; заради цього й існують `isCountable`
+та `requireCountable`.
+
+## Рядки
+
+Зміна регістру:
+
+```typescript
+import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "apps-script-utils";
+
+toCamelCase("user name"); // "userName"
+toKebabCase("User Name"); // "user-name"
+toSnakeCase("User Name"); // "user_name"
+toProperCase("user name"); // "User Name"
+```
+
+Перевірки:
+
+```typescript
+import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "apps-script-utils";
+
+isEmail("ada@example.com"); // true
+isValidSlug("my-post"); // true
+isValidVersion("1.10.0"); // true
+
+requireValidEmail(formResponse); // поверне значення або кине InvalidEmailFormatException
+```
+
+Порівняння версій — для скриптів, які вмикають поведінку залежно від версії бібліотеки:
+
+```typescript
+import { versionCompare, isVersionCompatible } from "apps-script-utils";
+
+versionCompare("1.10.0", "1.9.0"); // 1
+versionCompare("1.9.0", "1.10.0"); // -1
+versionCompare("1.9.0", "1.9.0"); // 0
+```
+
+`escapeRegExp` робить користувацький рядок безпечним для підстановки в шаблон — знадобиться щоразу, коли пошуковий
+запит надходить із комірки чи форми:
+
+```typescript
+import { escapeRegExp } from "apps-script-utils";
+
+const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
+```
+
+## Об'єкти
+
+```typescript
+import { hashCode, objectToString } from "apps-script-utils";
+
+objectToString([]); // "[object Array]"
+objectToString(null); // "[object Null]"
+hashCode("apps-script-utils"); // стійкий числовий хеш
+```
+
+`objectToString` повідомляє внутрішній тег, а не `String(value)`, і це надійний спосіб відрізнити масив від дати й
+від простого об'єкта: тег переживає перехід між фреймами, чого `instanceof` не вміє.

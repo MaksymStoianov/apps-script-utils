@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является презентацией.",
+  "description": [
+    "`nonPresentation(value)` — та же проверка, что и `!isPresentation(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка ищет методы, определяющие тип, — `getId`, `getSlides`. Заглушка, реализующая их, проходит, и именно это позволяет тестировать такой код вне среды выполнения.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является презентацией; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst presentation = SlidesApp.getActivePresentation();\n\nnonPresentation({}); // => true\nnonPresentation(null); // => true\nnonPresentation(presentation); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isPresentation"
+    },
+    {
+      "name": "requirePresentation"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Colore le HTML d'une plage comme du code source.",
+  "description": [
+    "Les cellules sont lues comme du texte, on y distingue balises, noms d'attributs, valeurs, commentaires et contenu, puis elles sont réécrites en texte enrichi, chaque partie dans sa couleur. Un thème décide des couleurs."
+  ],
+  "params": {
+    "range": "La plage dont les cellules sont colorées.",
+    "theme": "La couleur de chaque type de jeton."
+  },
+  "returns": "la même plage.",
+  "throws": {
+    "InvalidRangeException": "le premier argument n'est pas une plage."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertRichTextToHtml"
+    },
+    {
+      "name": "isRange"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Domainname ist.",
+  "description": [
+    "`nonValidDomain(value)` ist dieselbe Prüfung wie `!isValidDomain(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Labels, durch einzelne Punkte getrennt, ohne führenden oder abschließenden Punkt oder Bindestrich und ohne leeres Label. Eine Syntaxprüfung: ob die Domain auflöst, ist eine andere Frage.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Domainname ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonValidDomain(\"-example.com\"); // => true\nnonValidDomain(\"example..com\"); // => true\nnonValidDomain(\"example.com.\"); // => true\nnonValidDomain(\"\"); // => true\nnonValidDomain(\"example.com\"); // => false\nnonValidDomain(\"sub.example.co.uk\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

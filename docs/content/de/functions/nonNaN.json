@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** die Zahl `NaN` ist.",
+  "description": [
+    "`nonNaN(value)` ist dieselbe Prüfung wie `!isNaN(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Es wird nichts vorher umgewandelt — darin unterscheidet sich die Prüfung vom globalen `isNaN`, das sein Argument konvertiert, sodass `isNaN(\"abc\")` und `isNaN(undefined)` beide `true` melden.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht die Zahl `NaN` ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonNaN(0); // => true\nnonNaN(\"abc\"); // => true\nnonNaN(undefined); // => true\nnonNaN(NaN); // => false\nnonNaN(0 / 0); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNaN"
+    },
+    {
+      "name": "requireNaN"
+    },
+    {
+      "name": "requireNonNaN"
+    }
+  ]
+}

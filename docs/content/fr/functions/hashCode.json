@@ -1,0 +1,25 @@
+{
+  "summary": "Produit un condensé numérique pour n'importe quelle valeur.",
+  "description": [
+    "La valeur est d'abord transformée en chaîne — un objet via la forme à clés triées que produit `stringifyJson` — puis la chaîne est repliée en un entier 32 bits. Deux valeurs qu'`equals` juge égales donnent le même condensé.",
+    "C'est une clé de seau, pas une somme de contrôle : des valeurs différentes peuvent entrer en collision, et le résultat n'est pas garanti d'une version à l'autre."
+  ],
+  "params": {
+    "value": "La valeur à condenser."
+  },
+  "returns": "un entier 32 bits ; `0` pour une chaîne vide.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Condensé"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "equals"
+    },
+    {
+      "name": "stringifyJson"
+    }
+  ]
+}

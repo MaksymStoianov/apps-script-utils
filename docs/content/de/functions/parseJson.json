@@ -1,0 +1,25 @@
+{
+  "summary": "Liest JSON und versucht es bei striktem Fehlschlag mit einem toleranten Leser erneut.",
+  "description": [
+    "Zuerst läuft `JSON.parse`. Weigert es sich, wird der Text nach Regeln erneut zerlegt, die zulassen, was handgeschriebene Konfiguration meist enthält: Schlüssel ohne Anführungszeichen und Zeichenketten in einfachen Anführungszeichen.",
+    "Text, mit dem keiner der beiden Leser etwas anfangen kann, wirft. Gedacht für von Hand getippte Konfiguration, nicht für die Antwort eines Dienstes — dort ist `JSON.parse` mit seinem Fehler klarer."
+  ],
+  "params": {
+    "value": "Der zu lesende Text. Er darf nicht leer sein."
+  },
+  "returns": "den gelesenen Wert.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer.",
+    "SyntaxError": "keiner der beiden Leser kann den Text lesen."
+  },
+  "examples": [
+    {
+      "title": "Lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "stringifyJson"
+    }
+  ]
+}

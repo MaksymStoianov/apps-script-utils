@@ -1,0 +1,26 @@
+{
+  "summary": "Findet einen benannten Bereich anhand seines Namens.",
+  "description": [
+    "Ein benannter Bereich ist der stabile Weg, auf einen Zellblock zu zeigen, den ein Mensch im Blatt verschieben kann. Apps Script liefert nur die ganze Liste, also werden die Namen durchlaufen und verglichen.",
+    "Ein nicht definierter Name ergibt `null` — der Fall, den man behandelt, wenn eine Vorlage von Hand bearbeitet wurde."
+  ],
+  "params": {
+    "spreadsheet": "Die Tabelle, in der gesucht wird.",
+    "name": "Der Name des Bereichs."
+  },
+  "returns": "den benannten Bereich oder `null`, wenn es den Namen nicht gibt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Nachschlagen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetById"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

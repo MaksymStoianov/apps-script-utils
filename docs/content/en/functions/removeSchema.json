@@ -1,0 +1,29 @@
+{
+  "summary": "Removes the schema stored on a sheet.",
+  "description": [
+    "The stored description goes; the data and the header row stay exactly as they are. A sheet with no schema stored is left alone and the call reports `false`.",
+    "`validation: true` also clears the data validation on the columns the schema described. It is off by default on purpose: Apps Script offers no way to tell a rule the schema created from one a person added by hand, so clearing takes both."
+  ],
+  "params": {
+    "sheet": "The sheet to work on.",
+    "options": "`validation` also clears the data validation the schema implied."
+  },
+  "returns": "`true` when a schema was removed.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet."
+  },
+  "examples": [
+    {
+      "title": "Removing a schema",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nremoveSchema(sheet); // => true when one was there\nremoveSchema(sheet, { validation: true }); // also clears the rules it implied\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "insertSchema"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Gibt ein Repository zurück, sobald es nachweislich existiert, sonst wirft es.",
+  "description": [
+    "`requireService` für die Schicht über den Diensten: eine Datenquelle, die ein Container hätte liefern sollen und nicht geliefert hat. Die Ausnahme benennt die Lage, statt ein `null` weiterreisen zu lassen."
+  ],
+  "params": {
+    "repository": "Das zu prüfende Repository.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet."
+  },
+  "returns": "dasselbe Repository.",
+  "throws": {
+    "RepositoryIsNotDefinedException": "das Repository ist `null` oder `undefined`."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireService"
+    },
+    {
+      "name": "RepositoryIsNotDefinedException"
+    }
+  ]
+}

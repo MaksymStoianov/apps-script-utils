@@ -1,0 +1,28 @@
+{
+  "summary": "Lit une notation A1 en plage de grille.",
+  "description": [
+    "Le résultat porte le nom de feuille lorsque la notation en avait un, `null` sinon, la partie plage à part, et les quatre bornes à base zéro dans lesquelles travaille l'API Sheets.",
+    "Les notations ouvertes sont comprises : `\"A:A\"` est une colonne entière et laisse de côté les bornes de lignes, `\"1:1\"` une ligne entière."
+  ],
+  "params": {
+    "a1Notation": "La notation à lire, avec ou sans nom de feuille."
+  },
+  "returns": "la plage analysée.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lire la notation A1"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notations"
+    },
+    {
+      "name": "toA1Notation"
+    },
+    {
+      "name": "extractRangeFromA1Notation"
+    }
+  ]
+}

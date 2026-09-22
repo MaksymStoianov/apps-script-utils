@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Zahl mit Nachkommateil ist.",
+  "description": [
+    "Ein Synonym der `Float`-Familie unter dem Namen, zu dem man zuerst greift. In JavaScript ist jede Zahl ohnehin ein Double, `double` benennt also keinen eigenen Laufzeitfall.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht eine Zahl mit Nachkommateil ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist eine Zahl mit Nachkommateil."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonDouble(42); // => 42\nrequireNonDouble(1.0); // => 1.0\nrequireNonDouble(1.5); // throws IllegalArgumentException\nrequireNonDouble(-0.1); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isDouble"
+    },
+    {
+      "name": "nonDouble"
+    },
+    {
+      "name": "requireDouble"
+    }
+  ]
+}

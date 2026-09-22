@@ -1,0 +1,26 @@
+{
+  "summary": "Indique si le script s'exécute sous un compte différent de celui qui l'a lancé.",
+  "description": [
+    "Connecté à plusieurs comptes Google dans un même navigateur, quelqu'un peut déclencher un script qui s'exécute ensuite sous un autre de ses comptes — et écrit, partage ou envoie du courrier sous celui-là. Comparer l'adresse de l'initiateur à celle de l'utilisateur effectif attrape le cas, pour que le script le dise au lieu de faire quelque chose d'inattendu."
+  ],
+  "params": {
+    "email": "L'adresse de la personne ayant déclenché le script."
+  },
+  "returns": "`true` lorsque les deux adresses diffèrent.",
+  "throws": {
+    "InvalidEmailFormatException": "l'une des adresses est absente ou mal formée."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireValidEmail"
+    },
+    {
+      "name": "isEmail"
+    }
+  ]
+}

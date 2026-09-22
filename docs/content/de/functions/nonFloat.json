@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Zahl mit Nachkommateil ist.",
+  "description": [
+    "`nonFloat(value)` ist dieselbe Prüfung wie `!isFloat(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "JavaScript hat einen einzigen Zahlentyp, `1.0` und `1` sind derselbe Wert: gefragt ist, ob zur Laufzeit ein Bruchteil übrig bleibt, nicht wie das Literal geschrieben wurde. Die Unendlichkeiten haben keinen Bruchteil und sind ausgeschlossen.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Zahl mit Nachkommateil ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonFloat(42); // => true\nnonFloat(1.0); // => true\nnonFloat(Infinity); // => true\nnonFloat(\"1.5\"); // => true\nnonFloat(1.5); // => false\nnonFloat(-0.1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFloat"
+    },
+    {
+      "name": "requireFloat"
+    },
+    {
+      "name": "requireNonFloat"
+    }
+  ]
+}

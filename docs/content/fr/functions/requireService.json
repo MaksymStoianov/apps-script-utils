@@ -1,0 +1,27 @@
+{
+  "summary": "Renvoie un service une fois établi qu'il existe, ou lève.",
+  "description": [
+    "Un service avancé jamais activé n'est qu'une globale indéfinie, et la panne survient loin de sa cause, sous forme de `ReferenceError`. Ici, elle devient une exception nommée dont le message dit quoi activer."
+  ],
+  "params": {
+    "service": "Le service à vérifier.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé."
+  },
+  "returns": "le même service.",
+  "throws": {
+    "ServiceIsNotDefinedException": "le service vaut `null` ou `undefined`."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireRepository"
+    },
+    {
+      "name": "ServiceIsNotDefinedException"
+    }
+  ]
+}

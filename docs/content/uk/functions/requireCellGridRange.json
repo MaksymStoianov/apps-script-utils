@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як діапазон з однієї комірки або викидає виняток.",
+  "description": [
+    "Один рядок і один стовпець, рахуючи за межами, а не за тим, як діапазон записали: кінцеві індекси не включаються, тому одна комірка — це `endRowIndex - startRowIndex === 1` і те саме для стовпців. Діапазон із пропущеною межею відкритий у цей бік і однією коміркою не буває.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як діапазон з однієї комірки.",
+  "throws": {
+    "InvalidGridRangeException": "значення не є діапазоном з однієї комірки."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => { startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }\nrequireCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // throws InvalidGridRangeException\nrequireCellGridRange({}); // throws InvalidGridRangeException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isCellGridRange"
+    },
+    {
+      "name": "nonCellGridRange"
+    }
+  ]
+}

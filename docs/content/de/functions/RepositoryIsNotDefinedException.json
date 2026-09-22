@@ -1,0 +1,25 @@
+{
+  "summary": "Ein Repository, das das Skript erwartet hat, ist nicht da.",
+  "description": [
+    "Ein Repository, das das Skript erwartet hat, ist nicht da.",
+    "Wird geworfen von [`requireRepository`](requireRepository.md).",
+    "Jede Klasse dieser Hierarchie nimmt eine optionale Meldung, eine andere Ausnahme, deren Meldung übernommen wird, oder gar nichts. `isException` erkennt sie alle; ein einfacher `Error` gehört nicht dazu."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Werfen und fangen",
+      "body": "```javascript\nthrow new RepositoryIsNotDefinedException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof RepositoryIsNotDefinedException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

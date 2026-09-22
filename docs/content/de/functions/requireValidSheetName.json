@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als einen Blattnamen zurück oder wirft.",
+  "description": [
+    "Was Google Tabellen akzeptiert: höchstens 100 Zeichen, nicht leer, keines von `\\ / ? * [ ]` und nicht der reservierte Name `history` in beliebiger Schreibweise.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als einen Blattnamen.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein Blattname."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireValidSheetName(\"Data\"); // => \"Data\"\nrequireValidSheetName(\"Report 2026\"); // => \"Report 2026\"\nrequireValidSheetName(\"history\"); // throws IllegalArgumentException\nrequireValidSheetName(\"Data/2026\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetName"
+    },
+    {
+      "name": "nonValidSheetName"
+    }
+  ]
+}

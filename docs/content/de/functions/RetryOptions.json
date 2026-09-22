@@ -1,0 +1,20 @@
+{
+  "summary": "Wie `retry` wartet und wann es aufgibt.",
+  "description": [
+    "`attempts` begrenzt die Versuche, `delay` ist die Wartezeit vor dem zweiten, `multiplier` lässt jede weitere wachsen und `maxDelay` deckelt eine einzelne.",
+    "`shouldRetry` bekommt den Fehler und den gescheiterten Versuch und entscheidet, ob eine Wiederholung überhaupt lohnt; `sleep` führt das Warten aus und nimmt standardmäßig `Utilities.sleep`, wo es das gibt — genau das lässt einen Test ohne Warten laufen."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "retry"
+    }
+  ]
+}

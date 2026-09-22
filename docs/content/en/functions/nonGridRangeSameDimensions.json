@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether two grid ranges differ in height or width.",
+  "description": [
+    "The negation of `isGridRangeSameDimensions`, for the guard clause that returns early when a copy would not fit."
+  ],
+  "params": {
+    "range1": "The first range.",
+    "range2": "The second range."
+  },
+  "returns": "`true` when the sizes differ.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Comparing sizes",
+      "body": "```javascript\nconst source = { startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 };\nconst target = { startRowIndex: 0, endRowIndex: 3, startColumnIndex: 0, endColumnIndex: 2 };\n\nnonGridRangeSameDimensions(source, target); // => true\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeSameDimensions"
+    },
+    {
+      "name": "requireGridRangeSameDimensions"
+    }
+  ]
+}

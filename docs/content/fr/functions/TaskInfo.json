@@ -1,0 +1,19 @@
+{
+  "summary": "Une tâche chronométrée, telle qu'un `StopWatch` l'a enregistrée.",
+  "description": [
+    "Le nom sous lequel la tâche a démarré — vide si aucun n'a été donné — et sa durée, en millisecondes et en secondes. La même mesure dans les deux unités, pour qu'aucune conversion ne soit nécessaire ni dans la ligne de journal ni dans le calcul."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "StopWatch"
+    }
+  ]
+}

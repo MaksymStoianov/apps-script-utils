@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value as a number with a fractional part, or throws.",
+  "description": [
+    "A synonym of the `Float` family, offered under the name people reach for first. In JavaScript every number already is a double, so `double` names no runtime distinction of its own.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a number with a fractional part.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a number with a fractional part."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireDouble(1.5); // => 1.5\nrequireDouble(-0.1); // => -0.1\nrequireDouble(42); // throws IllegalArgumentException\nrequireDouble(1.0); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isDouble"
+    },
+    {
+      "name": "nonDouble"
+    },
+    {
+      "name": "requireNonDouble"
+    }
+  ]
+}

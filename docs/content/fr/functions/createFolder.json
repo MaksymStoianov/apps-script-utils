@@ -1,0 +1,25 @@
+{
+  "summary": "Crée un chemin de dossiers dans Drive en réutilisant ceux qui existent déjà.",
+  "description": [
+    "Le chemin est parcouru segment par segment : un dossier existant de ce nom est ouvert, un dossier manquant est créé. Drive autorise les homonymes, donc la première correspondance l'emporte plutôt que d'en créer une seconde."
+  ],
+  "params": {
+    "path": "Le chemin de dossiers, séparé par `/`.",
+    "rootFolder": "Le point de départ. La racine de Drive par défaut."
+  },
+  "returns": "le dossier au bout du chemin.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

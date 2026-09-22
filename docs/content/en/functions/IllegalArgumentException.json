@@ -1,0 +1,25 @@
+{
+  "summary": "An argument was of the wrong kind or outside the range the function accepts.",
+  "description": [
+    "An argument was of the wrong kind or outside the range the function accepts. This is what most `requireX` guards throw.",
+    "Thrown by [`requireArray`](requireArray.md), [`requireInteger`](requireInteger.md), [`requireNonEmpty`](requireNonEmpty.md).",
+    "Every class in this hierarchy takes an optional message, another exception whose message it reuses, or nothing at all. `isException` recognises all of them; a plain `Error` is not one."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Throwing and catching",
+      "body": "```javascript\nthrow new IllegalArgumentException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof IllegalArgumentException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является адресом электронной почты.",
+  "description": [
+    "`nonValidEmail(value)` — та же проверка, что и `!isValidEmail(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Адрес разбивается по единственному `@`: домен проверяется так же, как в `isValidDomain`, а локальная часть должна быть непустой и без пробелов. Это проверка формата, а не доказательство того, что ящик существует.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является адресом электронной почты; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonValidEmail(\"user@@example.com\"); // => true\nnonValidEmail(\"user@\"); // => true\nnonValidEmail(\"example.com\"); // => true\nnonValidEmail(\"\"); // => true\nnonValidEmail(\"user@example.com\"); // => false\nnonValidEmail(\"first.last@sub.example.co.uk\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmail"
+    },
+    {
+      "name": "requireValidEmail"
+    }
+  ]
+}

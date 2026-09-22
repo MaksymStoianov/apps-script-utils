@@ -1,0 +1,42 @@
+{
+  "summary": "Returns the value as a matrix with uniform row lengths, or throws naming the offending row.",
+  "description": [
+    "The strict counterpart of [`require2DArray`](require2DArray.md): the value must be a non-empty array of arrays\n**and** every row must be as wide as the first.",
+    "When the rows differ, the default message reports the offending row and both widths — the information needed to fix\nthe call, and precisely what `Range#setValues` withholds when it rejects a ragged matrix. A custom `message`\nreplaces the default in both failure cases."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The exception message. A default describing the mismatch is used when omitted."
+  },
+  "returns": "the same value, typed as a two-dimensional array.",
+  "throws": {
+    "IllegalArgumentException": [
+      "The value is not a non-empty array of arrays.",
+      "The rows do not all have the same length."
+    ]
+  },
+  "examples": [
+    {
+      "title": "A matrix that is safe to write",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"requireConsistent2DArray.ts\" include-symbol=\"writeMatrix\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction writeMatrix(sheet, values) {\n  const rows = requireConsistent2DArray(values);\n  sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "The message names the offending row",
+      "body": "```javascript\nrequireConsistent2DArray([\n  [1, 2],\n  [3, 4]\n]); // => [[1, 2], [3, 4]]\n\nrequireConsistent2DArray([[1, 2], [3]]);\n// throws IllegalArgumentException:\n// Expected every row to have 2 columns, but row 1 has 1.\n\nrequireConsistent2DArray([1, 2], \"rows must be a matrix\");\n// throws IllegalArgumentException: rows must be a matrix\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "the same test as a predicate."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "the negated predicate."
+    },
+    {
+      "name": "require2DArray",
+      "note": "accepts ragged rows."
+    }
+  ]
+}

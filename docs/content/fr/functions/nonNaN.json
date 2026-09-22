@@ -1,0 +1,30 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** le nombre `NaN`.",
+  "description": [
+    "`nonNaN(value)` est le même test que `!isNaN(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Rien n'est converti au préalable, et c'est là que ce test diffère du `isNaN` global : celui-ci convertit son argument, si bien que `isNaN(\"abc\")` et `isNaN(undefined)` renvoient `true`.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas le nombre `NaN` ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonNaN(0); // => true\nnonNaN(\"abc\"); // => true\nnonNaN(undefined); // => true\nnonNaN(NaN); // => false\nnonNaN(0 / 0); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNaN"
+    },
+    {
+      "name": "requireNaN"
+    },
+    {
+      "name": "requireNonNaN"
+    }
+  ]
+}

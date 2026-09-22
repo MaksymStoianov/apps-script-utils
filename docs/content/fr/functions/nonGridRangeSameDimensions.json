@@ -1,0 +1,25 @@
+{
+  "summary": "Vérifie si deux plages de grille diffèrent en hauteur ou en largeur.",
+  "description": [
+    "La négation d'`isGridRangeSameDimensions`, pour la clause de garde qui sort tôt lorsqu'une copie ne tiendrait pas."
+  ],
+  "params": {
+    "range1": "La première plage.",
+    "range2": "La seconde plage."
+  },
+  "returns": "`true` si les tailles diffèrent.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Comparer les tailles"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeSameDimensions"
+    },
+    {
+      "name": "requireGridRangeSameDimensions"
+    }
+  ]
+}

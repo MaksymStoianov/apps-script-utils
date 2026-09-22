@@ -1,0 +1,35 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** une matrice dont les lignes ont toutes la même longueur.",
+  "description": [
+    "`nonConsistent2DArray(value)` est la même vérification que `!isConsistent2DArray(value)`, écrite pour qu'une clause de garde se lise dans le bon sens — voir [](validation-conventions.md).",
+    "Comme [`non2DArray`](non2DArray.md), la fonction est faite pour sa réponse booléenne : après le test, TypeScript ne rend pas un type de matrice exploitable. C'est [`requireConsistent2DArray`](requireConsistent2DArray.md) qui valide et renvoie la matrice.",
+    "Elle renvoie `true` dans deux situations distinctes : une matrice dont les lignes diffèrent en longueur, et une valeur qui n'est pas une matrice du tout. Le résultat seul ne permet pas de les distinguer ; utilisez [`non2DArray`](non2DArray.md) quand la différence compte."
+  ],
+  "params": {
+    "arr": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un tableau non vide de tableaux de même longueur ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Les deux cas d'échec"
+    },
+    {
+      "title": "Distinguer les deux cas"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "la forme positive."
+    },
+    {
+      "name": "non2DArray",
+      "note": "ne rejette que les non-matrices."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "lève et nomme la ligne fautive."
+    }
+  ]
+}

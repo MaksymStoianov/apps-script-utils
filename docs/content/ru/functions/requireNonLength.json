@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение, убедившись, что оно не является допустимой длиной массива.",
+  "description": [
+    "Целое число от `0` до `Number.MAX_SAFE_INTEGER` — диапазон, который может принимать свойство `length`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение; после проверки известно, что оно не является допустимой длиной массива.",
+  "throws": {
+    "IllegalArgumentException": "значение является допустимой длиной массива."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireNonLength(-1); // => -1\nrequireNonLength(1.5); // => 1.5\nrequireNonLength(0); // throws IllegalArgumentException\nrequireNonLength(42); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "nonLength"
+    },
+    {
+      "name": "requireLength"
+    }
+  ]
+}

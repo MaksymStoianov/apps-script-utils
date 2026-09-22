@@ -1,0 +1,29 @@
+{
+  "summary": "Füllt die `{{ key }}`-Platzhalter einer Vorlage aus einem Objekt.",
+  "description": [
+    "Leerraum in den Klammern wird ignoriert, `{{name}}` und `{{ name }}` sind derselbe Platzhalter. Ein Schlüssel, den das Objekt nicht hat, bleibt stehen — die Lücke ist damit sichtbar statt still leer; `onMissing: \"empty\"` entfernt ihn stattdessen.",
+    "`escape` nimmt eine Funktion, die auf jeden eingesetzten Wert angewendet wird — übergeben Sie `escapeHtml`, wenn das Ergebnis in eine Seite geht."
+  ],
+  "params": {
+    "template": "Die Vorlage mit `{{ key }}`-Platzhaltern.",
+    "data": "Das Objekt, aus dem die Werte stammen.",
+    "options": "`onMissing` ist `\"keep\"` oder `\"empty\"`; `escape` ist eine auf jeden Wert angewendete Funktion."
+  },
+  "returns": "die Vorlage mit gefüllten Platzhaltern.",
+  "throws": {
+    "IllegalArgumentException": "die Vorlage ist keine Zeichenkette oder die Daten sind kein Objekt."
+  },
+  "examples": [
+    {
+      "title": "Eine Vorlage füllen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    },
+    {
+      "name": "getPath"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": "Colours the HTML in a range as source code.",
+  "description": [
+    "The cells are read as text, tags, attribute names, values, comments and text content are told apart, and the cells are written back as rich text with each part in its own colour. A theme decides the colours."
+  ],
+  "params": {
+    "range": "The range whose cells are highlighted.",
+    "theme": "The colour for each kind of token."
+  },
+  "returns": "the same range.",
+  "throws": {
+    "InvalidRangeException": "the first argument is not a range."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst range = SpreadsheetApp.getActiveRange();\n\nhighlightHtml(range);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertRichTextToHtml"
+    },
+    {
+      "name": "isRange"
+    }
+  ]
+}

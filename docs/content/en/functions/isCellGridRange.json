@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a single-cell range.",
+  "description": [
+    "One row and one column, measured by the bounds rather than by how the range was written: the end indices are exclusive, so a single cell is `endRowIndex - startRowIndex === 1` and the same for the columns. A range with a bound left out is open in that direction and is never a single cell.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a single-cell range; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => true\nisCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // => false\nisCellGridRange({}); // => false\nisCellGridRange(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonCellGridRange"
+    },
+    {
+      "name": "requireCellGridRange"
+    }
+  ]
+}

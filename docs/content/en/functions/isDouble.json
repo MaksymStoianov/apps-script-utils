@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is a number with a fractional part.",
+  "description": [
+    "A synonym of the `Float` family, offered under the name people reach for first. In JavaScript every number already is a double, so `double` names no runtime distinction of its own.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a number with a fractional part; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisDouble(1.5); // => true\nisDouble(-0.1); // => true\nisDouble(42); // => false\nisDouble(1.0); // => false\nisDouble(Infinity); // => false\nisDouble(\"1.5\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonDouble"
+    },
+    {
+      "name": "requireDouble"
+    },
+    {
+      "name": "requireNonDouble"
+    }
+  ]
+}

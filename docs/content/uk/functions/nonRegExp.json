@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є регулярним виразом.",
+  "description": [
+    "`nonRegExp(value)` — та сама перевірка, що й `!isRegExp(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Визначається за внутрішнім тегом, а не через `instanceof`, тому розпізнається й регулярний вираз з іншого фрейму.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є регулярним виразом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonRegExp(\"/a/\"); // => true\nnonRegExp({}); // => true\nnonRegExp(null); // => true\nnonRegExp(/a/); // => false\nnonRegExp(new RegExp(\"a\")); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRegExp"
+    },
+    {
+      "name": "requireRegExp"
+    },
+    {
+      "name": "requireNonRegExp"
+    }
+  ]
+}

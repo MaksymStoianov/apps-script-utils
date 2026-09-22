@@ -1,0 +1,26 @@
+{
+  "summary": "Die Teile, in die ein Pfad zerfällt.",
+  "description": [
+    "`root` ist der führende Trenner oder das Schema, `dir` alles bis zum letzten Trenner, `base` der Dateiname samt Endung, `name` derselbe ohne sie, und `ext` die Endung mitsamt Punkt.",
+    "Jeder Teil ist optional, und ein Pfad, dem einer fehlt, kommt ohne diesen Schlüssel zurück statt mit einer leeren Zeichenkette: ein blanker Dateiname ergibt nur `base`, `name` und `ext`. Es ist die Form, die Nodes `path.parse` liefert — und genau das macht Code, der an beiden Orten laufen muss, austauschbar."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parse"
+    },
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

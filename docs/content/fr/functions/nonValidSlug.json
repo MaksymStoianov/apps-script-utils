@@ -1,0 +1,27 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** un slug.",
+  "description": [
+    "`nonValidSlug(value)` est le même test que `!isValidSlug(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Commence par une lettre, puis lettres, chiffres, tirets et tirets bas — la forme que peut prendre un segment d'URL ou une clé. Les espaces, un chiffre initial et la chaîne vide sont refusés.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un slug ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonValidSlug(\"1-page\"); // => true\nnonValidSlug(\"my page\"); // => true\nnonValidSlug(\"\"); // => true\nnonValidSlug(\"my-page\"); // => false\nnonValidSlug(\"a_1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlug"
+    },
+    {
+      "name": "requireValidSlug"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "summary": "Gibt den Wert als nicht leere Zeichenkette zurück und nennt im Fehlerfall das Argument.",
+  "description": [
+    "Die ältere Form von `requireNonEmptyString`, für bestehenden Code erhalten. Ihr zweites Argument ist der Name, der in die Meldung eingesetzt wird, nicht die Meldung selbst — anders als bei jeder anderen Prüfung hier, und genau deshalb wurde sie ersetzt."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert.",
+    "name": "Der Argumentname für die Meldung. Standardmäßig `\"value\"`."
+  },
+  "returns": "dieselbe Zeichenkette.",
+  "throws": {
+    "InvalidStringException": "der Wert ist keine Zeichenkette oder besteht nur aus Leerraum."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    }
+  ]
+}

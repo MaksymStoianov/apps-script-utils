@@ -1,0 +1,26 @@
+{
+  "summary": "How the rows are read and which of them are candidates.",
+  "description": [
+    "`headerRow` is the one-based row holding the column names. Setting it does two things: the predicate receives each row keyed by those names, and the header row itself stops being a candidate — clearing or deleting the headers is never what a predicate over the data meant."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst options = { headerRow: 1 };\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowPredicate"
+    }
+  ]
+}

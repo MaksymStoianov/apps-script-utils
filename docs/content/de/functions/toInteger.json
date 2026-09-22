@@ -1,0 +1,28 @@
+{
+  "summary": "Liest eine Zahl aus einem Wert oder meldet, dass keine da ist.",
+  "description": [
+    "Eine Zeichenkette wird mit `parseInt` gelesen, das die führenden Ziffern nimmt und dann aufhört: `\"12abc\"` ergibt `12`. Text ohne führende Ziffern, die leere Zeichenkette, `null` und `undefined` ergeben `null` — das Scheitern ist also ein prüfbarer Wert und kein sich ausbreitendes `NaN`.",
+    "Eine Zahl geht unverändert durch, auch eine gebrochene: `toInteger(1.9)` ist `1.9`, nicht `1`. Wird wirklich eine ganze Zahl gebraucht, nehmen Sie `Math.trunc` oder `requireInteger`."
+  ],
+  "params": {
+    "value": "Der zu lesende Wert."
+  },
+  "returns": "die Zahl oder `null`, wenn nichts zu lesen ist.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Eine Zahl lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isInteger"
+    },
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "requireInteger"
+    }
+  ]
+}

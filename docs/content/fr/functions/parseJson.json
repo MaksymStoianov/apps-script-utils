@@ -1,0 +1,25 @@
+{
+  "summary": "Analyse du JSON, puis réessaie avec un lecteur permissif si l'analyse stricte échoue.",
+  "description": [
+    "`JSON.parse` s'exécute d'abord. S'il refuse, le texte est relu selon des règles qui acceptent ce que contient d'ordinaire une configuration écrite à la main : clés sans guillemets et chaînes entre apostrophes.",
+    "Un texte qu'aucun des deux lecteurs ne comprend lève. C'est fait pour de la configuration saisie par une personne, pas pour la réponse d'un service — là, `JSON.parse` et son erreur sont plus clairs."
+  ],
+  "params": {
+    "value": "Le texte à analyser. Il ne doit pas être vide."
+  },
+  "returns": "la valeur analysée.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide.",
+    "SyntaxError": "aucun des deux lecteurs ne peut analyser le texte."
+  },
+  "examples": [
+    {
+      "title": "Analyse"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "stringifyJson"
+    }
+  ]
+}

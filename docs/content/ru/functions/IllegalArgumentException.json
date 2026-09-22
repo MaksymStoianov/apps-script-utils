@@ -1,0 +1,25 @@
+{
+  "summary": "Аргумент оказался не того рода или вне диапазона, который принимает функция.",
+  "description": [
+    "Аргумент оказался не того рода или вне диапазона, который принимает функция. Именно его бросает большинство проверок `requireX`.",
+    "Бросается функциями [`requireArray`](requireArray.md), [`requireInteger`](requireInteger.md), [`requireNonEmpty`](requireNonEmpty.md).",
+    "Любой класс этой иерархии принимает необязательное сообщение, другое исключение, чьё сообщение будет переиспользовано, или вообще ничего. `isException` распознаёт их все; обычный `Error` к ним не относится."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Бросить и поймать",
+      "body": "```javascript\nthrow new IllegalArgumentException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof IllegalArgumentException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}
