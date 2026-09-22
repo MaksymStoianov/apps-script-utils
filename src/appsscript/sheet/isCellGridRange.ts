@@ -1,4 +1,3 @@
-import { InvalidGridRangeException } from "../../exception";
 import { isObject, nonNil } from "../../lang";
 import type { GridRange } from "./types";
 
@@ -7,7 +6,6 @@ import type { GridRange } from "./types";
  *
  * @param       {GridRange} gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
  * @returns     {boolean} `true` if the range represents a single cell, `false` otherwise.
- * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
@@ -17,7 +15,7 @@ import type { GridRange } from "./types";
  */
 export function isCellGridRange(gridRange: GridRange): boolean {
   if (!isObject(gridRange)) {
-    throw new InvalidGridRangeException();
+    return false;
   }
 
   const { startRowIndex, endRowIndex, startColumnIndex, endColumnIndex } = gridRange;
