@@ -21,7 +21,7 @@ import { isRichTextValue } from "./isRichTextValue";
  * @see         {@link GoogleAppsScript.Spreadsheet.RichTextValue|RichTextValue}
  * @see         [Class RichTextValue](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
  * @since       1.0.0
- * @version     1.1.0
+ * @version     1.2.0
  * @environment `Google Apps Script`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
@@ -90,7 +90,7 @@ export function convertRichTextToHtml(
 
     const fontSize = textStyle.getFontSize();
 
-    if (fontSize !== 10) {
+    if (fontSize !== null && fontSize !== 10) {
       styles["font-size"] = `${fontSize}px`;
     }
 
