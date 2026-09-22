@@ -30,7 +30,8 @@ export * from "./isValidSpreadsheetId";
 export * from "./nonCellGridRange";
 
 // TODO: nonGridRangeContainedIn
-// TODO: nonGridRangeSameDimensions
+export * from "./nonGridRangeSameDimensions";
+
 export * from "./nonRange";
 
 export * from "./nonRichTextValue";
