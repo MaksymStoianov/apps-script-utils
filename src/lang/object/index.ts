@@ -5,5 +5,7 @@ export * from "./equals";
 export * from "./hashCode";
 
 export * from "./objectToString";
-// TODO: namespace(obj: Object | Array, path: string | number | Array)
+
+export * from "./getPath";
+
 // TODO: flat(value: Array | Object, depth?: number)
