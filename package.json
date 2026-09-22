@@ -12,7 +12,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky && bash ./scripts/setup-merge-driver.sh",
     "dev": "vitest",
     "type:check": "tsc --noEmit",
     "format": "prettier --check .",

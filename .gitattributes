@@ -65,3 +65,16 @@ test/*   linguist-vendored
 package-lock.json  merge=binary
 yarn.lock          merge=binary
 pnpm-lock.yaml     merge=binary
+
+# Merge the documentation reference tables row by row. Every branch adds one
+# function to the same alphabetically ordered table, so a line-based merge
+# conflicts whenever two branches land between the same pair of neighbours.
+# The driver is registered by scripts/setup-merge-driver.sh, which `npm run
+# prepare` runs.
+docs/writerside/topics/reference-*.md merge=reference-tables
+
+# Merge the module index files entry by entry, for the same reason: a branch
+# flips one `// TODO:` line into an export, and two branches adding neighbouring
+# members flip neighbouring lines.
+src/**/index.ts merge=module-index
+src/index.ts    merge=module-index
