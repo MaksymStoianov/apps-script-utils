@@ -39,7 +39,8 @@ export * from "./requireNonFloat";
 
 export * from "./requireNonInteger";
 
-// TODO: requireNonSafeInteger
+export * from "./requireNonSafeInteger";
+
 // TODO: requireNonNaN
 
 export * from "./toInteger";
