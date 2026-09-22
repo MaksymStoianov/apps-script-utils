@@ -111,6 +111,42 @@ describe("merge-module-index", () => {
     });
   });
 
+  describe("A placeholder left beside the export it should have replaced", () => {
+    it("should write the export once when a side removes the leftover", () => {
+      const { status, text } = merge(
+        'export * from "./require2DArray";\n\n// TODO: require2DArray\nexport * from "./chunk";\n',
+        'export * from "./require2DArray";\n\n// TODO: require2DArray\nexport * from "./chunk";\n',
+        'export * from "./require2DArray";\n\nexport * from "./chunk";\n'
+      );
+
+      expect(status).toBe(0);
+      expect(exportsOf(text)).toStrictEqual(["require2DArray", "chunk"]);
+    });
+
+    it("should write the export once when no side removes the leftover", () => {
+      const { status, text } = merge(
+        'export * from "./require2DArray";\n\n// TODO: require2DArray\n// TODO: chunk\n',
+        'export * from "./require2DArray";\n\n// TODO: require2DArray\nexport * from "./chunk";\n',
+        'export * from "./require2DArray";\n\n// TODO: require2DArray\n// TODO: chunk\n'
+      );
+
+      expect(status).toBe(0);
+      expect(exportsOf(text)).toStrictEqual(["require2DArray", "chunk"]);
+    });
+
+    it("should still adopt an export the other side introduced", () => {
+      const { status, text } = merge(
+        "// TODO: unique\n// TODO: first\n",
+        'export * from "./unique";\n\n// TODO: first\n',
+        '// TODO: unique\n\nexport * from "./first";\n'
+      );
+
+      expect(status).toBe(0);
+      expect(exportsOf(text)).toStrictEqual(["unique", "first"]);
+      expect(text).not.toContain("// TODO:");
+    });
+  });
+
   describe("Comments that name no member", () => {
     it("should carry an Abstract note through untouched", () => {
       const { status, text } = merge(
