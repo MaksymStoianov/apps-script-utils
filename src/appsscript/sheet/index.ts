@@ -65,7 +65,7 @@ export * from "./requireValidSheetName";
 
 export * from "./requireValidSpreadsheetId";
 
-// TODO: prependColumn
+export * from "./prependColumn";
 
 export * from "./prependColumns";
 
