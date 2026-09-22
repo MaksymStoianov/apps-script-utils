@@ -6,10 +6,12 @@ export * from "./isUi";
 
 // TODO: nonHtmlOutput
 // TODO: nonTextOutput
-// TODO: nonUi
+export * from "./nonUi";
+
+export * from "./requireHtmlOutput";
 
 // TODO: requireHtmlOutput
 // TODO: requireTextOutput
-// TODO: requireUi
+export * from "./requireUi";
 
 export * from "./checkMultipleAccount";
