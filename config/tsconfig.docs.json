@@ -1,0 +1,30 @@
+{
+  /**
+   * Type-checks the documentation code snippets in `docs/writerside/snippets/`.
+   *
+   * The snippets are the examples the reference pages embed with
+   * `<code-block src="…" include-symbol="…"/>`, so they are the published
+   * examples themselves rather than a copy of them. Checking them here is what
+   * keeps an example from drifting away from the signature it demonstrates.
+   *
+   * They import `apps-script-utils` the way a reader does; the path mapping
+   * below resolves that to the sources in this repository.
+   */
+  "extends": "../tsconfig.json",
+
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "noEmit": true,
+    "rootDir": "..",
+    "baseUrl": "..",
+    "paths": {
+      "@/*": ["src/*"],
+      "apps-script-utils": ["src/index.ts"]
+    }
+  },
+
+  "include": ["../src/**/*", "../docs/writerside/snippets/**/*.ts"]
+}
