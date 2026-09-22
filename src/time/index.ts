@@ -2,6 +2,8 @@ export * from "./now";
 
 export * from "./StopWatch";
 // TODO: diff
-// TODO: getDaysInMonth
+
+export * from "./getDaysInMonth";
+
 // TODO: getDaysLeftInMonth
 // TODO: offset
