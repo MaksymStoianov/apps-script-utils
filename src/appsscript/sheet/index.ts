@@ -99,7 +99,8 @@ export * from "./getSheetById";
 
 export * from "./getSheetByIndex";
 
-// TODO: getValues(sheet: Sheet, config: Object)
+export * from "./getValues";
+
 // TODO: clearColumnsByConditional(sheet: Sheet, callback: Function)
 // TODO: clearRowsByConditional(sheet: Sheet, callback: Function)
 // TODO: deleteRowsByConditional(sheet: Sheet, callback: Function)
