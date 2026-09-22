@@ -6,9 +6,13 @@ export * from "./Exception";
 
 export * from "./RuntimeException";
 
+export * from "./AuthorizationException";
+
 export * from "./EmptyStringException";
 
 export * from "./IllegalArgumentException";
+
+export * from "./IllegalStateException";
 
 export * from "./InvalidEmailFormatException";
 
