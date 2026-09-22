@@ -11,5 +11,3 @@ export * from "./getPath";
 export * from "./setPath";
 
 export * from "./flat";
-
-// TODO: namespace(obj: Object | Array, path: string | number | Array)
