@@ -14,4 +14,6 @@ export * from "./isValidPresentationId";
 
 export * from "./isValidSlideId";
 
+export * from "./nonSlide";
+
 export * from "./requireSlide";
