@@ -38,6 +38,7 @@ export * from "./nonRange";
 export * from "./nonRichTextValue";
 
 export * from "./nonSheet";
+
 export * from "./nonSpreadsheet";
 
 export * from "./nonTextStyle";
@@ -59,6 +60,7 @@ export * from "./requireRichTextValue";
 export * from "./requireSheet";
 
 export * from "./requireSpreadsheet";
+
 export * from "./requireTextStyle";
 
 export * from "./requireValidSheetName";
@@ -104,7 +106,9 @@ export * from "./getSheetByIndex";
 // TODO: clearRowsByConditional(sheet: Sheet, callback: Function)
 // TODO: deleteRowsByConditional(sheet: Sheet, callback: Function)
 // TODO: deleteColumnsByConditional(sheet: Sheet, callback: Function)
-// TODO: updateFormulas(sheet: Sheet)
+
+export * from "./updateFormulas";
+
 // TODO: getNamedRangeByName(name: string)
 // TODO: insertSchema
 // TODO: getSchema(sheet: Sheet)
