@@ -16,7 +16,9 @@ export * from "./chunk";
 export * from "./requireNoNilElements";
 
 export * from "./transpose";
-// TODO: unique(arr: Array)
+
+export * from "./unique";
+
 // TODO: first(arr: Array)
 // TODO: last(arr: Array)
 // TODO: compact(arr: Array)
