@@ -33,9 +33,9 @@ export * from "./nonRange";
 export * from "./nonRichTextValue";
 
 export * from "./nonSheet";
-export * from "./nonSpreadsheet";
+// TODO: nonSpreadsheet
+export * from "./nonTextStyle";
 
-// TODO: nonTextStyle
 // TODO: nonValidSheetName
 // TODO: nonValidSpreadsheetId
 
