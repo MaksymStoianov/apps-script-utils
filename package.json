@@ -20,7 +20,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "vitest run",
-    "build": "rm -rf dist/* && tsc -b --force"
+    "build": "rm -rf dist/* && tsc -b --force",
+    "build:gas": "npm run build && node scripts/gas/bundle.mjs scripts/gas/Library.js"
   },
   "repository": {
     "type": "git",

@@ -8,6 +8,7 @@ import markdown from "./config/eslint/markdown.ts";
 import customRules from "./config/eslint/custom-rules.ts";
 import ignores from "./config/eslint/ignores.ts";
 import security from "./config/eslint/security.ts";
+import scripts from "./config/eslint/scripts.ts";
 
 export default defineConfig([
   base,
@@ -18,5 +19,6 @@ export default defineConfig([
   markdown,
   security,
   customRules,
+  scripts,
   ignores
 ]);
