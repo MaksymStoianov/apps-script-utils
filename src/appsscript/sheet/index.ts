@@ -77,6 +77,8 @@ export * from "./getColumnIndexByLetter";
 
 export * from "./getColumnLetterByIndex";
 
+export * from "./getColumnPositionByLetter";
+
 export * from "./getSheetById";
 
 export * from "./getSheetByIndex";
