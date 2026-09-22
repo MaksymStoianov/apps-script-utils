@@ -3,7 +3,8 @@ export * from "./types";
 export * from "./now";
 
 export * from "./StopWatch";
-// TODO: diff
+
+export * from "./diff";
 
 export * from "./getDaysInMonth";
 
