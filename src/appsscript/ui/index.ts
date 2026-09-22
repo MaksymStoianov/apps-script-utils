@@ -11,8 +11,7 @@ export * from "./nonUi";
 export * from "./requireHtmlOutput";
 
 // TODO: requireHtmlOutput
-export * from "./requireTextOutput";
-
-// TODO: requireUi
+// TODO: requireTextOutput
+export * from "./requireUi";
 
 export * from "./checkMultipleAccount";
