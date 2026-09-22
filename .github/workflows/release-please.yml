@@ -20,10 +20,15 @@ jobs:
     timeout-minutes: 8
 
     steps:
+      # Manifest mode, not `release-type`. Without a manifest the action looks for
+      # the previous release by walking back through the commits on main, and the
+      # window it searches no longer reaches v1.10.0 — it concluded nothing had
+      # ever been released and proposed 1.0.0.
       - name: release-please-action
         uses: googleapis/release-please-action@v4.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: node
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
 #          versioning-strategy: auto
 #          changelog-path: CHANGELOG.md
