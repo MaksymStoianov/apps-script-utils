@@ -14,6 +14,12 @@ export * from "./requireValidDomain";
 
 export * from "./join";
 
+export * from "./nonAbsolute";
+
+export * from "./nonRelative";
+
+export * from "./nonValidDomain";
+
 export * from "./normalize";
 
 export * from "./parse";
