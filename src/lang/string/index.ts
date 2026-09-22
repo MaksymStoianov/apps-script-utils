@@ -45,5 +45,6 @@ export * from "./toUpperCase";
 
 export * from "./escapeRegExp";
 
-// TODO: merge(text: string, fields: Object)
+export * from "./merge";
+
 export * from "./versionCompare";
