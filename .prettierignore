@@ -37,3 +37,6 @@ CODE_OF_CONDUCT.md
 **/output.css
 .eslintcache
 .stylelintcache!/.prettierignore
+
+# Generated Apps Script bundle
+scripts/gas/Library.js
