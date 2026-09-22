@@ -108,3 +108,7 @@ CHANGELOG-*.md
 *.mdx
 trivy_report*
 !/.gitignore
+
+# Generated Apps Script bundle and local clasp state
+scripts/gas/Library.js
+scripts/gas/.clasp.json
