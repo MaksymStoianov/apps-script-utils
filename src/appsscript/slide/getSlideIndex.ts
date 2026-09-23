@@ -2,26 +2,28 @@ import { isPresentation } from "./isPresentation";
 import { isSlide } from "./isSlide";
 
 /**
- * Gets the index of a slide in its presentation.
+ * Gets the index of a slide in its presentation, taking the presentation first.
  *
  * @example
  * ```javascript
  * const presentation = SlidesApp.getActivePresentation();
  * const slide = presentation.getSlides()[2];
  *
- * getSlideIndex(slide, presentation); // => 2
+ * getSlideIndex(presentation, slide); // => 2
  * ```
  *
- * @param {GoogleAppsScript.Slides.Slide} slide The slide object.
  * @param {GoogleAppsScript.Slides.Presentation} presentation The presentation object.
+ * @param {GoogleAppsScript.Slides.Slide} slide The slide object.
  * @returns {number | null} The zero-based index of the slide, or `null` if the slide is not found in the presentation.
+ * @see {@link getSlideByIndex}
  * @since 1.5.0
+ * @version 2.0.0
  */
 export function getSlideIndex(
-  slide: GoogleAppsScript.Slides.Slide,
-  presentation: GoogleAppsScript.Slides.Presentation
+  presentation: GoogleAppsScript.Slides.Presentation,
+  slide: GoogleAppsScript.Slides.Slide
 ): number | null {
-  if (!isSlide(slide) || !isPresentation(presentation)) {
+  if (!isPresentation(presentation) || !isSlide(slide)) {
     return null;
   }
 

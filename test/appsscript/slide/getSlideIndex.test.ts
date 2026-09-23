@@ -22,35 +22,35 @@ const presentation = (...ids: string[]): GoogleAppsScript.Slides.Presentation =>
 describe("getSlideIndex", () => {
   describe("Correct input data", () => {
     it("should find a slide by identity of its object id", () => {
-      expect(getSlideIndex(slide("b"), presentation("a", "b", "c"))).toBe(1);
+      expect(getSlideIndex(presentation("a", "b", "c"), slide("b"))).toBe(1);
     });
 
     it("should return zero for the first slide", () => {
-      expect(getSlideIndex(slide("a"), presentation("a", "b"))).toBe(0);
+      expect(getSlideIndex(presentation("a", "b"), slide("a"))).toBe(0);
     });
 
     it("should return null when the slide is not in the presentation", () => {
-      expect(getSlideIndex(slide("z"), presentation("a", "b"))).toBeNull();
+      expect(getSlideIndex(presentation("a", "b"), slide("z"))).toBeNull();
     });
 
     it("should return null for a presentation with no slides", () => {
-      expect(getSlideIndex(slide("a"), presentation())).toBeNull();
+      expect(getSlideIndex(presentation(), slide("a"))).toBeNull();
     });
   });
 
   describe("Incorrect input data", () => {
     it("should return null rather than throw when the slide is not one", () => {
       // @ts-expect-error - testing invalid types
-      expect(getSlideIndex({}, presentation("a"))).toBeNull();
+      expect(getSlideIndex(presentation("a"), {})).toBeNull();
       // @ts-expect-error - testing invalid types
-      expect(getSlideIndex(null, presentation("a"))).toBeNull();
+      expect(getSlideIndex(presentation("a"), null)).toBeNull();
     });
 
     it("should return null rather than throw when the presentation is not one", () => {
       // @ts-expect-error - testing invalid types
-      expect(getSlideIndex(slide("a"), {})).toBeNull();
+      expect(getSlideIndex({}, slide("a"))).toBeNull();
       // @ts-expect-error - testing invalid types
-      expect(getSlideIndex(slide("a"), null)).toBeNull();
+      expect(getSlideIndex(null, slide("a"))).toBeNull();
     });
   });
 });
