@@ -134,11 +134,11 @@ jobs:
         with:
           instance: ${{ matrix.language.module }}/asu
 
-  # Everything the build profile carries — the structured data, the canonical
-  # link, the language switcher, the search widget — is easy to lose silently:
-  # it was missing from the site for a while and nobody noticed. This assembles
-  # the five builds the way the deploy does and fails when a page comes out
-  # without them.
+  # What every page has to carry — the structured data, the canonical link, the
+  # row of links to the other languages, the notice at the end — is written in
+  # after the build, and it is easy to lose silently: it was missing from the
+  # site for a while and nobody noticed. This assembles the five builds the way
+  # the deploy does and fails when a page comes out without them.
   assembled:
     needs: build
     runs-on: ubuntu-latest
@@ -232,18 +232,6 @@ jobs:
 
           for code in ru uk de fr; do
             unzip -qq "artifacts/docs-${code}/${ARTIFACT}" -d "dir/${code}"
-          done
-
-      # Feeds the search widget injected by each project's search.html. Every
-      # language gets its own index, next to its own pages.
-      - name: Build the search indexes
-        run: |
-          set -euo pipefail
-
-          node scripts/docs/build-search-index.mjs dir
-
-          for code in ru uk de fr; do
-            node scripts/docs/build-search-index.mjs "dir/${code}"
           done
 
       # Writes the hreflang links into the served HTML, one sitemap covering
