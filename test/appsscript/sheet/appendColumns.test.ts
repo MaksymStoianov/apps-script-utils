@@ -15,6 +15,7 @@ interface Written {
 interface SheetMock {
   sheet: GoogleAppsScript.Spreadsheet.Sheet;
   written: Written[];
+  inserted: Array<[string, number, number]>;
 }
 
 /**
@@ -39,6 +40,12 @@ function sheetMock(lastRow = 0, lastColumn = 0, frozenRows = 0, frozenColumns = 
     insertColumnsBefore: (position: number, howMany: number) => {
       inserted.push(["columns", position, howMany]);
     },
+    insertColumnsAfter: (position: number, howMany: number) => {
+      inserted.push(["columnsAfter", position, howMany]);
+    },
+    insertRowsAfter: (position: number, howMany: number) => {
+      inserted.push(["rowsAfter", position, howMany]);
+    },
     getRange: (row: number, column: number, numRows: number, numColumns: number) => ({
       setValues: (values: unknown[][]) => {
         written.push({ row, column, numRows, numColumns, values });
@@ -47,6 +54,26 @@ function sheetMock(lastRow = 0, lastColumn = 0, frozenRows = 0, frozenColumns = 
   } as unknown as GoogleAppsScript.Spreadsheet.Sheet;
 
   return { sheet, written, inserted };
+}
+
+/**
+ * A stand-in range: knows where it sits and what it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  values: unknown[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => values.length,
+    getNumColumns: () => values[0].length,
+    getValues: () => values
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
 }
 
 /**
@@ -97,25 +124,117 @@ describe("appendColumns", () => {
     });
   });
 
-  // The row variant writes at `lastRow + 1`; this one writes at `lastColumn`,
-  // so it lands on top of the last populated column and, on an empty sheet,
-  // asks for column 0 — which Apps Script rejects. Tracked in #450; these
-  // assertions change when it is fixed.
-  describe("Known defect: the target column is off by one", () => {
-    it("should currently write onto the last populated column", () => {
+  describe("Appending to a sheet", () => {
+    it("should write after the last populated column", () => {
       const { sheet, written } = sheetMock(0, 3);
 
       appendColumns(sheet, [["a"]]);
 
-      expect(written[0].column).toBe(3);
+      expect(written[0].column).toBe(4);
     });
 
-    it("should currently ask for column zero on an empty sheet", () => {
+    it("should write at the first column of an empty sheet", () => {
       const { sheet, written } = sheetMock(0, 0);
 
       appendColumns(sheet, [["a"]]);
 
-      expect(written[0].column).toBe(0);
+      expect(written[0].column).toBe(1);
+    });
+
+    it("should write from the first row", () => {
+      const { sheet, written } = sheetMock(5, 3);
+
+      appendColumns(sheet, [["a"], ["b"]]);
+
+      expect(written[0].row).toBe(1);
+      expect(written[0].numRows).toBe(2);
+    });
+
+    it("should start after the frozen columns when asked", () => {
+      const { sheet, written } = sheetMock(0, 1, 0, 3);
+
+      appendColumns(sheet, [["a"]], { afterFrozenColumns: true });
+
+      expect(written[0].column).toBe(4);
+    });
+
+    it("should widen the sheet when the values do not fit", () => {
+      const { sheet, inserted } = sheetMock(0, 26);
+
+      appendColumns(sheet, [["a", "b"]]);
+
+      expect(inserted).toContainEqual(["columnsAfter", 26, 2]);
+    });
+
+    it("should leave the sheet alone when the values fit", () => {
+      const { sheet, inserted } = sheetMock(0, 3);
+
+      appendColumns(sheet, [["a"]]);
+
+      expect(inserted).toEqual([]);
+    });
+  });
+
+  describe("Appending within a range", () => {
+    it("should write after the last populated column of the range", () => {
+      const { sheet, written } = sheetMock(3, 3);
+
+      appendColumns(
+        rangeMock(sheet, 1, 1, [
+          ["x", "", "", ""],
+          ["y", "", "", ""]
+        ]),
+        [["a"], ["b"]]
+      );
+
+      expect(written[0].column).toBe(2);
+      expect(written[0].row).toBe(1);
+    });
+
+    it("should ignore data outside the range", () => {
+      const { sheet, written } = sheetMock(3, 3);
+
+      // Column C holds a value on row 3, which the range does not cover.
+      appendColumns(
+        rangeMock(sheet, 1, 1, [
+          ["x", "", "", ""],
+          ["y", "", "", ""]
+        ]),
+        [["a"], ["b"]]
+      );
+
+      expect(written[0].column).toBe(2);
+    });
+
+    it("should write at the first column of an empty range", () => {
+      const { sheet, written } = sheetMock(0, 0);
+
+      appendColumns(rangeMock(sheet, 2, 3, [["", ""]]), [["a"]]);
+
+      expect(written[0].column).toBe(3);
+      expect(written[0].row).toBe(2);
+    });
+
+    it("should treat zero and false as data", () => {
+      const { sheet, written } = sheetMock(2, 2);
+
+      appendColumns(rangeMock(sheet, 1, 1, [[0, false, ""]]), [["a"]]);
+
+      expect(written[0].column).toBe(3);
+    });
+
+    it("should count a value in any row of the range", () => {
+      const { sheet, written } = sheetMock(2, 2);
+
+      appendColumns(
+        rangeMock(sheet, 1, 1, [
+          ["x", "", ""],
+          ["", "", "z"]
+        ]),
+        [["a"], ["b"]]
+      );
+
+      expect(written[0].column).toBe(4);
     });
   });
 
@@ -125,11 +244,13 @@ describe("appendColumns", () => {
       expect(() => appendColumns()).toThrow(IllegalArgumentException);
     });
 
-    it("should throw for anything that is not a Sheet", () => {
+    it("should throw for anything that is neither a Sheet nor a Range", () => {
       // @ts-expect-error - testing invalid types
       expect(() => appendColumns({}, [["a"]])).toThrow(InvalidSheetException);
       // @ts-expect-error - testing invalid types
       expect(() => appendColumns(null, [["a"]])).toThrow(InvalidSheetException);
+      // @ts-expect-error - testing invalid types
+      expect(() => appendColumns("A1:B2", [["a"]])).toThrow(InvalidSheetException);
     });
 
     it("should throw for values that are not a consistent 2D array", () => {

@@ -2,9 +2,9 @@
 
 # appendColumns
 
-<link-summary>Fügt Spalten rechts neben den bereits vorhandenen Daten eines Blattes ein.</link-summary>
+<link-summary>Fügt Spalten hinter der letzten Spalte mit Daten an.</link-summary>
 
-<web-summary>appendColumns() — Fügt Spalten rechts neben den bereits vorhandenen Daten eines Blattes ein. apps-script-utils, Deutsch.</web-summary>
+<web-summary>appendColumns() — Fügt Spalten hinter der letzten Spalte mit Daten an. apps-script-utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -12,38 +12,41 @@
 
 ```typescript
 function appendColumns(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-Die Matrix wird als Spalten gelesen: ein Array je Spalte, geschrieben ab Zeile 1 rechts neben der letzten Spalte mit Daten. `transpose` bringt Zeilen in diese Form.
+Wird ein Blatt übergeben, zählt das ganze Blatt; wird ein Bereich übergeben, zählen nur dessen Zellen — Daten weiter unten im Blatt schieben die Schreibstelle dann nicht nach rechts. Der Bereich bestimmt auch die beschriebenen Zeilen; beim Blatt ist es immer Zeile 1.
+
+Die Werte sind eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang. Nichts wird überschrieben — geschrieben wird eine Spalte hinter der letzten mit Daten, wobei `0` und `false` als Daten gelten. Ist das Blatt zu schmal, erhält es weitere Spalten.
 
 Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.
 
 ## Parameter
 
-| Parameter                     | Typ                                  | Beschreibung                                                                              |
-| :---------------------------- | :----------------------------------- | :---------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet` | Das Blatt, in das geschrieben wird.                                                       |
-| `values`                      | `unknown`                            | Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.                             |
-| `options` _(optional)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben. |
+| Parameter                     | Typ                                                                        | Beschreibung                                                                           |
+| :---------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, an das angefügt wird, oder der Bereich, innerhalb dessen angefügt wird.     |
+| `values`                      | `unknown`                                                                  | Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.                          |
+| `options` _(optional)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` beginnt hinter den fixierten Spalten, wenn die Daten davor enden. |
 
 ## Rückgabewert
 
-`GoogleAppsScript.Spreadsheet.Sheet` — dasselbe Blatt, damit sich Aufrufe verketten lassen.
+`GoogleAppsScript.Spreadsheet.Sheet` — das Blatt, sodass Aufrufe verkettet werden können.
 
 ## Ausnahmen
 
-| Ausnahme                | Bedingung                                             |
-| :---------------------- | :---------------------------------------------------- |
-| `InvalidSheetException` | das erste Argument ist kein Blatt.                    |
-| `TypeError`             | die Werte sind keine Matrix mit gleich langen Zeilen. |
+| Ausnahme                   | Bedingung                                                |
+| :------------------------- | :------------------------------------------------------- |
+| `IllegalArgumentException` | kein Argument übergeben wurde.                           |
+| `InvalidSheetException`    | das erste Argument weder ein Blatt noch ein Bereich ist. |
+| `TypeError`                | die Werte keine Matrix mit gleich langen Zeilen sind.    |
 
 ## Beispiele
 
-### Schreiben
+### An ein Blatt anfügen
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
@@ -51,9 +54,18 @@ const sheet = SpreadsheetApp.getActiveSheet();
 appendColumns(sheet, [["total", "=SUM(A2:A)"]]);
 ```
 
+### Innerhalb eines Bereichs anfügen
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+appendColumns(sheet.getRange("A1:D2"), [["a"], ["b"]]);
+```
+
 ## Siehe auch
 
 - [`appendColumn`](appendColumn.md)
+- [`appendRows`](appendRows.md)
 - [`prependColumns`](prependColumns.md)
 - [`transpose`](transpose.md)
 - [](reference-appsscript.md)

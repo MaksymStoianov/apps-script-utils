@@ -2,9 +2,9 @@
 
 # appendColumns
 
-<link-summary>Ajoute des colonnes à droite des données déjà présentes sur une feuille.</link-summary>
+<link-summary>Ajoute des colonnes après la dernière colonne contenant des données.</link-summary>
 
-<web-summary>appendColumns() — Ajoute des colonnes à droite des données déjà présentes sur une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>appendColumns() — Ajoute des colonnes après la dernière colonne contenant des données. apps-script-utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -12,38 +12,41 @@
 
 ```typescript
 function appendColumns(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-La matrice est lue comme des colonnes : un tableau par colonne, écrit à partir de la ligne 1, à droite de la dernière colonne contenant des données. `transpose` met des lignes dans cette forme.
+Passez une feuille et toute la feuille est examinée ; passez une plage et seules ses cellules le sont, ce qui empêche des données situées plus bas de décaler l'écriture vers la droite. La plage décide aussi des lignes écrites ; pour une feuille, c'est toujours la ligne 1.
 
-Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur.
+Les valeurs forment une matrice de lignes : un tableau par ligne, tous de même longueur. Rien n'est écrasé — l'écriture commence une colonne après la dernière qui contient des données, `0` et `false` comptant comme des données. La feuille gagne des colonnes si elle est trop étroite.
+
+Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.
 
 ## Paramètres
 
-| Paramètre                       | Type                                 | Description                                                                                        |
-| :------------------------------ | :----------------------------------- | :------------------------------------------------------------------------------------------------- |
-| `sheet`                         | `GoogleAppsScript.Spreadsheet.Sheet` | La feuille où écrire.                                                                              |
-| `values`                        | `unknown`                            | Une matrice de lignes : un tableau par ligne, toutes de même longueur.                             |
-| `options` _(facultatif)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début. |
+| Paramètre                       | Type                                                                       | Description                                                                                                    |
+| :------------------------------ | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+| `target`                        | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille à laquelle ajouter, ou la plage dans laquelle ajouter.                                              |
+| `values`                        | `unknown`                                                                  | Une matrice de lignes : un tableau par ligne, tous de même longueur.                                           |
+| `options` _(facultatif)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` commence l'écriture après les colonnes figées lorsque les données s'arrêtent avant elles. |
 
 ## Valeur de retour
 
-`GoogleAppsScript.Spreadsheet.Sheet` — la même feuille, ce qui permet d'enchaîner les appels.
+`GoogleAppsScript.Spreadsheet.Sheet` — la feuille, afin de chaîner les appels.
 
 ## Exceptions
 
-| Exception               | Condition                                                         |
-| :---------------------- | :---------------------------------------------------------------- |
-| `InvalidSheetException` | le premier argument n'est pas une feuille.                        |
-| `TypeError`             | les valeurs ne forment pas une matrice à lignes de même longueur. |
+| Exception                  | Condition                                                          |
+| :------------------------- | :----------------------------------------------------------------- |
+| `IllegalArgumentException` | aucun argument n'est passé.                                        |
+| `InvalidSheetException`    | le premier argument n'est ni une feuille ni une plage.             |
+| `TypeError`                | les valeurs ne forment pas une matrice de lignes de même longueur. |
 
 ## Exemples
 
-### Écriture
+### Ajout à une feuille
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
@@ -51,9 +54,18 @@ const sheet = SpreadsheetApp.getActiveSheet();
 appendColumns(sheet, [["total", "=SUM(A2:A)"]]);
 ```
 
+### Ajout dans une plage
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+appendColumns(sheet.getRange("A1:D2"), [["a"], ["b"]]);
+```
+
 ## Voir aussi
 
 - [`appendColumn`](appendColumn.md)
+- [`appendRows`](appendRows.md)
 - [`prependColumns`](prependColumns.md)
 - [`transpose`](transpose.md)
 - [](reference-appsscript.md)

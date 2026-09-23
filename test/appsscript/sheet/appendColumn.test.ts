@@ -79,13 +79,12 @@ describe("appendColumn", () => {
       expect(written).toHaveLength(1);
     });
 
-    // Inherited from appendColumns — see #450.
-    it("should currently write onto the last populated column", () => {
+    it("should write after the last populated column", () => {
       const { sheet, written } = sheetMock(0, 2);
 
       appendColumn(sheet, ["a"]);
 
-      expect(written[0].column).toBe(2);
+      expect(written[0].column).toBe(3);
     });
 
     it("should return the sheet", () => {
