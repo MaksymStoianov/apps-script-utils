@@ -1,7 +1,8 @@
-import { IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isFunction, isNil, requireCountable } from "../../lang";
 import { type RowConditionalOptions, type RowPredicate } from "./clearRowsByConditional";
-import { requireSheet } from "./requireSheet";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
 
 /**
  * A block of consecutive rows.
@@ -43,16 +44,24 @@ function toBlocks(positions: number[]): Block[] {
  * @param   {unknown[][]} values - Every row of the data range.
  * @param   {RowPredicate} predicate - Decides whether a row is selected.
  * @param   {number} headerRow - The one-based header row, or `0` for none.
+ * @param   {number} firstRow - The one-based sheet row the values start at.
  * @returns {number[]} The one-based positions of the matching rows, ascending.
  */
-function selectRows(values: unknown[][], predicate: RowPredicate, headerRow: number): number[] {
+function selectRows(
+  values: unknown[][],
+  predicate: RowPredicate,
+  headerRow: number,
+  firstRow: number
+): number[] {
+  const headerIndex: number = headerRow === 0 ? 0 : headerRow - firstRow;
+
   const [headers = []]: unknown[][] =
-    headerRow === 0 ? [[]] : values.slice(headerRow - 1, headerRow);
+    headerRow === 0 || headerIndex < 0 ? [[]] : values.slice(headerIndex, headerIndex + 1);
 
   const selected: number[] = [];
 
   for (const [index, row] of values.entries()) {
-    const position: number = index + 1;
+    const position: number = firstRow + index;
 
     if (position === headerRow) {
       continue;
@@ -109,24 +118,30 @@ function selectRows(values: unknown[][], predicate: RowPredicate, headerRow: num
  * });
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The sheet to delete rows from.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet to delete rows on, or the range to delete within: only its cells are read, and only they are removed, the rest of the sheet staying where it is.
  * @param       {RowPredicate} predicate - Decides whether a row is selected.
  * @param       {RowConditionalOptions | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {number} How many rows were removed.
  * @throws      {@link IllegalArgumentException} If `predicate` is not a function, `headerRow` is not a positive integer, or every row would be removed.
- * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
+ * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link clearRowsByConditional}
  * @see         {@link deleteColumnsByConditional}
  * @since       1.11.0
- * @version     1.0.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  */
 export function deleteRowsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: RowPredicate,
   options: RowConditionalOptions | null | undefined = {}
 ): number {
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   if (!isFunction(predicate)) {
     throw new IllegalArgumentException("Expected 'predicate' to be a function.");
@@ -142,20 +157,35 @@ export function deleteRowsByConditional(
     }
   }
 
-  const values: unknown[][] = sheet.getDataRange().getValues();
+  const range: GoogleAppsScript.Spreadsheet.Range = within ?? sheet.getDataRange();
 
-  const selected: number[] = selectRows(values, predicate, headerRow);
+  const values: unknown[][] = range.getValues();
 
-  if (selected.length > 0 && selected.length === sheet.getMaxRows()) {
+  const selected: number[] = selectRows(values, predicate, headerRow, range.getRow());
+
+  if (!within && selected.length > 0 && selected.length === sheet.getMaxRows()) {
     throw new IllegalArgumentException(
       "Refusing to delete every row: a sheet must keep at least one."
     );
   }
 
+  const firstColumn: number = range.getColumn();
+
+  const width: number = range.getNumColumns();
+
   const blocks: Block[] = toBlocks(selected);
 
   // Bottom upwards: removing a later block cannot move an earlier one.
   for (const block of blocks.reverse()) {
+    if (within) {
+      // Only the cells inside the range move up; the columns beside it stay put.
+      sheet
+        .getRange(block.start, firstColumn, block.count, width)
+        .deleteCells(SpreadsheetApp.Dimension.ROWS);
+
+      continue;
+    }
+
     sheet.deleteRows(block.start, block.count);
   }
 

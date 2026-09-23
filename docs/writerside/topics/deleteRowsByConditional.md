@@ -12,7 +12,7 @@
 
 ```typescript
 function deleteRowsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: RowPredicate,
   options: RowConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ Every row is judged against the sheet as it was read, and the deletions then hap
 
 Rows are gone for good: `clearRowsByConditional` is the one that only empties them.
 
+A sheet means its whole data range and whole rows are removed. A range means only the cells inside it: they are deleted and the ones below them move up, while the columns beside the range stay exactly where they are. Either way the predicate is given the position on the sheet, and the refusal to empty a sheet applies to the sheet form, where a sheet must keep a row.
+
 ## Parameters
 
-| Parameter                     | Type                                         | Description                                                                                                                                               |
-| :---------------------------- | :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet`         | The sheet to work on.                                                                                                                                     |
-| `predicate`                   | `RowPredicate`                               | Receives the row's cells, its one-based position and — when `headerRow` is set — the row keyed by the column names. Return `true` for the rows to act on. |
-| `options` _(optional)_ `= {}` | `RowConditionalOptions \| null \| undefined` | `headerRow` names the row holding the column names. Setting it keys each row by those names and keeps the header row itself out of the candidates.        |
+| Parameter                     | Type                                                                       | Description                                                                                                                                               |
+| :---------------------------- | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet to work on, or the range to work within: only its cells are read, and only they are removed.                                                    |
+| `predicate`                   | `RowPredicate`                                                             | Receives the row's cells, its one-based position and — when `headerRow` is set — the row keyed by the column names. Return `true` for the rows to act on. |
+| `options` _(optional)_ `= {}` | `RowConditionalOptions \| null \| undefined`                               | `headerRow` names the row holding the column names. Setting it keys each row by those names and keeps the header row itself out of the candidates.        |
 
 ## Returns
 
@@ -38,7 +40,7 @@ Rows are gone for good: `clearRowsByConditional` is the one that only empties th
 
 | Exception                  | Condition                                                                          |
 | :------------------------- | :--------------------------------------------------------------------------------- |
-| `InvalidSheetException`    | the first argument is not a sheet.                                                 |
+| `InvalidSheetException`    | the first argument is neither a sheet nor a range.                                 |
 | `IllegalArgumentException` | the predicate is not a function, or the header position is not a positive integer. |
 
 ## Examples
@@ -51,6 +53,15 @@ const sheet = SpreadsheetApp.getActiveSheet();
 deleteRowsByConditional(sheet, (values, position, row) => row.status === "done", {
   headerRow: 1
 });
+```
+
+### Within one block
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:D100 is read, and only those cells move up.
+deleteRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cell) => cell === ""));
 ```
 
 ## See also

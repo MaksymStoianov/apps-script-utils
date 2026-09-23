@@ -12,7 +12,7 @@
 
 ```typescript
 function deleteRowsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: RowPredicate,
   options: RowConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ Chaque ligne est jugée sur la feuille telle qu'elle a été lue, puis les suppr
 
 Les lignes disparaissent pour de bon : `clearRowsByConditional` se contente de les vider.
 
+Une feuille désigne toute sa plage de données, et des lignes entières sont supprimées. Une plage ne désigne que ses cellules : elles sont supprimées, celles du dessous remontent, et les colonnes voisines restent en place. Dans les deux cas, le prédicat reçoit la position dans la feuille ; le refus de vider une feuille concerne la forme avec feuille, où une ligne doit subsister.
+
 ## Paramètres
 
-| Paramètre                       | Type                                         | Description                                                                                                                                                                   |
-| :------------------------------ | :------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                         | `GoogleAppsScript.Spreadsheet.Sheet`         | La feuille sur laquelle travailler.                                                                                                                                           |
-| `predicate`                     | `RowPredicate`                               | Reçoit les cellules de la ligne, sa position à base un et — si `headerRow` est défini — la ligne indexée par les noms de colonnes. Renvoyez `true` pour les lignes à traiter. |
-| `options` _(facultatif)_ `= {}` | `RowConditionalOptions \| null \| undefined` | `headerRow` désigne la ligne portant les noms de colonnes. Définie, elle indexe chaque ligne par ces noms et exclut la ligne d'en-tête des candidates.                        |
+| Paramètre                       | Type                                                                       | Description                                                                                                                                                                   |
+| :------------------------------ | :------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                        | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille sur laquelle travailler, ou la plage dans laquelle travailler : seules ses cellules sont lues, et seules elles sont supprimées.                                    |
+| `predicate`                     | `RowPredicate`                                                             | Reçoit les cellules de la ligne, sa position à base un et — si `headerRow` est défini — la ligne indexée par les noms de colonnes. Renvoyez `true` pour les lignes à traiter. |
+| `options` _(facultatif)_ `= {}` | `RowConditionalOptions \| null \| undefined`                               | `headerRow` désigne la ligne portant les noms de colonnes. Définie, elle indexe chaque ligne par ces noms et exclut la ligne d'en-tête des candidates.                        |
 
 ## Valeur de retour
 
@@ -38,7 +40,7 @@ Les lignes disparaissent pour de bon : `clearRowsByConditional` se contente de l
 
 | Exception                  | Condition                                                                                 |
 | :------------------------- | :---------------------------------------------------------------------------------------- |
-| `InvalidSheetException`    | le premier argument n'est pas une feuille.                                                |
+| `InvalidSheetException`    | le premier argument n'est ni une feuille ni une plage.                                    |
 | `IllegalArgumentException` | le prédicat n'est pas une fonction, ou la position d'en-tête n'est pas un entier positif. |
 
 ## Exemples
@@ -51,6 +53,15 @@ const sheet = SpreadsheetApp.getActiveSheet();
 deleteRowsByConditional(sheet, (values, position, row) => row.status === "done", {
   headerRow: 1
 });
+```
+
+### Dans un seul bloc
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:D100 is read, and only those cells move up.
+deleteRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cell) => cell === ""));
 ```
 
 ## Voir aussi
