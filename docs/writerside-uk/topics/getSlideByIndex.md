@@ -2,9 +2,9 @@
 
 # getSlideByIndex
 
-<link-summary>Знаходить слайд за його позицією в презентації.</link-summary>
+<link-summary>Знаходить слайд на заданій позиції — у презентації або в активній.</link-summary>
 
-<web-summary>getSlideByIndex() — Знаходить слайд за його позицією в презентації. apps-script-utils, Українська.</web-summary>
+<web-summary>getSlideByIndex() — Знаходить слайд на заданій позиції — у презентації або в активній. apps-script-utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.5.0</p>
@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideByIndex(
-  presentation: GoogleAppsScript.Slides.Presentation,
-  index: number
+  index: number,
+  presentation?: GoogleAppsScript.Slides.Presentation | null
 ): GoogleAppsScript.Slides.Slide | null;
 ```
 
 Індекс рахується від нуля. Позиція поза межами дає `null`, а не виняток, — саме це потрібно циклу по презентації, яку хтось може правити.
 
+Індекс іде першим, а презентація необов'язкова — так само, як у [`getSheetByIndex`](getSheetByIndex.md): без неї береться активна презентація, яка є у скрипта, прив'язаного до документа. У окремого скрипта її немає, і тоді відповідь — `null`, а не виняток.
+
 ## Параметри
 
-| Параметр       | Тип                                    | Опис                              |
-| :------------- | :------------------------------------- | :-------------------------------- |
-| `presentation` | `GoogleAppsScript.Slides.Presentation` | Презентація, у якій шукати.       |
-| `index`        | `number`                               | Позиція слайда, рахуючи від нуля. |
+| Параметр                          | Тип                                            | Опис                                                               |
+| :-------------------------------- | :--------------------------------------------- | :----------------------------------------------------------------- |
+| `index`                           | `number`                                       | Позиція слайда, відлік з нуля.                                     |
+| `presentation` _(необов'язковий)_ | `GoogleAppsScript.Slides.Presentation \| null` | Презентація, у якій шукаємо. Без неї береться активна презентація. |
 
 ## Повертає
 
@@ -32,12 +34,14 @@ function getSlideByIndex(
 
 ## Приклади
 
-### Пошук
+### В активній презентації
 
 ```javascript
-const presentation = SlidesApp.getActivePresentation();
+// A script bound to a deck needs no presentation.
+const first = getSlideByIndex(0);
 
-const first = getSlideByIndex(presentation, 0);
+// Elsewhere, name one.
+const third = getSlideByIndex(2, SlidesApp.openById(id));
 ```
 
 ## Дивіться також

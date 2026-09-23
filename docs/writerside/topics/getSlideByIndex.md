@@ -2,9 +2,9 @@
 
 # getSlideByIndex
 
-<link-summary>Finds a slide by its position in a presentation.</link-summary>
+<link-summary>Finds the slide at a position, in a presentation or in the active one.</link-summary>
 
-<web-summary>getSlideByIndex() — Finds a slide by its position in a presentation. apps-script-utils, English.</web-summary>
+<web-summary>getSlideByIndex() — Finds the slide at a position, in a presentation or in the active one. apps-script-utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideByIndex(
-  presentation: GoogleAppsScript.Slides.Presentation,
-  index: number
+  index: number,
+  presentation?: GoogleAppsScript.Slides.Presentation | null
 ): GoogleAppsScript.Slides.Slide | null;
 ```
 
 The index counts from zero. A position past the end gives `null` rather than an exception, which is what a loop over a deck that someone may be editing needs.
 
+The index comes first and the presentation is optional, the way [`getSheetByIndex`](getSheetByIndex.md) reads: without one the active presentation is used, which is what a script bound to a deck already has. A standalone script has none, and then the answer is `null` rather than an error.
+
 ## Parameters
 
-| Parameter      | Type                                   | Description                           |
-| :------------- | :------------------------------------- | :------------------------------------ |
-| `presentation` | `GoogleAppsScript.Slides.Presentation` | The presentation to look in.          |
-| `index`        | `number`                               | The zero-based position of the slide. |
+| Parameter                   | Type                                           | Description                                                              |
+| :-------------------------- | :--------------------------------------------- | :----------------------------------------------------------------------- |
+| `index`                     | `number`                                       | The zero-based position of the slide.                                    |
+| `presentation` _(optional)_ | `GoogleAppsScript.Slides.Presentation \| null` | The presentation to look in. Without it the active presentation is used. |
 
 ## Returns
 
@@ -32,12 +34,14 @@ The index counts from zero. A position past the end gives `null` rather than an 
 
 ## Examples
 
-### Looking up
+### In the active presentation
 
 ```javascript
-const presentation = SlidesApp.getActivePresentation();
+// A script bound to a deck needs no presentation.
+const first = getSlideByIndex(0);
 
-const first = getSlideByIndex(presentation, 0);
+// Elsewhere, name one.
+const third = getSlideByIndex(2, SlidesApp.openById(id));
 ```
 
 ## See also

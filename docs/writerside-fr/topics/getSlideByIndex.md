@@ -2,9 +2,9 @@
 
 # getSlideByIndex
 
-<link-summary>Trouve une diapositive par sa position dans une présentation.</link-summary>
+<link-summary>Trouve la diapositive à une position donnée, dans une présentation ou dans celle active.</link-summary>
 
-<web-summary>getSlideByIndex() — Trouve une diapositive par sa position dans une présentation. apps-script-utils, Français.</web-summary>
+<web-summary>getSlideByIndex() — Trouve la diapositive à une position donnée, dans une présentation ou dans celle active. apps-script-utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideByIndex(
-  presentation: GoogleAppsScript.Slides.Presentation,
-  index: number
+  index: number,
+  presentation?: GoogleAppsScript.Slides.Presentation | null
 ): GoogleAppsScript.Slides.Slide | null;
 ```
 
 L'indice compte à partir de zéro. Une position au-delà de la fin donne `null` plutôt qu'une exception, ce dont a besoin une boucle sur un diaporama que quelqu'un peut modifier.
 
+L'index vient en premier et la présentation est facultative, comme pour [`getSheetByIndex`](getSheetByIndex.md) : sans elle, la présentation active est utilisée — celle qu'un script lié à un document possède déjà. Un script autonome n'en a pas, et la réponse est alors `null` plutôt qu'une erreur.
+
 ## Paramètres
 
-| Paramètre      | Type                                   | Description                                 |
-| :------------- | :------------------------------------- | :------------------------------------------ |
-| `presentation` | `GoogleAppsScript.Slides.Presentation` | La présentation où chercher.                |
-| `index`        | `number`                               | La position de la diapositive, à base zéro. |
+| Paramètre                     | Type                                           | Description                                                                            |
+| :---------------------------- | :--------------------------------------------- | :------------------------------------------------------------------------------------- |
+| `index`                       | `number`                                       | La position de la diapositive, à partir de zéro.                                       |
+| `presentation` _(facultatif)_ | `GoogleAppsScript.Slides.Presentation \| null` | La présentation dans laquelle chercher. À défaut, la présentation active est utilisée. |
 
 ## Valeur de retour
 
@@ -32,12 +34,14 @@ L'indice compte à partir de zéro. Une position au-delà de la fin donne `null`
 
 ## Exemples
 
-### Recherche
+### Dans la présentation active
 
 ```javascript
-const presentation = SlidesApp.getActivePresentation();
+// A script bound to a deck needs no presentation.
+const first = getSlideByIndex(0);
 
-const first = getSlideByIndex(presentation, 0);
+// Elsewhere, name one.
+const third = getSlideByIndex(2, SlidesApp.openById(id));
 ```
 
 ## Voir aussi
