@@ -27,7 +27,7 @@ import { isInteger } from "./isInteger";
  * @see      {@link isInteger}
  * @see      {@link nonInteger}
  * @see      {@link requireInteger}
- * @see      [requireNonInteger on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonInteger.html)
+ * @see      [requireNonInteger on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenoninteger.html)
  * @since    1.11.0
  * @version  1.0.0
  */

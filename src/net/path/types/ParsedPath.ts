@@ -13,7 +13,7 @@
  * // => { base: "readme.md", name: "readme", ext: ".md" }
  * ```
  *
- * @see [ParsedPath on the documentation site](https://maksymstoianov.github.io/apps-script-utils/ParsedPath.html)
+ * @see [ParsedPath on the documentation site](https://maksymstoianov.github.io/apps-script-utils/parsedpath.html)
  * @since   0.1.0
  * @version 0.1.0
  */

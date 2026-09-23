@@ -16,7 +16,7 @@ import { isUndefined } from "./isUndefined";
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is `null` or `undefined`; otherwise, `false`.
  * @see     {@link nonNil}
- * @see     [isNil on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isNil.html)
+ * @see     [isNil on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isnil.html)
  * @since   1.0.0
  * @version 1.0.0
  */

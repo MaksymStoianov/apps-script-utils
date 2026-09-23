@@ -15,7 +15,7 @@ import { isSymbol } from "./isSymbol";
  * @param   {T | symbol} value - The value to check.
  * @returns {boolean} `true` if the value is not `Symbol`; otherwise, `false`.
  * @see     {@link isSymbol}
- * @see     [nonSymbol on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonSymbol.html)
+ * @see     [nonSymbol on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonsymbol.html)
  * @since   1.4.0
  * @version 1.0.0
  */

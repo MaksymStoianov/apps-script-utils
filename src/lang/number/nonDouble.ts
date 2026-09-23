@@ -21,7 +21,7 @@ import { isDouble } from "./isDouble";
  * @returns  {boolean} `true` if the value is not a fractional number, otherwise `false`.
  * @see      {@link isDouble}
  * @see      {@link nonFloat}
- * @see      [nonDouble on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonDouble.html)
+ * @see      [nonDouble on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nondouble.html)
  * @since    1.11.0
  * @version  1.0.0
  */

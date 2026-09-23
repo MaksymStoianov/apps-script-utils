@@ -17,7 +17,7 @@ const PLACEHOLDER: RegExp = /\{\{([^{}]*)\}\}/g;
  * const options = { onMissing: "empty", escape: escapeHtml };
  * ```
  *
- * @see [MergeOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/MergeOptions.html)
+ * @see [MergeOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/mergeoptions.html)
  * @since   1.11.0
  * @version 1.0.0
  */

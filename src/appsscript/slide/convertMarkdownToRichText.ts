@@ -43,7 +43,7 @@ export interface RichTextRun {
  * @returns {RichTextRun[]} An array of RichTextRun objects.
  * @throws {@link IllegalArgumentException} If no argument is passed.
  * @throws {@link InvalidStringException} If the text is not a string.
- * @see [convertMarkdownToRichText on the documentation site](https://maksymstoianov.github.io/apps-script-utils/convertMarkdownToRichText.html)
+ * @see [convertMarkdownToRichText on the documentation site](https://maksymstoianov.github.io/apps-script-utils/convertmarkdowntorichtext.html)
  * @since 1.5.0
  * @version 2.0.0
  */

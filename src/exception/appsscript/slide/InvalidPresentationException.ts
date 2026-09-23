@@ -21,7 +21,7 @@ import { RuntimeException } from "../../RuntimeException";
  * @see     {@link Error}
  * @see     {@link GoogleAppsScript.Slides.Presentation|Presentation}
  * @see     [Class Presentation](https://developers.google.com/apps-script/reference/slides/presentation)
- * @see     [InvalidPresentationException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/InvalidPresentationException.html)
+ * @see     [InvalidPresentationException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/invalidpresentationexception.html)
  * @since   1.5.0
  * @version 1.0.0
  */

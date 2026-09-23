@@ -15,7 +15,7 @@ import { isSlide } from "./isSlide";
  * @param {GoogleAppsScript.Slides.Presentation} [presentation] The presentation to look in. Defaults to the active one.
  * @returns {number | null} The zero-based index of the slide, or `null` if the presentation does not hold it.
  * @see {@link getSlideByIndex}
- * @see [getSlideIndex on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getSlideIndex.html)
+ * @see [getSlideIndex on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getslideindex.html)
  * @see [Class Presentation](https://developers.google.com/apps-script/reference/slides/presentation)
  * @see [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
  * @since 1.5.0

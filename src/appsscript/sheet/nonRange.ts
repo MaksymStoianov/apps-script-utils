@@ -16,7 +16,7 @@ import { isRange } from "./isRange";
  * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> object.
  * @see         {@link isRange}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
- * @see         [nonRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonRange.html)
+ * @see         [nonRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonrange.html)
  * @since       1.3.0
  * @version     1.0.0
  * @environment Google Apps Script

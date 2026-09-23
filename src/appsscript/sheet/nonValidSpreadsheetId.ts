@@ -16,7 +16,7 @@ import { isValidSpreadsheetId } from "./isValidSpreadsheetId";
  * @returns     {boolean} `true` if the value is not a valid spreadsheet identifier; otherwise, `false`.
  * @see         {@link isValidSpreadsheetId}
  * @see         {@link requireValidSpreadsheetId}
- * @see         [nonValidSpreadsheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonValidSpreadsheetId.html)
+ * @see         [nonValidSpreadsheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonvalidspreadsheetid.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

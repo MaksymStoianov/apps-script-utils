@@ -22,7 +22,7 @@ import type { GridRange } from "./types";
  * @see         {@link isGridRangeSameDimensions}
  * @see         {@link requireGridRangeSameDimensions}
  * @see         {@link GridRange}
- * @see         [nonGridRangeSameDimensions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonGridRangeSameDimensions.html)
+ * @see         [nonGridRangeSameDimensions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nongridrangesamedimensions.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

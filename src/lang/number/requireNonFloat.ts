@@ -24,7 +24,7 @@ import { isFloat } from "./isFloat";
  * @see      {@link isFloat}
  * @see      {@link nonFloat}
  * @see      {@link requireFloat}
- * @see      [requireNonFloat on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonFloat.html)
+ * @see      [requireNonFloat on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonfloat.html)
  * @since    1.11.0
  * @version  1.0.0
  */

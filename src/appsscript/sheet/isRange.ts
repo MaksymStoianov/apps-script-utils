@@ -17,7 +17,7 @@ import { isObject } from "../../lang";
  * @see         {@link nonRange}
  * @see         {@link requireRange}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
- * @see         [isRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isRange.html)
+ * @see         [isRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isrange.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

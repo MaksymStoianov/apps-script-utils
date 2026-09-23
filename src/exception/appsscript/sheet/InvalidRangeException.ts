@@ -21,7 +21,7 @@ import { RuntimeException } from "../../RuntimeException";
  * @see     {@link Error}
  * @see     {@link GoogleAppsScript.Spreadsheet.Range|Range}
  * @see     [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
- * @see     [InvalidRangeException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/InvalidRangeException.html)
+ * @see     [InvalidRangeException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/invalidrangeexception.html)
  * @since   1.5.0
  * @version 1.0.0
  */

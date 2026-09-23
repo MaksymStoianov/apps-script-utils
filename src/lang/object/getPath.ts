@@ -35,7 +35,7 @@ function toSegments(path: string | Array<string | number>): Array<string | numbe
  * @param    {T} [fallback] - Returned when the path does not resolve.
  * @returns  {T | undefined} The value at the path, or the fallback.
  * @see      {@link setPath}
- * @see      [getPath on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getPath.html)
+ * @see      [getPath on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getpath.html)
  * @since    1.11.0
  * @version  1.0.0
  */

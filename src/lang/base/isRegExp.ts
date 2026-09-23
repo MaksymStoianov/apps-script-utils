@@ -14,7 +14,7 @@ import { ObjectTag, objectToString } from "../object";
  *
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a regular expression (`RegExp` object); otherwise, `false`.
- * @see [isRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isRegExp.html)
+ * @see [isRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isregexp.html)
  * @since   1.0.0
  * @version 1.0.0
  */

@@ -18,7 +18,7 @@ import { isEmail } from "./isEmail";
  * @returns {boolean} `true` if the value is not a valid email address; otherwise, `false`.
  * @see     {@link isEmail}
  * @see     {@link requireValidEmail}
- * @see     [nonValidEmail on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonValidEmail.html)
+ * @see     [nonValidEmail on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonvalidemail.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -20,7 +20,7 @@ import { isNumber } from "../base";
  * @returns {boolean} `true` if the value is a number and is not negative; otherwise, `false`.
  * @see     {@link isCountable}
  * @see     {@link isNumber}
- * @see     [isNonNegative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isNonNegative.html)
+ * @see     [isNonNegative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isnonnegative.html)
  * @since   1.11.0
  * @version 1.0.0
  */

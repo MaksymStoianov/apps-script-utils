@@ -22,7 +22,7 @@ import { isFunctionLike } from "./isFunctionLike";
  * @see      {@link isFunctionLike}
  * @see      {@link nonFunctionLike}
  * @see      {@link requireFunctionLike}
- * @see      [requireNonFunctionLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonFunctionLike.html)
+ * @see      [requireNonFunctionLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonfunctionlike.html)
  * @since    1.11.0
  * @version  1.0.0
  */

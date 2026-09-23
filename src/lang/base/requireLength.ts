@@ -21,7 +21,7 @@ import { isLength } from "./isLength";
  * @throws  {@link IllegalArgumentException} If the value is not a valid length.
  * @see     {@link isLength}
  * @see     {@link nonLength}
- * @see     [requireLength on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireLength.html)
+ * @see     [requireLength on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirelength.html)
  * @since   1.11.0
  * @version 1.0.0
  */

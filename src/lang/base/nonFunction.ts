@@ -15,7 +15,7 @@
  * @param   {T} value - The value to check.
  * @returns {boolean} `true` if the value is not `function`; otherwise, `false`.
  * @see     {@link isFunction}
- * @see     [nonFunction on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonFunction.html)
+ * @see     [nonFunction on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonfunction.html)
  * @since   1.4.0
  * @version 1.0.0
  */

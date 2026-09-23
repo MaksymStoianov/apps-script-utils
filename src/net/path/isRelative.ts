@@ -16,7 +16,7 @@ import { isAbsolute } from "./isAbsolute";
  * @returns     {boolean} `true` if the path is relative; otherwise, `false`.
  * @throws      {@link EmptyStringException}
  * @see         {@link isAbsolute}
- * @see         [isRelative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isRelative.html)
+ * @see         [isRelative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isrelative.html)
  * @environment `Google Apps Script`, `Browser`
  */
 export function isRelative(path: string): path is string {

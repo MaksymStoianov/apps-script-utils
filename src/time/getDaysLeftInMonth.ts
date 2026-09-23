@@ -27,7 +27,7 @@ import { getDaysInMonth } from "./getDaysInMonth";
  * @returns {number} The number of days remaining in the month.
  * @throws  {@link IllegalArgumentException} If the value is not a valid `Date`.
  * @see     {@link getDaysInMonth}
- * @see     [getDaysLeftInMonth on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getDaysLeftInMonth.html)
+ * @see     [getDaysLeftInMonth on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getdaysleftinmonth.html)
  * @since   1.11.0
  * @version 1.0.0
  */

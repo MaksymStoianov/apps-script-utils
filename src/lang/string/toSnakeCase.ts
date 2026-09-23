@@ -47,7 +47,7 @@ interface ToSnakeCaseOptions {
  * @see     {@link toLowerCase}
  * @see     {@link toProperCase}
  * @see     {@link toUpperCase}
- * @see     [toSnakeCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/toSnakeCase.html)
+ * @see     [toSnakeCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/tosnakecase.html)
  * @since   1.0.0
  * @version 1.0.0
  */

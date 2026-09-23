@@ -19,7 +19,7 @@ import { RuntimeException } from "./RuntimeException";
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
- * @see     [IllegalArgumentException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/IllegalArgumentException.html)
+ * @see     [IllegalArgumentException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/illegalargumentexception.html)
  * @since   1.0.0
  * @version 1.0.0
  */

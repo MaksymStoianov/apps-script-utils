@@ -12,7 +12,7 @@ import { requireNonEmptyString } from "../lang";
  * @returns {string} The string with HTML-encoded characters.
  * @throws  {@link EmptyStringException}
  * @see     {@link decodeHtml}
- * @see     [encodeHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/encodeHtml.html)
+ * @see     [encodeHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/encodehtml.html)
  * @since   1.0.0
  * @version 1.1.0
  */

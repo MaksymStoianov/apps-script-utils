@@ -21,7 +21,7 @@ import { RuntimeException } from "../../RuntimeException";
  * @see     {@link Error}
  * @see     {@link GoogleAppsScript.Slides.Slide|Slide}
  * @see     [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
- * @see     [SlideNotFoundException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/SlideNotFoundException.html)
+ * @see     [SlideNotFoundException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/slidenotfoundexception.html)
  * @since   1.5.0
  * @version 1.0.0
  */

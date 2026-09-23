@@ -13,7 +13,7 @@ import { requireNonEmptyString } from "../lang";
  * @throws  {@link EmptyStringException}
  * @see     {@link escapeRegExp}
  * @see     {@link escapeXml}
- * @see     [escapeHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/escapeHtml.html)
+ * @see     [escapeHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/escapehtml.html)
  * @since   1.0.0
  * @version 1.1.0
  */

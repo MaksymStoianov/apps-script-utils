@@ -19,7 +19,7 @@ import { nonString } from "./nonString";
  * @see     {@link isString}
  * @see     {@link nonString}
  * @see     {@link requireNonEmptyString}
- * @see     [requireString on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireString.html)
+ * @see     [requireString on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirestring.html)
  * @since   1.0.0
  * @version 1.0.0
  */

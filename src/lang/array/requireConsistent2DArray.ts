@@ -25,7 +25,7 @@ import { is2DArray } from "./is2DArray";
  * @see      {@link isConsistent2DArray}
  * @see      {@link nonConsistent2DArray}
  * @see      {@link require2DArray}
- * @see      [requireConsistent2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireConsistent2DArray.html)
+ * @see      [requireConsistent2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireconsistent2darray.html)
  * @since    1.11.0
  * @version  1.0.0
  */

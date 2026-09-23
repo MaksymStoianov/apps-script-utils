@@ -18,7 +18,7 @@ import { isValidSheetName } from "./isValidSheetName";
  * @returns     {boolean} `true` if the value is not a valid sheet name; otherwise, `false`.
  * @see         {@link isValidSheetName}
  * @see         {@link requireValidSheetName}
- * @see         [nonValidSheetName on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonValidSheetName.html)
+ * @see         [nonValidSheetName on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonvalidsheetname.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`
