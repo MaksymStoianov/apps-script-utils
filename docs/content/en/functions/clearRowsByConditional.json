@@ -2,22 +2,27 @@
   "summary": "Empties the rows a predicate selects, leaving the rows in place.",
   "description": [
     "The contents go and the rows stay, so positions do not shift and anything referring to a row by its number keeps pointing at the same place. `deleteRowsByConditional` is the one that removes them.",
-    "The sheet is read once and the clearing is grouped into consecutive blocks, so a scattered selection still costs few calls to the service."
+    "The sheet is read once and the clearing is grouped into consecutive blocks, so a scattered selection still costs few calls to the service.",
+    "A sheet means its whole data range; a range means only the cells inside it, with the rest of the sheet neither read nor touched. Either way the predicate is given the position on the sheet, so a row keeps its real number."
   ],
   "params": {
-    "sheet": "The sheet to work on.",
+    "target": "The sheet to work on, or the range to work within: only its cells are read, and only they are cleared.",
     "predicate": "Receives the row's cells, its one-based position and — when `headerRow` is set — the row keyed by the column names. Return `true` for the rows to act on.",
     "options": "`headerRow` names the row holding the column names. Setting it keys each row by those names and keeps the header row itself out of the candidates."
   },
   "returns": "how many were affected.",
   "throws": {
-    "InvalidSheetException": "the first argument is not a sheet.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range.",
     "IllegalArgumentException": "the predicate is not a function, or the header position is not a positive integer."
   },
   "examples": [
     {
       "title": "In use",
       "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nclearRowsByConditional(sheet, (values, position, row) => row.status === \"done\", {\n  headerRow: 1\n});\n```"
+    },
+    {
+      "title": "Within one block",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only B2:D100 is read, and only those cells are cleared.\nclearRowsByConditional(sheet.getRange(\"B2:D100\"), (values) => values.every((cell) => cell === \"\"));\n```"
     }
   ],
   "seeAlso": [
