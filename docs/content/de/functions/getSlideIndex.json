@@ -1,18 +1,19 @@
 {
-  "summary": "Findet die Position einer Folie in einer Präsentation.",
+  "summary": "Findet die Position einer Folie, in einer Präsentation oder in der aktiven.",
   "description": [
     "Die Folien werden über ihre Objekt-Id verglichen, eine früher gelesene Folie wird also weiterhin erkannt. Eine Folie aus einer anderen Präsentation oder eine inzwischen gelöschte ergibt `null`.",
-    "Die Präsentation steht zuerst, wie in [`getSlideByIndex`](getSlideByIndex.md), damit sich beide Nachschlagefunktionen gleich lesen."
+    "Die Folie steht zuerst und die Präsentation ist optional, wie bei [`getSlideByIndex`](getSlideByIndex.md) und [`getSheetByIndex`](getSheetByIndex.md): ohne sie wird die aktive Präsentation verwendet, die ein gebundenes Skript ohnehin hat. Ein eigenständiges Skript hat keine, dann lautet die Antwort `null` statt eines Fehlers."
   ],
   "params": {
-    "slide": "Die zu findende Folie.",
-    "presentation": "Die Präsentation, in der gesucht wird."
+    "slide": "Die gesuchte Folie.",
+    "presentation": "Die Präsentation, in der gesucht wird. Ohne sie wird die aktive verwendet."
   },
   "returns": "die nullbasierte Position oder `null`, wenn die Folie nicht da ist.",
   "throws": {},
   "examples": [
     {
-      "title": "Nachschlagen"
+      "title": "In der aktiven Präsentation",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[2];\n\ngetSlideIndex(slide); // => 2\n```"
     }
   ],
   "seeAlso": [
