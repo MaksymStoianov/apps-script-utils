@@ -1,22 +1,29 @@
 {
-  "summary": "Fügt Spalten links neben den bereits vorhandenen Daten eines Blattes ein.",
+  "summary": "Fügt Spalten vor den Daten ein — im Blatt oder an einem Bereich.",
   "description": [
-    "Vor der ersten Spalte des Datenbereichs wird Platz geschaffen und die Matrix dort hineingeschrieben, ein Array je Spalte; vorhandene Daten bleiben unangetastet.",
+    "Zuerst wird Platz geschaffen, dann werden die Werte hineingeschrieben, sodass nichts Vorhandenes überschrieben wird. Bei einem Blatt stehen die Spalten an dessen Anfang; bei einem Bereich vor dessen erster Spalte, und die Werte werden auf seinen Zeilen geschrieben.",
+    "Die Matrix ist erst nach Zeile, dann nach Spalte indiziert und muss genau `count` Spalten breit sein. Ohne Werte entstehen leere Spalten.",
     "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
   ],
   "params": {
-    "sheet": "Das Blatt, in das geschrieben wird.",
-    "values": "Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.",
-    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+    "target": "Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.",
+    "count": "Wie viele Spalten eingefügt werden. `0` tut nichts.",
+    "values": "Eine nach Zeile und Spalte indizierte Matrix, genau `count` Spalten breit. Ohne sie entstehen leere Spalten.",
+    "options": "`afterFrozenColumns` fügt hinter den fixierten Spalten ein statt ganz am Anfang. Ein Bereich bestimmt die Stelle selbst, dort bewirkt die Option nichts."
   },
-  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "returns": "das Blatt, sodass Aufrufe verkettet werden können.",
   "throws": {
-    "InvalidSheetException": "das erste Argument ist kein Blatt.",
-    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+    "IllegalArgumentException": "`count` keine nicht-negative sichere Ganzzahl ist oder die Werte nicht dazu passen.",
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist."
   },
   "examples": [
     {
-      "title": "Schreiben"
+      "title": "Am Anfang eines Blatts einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumns(sheet, 2, [\n  [\"A1\", \"B1\"],\n  [\"A2\", \"B2\"]\n]);\n```"
+    },
+    {
+      "title": "An einem Bereich einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumns(sheet.getRange(\"C4:F13\"), 1, [[\"note\"]]);\n```"
     }
   ],
   "seeAlso": [

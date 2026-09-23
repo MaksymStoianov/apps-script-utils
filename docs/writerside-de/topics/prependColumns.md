@@ -2,9 +2,9 @@
 
 # prependColumns
 
-<link-summary>Fügt Spalten links neben den bereits vorhandenen Daten eines Blattes ein.</link-summary>
+<link-summary>Fügt Spalten vor den Daten ein — im Blatt oder an einem Bereich.</link-summary>
 
-<web-summary>prependColumns() — Fügt Spalten links neben den bereits vorhandenen Daten eines Blattes ein. apps-script-utils, Deutsch.</web-summary>
+<web-summary>prependColumns() — Fügt Spalten vor den Daten ein — im Blatt oder an einem Bereich. apps-script-utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -12,45 +12,58 @@
 
 ```typescript
 function prependColumns(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   count: number,
   values?: unknown[][] | null,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-Vor der ersten Spalte des Datenbereichs wird Platz geschaffen und die Matrix dort hineingeschrieben, ein Array je Spalte; vorhandene Daten bleiben unangetastet.
+Zuerst wird Platz geschaffen, dann werden die Werte hineingeschrieben, sodass nichts Vorhandenes überschrieben wird. Bei einem Blatt stehen die Spalten an dessen Anfang; bei einem Bereich vor dessen erster Spalte, und die Werte werden auf seinen Zeilen geschrieben.
+
+Die Matrix ist erst nach Zeile, dann nach Spalte indiziert und muss genau `count` Spalten breit sein. Ohne Werte entstehen leere Spalten.
 
 Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.
 
 ## Parameter
 
-| Parameter                     | Typ                                  | Beschreibung                                                                              |
-| :---------------------------- | :----------------------------------- | :---------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet` | Das Blatt, in das geschrieben wird.                                                       |
-| `count`                       | `number`                             | How many columns to insert. `0` does nothing.                                             |
-| `values` _(optional)_         | `unknown[][] \| null`                | Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.                             |
-| `options` _(optional)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben. |
+| Parameter                     | Typ                                                                        | Beschreibung                                                                                                                                             |
+| :---------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.                                                                               |
+| `count`                       | `number`                                                                   | Wie viele Spalten eingefügt werden. `0` tut nichts.                                                                                                      |
+| `values` _(optional)_         | `unknown[][] \| null`                                                      | Eine nach Zeile und Spalte indizierte Matrix, genau `count` Spalten breit. Ohne sie entstehen leere Spalten.                                             |
+| `options` _(optional)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` fügt hinter den fixierten Spalten ein statt ganz am Anfang. Ein Bereich bestimmt die Stelle selbst, dort bewirkt die Option nichts. |
 
 ## Rückgabewert
 
-`GoogleAppsScript.Spreadsheet.Sheet` — dasselbe Blatt, damit sich Aufrufe verketten lassen.
+`GoogleAppsScript.Spreadsheet.Sheet` — das Blatt, sodass Aufrufe verkettet werden können.
 
 ## Ausnahmen
 
-| Ausnahme                | Bedingung                                             |
-| :---------------------- | :---------------------------------------------------- |
-| `InvalidSheetException` | das erste Argument ist kein Blatt.                    |
-| `TypeError`             | die Werte sind keine Matrix mit gleich langen Zeilen. |
+| Ausnahme                   | Bedingung                                                                           |
+| :------------------------- | :---------------------------------------------------------------------------------- |
+| `IllegalArgumentException` | `count` keine nicht-negative sichere Ganzzahl ist oder die Werte nicht dazu passen. |
+| `InvalidSheetException`    | das erste Argument weder ein Blatt noch ein Bereich ist.                            |
 
 ## Beispiele
 
-### Schreiben
+### Am Anfang eines Blatts einfügen
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
-prependColumns(sheet, [["#", "1", "2"]]);
+prependColumns(sheet, 2, [
+  ["A1", "B1"],
+  ["A2", "B2"]
+]);
+```
+
+### An einem Bereich einfügen
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 ```
 
 ## Siehe auch

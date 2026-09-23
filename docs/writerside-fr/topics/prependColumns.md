@@ -2,9 +2,9 @@
 
 # prependColumns
 
-<link-summary>Insère des colonnes à gauche des données déjà présentes sur une feuille.</link-summary>
+<link-summary>Insère des colonnes avant les données — dans une feuille ou au niveau d'une plage.</link-summary>
 
-<web-summary>prependColumns() — Insère des colonnes à gauche des données déjà présentes sur une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>prependColumns() — Insère des colonnes avant les données — dans une feuille ou au niveau d'une plage. apps-script-utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -12,45 +12,58 @@
 
 ```typescript
 function prependColumns(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   count: number,
   values?: unknown[][] | null,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-De la place est faite avant la première colonne de la zone de données et la matrice y est écrite, un tableau par colonne : rien d'existant n'est écrasé.
+La place est faite d'abord, puis les valeurs y sont écrites : rien de ce qui se trouve déjà dans la feuille n'est écrasé. Avec une feuille, les colonnes vont à son début ; avec une plage, juste avant sa première colonne, et les valeurs sont écrites sur ses lignes.
 
-Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur.
+La matrice est indexée par ligne puis par colonne et doit faire exactement `count` colonnes de large. Sans valeurs, les colonnes insérées restent vides.
+
+Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.
 
 ## Paramètres
 
-| Paramètre                       | Type                                 | Description                                                                                        |
-| :------------------------------ | :----------------------------------- | :------------------------------------------------------------------------------------------------- |
-| `sheet`                         | `GoogleAppsScript.Spreadsheet.Sheet` | La feuille où écrire.                                                                              |
-| `count`                         | `number`                             | How many columns to insert. `0` does nothing.                                                      |
-| `values` _(facultatif)_         | `unknown[][] \| null`                | Une matrice de lignes : un tableau par ligne, toutes de même longueur.                             |
-| `options` _(facultatif)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début. |
+| Paramètre                       | Type                                                                       | Description                                                                                                                                          |
+| :------------------------------ | :------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                        | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille dans laquelle insérer, ou la plage au niveau de laquelle insérer.                                                                         |
+| `count`                         | `number`                                                                   | Combien de colonnes insérer. `0` ne fait rien.                                                                                                       |
+| `values` _(facultatif)_         | `unknown[][] \| null`                                                      | Une matrice indexée par ligne puis colonne, large d'exactement `count`. Omettez-la pour des colonnes vides.                                          |
+| `options` _(facultatif)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` insère après les colonnes figées plutôt qu'au tout début. Une plage décide elle-même de la position : l'option n'y change rien. |
 
 ## Valeur de retour
 
-`GoogleAppsScript.Spreadsheet.Sheet` — la même feuille, ce qui permet d'enchaîner les appels.
+`GoogleAppsScript.Spreadsheet.Sheet` — la feuille, afin de chaîner les appels.
 
 ## Exceptions
 
-| Exception               | Condition                                                         |
-| :---------------------- | :---------------------------------------------------------------- |
-| `InvalidSheetException` | le premier argument n'est pas une feuille.                        |
-| `TypeError`             | les valeurs ne forment pas une matrice à lignes de même longueur. |
+| Exception                  | Condition                                                                                |
+| :------------------------- | :--------------------------------------------------------------------------------------- |
+| `IllegalArgumentException` | `count` n'est pas un entier sûr positif ou nul, ou les valeurs ne lui correspondent pas. |
+| `InvalidSheetException`    | le premier argument n'est ni une feuille ni une plage.                                   |
 
 ## Exemples
 
-### Écriture
+### Insertion au début d'une feuille
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
-prependColumns(sheet, [["#", "1", "2"]]);
+prependColumns(sheet, 2, [
+  ["A1", "B1"],
+  ["A2", "B2"]
+]);
+```
+
+### Insertion au niveau d'une plage
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 ```
 
 ## Voir aussi
