@@ -12,7 +12,7 @@ Slides, Admin SDK, réseau) dérivent de la classe de base commune `Exception`, 
 La mention **New** signale une classe ajoutée dans la dernière version ; **Deprecated** une classe dont le retrait
 est prévu dans une version future.
 
-## Exceptions liées à un service
+## Exceptions liées à un service {id="service-specific-exceptions"}
 
 | Exception                                                                 | Description                                                                                                                 |
 | :------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- |
@@ -24,7 +24,7 @@ est prévu dans une version future.
 | [`InvalidPresentationException`](InvalidPresentationException.md) **New** | Une présentation était attendue et la valeur n'en est pas une.                                                              |
 | [`SlideNotFoundException`](SlideNotFoundException.md) **New**             | Une diapositive était attendue et la valeur n'en est pas une, ou la diapositive demandée n'existe pas dans la présentation. |
 
-## Exceptions de base
+## Exceptions de base {id="core-exceptions"}
 
 | Exception                                                                       | Description                                                                                                                   |
 | :------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------- |

@@ -10,10 +10,10 @@ Slides, Admin SDK, réseau) dérivent de la classe de base commune `Exception`, 
 La mention **New** signale une classe ajoutée dans la dernière version ; **Deprecated** une classe dont le retrait
 est prévu dans une version future.
 
-## Exceptions liées à un service
+## Exceptions liées à un service {id="service-specific-exceptions"}
 
 <!-- table -->
 
-## Exceptions de base
+## Exceptions de base {id="core-exceptions"}
 
 <!-- table -->

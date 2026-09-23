@@ -13,7 +13,7 @@ Fehlerbehandlung.
 Die Markierung **New** kennzeichnet eine im jüngsten Release hinzugekommene Klasse, **Deprecated** eine, die in
 einem künftigen Release entfernt werden soll.
 
-## Dienstgebundene Ausnahmen
+## Dienstgebundene Ausnahmen {id="service-specific-exceptions"}
 
 | Ausnahme                                                                  | Beschreibung                                                                                                        |
 | :------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------ |
@@ -25,7 +25,7 @@ einem künftigen Release entfernt werden soll.
 | [`InvalidPresentationException`](InvalidPresentationException.md) **New** | Eine Präsentation war erwartet, der Wert ist keine.                                                                 |
 | [`SlideNotFoundException`](SlideNotFoundException.md) **New**             | Eine Folie war erwartet, der Wert ist keine, oder die gesuchte Folie gibt es in der Präsentation nicht.             |
 
-## Grundlegende Ausnahmen
+## Grundlegende Ausnahmen {id="core-exceptions"}
 
 | Ausnahme                                                                        | Beschreibung                                                                                                                               |
 | :------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |

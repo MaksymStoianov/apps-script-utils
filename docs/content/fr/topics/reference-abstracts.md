@@ -6,10 +6,10 @@
 
 Classes abstraites et interfaces communes, que les autres modules de la bibliothèque utilisent comme briques.
 
-## Classes abstraites
+## Classes abstraites {id="abstracts"}
 
 <!-- table -->
 
-## Interfaces
+## Interfaces {id="interfaces"}
 
 <!-- table -->

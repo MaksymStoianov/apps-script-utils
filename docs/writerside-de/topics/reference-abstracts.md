@@ -8,13 +8,13 @@
 
 Gemeinsame abstrakte Klassen und Schnittstellen, die die übrigen Module der Bibliothek als Bausteine verwenden.
 
-## Abstrakte Klassen
+## Abstrakte Klassen {id="abstracts"}
 
 | Abstrakte Klasse    | Kurzbeschreibung                                                       |
 | :------------------ | :--------------------------------------------------------------------- |
 | [`Class`](Class.md) | Die abstrakte Basis, von der die eigenen Klassen der Bibliothek erben. |
 
-## Schnittstellen
+## Schnittstellen {id="interfaces"}
 
 | Schnittstelle             | Kurzbeschreibung                                           |
 | :------------------------ | :--------------------------------------------------------- |

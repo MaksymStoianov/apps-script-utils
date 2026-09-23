@@ -12,7 +12,7 @@
 Пометка **New** означает функцию, добавленную в последнем выпуске; пометка **Deprecated** — функцию, которую
 планируется удалить в одном из будущих выпусков.
 
-## Базовые методы
+## Базовые методы {id="google-base-methods"}
 
 Общие помощники, которыми пользуются остальные модули Google Apps Script ниже.
 
@@ -21,7 +21,7 @@
 | [`getByteSize`](getByteSize.md)               | `Number`          | Возвращает длину строки в кодовых единицах. |
 | [`getTriggerById`](getTriggerById.md) **New** | `Trigger \| null` | Находит триггер проекта по идентификатору.  |
 
-## Методы Admin SDK Directory
+## Методы Admin SDK Directory {id="google-admin-sdk-directory-methods"}
 
 Помощники для [сервиса Admin SDK Directory](https://developers.google.cn/apps-script/advanced/admin-sdk-directory).
 
@@ -31,21 +31,21 @@
 | [`nonAdmin`](nonAdmin.md) **New**         | `Boolean`  | Сообщает, что текущий пользователь **не** является администратором Workspace. |
 | [`requireAdmin`](requireAdmin.md) **New** | `void`     | Прерывает вызов, если текущий пользователь не администратор Workspace.        |
 
-## Методы Google Диска
+## Методы Google Диска {id="google-drive-methods"}
 
 | Функция                                   | Возвращает | Краткое описание                                                   |
 | :---------------------------------------- | :--------- | :----------------------------------------------------------------- |
 | [`createFolder`](createFolder.md) **New** | `Folder`   | Создаёт путь папок на Диске, переиспользуя уже существующие папки. |
 
-## Методы Google Документов
+## Методы Google Документов {id="google-docs-methods"}
 
 Помощники для Google Документов. Пока не реализованы. Будем рады вкладу — смотрите [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Методы Google Форм
+## Методы Google Форм {id="google-forms-methods"}
 
 Помощники для Google Форм. Пока не реализованы. Будем рады вкладу — смотрите [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Методы Google Таблиц
+## Методы Google Таблиц {id="google-sheets-methods"}
 
 Помощники для чтения, записи и проверки данных Google Таблиц: работа со строками и столбцами, разбор нотации A1,
 сравнение `GridRange` и проверки типов для объектов `Sheet`, `Spreadsheet` и `Range`.
@@ -120,7 +120,7 @@
 | [`updateFormulas`](updateFormulas.md) **New**                                 | `Number`                                                                                                               | Переписывает формулы на листе.                                                          |
 | [`updateSheetNameInA1Notation`](updateSheetNameInA1Notation.md) **New**       | `String`                                                                                                               | Заменяет имя листа в нотации A1, сохраняя диапазон.                                     |
 
-## Методы Google Презентаций
+## Методы Google Презентаций {id="google-slides-methods"}
 
 Помощники для Google Презентаций: поиск слайдов и их позиций, преобразование Markdown в `RichTextRun`, поиск с
 заменой и проверки типов для объектов `Presentation` и `Slide`.
@@ -144,7 +144,7 @@
 | [`requireValidPresentationId`](requireValidPresentationId.md) **New** | `String`                                                                              | Возвращает значение как идентификатор презентации или выбрасывает исключение.  |
 | [`requireValidSlideId`](requireValidSlideId.md) **New**               | `String`                                                                              | Возвращает значение как идентификатор слайда или выбрасывает исключение.       |
 
-## Сетевые методы
+## Сетевые методы {id="network-methods"}
 
 Помощники для сетевых операций — например, для проверки токенов запроса.
 
@@ -152,7 +152,7 @@
 | :-------------------------------------------------- | :--------- | :---------------------------------------------------------------------------------------- |
 | [`requireValidToken`](requireValidToken.md) **New** | `String`   | Возвращает токен, если он совпал с одним из разрешённых ключей, иначе бросает исключение. |
 
-## Методы интерфейса
+## Методы интерфейса {id="google-ui-methods"}
 
 Помощники для того, что видит пользователь, — проверки типов `Ui`, `HtmlOutput` и `TextOutput`, — а также проверки
 зависимостей: репозиториев и сервисов, которыми пользуются веб-приложения.

@@ -11,10 +11,10 @@ Fehlerbehandlung.
 Die Markierung **New** kennzeichnet eine im jüngsten Release hinzugekommene Klasse, **Deprecated** eine, die in
 einem künftigen Release entfernt werden soll.
 
-## Dienstgebundene Ausnahmen
+## Dienstgebundene Ausnahmen {id="service-specific-exceptions"}
 
 <!-- table -->
 
-## Grundlegende Ausnahmen
+## Grundlegende Ausnahmen {id="core-exceptions"}
 
 <!-- table -->

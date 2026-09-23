@@ -10,7 +10,7 @@ extend a common `Exception` base class for consistent error handling.
 A **New** marker indicates a function added in the latest release; a **Deprecated** marker indicates a function
 scheduled for removal in a future release.
 
-## Service-specific exceptions
+## Service-specific exceptions {id="service-specific-exceptions"}
 
 | Exception                                                                 | Description                                                                                                                                                     |
 | :------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ scheduled for removal in a future release.
 | [`InvalidPresentationException`](InvalidPresentationException.md) **New** | Represents an exception thrown when an invalid [`Presentation`](https://developers.google.com/apps-script/reference/slides/presentation) object is provided.    |
 | [`SlideNotFoundException`](SlideNotFoundException.md) **New**             | Represents an exception thrown when a [`Slide`](https://developers.google.com/apps-script/reference/slides/slide) object is not found.                          |
 
-## Core exceptions
+## Core exceptions {id="core-exceptions"}
 
 | Exception                                                                       | Description                                                                                 |
 | :------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------ |

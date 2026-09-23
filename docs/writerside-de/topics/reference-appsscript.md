@@ -12,7 +12,7 @@ Dokumente, Formulare, Netzwerkanfragen und die eingebauten Oberflächenklassen.
 Die Markierung **New** kennzeichnet eine im jüngsten Release hinzugekommene Funktion, **Deprecated** eine, die in
 einem künftigen Release entfernt werden soll.
 
-## Basismethoden
+## Basismethoden {id="google-base-methods"}
 
 Allgemeine Helfer, die die übrigen Google-Apps-Script-Module unten verwenden.
 
@@ -21,7 +21,7 @@ Allgemeine Helfer, die die übrigen Google-Apps-Script-Module unten verwenden.
 | [`getByteSize`](getByteSize.md)               | `Number`          | Gibt die Länge einer Zeichenkette in Codeeinheiten zurück. |
 | [`getTriggerById`](getTriggerById.md) **New** | `Trigger \| null` | Findet einen Trigger des Projekts anhand seiner Id.        |
 
-## Methoden des Admin SDK Directory
+## Methoden des Admin SDK Directory {id="google-admin-sdk-directory-methods"}
 
 Helfer für den [Admin-SDK-Directory-Dienst](https://developers.google.cn/apps-script/advanced/admin-sdk-directory).
 
@@ -31,21 +31,21 @@ Helfer für den [Admin-SDK-Directory-Dienst](https://developers.google.cn/apps-s
 | [`nonAdmin`](nonAdmin.md) **New**         | `Boolean`   | Meldet, ob der aktuelle Nutzer **kein** Workspace-Administrator ist.               |
 | [`requireAdmin`](requireAdmin.md) **New** | `void`      | Bricht den Aufruf ab, sofern der aktuelle Nutzer kein Workspace-Administrator ist. |
 
-## Methoden für Google Drive
+## Methoden für Google Drive {id="google-drive-methods"}
 
 | Funktion                                  | Rückgabetyp | Kurzbeschreibung                                                              |
 | :---------------------------------------- | :---------- | :---------------------------------------------------------------------------- |
 | [`createFolder`](createFolder.md) **New** | `Folder`    | Legt einen Ordnerpfad in Drive an und nutzt bereits vorhandene Ordner weiter. |
 
-## Methoden für Google Docs
+## Methoden für Google Docs {id="google-docs-methods"}
 
 Helfer für Google Docs. Noch nicht umgesetzt. Beiträge sind willkommen — siehe [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Methoden für Google Forms
+## Methoden für Google Forms {id="google-forms-methods"}
 
 Helfer für Google Forms. Noch nicht umgesetzt. Beiträge sind willkommen — siehe [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Methoden für Google Tabellen
+## Methoden für Google Tabellen {id="google-sheets-methods"}
 
 Helfer zum Lesen, Schreiben und Prüfen von Tabellendaten: Zeilen und Spalten, Zerlegen der A1-Notation,
 `GridRange`-Vergleiche und Typprüfungen für `Sheet`-, `Spreadsheet`- und `Range`-Objekte.
@@ -120,7 +120,7 @@ Helfer zum Lesen, Schreiben und Prüfen von Tabellendaten: Zeilen und Spalten, Z
 | [`updateFormulas`](updateFormulas.md) **New**                                 | `Number`                                                                                                               | Schreibt die Formeln eines Blattes um.                                                  |
 | [`updateSheetNameInA1Notation`](updateSheetNameInA1Notation.md) **New**       | `String`                                                                                                               | Ersetzt den Blattnamen in einer A1-Notation und behält den Bereich.                     |
 
-## Methoden für Google Präsentationen
+## Methoden für Google Präsentationen {id="google-slides-methods"}
 
 Helfer für Google Slides: Folien finden und einordnen, Markdown in `RichTextRun` umwandeln, Suchen und Ersetzen
 sowie Typprüfungen für `Presentation`- und `Slide`-Objekte.
@@ -144,7 +144,7 @@ sowie Typprüfungen für `Presentation`- und `Slide`-Objekte.
 | [`requireValidPresentationId`](requireValidPresentationId.md) **New** | `String`                                                                              | Gibt den Wert als eine Präsentations-Id zurück oder wirft.                   |
 | [`requireValidSlideId`](requireValidSlideId.md) **New**               | `String`                                                                              | Gibt den Wert als eine Folien-Id zurück oder wirft.                          |
 
-## Netzwerkmethoden
+## Netzwerkmethoden {id="network-methods"}
 
 Helfer für Netzwerkaufgaben — etwa das Prüfen von Anfrage-Token.
 
@@ -152,7 +152,7 @@ Helfer für Netzwerkaufgaben — etwa das Prüfen von Anfrage-Token.
 | :-------------------------------------------------- | :---------- | :------------------------------------------------------------------------------------- |
 | [`requireValidToken`](requireValidToken.md) **New** | `String`    | Gibt ein Token zurück, sobald es einem erlaubten Schlüssel entspricht, sonst wirft es. |
 
-## Methoden für die Oberfläche
+## Methoden für die Oberfläche {id="google-ui-methods"}
 
 Helfer für das, was Nutzer sehen — Typprüfungen für `Ui`, `HtmlOutput` und `TextOutput` — sowie Prüfungen für
 Abhängigkeiten: Repositories und Dienste, die Web-Apps verwenden.

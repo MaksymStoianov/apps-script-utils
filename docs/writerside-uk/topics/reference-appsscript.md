@@ -12,7 +12,7 @@
 Позначка **New** означає функцію, додану в останньому випуску; позначка **Deprecated** — функцію, яку планується
 вилучити в одному з майбутніх випусків.
 
-## Базові методи
+## Базові методи {id="google-base-methods"}
 
 Спільні помічники, якими користуються решта модулів Google Apps Script нижче.
 
@@ -21,7 +21,7 @@
 | [`getByteSize`](getByteSize.md)               | `Number`          | Повертає довжину рядка в кодових одиницях.   |
 | [`getTriggerById`](getTriggerById.md) **New** | `Trigger \| null` | Знаходить тригер проєкту за ідентифікатором. |
 
-## Методи Admin SDK Directory
+## Методи Admin SDK Directory {id="google-admin-sdk-directory-methods"}
 
 Помічники для [сервісу Admin SDK Directory](https://developers.google.cn/apps-script/advanced/admin-sdk-directory).
 
@@ -31,21 +31,21 @@
 | [`nonAdmin`](nonAdmin.md) **New**         | `Boolean` | Повідомляє, що поточний користувач **не** є адміністратором Workspace. |
 | [`requireAdmin`](requireAdmin.md) **New** | `void`    | Перериває виклик, якщо поточний користувач не адміністратор Workspace. |
 
-## Методи Google Диска
+## Методи Google Диска {id="google-drive-methods"}
 
 | Функція                                   | Повертає | Короткий опис                                                     |
 | :---------------------------------------- | :------- | :---------------------------------------------------------------- |
 | [`createFolder`](createFolder.md) **New** | `Folder` | Створює шлях папок на Диску, перевикористовуючи вже наявні папки. |
 
-## Методи Google Документів
+## Методи Google Документів {id="google-docs-methods"}
 
 Помічники для Google Документів. Поки не реалізовані. Будемо раді внеску — дивіться [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Методи Google Форм
+## Методи Google Форм {id="google-forms-methods"}
 
 Помічники для Google Форм. Поки не реалізовані. Будемо раді внеску — дивіться [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Методи Google Таблиць
+## Методи Google Таблиць {id="google-sheets-methods"}
 
 Помічники для читання, запису та перевірки даних Google Таблиць: робота з рядками та стовпцями, розбір нотації A1,
 порівняння `GridRange` і перевірки типів для об'єктів `Sheet`, `Spreadsheet` та `Range`.
@@ -120,7 +120,7 @@
 | [`updateFormulas`](updateFormulas.md) **New**                                 | `Number`                                                                                                               | Переписує формули на аркуші.                                                            |
 | [`updateSheetNameInA1Notation`](updateSheetNameInA1Notation.md) **New**       | `String`                                                                                                               | Замінює ім'я аркуша в нотації A1, зберігаючи діапазон.                                  |
 
-## Методи Google Презентацій
+## Методи Google Презентацій {id="google-slides-methods"}
 
 Помічники для Google Презентацій: пошук слайдів та їхніх позицій, перетворення Markdown на `RichTextRun`, пошук із
 заміною та перевірки типів для об'єктів `Presentation` і `Slide`.
@@ -144,7 +144,7 @@
 | [`requireValidPresentationId`](requireValidPresentationId.md) **New** | `String`                                                                              | Повертає значення як ідентифікатор презентації або викидає виняток.      |
 | [`requireValidSlideId`](requireValidSlideId.md) **New**               | `String`                                                                              | Повертає значення як ідентифікатор слайда або викидає виняток.           |
 
-## Мережеві методи
+## Мережеві методи {id="network-methods"}
 
 Помічники для мережевих операцій — наприклад, для перевірки токенів запиту.
 
@@ -152,7 +152,7 @@
 | :-------------------------------------------------- | :------- | :---------------------------------------------------------------------------------- |
 | [`requireValidToken`](requireValidToken.md) **New** | `String` | Повертає токен, якщо він збігся з одним із дозволених ключів, інакше кидає виняток. |
 
-## Методи інтерфейсу
+## Методи інтерфейсу {id="google-ui-methods"}
 
 Помічники для того, що бачить користувач, — перевірки типів `Ui`, `HtmlOutput` і `TextOutput`, — а також перевірки
 залежностей: репозиторіїв і сервісів, якими користуються вебзастосунки.

@@ -8,13 +8,13 @@
 
 Classes abstraites et interfaces communes, que les autres modules de la bibliothèque utilisent comme briques.
 
-## Classes abstraites
+## Classes abstraites {id="abstracts"}
 
 | Classe abstraite    | Description brève                                               |
 | :------------------ | :-------------------------------------------------------------- |
 | [`Class`](Class.md) | La base abstraite dont héritent les classes de la bibliothèque. |
 
-## Interfaces
+## Interfaces {id="interfaces"}
 
 | Interface                 | Description brève                                   |
 | :------------------------ | :-------------------------------------------------- |

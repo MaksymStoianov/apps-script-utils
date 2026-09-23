@@ -6,10 +6,10 @@
 
 Gemeinsame abstrakte Klassen und Schnittstellen, die die übrigen Module der Bibliothek als Bausteine verwenden.
 
-## Abstrakte Klassen
+## Abstrakte Klassen {id="abstracts"}
 
 <!-- table -->
 
-## Schnittstellen
+## Schnittstellen {id="interfaces"}
 
 <!-- table -->

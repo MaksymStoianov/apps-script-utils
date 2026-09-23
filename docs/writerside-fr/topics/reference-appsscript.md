@@ -12,7 +12,7 @@ requêtes réseau et classes d'interface intégrées.
 La mention **New** signale une fonction ajoutée dans la dernière version ; **Deprecated** une fonction dont le
 retrait est prévu dans une version future.
 
-## Méthodes de base
+## Méthodes de base {id="google-base-methods"}
 
 Aides générales utilisées par les modules Google Apps Script ci-dessous.
 
@@ -21,7 +21,7 @@ Aides générales utilisées par les modules Google Apps Script ci-dessous.
 | [`getByteSize`](getByteSize.md)               | `Number`          | Renvoie la longueur d'une chaîne en unités de code.         |
 | [`getTriggerById`](getTriggerById.md) **New** | `Trigger \| null` | Trouve l'un des déclencheurs du projet par son identifiant. |
 
-## Méthodes Admin SDK Directory
+## Méthodes Admin SDK Directory {id="google-admin-sdk-directory-methods"}
 
 Aides pour le [service Admin SDK Directory](https://developers.google.cn/apps-script/advanced/admin-sdk-directory).
 
@@ -31,21 +31,21 @@ Aides pour le [service Admin SDK Directory](https://developers.google.cn/apps-sc
 | [`nonAdmin`](nonAdmin.md) **New**         | `Boolean`      | Indique que l'utilisateur courant n'est **pas** administrateur Workspace.       |
 | [`requireAdmin`](requireAdmin.md) **New** | `void`         | Interrompt l'appel si l'utilisateur courant n'est pas administrateur Workspace. |
 
-## Méthodes Google Drive
+## Méthodes Google Drive {id="google-drive-methods"}
 
 | Fonction                                  | Type de retour | Description brève                                                            |
 | :---------------------------------------- | :------------- | :--------------------------------------------------------------------------- |
 | [`createFolder`](createFolder.md) **New** | `Folder`       | Crée un chemin de dossiers dans Drive en réutilisant ceux qui existent déjà. |
 
-## Méthodes Google Docs
+## Méthodes Google Docs {id="google-docs-methods"}
 
 Aides pour Google Docs. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Méthodes Google Forms
+## Méthodes Google Forms {id="google-forms-methods"}
 
 Aides pour Google Forms. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Méthodes Google Sheets
+## Méthodes Google Sheets {id="google-sheets-methods"}
 
 Aides pour lire, écrire et valider des données de feuilles : lignes et colonnes, analyse de la notation A1,
 comparaisons de `GridRange` et gardes de type pour les objets `Sheet`, `Spreadsheet` et `Range`.
@@ -120,7 +120,7 @@ comparaisons de `GridRange` et gardes de type pour les objets `Sheet`, `Spreadsh
 | [`updateFormulas`](updateFormulas.md) **New**                                 | `Number`                                                                                                               | Réécrit les formules d'une feuille.                                                 |
 | [`updateSheetNameInA1Notation`](updateSheetNameInA1Notation.md) **New**       | `String`                                                                                                               | Remplace le nom de feuille dans une notation A1 en conservant la plage.             |
 
-## Méthodes Google Slides
+## Méthodes Google Slides {id="google-slides-methods"}
 
 Aides pour Google Slides : recherche et position des diapositives, conversion de Markdown en `RichTextRun`,
 rechercher-remplacer et gardes de type pour les objets `Presentation` et `Slide`.
@@ -144,7 +144,7 @@ rechercher-remplacer et gardes de type pour les objets `Presentation` et `Slide`
 | [`requireValidPresentationId`](requireValidPresentationId.md) **New** | `String`                                                                              | Renvoie la valeur en tant que un identifiant de présentation, ou lève une exception. |
 | [`requireValidSlideId`](requireValidSlideId.md) **New**               | `String`                                                                              | Renvoie la valeur en tant que un identifiant de diapositive, ou lève une exception.  |
 
-## Méthodes réseau
+## Méthodes réseau {id="network-methods"}
 
 Aides pour les opérations réseau — par exemple la validation des jetons de requête.
 
@@ -152,7 +152,7 @@ Aides pour les opérations réseau — par exemple la validation des jetons de r
 | :-------------------------------------------------- | :------------- | :------------------------------------------------------------------------------- |
 | [`requireValidToken`](requireValidToken.md) **New** | `String`       | Renvoie un jeton une fois qu'il correspond à l'une des clés autorisées, ou lève. |
 
-## Méthodes d'interface
+## Méthodes d'interface {id="google-ui-methods"}
 
 Aides pour ce que voit l'utilisateur — gardes de type `Ui`, `HtmlOutput` et `TextOutput` — ainsi que des gardes de
 dépendances : dépôts et services utilisés par les applications web.

@@ -10,7 +10,7 @@ requests, and the built-in UI classes.
 A **New** marker indicates a function added in the latest release; a **Deprecated** marker indicates a function
 scheduled for removal in a future release.
 
-## Google Base Methods
+## Google Base Methods {id="google-base-methods"}
 
 General-purpose helpers used across the Google Apps Script modules below.
 
@@ -19,7 +19,7 @@ General-purpose helpers used across the Google Apps Script modules below.
 | [`getByteSize`](getByteSize.md)               | `Number`          | Calculates the size of a string in bytes (UTF-8).                                  |
 | [`getTriggerById`](getTriggerById.md) **New** | `Trigger \| null` | Retrieves a project trigger by its unique id, or `null` when the project has none. |
 
-## Google Admin SDK Directory Methods
+## Google Admin SDK Directory Methods {id="google-admin-sdk-directory-methods"}
 
 Helpers for the [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory).
 
@@ -29,7 +29,7 @@ Helpers for the [Admin SDK Directory Service](https://developers.google.cn/apps-
 | [`nonAdmin`](nonAdmin.md) **New**         | `Boolean`   | Checks if the current user is **not** an administrator of the Google Workspace domain. |
 | [`requireAdmin`](requireAdmin.md) **New** | `void`      | Ensures the current user is a domain administrator, throwing otherwise.                |
 
-## Google Drive Methods
+## Google Drive Methods {id="google-drive-methods"}
 
 Helpers for [Google Drive](https://developers.google.com/apps-script/reference/drive).
 
@@ -37,15 +37,15 @@ Helpers for [Google Drive](https://developers.google.com/apps-script/reference/d
 | :---------------------------------------- | :---------- | :-------------------------------------------------------------------------------- |
 | [`createFolder`](createFolder.md) **New** | `Folder`    | Creates a nested folder tree from a path, reusing the folders that already exist. |
 
-## Google Docs Methods
+## Google Docs Methods {id="google-docs-methods"}
 
 Helpers for Google Docs. Not implemented yet. Contributions are welcome — see [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Google Forms Methods
+## Google Forms Methods {id="google-forms-methods"}
 
 Helpers for Google Forms. Not implemented yet. Contributions are welcome — see [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
 
-## Google Sheets Methods
+## Google Sheets Methods {id="google-sheets-methods"}
 
 Helpers for reading, writing, and validating Google Sheets data: row and column manipulation, A1-notation parsing,
 `GridRange` comparisons, and type guards for `Sheet`, `Spreadsheet`, and `Range` objects.
@@ -120,7 +120,7 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
 | [`updateFormulas`](updateFormulas.md) **New**                                 | `Number`                                                                                                               | Rewrites a sheet's formulas through a function or a map, returning how many cells changed.                                                              |
 | [`updateSheetNameInA1Notation`](updateSheetNameInA1Notation.md) **New**       | `String`                                                                                                               | Updates or sets the sheet name within an A1 notation string while preserving the range.                                                                 |
 
-## Google Slides Methods
+## Google Slides Methods {id="google-slides-methods"}
 
 Helpers for Google Slides: slide lookup and indexing, Markdown-to-`RichTextRun` conversion, find-and-replace, and
 type guards for `Presentation` and `Slide` objects.
@@ -144,7 +144,7 @@ type guards for `Presentation` and `Slide` objects.
 | [`requireValidPresentationId`](requireValidPresentationId.md) **New** | `String`                                                                              | Ensures a value is a valid presentation identifier, throwing otherwise.                                                                        |
 | [`requireValidSlideId`](requireValidSlideId.md) **New**               | `String`                                                                              | Ensures a value is a valid slide identifier, throwing otherwise.                                                                               |
 
-## Network Methods
+## Network Methods {id="network-methods"}
 
 Helpers for network-related operations, such as validating request tokens.
 
@@ -152,7 +152,7 @@ Helpers for network-related operations, such as validating request tokens.
 | :-------------------------------------------------- | :---------- | :------------------------------------------------------------------- |
 | [`requireValidToken`](requireValidToken.md) **New** | `String`    | Ensures that a valid token is provided and matches the allowed keys. |
 
-## Google UI Methods
+## Google UI Methods {id="google-ui-methods"}
 
 Helpers for user-facing output — `Ui`, `HtmlOutput`, and `TextOutput` type guards — plus dependency guards for
 repositories and services used in web apps.

@@ -6,13 +6,13 @@
 
 Shared abstract classes and interfaces used as building blocks by other modules in the library.
 
-## Abstracts
+## Abstracts {id="abstracts"}
 
 | Abstract            | Brief description                                             |
 | :------------------ | :------------------------------------------------------------ |
 | [`Class`](Class.md) | Base abstract class for providing common class functionality. |
 
-## Interfaces
+## Interfaces {id="interfaces"}
 
 | Interface                 | Brief description        |
 | :------------------------ | :----------------------- |
