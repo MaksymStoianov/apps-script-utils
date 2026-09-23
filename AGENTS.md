@@ -191,6 +191,16 @@ is already there, so it is safe to run at any time, and CI checks that no commen
 is missing one. The link the other way — page to source — is part of every
 generated page already.
 
+The site is versioned. `writerside.cfg` is generated for every language and
+carries the version from `package.json`, so the header names the release it was
+built from, and `buildprofiles.xml` points the switcher at `help-versions.json`
+at the site root. The deploy publishes each build twice — at the root as the
+current version, and under `/<version>/` as an archive — keeping the zips in a
+`docs-archive` branch, because Pages replaces everything it serves on every
+deploy and an archive that lives only there disappears with the next one.
+`npm run docs:help-versions -- <site-directory> <version>` writes the file the
+switcher reads.
+
 Two scripts take an argument and run against a built site rather than the
 sources: `npm run docs:search-index -- <site-directory>` writes that directory's
 `search-index.json`, once per language, and `npm run docs:finalize-site -- <site-directory>`

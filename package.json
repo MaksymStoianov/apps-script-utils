@@ -26,6 +26,7 @@
     "docs:check": "node scripts/docs/generate-topics.mjs --check",
     "docs:search-index": "node scripts/docs/build-search-index.mjs",
     "docs:finalize-site": "node scripts/docs/finalize-site.mjs",
+    "docs:help-versions": "node scripts/docs/write-help-versions.mjs",
     "docs:author": "node scripts/docs/author-guards.mjs && node scripts/docs/author-exceptions.mjs && node scripts/docs/author-batch.mjs",
     "docs:author-guards": "node scripts/docs/author-guards.mjs",
     "docs:author-exceptions": "node scripts/docs/author-exceptions.mjs",
