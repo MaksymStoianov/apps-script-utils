@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideIndex(
-  slide: GoogleAppsScript.Slides.Slide,
-  presentation: GoogleAppsScript.Slides.Presentation
+  presentation: GoogleAppsScript.Slides.Presentation,
+  slide: GoogleAppsScript.Slides.Slide
 ): number | null;
 ```
 
 Die Folien werden über ihre Objekt-Id verglichen, eine früher gelesene Folie wird also weiterhin erkannt. Eine Folie aus einer anderen Präsentation oder eine inzwischen gelöschte ergibt `null`.
 
+Die Präsentation steht zuerst, wie in [`getSlideByIndex`](getSlideByIndex.md), damit sich beide Nachschlagefunktionen gleich lesen.
+
 ## Parameter
 
 | Parameter      | Typ                                    | Beschreibung                           |
 | :------------- | :------------------------------------- | :------------------------------------- |
-| `slide`        | `GoogleAppsScript.Slides.Slide`        | Die zu findende Folie.                 |
 | `presentation` | `GoogleAppsScript.Slides.Presentation` | Die Präsentation, in der gesucht wird. |
+| `slide`        | `GoogleAppsScript.Slides.Slide`        | Die zu findende Folie.                 |
 
 ## Rückgabewert
 
@@ -38,7 +40,7 @@ Die Folien werden über ihre Objekt-Id verglichen, eine früher gelesene Folie w
 const presentation = SlidesApp.getActivePresentation();
 const slide = presentation.getSlides()[2];
 
-getSlideIndex(slide, presentation); // => 2
+getSlideIndex(presentation, slide); // => 2
 ```
 
 ## Siehe auch

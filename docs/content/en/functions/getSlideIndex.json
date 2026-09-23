@@ -1,7 +1,8 @@
 {
   "summary": "Finds the position of a slide in a presentation.",
   "description": [
-    "The slides are compared by their object id, so a slide read earlier is still recognised. A slide that belongs to another presentation, or has since been removed, gives `null`."
+    "The slides are compared by their object id, so a slide read earlier is still recognised. A slide that belongs to another presentation, or has since been removed, gives `null`.",
+    "The presentation comes first, as it does in [`getSlideByIndex`](getSlideByIndex.md), so the two lookups read the same way round."
   ],
   "params": {
     "slide": "The slide to locate.",
@@ -12,7 +13,7 @@
   "examples": [
     {
       "title": "Looking up",
-      "body": "```javascript\nconst presentation = SlidesApp.getActivePresentation();\nconst slide = presentation.getSlides()[2];\n\ngetSlideIndex(slide, presentation); // => 2\n```"
+      "body": "```javascript\nconst presentation = SlidesApp.getActivePresentation();\nconst slide = presentation.getSlides()[2];\n\ngetSlideIndex(presentation, slide); // => 2\n```"
     }
   ],
   "seeAlso": [

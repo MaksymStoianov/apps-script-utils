@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideIndex(
-  slide: GoogleAppsScript.Slides.Slide,
-  presentation: GoogleAppsScript.Slides.Presentation
+  presentation: GoogleAppsScript.Slides.Presentation,
+  slide: GoogleAppsScript.Slides.Slide
 ): number | null;
 ```
 
 The slides are compared by their object id, so a slide read earlier is still recognised. A slide that belongs to another presentation, or has since been removed, gives `null`.
 
+The presentation comes first, as it does in [`getSlideByIndex`](getSlideByIndex.md), so the two lookups read the same way round.
+
 ## Parameters
 
 | Parameter      | Type                                   | Description                  |
 | :------------- | :------------------------------------- | :--------------------------- |
-| `slide`        | `GoogleAppsScript.Slides.Slide`        | The slide to locate.         |
 | `presentation` | `GoogleAppsScript.Slides.Presentation` | The presentation to look in. |
+| `slide`        | `GoogleAppsScript.Slides.Slide`        | The slide to locate.         |
 
 ## Returns
 
@@ -38,7 +40,7 @@ The slides are compared by their object id, so a slide read earlier is still rec
 const presentation = SlidesApp.getActivePresentation();
 const slide = presentation.getSlides()[2];
 
-getSlideIndex(slide, presentation); // => 2
+getSlideIndex(presentation, slide); // => 2
 ```
 
 ## See also

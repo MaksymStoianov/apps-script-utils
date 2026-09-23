@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideIndex(
-  slide: GoogleAppsScript.Slides.Slide,
-  presentation: GoogleAppsScript.Slides.Presentation
+  presentation: GoogleAppsScript.Slides.Presentation,
+  slide: GoogleAppsScript.Slides.Slide
 ): number | null;
 ```
 
 Слайды сравниваются по идентификатору объекта, поэтому слайд, прочитанный ранее, по-прежнему опознаётся. Слайд из другой презентации или уже удалённый даёт `null`.
 
+Презентация идёт первой, как и в [`getSlideByIndex`](getSlideByIndex.md), поэтому обе функции читаются одинаково.
+
 ## Параметры
 
 | Параметр       | Тип                                    | Описание                       |
 | :------------- | :------------------------------------- | :----------------------------- |
-| `slide`        | `GoogleAppsScript.Slides.Slide`        | Слайд, позицию которого ищем.  |
 | `presentation` | `GoogleAppsScript.Slides.Presentation` | Презентация, в которой искать. |
+| `slide`        | `GoogleAppsScript.Slides.Slide`        | Слайд, позицию которого ищем.  |
 
 ## Возвращает
 
@@ -38,7 +40,7 @@ function getSlideIndex(
 const presentation = SlidesApp.getActivePresentation();
 const slide = presentation.getSlides()[2];
 
-getSlideIndex(slide, presentation); // => 2
+getSlideIndex(presentation, slide); // => 2
 ```
 
 ## Смотрите также

@@ -1,7 +1,8 @@
 {
   "summary": "Trouve la position d'une diapositive dans une présentation.",
   "description": [
-    "Les diapositives sont comparées par leur identifiant d'objet : une diapositive lue plus tôt reste reconnue. Une diapositive appartenant à une autre présentation, ou supprimée depuis, donne `null`."
+    "Les diapositives sont comparées par leur identifiant d'objet : une diapositive lue plus tôt reste reconnue. Une diapositive appartenant à une autre présentation, ou supprimée depuis, donne `null`.",
+    "La présentation vient en premier, comme dans [`getSlideByIndex`](getSlideByIndex.md), afin que les deux recherches se lisent de la même façon."
   ],
   "params": {
     "slide": "La diapositive à localiser.",

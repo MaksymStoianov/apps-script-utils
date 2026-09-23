@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideIndex(
-  slide: GoogleAppsScript.Slides.Slide,
-  presentation: GoogleAppsScript.Slides.Presentation
+  presentation: GoogleAppsScript.Slides.Presentation,
+  slide: GoogleAppsScript.Slides.Slide
 ): number | null;
 ```
 
 Les diapositives sont comparées par leur identifiant d'objet : une diapositive lue plus tôt reste reconnue. Une diapositive appartenant à une autre présentation, ou supprimée depuis, donne `null`.
 
+La présentation vient en premier, comme dans [`getSlideByIndex`](getSlideByIndex.md), afin que les deux recherches se lisent de la même façon.
+
 ## Paramètres
 
 | Paramètre      | Type                                   | Description                  |
 | :------------- | :------------------------------------- | :--------------------------- |
-| `slide`        | `GoogleAppsScript.Slides.Slide`        | La diapositive à localiser.  |
 | `presentation` | `GoogleAppsScript.Slides.Presentation` | La présentation où chercher. |
+| `slide`        | `GoogleAppsScript.Slides.Slide`        | La diapositive à localiser.  |
 
 ## Valeur de retour
 
@@ -38,7 +40,7 @@ Les diapositives sont comparées par leur identifiant d'objet : une diapositive 
 const presentation = SlidesApp.getActivePresentation();
 const slide = presentation.getSlides()[2];
 
-getSlideIndex(slide, presentation); // => 2
+getSlideIndex(presentation, slide); // => 2
 ```
 
 ## Voir aussi

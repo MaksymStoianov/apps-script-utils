@@ -1,7 +1,8 @@
 {
   "summary": "Findet die Position einer Folie in einer Präsentation.",
   "description": [
-    "Die Folien werden über ihre Objekt-Id verglichen, eine früher gelesene Folie wird also weiterhin erkannt. Eine Folie aus einer anderen Präsentation oder eine inzwischen gelöschte ergibt `null`."
+    "Die Folien werden über ihre Objekt-Id verglichen, eine früher gelesene Folie wird also weiterhin erkannt. Eine Folie aus einer anderen Präsentation oder eine inzwischen gelöschte ergibt `null`.",
+    "Die Präsentation steht zuerst, wie in [`getSlideByIndex`](getSlideByIndex.md), damit sich beide Nachschlagefunktionen gleich lesen."
   ],
   "params": {
     "slide": "Die zu findende Folie.",
