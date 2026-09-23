@@ -8,7 +8,7 @@ import { isArray } from "../base";
  * const values = [0, "", false, null, undefined];
  * ```
  *
- * @see [Falsy on the documentation site](https://maksymstoianov.github.io/apps-script-utils/Falsy.html)
+ * @see [Falsy on the documentation site](https://maksymstoianov.github.io/apps-script-utils/falsy.html)
  * @since   1.11.0
  * @version 1.0.0
  */

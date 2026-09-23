@@ -12,7 +12,7 @@
  * offset(date, 1, "month");
  * ```
  *
- * @see [TimeUnit on the documentation site](https://maksymstoianov.github.io/apps-script-utils/TimeUnit.html)
+ * @see [TimeUnit on the documentation site](https://maksymstoianov.github.io/apps-script-utils/timeunit.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -27,7 +27,7 @@ import { requireSpreadsheet } from "./requireSpreadsheet";
  * @throws      {@link EmptyStringException} If `name` is not a non-empty string.
  * @see         {@link getSheetById}
  * @see         [Class NamedRange](https://developers.google.com/apps-script/reference/spreadsheet/named-range)
- * @see         [getNamedRangeByName on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getNamedRangeByName.html)
+ * @see         [getNamedRangeByName on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getnamedrangebyname.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

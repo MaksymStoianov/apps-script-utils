@@ -19,7 +19,7 @@ import { is2DArray } from "./is2DArray";
  * @returns {boolean} `true` if the input is not a two-dimensional array; otherwise, `false`.
  * @see     {@link is2DArray}
  * @see     {@link require2DArray}
- * @see     [non2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/non2DArray.html)
+ * @see     [non2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/non2darray.html)
  * @since   1.11.0
  * @version 1.0.0
  */

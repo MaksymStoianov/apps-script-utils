@@ -18,7 +18,7 @@ import { isScalar } from "./isScalar";
  * @param   {T | string | number | boolean | symbol | bigint} value - The value to check.
  * @returns {boolean} `true` if the value is not `Scalar`; otherwise, `false`.
  * @see     {@link isScalar}
- * @see     [nonScalar on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonScalar.html)
+ * @see     [nonScalar on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonscalar.html)
  * @since   1.4.0
  * @version 1.0.0
  */

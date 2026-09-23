@@ -28,7 +28,7 @@ import { isRelative } from "./isRelative";
  * @see     {@link isRelative}
  * @see     {@link nonRelative}
  * @see     {@link requireAbsolute}
- * @see     [requireRelative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireRelative.html)
+ * @see     [requireRelative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirerelative.html)
  * @since   1.11.0
  * @version 1.0.0
  */

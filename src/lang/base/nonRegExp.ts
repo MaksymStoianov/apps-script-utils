@@ -16,7 +16,7 @@ import { isRegExp } from "./isRegExp";
  * @param   {T | RegExp} value - The value to check.
  * @returns {boolean} `true` if the value is not a regular expression (`RegExp` object); otherwise, `false`.
  * @see     {@link isRegExp}
- * @see     [nonRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonRegExp.html)
+ * @see     [nonRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonregexp.html)
  * @since   1.11.0
  * @version 1.0.0
  */

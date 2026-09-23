@@ -17,7 +17,7 @@ type TextOutput = GoogleAppsScript.Content.TextOutput;
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is an <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a> object, `false` otherwise.
  * @see         <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a>
- * @see         [isTextOutput on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isTextOutput.html)
+ * @see         [isTextOutput on the documentation site](https://maksymstoianov.github.io/apps-script-utils/istextoutput.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`

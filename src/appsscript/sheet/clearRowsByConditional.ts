@@ -15,7 +15,7 @@ import { isSheet } from "./isSheet";
  * @param   {number} position - The row's one-based position on the sheet.
  * @param   {Record<string, unknown> | null} record - The row keyed by the header row, or `null` when no header is configured.
  * @returns {boolean} `true` to select the row.
- * @see [RowPredicate on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RowPredicate.html)
+ * @see [RowPredicate on the documentation site](https://maksymstoianov.github.io/apps-script-utils/rowpredicate.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -33,7 +33,7 @@ export type RowPredicate = (
  * const options = { headerRow: 1 };
  * ```
  *
- * @see [RowConditionalOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RowConditionalOptions.html)
+ * @see [RowConditionalOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/rowconditionaloptions.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -166,7 +166,7 @@ function selectRows(
  * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link clearColumnsByConditional}
  * @see         {@link deleteRowsByConditional}
- * @see         [clearRowsByConditional on the documentation site](https://maksymstoianov.github.io/apps-script-utils/clearRowsByConditional.html)
+ * @see         [clearRowsByConditional on the documentation site](https://maksymstoianov.github.io/apps-script-utils/clearrowsbyconditional.html)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0

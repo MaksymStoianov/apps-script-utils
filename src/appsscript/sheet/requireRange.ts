@@ -20,7 +20,7 @@ import { isRange } from "./isRange";
  * @see     {@link isRange}
  * @see     {@link nonRange}
  * @see     <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
- * @see     [requireRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireRange.html)
+ * @see     [requireRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirerange.html)
  * @since   1.5.0
  * @version 1.0.0
  */

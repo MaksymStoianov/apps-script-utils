@@ -21,7 +21,7 @@ import { isSafeInteger } from "./isSafeInteger";
  * @returns  {boolean} `true` if the value is not a safe integer, otherwise `false`.
  * @see      {@link isSafeInteger}
  * @see      {@link nonInteger}
- * @see      [nonSafeInteger on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonSafeInteger.html)
+ * @see      [nonSafeInteger on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonsafeinteger.html)
  * @since    1.11.0
  * @version  1.0.0
  */

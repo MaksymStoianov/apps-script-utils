@@ -36,7 +36,7 @@ interface ToProperCaseOptions {
  * @see     {@link toLowerCase}
  * @see     {@link toSnakeCase}
  * @see     {@link toUpperCase}
- * @see     [toProperCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/toProperCase.html)
+ * @see     [toProperCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/topropercase.html)
  * @since   1.0.0
  * @version 1.0.0
  */

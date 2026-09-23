@@ -19,7 +19,7 @@ import { RuntimeException } from "./RuntimeException";
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
- * @see     [RepositoryIsNotDefinedException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RepositoryIsNotDefinedException.html)
+ * @see     [RepositoryIsNotDefinedException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/repositoryisnotdefinedexception.html)
  * @since   1.5.0
  * @version 1.0.0
  */

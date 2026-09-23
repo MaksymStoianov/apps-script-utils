@@ -21,7 +21,7 @@ import { isValidVersion } from "./isValidVersion";
  *  - `0` if they are equal;
  *  - `1` if the first version is greater than the second.
  * @throws  {@link TypeError}
- * @see [versionCompare on the documentation site](https://maksymstoianov.github.io/apps-script-utils/versionCompare.html)
+ * @see [versionCompare on the documentation site](https://maksymstoianov.github.io/apps-script-utils/versioncompare.html)
  * @since   1.0.0
  * @version 1.0.0
  */

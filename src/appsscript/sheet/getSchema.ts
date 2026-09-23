@@ -93,7 +93,7 @@ function inferType(values: unknown[]): SheetColumnType | undefined {
  * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
  * @see         {@link insertSchema}
  * @see         {@link removeSchema}
- * @see         [getSchema on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getSchema.html)
+ * @see         [getSchema on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getschema.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

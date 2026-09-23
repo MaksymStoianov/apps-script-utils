@@ -19,7 +19,7 @@ import { isBoolean } from "./isBoolean";
  * @see      {@link isBoolean}
  * @see      {@link nonBoolean}
  * @see      {@link requireBoolean}
- * @see      [requireNonBoolean on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonBoolean.html)
+ * @see      [requireNonBoolean on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonboolean.html)
  * @since    1.11.0
  * @version  1.0.0
  */

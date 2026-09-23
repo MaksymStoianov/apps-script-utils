@@ -24,7 +24,7 @@ import { isTextStyle } from "./isTextStyle";
  * @see         {@link isTextStyle}
  * @see         {@link nonTextStyle}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/text-style"><code>TextStyle</code></a>
- * @see         [requireTextStyle on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireTextStyle.html)
+ * @see         [requireTextStyle on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requiretextstyle.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

@@ -16,7 +16,7 @@ import { isArray } from "./isArray";
  * @param   {T | unknown} value - The value to check.
  * @returns {boolean} `true` if the value is not `Array`; otherwise, `false`.
  * @see     {@link isArray}
- * @see     [nonArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonArray.html)
+ * @see     [nonArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonarray.html)
  * @since   1.4.0
  * @version 1.0.0
  */

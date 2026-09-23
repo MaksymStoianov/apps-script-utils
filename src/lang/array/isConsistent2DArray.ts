@@ -18,7 +18,7 @@ import { is2DArray } from "./is2DArray";
  * @returns {boolean} `true` if the input is a consistent 2D array (a matrix), `false` otherwise.
  * @see     {@link is2DArray}
  * @see     {@link requireConsistent2DArray}
- * @see     [isConsistent2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isConsistent2DArray.html)
+ * @see     [isConsistent2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isconsistent2darray.html)
  * @since   1.0.0
  * @version 1.1.0
  */

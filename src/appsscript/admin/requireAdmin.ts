@@ -30,7 +30,7 @@ import { isAdmin } from "./isAdmin";
  * @see         {@link isAdmin}
  * @see         {@link nonAdmin}
  * @see         [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory)
- * @see         [requireAdmin on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireAdmin.html)
+ * @see         [requireAdmin on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireadmin.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

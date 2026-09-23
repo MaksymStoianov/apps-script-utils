@@ -12,7 +12,7 @@
  *
  * @param {unknown} value The value to check.
  * @returns {value is GoogleAppsScript.Slides.Slide} `true` if the value is a {@link GoogleAppsScript.Slides.Slide|Slide} object, `false` otherwise.
- * @see [isSlide on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isSlide.html)
+ * @see [isSlide on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isslide.html)
  * @see [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
  * @since 1.5.0
  */

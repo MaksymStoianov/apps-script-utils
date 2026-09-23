@@ -774,7 +774,7 @@ function renderPage(entry, language, content, sourceContent, pages, thrownBy) {
 
     const [, label, url] = link;
 
-    if (url.endsWith(`/${entry.name}.html`) || seen.has(url)) {
+    if (url.toLowerCase().endsWith(`/${entry.name.toLowerCase()}.html`) || seen.has(url)) {
       continue;
     }
 

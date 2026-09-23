@@ -39,7 +39,7 @@ interface ToKebabCaseOptions {
  * @see     {@link toProperCase}
  * @see     {@link toSnakeCase}
  * @see     {@link toUpperCase}
- * @see     [toKebabCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/toKebabCase.html)
+ * @see     [toKebabCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/tokebabcase.html)
  * @since   1.0.0
  * @version 1.0.0
  */

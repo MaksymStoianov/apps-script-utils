@@ -16,7 +16,7 @@ import { isSheet } from "./isSheet";
  * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  * @see         {@link isSheet}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
- * @see         [nonSheet on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonSheet.html)
+ * @see         [nonSheet on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonsheet.html)
  * @since       1.3.0
  * @version     1.0.0
  * @environment Google Apps Script

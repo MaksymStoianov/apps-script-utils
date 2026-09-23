@@ -19,7 +19,7 @@ import { RuntimeException } from "./RuntimeException";
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
- * @see     [ServiceIsNotDefinedException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/ServiceIsNotDefinedException.html)
+ * @see     [ServiceIsNotDefinedException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/serviceisnotdefinedexception.html)
  * @since   1.5.0
  * @version 1.0.0
  */

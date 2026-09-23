@@ -19,7 +19,7 @@ import { requireNonEmptyString } from "./requireNonEmptyString";
  * @throws  {@link EmptyStringException}
  * @throws  {@link InvalidEmailFormatException}
  * @see     {@link isEmail}
- * @see     [requireValidEmail on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidEmail.html)
+ * @see     [requireValidEmail on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirevalidemail.html)
  * @since   1.0.0
  * @version 1.0.0
  */

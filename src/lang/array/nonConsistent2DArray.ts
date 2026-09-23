@@ -20,7 +20,7 @@ import { isConsistent2DArray } from "./isConsistent2DArray";
  * @see     {@link isConsistent2DArray}
  * @see     {@link requireConsistent2DArray}
  * @see     {@link non2DArray}
- * @see     [nonConsistent2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonConsistent2DArray.html)
+ * @see     [nonConsistent2DArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonconsistent2darray.html)
  * @since   1.11.0
  * @version 1.0.0
  */

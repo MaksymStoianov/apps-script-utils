@@ -23,7 +23,7 @@ import { requireNonEmptyString } from "./requireNonEmptyString";
  * @throws  {@link IllegalArgumentException} If the value is not a valid locale.
  * @see     {@link isValidLocale}
  * @see     {@link nonValidLocale}
- * @see     [requireValidLocale on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidLocale.html)
+ * @see     [requireValidLocale on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirevalidlocale.html)
  * @since   1.11.0
  * @version 1.0.0
  */

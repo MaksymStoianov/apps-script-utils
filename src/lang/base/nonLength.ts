@@ -16,7 +16,7 @@ import { isLength } from "./isLength";
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if `value` is not a valid length, else `false`.
  * @see     {@link isLength}
- * @see     [nonLength on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonLength.html)
+ * @see     [nonLength on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonlength.html)
  * @since   1.11.0
  * @version 1.0.0
  */
