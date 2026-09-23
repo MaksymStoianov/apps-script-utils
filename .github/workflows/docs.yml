@@ -98,33 +98,6 @@ jobs:
           instance: ${{ matrix.language.module }}/asu
           docker-version: ${{ env.DOCKER_VERSION }}
 
-      # The build profile has been ignored before, silently: no canonicals, an
-      # empty og:image, neither include. A build that drops half its
-      # configuration should not pass for another release. Tracked in #539.
-      - name: Check that the build profile reached the pages
-        run: |
-          set -euo pipefail
-
-          unzip -qq "artifacts/${ARTIFACT}" -d built
-
-          page="built/overview.html"
-
-          missing=0
-
-          for marker in 'rel="canonical"' 'asu-fab' 'SoftwareSourceCode'; do
-            if ! grep -qF "$marker" "$page"; then
-              echo "::error::the built page is missing ${marker} — buildprofiles.xml was not applied"
-              missing=1
-            fi
-          done
-
-          if ! grep -qE 'og:image"[^>]*content="[^"]+"' "$page"; then
-            echo "::error::the built page has an empty og:image — buildprofiles.xml was not applied"
-            missing=1
-          fi
-
-          exit "$missing"
-
       - name: Upload build results
         uses: actions/upload-artifact@v4
         with:
@@ -161,10 +134,75 @@ jobs:
         with:
           instance: ${{ matrix.language.module }}/asu
 
+  # The page the reader gets is the finalized one, not what the builder emits:
+  # the structured data, the canonical link, the language switcher, the search
+  # widget and the notice are written in by scripts/docs/finalize-site.mjs,
+  # because the build profile that would carry them is ignored on this builder.
+  # A page that comes out without them should fail here, not be noticed on the
+  # live site a release later.
+  assembled:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download build results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: docs-*
+          path: artifacts
+
+      - name: Assemble the site
+        run: |
+          set -euo pipefail
+
+          unzip -qq "artifacts/docs-en/${ARTIFACT}" -d dir
+
+          for code in ru uk de fr; do
+            unzip -qq "artifacts/docs-${code}/${ARTIFACT}" -d "dir/${code}"
+          done
+
+      - name: Finalize the site for crawlers
+        run: node scripts/docs/finalize-site.mjs dir
+
+      - name: Check that every page carries what it should
+        run: |
+          set -euo pipefail
+
+          missing=0
+
+          for page in dir/overview.html dir/ru/overview.html dir/appendcolumns.html; do
+            for marker in 'rel="canonical"' 'asu-fab' 'SoftwareSourceCode' 'asu-ai-notice'; do
+              if ! grep -qF "$marker" "$page"; then
+                echo "::error::${page} is missing ${marker}"
+                missing=1
+              fi
+            done
+
+            if ! grep -qE 'og:image"[^>]*content="[^"]+"' "$page"; then
+              echo "::error::${page} has an empty og:image"
+              missing=1
+            fi
+          done
+
+          exit "$missing"
+
   deploy:
     # Only the default branch publishes; pull requests stop after build and test.
     if: github.ref == 'refs/heads/main' && github.server_url == 'https://github.com'
-    needs: test
+    needs: [test, assembled]
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
