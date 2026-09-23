@@ -142,6 +142,7 @@ jobs:
     timeout-minutes: 10
 
     permissions:
+      contents: write
       pages: write
       id-token: write
 
@@ -186,6 +187,65 @@ jobs:
       # in place, because that is when the alternates are known.
       - name: Finalize the site for crawlers
         run: node scripts/docs/finalize-site.mjs dir
+
+      # Pages replaces everything it serves on each deploy, so the archive of
+      # earlier versions lives in a branch of its own and is restored here.
+      - name: Archive this version
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          version="$(node -p "require('./package.json').version")"
+
+          (cd dir && zip -qr "../${version}.zip" .)
+
+          git clone --depth 1 --branch docs-archive \
+            "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" archive 2>/dev/null || {
+              mkdir -p archive
+              cd archive
+              git init -q
+              git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+              git checkout -q --orphan docs-archive
+              cd ..
+            }
+
+          mkdir -p archive/versions
+          cp "${version}.zip" "archive/versions/${version}.zip"
+
+          cd archive
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add versions
+          git commit -qm "docs: archive the site of ${version}" || echo "nothing new to archive"
+          git push -q origin docs-archive
+
+      - name: Restore the versions published before this one
+        run: |
+          set -euo pipefail
+
+          version="$(node -p "require('./package.json').version")"
+
+          for zip in archive/versions/*.zip; do
+            [ -e "$zip" ] || continue
+
+            archived="$(basename "$zip" .zip)"
+
+            [ "$archived" = "$version" ] && continue
+
+            mkdir -p "dir/${archived}"
+            unzip -qq "$zip" -d "dir/${archived}"
+          done
+
+          cp "${version}.zip" "dir/${version}.zip" 2>/dev/null || true
+          rm -f "dir/${version}.zip"
+
+          mkdir -p "dir/${version}"
+          unzip -qq "${version}.zip" -d "dir/${version}"
+
+      # What the version switcher in the header reads.
+      - name: Write help-versions.json
+        run: node scripts/docs/write-help-versions.mjs dir "$(node -p "require('./package.json').version")"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
