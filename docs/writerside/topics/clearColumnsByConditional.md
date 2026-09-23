@@ -12,7 +12,7 @@
 
 ```typescript
 function clearColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ function clearColumnsByConditional(
 
 The sheet is read once and the clearing is grouped into consecutive blocks.
 
+A sheet means its whole data range; a range means only the cells inside it, with the rest of the sheet neither read nor touched. Either way the predicate is given the position on the sheet, so a column keeps its real number.
+
 ## Parameters
 
-| Parameter                     | Type                                            | Description                                                                                                                                                        |
-| :---------------------------- | :---------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet`            | The sheet to work on.                                                                                                                                              |
-| `predicate`                   | `ColumnPredicate`                               | Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on. |
-| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined` | `headerColumn` names the column holding the row names, and keeps that column out of the candidates.                                                                |
+| Parameter                     | Type                                                                       | Description                                                                                                                                                        |
+| :---------------------------- | :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet to work on, or the range to work within: only its cells are read, and only they are cleared.                                                             |
+| `predicate`                   | `ColumnPredicate`                                                          | Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on. |
+| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined`                            | `headerColumn` names the column holding the row names, and keeps that column out of the candidates.                                                                |
 
 ## Returns
 
@@ -38,7 +40,7 @@ The sheet is read once and the clearing is grouped into consecutive blocks.
 
 | Exception                  | Condition                                                                          |
 | :------------------------- | :--------------------------------------------------------------------------------- |
-| `InvalidSheetException`    | the first argument is not a sheet.                                                 |
+| `InvalidSheetException`    | the first argument is neither a sheet nor a range.                                 |
 | `IllegalArgumentException` | the predicate is not a function, or the header position is not a positive integer. |
 
 ## Examples
@@ -49,6 +51,17 @@ The sheet is read once and the clearing is grouped into consecutive blocks.
 const sheet = SpreadsheetApp.getActiveSheet();
 
 clearColumnsByConditional(sheet, (values) => values.every((cell) => cell === ""));
+```
+
+### Within one block
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:Z100 is read, and only those cells are cleared.
+clearColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
+  values.every((cell) => cell === "")
+);
 ```
 
 ## See also

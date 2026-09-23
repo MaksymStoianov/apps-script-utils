@@ -2,22 +2,27 @@
   "summary": "Empties the columns a predicate selects, leaving the columns in place.",
   "description": [
     "`clearRowsByConditional` turned on its side: the contents go, the columns stay, so the letters of the columns after them do not change.",
-    "The sheet is read once and the clearing is grouped into consecutive blocks."
+    "The sheet is read once and the clearing is grouped into consecutive blocks.",
+    "A sheet means its whole data range; a range means only the cells inside it, with the rest of the sheet neither read nor touched. Either way the predicate is given the position on the sheet, so a column keeps its real number."
   ],
   "params": {
-    "sheet": "The sheet to work on.",
+    "target": "The sheet to work on, or the range to work within: only its cells are read, and only they are cleared.",
     "predicate": "Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on.",
     "options": "`headerColumn` names the column holding the row names, and keeps that column out of the candidates."
   },
   "returns": "how many were affected.",
   "throws": {
-    "InvalidSheetException": "the first argument is not a sheet.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range.",
     "IllegalArgumentException": "the predicate is not a function, or the header position is not a positive integer."
   },
   "examples": [
     {
       "title": "In use",
       "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nclearColumnsByConditional(sheet, (values) => values.every((cell) => cell === \"\"));\n```"
+    },
+    {
+      "title": "Within one block",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only B2:Z100 is read, and only those cells are cleared.\nclearColumnsByConditional(sheet.getRange(\"B2:Z100\"), (values) => values.every((cell) => cell === \"\"));\n```"
     }
   ],
   "seeAlso": [

@@ -12,7 +12,7 @@
 
 ```typescript
 function clearColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ function clearColumnsByConditional(
 
 Лист читается один раз, очистка группируется в идущие подряд блоки.
 
+Лист означает весь его диапазон данных; диапазон — только свои ячейки, остальное на листе не читается и не трогается. В обоих случаях предикат получает позицию на листе, поэтому у столбца остаётся его настоящий номер.
+
 ## Параметры
 
-| Параметр                            | Тип                                             | Описание                                                                                                                                                                         |
-| :---------------------------------- | :---------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                             | `GoogleAppsScript.Spreadsheet.Sheet`            | Лист, с которым работаем.                                                                                                                                                        |
-| `predicate`                         | `ColumnPredicate`                               | Получает ячейки столбца, его позицию от единицы и — если задан `headerColumn` — столбец с ключами по именам строк. Верните `true` для столбцов, с которыми нужно что-то сделать. |
-| `options` _(необязательный)_ `= {}` | `ColumnConditionalOptions \| null \| undefined` | `headerColumn` указывает столбец с именами строк и выводит этот столбец из числа кандидатов.                                                                                     |
+| Параметр                            | Тип                                                                        | Описание                                                                                                                                                                         |
+| :---------------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                            | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Лист, с которым работаем, или диапазон, внутри которого работаем: читаются только его ячейки, и очищаются только они.                                                            |
+| `predicate`                         | `ColumnPredicate`                                                          | Получает ячейки столбца, его позицию от единицы и — если задан `headerColumn` — столбец с ключами по именам строк. Верните `true` для столбцов, с которыми нужно что-то сделать. |
+| `options` _(необязательный)_ `= {}` | `ColumnConditionalOptions \| null \| undefined`                            | `headerColumn` указывает столбец с именами строк и выводит этот столбец из числа кандидатов.                                                                                     |
 
 ## Возвращает
 
@@ -38,7 +40,7 @@ function clearColumnsByConditional(
 
 | Исключение                 | Условие                                                           |
 | :------------------------- | :---------------------------------------------------------------- |
-| `InvalidSheetException`    | первый аргумент не является листом.                               |
+| `InvalidSheetException`    | первый аргумент не является ни листом, ни диапазоном.             |
 | `IllegalArgumentException` | предикат не функция или позиция заголовка не положительное целое. |
 
 ## Примеры
@@ -49,6 +51,17 @@ function clearColumnsByConditional(
 const sheet = SpreadsheetApp.getActiveSheet();
 
 clearColumnsByConditional(sheet, (values) => values.every((cell) => cell === ""));
+```
+
+### Внутри одного блока
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:Z100 is read, and only those cells are cleared.
+clearColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
+  values.every((cell) => cell === "")
+);
 ```
 
 ## Смотрите также
