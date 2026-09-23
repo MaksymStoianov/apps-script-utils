@@ -2,21 +2,26 @@
   "summary": "Vide les lignes que le prédicat sélectionne, sans supprimer les lignes.",
   "description": [
     "Le contenu part, les lignes restent : les positions ne bougent pas et tout ce qui désigne une ligne par son numéro continue de pointer au même endroit. C'est `deleteRowsByConditional` qui les supprime.",
-    "La feuille est lue une fois et l'effacement est regroupé en blocs consécutifs : une sélection dispersée coûte donc peu d'appels au service."
+    "La feuille est lue une fois et l'effacement est regroupé en blocs consécutifs : une sélection dispersée coûte donc peu d'appels au service.",
+    "Une feuille désigne toute sa plage de données ; une plage ne désigne que les cellules qu'elle contient, le reste de la feuille n'étant ni lu ni touché. Dans les deux cas, le prédicat reçoit la position dans la feuille : une ligne garde son vrai numéro."
   ],
   "params": {
-    "sheet": "La feuille sur laquelle travailler.",
+    "target": "La feuille sur laquelle travailler, ou la plage dans laquelle travailler : seules ses cellules sont lues, et seules elles sont vidées.",
     "predicate": "Reçoit les cellules de la ligne, sa position à base un et — si `headerRow` est défini — la ligne indexée par les noms de colonnes. Renvoyez `true` pour les lignes à traiter.",
     "options": "`headerRow` désigne la ligne portant les noms de colonnes. Définie, elle indexe chaque ligne par ces noms et exclut la ligne d'en-tête des candidates."
   },
   "returns": "combien ont été traitées.",
   "throws": {
-    "InvalidSheetException": "le premier argument n'est pas une feuille.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage.",
     "IllegalArgumentException": "le prédicat n'est pas une fonction, ou la position d'en-tête n'est pas un entier positif."
   },
   "examples": [
     {
       "title": "Utilisation"
+    },
+    {
+      "title": "Dans un seul bloc",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only B2:D100 is read, and only those cells are cleared.\nclearRowsByConditional(sheet.getRange(\"B2:D100\"), (values) => values.every((cell) => cell === \"\"));\n```"
     }
   ],
   "seeAlso": [
