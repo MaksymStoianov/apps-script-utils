@@ -201,12 +201,14 @@ deploy and an archive that lives only there disappears with the next one.
 `npm run docs:help-versions -- <site-directory> <version>` writes the file the
 switcher reads.
 
-Two scripts take an argument and run against a built site rather than the
-sources: `npm run docs:search-index -- <site-directory>` writes that directory's
-`search-index.json`, once per language, and `npm run docs:finalize-site -- <site-directory>`
-writes the `hreflang` links into the served HTML, the sitemap covering every
-language, and `robots.txt`. The second one has to run after all five builds sit
-in one directory — that is when it can know which pages exist in which language.
+`npm run docs:finalize-site -- <site-directory>` runs against a built site
+rather than the sources. It writes into every page what the build profile does
+not: the structured data, the canonical link, the `og:image` address, the row of
+links to the other languages under the breadcrumbs, and the notice at the end
+saying the documentation was written by AI. It also writes the `hreflang` links,
+the sitemap covering every language and `robots.txt`, which is why it has to run
+after all five builds sit in one directory — that is when it can know which
+pages exist in which language.
 
 The languages, and every label around the prose, are declared in
 `scripts/docs/languages.mjs`. Adding a language is a change to that file and a
