@@ -35,6 +35,7 @@
             <toc-element topic="ColumnConditionalOptions.md"/>
             <toc-element topic="ColumnPredicate.md"/>
             <toc-element topic="convertMarkdownToRichText.md"/>
+            <toc-element topic="convertRichTextToMarkdown.md"/>
             <toc-element topic="convertRichTextToHtml.md"/>
             <toc-element topic="createFolder.md"/>
             <toc-element topic="deleteColumnsByConditional.md"/>

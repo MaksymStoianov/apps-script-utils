@@ -122,12 +122,13 @@ Helpers for reading, writing, and validating Google Sheets data: row and column 
 
 ## Google Slides Methods {id="google-slides-methods"}
 
-Helpers for Google Slides: slide lookup and indexing, Markdown-to-`RichTextRun` conversion, find-and-replace, and
+Helpers for Google Slides: slide lookup and indexing, conversion between Markdown and `RichTextRun`, find-and-replace, and
 type guards for `Presentation` and `Slide` objects.
 
 | Function                                                              | Return type                                                                           | Brief description                                                                                                                              |
 | :-------------------------------------------------------------------- | :------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`convertMarkdownToRichText`](convertMarkdownToRichText.md) **New**   | `RichTextRun[]`                                                                       | Converts Markdown-formatted text to an array of `RichTextRun` objects.                                                                         |
+| [`convertRichTextToMarkdown`](convertRichTextToMarkdown.md) **New**   | `String`                                                                              | Converts an array of `RichTextRun` objects back into Markdown.                                                                                 |
 | [`findReplaceAllTextInSlide`](findReplaceAllTextInSlide.md) **New**   | `Number`                                                                              | Finds and replaces all occurrences of text within a slide.                                                                                     |
 | [`getSlideByIndex`](getSlideByIndex.md) **New**                       | [`Slide`](https://developers.google.com/apps-script/reference/slides/slide) \| `null` | Retrieves a [`Slide`](https://developers.google.com/apps-script/reference/slides/slide) object by its zero-based index.                        |
 | [`getSlideIndex`](getSlideIndex.md) **New**                           | `Number \| null`                                                                      | Retrieves the zero-based index of a [`Slide`](https://developers.google.com/apps-script/reference/slides/slide) within its presentation.       |

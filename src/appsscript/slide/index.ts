@@ -1,5 +1,7 @@
 export * from "./convertMarkdownToRichText";
 
+export * from "./convertRichTextToMarkdown";
+
 export * from "./findReplaceAllTextInSlide";
 
 export * from "./getSlideByIndex";

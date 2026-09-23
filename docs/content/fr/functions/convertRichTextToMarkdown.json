@@ -1,0 +1,33 @@
+{
+  "summary": "Ramène des fragments de texte stylés vers du Markdown.",
+  "description": [
+    "L'inverse de [`convertMarkdownToRichText`](convertMarkdownToRichText.md) : le gras, l'italique et le barré redeviennent leurs marqueurs, un fragment portant un lien devient `[texte](url)`, et un fragment composé dans la police de code du thème devient du code entre accents graves.",
+    "Un fragment de code ne porte aucun indicateur propre — il est reconnu à sa police —, alors passez le même thème dans les deux sens et la paire fait l'aller-retour sans perte. Les fragments sont écrits à la suite, dans l'ordre donné, sans fusionner les voisins de même style ; une mise en forme profondément imbriquée peut donc revenir écrite autrement tout en se lisant pareil."
+  ],
+  "params": {
+    "runs": "Les fragments à convertir. Un tableau vide donne une chaîne vide.",
+    "theme": "Le thème avec lequel les fragments ont été stylés. Seule la police de code en est lue."
+  },
+  "returns": "le Markdown représentant les fragments.",
+  "throws": {
+    "IllegalArgumentException": "aucun argument n'est passé, la valeur n'est pas un tableau, ou un élément n'est pas un fragment porteur de texte."
+  },
+  "examples": [
+    {
+      "title": "Retour au Markdown",
+      "body": "```javascript\nconst runs = convertMarkdownToRichText(\"**bold** and `code`\");\n\nconvertRichTextToMarkdown(runs); // => \"**bold** and `code`\"\n```"
+    },
+    {
+      "title": "Un lien conserve la mise en forme de son texte",
+      "body": "```javascript\nconvertRichTextToMarkdown([\n  { text: \"site\", style: { bold: true, link: { url: \"https://example.com\" } } }\n]); // => \"[**site**](https://example.com)\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertMarkdownToRichText"
+    },
+    {
+      "name": "convertRichTextToHtml"
+    }
+  ]
+}
