@@ -41,6 +41,17 @@
     opacity: 0.7;
   }
 
+  /* In the header the button is the help application's own, so everything the
+     floating pair sets has to come back off. */
+  .asu-in-header {
+    position: static;
+    margin: 0 2px;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    box-shadow: none;
+  }
+
   #asu-language-menu {
     position: fixed;
     right: 160px;
@@ -495,16 +506,85 @@
       }
     }
 
+    /**
+     * The header is drawn by the help application after the page loads, so the
+     * two controls wait for it and then sit beside the theme switcher, wearing
+     * its own classes. Until it appears — or if it never does — they stay the
+     * floating pair they were.
+     */
+    function mountInHeader() {
+      var switchers = document.querySelector(".wh-header__switchers");
+
+      if (!switchers || switchers.contains(languageButton)) {
+        return Boolean(switchers);
+      }
+
+      var theme = switchers.querySelector('[data-test="theme-switcher"]');
+
+      if (!theme) {
+        return false;
+      }
+
+      [open, languageButton].forEach(function (button) {
+        button.className = theme.className;
+        button.classList.add("asu-in-header");
+      });
+
+      switchers.insertBefore(open, theme);
+      switchers.insertBefore(languageButton, theme);
+
+      return true;
+    }
+
+    if (!mountInHeader()) {
+      var watcher = new MutationObserver(function () {
+        if (mountInHeader()) {
+          watcher.disconnect();
+        }
+      });
+
+      watcher.observe(document.body, { childList: true, subtree: true });
+
+      // A header that has not arrived within a few seconds is not coming.
+      window.setTimeout(function () {
+        watcher.disconnect();
+      }, 8000);
+    }
+
+    /**
+     * The menu hangs under its button wherever the button ended up.
+     */
+    function placeMenu() {
+      var rect = languageButton.getBoundingClientRect();
+
+      if (!languageButton.classList.contains("asu-in-header")) {
+        languageMenu.style.top = "";
+        languageMenu.style.right = "";
+
+        return;
+      }
+
+      languageMenu.style.top = rect.bottom + 8 + "px";
+      languageMenu.style.right = Math.max(8, window.innerWidth - rect.right) + "px";
+    }
+
     languageButton.addEventListener("click", function () {
       var opened = languageMenu.hasAttribute("open");
 
       if (opened) {
         languageMenu.removeAttribute("open");
       } else {
+        placeMenu();
         languageMenu.setAttribute("open", "");
       }
 
       languageButton.setAttribute("aria-expanded", String(!opened));
+    });
+
+    window.addEventListener("resize", function () {
+      if (languageMenu.hasAttribute("open")) {
+        placeMenu();
+      }
     });
 
     document.addEventListener("click", function (event) {
