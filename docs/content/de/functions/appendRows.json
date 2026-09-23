@@ -3,7 +3,8 @@
   "description": [
     "Wird ein Blatt übergeben, zählt das ganze Blatt und geschrieben wird ab Spalte 1; wird ein Bereich übergeben, zählen nur dessen Zellen und geschrieben wird auf seinen Spalten — Daten anderswo im Blatt bestimmen die Stelle dann nicht mehr.",
     "Nichts wird überschrieben: geschrieben wird eine Zeile unter der letzten mit Daten, wobei `0` und `false` als Daten gelten. Ist das Blatt zu kurz, erhält es weitere Zeilen. Anders als `Sheet#appendRow`, das eine Zeile nach der anderen nimmt, wird der ganze Block in einem Aufruf geschrieben.",
-    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.",
+    "Ein Fehler beim Schreiben — Dienst nicht verfügbar, Blatt gelöscht — kommt als der Fehler zurück, den der Dienst geworfen hat, samt Stack. Die Dokumentsperre wird in jedem Fall freigegeben."
   ],
   "params": {
     "target": "Das Blatt, an das angefügt wird, oder der Bereich, innerhalb dessen angefügt wird.",

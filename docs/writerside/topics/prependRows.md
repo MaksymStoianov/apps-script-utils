@@ -22,6 +22,8 @@ Room is made first and the values are written into it, so nothing already on the
 
 A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows.
 
+A failure inside the write — the service unavailable, the sheet gone — comes back as the error the service raised, with its stack. The document lock is released either way.
+
 ## Parameters
 
 | Parameter                     | Type                                                                       | Description                                                                                                                                        |

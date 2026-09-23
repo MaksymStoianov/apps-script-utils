@@ -2,7 +2,8 @@
   "summary": "Fügt Zeilen vor den Daten ein — im Blatt oder an einem Bereich.",
   "description": [
     "Zuerst wird Platz geschaffen, dann werden die Werte hineingeschrieben, sodass nichts Vorhandenes überschrieben wird. Bei einem Blatt stehen die Zeilen ganz oben; bei einem Bereich über dessen erster Zeile, und die Werte werden auf seinen Spalten geschrieben.",
-    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.",
+    "Ein Fehler beim Schreiben — Dienst nicht verfügbar, Blatt gelöscht — kommt als der Fehler zurück, den der Dienst geworfen hat, samt Stack. Die Dokumentsperre wird in jedem Fall freigegeben."
   ],
   "params": {
     "target": "Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.",

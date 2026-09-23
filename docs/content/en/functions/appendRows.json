@@ -3,7 +3,8 @@
   "description": [
     "Pass a sheet and the whole sheet is examined, with the write starting in column 1; pass a range and only its cells are, with the write landing on the range's columns — data elsewhere on the sheet no longer decides where the block goes.",
     "Nothing is overwritten: the write starts one row below the last one holding data, and `0` and `false` count as data. The sheet gains rows when it is too short for the result. Unlike `Sheet#appendRow`, which takes one row at a time, the whole block is written in a single call.",
-    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows.",
+    "A failure inside the write — the service unavailable, the sheet gone — comes back as the error the service raised, with its stack. The document lock is released either way."
   ],
   "params": {
     "target": "The sheet to append to, or the range to append within.",

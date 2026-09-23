@@ -141,8 +141,6 @@ export function appendRows(
     }
 
     sheet.getRange(rowStart, columnStart, numRows, numColumns).setValues(values);
-  } catch (err: unknown) {
-    throw err instanceof Error ? err.message : String(err);
   } finally {
     lock?.releaseLock();
   }

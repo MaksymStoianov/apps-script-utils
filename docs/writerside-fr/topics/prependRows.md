@@ -22,6 +22,8 @@ La place est faite d'abord, puis les valeurs y sont écrites : rien de ce qui se
 
 Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.
 
+Un échec pendant l'écriture — service indisponible, feuille supprimée — revient sous la forme de l'erreur levée par le service, avec sa pile. Le verrou du document est relâché dans tous les cas.
+
 ## Paramètres
 
 | Paramètre                       | Type                                                                       | Description                                                                                                                                   |

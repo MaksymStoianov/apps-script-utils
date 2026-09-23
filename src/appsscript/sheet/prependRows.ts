@@ -116,8 +116,6 @@ export function prependRows(
     }
 
     sheet.getRange(rowPosition, columnPosition, numRows, numColumns).setValues(values);
-  } catch (err: unknown) {
-    throw err instanceof Error ? err.message : String(err);
   } finally {
     lock?.releaseLock();
   }

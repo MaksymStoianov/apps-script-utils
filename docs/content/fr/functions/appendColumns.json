@@ -3,7 +3,8 @@
   "description": [
     "Passez une feuille et toute la feuille est examinée ; passez une plage et seules ses cellules le sont, ce qui empêche des données situées plus bas de décaler l'écriture vers la droite. La plage décide aussi des lignes écrites ; pour une feuille, c'est toujours la ligne 1.",
     "Les valeurs forment une matrice de lignes : un tableau par ligne, tous de même longueur. Rien n'est écrasé — l'écriture commence une colonne après la dernière qui contient des données, `0` et `false` comptant comme des données. La feuille gagne des colonnes si elle est trop étroite.",
-    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur."
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.",
+    "Un échec pendant l'écriture — service indisponible, feuille supprimée — revient sous la forme de l'erreur levée par le service, avec sa pile. Le verrou du document est relâché dans tous les cas."
   ],
   "params": {
     "target": "La feuille à laquelle ajouter, ou la plage dans laquelle ajouter.",

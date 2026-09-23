@@ -268,4 +268,21 @@ describe("appendColumns", () => {
       expect(written).toEqual([]);
     });
   });
+
+  describe("When the write fails", () => {
+    it("should let the original error through, not its message", () => {
+      const { sheet } = sheetMock(0, 0);
+
+      const boom = new Error("Service unavailable.");
+
+      // @ts-expect-error - the stand-in is narrower than the real Sheet
+      sheet.getRange = () => ({
+        setValues: () => {
+          throw boom;
+        }
+      });
+
+      expect(() => appendColumns(sheet, [["a"]])).toThrow(boom);
+    });
+  });
 });

@@ -3,7 +3,8 @@
   "description": [
     "Passez une feuille et toute la feuille est examinée, l'écriture commençant en colonne 1 ; passez une plage et seules ses cellules le sont, l'écriture se faisant sur ses colonnes — des données ailleurs dans la feuille ne décident plus de l'emplacement du bloc.",
     "Rien n'est écrasé : l'écriture commence une ligne sous la dernière qui contient des données, `0` et `false` comptant comme des données. La feuille gagne des lignes si elle est trop courte. Contrairement à `Sheet#appendRow`, qui prend une ligne à la fois, tout le bloc est écrit en un seul appel.",
-    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur."
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.",
+    "Un échec pendant l'écriture — service indisponible, feuille supprimée — revient sous la forme de l'erreur levée par le service, avec sa pile. Le verrou du document est relâché dans tous les cas."
   ],
   "params": {
     "target": "La feuille à laquelle ajouter, ou la plage dans laquelle ajouter.",
