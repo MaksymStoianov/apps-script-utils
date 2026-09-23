@@ -170,4 +170,21 @@ describe("prependRows", () => {
       expect(() => prependRows("A1:B2", [["a"]])).toThrow(InvalidSheetException);
     });
   });
+
+  describe("When the write fails", () => {
+    it("should let the original error through, not its message", () => {
+      const { sheet } = sheetMock(0, 0);
+
+      const boom = new Error("Service unavailable.");
+
+      // @ts-expect-error - the stand-in is narrower than the real Sheet
+      sheet.getRange = () => ({
+        setValues: () => {
+          throw boom;
+        }
+      });
+
+      expect(() => prependRows(sheet, [["a"]])).toThrow(boom);
+    });
+  });
 });

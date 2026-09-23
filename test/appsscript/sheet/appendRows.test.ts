@@ -251,4 +251,46 @@ describe("appendRows", () => {
       expect(() => appendRows("A1:B2", [["a"]])).toThrow(InvalidSheetException);
     });
   });
+
+  describe("When the write fails", () => {
+    it("should let the original error through, not its message", () => {
+      const { sheet } = sheetMock(0, 0);
+
+      const boom = new Error("Service unavailable.");
+
+      // @ts-expect-error - the stand-in is narrower than the real Sheet
+      sheet.getRange = () => ({
+        setValues: () => {
+          throw boom;
+        }
+      });
+
+      expect(() => appendRows(sheet, [["a"]])).toThrow(boom);
+    });
+
+    it("should release the lock even then", () => {
+      const released: number[] = [];
+
+      (globalThis as Mutable).LockService = {
+        getDocumentLock: () => ({
+          waitLock: () => undefined,
+          releaseLock: () => {
+            released.push(1);
+          }
+        })
+      };
+
+      const { sheet } = sheetMock(0, 0);
+
+      // @ts-expect-error - the stand-in is narrower than the real Sheet
+      sheet.getRange = () => ({
+        setValues: () => {
+          throw new Error("Service unavailable.");
+        }
+      });
+
+      expect(() => appendRows(sheet, [["a"]])).toThrow(Error);
+      expect(released).toHaveLength(1);
+    });
+  });
 });

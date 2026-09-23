@@ -2,7 +2,8 @@
   "summary": "Inserts rows before the data, on a sheet or at a range.",
   "description": [
     "Room is made first and the values are written into it, so nothing already on the sheet is overwritten. Given a sheet the rows go to its top; given a range they go above the range's first row and the values are written on its columns.",
-    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows.",
+    "A failure inside the write — the service unavailable, the sheet gone — comes back as the error the service raised, with its stack. The document lock is released either way."
   ],
   "params": {
     "target": "The sheet to insert into, or the range to insert at.",

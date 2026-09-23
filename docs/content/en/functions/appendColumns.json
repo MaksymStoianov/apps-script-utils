@@ -3,7 +3,8 @@
   "description": [
     "Pass a sheet and the whole sheet is examined; pass a range and only the cells inside it are, which is how data further down the sheet is kept from pushing the write to the right. A range also decides the rows written on — the sheet always starts at row 1.",
     "The values are a matrix of rows: one array per row, all of the same length. Nothing is overwritten — the write starts one column past the last one holding data, and `0` and `false` count as data. The sheet gains columns when it is too narrow for the result.",
-    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows.",
+    "A failure inside the write — the service unavailable, the sheet gone — comes back as the error the service raised, with its stack. The document lock is released either way."
   ],
   "params": {
     "target": "The sheet to append to, or the range to append within.",

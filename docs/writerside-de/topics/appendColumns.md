@@ -24,6 +24,8 @@ Die Werte sind eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang. Nic
 
 Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.
 
+Ein Fehler beim Schreiben — Dienst nicht verfügbar, Blatt gelöscht — kommt als der Fehler zurück, den der Dienst geworfen hat, samt Stack. Die Dokumentsperre wird in jedem Fall freigegeben.
+
 ## Parameter
 
 | Parameter                     | Typ                                                                        | Beschreibung                                                                           |
