@@ -47,6 +47,75 @@ export function writersideCfg(version) {
 `;
 }
 
+/**
+ * The settings every profile carries, indented to sit at `depth` levels.
+ */
+function settings(language, depth = 2) {
+  const pad = " ".repeat(depth * 4);
+
+  return [
+    `<web-root>${language.webRoot}</web-root>`,
+    `<noindex-content>false</noindex-content>`,
+    `<generate-canonicals>true</generate-canonicals>`,
+    `<locale-code>${language.locale}</locale-code>`,
+    `<product-web-url>https://github.com/MaksymStoianov/apps-script-utils</product-web-url>`,
+    `<og-image>${SITE}/images/banner-1280x640.jpg</og-image>`,
+    `<versions-switcher>${SITE}/help-versions.json</versions-switcher>`,
+    `<include-in-head>head.html</include-in-head>`,
+    `<include-after-body>search.html</include-after-body>`
+  ]
+    .map((line) => `${pad}${line}`)
+    .join("\n");
+}
+
+/**
+ * The build profile of the whole documentation solution.
+ *
+ * The builder opens `docs` as a solution of five modules, and a profile that
+ * sits inside a module is not read — canonical links, the og:image, the
+ * injected head and body and the footer were all silently dropped. This file
+ * lives at the solution root and names each instance the way the build does,
+ * `<module>/<instance>`.
+ */
+export function solutionBuildProfiles() {
+  const profiles = LANGUAGES.map((language) => {
+    const module = language.root.replace(/^docs\//, "");
+
+    return `    <build-profile instance="${module}/asu">
+        <variables>
+${settings(language, 3)
+  .replace(/<include-(in-head|after-body)>/g, (tag) => tag)
+  .replace(/>head\.html</g, `>${module}/head.html<`)
+  .replace(/>search\.html</g, `>${module}/search.html<`)}
+        </variables>
+
+        <footer>
+            <notice>${language.strings.aiNotice}</notice>
+            <copyright>2025–2026 Maksym Stoianov. Licensed under Apache-2.0.</copyright>
+            <link href="https://github.com/MaksymStoianov/apps-script-utils">GitHub</link>
+            <link href="https://www.npmjs.com/package/apps-script-utils">npm</link>
+${LANGUAGES.map((other) => `            <link href="${other.webRoot}/">${other.name}</link>`).join("\n")}
+            <link href="${ARTWORK}">Banner artwork: Daryna Mikhailenko</link>
+        </footer>
+
+        <sitemap priority="0.5" change-frequency="weekly"/>
+
+        <llms-txt/>
+    </build-profile>`;
+  });
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE buildprofiles SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-profiles.dtd">
+
+<buildprofiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
+
+${profiles.join("\n\n")}
+
+</buildprofiles>
+`;
+}
+
 export function buildProfiles(language) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE buildprofiles SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-profiles.dtd">
@@ -55,16 +124,18 @@ export function buildProfiles(language) {
                xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
 
     <variables>
-        <web-root>${language.webRoot}</web-root>
-        <noindex-content>false</noindex-content>
-        <generate-canonicals>true</generate-canonicals>
-        <locale-code>${language.locale}</locale-code>
-        <product-web-url>https://github.com/MaksymStoianov/apps-script-utils</product-web-url>
-        <og-image>${SITE}/images/banner-1280x640.jpg</og-image>
-        <versions-switcher>${SITE}/help-versions.json</versions-switcher>
-        <include-in-head>head.html</include-in-head>
-        <include-after-body>search.html</include-after-body>
+${settings(language)}
     </variables>
+
+    <!-- The same settings again, scoped to the instance. Nothing configured
+         here reached the published site — no canonicals, an empty og:image, and
+         neither include — so both forms are declared until a build says which
+         one this builder honours. Tracked in #539. -->
+    <build-profile instance="asu">
+        <variables>
+${settings(language, 3)}
+        </variables>
+    </build-profile>
 
     <footer>
         <notice>${language.strings.aiNotice}</notice>
