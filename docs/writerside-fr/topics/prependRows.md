@@ -2,9 +2,9 @@
 
 # prependRows
 
-<link-summary>Insère des lignes au-dessus des données déjà présentes sur une feuille.</link-summary>
+<link-summary>Insère des lignes avant les données — dans une feuille ou au niveau d'une plage.</link-summary>
 
-<web-summary>prependRows() — Insère des lignes au-dessus des données déjà présentes sur une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>prependRows() — Insère des lignes avant les données — dans une feuille ou au niveau d'une plage. apps-script-utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -12,43 +12,55 @@
 
 ```typescript
 function prependRows(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: PrependRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-De la place est faite en haut de la zone de données et la matrice y est écrite : rien de ce qui est déjà sur la feuille n'est écrasé. Les lignes figées restent où elles sont.
+La place est faite d'abord, puis les valeurs y sont écrites : rien de ce qui se trouve déjà dans la feuille n'est écrasé. Avec une feuille, les lignes vont tout en haut ; avec une plage, au-dessus de sa première ligne, et les valeurs sont écrites sur ses colonnes.
 
-Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur.
+Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.
 
 ## Paramètres
 
-| Paramètre                       | Type                                      | Description                                                                                        |
-| :------------------------------ | :---------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| `sheet`                         | `GoogleAppsScript.Spreadsheet.Sheet`      | La feuille où écrire.                                                                              |
-| `values`                        | `unknown`                                 | Une matrice de lignes : un tableau par ligne, toutes de même longueur.                             |
-| `options` _(facultatif)_ `= {}` | `PrependRowsOptions \| null \| undefined` | `afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début. |
+| Paramètre                       | Type                                                                       | Description                                                                                                                                   |
+| :------------------------------ | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                        | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille dans laquelle insérer, ou la plage au niveau de laquelle insérer.                                                                  |
+| `values`                        | `unknown`                                                                  | Une matrice de lignes : un tableau par ligne, tous de même longueur.                                                                          |
+| `options` _(facultatif)_ `= {}` | `PrependRowsOptions \| null \| undefined`                                  | `afterFrozenRows` insère sous les lignes figées plutôt qu'tout en haut. Une plage décide elle-même de la position : l'option n'y change rien. |
 
 ## Valeur de retour
 
-`GoogleAppsScript.Spreadsheet.Sheet` — la même feuille, ce qui permet d'enchaîner les appels.
+`GoogleAppsScript.Spreadsheet.Sheet` — la feuille, afin de chaîner les appels.
 
 ## Exceptions
 
-| Exception               | Condition                                                         |
-| :---------------------- | :---------------------------------------------------------------- |
-| `InvalidSheetException` | le premier argument n'est pas une feuille.                        |
-| `TypeError`             | les valeurs ne forment pas une matrice à lignes de même longueur. |
+| Exception                  | Condition                                                          |
+| :------------------------- | :----------------------------------------------------------------- |
+| `IllegalArgumentException` | aucun argument n'est passé.                                        |
+| `InvalidSheetException`    | le premier argument n'est ni une feuille ni une plage.             |
+| `TypeError`                | les valeurs ne forment pas une matrice de lignes de même longueur. |
 
 ## Exemples
 
-### Écriture
+### Insertion en haut d'une feuille
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
-prependRows(sheet, [["id", "name"]], { afterFrozenRows: true });
+prependRows(sheet, [
+  ["Name", "Email"],
+  ["Ada", "ada@example.com"]
+]);
+```
+
+### Insertion au niveau d'une plage
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+prependRows(sheet.getRange("B4:C13"), [["Name", "Email"]]);
 ```
 
 ## Voir aussi

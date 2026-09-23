@@ -1,23 +1,28 @@
 {
-  "summary": "Inserts one row above the data already on a sheet.",
+  "summary": "Inserts one row before the data, on a sheet or at a range.",
   "description": [
-    "`prependRows` with a single row. The values go in as a flat array of cells rather than as a matrix.",
+    "`prependRows` with a single row: room is made first, so nothing already there is overwritten. A sheet gets the row at its top; a range gets it immediately above its first row, with the values written on the range's columns.",
     "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
   ],
   "params": {
-    "sheet": "The sheet to write into.",
-    "values": "The cells of the single row.",
-    "options": "`afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top."
+    "target": "The sheet to insert into, or the range to insert at.",
+    "values": "A single row: a flat array, one value per column.",
+    "options": "`afterFrozenRows` inserts below the frozen rows instead of at the very top. A range decides the position itself, so the option does nothing there."
   },
-  "returns": "the same sheet, so calls can be chained.",
+  "returns": "the sheet, so calls can be chained.",
   "throws": {
-    "InvalidSheetException": "the first argument is not a sheet.",
-    "TypeError": "the values are not a matrix with rows of equal length."
+    "IllegalArgumentException": "no argument is passed.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range.",
+    "TypeError": "the values are not a flat array."
   },
   "examples": [
     {
-      "title": "Writing",
-      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRow(sheet, [\"id\", \"name\", \"email\"]);\n```"
+      "title": "Inserting at the top of a sheet",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRow(sheet, [\"Name\", \"Email\"]);\n```"
+    },
+    {
+      "title": "Inserting at a range",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRow(sheet.getRange(\"B4:C13\"), [\"Name\", \"Email\"]);\n```"
     }
   ],
   "seeAlso": [

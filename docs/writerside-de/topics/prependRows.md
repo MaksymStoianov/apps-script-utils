@@ -2,9 +2,9 @@
 
 # prependRows
 
-<link-summary>Fügt Zeilen über den bereits vorhandenen Daten eines Blattes ein.</link-summary>
+<link-summary>Fügt Zeilen vor den Daten ein — im Blatt oder an einem Bereich.</link-summary>
 
-<web-summary>prependRows() — Fügt Zeilen über den bereits vorhandenen Daten eines Blattes ein. apps-script-utils, Deutsch.</web-summary>
+<web-summary>prependRows() — Fügt Zeilen vor den Daten ein — im Blatt oder an einem Bereich. apps-script-utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -12,43 +12,55 @@
 
 ```typescript
 function prependRows(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: PrependRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-Am Kopf des Datenbereichs wird Platz geschaffen und die Matrix dort hineingeschrieben, vorhandene Daten werden also nicht überschrieben. Fixierte Zeilen bleiben, wo sie sind.
+Zuerst wird Platz geschaffen, dann werden die Werte hineingeschrieben, sodass nichts Vorhandenes überschrieben wird. Bei einem Blatt stehen die Zeilen ganz oben; bei einem Bereich über dessen erster Zeile, und die Werte werden auf seinen Spalten geschrieben.
 
 Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.
 
 ## Parameter
 
-| Parameter                     | Typ                                       | Beschreibung                                                                              |
-| :---------------------------- | :---------------------------------------- | :---------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet`      | Das Blatt, in das geschrieben wird.                                                       |
-| `values`                      | `unknown`                                 | Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.                             |
-| `options` _(optional)_ `= {}` | `PrependRowsOptions \| null \| undefined` | `afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben. |
+| Parameter                     | Typ                                                                        | Beschreibung                                                                                                                                   |
+| :---------------------------- | :------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.                                                                     |
+| `values`                      | `unknown`                                                                  | Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.                                                                                  |
+| `options` _(optional)_ `= {}` | `PrependRowsOptions \| null \| undefined`                                  | `afterFrozenRows` fügt unter den fixierten Zeilen ein statt ganz oben. Ein Bereich bestimmt die Stelle selbst, dort bewirkt die Option nichts. |
 
 ## Rückgabewert
 
-`GoogleAppsScript.Spreadsheet.Sheet` — dasselbe Blatt, damit sich Aufrufe verketten lassen.
+`GoogleAppsScript.Spreadsheet.Sheet` — das Blatt, sodass Aufrufe verkettet werden können.
 
 ## Ausnahmen
 
-| Ausnahme                | Bedingung                                             |
-| :---------------------- | :---------------------------------------------------- |
-| `InvalidSheetException` | das erste Argument ist kein Blatt.                    |
-| `TypeError`             | die Werte sind keine Matrix mit gleich langen Zeilen. |
+| Ausnahme                   | Bedingung                                                |
+| :------------------------- | :------------------------------------------------------- |
+| `IllegalArgumentException` | kein Argument übergeben wurde.                           |
+| `InvalidSheetException`    | das erste Argument weder ein Blatt noch ein Bereich ist. |
+| `TypeError`                | die Werte keine Matrix mit gleich langen Zeilen sind.    |
 
 ## Beispiele
 
-### Schreiben
+### Am Anfang eines Blatts einfügen
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
-prependRows(sheet, [["id", "name"]], { afterFrozenRows: true });
+prependRows(sheet, [
+  ["Name", "Email"],
+  ["Ada", "ada@example.com"]
+]);
+```
+
+### An einem Bereich einfügen
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+prependRows(sheet.getRange("B4:C13"), [["Name", "Email"]]);
 ```
 
 ## Siehe auch
