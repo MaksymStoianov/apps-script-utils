@@ -34,6 +34,14 @@ function widget(language) {
 const ARTWORK =
   "https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=footer&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit";
 
+/**
+ * The version on the instance line carries the `x-release-please-version`
+ * annotation, because `release-please` bumps `package.json` without knowing
+ * that five generated files repeat the version it writes. The annotation is
+ * what its generic updater looks for, so the release pull request rewrites
+ * these configurations along with the version, and the check that compares the
+ * generated files to the sources still passes once the release lands.
+ */
 export function writersideCfg(version) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ihp SYSTEM "https://resources.jetbrains.com/writerside/1.0/ihp.dtd">
@@ -42,7 +50,7 @@ export function writersideCfg(version) {
     <topics dir="topics" web-path="topics"/>
     <images dir="images" web-path="images"/>
     <snippets src="snippets"/>
-    <instance src="asu.tree" version="${version}"/>
+    <instance src="asu.tree" version="${version}"/> <!-- x-release-please-version -->
 </ihp>
 `;
 }
