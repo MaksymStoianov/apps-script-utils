@@ -21,6 +21,7 @@ import { requireNonEmptyString } from "../../lang";
  * @returns     {GoogleAppsScript.Script.Trigger | null} The trigger if the project has one with that id, otherwise `null`.
  * @throws      {@link EmptyStringException} If `id` is not a non-empty string. Whitespace alone counts as empty.
  * @see         [Class Trigger](https://developers.google.com/apps-script/reference/script/trigger)
+ * @see         [getTriggerById on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getTriggerById.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

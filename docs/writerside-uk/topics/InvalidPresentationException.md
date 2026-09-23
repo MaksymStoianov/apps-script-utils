@@ -40,6 +40,7 @@ try {
 
 - [`isException`](isException.md)
 - [`requireException`](requireException.md)
+- [Class Presentation](https://developers.google.com/apps-script/reference/slides/presentation)
 - [](reference-exception.md)
 
 ## Вихідний код

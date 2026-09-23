@@ -24,6 +24,7 @@ import { appendRows, type AppendRowsOptions } from "./appendRows";
  * @see         {@link appendRows}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
+ * @see         [appendRow on the documentation site](https://maksymstoianov.github.io/apps-script-utils/appendRow.html)
  * @since       1.0.0
  * @version     2.0.0
  * @environment `Google Apps Script`

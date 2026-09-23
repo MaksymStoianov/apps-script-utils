@@ -45,6 +45,8 @@ parseA1Notation("A1").sheetName; // => null
 - [`parseA1Notations`](parseA1Notations.md)
 - [`toA1Notation`](toA1Notation.md)
 - [`extractRangeFromA1Notation`](extractRangeFromA1Notation.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Source

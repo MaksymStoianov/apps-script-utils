@@ -46,6 +46,7 @@ isRichTextValue(null); // => false
 
 - [`nonRichTextValue`](nonRichTextValue.md)
 - [`requireRichTextValue`](requireRichTextValue.md)
+- [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
 - [](reference-appsscript.md)
 
 ## Source

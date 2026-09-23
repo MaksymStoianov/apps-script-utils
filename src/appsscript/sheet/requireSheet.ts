@@ -20,6 +20,7 @@ import { isSheet } from "./isSheet";
  * @see     {@link isSheet}
  * @see     {@link nonSheet}
  * @see     <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
+ * @see     [requireSheet on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireSheet.html)
  * @since   1.5.0
  * @version 1.0.0
  */

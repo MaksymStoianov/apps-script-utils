@@ -46,6 +46,7 @@ isSpreadsheet(null); // => false
 
 - [`nonSpreadsheet`](nonSpreadsheet.md)
 - [`requireSpreadsheet`](requireSpreadsheet.md)
+- [`Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
 - [](reference-appsscript.md)
 
 ## Исходный код

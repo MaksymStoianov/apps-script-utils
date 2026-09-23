@@ -65,6 +65,8 @@ prependColumn(sheet.getRange("C4:F13"), ["Name", "Ada"]);
 
 - [`prependColumns`](prependColumns.md)
 - [`appendColumn`](appendColumn.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Вихідний код

@@ -54,6 +54,7 @@ requireSlide(null); // throws SlideNotFoundException
 
 - [`isSlide`](isSlide.md)
 - [`nonSlide`](nonSlide.md)
+- [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
 - [](reference-appsscript.md)
 
 ## Source

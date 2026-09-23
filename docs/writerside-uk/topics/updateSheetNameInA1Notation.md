@@ -39,6 +39,8 @@ updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
 
 - [`extractSheetNameFromA1Notation`](extractSheetNameFromA1Notation.md)
 - [`isValidSheetName`](isValidSheetName.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Вихідний код

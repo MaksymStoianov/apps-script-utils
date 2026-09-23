@@ -13,6 +13,7 @@ import { ServiceIsNotDefinedException } from "../exception";
  * @param {string} [message="Service is not defined."] The error message to throw if the service is not defined.
  * @returns {T} The service object.
  * @throws {ServiceIsNotDefinedException} If the service is null or undefined.
+ * @see [requireService on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireService.html)
  * @since 1.5.0
  * @template T
  */

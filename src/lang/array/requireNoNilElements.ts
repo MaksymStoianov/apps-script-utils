@@ -26,6 +26,7 @@ import { isNil } from "../base";
  * @throws      {IllegalArgumentException} If an element is `null` or `undefined`, or if `values` is not a collection.
  * @see         {@link requireNonNull}
  * @see         {@link requireNonEmpty}
+ * @see         [requireNoNilElements on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNoNilElements.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

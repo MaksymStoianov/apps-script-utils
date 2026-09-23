@@ -17,6 +17,7 @@ const PLACEHOLDER: RegExp = /\{\{([^{}]*)\}\}/g;
  * const options = { onMissing: "empty", escape: escapeHtml };
  * ```
  *
+ * @see [MergeOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/MergeOptions.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -80,6 +81,7 @@ export interface MergeOptions {
  * @throws  {@link IllegalArgumentException} If `data` is not an object.
  * @see     {@link getPath}
  * @see     {@link escapeHtml}
+ * @see     [merge on the documentation site](https://maksymstoianov.github.io/apps-script-utils/merge.html)
  * @since   1.11.0
  * @version 1.0.0
  */

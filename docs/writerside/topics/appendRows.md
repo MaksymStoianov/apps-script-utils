@@ -70,6 +70,8 @@ appendRows(sheet.getRange("B1:C10"), [["Ada", "ada@example.com"]]);
 - [`appendRow`](appendRow.md)
 - [`prependRows`](prependRows.md)
 - [`requireConsistent2DArray`](requireConsistent2DArray.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Source

@@ -39,6 +39,7 @@ getColumnLetterByIndex(26); // => "AA"
 
 - [`getColumnIndexByLetter`](getColumnIndexByLetter.md)
 - [`getColumnLetterByPosition`](getColumnLetterByPosition.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Source

@@ -64,6 +64,8 @@ appendColumn(sheet.getRange("A1:D3"), ["status", "new", "new"]);
 
 - [`appendColumns`](appendColumns.md)
 - [`prependColumn`](prependColumn.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Code source

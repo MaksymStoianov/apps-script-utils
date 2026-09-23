@@ -15,6 +15,7 @@ import { now } from "./now";
  * ```
  *
  * @property {string} taskName - The name the task was started with; empty if none was given.
+ * @see [TaskInfo on the documentation site](https://maksymstoianov.github.io/apps-script-utils/TaskInfo.html)
  */
 export interface TaskInfo {
   readonly taskName: string;
@@ -61,6 +62,7 @@ const RULE = "-".repeat(45);
  * @class       StopWatch
  * @see         {@link TaskInfo}
  * @see         {@link now}
+ * @see         [StopWatch on the documentation site](https://maksymstoianov.github.io/apps-script-utils/StopWatch.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

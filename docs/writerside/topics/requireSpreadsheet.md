@@ -54,6 +54,7 @@ requireSpreadsheet(null); // throws InvalidSpreadsheetException
 
 - [`isSpreadsheet`](isSpreadsheet.md)
 - [`nonSpreadsheet`](nonSpreadsheet.md)
+- [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
 - [](reference-appsscript.md)
 
 ## Source

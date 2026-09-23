@@ -19,6 +19,7 @@ import { RuntimeException } from "../../RuntimeException";
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
+ * @see     [AdminDirectoryException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/AdminDirectoryException.html)
  * @since   1.5.0
  * @version 1.0.0
  */

@@ -18,6 +18,7 @@ import type { RichTextRun, TextStyle, Theme } from "./convertMarkdownToRichText"
  * @returns     {string} The Markdown representing the runs.
  * @throws      {@link IllegalArgumentException} If no argument is passed, or an element is not a run.
  * @see         {@link convertMarkdownToRichText}
+ * @see         [convertRichTextToMarkdown on the documentation site](https://maksymstoianov.github.io/apps-script-utils/convertRichTextToMarkdown.html)
  * @since       2.0.0
  * @version     2.0.0
  * @environment `Google Apps Script`

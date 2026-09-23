@@ -17,6 +17,7 @@ import { isException } from "./isException";
  * @returns {boolean} `true` if the value is not an instance of {@link Exception} (or a subclass); otherwise, `false`.
  * @see     {@link isException}
  * @see     {@link Exception}
+ * @see     [nonException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonException.html)
  * @since   1.11.0
  * @version 1.0.0
  */

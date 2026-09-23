@@ -25,6 +25,7 @@ import { isDouble } from "./isDouble";
  * @see      {@link isDouble}
  * @see      {@link nonDouble}
  * @see      {@link requireNonFloat}
+ * @see      [requireNonDouble on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonDouble.html)
  * @since    1.11.0
  * @version  1.0.0
  */

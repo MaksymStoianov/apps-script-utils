@@ -46,6 +46,7 @@ isPresentation(null); // => false
 
 - [`nonPresentation`](nonPresentation.md)
 - [`requirePresentation`](requirePresentation.md)
+- [Class Presentation](https://developers.google.com/apps-script/reference/slides/presentation)
 - [](reference-appsscript.md)
 
 ## Вихідний код

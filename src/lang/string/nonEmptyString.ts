@@ -23,6 +23,7 @@ import { isString } from "../base/isString";
  * @returns {string} The non-empty string.
  * @throws  {InvalidStringException} If the value is not a string or is empty.
  * @see     {@link requireNonEmptyString}
+ * @see     [nonEmptyString on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonEmptyString.html)
  * @since   1.5.0
  * @version 1.1.0
  */

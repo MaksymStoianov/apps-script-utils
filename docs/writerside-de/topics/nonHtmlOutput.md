@@ -48,6 +48,7 @@ nonHtmlOutput(output); // => false
 
 - [`isHtmlOutput`](isHtmlOutput.md)
 - [`requireHtmlOutput`](requireHtmlOutput.md)
+- [`HtmlOutput`](https://developers.google.com/apps-script/reference/html/html-output)
 - [](reference-appsscript.md)
 
 ## Quellcode

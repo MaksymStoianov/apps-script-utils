@@ -17,6 +17,8 @@ import { isSpreadsheet } from "./isSpreadsheet";
  * @param   {string} [message="Required Spreadsheet object is missing or invalid."] The error message to throw if the value is not a {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet}.
  * @returns {GoogleAppsScript.Spreadsheet.Spreadsheet} The {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet} object.
  * @throws  {InvalidSpreadsheetException} If the value is not a {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet}.
+ * @see [requireSpreadsheet on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireSpreadsheet.html)
+ * @see [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
  * @since   1.5.0
  */
 export function requireSpreadsheet(

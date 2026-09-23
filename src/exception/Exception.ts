@@ -17,6 +17,7 @@ import { isObject, isString } from "../lang";
  * ```
  *
  * @extends Error
+ * @see [Exception on the documentation site](https://maksymstoianov.github.io/apps-script-utils/Exception.html)
  * @since   1.0.0
  * @version 1.0.0
  */

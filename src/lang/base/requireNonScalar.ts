@@ -23,6 +23,7 @@ import { isScalar } from "./isScalar";
  * @see      {@link isScalar}
  * @see      {@link nonScalar}
  * @see      {@link requireScalar}
+ * @see      [requireNonScalar on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonScalar.html)
  * @since    1.11.0
  * @version  1.0.0
  */

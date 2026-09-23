@@ -13,6 +13,9 @@ import { isPresentation } from "./isPresentation";
  * @param {GoogleAppsScript.Slides.Presentation} presentation The presentation object.
  * @param {number} index The zero-based index of the slide.
  * @returns {GoogleAppsScript.Slides.Slide | null} The slide at the given index, or `null` if the index is out of bounds.
+ * @see [getSlideByIndex on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getSlideByIndex.html)
+ * @see [Class Presentation](https://developers.google.com/apps-script/reference/slides/presentation)
+ * @see [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
  * @since 1.5.0
  */
 export function getSlideByIndex(

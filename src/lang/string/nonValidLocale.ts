@@ -19,6 +19,7 @@ import { isValidLocale } from "./isValidLocale";
  * @param   {string} value - The string value to check.
  * @returns {boolean} `true` if the value is not a valid locale; otherwise, `false`.
  * @see     {@link isValidLocale}
+ * @see     [nonValidLocale on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonValidLocale.html)
  * @since   1.11.0
  * @version 1.0.0
  */

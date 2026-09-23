@@ -23,6 +23,7 @@ import { isValidPresentationId } from "./isValidPresentationId";
  * @throws      {@link IllegalArgumentException} If the value is not a valid presentation identifier.
  * @see         {@link isValidPresentationId}
  * @see         {@link nonValidPresentationId}
+ * @see         [requireValidPresentationId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidPresentationId.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

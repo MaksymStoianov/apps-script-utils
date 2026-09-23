@@ -70,6 +70,8 @@ prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 
 - [`prependColumn`](prependColumn.md)
 - [`appendColumns`](appendColumns.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Source

@@ -16,6 +16,7 @@ import { nonNil } from "./nonNil";
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if `value` is an `Object`, else `false`.
  * @see     {@link isObjectLike}
+ * @see     [isObject on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isObject.html)
  * @since   1.0.0
  * @version 1.1.0
  */

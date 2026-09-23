@@ -48,6 +48,7 @@ nonPresentation(presentation); // => false
 
 - [`isPresentation`](isPresentation.md)
 - [`requirePresentation`](requirePresentation.md)
+- [`Presentation`](https://developers.google.com/apps-script/reference/slides/presentation)
 - [](reference-appsscript.md)
 
 ## Source

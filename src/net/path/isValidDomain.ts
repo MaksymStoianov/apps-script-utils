@@ -15,6 +15,7 @@ import { isEmpty, isString } from "../../lang";
  *
  * @param       {string} domain - The string to check for valid domain name syntax.
  * @returns     {boolean} `true` if the string is a syntactically valid domain name; otherwise, `false`.
+ * @see [isValidDomain on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isValidDomain.html)
  * @environment `Google Apps Script`, `Browser`
  */
 export function isValidDomain(domain: string): domain is string {

@@ -25,6 +25,7 @@ import { isInteger } from "../number";
  * @returns  {Array<T[]>} A new array of chunks. Each chunk is an array of elements.
  * @throws   {@link TypeError} If `array` is not an array.
  * @throws   {@link TypeError} If `size` is not an integer.
+ * @see [chunk on the documentation site](https://maksymstoianov.github.io/apps-script-utils/chunk.html)
  * @since    1.0.0
  * @version  1.2.0
  */

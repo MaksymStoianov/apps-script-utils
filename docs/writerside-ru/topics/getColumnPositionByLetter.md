@@ -39,6 +39,7 @@ getColumnPositionByLetter("AA"); // => 27
 
 - [`getColumnLetterByPosition`](getColumnLetterByPosition.md)
 - [`getColumnIndexByLetter`](getColumnIndexByLetter.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Исходный код

@@ -13,6 +13,7 @@
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a boolean; otherwise, `false`.
  * @see     {@link nonBoolean}
+ * @see     [isBoolean on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isBoolean.html)
  * @since   1.0.0
  * @version 1.0.0
  */

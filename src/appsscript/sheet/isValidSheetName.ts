@@ -32,6 +32,7 @@ const RESERVED_NAME = "history";
  * @returns     {boolean} `true` if the value is a valid sheet name; otherwise, `false`.
  * @see         {@link nonValidSheetName}
  * @see         {@link requireValidSheetName}
+ * @see         [isValidSheetName on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isValidSheetName.html)
  * @since       1.5.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

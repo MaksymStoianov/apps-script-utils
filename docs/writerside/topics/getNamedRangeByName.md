@@ -48,6 +48,7 @@ range?.getRange().getValues();
 
 - [`getSheetById`](getSheetById.md)
 - [`parseA1Notation`](parseA1Notation.md)
+- [Class NamedRange](https://developers.google.com/apps-script/reference/spreadsheet/named-range)
 - [](reference-appsscript.md)
 
 ## Source

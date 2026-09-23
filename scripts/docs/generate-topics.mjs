@@ -758,6 +758,31 @@ function renderPage(entry, language, content, sourceContent, pages, thrownBy) {
     related.push(`- [\`${short}\`](${short}.md)${note}`);
   }
 
+  // A `@see` that points outside the documentation — Google's reference, most of
+  // the time — is not a topic, so the filter above drops it. It survives here as
+  // the link it is, minus the one that points back at this very page.
+  for (const raw of jsdoc.see) {
+    if (typeof raw !== "string") {
+      continue;
+    }
+
+    const link = htmlAnchors(raw, pages).match(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/);
+
+    if (!link) {
+      continue;
+    }
+
+    const [, label, url] = link;
+
+    if (url.endsWith(`/${entry.name}.html`) || seen.has(url)) {
+      continue;
+    }
+
+    seen.add(url);
+
+    related.push(`- [${label}](${url})`);
+  }
+
   lines.push(`## ${strings.seeAlso}`);
   lines.push("");
 

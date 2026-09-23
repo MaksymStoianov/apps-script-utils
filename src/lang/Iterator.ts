@@ -10,6 +10,7 @@
  *
  * @interface
  * @template  T - type of elements in the collection.
+ * @see [Iterator on the documentation site](https://maksymstoianov.github.io/apps-script-utils/Iterator.html)
  * @since     1.0.0
  * @version   1.0.0
  */

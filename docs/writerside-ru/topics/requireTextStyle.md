@@ -54,6 +54,7 @@ requireTextStyle(null); // throws IllegalArgumentException
 
 - [`isTextStyle`](isTextStyle.md)
 - [`nonTextStyle`](nonTextStyle.md)
+- [`TextStyle`](https://developers.google.com/apps-script/reference/spreadsheet/text-style)
 - [](reference-appsscript.md)
 
 ## Исходный код

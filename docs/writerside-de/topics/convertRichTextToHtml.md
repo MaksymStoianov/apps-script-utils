@@ -41,6 +41,7 @@ const html = convertRichTextToHtml(range.getRichTextValue());
 - [`escapeHtml`](escapeHtml.md)
 - [`isRichTextValue`](isRichTextValue.md)
 - [`highlightHtml`](highlightHtml.md)
+- [Class RichTextValue](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
 - [](reference-appsscript.md)
 
 ## Quellcode

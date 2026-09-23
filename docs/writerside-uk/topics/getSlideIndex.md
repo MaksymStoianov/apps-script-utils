@@ -47,6 +47,8 @@ getSlideIndex(presentation, slide); // => 2
 
 - [`getSlideByIndex`](getSlideByIndex.md)
 - [`isSlide`](isSlide.md)
+- [Class Presentation](https://developers.google.com/apps-script/reference/slides/presentation)
+- [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
 - [](reference-appsscript.md)
 
 ## Вихідний код

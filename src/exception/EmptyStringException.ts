@@ -19,6 +19,7 @@ import { RuntimeException } from "./RuntimeException";
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
+ * @see     [EmptyStringException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/EmptyStringException.html)
  * @since   1.0.0
  * @version 1.0.0
  */

@@ -16,6 +16,7 @@ import { hashCode } from "./index";
  *
  * @abstract
  * @class    Class
+ * @see [Class on the documentation site](https://maksymstoianov.github.io/apps-script-utils/Class.html)
  * @since    1.0.0
  * @version  1.0.0
  */

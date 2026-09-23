@@ -20,6 +20,7 @@ import { isEmpty } from "./isEmpty";
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is not "empty"; otherwise, `false`.
  * @see     {@link isEmpty}
+ * @see     [nonEmpty on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonEmpty.html)
  * @since   1.1.0
  * @version 1.0.0
  */

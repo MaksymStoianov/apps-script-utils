@@ -40,6 +40,7 @@ function describeShape(gridRange: GridRange): string {
  * @see         {@link isGridRangeSameDimensions}
  * @see         {@link nonGridRangeSameDimensions}
  * @see         {@link GridRange}
+ * @see         [requireGridRangeSameDimensions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireGridRangeSameDimensions.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

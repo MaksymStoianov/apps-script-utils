@@ -14,6 +14,7 @@ import { requireValidEmail } from "../../lang";
  *
  * @param       {string} email - The email address of the account that initiated the display of the user interface.
  * @returns     {boolean} `true` if the initiating account's email does not match the effective user's email, indicating a multi-account conflict; `false` otherwise.
+ * @see [checkMultipleAccount on the documentation site](https://maksymstoianov.github.io/apps-script-utils/checkMultipleAccount.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`

@@ -59,6 +59,9 @@ insertSchema(sheet, {
 
 - [`getSchema`](getSchema.md)
 - [`removeSchema`](removeSchema.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [Class DataValidation](https://developers.google.com/apps-script/reference/spreadsheet/data-validation)
 - [](reference-appsscript.md)
 
 ## Вихідний код

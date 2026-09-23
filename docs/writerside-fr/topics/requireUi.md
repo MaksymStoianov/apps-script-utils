@@ -54,6 +54,7 @@ requireUi(null); // throws IllegalArgumentException
 
 - [`isUi`](isUi.md)
 - [`nonUi`](nonUi.md)
+- [`Ui`](https://developers.google.com/apps-script/reference/base/ui)
 - [](reference-appsscript.md)
 
 ## Code source

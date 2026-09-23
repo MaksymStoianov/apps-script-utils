@@ -39,6 +39,7 @@ getColumnIndexByLetter("B"); // => 1
 
 - [`getColumnLetterByIndex`](getColumnLetterByIndex.md)
 - [`getColumnPositionByLetter`](getColumnPositionByLetter.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Source

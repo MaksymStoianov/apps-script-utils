@@ -24,6 +24,7 @@ import { isObject } from "./isObject";
  * @see      {@link isObject}
  * @see      {@link nonObject}
  * @see      {@link requireObject}
+ * @see      [requireNonObject on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonObject.html)
  * @since    1.11.0
  * @version  1.0.0
  */

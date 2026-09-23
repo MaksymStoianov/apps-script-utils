@@ -45,6 +45,8 @@ isGridRangeContainedIn(inner, outer); // => true
 - [`nonGridRangeContainedIn`](nonGridRangeContainedIn.md)
 - [`requireGridRangeContainedIn`](requireGridRangeContainedIn.md)
 - [`doGridRangesIntersect`](doGridRangesIntersect.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Code source

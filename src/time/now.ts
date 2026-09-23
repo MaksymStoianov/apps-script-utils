@@ -11,6 +11,7 @@
  * ```
  *
  * @returns {number} The current timestamp in milliseconds.
+ * @see [now on the documentation site](https://maksymstoianov.github.io/apps-script-utils/now.html)
  * @since   1.5.0
  * @version 1.0.0
  */

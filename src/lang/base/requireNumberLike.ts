@@ -24,6 +24,7 @@ import { isNumberLike } from "./isNumberLike";
  * @see     {@link isNumberLike}
  * @see     {@link nonNumberLike}
  * @see     {@link requireNumber}
+ * @see     [requireNumberLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNumberLike.html)
  * @since   1.11.0
  * @version 1.0.0
  */

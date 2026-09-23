@@ -21,6 +21,7 @@ import { isNumber } from "../base";
  * @returns {boolean} `true` if the value is a finite number with a fractional part, otherwise `false`.
  * @see     {@link isInteger}
  * @see     {@link isNumber}
+ * @see     [isFloat on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isFloat.html)
  * @since   1.11.0
  * @version 1.0.0
  */

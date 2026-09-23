@@ -51,6 +51,7 @@ requireSheet(null); // throws InvalidSheetException
 
 - [`isSheet`](isSheet.md)
 - [`nonSheet`](nonSheet.md)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Вихідний код

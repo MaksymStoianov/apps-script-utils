@@ -15,6 +15,7 @@ import { isBoolean } from "./isBoolean";
  * @template T
  * @param   {T | boolean} value - The value to check.
  * @returns {boolean} `true` if the value is not `boolean`; otherwise, `false`.
+ * @see [nonBoolean on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonBoolean.html)
  * @since   1.1.0
  * @version 1.0.0
  */

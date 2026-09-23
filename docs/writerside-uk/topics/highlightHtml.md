@@ -50,6 +50,10 @@ highlightHtml(range);
 
 - [`convertRichTextToHtml`](convertRichTextToHtml.md)
 - [`isRange`](isRange.md)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class TextStyle](https://developers.google.com/apps-script/reference/spreadsheet/text-style)
+- [Class RichTextValue](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
 - [](reference-appsscript.md)
 
 ## Вихідний код

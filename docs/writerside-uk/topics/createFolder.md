@@ -42,6 +42,7 @@ const folder = createFolder("reports/2026/january");
 
 - [`join`](join.md)
 - [`normalize`](normalize.md)
+- [Class Folder](https://developers.google.com/apps-script/reference/drive/folder)
 - [](reference-appsscript.md)
 
 ## Вихідний код

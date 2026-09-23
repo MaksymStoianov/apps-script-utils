@@ -18,6 +18,7 @@ import { isObjectLike } from "./isObjectLike";
  * @returns {boolean} `true` if `value` is not an `Object`, else `false`.
  * @see     {@link isObjectLike}
  * @see     {@link nonObject}
+ * @see     [nonObjectLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonObjectLike.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -19,6 +19,7 @@ import { isRegExp } from "./isRegExp";
  * @see      {@link isRegExp}
  * @see      {@link nonRegExp}
  * @see      {@link requireRegExp}
+ * @see      [requireNonRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonRegExp.html)
  * @since    1.11.0
  * @version  1.0.0
  */

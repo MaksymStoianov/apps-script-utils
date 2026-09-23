@@ -25,6 +25,7 @@ import { isObjectLike } from "./isObjectLike";
  * @see      {@link nonObjectLike}
  * @see      {@link requireObjectLike}
  * @see      {@link requireNonObject}
+ * @see      [requireNonObjectLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonObjectLike.html)
  * @since    1.11.0
  * @version  1.0.0
  */

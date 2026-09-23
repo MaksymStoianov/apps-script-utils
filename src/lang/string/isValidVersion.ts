@@ -17,6 +17,7 @@ const PATTERN = /^\d+$/;
  *
  * @param   {string} value - The string value to validate as a version.
  * @returns {boolean} `true` if the input is a valid version string; otherwise, `false`.
+ * @see [isValidVersion on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isValidVersion.html)
  * @since   1.0.0
  * @version 1.0.0
  */

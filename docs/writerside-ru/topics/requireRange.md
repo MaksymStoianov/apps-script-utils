@@ -51,6 +51,7 @@ requireRange(null); // throws InvalidRangeException
 
 - [`isRange`](isRange.md)
 - [`nonRange`](nonRange.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Исходный код

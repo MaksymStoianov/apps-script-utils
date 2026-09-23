@@ -37,6 +37,8 @@ if (isAdmin()) {
 - [`nonAdmin`](nonAdmin.md)
 - [`requireAdmin`](requireAdmin.md)
 - [`AdminDirectoryException`](AdminDirectoryException.md)
+- [`User`](https://developers.google.com/apps-script/reference/base/user)
+- [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory)
 - [](reference-appsscript.md)
 
 ## Quellcode

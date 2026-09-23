@@ -43,6 +43,8 @@ isCellGridRange(null); // => false
 
 - [`nonCellGridRange`](nonCellGridRange.md)
 - [`requireCellGridRange`](requireCellGridRange.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Вихідний код

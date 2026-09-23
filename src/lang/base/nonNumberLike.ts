@@ -18,6 +18,7 @@ import { isNumberLike } from "./isNumberLike";
  * @returns {boolean} `true` if the value is not a number; otherwise, `false`.
  * @see     {@link isNumberLike}
  * @see     {@link nonNumber}
+ * @see     [nonNumberLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonNumberLike.html)
  * @since   1.11.0
  * @version 1.0.0
  */

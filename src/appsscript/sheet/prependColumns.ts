@@ -40,6 +40,8 @@ import { isSheet } from "./isSheet";
  * @see         {@link prependColumn}
  * @see         {@link prependRows}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [prependColumns on the documentation site](https://maksymstoianov.github.io/apps-script-utils/prependColumns.html)
+ * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0
  * @version     2.0.0
  * @environment `Google Apps Script`

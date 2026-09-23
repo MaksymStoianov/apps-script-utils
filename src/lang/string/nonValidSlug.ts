@@ -15,6 +15,7 @@ import { isValidSlug } from "./isValidSlug";
  * @param   {string} value - The string value to check.
  * @returns {boolean} `true` if the value is not a valid slug; otherwise, `false`.
  * @see     {@link isValidSlug}
+ * @see     [nonValidSlug on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonValidSlug.html)
  * @since   1.11.0
  * @version 1.0.0
  */

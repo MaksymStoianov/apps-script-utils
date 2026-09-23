@@ -12,6 +12,7 @@ import { isString } from "../../lang";
  *
  * @param       {...string} paths - A variable number of string path segments to join.
  * @returns     {string} A new string representing the joined, normalized, and URL-encoded path.
+ * @see [join on the documentation site](https://maksymstoianov.github.io/apps-script-utils/join.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

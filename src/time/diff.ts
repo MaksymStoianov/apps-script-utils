@@ -125,6 +125,7 @@ function wholeUnits(left: Date, right: Date, unit: TimeUnit): number {
  * @throws  {@link IllegalArgumentException} If either value is not a valid `Date`.
  * @throws  {@link IllegalArgumentException} If `unit` is not a known time unit.
  * @see     {@link offset}
+ * @see     [diff on the documentation site](https://maksymstoianov.github.io/apps-script-utils/diff.html)
  * @since   1.11.0
  * @version 1.0.0
  */

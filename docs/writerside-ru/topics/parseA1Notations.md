@@ -38,6 +38,8 @@ parseA1Notations("A1:B2, C3").length; // => 2
 ## Смотрите также
 
 - [`parseA1Notation`](parseA1Notation.md)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Исходный код

@@ -54,6 +54,7 @@ requirePresentation(null); // throws InvalidPresentationException
 
 - [`isPresentation`](isPresentation.md)
 - [`nonPresentation`](nonPresentation.md)
+- [`Presentation`](https://developers.google.com/apps-script/reference/slides/presentation)
 - [](reference-appsscript.md)
 
 ## Source

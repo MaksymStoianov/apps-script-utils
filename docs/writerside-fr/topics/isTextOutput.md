@@ -46,6 +46,7 @@ isTextOutput(null); // => false
 
 - [`nonTextOutput`](nonTextOutput.md)
 - [`requireTextOutput`](requireTextOutput.md)
+- [`TextOutput`](https://developers.google.com/apps-script/reference/content/text-output)
 - [](reference-appsscript.md)
 
 ## Code source

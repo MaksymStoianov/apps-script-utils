@@ -19,6 +19,7 @@ import { isNumber } from "../base";
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is the `NaN` number, otherwise `false`.
  * @see     {@link isNumber}
+ * @see     [isNaN on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isNaN.html)
  * @since   1.11.0
  * @version 1.0.0
  */

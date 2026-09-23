@@ -21,6 +21,7 @@ import { RuntimeException } from "../../RuntimeException";
  * @see     {@link Error}
  * @see     {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet}
  * @see     [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
+ * @see     [InvalidSpreadsheetException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/InvalidSpreadsheetException.html)
  * @since   1.5.0
  * @version 1.0.0
  */

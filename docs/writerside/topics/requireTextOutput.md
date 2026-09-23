@@ -54,6 +54,7 @@ requireTextOutput(null); // throws IllegalArgumentException
 
 - [`isTextOutput`](isTextOutput.md)
 - [`nonTextOutput`](nonTextOutput.md)
+- [`TextOutput`](https://developers.google.com/apps-script/reference/content/text-output)
 - [](reference-appsscript.md)
 
 ## Source

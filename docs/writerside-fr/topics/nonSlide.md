@@ -48,6 +48,7 @@ nonSlide(slide); // => false
 
 - [`isSlide`](isSlide.md)
 - [`requireSlide`](requireSlide.md)
+- [`Slide`](https://developers.google.com/apps-script/reference/slides/slide)
 - [](reference-appsscript.md)
 
 ## Code source

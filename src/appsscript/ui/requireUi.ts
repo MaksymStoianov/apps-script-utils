@@ -26,6 +26,7 @@ import { isUi } from "./isUi";
  * @see         {@link isUi}
  * @see         {@link nonUi}
  * @see         <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a>
+ * @see         [requireUi on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireUi.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

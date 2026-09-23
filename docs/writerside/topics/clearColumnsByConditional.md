@@ -68,6 +68,8 @@ clearColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
 
 - [`deleteColumnsByConditional`](deleteColumnsByConditional.md)
 - [`clearRowsByConditional`](clearRowsByConditional.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Source
