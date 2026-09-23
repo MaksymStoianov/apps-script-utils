@@ -2,9 +2,9 @@
 
 # prependColumn
 
-<link-summary>Insère une colonne à gauche des données déjà présentes sur une feuille.</link-summary>
+<link-summary>Insère une colonne avant les données — dans une feuille ou au niveau d'une plage.</link-summary>
 
-<web-summary>prependColumn() — Insère une colonne à gauche des données déjà présentes sur une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>prependColumn() — Insère une colonne avant les données — dans une feuille ou au niveau d'une plage. apps-script-utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -12,43 +12,53 @@
 
 ```typescript
 function prependColumn(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values?: unknown[] | null,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-`prependColumns` pour une seule colonne. Les valeurs sont passées comme un tableau plat de cellules, de haut en bas.
+`prependColumns` avec une seule colonne : la place est faite d'abord, donc rien de ce qui existe n'est écrasé. Une feuille reçoit la colonne à son début ; une plage la reçoit juste avant sa première colonne, les valeurs étant écrites sur les lignes de la plage.
 
-Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur.
+Les valeurs se donnent comme un tableau plat de cellules, de haut en bas. Sans elles, une colonne vide est insérée.
+
+Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.
 
 ## Paramètres
 
-| Paramètre                       | Type                                 | Description                                                                                        |
-| :------------------------------ | :----------------------------------- | :------------------------------------------------------------------------------------------------- |
-| `sheet`                         | `GoogleAppsScript.Spreadsheet.Sheet` | La feuille où écrire.                                                                              |
-| `values` _(facultatif)_         | `unknown[] \| null`                  | Les cellules de l'unique ligne.                                                                    |
-| `options` _(facultatif)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début. |
+| Paramètre                       | Type                                                                       | Description                                                                                                                                          |
+| :------------------------------ | :------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                        | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille dans laquelle insérer, ou la plage au niveau de laquelle insérer.                                                                         |
+| `values` _(facultatif)_         | `unknown[] \| null`                                                        | Les cellules de la colonne, de haut en bas. Omettez-les pour une colonne vide.                                                                       |
+| `options` _(facultatif)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` insère après les colonnes figées plutôt qu'au tout début. Une plage décide elle-même de la position : l'option n'y change rien. |
 
 ## Valeur de retour
 
-`GoogleAppsScript.Spreadsheet.Sheet` — la même feuille, ce qui permet d'enchaîner les appels.
+`GoogleAppsScript.Spreadsheet.Sheet` — la feuille, afin de chaîner les appels.
 
 ## Exceptions
 
-| Exception               | Condition                                                         |
-| :---------------------- | :---------------------------------------------------------------- |
-| `InvalidSheetException` | le premier argument n'est pas une feuille.                        |
-| `TypeError`             | les valeurs ne forment pas une matrice à lignes de même longueur. |
+| Exception                  | Condition                                                               |
+| :------------------------- | :---------------------------------------------------------------------- |
+| `IllegalArgumentException` | des valeurs sont fournies mais ne forment pas un tableau plat non vide. |
+| `InvalidSheetException`    | le premier argument n'est ni une feuille ni une plage.                  |
 
 ## Exemples
 
-### Écriture
+### Insertion au début d'une feuille
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
-prependColumn(sheet, ["#", "1", "2"]);
+prependColumn(sheet, ["Name", "Ada", "Grace"]);
+```
+
+### Insertion au niveau d'une plage
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+prependColumn(sheet.getRange("C4:F13"), ["Name", "Ada"]);
 ```
 
 ## Voir aussi

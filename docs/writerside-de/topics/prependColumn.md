@@ -2,9 +2,9 @@
 
 # prependColumn
 
-<link-summary>Fügt eine Spalte links neben den bereits vorhandenen Daten eines Blattes ein.</link-summary>
+<link-summary>Fügt eine Spalte vor den Daten ein — im Blatt oder an einem Bereich.</link-summary>
 
-<web-summary>prependColumn() — Fügt eine Spalte links neben den bereits vorhandenen Daten eines Blattes ein. apps-script-utils, Deutsch.</web-summary>
+<web-summary>prependColumn() — Fügt eine Spalte vor den Daten ein — im Blatt oder an einem Bereich. apps-script-utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -12,43 +12,53 @@
 
 ```typescript
 function prependColumn(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values?: unknown[] | null,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-`prependColumns` für eine einzelne Spalte. Die Werte kommen als flaches Array von Zellen, von oben nach unten.
+`prependColumns` mit einer einzigen Spalte: zuerst wird Platz geschaffen, sodass nichts Vorhandenes überschrieben wird. Ein Blatt bekommt die Spalte an seinen Anfang; ein Bereich unmittelbar vor seine erste Spalte, wobei die Werte auf den Zeilen des Bereichs landen.
+
+Die Werte kommen als flaches Array von Zellen, von oben nach unten. Ohne sie wird eine leere Spalte eingefügt.
 
 Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.
 
 ## Parameter
 
-| Parameter                     | Typ                                  | Beschreibung                                                                              |
-| :---------------------------- | :----------------------------------- | :---------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet` | Das Blatt, in das geschrieben wird.                                                       |
-| `values` _(optional)_         | `unknown[] \| null`                  | Die Zellen der einen Zeile.                                                               |
-| `options` _(optional)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben. |
+| Parameter                     | Typ                                                                        | Beschreibung                                                                                                                                             |
+| :---------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.                                                                               |
+| `values` _(optional)_         | `unknown[] \| null`                                                        | Die Zellen der einen Spalte, von oben nach unten. Ohne Angabe entsteht eine leere Spalte.                                                                |
+| `options` _(optional)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` fügt hinter den fixierten Spalten ein statt ganz am Anfang. Ein Bereich bestimmt die Stelle selbst, dort bewirkt die Option nichts. |
 
 ## Rückgabewert
 
-`GoogleAppsScript.Spreadsheet.Sheet` — dasselbe Blatt, damit sich Aufrufe verketten lassen.
+`GoogleAppsScript.Spreadsheet.Sheet` — das Blatt, sodass Aufrufe verkettet werden können.
 
 ## Ausnahmen
 
-| Ausnahme                | Bedingung                                             |
-| :---------------------- | :---------------------------------------------------- |
-| `InvalidSheetException` | das erste Argument ist kein Blatt.                    |
-| `TypeError`             | die Werte sind keine Matrix mit gleich langen Zeilen. |
+| Ausnahme                   | Bedingung                                                         |
+| :------------------------- | :---------------------------------------------------------------- |
+| `IllegalArgumentException` | Werte übergeben wurden, die kein nicht-leeres flaches Array sind. |
+| `InvalidSheetException`    | das erste Argument weder ein Blatt noch ein Bereich ist.          |
 
 ## Beispiele
 
-### Schreiben
+### Am Anfang eines Blatts einfügen
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
-prependColumn(sheet, ["#", "1", "2"]);
+prependColumn(sheet, ["Name", "Ada", "Grace"]);
+```
+
+### An einem Bereich einfügen
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+prependColumn(sheet.getRange("C4:F13"), ["Name", "Ada"]);
 ```
 
 ## Siehe auch

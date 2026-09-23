@@ -24,26 +24,26 @@ import { prependColumns } from "./prependColumns";
  * prependColumn(sheet); // one empty column at the start
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The sheet to insert into.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet to insert into, or the range to insert at: the column appears before the range's first column and the values are written on its rows.
  * @param       {unknown[]} [values] - A 1D array holding the column, one entry per row.
  * @param       {Options | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The sheet.
  * @throws      {@link IllegalArgumentException} If `values` is given and is not a non-empty 1D array.
- * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
+ * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link prependColumns}
  * @see         {@link prependRow}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @since       1.11.0
- * @version     1.0.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  */
 export function prependColumn(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values?: unknown[] | null,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet {
   if (isNil(values)) {
-    return prependColumns(sheet, 1, null, options);
+    return prependColumns(target, 1, null, options);
   }
 
   if (!isArray(values) || values.length === 0) {
@@ -53,7 +53,7 @@ export function prependColumn(
   }
 
   return prependColumns(
-    sheet,
+    target,
     1,
     values.map((value: unknown): unknown[] => [value]),
     options
