@@ -193,7 +193,11 @@ generated page already.
 
 The site is versioned. `writerside.cfg` is generated for every language and
 carries the version from `package.json`, so the header names the release it was
-built from, and `buildprofiles.xml` points the switcher at `help-versions.json`
+built from. That line ends with an `x-release-please-version` annotation and the
+five files are listed as `extra-files` in `release-please-config.json`, because
+`release-please` would otherwise bump the version and leave the configurations a
+release behind — which fails `npm run docs:check` on `main` and takes the deploy
+with it. `buildprofiles.xml` points the switcher at `help-versions.json`
 at the site root. The deploy publishes each build twice — at the root as the
 current version, and under `/<version>/` as an archive — keeping the zips in a
 `docs-archive` branch, because Pages replaces everything it serves on every
@@ -211,8 +215,9 @@ after all five builds sit in one directory — that is when it can know which
 pages exist in which language.
 
 The languages, and every label around the prose, are declared in
-`scripts/docs/languages.mjs`. Adding a language is a change to that file and a
-new matrix entry in `.github/workflows/docs.yml`; the rest follows.
+`scripts/docs/languages.mjs`. Adding a language is a change to that file, a new
+matrix entry in `.github/workflows/docs.yml` and its `writerside.cfg` in the
+`extra-files` of `release-please-config.json`; the rest follows.
 
 ## 7. Parity is not attributed
 

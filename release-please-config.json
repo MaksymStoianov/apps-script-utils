@@ -4,7 +4,14 @@
     ".": {
       "release-type": "node",
       "package-name": "apps-script-utils",
-      "changelog-path": "CHANGELOG.md"
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        "docs/writerside/writerside.cfg",
+        "docs/writerside-ru/writerside.cfg",
+        "docs/writerside-uk/writerside.cfg",
+        "docs/writerside-de/writerside.cfg",
+        "docs/writerside-fr/writerside.cfg"
+      ]
     }
   }
 }
