@@ -1,0 +1,33 @@
+{
+  "summary": "Перетворює стилізовані фрагменти тексту назад на Markdown.",
+  "description": [
+    "Обернена функція до [`convertMarkdownToRichText`](convertMarkdownToRichText.md): жирний, курсив і закреслення знову стають своїми маркерами, фрагмент із посиланням — `[текст](url)`, а фрагмент, набраний шрифтом коду з теми, — кодом у зворотних лапках.",
+    "Фрагмент коду не має власної ознаки — він розпізнається за шрифтом, — тому передавайте в обидва боки ту саму тему, і пара відпрацює без втрат. Фрагменти виводяться поспіль, у переданому порядку, без злиття сусідів з однаковим стилем, тож глибоко вкладене оформлення може повернутися записаним інакше, але читатиметься так само."
+  ],
+  "params": {
+    "runs": "Фрагменти для перетворення. Порожній масив дає порожній рядок.",
+    "theme": "Тема, якою було стилізовано фрагменти. З неї читається лише шрифт коду."
+  },
+  "returns": "Markdown, що відповідає фрагментам.",
+  "throws": {
+    "IllegalArgumentException": "не передано жодного аргументу, значення не є масивом або елемент не є фрагментом із текстом."
+  },
+  "examples": [
+    {
+      "title": "Назад у Markdown",
+      "body": "```javascript\nconst runs = convertMarkdownToRichText(\"**bold** and `code`\");\n\nconvertRichTextToMarkdown(runs); // => \"**bold** and `code`\"\n```"
+    },
+    {
+      "title": "Посилання зберігає оформлення тексту",
+      "body": "```javascript\nconvertRichTextToMarkdown([\n  { text: \"site\", style: { bold: true, link: { url: \"https://example.com\" } } }\n]); // => \"[**site**](https://example.com)\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertMarkdownToRichText"
+    },
+    {
+      "name": "convertRichTextToHtml"
+    }
+  ]
+}
