@@ -2,9 +2,9 @@
 
 # appendColumn
 
-<link-summary>Adds one column to the right of the data already on a sheet.</link-summary>
+<link-summary>Adds one column after the last column that holds data.</link-summary>
 
-<web-summary>appendColumn() — Adds one column to the right of the data already on a sheet. apps-script-utils, English.</web-summary>
+<web-summary>appendColumn() — Adds one column after the last column that holds data. apps-script-utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -12,43 +12,52 @@
 
 ```typescript
 function appendColumn(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-`appendColumns` with a single column. The values go in as a flat array of cells, top to bottom.
+The values fill the column downwards: one value per row. A sheet is examined whole and the column is written from row 1; a range is examined only inside itself and the column is written on its rows, right of the last column of the range that holds data.
 
-A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows.
+It is `appendColumns` with one column: the same guards, the same growth of the sheet when the result would not fit, and the same rule that a cell whose text starts with `=` becomes a formula.
 
 ## Parameters
 
-| Parameter                     | Type                                 | Description                                                                                       |
-| :---------------------------- | :----------------------------------- | :------------------------------------------------------------------------------------------------ |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet` | The sheet to write into.                                                                          |
-| `values`                      | `unknown`                            | The cells of the single row.                                                                      |
-| `options` _(optional)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top. |
+| Parameter                     | Type                                                                       | Description                                                                                   |
+| :---------------------------- | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet to append to, or the range to append within.                                        |
+| `values`                      | `unknown`                                                                  | A single column: a flat array, one value per row.                                             |
+| `options` _(optional)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` starts the write past the frozen columns when the data ends before them. |
 
 ## Returns
 
-`GoogleAppsScript.Spreadsheet.Sheet` — the same sheet, so calls can be chained.
+`GoogleAppsScript.Spreadsheet.Sheet` — the sheet, so calls can be chained.
 
 ## Throws
 
-| Exception               | Condition                                              |
-| :---------------------- | :----------------------------------------------------- |
-| `InvalidSheetException` | the first argument is not a sheet.                     |
-| `TypeError`             | the values are not a matrix with rows of equal length. |
+| Exception                  | Condition                                          |
+| :------------------------- | :------------------------------------------------- |
+| `IllegalArgumentException` | no argument is passed.                             |
+| `InvalidSheetException`    | the first argument is neither a sheet nor a range. |
+| `TypeError`                | the values are not a flat array.                   |
 
 ## Examples
 
-### Writing
+### Appending to a sheet
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
 appendColumn(sheet, ["status", "new", "new"]);
+```
+
+### Appending within a range
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+appendColumn(sheet.getRange("A1:D3"), ["status", "new", "new"]);
 ```
 
 ## See also
