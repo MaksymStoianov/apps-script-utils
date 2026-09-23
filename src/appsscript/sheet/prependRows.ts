@@ -39,7 +39,7 @@ export interface PrependRowsOptions {
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
- * @see         [prependRows on the documentation site](https://maksymstoianov.github.io/apps-script-utils/prependRows.html)
+ * @see         [prependRows on the documentation site](https://maksymstoianov.github.io/apps-script-utils/prependrows.html)
  * @since       1.0.0
  * @version     2.0.0
  * @environment `Google Apps Script`

@@ -103,7 +103,7 @@ const defaultTheme: Required<Theme> = {
  * @see         {@link GoogleAppsScript.Spreadsheet.Range|Range}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
- * @see         [highlightHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/highlightHtml.html)
+ * @see         [highlightHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/highlighthtml.html)
  * @see         [Class TextStyle](https://developers.google.com/apps-script/reference/spreadsheet/text-style)
  * @see         [Class RichTextValue](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
  * @since       1.0.0

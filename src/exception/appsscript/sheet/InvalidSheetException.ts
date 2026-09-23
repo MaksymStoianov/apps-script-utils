@@ -21,7 +21,7 @@ import { RuntimeException } from "../../RuntimeException";
  * @see     {@link Error}
  * @see     {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see     [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
- * @see     [InvalidSheetException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/InvalidSheetException.html)
+ * @see     [InvalidSheetException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/invalidsheetexception.html)
  * @since   1.5.0
  * @version 1.0.0
  */

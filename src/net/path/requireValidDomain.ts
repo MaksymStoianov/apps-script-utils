@@ -22,7 +22,7 @@ import { isValidDomain } from "./isValidDomain";
  * @throws  {@link IllegalArgumentException} If the value is not a valid domain name.
  * @see     {@link isValidDomain}
  * @see     {@link nonValidDomain}
- * @see     [requireValidDomain on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidDomain.html)
+ * @see     [requireValidDomain on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirevaliddomain.html)
  * @since   1.11.0
  * @version 1.0.0
  */

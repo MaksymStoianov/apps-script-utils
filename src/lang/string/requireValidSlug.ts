@@ -22,7 +22,7 @@ import { requireNonEmptyString } from "./requireNonEmptyString";
  * @throws  {@link IllegalArgumentException} If the value is not a valid slug.
  * @see     {@link isValidSlug}
  * @see     {@link nonValidSlug}
- * @see     [requireValidSlug on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidSlug.html)
+ * @see     [requireValidSlug on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirevalidslug.html)
  * @since   1.11.0
  * @version 1.0.0
  */

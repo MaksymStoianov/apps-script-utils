@@ -15,7 +15,7 @@ import { getColumnLetterByIndex } from "./getColumnLetterByIndex";
  * @see         {@link getColumnPositionByLetter}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
- * @see         [getColumnLetterByPosition on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getColumnLetterByPosition.html)
+ * @see         [getColumnLetterByPosition on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getcolumnletterbyposition.html)
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

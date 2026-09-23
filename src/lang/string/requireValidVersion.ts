@@ -25,7 +25,7 @@ import { requireNonEmptyString } from "./requireNonEmptyString";
  * @see     {@link isValidVersion}
  * @see     {@link nonValidVersion}
  * @see     {@link versionCompare}
- * @see     [requireValidVersion on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidVersion.html)
+ * @see     [requireValidVersion on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirevalidversion.html)
  * @since   1.11.0
  * @version 1.0.0
  */

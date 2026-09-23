@@ -12,7 +12,7 @@ import { RepositoryIsNotDefinedException } from "../exception";
  * @param {string} [message="Repository is not defined."] The error message to throw if the repository is not defined.
  * @returns {T} The repository object.
  * @throws {RepositoryIsNotDefinedException} If the repository is null or undefined.
- * @see [requireRepository on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireRepository.html)
+ * @see [requireRepository on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirerepository.html)
  * @since 1.5.0
  * @template T
  */

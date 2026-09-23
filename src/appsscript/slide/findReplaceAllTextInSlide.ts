@@ -15,7 +15,7 @@ import { isSlide } from "./isSlide";
  * @param {string} replaceText The text to replace with.
  * @param {boolean} [matchCase=true] Whether to match case.
  * @returns {number} The number of replacements made.
- * @see [findReplaceAllTextInSlide on the documentation site](https://maksymstoianov.github.io/apps-script-utils/findReplaceAllTextInSlide.html)
+ * @see [findReplaceAllTextInSlide on the documentation site](https://maksymstoianov.github.io/apps-script-utils/findreplacealltextinslide.html)
  * @see [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
  * @since 1.5.0
  */

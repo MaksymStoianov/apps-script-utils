@@ -22,7 +22,7 @@ import { isSymbol } from "./isSymbol";
  * @see      {@link isSymbol}
  * @see      {@link nonSymbol}
  * @see      {@link requireSymbol}
- * @see      [requireNonSymbol on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonSymbol.html)
+ * @see      [requireNonSymbol on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonsymbol.html)
  * @since    1.11.0
  * @version  1.0.0
  */

@@ -25,7 +25,7 @@ const PATTERN = /^[a-zA-Z0-9-_]{25,}$/;
  * @see         {@link nonValidSpreadsheetId}
  * @see         {@link requireValidSpreadsheetId}
  * @see         {@link isValidPresentationId}
- * @see         [isValidSpreadsheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isValidSpreadsheetId.html)
+ * @see         [isValidSpreadsheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isvalidspreadsheetid.html)
  * @since       1.5.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

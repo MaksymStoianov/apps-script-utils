@@ -15,7 +15,7 @@ import { isObject } from "../../lang";
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is an <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a> object, `false` otherwise.
  * @see         <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a>
- * @see         [isUi on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isUi.html)
+ * @see         [isUi on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isui.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`

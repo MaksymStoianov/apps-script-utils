@@ -16,7 +16,7 @@ import { isEmpty, isString } from "../base";
  * @throws  {@link EmptyStringException}
  * @see     {@link escapeHtml}
  * @see     {@link escapeXml}
- * @see     [escapeRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/escapeRegExp.html)
+ * @see     [escapeRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/escaperegexp.html)
  * @since   1.0.0
  * @version 1.0.0
  */

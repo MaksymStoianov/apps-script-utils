@@ -126,7 +126,7 @@ function selectRows(
  * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link clearRowsByConditional}
  * @see         {@link deleteColumnsByConditional}
- * @see         [deleteRowsByConditional on the documentation site](https://maksymstoianov.github.io/apps-script-utils/deleteRowsByConditional.html)
+ * @see         [deleteRowsByConditional on the documentation site](https://maksymstoianov.github.io/apps-script-utils/deleterowsbyconditional.html)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0

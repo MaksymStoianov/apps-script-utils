@@ -24,7 +24,7 @@ import { parseA1Notation } from "./parseA1Notation";
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
- * @see         [extractSheetNameFromA1Notation on the documentation site](https://maksymstoianov.github.io/apps-script-utils/extractSheetNameFromA1Notation.html)
+ * @see         [extractSheetNameFromA1Notation on the documentation site](https://maksymstoianov.github.io/apps-script-utils/extractsheetnamefroma1notation.html)
  * @since       1.6.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

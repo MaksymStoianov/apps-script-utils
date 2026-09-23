@@ -18,7 +18,7 @@ import { isArray } from "./isArray";
  * @throws   {@link IllegalArgumentException} If the value is not an `Array`.
  * @see      {@link isArray}
  * @see      {@link nonArray}
- * @see      [requireArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireArray.html)
+ * @see      [requireArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirearray.html)
  * @since    1.11.0
  * @version  1.0.0
  */

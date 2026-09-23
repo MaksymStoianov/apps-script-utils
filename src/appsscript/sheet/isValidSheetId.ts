@@ -22,7 +22,7 @@ import { isCountable } from "../../lang";
  * @see         {@link nonValidSheetId}
  * @see         {@link requireValidSheetId}
  * @see         {@link getSheetById}
- * @see         [isValidSheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isValidSheetId.html)
+ * @see         [isValidSheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isvalidsheetid.html)
  * @since       1.5.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

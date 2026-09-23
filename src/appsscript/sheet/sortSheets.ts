@@ -19,7 +19,7 @@ import { isSpreadsheet } from "./isSpreadsheet";
  * @throws      {@link IllegalArgumentException}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
- * @see         [sortSheets on the documentation site](https://maksymstoianov.github.io/apps-script-utils/sortSheets.html)
+ * @see         [sortSheets on the documentation site](https://maksymstoianov.github.io/apps-script-utils/sortsheets.html)
  * @see         [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
  * @since       1.5.0
  * @version     1.0.0

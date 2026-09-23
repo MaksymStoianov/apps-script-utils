@@ -22,7 +22,7 @@ const SCHEME_PATTERN: RegExp = /^(https?|ftp):\/\//i;
  *
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is a valid URL string; otherwise, `false`.
- * @see [isUrl on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isUrl.html)
+ * @see [isUrl on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isurl.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

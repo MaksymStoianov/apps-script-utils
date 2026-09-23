@@ -19,7 +19,7 @@ import { isNil } from "./isNil";
  * @throws   {NullPointerException}
  * @see      {@link nonNull}
  * @see      {@link isNull}
- * @see      [requireNonNull on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonNull.html)
+ * @see      [requireNonNull on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonnull.html)
  * @since    1.0.0
  * @version  1.0.0
  */

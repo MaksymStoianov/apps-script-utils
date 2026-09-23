@@ -22,7 +22,7 @@ import { isNull } from "./isNull";
  * @see     {@link isNull}
  * @see     {@link nonNull}
  * @see     {@link requireNonNull}
- * @see     [requireNull on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNull.html)
+ * @see     [requireNull on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenull.html)
  * @since   1.11.0
  * @version 1.0.0
  */

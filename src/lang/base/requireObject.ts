@@ -22,7 +22,7 @@ import { isObject } from "./isObject";
  * @throws  {@link IllegalArgumentException} If the value is not an `Object`.
  * @see     {@link isObject}
  * @see     {@link nonObject}
- * @see     [requireObject on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireObject.html)
+ * @see     [requireObject on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireobject.html)
  * @since   1.11.0
  * @version 1.0.0
  */

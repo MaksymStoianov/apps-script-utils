@@ -25,7 +25,7 @@ import { appendColumns, type Options } from "./appendColumns";
  * @see         {@link appendColumns}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
- * @see         [appendColumn on the documentation site](https://maksymstoianov.github.io/apps-script-utils/appendColumn.html)
+ * @see         [appendColumn on the documentation site](https://maksymstoianov.github.io/apps-script-utils/appendcolumn.html)
  * @since       1.0.0
  * @version     2.0.0
  * @environment `Google Apps Script`

@@ -23,7 +23,7 @@ import type { GridRange } from "./types";
  * @see         {@link isGridRangeContainedIn}
  * @see         {@link requireGridRangeContainedIn}
  * @see         {@link GridRange}
- * @see         [nonGridRangeContainedIn on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonGridRangeContainedIn.html)
+ * @see         [nonGridRangeContainedIn on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nongridrangecontainedin.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

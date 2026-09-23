@@ -23,7 +23,7 @@ import { isString } from "./isString";
  * @see      {@link isString}
  * @see      {@link nonString}
  * @see      {@link requireString}
- * @see      [requireNonString on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonString.html)
+ * @see      [requireNonString on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonstring.html)
  * @since    1.11.0
  * @version  1.0.0
  */

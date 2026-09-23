@@ -153,13 +153,32 @@ for (const file of listSources(SRC).sort()) {
 
     const text = original.slice(comment.getStart(source, false), comment.getEnd());
 
-    const wanted = new Map([[`${name} on the documentation site`, `${SITE}/${name}.html`]]);
+    // Writerside publishes every page in lower case, and GitHub Pages is
+    // case-sensitive, so the link has to be lower case or it 404s.
+    const page = `${SITE}/${name.toLowerCase()}.html`;
+
+    const wanted = new Map([[`${name} on the documentation site`, page]]);
 
     for (const [label, url] of referencesOf(statement.getText(source))) {
       wanted.set(label, url);
     }
 
-    const missing = [...wanted].filter(([, url]) => !text.includes(url));
+    // A link written before the casing was fixed is corrected in place rather
+    // than left beside its replacement.
+    const corrected = text.replace(
+      new RegExp(`${SITE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/${name}\\.html`, "g"),
+      page
+    );
+
+    const missing = [...wanted].filter(([, url]) => !corrected.includes(url));
+
+    if (corrected !== text) {
+      edits.push({
+        start: comment.getStart(source, false),
+        end: comment.getEnd(),
+        text: corrected
+      });
+    }
 
     if (missing.length === 0) {
       continue;
@@ -171,7 +190,7 @@ for (const file of listSources(SRC).sort()) {
         1
     );
 
-    const commentLines = text.split("\n");
+    const commentLines = corrected.split("\n");
 
     // A `@see` belongs with the other `@see` lines; failing that, before the
     // bookkeeping tags at the end of the block.
@@ -205,11 +224,19 @@ for (const file of listSources(SRC).sort()) {
 
     links += missing.length;
 
-    edits.push({
+    const at = edits.findIndex((edit) => edit.start === comment.getStart(source, false));
+
+    const replacement = {
       start: comment.getStart(source, false),
       end: comment.getEnd(),
       text: commentLines.join("\n")
-    });
+    };
+
+    if (at === -1) {
+      edits.push(replacement);
+    } else {
+      edits[at] = replacement;
+    }
   }
 
   if (edits.length === 0) {

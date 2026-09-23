@@ -59,7 +59,7 @@ function resolveChild(
  * @throws      {@link EmptyStringException} If `path` is not a non-empty string.
  * @throws      {@link IllegalStateException} If `path` names no segments, or if any level is ambiguous.
  * @see         [Class Folder](https://developers.google.com/apps-script/reference/drive/folder)
- * @see         [createFolder on the documentation site](https://maksymstoianov.github.io/apps-script-utils/createFolder.html)
+ * @see         [createFolder on the documentation site](https://maksymstoianov.github.io/apps-script-utils/createfolder.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

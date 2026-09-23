@@ -33,7 +33,7 @@ import { prependColumns } from "./prependColumns";
  * @see         {@link prependColumns}
  * @see         {@link prependRow}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
- * @see         [prependColumn on the documentation site](https://maksymstoianov.github.io/apps-script-utils/prependColumn.html)
+ * @see         [prependColumn on the documentation site](https://maksymstoianov.github.io/apps-script-utils/prependcolumn.html)
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0
  * @version     2.0.0

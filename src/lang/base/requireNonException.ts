@@ -23,7 +23,7 @@ import { isException } from "./isException";
  * @see      {@link isException}
  * @see      {@link nonException}
  * @see      {@link requireException}
- * @see      [requireNonException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonException.html)
+ * @see      [requireNonException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonexception.html)
  * @since    1.11.0
  * @version  1.0.0
  */

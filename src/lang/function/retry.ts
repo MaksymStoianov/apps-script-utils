@@ -15,7 +15,7 @@ import { isFunction } from "../base";
  * ```
  *
  * @property {number} [attempts=3] - Total number of attempts, including the first.
- * @see [RetryOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RetryOptions.html)
+ * @see [RetryOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/retryoptions.html)
  */
 export interface RetryOptions {
   attempts?: number;

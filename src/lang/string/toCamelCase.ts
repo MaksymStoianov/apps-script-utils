@@ -39,7 +39,7 @@ interface ToCamelCaseOptions {
  * @see     {@link toProperCase}
  * @see     {@link toSnakeCase}
  * @see     {@link toUpperCase}
- * @see     [toCamelCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/toCamelCase.html)
+ * @see     [toCamelCase on the documentation site](https://maksymstoianov.github.io/apps-script-utils/tocamelcase.html)
  * @since   1.0.0
  * @version 1.0.0
  */
