@@ -64,6 +64,8 @@ prependRow(sheet.getRange("B4:C13"), ["Name", "Email"]);
 
 - [`prependRows`](prependRows.md)
 - [`appendRow`](appendRow.md)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Исходный код

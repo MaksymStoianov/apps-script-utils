@@ -44,6 +44,8 @@ const first = getSheetByIndex(0);
 
 - [`getSheetById`](getSheetById.md)
 - [`sortSheets`](sortSheets.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
 - [](reference-appsscript.md)
 
 ## Quellcode

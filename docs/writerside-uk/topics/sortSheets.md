@@ -48,6 +48,8 @@ sortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed
 
 - [`getSheetByIndex`](getSheetByIndex.md)
 - [`isValidSheetName`](isValidSheetName.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
 - [](reference-appsscript.md)
 
 ## Вихідний код

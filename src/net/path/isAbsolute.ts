@@ -20,6 +20,7 @@ import { isEmpty, isString } from "../../lang";
  * @returns {boolean} `true` if the path is absolute; otherwise, `false`.
  * @see     {@link isRelative}
  * @see     {@link requireAbsolute}
+ * @see     [isAbsolute on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isAbsolute.html)
  * @since   1.0.0
  * @version 1.1.0
  */

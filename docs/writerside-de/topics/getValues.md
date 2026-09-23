@@ -68,6 +68,7 @@ const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 
 - [`getSchema`](getSchema.md)
 - [`isConsistent2DArray`](isConsistent2DArray.md)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Quellcode

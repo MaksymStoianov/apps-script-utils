@@ -54,6 +54,7 @@ requireHtmlOutput(null); // throws IllegalArgumentException
 
 - [`isHtmlOutput`](isHtmlOutput.md)
 - [`nonHtmlOutput`](nonHtmlOutput.md)
+- [`HtmlOutput`](https://developers.google.com/apps-script/reference/html/html-output)
 - [](reference-appsscript.md)
 
 ## Source

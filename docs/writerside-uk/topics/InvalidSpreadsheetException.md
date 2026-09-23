@@ -40,6 +40,7 @@ try {
 
 - [`isException`](isException.md)
 - [`requireException`](requireException.md)
+- [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
 - [](reference-exception.md)
 
 ## Вихідний код

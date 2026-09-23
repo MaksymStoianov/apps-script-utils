@@ -17,6 +17,7 @@ import { isValidVersion } from "./isValidVersion";
  * @returns {boolean} `true` if the value is not a valid version; otherwise, `false`.
  * @see     {@link isValidVersion}
  * @see     {@link versionCompare}
+ * @see     [nonValidVersion on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonValidVersion.html)
  * @since   1.11.0
  * @version 1.0.0
  */

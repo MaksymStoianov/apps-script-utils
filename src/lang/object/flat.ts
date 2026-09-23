@@ -54,6 +54,7 @@ function isNested(value: unknown): boolean {
  * @throws  {@link IllegalArgumentException} If `depth` is negative or not a whole number.
  * @see     {@link setPath}
  * @see     {@link getPath}
+ * @see     [flat on the documentation site](https://maksymstoianov.github.io/apps-script-utils/flat.html)
  * @since   1.11.0
  * @version 1.0.0
  */

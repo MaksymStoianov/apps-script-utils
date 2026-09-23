@@ -64,6 +64,8 @@ appendRow(sheet.getRange("B1:D10"), ["Ada", "ada@example.com"]);
 
 - [`appendRows`](appendRows.md)
 - [`prependRow`](prependRow.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Quellcode

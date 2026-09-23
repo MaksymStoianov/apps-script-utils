@@ -14,6 +14,7 @@ import { isEmpty, isString } from "../base";
  *
  * @param   {string} value - The string value to validate.
  * @returns {boolean} `true` if the value is a valid slug; otherwise, `false`.
+ * @see [isValidSlug on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isValidSlug.html)
  * @since   1.0.0
  * @version 1.0.0
  */

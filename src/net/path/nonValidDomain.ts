@@ -14,6 +14,7 @@ import { isValidDomain } from "./isValidDomain";
  * @returns {boolean} `true` if the value is not a valid domain name; otherwise, `false`.
  * @see     {@link isValidDomain}
  * @see     {@link requireValidDomain}
+ * @see     [nonValidDomain on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonValidDomain.html)
  * @since   1.11.0
  * @version 1.0.0
  */

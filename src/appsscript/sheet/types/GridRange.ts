@@ -13,6 +13,7 @@
  * };
  * ```
  *
+ * @see [GridRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/GridRange.html)
  * @since   1.0.0
  * @version 1.0.0
  */

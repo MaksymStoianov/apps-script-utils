@@ -31,7 +31,8 @@
     "docs:author-exceptions": "node scripts/docs/author-exceptions.mjs",
     "docs:author-batch": "node scripts/docs/author-batch.mjs",
     "docs:verify-examples": "node scripts/docs/verify-examples.mjs",
-    "docs:sync-examples": "node scripts/docs/sync-jsdoc-examples.mjs"
+    "docs:sync-examples": "node scripts/docs/sync-jsdoc-examples.mjs",
+    "docs:sync-links": "node scripts/docs/sync-jsdoc-links.mjs"
   },
   "repository": {
     "type": "git",

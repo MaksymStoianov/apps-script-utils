@@ -21,6 +21,7 @@ import { isValidSlideId } from "./isValidSlideId";
  * @throws      {@link IllegalArgumentException} If the value is not a valid slide identifier.
  * @see         {@link isValidSlideId}
  * @see         {@link nonValidSlideId}
+ * @see         [requireValidSlideId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidSlideId.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

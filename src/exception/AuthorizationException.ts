@@ -25,6 +25,7 @@ import { RuntimeException } from "./RuntimeException";
  * @see     {@link AuthenticationException}
  * @see     {@link Exception}
  * @see     {@link Error}
+ * @see     [AuthorizationException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/AuthorizationException.html)
  * @since   1.11.0
  * @version 1.0.0
  */

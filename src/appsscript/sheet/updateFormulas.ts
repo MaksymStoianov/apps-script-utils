@@ -13,6 +13,7 @@ import { isSheet } from "./isSheet";
  * const rewrite = (formula, row, column) => formula.replace("Sheet1", "Data");
  * ```
  *
+ * @see [FormulaTransformer on the documentation site](https://maksymstoianov.github.io/apps-script-utils/FormulaTransformer.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -115,6 +116,7 @@ function toRuns(cells: Cell[][], firstRow: number, firstColumn: number): Run[] {
  * @throws      {@link IllegalArgumentException} If `rewrite` is neither a function nor an object.
  * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+ * @see         [updateFormulas on the documentation site](https://maksymstoianov.github.io/apps-script-utils/updateFormulas.html)
  * @since       1.11.0
  * @version     2.0.0
  * @environment `Google Apps Script`

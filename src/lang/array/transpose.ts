@@ -23,6 +23,7 @@ import { isArray } from "../base";
  * @param   {unknown} arr - The 2D array (matrix) to transpose. Its elements can be of any type.
  * @returns {Array<Array<unknown>>} A new 2D array representing the transposed matrix. The elements maintain their original types.
  * @throws  {@link Error}
+ * @see [transpose on the documentation site](https://maksymstoianov.github.io/apps-script-utils/transpose.html)
  * @since   1.0.0
  * @version 1.0.0
  */

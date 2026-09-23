@@ -20,6 +20,8 @@ import { isCountable, isEmpty } from "../../lang";
  * @see         {@link getSheetByIndex}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [getSheetById on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getSheetById.html)
+ * @see         [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`

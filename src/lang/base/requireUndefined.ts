@@ -20,6 +20,7 @@ import { isUndefined } from "./isUndefined";
  * @throws  {@link IllegalArgumentException} If the value is not `undefined`.
  * @see     {@link isUndefined}
  * @see     {@link nonUndefined}
+ * @see     [requireUndefined on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireUndefined.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -42,6 +42,7 @@ doGridRangesIntersect(left, right); // => true
 
 - [`isGridRangeContainedIn`](isGridRangeContainedIn.md)
 - [`isCellGridRange`](isCellGridRange.md)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Вихідний код

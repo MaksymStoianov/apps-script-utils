@@ -14,6 +14,7 @@ import { isEmpty, isNil, isNumber, isString } from "../base";
  *
  * @param   {unknown} value - The value to convert. Can be a `number`, `string`, `null`, `undefined`, or other types.
  * @returns {number | null} The parsed or original integer, or `null` if the value cannot be converted.
+ * @see [toInteger on the documentation site](https://maksymstoianov.github.io/apps-script-utils/toInteger.html)
  * @since   1.0.0
  * @version 1.0.0
  */

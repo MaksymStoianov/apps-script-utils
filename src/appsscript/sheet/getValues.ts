@@ -16,6 +16,7 @@ import { isSheet } from "./isSheet";
  * };
  * ```
  *
+ * @see [Row on the documentation site](https://maksymstoianov.github.io/apps-script-utils/Row.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -48,6 +49,7 @@ export interface Row {
  * };
  * ```
  *
+ * @see [GetValuesConfig on the documentation site](https://maksymstoianov.github.io/apps-script-utils/GetValuesConfig.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -138,6 +140,7 @@ export interface GetValuesConfig {
  * @throws      {@link IllegalArgumentException} If any of the configured values is of the wrong kind.
  * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+ * @see         [getValues on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getValues.html)
  * @since       1.11.0
  * @version     2.0.0
  * @environment `Google Apps Script`

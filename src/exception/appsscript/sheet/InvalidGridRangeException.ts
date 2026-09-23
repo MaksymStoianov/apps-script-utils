@@ -20,6 +20,7 @@ import { RuntimeException } from "../../RuntimeException";
  * @see     {@link Exception}
  * @see     {@link Error}
  * @see     {@link GridRange}
+ * @see     [InvalidGridRangeException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/InvalidGridRangeException.html)
  * @since   1.5.0
  * @version 1.0.0
  */

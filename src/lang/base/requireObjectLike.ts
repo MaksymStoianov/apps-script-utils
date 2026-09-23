@@ -23,6 +23,7 @@ import { isObjectLike } from "./isObjectLike";
  * @see     {@link isObjectLike}
  * @see     {@link nonObjectLike}
  * @see     {@link requireObject}
+ * @see     [requireObjectLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireObjectLike.html)
  * @since   1.11.0
  * @version 1.0.0
  */

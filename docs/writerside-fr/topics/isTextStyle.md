@@ -46,6 +46,7 @@ isTextStyle(null); // => false
 
 - [`nonTextStyle`](nonTextStyle.md)
 - [`requireTextStyle`](requireTextStyle.md)
+- [`TextStyle`](https://developers.google.com/apps-script/reference/spreadsheet/text-style)
 - [](reference-appsscript.md)
 
 ## Code source

@@ -24,6 +24,7 @@ import { isValidSheetName } from "./isValidSheetName";
  * @throws      {@link IllegalArgumentException} If the value is not a valid sheet name.
  * @see         {@link isValidSheetName}
  * @see         {@link nonValidSheetName}
+ * @see         [requireValidSheetName on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidSheetName.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

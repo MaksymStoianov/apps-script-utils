@@ -17,6 +17,7 @@ import { isRegExp } from "./isRegExp";
  * @throws  {@link IllegalArgumentException} If the value is not a `RegExp` object.
  * @see     {@link isRegExp}
  * @see     {@link nonRegExp}
+ * @see     [requireRegExp on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireRegExp.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -11,6 +11,7 @@ import { type SheetSchema } from "./types";
  * const options = { validation: true };
  * ```
  *
+ * @see [RemoveSchemaOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RemoveSchemaOptions.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -58,6 +59,7 @@ export interface RemoveSchemaOptions {
  * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
  * @see         {@link insertSchema}
  * @see         {@link getSchema}
+ * @see         [removeSchema on the documentation site](https://maksymstoianov.github.io/apps-script-utils/removeSchema.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

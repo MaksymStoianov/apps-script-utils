@@ -42,6 +42,8 @@ isGridRangeSameDimensions(source, target); // => true
 
 - [`nonGridRangeSameDimensions`](nonGridRangeSameDimensions.md)
 - [`requireGridRangeSameDimensions`](requireGridRangeSameDimensions.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Source

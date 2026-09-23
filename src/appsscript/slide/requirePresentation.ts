@@ -22,6 +22,7 @@ import { isPresentation } from "./isPresentation";
  * @see         {@link nonPresentation}
  * @see         {@link requireSlide}
  * @see         <a href="https://developers.google.com/apps-script/reference/slides/presentation"><code>Presentation</code></a>
+ * @see         [requirePresentation on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirePresentation.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

@@ -41,6 +41,8 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnI
 
 - [`parseA1Notation`](parseA1Notation.md)
 - [`getColumnLetterByIndex`](getColumnLetterByIndex.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Вихідний код

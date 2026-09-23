@@ -18,6 +18,7 @@ import { isInteger } from "../../lang";
  * @see         {@link getColumnLetterByPosition}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [getColumnLetterByIndex on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getColumnLetterByIndex.html)
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

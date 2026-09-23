@@ -20,6 +20,7 @@ import { isCountable } from "./isCountable";
  * @throws  {@link IllegalArgumentException} If the value is not a countable number.
  * @see     {@link isCountable}
  * @see     {@link nonCountable}
+ * @see     [requireCountable on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireCountable.html)
  * @since   1.11.0
  * @version 1.0.0
  */

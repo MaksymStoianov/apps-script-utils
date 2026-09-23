@@ -21,6 +21,7 @@ import { isBoolean } from "./isBoolean";
  * @throws  {@link IllegalArgumentException} If the value is not a boolean.
  * @see     {@link isBoolean}
  * @see     {@link nonBoolean}
+ * @see     [requireBoolean on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireBoolean.html)
  * @since   1.11.0
  * @version 1.0.0
  */

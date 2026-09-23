@@ -21,6 +21,7 @@ import { isAbsolute } from "./isAbsolute";
  * @see     {@link isAbsolute}
  * @see     {@link nonAbsolute}
  * @see     {@link requireRelative}
+ * @see     [requireAbsolute on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireAbsolute.html)
  * @since   1.11.0
  * @version 1.0.0
  */

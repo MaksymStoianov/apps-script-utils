@@ -18,6 +18,7 @@ import { isNil } from "./isNil";
  * @returns {boolean} `true` if the value is a function; otherwise, `false`.
  * @see     {@link nonFunction}
  * @see     {@link isFunctionLike}
+ * @see     [isFunction on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isFunction.html)
  * @since   1.0.0
  * @version 1.2.0
  */

@@ -23,6 +23,7 @@ import type { GridRange } from "./types";
  * @see         {@link isCellGridRange}
  * @see         {@link nonCellGridRange}
  * @see         {@link GridRange}
+ * @see         [requireCellGridRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireCellGridRange.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

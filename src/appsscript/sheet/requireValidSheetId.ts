@@ -26,6 +26,7 @@ import { isValidSheetId } from "./isValidSheetId";
  * @see         {@link isValidSheetId}
  * @see         {@link nonValidSheetId}
  * @see         {@link getSheetById}
+ * @see         [requireValidSheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidSheetId.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

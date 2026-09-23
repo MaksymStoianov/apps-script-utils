@@ -22,6 +22,7 @@ import { isUrl } from "./isUrl";
  * @param       {T | string} value - The value to check.
  * @returns     {boolean} `true` if the value is not a valid URL string; otherwise, `false`.
  * @see         {@link isUrl}
+ * @see         [nonUrl on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonUrl.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

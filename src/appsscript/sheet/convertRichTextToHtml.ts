@@ -20,6 +20,7 @@ import { isRichTextValue } from "./isRichTextValue";
  * @throws      {@link IllegalArgumentException}
  * @see         {@link GoogleAppsScript.Spreadsheet.RichTextValue|RichTextValue}
  * @see         [Class RichTextValue](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
+ * @see         [convertRichTextToHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/convertRichTextToHtml.html)
  * @since       1.0.0
  * @version     1.2.0
  * @environment `Google Apps Script`

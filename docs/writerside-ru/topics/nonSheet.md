@@ -48,6 +48,7 @@ nonSheet(sheet); // => false
 
 - [`isSheet`](isSheet.md)
 - [`requireSheet`](requireSheet.md)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Исходный код

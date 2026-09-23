@@ -17,6 +17,7 @@ import { isFunctionLike } from "./isFunctionLike";
  * @returns {boolean} `true` if the value is not a function; otherwise, `false`.
  * @see     {@link isFunctionLike}
  * @see     {@link nonFunction}
+ * @see     [nonFunctionLike on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonFunctionLike.html)
  * @since   1.11.0
  * @version 1.0.0
  */

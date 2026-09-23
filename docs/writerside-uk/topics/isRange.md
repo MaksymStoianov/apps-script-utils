@@ -46,6 +46,7 @@ isRange(null); // => false
 
 - [`nonRange`](nonRange.md)
 - [`requireRange`](requireRange.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Вихідний код

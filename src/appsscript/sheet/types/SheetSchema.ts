@@ -6,6 +6,7 @@
  * const type = "date";
  * ```
  *
+ * @see [SheetColumnType on the documentation site](https://maksymstoianov.github.io/apps-script-utils/SheetColumnType.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -19,6 +20,7 @@ export type SheetColumnType = "string" | "number" | "boolean" | "date";
  * const column = { name: "created", type: "date" };
  * ```
  *
+ * @see [SheetColumnSchema on the documentation site](https://maksymstoianov.github.io/apps-script-utils/SheetColumnSchema.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -84,6 +86,7 @@ export interface SheetColumnSchema {
  * };
  * ```
  *
+ * @see [SheetSchema on the documentation site](https://maksymstoianov.github.io/apps-script-utils/SheetSchema.html)
  * @since   1.11.0
  * @version 1.0.0
  */

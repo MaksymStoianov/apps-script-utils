@@ -27,6 +27,7 @@ import { isUrl } from "./isUrl";
  * @throws      {@link IllegalArgumentException} If the value is not a valid URL string.
  * @see         {@link isUrl}
  * @see         {@link nonUrl}
+ * @see         [requireUrl on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireUrl.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

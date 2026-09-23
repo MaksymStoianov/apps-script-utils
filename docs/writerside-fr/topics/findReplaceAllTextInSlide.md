@@ -54,6 +54,7 @@ const replaced = findReplaceAllTextInSlide(slide, "{{ client }}", "Acme", false)
 
 - [`getSlideByIndex`](getSlideByIndex.md)
 - [`requireSlide`](requireSlide.md)
+- [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
 - [](reference-appsscript.md)
 
 ## Code source

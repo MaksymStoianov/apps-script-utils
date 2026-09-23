@@ -13,6 +13,7 @@ import { requireNonEmptyString } from "../lang";
  * @returns {string} The string with decoded HTML entities.
  * @throws  {@link EmptyStringException}
  * @see     {@link encodeHtml}
+ * @see     [decodeHtml on the documentation site](https://maksymstoianov.github.io/apps-script-utils/decodeHtml.html)
  * @since   1.0.0
  * @version 1.3.0
  */

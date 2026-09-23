@@ -40,6 +40,7 @@ try {
 
 - [`isException`](isException.md)
 - [`requireException`](requireException.md)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-exception.md)
 
 ## Code source

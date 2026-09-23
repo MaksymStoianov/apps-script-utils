@@ -45,6 +45,8 @@ const first = getSlideByIndex(presentation, 0);
 - [`getSlideIndex`](getSlideIndex.md)
 - [`requireSlide`](requireSlide.md)
 - [`isValidSlideId`](isValidSlideId.md)
+- [Class Presentation](https://developers.google.com/apps-script/reference/slides/presentation)
+- [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
 - [](reference-appsscript.md)
 
 ## Quellcode

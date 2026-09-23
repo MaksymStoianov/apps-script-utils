@@ -15,6 +15,7 @@ import { isObject } from "./isObject";
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is an instance of {@link Exception} (or a subclass); otherwise, `false`.
  * @see     {@link Exception}
+ * @see     [isException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isException.html)
  * @since   1.0.0
  * @version 1.0.0
  */

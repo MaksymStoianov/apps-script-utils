@@ -66,6 +66,7 @@ updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 
 - [`updateSheetNameInA1Notation`](updateSheetNameInA1Notation.md)
 - [`getValues`](getValues.md)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Code source

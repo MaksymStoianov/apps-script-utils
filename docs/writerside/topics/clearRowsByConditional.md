@@ -69,6 +69,8 @@ clearRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cell
 - [`deleteRowsByConditional`](deleteRowsByConditional.md)
 - [`clearColumnsByConditional`](clearColumnsByConditional.md)
 - [`getValues`](getValues.md)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
 - [](reference-appsscript.md)
 
 ## Source

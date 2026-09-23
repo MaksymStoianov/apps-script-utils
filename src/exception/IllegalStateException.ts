@@ -23,6 +23,7 @@ import { RuntimeException } from "./RuntimeException";
  * @see     {@link IllegalArgumentException}
  * @see     {@link Exception}
  * @see     {@link Error}
+ * @see     [IllegalStateException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/IllegalStateException.html)
  * @since   1.11.0
  * @version 1.0.0
  */

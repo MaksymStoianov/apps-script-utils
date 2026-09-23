@@ -49,6 +49,7 @@ if (trigger !== null) {
 ## Voir aussi
 
 - [`requireNonEmptyString`](requireNonEmptyString.md)
+- [Class Trigger](https://developers.google.com/apps-script/reference/script/trigger)
 - [](reference-appsscript.md)
 
 ## Code source

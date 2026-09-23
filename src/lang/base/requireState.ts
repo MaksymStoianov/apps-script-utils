@@ -19,6 +19,7 @@ import { IllegalStateException } from "../../exception";
  * @throws      {IllegalStateException} If `condition` is falsy.
  * @see         {@link IllegalStateException}
  * @see         {@link requireNonNull}
+ * @see         [requireState on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireState.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

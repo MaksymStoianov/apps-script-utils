@@ -20,6 +20,7 @@ type TextOutput = GoogleAppsScript.Content.TextOutput;
  * @see         {@link isTextOutput}
  * @see         {@link requireTextOutput}
  * @see         <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a>
+ * @see         [nonTextOutput on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonTextOutput.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

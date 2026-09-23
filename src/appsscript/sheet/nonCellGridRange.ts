@@ -21,6 +21,7 @@ import type { GridRange } from "./types";
  * @see         {@link isCellGridRange}
  * @see         {@link requireCellGridRange}
  * @see         {@link GridRange}
+ * @see         [nonCellGridRange on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonCellGridRange.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

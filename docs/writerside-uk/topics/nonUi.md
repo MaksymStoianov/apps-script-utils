@@ -48,6 +48,7 @@ nonUi(ui); // => false
 
 - [`isUi`](isUi.md)
 - [`requireUi`](requireUi.md)
+- [`Ui`](https://developers.google.com/apps-script/reference/base/ui)
 - [](reference-appsscript.md)
 
 ## Вихідний код

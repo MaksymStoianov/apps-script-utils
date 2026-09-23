@@ -46,6 +46,7 @@ isHtmlOutput(null); // => false
 
 - [`nonHtmlOutput`](nonHtmlOutput.md)
 - [`requireHtmlOutput`](requireHtmlOutput.md)
+- [`HtmlOutput`](https://developers.google.com/apps-script/reference/html/html-output)
 - [](reference-appsscript.md)
 
 ## Вихідний код

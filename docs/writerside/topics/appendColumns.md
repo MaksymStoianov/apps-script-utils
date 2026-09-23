@@ -68,6 +68,8 @@ appendColumns(sheet.getRange("A1:D2"), [["a"], ["b"]]);
 - [`appendRows`](appendRows.md)
 - [`prependColumns`](prependColumns.md)
 - [`transpose`](transpose.md)
+- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Source

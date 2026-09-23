@@ -12,6 +12,7 @@
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is `undefined`; otherwise, `false`.
  * @see     {@link nonUndefined}
+ * @see     [isUndefined on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isUndefined.html)
  * @since   1.0.0
  * @version 1.0.0
  */

@@ -48,6 +48,7 @@ nonSpreadsheet(spreadsheet); // => false
 
 - [`isSpreadsheet`](isSpreadsheet.md)
 - [`requireSpreadsheet`](requireSpreadsheet.md)
+- [`Spreadsheet`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
 - [](reference-appsscript.md)
 
 ## Code source

@@ -20,6 +20,7 @@ type HtmlOutput = GoogleAppsScript.HTML.HtmlOutput;
  * @see         {@link isHtmlOutput}
  * @see         {@link requireHtmlOutput}
  * @see         <a href="https://developers.google.com/apps-script/reference/html/html-output"><code>HtmlOutput</code></a>
+ * @see         [nonHtmlOutput on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonHtmlOutput.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

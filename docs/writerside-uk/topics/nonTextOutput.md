@@ -48,6 +48,7 @@ nonTextOutput(output); // => false
 
 - [`isTextOutput`](isTextOutput.md)
 - [`requireTextOutput`](requireTextOutput.md)
+- [`TextOutput`](https://developers.google.com/apps-script/reference/content/text-output)
 - [](reference-appsscript.md)
 
 ## Вихідний код

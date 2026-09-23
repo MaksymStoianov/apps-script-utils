@@ -39,6 +39,8 @@ extractSheetNameFromA1Notation("Sheet1!A1:B2"); // => "Sheet1"
 - [`extractRangeFromA1Notation`](extractRangeFromA1Notation.md)
 - [`updateSheetNameInA1Notation`](updateSheetNameInA1Notation.md)
 - [`parseA1Notation`](parseA1Notation.md)
+- [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+- [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
 - [](reference-appsscript.md)
 
 ## Code source

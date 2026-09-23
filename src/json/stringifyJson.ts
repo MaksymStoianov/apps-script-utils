@@ -13,6 +13,7 @@ import { isObject } from "../lang";
  * @param   {unknown} value - The value to stringify.
  * @returns {string} A stable JSON string representation of the value.
  * @see     {@link parseJson}
+ * @see     [stringifyJson on the documentation site](https://maksymstoianov.github.io/apps-script-utils/stringifyJson.html)
  * @since   1.0.0
  * @version 1.0.0
  */

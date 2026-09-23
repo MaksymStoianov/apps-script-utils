@@ -49,6 +49,7 @@ function deleteEverything() {
 - [`isAdmin`](isAdmin.md)
 - [`nonAdmin`](nonAdmin.md)
 - [`AuthorizationException`](AuthorizationException.md)
+- [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory)
 - [](reference-appsscript.md)
 
 ## Quellcode

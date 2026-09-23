@@ -68,6 +68,10 @@ jobs:
       - name: Check the examples in the sources
         run: node scripts/docs/sync-jsdoc-examples.mjs --check
 
+      # And the same links: to the page itself, and to the Apps Script reference.
+      - name: Check the links in the sources
+        run: node scripts/docs/sync-jsdoc-links.mjs --check
+
   build:
     needs: generated
     runs-on: ubuntu-latest

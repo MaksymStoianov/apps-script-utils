@@ -18,6 +18,7 @@ import { isInteger } from "./isInteger";
  * @returns {boolean} `true` if the value is not an integer, otherwise `false`.
  * @see     {@link isInteger}
  * @see     {@link nonNumber}
+ * @see     [nonInteger on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonInteger.html)
  * @since   1.11.0
  * @version 1.0.0
  */

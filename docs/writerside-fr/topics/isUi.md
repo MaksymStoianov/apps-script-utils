@@ -46,6 +46,7 @@ isUi(null); // => false
 
 - [`nonUi`](nonUi.md)
 - [`requireUi`](requireUi.md)
+- [`Ui`](https://developers.google.com/apps-script/reference/base/ui)
 - [](reference-appsscript.md)
 
 ## Code source

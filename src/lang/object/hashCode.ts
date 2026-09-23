@@ -14,6 +14,7 @@ import { objectToString } from "./objectToString";
  * @param   {unknown} value - The input value to compute the hash for.
  * @returns {number} The computed 32-bit hash code.
  * @throws  {@link TypeError}
+ * @see [hashCode on the documentation site](https://maksymstoianov.github.io/apps-script-utils/hashCode.html)
  * @since   1.0.0
  * @version 1.3.0
  */

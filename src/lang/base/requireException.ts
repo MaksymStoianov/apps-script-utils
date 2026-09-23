@@ -21,6 +21,7 @@ import { isException } from "./isException";
  * @see     {@link isException}
  * @see     {@link nonException}
  * @see     {@link Exception}
+ * @see     [requireException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireException.html)
  * @since   1.11.0
  * @version 1.0.0
  */

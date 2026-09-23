@@ -46,6 +46,7 @@ isSlide(null); // => false
 
 - [`nonSlide`](nonSlide.md)
 - [`requireSlide`](requireSlide.md)
+- [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
 - [](reference-appsscript.md)
 
 ## Исходный код

@@ -184,6 +184,13 @@ what an IDE shows on hover. It never touches a comment that already has an
 `@example`: a hand-written one outranks a copied one. CI checks that no symbol
 has a documented example its JSDoc is missing.
 
+`npm run docs:sync-links` writes two `@see` links into that same comment: one to
+the symbol's page on the documentation site, and one per `GoogleAppsScript.*`
+class its signature names, pointing at Google's reference. It writes nothing that
+is already there, so it is safe to run at any time, and CI checks that no comment
+is missing one. The link the other way — page to source — is part of every
+generated page already.
+
 Two scripts take an argument and run against a built site rather than the
 sources: `npm run docs:search-index -- <site-directory>` writes that directory's
 `search-index.json`, once per language, and `npm run docs:finalize-site -- <site-directory>`

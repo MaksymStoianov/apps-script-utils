@@ -17,6 +17,7 @@
  * @returns {boolean} `true` if the value is a scalar type; otherwise, `false`.
  * @see     {@link nonScalar}
  * @see     {@link requireScalar}
+ * @see     [isScalar on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isScalar.html)
  * @since   1.0.0
  * @version 1.0.1
  */

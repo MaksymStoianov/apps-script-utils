@@ -20,6 +20,7 @@ import { isNonNegative } from "./isNonNegative";
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a number and is not negative; otherwise, `false`.
  * @see     {@link isNonNegative}
+ * @see     [nonNegative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonNegative.html)
  * @since   1.0.0
  * @version 1.1.0
  */

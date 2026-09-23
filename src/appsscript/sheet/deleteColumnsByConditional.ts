@@ -146,6 +146,9 @@ function selectColumns(
  * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link clearColumnsByConditional}
  * @see         {@link deleteRowsByConditional}
+ * @see         [deleteColumnsByConditional on the documentation site](https://maksymstoianov.github.io/apps-script-utils/deleteColumnsByConditional.html)
+ * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0
  * @version     2.0.0
  * @environment `Google Apps Script`

@@ -51,6 +51,7 @@ function toSegments(path: string | Array<string | number>): Array<string | numbe
  * @throws   {@link IllegalArgumentException} If `path` names no segments.
  * @throws   {@link IllegalArgumentException} If any segment reaches the prototype chain.
  * @see      {@link getPath}
+ * @see      [setPath on the documentation site](https://maksymstoianov.github.io/apps-script-utils/setPath.html)
  * @since    1.11.0
  * @version  1.0.0
  */
