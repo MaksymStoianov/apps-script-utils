@@ -12,7 +12,7 @@
 
 ```typescript
 function getValues<T = unknown>(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   config: GetValuesConfig | null | undefined = {}
 ): T[];
 ```
@@ -21,12 +21,14 @@ function getValues<T = unknown>(
 
 `filter` звужує набір рядків, `offset` і `limit` розбивають решту на сторінки, а `mapper` вирішує, на що перетворюється кожен уцілілий рядок. `display` читає значення так, як їх бачить людина: відформатовану дату — як текст, а не як `Date`. Це інший вміст, а не косметика.
 
+Аркуш читає весь свій діапазон даних; діапазон читає лише себе — це один виклик сервісу по блоку замість усього аркуша. Позиції лишаються від одиниці за аркушем, тож рядок зберігає свій справжній номер, а `headerRow` вказує рядок аркуша, а не зсув усередині діапазону.
+
 ## Параметри
 
-| Параметр                           | Тип                                    | Опис                                                             |
-| :--------------------------------- | :------------------------------------- | :--------------------------------------------------------------- |
-| `sheet`                            | `GoogleAppsScript.Spreadsheet.Sheet`   | Аркуш, з яким працюємо.                                          |
-| `config` _(необов'язковий)_ `= {}` | `GetValuesConfig \| null \| undefined` | `headerRow`, `display`, `filter`, `offset`, `limit` та `mapper`. |
+| Параметр                           | Тип                                                                        | Опис                                                                             |
+| :--------------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------- |
+| `target`                           | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Аркуш, який читаємо, або діапазон, який читаємо: забираються лише його клітинки. |
+| `config` _(необов'язковий)_ `= {}` | `GetValuesConfig \| null \| undefined`                                     | `headerRow`, `display`, `filter`, `offset`, `limit` та `mapper`.                 |
 
 ## Повертає
 
@@ -34,9 +36,9 @@ function getValues<T = unknown>(
 
 ## Винятки
 
-| Виняток                 | Умова                         |
-| :---------------------- | :---------------------------- |
-| `InvalidSheetException` | перший аргумент не є аркушем. |
+| Виняток                 | Умова                                           |
+| :---------------------- | :---------------------------------------------- |
+| `InvalidSheetException` | перший аргумент не є ні аркушем, ні діапазоном. |
 
 ## Приклади
 
@@ -51,6 +53,15 @@ const active = getValues(sheet, {
   mapper: (row) => row.email,
   limit: 100
 });
+```
+
+### Читання одного блоку
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only A1:C50 is fetched; the header is row 1 of the sheet.
+const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 ```
 
 ## Дивіться також

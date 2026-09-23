@@ -12,7 +12,7 @@
 
 ```typescript
 function getValues<T = unknown>(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   config: GetValuesConfig | null | undefined = {}
 ): T[];
 ```
@@ -21,12 +21,14 @@ function getValues<T = unknown>(
 
 `filter` сужает набор строк, `offset` и `limit` разбивают оставшееся на страницы, а `mapper` решает, во что превращается каждая уцелевшая строка. `display` читает значения так, как их видит человек: отформатированную дату — как текст, а не как `Date`. Это другое содержимое, а не косметика.
 
+Лист читает весь свой диапазон данных; диапазон читает только себя — это один вызов сервиса по блоку вместо всего листа. Позиции остаются одноосновными по листу, поэтому у строки сохраняется её настоящий номер, а `headerRow` указывает строку листа, а не смещение внутри диапазона.
+
 ## Параметры
 
-| Параметр                           | Тип                                    | Описание                                                        |
-| :--------------------------------- | :------------------------------------- | :-------------------------------------------------------------- |
-| `sheet`                            | `GoogleAppsScript.Spreadsheet.Sheet`   | Лист, с которым работаем.                                       |
-| `config` _(необязательный)_ `= {}` | `GetValuesConfig \| null \| undefined` | `headerRow`, `display`, `filter`, `offset`, `limit` и `mapper`. |
+| Параметр                           | Тип                                                                        | Описание                                                                          |
+| :--------------------------------- | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| `target`                           | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Лист, который читаем, или диапазон, который читаем: забираются только его ячейки. |
+| `config` _(необязательный)_ `= {}` | `GetValuesConfig \| null \| undefined`                                     | `headerRow`, `display`, `filter`, `offset`, `limit` и `mapper`.                   |
 
 ## Возвращает
 
@@ -34,9 +36,9 @@ function getValues<T = unknown>(
 
 ## Исключения
 
-| Исключение              | Условие                             |
-| :---------------------- | :---------------------------------- |
-| `InvalidSheetException` | первый аргумент не является листом. |
+| Исключение              | Условие                                               |
+| :---------------------- | :---------------------------------------------------- |
+| `InvalidSheetException` | первый аргумент не является ни листом, ни диапазоном. |
 
 ## Примеры
 
@@ -51,6 +53,15 @@ const active = getValues(sheet, {
   mapper: (row) => row.email,
   limit: 100
 });
+```
+
+### Чтение одного блока
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only A1:C50 is fetched; the header is row 1 of the sheet.
+const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 ```
 
 ## Смотрите также

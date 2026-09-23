@@ -12,7 +12,7 @@
 
 ```typescript
 function getValues<T = unknown>(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   config: GetValuesConfig | null | undefined = {}
 ): T[];
 ```
@@ -21,12 +21,14 @@ Avec `headerRow`, chaque ligne arrive sous forme d'objet dont les clés sont les
 
 `filter` restreint les lignes, `offset` et `limit` paginent le reste, et `mapper` décide de ce que devient chaque ligne conservée. `display` lit les valeurs telles qu'une personne les voit — une date formatée comme du texte plutôt que comme un `Date` — ce qui est un autre contenu, pas un réglage cosmétique.
 
+Une feuille lit toute sa plage de données ; une plage ne lit qu'elle-même — un appel de service sur un bloc plutôt que sur tout. Les positions restent indexées depuis 1 dans la feuille : une ligne garde son vrai numéro, et `headerRow` désigne une ligne de la feuille, pas un décalage dans la plage.
+
 ## Paramètres
 
-| Paramètre                      | Type                                   | Description                                                      |
-| :----------------------------- | :------------------------------------- | :--------------------------------------------------------------- |
-| `sheet`                        | `GoogleAppsScript.Spreadsheet.Sheet`   | La feuille sur laquelle travailler.                              |
-| `config` _(facultatif)_ `= {}` | `GetValuesConfig \| null \| undefined` | `headerRow`, `display`, `filter`, `offset`, `limit` et `mapper`. |
+| Paramètre                      | Type                                                                       | Description                                                                  |
+| :----------------------------- | :------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
+| `target`                       | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille à lire, ou la plage à lire : seules ses cellules sont récupérées. |
+| `config` _(facultatif)_ `= {}` | `GetValuesConfig \| null \| undefined`                                     | `headerRow`, `display`, `filter`, `offset`, `limit` et `mapper`.             |
 
 ## Valeur de retour
 
@@ -34,9 +36,9 @@ Avec `headerRow`, chaque ligne arrive sous forme d'objet dont les clés sont les
 
 ## Exceptions
 
-| Exception               | Condition                                  |
-| :---------------------- | :----------------------------------------- |
-| `InvalidSheetException` | le premier argument n'est pas une feuille. |
+| Exception               | Condition                                              |
+| :---------------------- | :----------------------------------------------------- |
+| `InvalidSheetException` | le premier argument n'est ni une feuille ni une plage. |
 
 ## Exemples
 
@@ -51,6 +53,15 @@ const active = getValues(sheet, {
   mapper: (row) => row.email,
   limit: 100
 });
+```
+
+### Lire un seul bloc
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only A1:C50 is fetched; the header is row 1 of the sheet.
+const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 ```
 
 ## Voir aussi
