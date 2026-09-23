@@ -16,9 +16,12 @@
  */
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
-import { join, relative } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 import { LANGUAGES, SITE, SOURCE_LANGUAGE } from "./languages.mjs";
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
 const root = process.argv[2];
 
@@ -64,6 +67,25 @@ function urlOf(language, page) {
   return `${language.webRoot}/${page}`;
 }
 
+/**
+ * What the build profile would have injected, read from the project itself.
+ *
+ * The builder ignores `include-in-head` and `include-after-body` on this
+ * version — the pages came out without the structured data, the search widget
+ * or the language switcher — so the same files are put in here instead.
+ */
+function injections(language) {
+  const read = (name) => {
+    try {
+      return readFileSync(join(ROOT, language.root, name), "utf8").trim();
+    } catch {
+      return "";
+    }
+  };
+
+  return { head: read("head.html"), body: read("search.html") };
+}
+
 const pages = pagesOf(root);
 
 const entries = [];
@@ -97,11 +119,7 @@ for (const page of pages) {
   for (const language of present) {
     const path = language === SOURCE_LANGUAGE ? join(root, page) : join(root, language.code, page);
 
-    const html = readFileSync(path, "utf8");
-
-    if (html.includes('rel="alternate" hreflang=')) {
-      continue;
-    }
+    let html = readFileSync(path, "utf8");
 
     const at = html.indexOf("</head>");
 
@@ -109,11 +127,46 @@ for (const page of pages) {
       continue;
     }
 
-    writeFileSync(
-      path,
-      `${html.slice(0, at)}    ${alternates}\n    ${xDefault}\n${html.slice(at)}`
+    const injected = injections(language);
+
+    if (injected.head && !html.includes("SoftwareSourceCode")) {
+      html = `${html.slice(0, html.indexOf("</head>"))}${injected.head}\n${html.slice(html.indexOf("</head>"))}`;
+    }
+
+    if (!html.includes('rel="alternate" hreflang=')) {
+      const canonical = `<link rel="canonical" href="${urlOf(language, page)}"/>`;
+
+      html = `${html.slice(0, at)}    ${canonical}\n    ${alternates}\n    ${xDefault}\n${html.slice(at)}`;
+      linked += 1;
+    }
+
+    // The builder renders the tag and leaves it empty, because the build
+    // profile it would read the address from is not applied on this version.
+    html = html.replace(
+      /(<meta property="og:image" content=")("\s*\/?>)/,
+      `$1${SITE}/images/banner-1280x640.jpg$2`
     );
-    linked += 1;
+
+    if (injected.body && !html.includes("asu-fab")) {
+      const body = html.lastIndexOf("</body>");
+
+      if (body !== -1) {
+        html = `${html.slice(0, body)}${injected.body}\n${html.slice(body)}`;
+      }
+    }
+
+    // Said once at the end of every page, in that page's language.
+    if (!html.includes("asu-ai-notice")) {
+      const body = html.lastIndexOf("</body>");
+
+      if (body !== -1) {
+        const notice = `<p class="asu-ai-notice" style="margin:32px 0 16px;padding-top:16px;border-top:1px solid rgba(39,40,44,0.16);font-size:13px;line-height:1.5;opacity:0.7;text-align:center">${language.strings.aiNotice}</p>`;
+
+        html = `${html.slice(0, body)}${notice}\n${html.slice(body)}`;
+      }
+    }
+
+    writeFileSync(path, html);
   }
 
   entries.push({ page, present });
