@@ -2,21 +2,26 @@
   "summary": "Supprime les colonnes que le prédicat sélectionne.",
   "description": [
     "Jugé sur la feuille telle que lue, puis supprimé du bord droit vers l'intérieur par blocs consécutifs, pour que le décalage des positions n'emporte pas la mauvaise colonne.",
-    "Les colonnes disparaissent pour de bon : `clearColumnsByConditional` se contente de les vider."
+    "Les colonnes disparaissent pour de bon : `clearColumnsByConditional` se contente de les vider.",
+    "Une feuille désigne toute sa plage de données, et des colonnes entières sont supprimées. Une plage ne désigne que ses cellules : elles sont supprimées, celles de droite se décalent vers la gauche, et les lignes au-dessus et en dessous restent en place. Dans les deux cas, le prédicat reçoit la position dans la feuille ; le refus de vider une feuille concerne la forme avec feuille, où une colonne doit subsister."
   ],
   "params": {
-    "sheet": "La feuille sur laquelle travailler.",
+    "target": "La feuille sur laquelle travailler, ou la plage dans laquelle travailler : seules ses cellules sont lues, et seules elles sont supprimées.",
     "predicate": "Reçoit les cellules de la colonne, sa position à base un et — si `headerColumn` est défini — la colonne indexée par les noms de lignes. Renvoyez `true` pour les colonnes à traiter.",
     "options": "`headerColumn` désigne la colonne portant les noms de lignes et l'exclut des candidates."
   },
   "returns": "combien ont été traitées.",
   "throws": {
-    "InvalidSheetException": "le premier argument n'est pas une feuille.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage.",
     "IllegalArgumentException": "le prédicat n'est pas une fonction, ou la position d'en-tête n'est pas un entier positif."
   },
   "examples": [
     {
       "title": "Utilisation"
+    },
+    {
+      "title": "Dans un seul bloc",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only B2:Z100 is read, and only those cells move left.\ndeleteColumnsByConditional(sheet.getRange(\"B2:Z100\"), (values) => values.every((cell) => cell === \"\"));\n```"
     }
   ],
   "seeAlso": [

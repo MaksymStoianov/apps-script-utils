@@ -1,7 +1,8 @@
-import { IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isFunction, isNil, requireCountable } from "../../lang";
 import { type ColumnConditionalOptions, type ColumnPredicate } from "./clearColumnsByConditional";
-import { requireSheet } from "./requireSheet";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
 
 /**
  * A block of consecutive columns.
@@ -67,21 +68,24 @@ function toColumns(values: unknown[][]): Map<number, unknown[]> {
  * @param   {unknown[][]} values - Every row of the data range.
  * @param   {ColumnPredicate} predicate - Decides whether a column is selected.
  * @param   {number} headerColumn - The one-based header column, or `0` for none.
+ * @param   {number} firstColumn - The one-based sheet column the values start at.
  * @returns {number[]} The one-based positions of the matching columns, ascending.
  */
 function selectColumns(
   values: unknown[][],
   predicate: ColumnPredicate,
-  headerColumn: number
+  headerColumn: number,
+  firstColumn: number
 ): number[] {
   const columns: Map<number, unknown[]> = toColumns(values);
 
-  const headers: unknown[] = headerColumn === 0 ? [] : (columns.get(headerColumn - 1) ?? []);
+  const headers: unknown[] =
+    headerColumn === 0 ? [] : (columns.get(headerColumn - firstColumn) ?? []);
 
   const selected: number[] = [];
 
   for (const [index, column] of columns) {
-    const position: number = index + 1;
+    const position: number = firstColumn + index;
 
     if (position === headerColumn) {
       continue;
@@ -134,24 +138,30 @@ function selectColumns(
  * });
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The sheet to delete columns from.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet to delete columns on, or the range to delete within: only its cells are read, and only they are removed, the rest of the sheet staying where it is.
  * @param       {ColumnPredicate} predicate - Decides whether a column is selected.
  * @param       {ColumnConditionalOptions | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {number} How many columns were removed.
  * @throws      {@link IllegalArgumentException} If `predicate` is not a function, `headerColumn` is not a positive integer, or every column would be removed.
- * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
+ * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link clearColumnsByConditional}
  * @see         {@link deleteRowsByConditional}
  * @since       1.11.0
- * @version     1.0.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  */
 export function deleteColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number {
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   if (!isFunction(predicate)) {
     throw new IllegalArgumentException("Expected 'predicate' to be a function.");
@@ -167,20 +177,35 @@ export function deleteColumnsByConditional(
     }
   }
 
-  const values: unknown[][] = sheet.getDataRange().getValues();
+  const range: GoogleAppsScript.Spreadsheet.Range = within ?? sheet.getDataRange();
 
-  const selected: number[] = selectColumns(values, predicate, headerColumn);
+  const values: unknown[][] = range.getValues();
 
-  if (selected.length > 0 && selected.length === sheet.getMaxColumns()) {
+  const selected: number[] = selectColumns(values, predicate, headerColumn, range.getColumn());
+
+  if (!within && selected.length > 0 && selected.length === sheet.getMaxColumns()) {
     throw new IllegalArgumentException(
       "Refusing to delete every column: a sheet must keep at least one."
     );
   }
 
+  const firstRow: number = range.getRow();
+
+  const height: number = range.getNumRows();
+
   const blocks: Block[] = toBlocks(selected);
 
   // Right to left: removing a later block cannot move an earlier one.
   for (const block of blocks.reverse()) {
+    if (within) {
+      // Only the cells inside the range move left; the rows above and below stay put.
+      sheet
+        .getRange(firstRow, block.start, height, block.count)
+        .deleteCells(SpreadsheetApp.Dimension.COLUMNS);
+
+      continue;
+    }
+
     sheet.deleteColumns(block.start, block.count);
   }
 
