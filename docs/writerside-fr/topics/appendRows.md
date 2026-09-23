@@ -2,9 +2,9 @@
 
 # appendRows
 
-<link-summary>Ajoute des lignes sous les données déjà présentes sur une feuille.</link-summary>
+<link-summary>Ajoute des lignes après la dernière ligne contenant des données.</link-summary>
 
-<web-summary>appendRows() — Ajoute des lignes sous les données déjà présentes sur une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>appendRows() — Ajoute des lignes après la dernière ligne contenant des données. apps-script-utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -12,38 +12,41 @@
 
 ```typescript
 function appendRows(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: AppendRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-L'écriture commence en colonne 1 de la première ligne ajoutée, et la feuille grandit d'exactement autant de lignes que la matrice en compte. Contrairement à `Sheet#appendRow`, qui prend une ligne à la fois, le bloc entier part en un seul appel.
+Passez une feuille et toute la feuille est examinée, l'écriture commençant en colonne 1 ; passez une plage et seules ses cellules le sont, l'écriture se faisant sur ses colonnes — des données ailleurs dans la feuille ne décident plus de l'emplacement du bloc.
 
-Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur.
+Rien n'est écrasé : l'écriture commence une ligne sous la dernière qui contient des données, `0` et `false` comptant comme des données. La feuille gagne des lignes si elle est trop courte. Contrairement à `Sheet#appendRow`, qui prend une ligne à la fois, tout le bloc est écrit en un seul appel.
+
+Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.
 
 ## Paramètres
 
-| Paramètre                       | Type                                     | Description                                                                                        |
-| :------------------------------ | :--------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| `sheet`                         | `GoogleAppsScript.Spreadsheet.Sheet`     | La feuille où écrire.                                                                              |
-| `values`                        | `unknown`                                | Une matrice de lignes : un tableau par ligne, toutes de même longueur.                             |
-| `options` _(facultatif)_ `= {}` | `AppendRowsOptions \| null \| undefined` | `afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début. |
+| Paramètre                       | Type                                                                       | Description                                                                                              |
+| :------------------------------ | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
+| `target`                        | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille à laquelle ajouter, ou la plage dans laquelle ajouter.                                        |
+| `values`                        | `unknown`                                                                  | Une matrice de lignes : un tableau par ligne, tous de même longueur.                                     |
+| `options` _(facultatif)_ `= {}` | `AppendRowsOptions \| null \| undefined`                                   | `afterFrozenRows` commence l'écriture sous les lignes figées lorsque les données s'arrêtent avant elles. |
 
 ## Valeur de retour
 
-`GoogleAppsScript.Spreadsheet.Sheet` — la même feuille, ce qui permet d'enchaîner les appels.
+`GoogleAppsScript.Spreadsheet.Sheet` — la feuille, afin de chaîner les appels.
 
 ## Exceptions
 
-| Exception               | Condition                                                         |
-| :---------------------- | :---------------------------------------------------------------- |
-| `InvalidSheetException` | le premier argument n'est pas une feuille.                        |
-| `TypeError`             | les valeurs ne forment pas une matrice à lignes de même longueur. |
+| Exception                  | Condition                                                          |
+| :------------------------- | :----------------------------------------------------------------- |
+| `IllegalArgumentException` | aucun argument n'est passé.                                        |
+| `InvalidSheetException`    | le premier argument n'est ni une feuille ni une plage.             |
+| `TypeError`                | les valeurs ne forment pas une matrice de lignes de même longueur. |
 
 ## Exemples
 
-### Écriture
+### Ajout à une feuille
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
@@ -52,6 +55,14 @@ appendRows(sheet, [
   ["Ada", "ada@example.com"],
   ["Grace", "grace@example.com"]
 ]);
+```
+
+### Ajout dans une plage
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+appendRows(sheet.getRange("B1:C10"), [["Ada", "ada@example.com"]]);
 ```
 
 ## Voir aussi

@@ -1,23 +1,29 @@
 {
-  "summary": "Adds rows below the data already on a sheet.",
+  "summary": "Adds rows after the last row that holds data.",
   "description": [
-    "Writing starts in column 1 of the first new row, and the sheet is grown by exactly as many rows as the matrix has. Unlike `Sheet#appendRow`, which takes one row at a time, the whole block is written in a single call.",
+    "Pass a sheet and the whole sheet is examined, with the write starting in column 1; pass a range and only its cells are, with the write landing on the range's columns — data elsewhere on the sheet no longer decides where the block goes.",
+    "Nothing is overwritten: the write starts one row below the last one holding data, and `0` and `false` count as data. The sheet gains rows when it is too short for the result. Unlike `Sheet#appendRow`, which takes one row at a time, the whole block is written in a single call.",
     "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
   ],
   "params": {
-    "sheet": "The sheet to write into.",
+    "target": "The sheet to append to, or the range to append within.",
     "values": "A matrix of rows: one array per row, all of the same length.",
-    "options": "`afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top."
+    "options": "`afterFrozenRows` starts the write below the frozen rows when the data ends before them."
   },
-  "returns": "the same sheet, so calls can be chained.",
+  "returns": "the sheet, so calls can be chained.",
   "throws": {
-    "InvalidSheetException": "the first argument is not a sheet.",
+    "IllegalArgumentException": "no argument is passed.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range.",
     "TypeError": "the values are not a matrix with rows of equal length."
   },
   "examples": [
     {
-      "title": "Writing",
+      "title": "Appending to a sheet",
       "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRows(sheet, [\n  [\"Ada\", \"ada@example.com\"],\n  [\"Grace\", \"grace@example.com\"]\n]);\n```"
+    },
+    {
+      "title": "Appending within a range",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRows(sheet.getRange(\"B1:C10\"), [[\"Ada\", \"ada@example.com\"]]);\n```"
     }
   ],
   "seeAlso": [
