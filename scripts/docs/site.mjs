@@ -68,7 +68,6 @@ function settings(language, depth = 2) {
     .join("\n");
 }
 
-
 /**
  * The build profile of the whole documentation solution.
  *
@@ -84,7 +83,10 @@ export function solutionBuildProfiles() {
 
     return `    <build-profile instance="${module}/asu">
         <variables>
-${settings(language, 3).replace(/<include-(in-head|after-body)>/g, (tag) => tag).replace(/>head\.html</g, `>${module}/head.html<`).replace(/>search\.html</g, `>${module}/search.html<`)}
+${settings(language, 3)
+  .replace(/<include-(in-head|after-body)>/g, (tag) => tag)
+  .replace(/>head\.html</g, `>${module}/head.html<`)
+  .replace(/>search\.html</g, `>${module}/search.html<`)}
         </variables>
 
         <footer>
