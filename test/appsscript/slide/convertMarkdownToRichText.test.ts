@@ -1,4 +1,5 @@
 import { convertMarkdownToRichText } from "@/appsscript";
+import { IllegalArgumentException, InvalidStringException } from "@/exception";
 import { describe, expect, it } from "vitest";
 
 const BASE = {
@@ -136,14 +137,26 @@ describe("convertMarkdownToRichText", () => {
 
   // Every other entry point in the library rejects a missing or non-string
   // argument; this one returns an empty array instead. Tracked in #451.
-  describe("Known deviation: absent input is not rejected", () => {
-    it("should currently return an empty array instead of throwing", () => {
+  describe("Incorrect input data", () => {
+    it("should throw an IllegalArgumentException when called without arguments", () => {
       // @ts-expect-error - testing invalid types
-      expect(convertMarkdownToRichText()).toStrictEqual([]);
+      expect(() => convertMarkdownToRichText()).toThrow(IllegalArgumentException);
+    });
+
+    it("should throw an InvalidStringException for a nil value", () => {
       // @ts-expect-error - testing invalid types
-      expect(convertMarkdownToRichText(null)).toStrictEqual([]);
+      expect(() => convertMarkdownToRichText(null)).toThrow(InvalidStringException);
       // @ts-expect-error - testing invalid types
-      expect(convertMarkdownToRichText(undefined)).toStrictEqual([]);
+      expect(() => convertMarkdownToRichText(undefined)).toThrow(InvalidStringException);
+    });
+
+    it("should throw an InvalidStringException for a value of another type", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => convertMarkdownToRichText(42)).toThrow(InvalidStringException);
+      // @ts-expect-error - testing invalid types
+      expect(() => convertMarkdownToRichText(["**bold**"])).toThrow(InvalidStringException);
+      // @ts-expect-error - testing invalid types
+      expect(() => convertMarkdownToRichText({ text: "**bold**" })).toThrow(InvalidStringException);
     });
   });
 });

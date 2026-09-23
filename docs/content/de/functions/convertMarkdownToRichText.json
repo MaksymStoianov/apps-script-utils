@@ -8,7 +8,10 @@
     "theme": "Die Stile, die jede Art von Abschnitt erhält."
   },
   "returns": "die Abschnitte der Reihe nach, jeder mit Text und Stil.",
-  "throws": {},
+  "throws": {
+    "IllegalArgumentException": "kein Argument übergeben wurde.",
+    "InvalidStringException": "der Text keine Zeichenkette ist. Eine leere Zeichenkette ist zulässig und ergibt ein leeres Array."
+  },
   "examples": [
     {
       "title": "Im Einsatz"
