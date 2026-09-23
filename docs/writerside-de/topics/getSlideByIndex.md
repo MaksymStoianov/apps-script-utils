@@ -2,9 +2,9 @@
 
 # getSlideByIndex
 
-<link-summary>Findet eine Folie anhand ihrer Position in einer Präsentation.</link-summary>
+<link-summary>Findet die Folie an einer Position, in einer Präsentation oder in der aktiven.</link-summary>
 
-<web-summary>getSlideByIndex() — Findet eine Folie anhand ihrer Position in einer Präsentation. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getSlideByIndex() — Findet die Folie an einer Position, in einer Präsentation oder in der aktiven. apps-script-utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -12,19 +12,21 @@
 
 ```typescript
 function getSlideByIndex(
-  presentation: GoogleAppsScript.Slides.Presentation,
-  index: number
+  index: number,
+  presentation?: GoogleAppsScript.Slides.Presentation | null
 ): GoogleAppsScript.Slides.Slide | null;
 ```
 
 Der Index zählt ab null. Eine Position hinter dem Ende ergibt `null` statt einer Ausnahme — genau das braucht eine Schleife über ein Deck, an dem jemand gerade arbeitet.
 
+Der Index steht zuerst und die Präsentation ist optional, wie bei [`getSheetByIndex`](getSheetByIndex.md): ohne sie wird die aktive Präsentation verwendet, die ein an ein Dokument gebundenes Skript ohnehin hat. Ein eigenständiges Skript hat keine, dann lautet die Antwort `null` statt eines Fehlers.
+
 ## Parameter
 
-| Parameter      | Typ                                    | Beschreibung                           |
-| :------------- | :------------------------------------- | :------------------------------------- |
-| `presentation` | `GoogleAppsScript.Slides.Presentation` | Die Präsentation, in der gesucht wird. |
-| `index`        | `number`                               | Die nullbasierte Position der Folie.   |
+| Parameter                   | Typ                                            | Beschreibung                                                               |
+| :-------------------------- | :--------------------------------------------- | :------------------------------------------------------------------------- |
+| `index`                     | `number`                                       | Die nullbasierte Position der Folie.                                       |
+| `presentation` _(optional)_ | `GoogleAppsScript.Slides.Presentation \| null` | Die Präsentation, in der gesucht wird. Ohne sie wird die aktive verwendet. |
 
 ## Rückgabewert
 
@@ -32,12 +34,14 @@ Der Index zählt ab null. Eine Position hinter dem Ende ergibt `null` statt eine
 
 ## Beispiele
 
-### Nachschlagen
+### In der aktiven Präsentation
 
 ```javascript
-const presentation = SlidesApp.getActivePresentation();
+// A script bound to a deck needs no presentation.
+const first = getSlideByIndex(0);
 
-const first = getSlideByIndex(presentation, 0);
+// Elsewhere, name one.
+const third = getSlideByIndex(2, SlidesApp.openById(id));
 ```
 
 ## Siehe auch

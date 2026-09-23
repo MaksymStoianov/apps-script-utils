@@ -1,18 +1,19 @@
 {
-  "summary": "Finds a slide by its position in a presentation.",
+  "summary": "Finds the slide at a position, in a presentation or in the active one.",
   "description": [
-    "The index counts from zero. A position past the end gives `null` rather than an exception, which is what a loop over a deck that someone may be editing needs."
+    "The index counts from zero. A position past the end gives `null` rather than an exception, which is what a loop over a deck that someone may be editing needs.",
+    "The index comes first and the presentation is optional, the way [`getSheetByIndex`](getSheetByIndex.md) reads: without one the active presentation is used, which is what a script bound to a deck already has. A standalone script has none, and then the answer is `null` rather than an error."
   ],
   "params": {
-    "presentation": "The presentation to look in.",
+    "presentation": "The presentation to look in. Without it the active presentation is used.",
     "index": "The zero-based position of the slide."
   },
   "returns": "the slide, or `null` when the index is past the end.",
   "throws": {},
   "examples": [
     {
-      "title": "Looking up",
-      "body": "```javascript\nconst presentation = SlidesApp.getActivePresentation();\n\nconst first = getSlideByIndex(presentation, 0);\n```"
+      "title": "In the active presentation",
+      "body": "```javascript\n// A script bound to a deck needs no presentation.\nconst first = getSlideByIndex(0);\n\n// Elsewhere, name one.\nconst third = getSlideByIndex(2, SlidesApp.openById(id));\n```"
     }
   ],
   "seeAlso": [
