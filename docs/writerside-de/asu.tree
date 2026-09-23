@@ -229,6 +229,7 @@
             <toc-element topic="nonValidVersion.md"/>
             <toc-element topic="nonVersionCompatible.md"/>
             <toc-element topic="now.md"/>
+            <toc-element topic="ObjectTag.md"/>
             <toc-element topic="objectToString.md"/>
             <toc-element topic="offset.md"/>
             <toc-element topic="parseJson.md"/>
@@ -340,6 +341,7 @@
             <toc-element topic="nonValidDomain.md"/>
             <toc-element topic="normalize.md"/>
             <toc-element topic="parse.md"/>
+            <toc-element topic="ParsedPath.md"/>
             <toc-element topic="requireAbsolute.md"/>
             <toc-element topic="requireRelative.md"/>
             <toc-element topic="requireValidDomain.md"/>

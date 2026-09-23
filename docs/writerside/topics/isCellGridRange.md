@@ -20,9 +20,9 @@ One row and one column, measured by the bounds rather than by how the range was 
 
 ## Parameters
 
-| Parameter   | Type        | Description                                                                    |
-| :---------- | :---------- | :----------------------------------------------------------------------------- |
-| `gridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check. |
+| Parameter   | Type        | Description                                      |
+| :---------- | :---------- | :----------------------------------------------- |
+| `gridRange` | `GridRange` | The [`GridRange`](GridRange.md) object to check. |
 
 ## Returns
 

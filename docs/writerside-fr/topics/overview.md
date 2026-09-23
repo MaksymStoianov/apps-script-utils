@@ -8,7 +8,7 @@
 
 ![Bannière du projet Google Apps Script Utils](banner-1280x640.jpg)
 
-<p align="right"><small><i>Artiste : <a href="https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=overview&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit" title="Portfolio de Daryna Mikhailenko, l'artiste">Daryna Mikhailenko</a></i></small></p>
+_Artiste : [Daryna Mikhailenko](https://darynamikhailenko.com/?utm_source=docs&utm_medium=overview&utm_campaign=apps-script-utils&utm_content=banner-artist-credit)_
 
 **apps-script-utils** est une bibliothèque TypeScript conçue spécifiquement pour **Google Apps Script**. Elle
 rassemble dans un seul paquet testé ce que tout projet GAS finit par écrire à la main : manipulation des feuilles et

@@ -6,7 +6,7 @@
     "A caveat on types: the guard is declared as a type predicate, but it only narrows usefully when the value's own\ntype already names `unknown[][]` as one of its cases. In the branch where the value _is_ a matrix, TypeScript is\nleft with `never` rather than a matrix type, so reach for [`is2DArray`](is2DArray.md) or\n[`require2DArray`](require2DArray.md) when the matrix has to be used after the check. As a plain boolean answer,\n`non2DArray` is exact in every case."
   ],
   "params": {
-    "arr": "Array<Array<unknown>>`"
+    "arr": "The value to check."
   },
   "returns": "`true` if the value is not a non-empty array of arrays; otherwise `false`.",
   "throws": {},

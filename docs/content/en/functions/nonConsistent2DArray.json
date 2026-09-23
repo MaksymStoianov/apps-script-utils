@@ -6,7 +6,7 @@
     "It reports `true` for two different situations: a matrix whose rows differ in length, and a value that is not a\nmatrix at all. They are indistinguishable from the result alone, so use [`non2DArray`](non2DArray.md) when the\ndifference matters."
   ],
   "params": {
-    "arr": "Array<Array<unknown>>`"
+    "arr": "The value to check."
   },
   "returns": "`true` if the value is not a non-empty array of arrays of equal length; otherwise `false`.",
   "throws": {},

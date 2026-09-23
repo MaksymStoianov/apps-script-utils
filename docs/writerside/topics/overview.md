@@ -6,7 +6,7 @@
 
 ![Project banner for Google Apps Script Utils](banner-1280x640.jpg)
 
-<p align="right"><small><i>Artist: <a href="https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=overview&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit" title="Portfolio of Daryna Mikhailenko, the artist">Daryna Mikhailenko</a></i></small></p>
+_Artist: [Daryna Mikhailenko](https://darynamikhailenko.com/?utm_source=docs&utm_medium=overview&utm_campaign=apps-script-utils&utm_content=banner-artist-credit)_
 
 **apps-script-utils** is a TypeScript utility library purpose-built for **Google Apps Script**. It brings together the
 helpers every GAS project ends up writing by hand — spreadsheet and A1-notation manipulation, type/value validation

@@ -6,7 +6,7 @@
 
 ![Баннер проекта Google Apps Script Utils](banner-1280x640.jpg)
 
-<p align="right"><small><i>Художник: <a href="https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=overview&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit" title="Портфолио художницы Дарины Михайленко">Дарина Михайленко</a></i></small></p>
+_Художник: [Дарина Михайленко](https://darynamikhailenko.com/?utm_source=docs&utm_medium=overview&utm_campaign=apps-script-utils&utm_content=banner-artist-credit)_
 
 **apps-script-utils** — библиотека утилит на TypeScript, созданная специально для **Google Apps Script**. Она
 собирает в одном протестированном пакете то, что в каждом проекте на GAS всё равно приходится писать руками:

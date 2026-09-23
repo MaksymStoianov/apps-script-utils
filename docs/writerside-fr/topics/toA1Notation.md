@@ -20,9 +20,9 @@ Un indice omis signifie que la plage est ouverte de ce côté, ce qui donne une 
 
 ## Paramètres
 
-| Paramètre   | Type        | Description                                                                      |
-| :---------- | :---------- | :------------------------------------------------------------------------------- |
-| `gridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to convert. |
+| Paramètre   | Type        | Description                                        |
+| :---------- | :---------- | :------------------------------------------------- |
+| `gridRange` | `GridRange` | The [`GridRange`](GridRange.md) object to convert. |
 
 ## Valeur de retour
 

@@ -20,10 +20,10 @@ Das ist die Prüfung vor dem Schreiben in einen vom Nutzer gewählten Bereich, d
 
 ## Parameter
 
-| Parameter            | Typ         | Beschreibung                                                                                                        |
-| :------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------ |
-| `gridRange`          | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a subset (child range).    |
-| `containerGridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range). |
+| Parameter            | Typ         | Beschreibung                                                                          |
+| :------------------- | :---------- | :------------------------------------------------------------------------------------ |
+| `gridRange`          | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a subset (child range).    |
+| `containerGridRange` | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a superset (parent range). |
 
 ## Rückgabewert
 

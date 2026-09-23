@@ -18,10 +18,10 @@ Des plages qui se touchent par un bord ne se recouvrent pas : les bornes de fin 
 
 ## Paramètres
 
-| Paramètre    | Type        | Description                                                                           |
-| :----------- | :---------- | :------------------------------------------------------------------------------------ |
-| `gridRange1` | `GridRange` | The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.  |
-| `gridRange2` | `GridRange` | The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check. |
+| Paramètre    | Type        | Description                                             |
+| :----------- | :---------- | :------------------------------------------------------ |
+| `gridRange1` | `GridRange` | The first [`GridRange`](GridRange.md) object to check.  |
+| `gridRange2` | `GridRange` | The second [`GridRange`](GridRange.md) object to check. |
 
 ## Valeur de retour
 

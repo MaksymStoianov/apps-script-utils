@@ -5,7 +5,7 @@
     "- Accepts an array, a `Set`, or a `Map` — for a `Map` the **values** are checked, not the keys.\n- A `null` or `undefined` collection passes straight through: that case belongs to `requireNonNull`, and stacking\n  the two guards should not report it twice.\n- An empty collection passes.\n- Only the top level is examined; a nested array is opaque.\n- Array holes count as `undefined`, so `[1, , 3]` is rejected."
   ],
   "params": {
-    "values": "Set<T> \\",
+    "values": "The collection to check.",
     "message": "The exception message. A default is used when omitted."
   },
   "returns": "The same collection object, typed without `null` and `undefined` in its element type.",

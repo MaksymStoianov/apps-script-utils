@@ -20,10 +20,10 @@ This is the check to run before writing into a range a user chose, so that a wri
 
 ## Parameters
 
-| Parameter            | Type        | Description                                                                                                         |
-| :------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------ |
-| `gridRange`          | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a subset (child range).    |
-| `containerGridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range). |
+| Parameter            | Type        | Description                                                                           |
+| :------------------- | :---------- | :------------------------------------------------------------------------------------ |
+| `gridRange`          | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a subset (child range).    |
+| `containerGridRange` | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a superset (parent range). |
 
 ## Returns
 

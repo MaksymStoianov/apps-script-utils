@@ -20,9 +20,9 @@ Une ligne et une colonne, mesurées d'après les bornes et non d'après l'écrit
 
 ## Paramètres
 
-| Paramètre   | Type        | Description                                                                    |
-| :---------- | :---------- | :----------------------------------------------------------------------------- |
-| `gridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check. |
+| Paramètre   | Type        | Description                                      |
+| :---------- | :---------- | :----------------------------------------------- |
+| `gridRange` | `GridRange` | The [`GridRange`](GridRange.md) object to check. |
 
 ## Valeur de retour
 

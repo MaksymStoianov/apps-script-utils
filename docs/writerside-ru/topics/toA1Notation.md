@@ -20,9 +20,9 @@ function toA1Notation(gridRange: GridRange): string;
 
 ## Параметры
 
-| Параметр    | Тип         | Описание                                                                         |
-| :---------- | :---------- | :------------------------------------------------------------------------------- |
-| `gridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to convert. |
+| Параметр    | Тип         | Описание                                           |
+| :---------- | :---------- | :------------------------------------------------- |
+| `gridRange` | `GridRange` | The [`GridRange`](GridRange.md) object to convert. |
 
 ## Возвращает
 

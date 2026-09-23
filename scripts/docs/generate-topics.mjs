@@ -458,8 +458,27 @@ function collectFacts() {
 
 // --- rendering ------------------------------------------------------------
 
+// JSDoc written for a file tree links with raw HTML: an external anchor to the
+// Apps Script reference, or a relative one to a sibling source file. A topic is
+// neither, so the anchor becomes a Markdown link — to the symbol's own page when
+// the documentation has one, and to plain code when it does not.
+function htmlAnchors(text, pages) {
+  return text.replace(/<a\s+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, (_match, href, label) => {
+    const name = label
+      .replace(/<\/?code>/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (/^https?:/i.test(href)) {
+      return `[\`${name}\`](${href})`;
+    }
+
+    return pages.has(name) ? `[\`${name}\`](${name}.md)` : `\`${name}\``;
+  });
+}
+
 function resolveLinks(text, pages) {
-  return text.replace(/\{@link\s+([^}|\s]+)(\|[^}]*)?\}/g, (_match, target) => {
+  return htmlAnchors(text, pages).replace(/\{@link\s+([^}|\s]+)(\|[^}]*)?\}/g, (_match, target) => {
     const name = target.replace(/^.*[.#]/, "");
 
     return pages.has(name) ? `[\`${name}\`](${name}.md)` : `\`${name}\``;
@@ -1042,7 +1061,27 @@ for (const topic of new Set(entries.map((entry) => entry.referenceTopic))) {
   );
 }
 
-// 5. What still needs prose, per language.
+// 5. Every page has to be reachable: the Writerside build refuses to link to a
+// topic the navigation does not list, and the tree is written by hand.
+const listed = new Set(
+  [...readFileSync(join(sourceRoot, "asu.tree"), "utf8").matchAll(/topic="([^"]+)"/g)].map(
+    (match) => match[1]
+  )
+);
+
+const unlisted = entries.map((entry) => `${entry.name}.md`).filter((name) => !listed.has(name));
+
+if (unlisted.length > 0) {
+  console.error(`Not listed in ${SOURCE_LANGUAGE.root}/asu.tree, so nothing can link to them:`);
+
+  for (const name of unlisted.sort()) {
+    console.error(`  ${name}`);
+  }
+
+  process.exit(1);
+}
+
+// 6. What still needs prose, per language.
 const coverage = [
   "# Documentation coverage",
   "",

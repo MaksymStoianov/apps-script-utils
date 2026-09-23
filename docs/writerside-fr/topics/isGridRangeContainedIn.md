@@ -20,10 +20,10 @@ C'est la vérification à faire avant d'écrire dans une plage choisie par l'uti
 
 ## Paramètres
 
-| Paramètre            | Type        | Description                                                                                                         |
-| :------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------ |
-| `gridRange`          | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a subset (child range).    |
-| `containerGridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range). |
+| Paramètre            | Type        | Description                                                                           |
+| :------------------- | :---------- | :------------------------------------------------------------------------------------ |
+| `gridRange`          | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a subset (child range).    |
+| `containerGridRange` | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a superset (parent range). |
 
 ## Valeur de retour
 

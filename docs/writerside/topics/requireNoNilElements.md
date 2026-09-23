@@ -34,7 +34,7 @@ and hands the collection back typed without the nils.
 
 | Parameter              | Type      | Description                                            |
 | :--------------------- | :-------- | :----------------------------------------------------- |
-| `values`               | `unknown` | Set<T> \                                               |
+| `values`               | `unknown` | The collection to check.                               |
 | `message` _(optional)_ | `string`  | The exception message. A default is used when omitted. |
 
 ## Returns

@@ -20,9 +20,9 @@ An index left out means the range is open in that direction, which comes back as
 
 ## Parameters
 
-| Parameter   | Type        | Description                                                                      |
-| :---------- | :---------- | :------------------------------------------------------------------------------- |
-| `gridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to convert. |
+| Parameter   | Type        | Description                                        |
+| :---------- | :---------- | :------------------------------------------------- |
+| `gridRange` | `GridRange` | The [`GridRange`](GridRange.md) object to convert. |
 
 ## Returns
 

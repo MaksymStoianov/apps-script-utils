@@ -27,9 +27,9 @@ left with `never` rather than a matrix type, so reach for [`is2DArray`](is2DArra
 
 ## Parameters
 
-| Parameter | Type                         | Description            |
-| :-------- | :--------------------------- | :--------------------- |
-| `arr`     | `T \| Array<Array<unknown>>` | Array<Array<unknown>>` |
+| Parameter | Type                         | Description         |
+| :-------- | :--------------------------- | :------------------ |
+| `arr`     | `T \| Array<Array<unknown>>` | The value to check. |
 
 ## Returns
 

@@ -20,10 +20,10 @@ function isGridRangeContainedIn(gridRange: GridRange, containerGridRange: GridRa
 
 ## Параметри
 
-| Параметр             | Тип         | Опис                                                                                                                |
-| :------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------ |
-| `gridRange`          | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a subset (child range).    |
-| `containerGridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range). |
+| Параметр             | Тип         | Опис                                                                                  |
+| :------------------- | :---------- | :------------------------------------------------------------------------------------ |
+| `gridRange`          | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a subset (child range).    |
+| `containerGridRange` | `GridRange` | The [`GridRange`](GridRange.md) object that is potentially a superset (parent range). |
 
 ## Повертає
 

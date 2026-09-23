@@ -20,9 +20,9 @@ function isCellGridRange(gridRange: GridRange): boolean;
 
 ## Параметри
 
-| Параметр    | Тип         | Опис                                                                           |
-| :---------- | :---------- | :----------------------------------------------------------------------------- |
-| `gridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check. |
+| Параметр    | Тип         | Опис                                             |
+| :---------- | :---------- | :----------------------------------------------- |
+| `gridRange` | `GridRange` | The [`GridRange`](GridRange.md) object to check. |
 
 ## Повертає
 

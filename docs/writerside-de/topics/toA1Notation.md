@@ -20,9 +20,9 @@ Ein weggelassener Index bedeutet, dass der Bereich in diese Richtung offen ist; 
 
 ## Parameter
 
-| Parameter   | Typ         | Beschreibung                                                                     |
-| :---------- | :---------- | :------------------------------------------------------------------------------- |
-| `gridRange` | `GridRange` | The <a href="./types/GridRange.ts"><code>GridRange</code></a> object to convert. |
+| Parameter   | Typ         | Beschreibung                                       |
+| :---------- | :---------- | :------------------------------------------------- |
+| `gridRange` | `GridRange` | The [`GridRange`](GridRange.md) object to convert. |
 
 ## Rückgabewert
 

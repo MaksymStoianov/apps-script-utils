@@ -18,10 +18,10 @@ function doGridRangesIntersect(gridRange1: GridRange, gridRange2: GridRange): bo
 
 ## Параметри
 
-| Параметр     | Тип         | Опис                                                                                  |
-| :----------- | :---------- | :------------------------------------------------------------------------------------ |
-| `gridRange1` | `GridRange` | The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.  |
-| `gridRange2` | `GridRange` | The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check. |
+| Параметр     | Тип         | Опис                                                    |
+| :----------- | :---------- | :------------------------------------------------------ |
+| `gridRange1` | `GridRange` | The first [`GridRange`](GridRange.md) object to check.  |
+| `gridRange2` | `GridRange` | The second [`GridRange`](GridRange.md) object to check. |
 
 ## Повертає
 
