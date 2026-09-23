@@ -98,6 +98,33 @@ jobs:
           instance: ${{ matrix.language.module }}/asu
           docker-version: ${{ env.DOCKER_VERSION }}
 
+      # The build profile has been ignored before, silently: no canonicals, an
+      # empty og:image, neither include. A build that drops half its
+      # configuration should not pass for another release. Tracked in #539.
+      - name: Check that the build profile reached the pages
+        run: |
+          set -euo pipefail
+
+          unzip -qq "artifacts/${ARTIFACT}" -d built
+
+          page="built/overview.html"
+
+          missing=0
+
+          for marker in 'rel="canonical"' 'asu-fab' 'SoftwareSourceCode'; do
+            if ! grep -qF "$marker" "$page"; then
+              echo "::error::the built page is missing ${marker} — buildprofiles.xml was not applied"
+              missing=1
+            fi
+          done
+
+          if ! grep -qE 'og:image"[^>]*content="[^"]+"' "$page"; then
+            echo "::error::the built page has an empty og:image — buildprofiles.xml was not applied"
+            missing=1
+          fi
+
+          exit "$missing"
+
       - name: Upload build results
         uses: actions/upload-artifact@v4
         with:
