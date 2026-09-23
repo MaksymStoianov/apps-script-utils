@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/MaksymStoianov/apps-script-utils/compare/apps-script-utils-v2.1.0...apps-script-utils-v2.1.1) (2026-09-23)
+
+
+### Bug Fixes
+
+* **docs:** carry the site version through the release ([2b40cdd](https://github.com/MaksymStoianov/apps-script-utils/commit/2b40cdd2312d31ce21fb68e6acdd3e1cad43eeed)), closes [#548](https://github.com/MaksymStoianov/apps-script-utils/issues/548)
+
 ## [2.1.0](https://github.com/MaksymStoianov/apps-script-utils/compare/apps-script-utils-v2.0.0...apps-script-utils-v2.1.0) (2026-09-23)
 
 
