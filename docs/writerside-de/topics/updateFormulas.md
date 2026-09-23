@@ -12,7 +12,7 @@
 
 ```typescript
 function updateFormulas(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   rewrite: FormulaTransformer | Record<string, string>
 ): number;
 ```
@@ -21,12 +21,14 @@ function updateFormulas(
 
 Besucht werden nur Zellen mit Formeln, geschrieben nur die tatsächlich geänderten; ein Aufruf ohne Änderung kostet also einen Lesevorgang und sonst nichts.
 
+Ein Blatt meint seinen ganzen Datenbereich; ein Bereich meint nur die Zellen darin, sodass sich ein Umschreiben auf einen Block beschränken lässt. Zeile und Spalte, die der Transformer erhält, sind in beiden Fällen Positionen im Blatt — erst das macht die Adresse der Formel selbst im Ersatz brauchbar.
+
 ## Parameter
 
-| Parameter | Typ                                            | Beschreibung                                                                                                        |
-| :-------- | :--------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
-| `sheet`   | `GoogleAppsScript.Spreadsheet.Sheet`           | Das Blatt, auf dem gearbeitet wird.                                                                                 |
-| `rewrite` | `FormulaTransformer \| Record<string, string>` | Eine Zuordnung von altem zu neuem Blattnamen oder eine Funktion, die eine Formel nimmt und ihren Ersatz zurückgibt. |
+| Parameter | Typ                                                                        | Beschreibung                                                                                                                                             |
+| :-------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`  | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, dessen Formeln umgeschrieben werden, oder der Bereich, innerhalb dessen umgeschrieben wird: nur dessen Zellen werden gelesen und geschrieben. |
+| `rewrite` | `FormulaTransformer \| Record<string, string>`                             | Eine Zuordnung von altem zu neuem Blattnamen oder eine Funktion, die eine Formel nimmt und ihren Ersatz zurückgibt.                                      |
 
 ## Rückgabewert
 
@@ -34,9 +36,9 @@ Besucht werden nur Zellen mit Formeln, geschrieben nur die tatsächlich geänder
 
 ## Ausnahmen
 
-| Ausnahme                | Bedingung                          |
-| :---------------------- | :--------------------------------- |
-| `InvalidSheetException` | das erste Argument ist kein Blatt. |
+| Ausnahme                | Bedingung                                                |
+| :---------------------- | :------------------------------------------------------- |
+| `InvalidSheetException` | das erste Argument weder ein Blatt noch ein Bereich ist. |
 
 ## Beispiele
 
@@ -49,6 +51,15 @@ const sheet = SpreadsheetApp.getActiveSheet();
 updateFormulas(sheet, { Sheet1: "Data" });
 
 updateFormulas(sheet, (formula) => formula.replace(/OLD_/g, "NEW_"));
+```
+
+### Innerhalb eines Blocks
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only the formulas in D2:D100 are rewritten.
+updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 ```
 
 ## Siehe auch

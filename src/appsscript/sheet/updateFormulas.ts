@@ -1,6 +1,7 @@
-import { IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isFunction, isNil } from "../../lang";
-import { requireSheet } from "./requireSheet";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
 
 /**
  * Receives a formula and where it sits, and returns what should replace it.
@@ -43,9 +44,11 @@ interface Run {
  * free of index arithmetic over the matrix.
  *
  * @param   {Cell[][]} cells - Every cell, indexed by row then column.
+ * @param   {number} firstRow - The one-based sheet row the cells start at.
+ * @param   {number} firstColumn - The one-based sheet column the cells start at.
  * @returns {Run[]} One entry per contiguous block of changed cells.
  */
-function toRuns(cells: Cell[][]): Run[] {
+function toRuns(cells: Cell[][], firstRow: number, firstColumn: number): Run[] {
   const runs: Run[] = [];
 
   const open: Map<number, Run> = new Map();
@@ -61,7 +64,7 @@ function toRuns(cells: Cell[][]): Run[] {
       let run: Run | undefined = open.get(columnIndex);
 
       if (run === undefined) {
-        run = { row: rowIndex + 1, column: columnIndex + 1, formulas: [] };
+        run = { row: firstRow + rowIndex, column: firstColumn + columnIndex, formulas: [] };
 
         open.set(columnIndex, run);
         runs.push(run);
@@ -106,21 +109,27 @@ function toRuns(cells: Cell[][]): Run[] {
  * updateFormulas(sheet, { "=SUM(A1:A10)": "=SUM(A1:A20)" });
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The sheet to rewrite.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet whose formulas are rewritten, or the range to rewrite within: only its cells are read and written.
  * @param       {FormulaTransformer | Record<string, string>} rewrite - A function called per formula, or a map keyed by the whole formula.
  * @returns     {number} How many cells were changed.
  * @throws      {@link IllegalArgumentException} If `rewrite` is neither a function nor an object.
- * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
+ * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0
- * @version     1.0.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  */
 export function updateFormulas(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   rewrite: FormulaTransformer | Record<string, string>
 ): number {
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   const isUsable: boolean = isFunction(rewrite) || (!isNil(rewrite) && typeof rewrite === "object");
 
@@ -138,21 +147,30 @@ export function updateFormulas(
         return typeof replacement === "string" ? replacement : formula;
       };
 
-  const before: string[][] = sheet.getDataRange().getFormulas();
+  const range: GoogleAppsScript.Spreadsheet.Range = within ?? sheet.getDataRange();
+
+  const firstRow: number = range.getRow();
+
+  const firstColumn: number = range.getColumn();
+
+  const before: string[][] = range.getFormulas();
 
   const cells: Cell[][] = before.map((row: string[], rowIndex: number): Cell[] =>
     row.map(
       (formula: string, columnIndex: number): Cell => ({
         before: formula,
         // An empty string is a cell holding a value, not a formula. Leave it.
-        after: formula === "" ? formula : transform(formula, rowIndex + 1, columnIndex + 1)
+        after:
+          formula === ""
+            ? formula
+            : transform(formula, firstRow + rowIndex, firstColumn + columnIndex)
       })
     )
   );
 
   let changed: number = 0;
 
-  for (const run of toRuns(cells)) {
+  for (const run of toRuns(cells, firstRow, firstColumn)) {
     sheet
       .getRange(run.row, run.column, run.formulas.length, 1)
       .setFormulas(run.formulas.map((formula: string): string[] => [formula]));

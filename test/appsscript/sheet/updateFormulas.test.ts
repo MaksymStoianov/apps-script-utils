@@ -25,7 +25,9 @@ function sheetMock(formulas: string[][]): SheetMock {
   const sheet = {
     toString: () => "Sheet",
     getDataRange: () => ({
-      getFormulas: () => formulas.map((row: string[]) => [...row])
+      getFormulas: () => formulas.map((row: string[]) => [...row]),
+      getRow: () => 1,
+      getColumn: () => 1
     }),
     getRange: (row: number, column: number, numRows: number, numColumns: number) => ({
       setFormulas: (written: string[][]) => {
@@ -35,6 +37,26 @@ function sheetMock(formulas: string[][]): SheetMock {
   } as unknown as GoogleAppsScript.Spreadsheet.Sheet;
 
   return { sheet, runs };
+}
+
+/**
+ * A stand-in range: knows where it sits and what formulas it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  formulas: string[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => formulas.length,
+    getNumColumns: () => formulas[0].length,
+    getFormulas: () => formulas.map((cells) => [...cells])
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
 }
 
 describe("updateFormulas", () => {
@@ -183,6 +205,43 @@ describe("updateFormulas", () => {
       expect(() => updateFormulas(sheet, 42 as unknown as Record<string, string>)).toThrow(
         IllegalArgumentException
       );
+    });
+  });
+
+  describe("Rewriting within a range", () => {
+    it("should read the range instead of the data range", () => {
+      const { sheet, runs } = sheetMock([["=A1"]]);
+
+      const changed = updateFormulas(rangeMock(sheet, 3, 2, [["=SUM(A1:A2)"]]), {
+        "=SUM(A1:A2)": "=SUM(A1:A3)"
+      });
+
+      expect(changed).toBe(1);
+      expect(runs).toEqual([
+        { row: 3, column: 2, numRows: 1, numColumns: 1, formulas: [["=SUM(A1:A3)"]] }
+      ]);
+    });
+
+    it("should give the transformer the position on the sheet", () => {
+      const { sheet } = sheetMock([["=A1"]]);
+
+      const seen: Array<[number, number]> = [];
+
+      updateFormulas(rangeMock(sheet, 4, 3, [["=A1", "=B1"]]), (formula, row, column) => {
+        seen.push([row, column]);
+
+        return formula;
+      });
+
+      expect(seen).toEqual([
+        [4, 3],
+        [4, 4]
+      ]);
+    });
+
+    it("should throw for a first argument that is neither a sheet nor a range", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => updateFormulas("A1:B2", {})).toThrow(InvalidSheetException);
     });
   });
 });

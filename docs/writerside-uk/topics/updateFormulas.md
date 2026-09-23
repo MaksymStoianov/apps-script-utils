@@ -12,7 +12,7 @@
 
 ```typescript
 function updateFormulas(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   rewrite: FormulaTransformer | Record<string, string>
 ): number;
 ```
@@ -21,12 +21,14 @@ function updateFormulas(
 
 Обходяться лише комірки з формулами, а записуються лише ті, що справді змінилися, тому виклик без змін коштує одного читання й нічого більше.
 
+Аркуш означає весь його діапазон даних; діапазон — лише свої клітинки, тож переписування можна обмежити одним блоком. Рядок і стовпець, які отримує перетворювач, в обох випадках — позиції на аркуші, завдяки чому адреса самої формули придатна для підстановки.
+
 ## Параметри
 
-| Параметр  | Тип                                            | Опис                                                                                   |
-| :-------- | :--------------------------------------------- | :------------------------------------------------------------------------------------- |
-| `sheet`   | `GoogleAppsScript.Spreadsheet.Sheet`           | Аркуш, з яким працюємо.                                                                |
-| `rewrite` | `FormulaTransformer \| Record<string, string>` | Словник «стара назва аркуша → нова» або функція, що приймає формулу й повертає заміну. |
+| Параметр  | Тип                                                                        | Опис                                                                                                                  |
+| :-------- | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| `target`  | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Аркуш, формули якого переписуємо, або діапазон, усередині якого переписуємо: читаються й пишуться лише його клітинки. |
+| `rewrite` | `FormulaTransformer \| Record<string, string>`                             | Словник «стара назва аркуша → нова» або функція, що приймає формулу й повертає заміну.                                |
 
 ## Повертає
 
@@ -34,9 +36,9 @@ function updateFormulas(
 
 ## Винятки
 
-| Виняток                 | Умова                         |
-| :---------------------- | :---------------------------- |
-| `InvalidSheetException` | перший аргумент не є аркушем. |
+| Виняток                 | Умова                                           |
+| :---------------------- | :---------------------------------------------- |
+| `InvalidSheetException` | перший аргумент не є ні аркушем, ні діапазоном. |
 
 ## Приклади
 
@@ -49,6 +51,15 @@ const sheet = SpreadsheetApp.getActiveSheet();
 updateFormulas(sheet, { Sheet1: "Data" });
 
 updateFormulas(sheet, (formula) => formula.replace(/OLD_/g, "NEW_"));
+```
+
+### Усередині одного блоку
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only the formulas in D2:D100 are rewritten.
+updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 ```
 
 ## Дивіться також

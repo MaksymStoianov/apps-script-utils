@@ -12,7 +12,7 @@
 
 ```typescript
 function updateFormulas(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   rewrite: FormulaTransformer | Record<string, string>
 ): number;
 ```
@@ -21,12 +21,14 @@ Passez une table pour remplacer des noms de feuille en bloc — le besoin habitu
 
 Seules les cellules contenant une formule sont visitées, et seules celles qui changent réellement sont écrites : un appel sans effet coûte une lecture et rien de plus.
 
+Une feuille désigne toute sa plage de données ; une plage ne désigne que ses cellules, ce qui permet de confiner la réécriture à un bloc. La ligne et la colonne transmises au transformateur sont dans les deux cas des positions dans la feuille, ce qui rend l'adresse de la formule elle-même utilisable dans le remplacement.
+
 ## Paramètres
 
-| Paramètre | Type                                           | Description                                                                                                   |
-| :-------- | :--------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| `sheet`   | `GoogleAppsScript.Spreadsheet.Sheet`           | La feuille sur laquelle travailler.                                                                           |
-| `rewrite` | `FormulaTransformer \| Record<string, string>` | Une table ancien nom de feuille → nouveau, ou une fonction prenant une formule et renvoyant son remplacement. |
+| Paramètre | Type                                                                       | Description                                                                                                                 |
+| :-------- | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| `target`  | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | La feuille dont les formules sont réécrites, ou la plage dans laquelle réécrire : seules ses cellules sont lues et écrites. |
+| `rewrite` | `FormulaTransformer \| Record<string, string>`                             | Une table ancien nom de feuille → nouveau, ou une fonction prenant une formule et renvoyant son remplacement.               |
 
 ## Valeur de retour
 
@@ -34,9 +36,9 @@ Seules les cellules contenant une formule sont visitées, et seules celles qui c
 
 ## Exceptions
 
-| Exception               | Condition                                  |
-| :---------------------- | :----------------------------------------- |
-| `InvalidSheetException` | le premier argument n'est pas une feuille. |
+| Exception               | Condition                                              |
+| :---------------------- | :----------------------------------------------------- |
+| `InvalidSheetException` | le premier argument n'est ni une feuille ni une plage. |
 
 ## Exemples
 
@@ -49,6 +51,15 @@ const sheet = SpreadsheetApp.getActiveSheet();
 updateFormulas(sheet, { Sheet1: "Data" });
 
 updateFormulas(sheet, (formula) => formula.replace(/OLD_/g, "NEW_"));
+```
+
+### Dans un seul bloc
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only the formulas in D2:D100 are rewritten.
+updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 ```
 
 ## Voir aussi
