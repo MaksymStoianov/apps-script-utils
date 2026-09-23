@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.1.0](https://github.com/MaksymStoianov/apps-script-utils/compare/apps-script-utils-v2.0.0...apps-script-utils-v2.1.0) (2026-09-23)
+
+
+### Features
+
+* **docs:** link the translations under the breadcrumbs, and say once at the end that AI wrote this ([f880ce8](https://github.com/MaksymStoianov/apps-script-utils/commit/f880ce8d80822a7913a1354fe7e1b2e226a6c3cf)), closes [#539](https://github.com/MaksymStoianov/apps-script-utils/issues/539)
+* **docs:** link the translations under the breadcrumbs, and the AI notice before the footer ([e89a2e8](https://github.com/MaksymStoianov/apps-script-utils/commit/e89a2e8790882961fceab00cdeeffa9d41373ead))
+* **docs:** link the translations under the breadcrumbs, and the AI notice before the footer ([2450cf7](https://github.com/MaksymStoianov/apps-script-utils/commit/2450cf7aa3e9f371f59edae7dffce7251b599533))
+
+
+### Bug Fixes
+
+* **docs:** declare the build settings per instance, and check they land ([f338835](https://github.com/MaksymStoianov/apps-script-utils/commit/f338835b8db2e5e121caebc076eced90bc86c2b9))
+* **docs:** declare the build settings per instance, and check they land ([7407642](https://github.com/MaksymStoianov/apps-script-utils/commit/7407642b6b95424a96be57e1eef13655c5dc7bc1)), closes [#539](https://github.com/MaksymStoianov/apps-script-utils/issues/539)
+* **docs:** keep the injections — the build profile really is inert ([d646f6b](https://github.com/MaksymStoianov/apps-script-utils/commit/d646f6b138d62cc755dac23bdd414b2798ab3a98)), closes [#539](https://github.com/MaksymStoianov/apps-script-utils/issues/539)
+* **docs:** mount the header controls reliably, and put the notice in the article ([ab18695](https://github.com/MaksymStoianov/apps-script-utils/commit/ab1869569f042f188c95117df8a703b49cd9964f)), closes [#539](https://github.com/MaksymStoianov/apps-script-utils/issues/539)
+* **docs:** put the build profile at the solution root ([6cd294a](https://github.com/MaksymStoianov/apps-script-utils/commit/6cd294a77581f8d7eefe59c102fa00acfbe8f71c)), closes [#539](https://github.com/MaksymStoianov/apps-script-utils/issues/539)
+* **docs:** put the language and search controls in the header ([354a443](https://github.com/MaksymStoianov/apps-script-utils/commit/354a4436bf0cd6b8fecec452492989f78ee782aa))
+* **docs:** put the language and search controls in the header ([6c69ee6](https://github.com/MaksymStoianov/apps-script-utils/commit/6c69ee6abfa0238ff4e265a13470dd0510a6e184))
+* **docs:** put the language and search controls in the header ([d578dc9](https://github.com/MaksymStoianov/apps-script-utils/commit/d578dc95cd7e308d0ebd151263361438dc0eaf69)), closes [#539](https://github.com/MaksymStoianov/apps-script-utils/issues/539)
+* **docs:** write the head, the switcher and the notice in after the build ([d281d6f](https://github.com/MaksymStoianov/apps-script-utils/commit/d281d6f14552c357b77824069f839bc8320c1941))
+* **docs:** write the head, the switcher and the notice in after the build ([85b127e](https://github.com/MaksymStoianov/apps-script-utils/commit/85b127e65654f9472d0142bc92e0fce7cefd063c)), closes [#539](https://github.com/MaksymStoianov/apps-script-utils/issues/539)
+
 ## [2.0.0](https://github.com/MaksymStoianov/apps-script-utils/compare/apps-script-utils-v1.10.0...apps-script-utils-v2.0.0) (2026-09-23)
 
 
