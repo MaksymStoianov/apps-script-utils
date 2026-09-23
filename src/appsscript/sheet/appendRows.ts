@@ -1,6 +1,14 @@
-import { IllegalArgumentException } from "../../exception";
-import { isConsistent2DArray } from "../../lang";
-import { requireSheet } from "./requireSheet";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
+import { isConsistent2DArray, isNil } from "../../lang";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
+
+/**
+ * A cell counts as data unless it is empty: `0` and `false` are values a caller put there.
+ */
+function isBlank(value: unknown): boolean {
+  return value === "" || isNil(value);
+}
 
 export interface AppendRowsOptions {
   /**
@@ -11,8 +19,9 @@ export interface AppendRowsOptions {
 }
 
 /**
- * Appends rows to the bottom of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
- * Data is written starting from column 1 of the new rows.
+ * Appends rows after the last row that holds data, without overwriting anything.
+ * Given a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> the whole sheet is examined and the data is written from column 1; given a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> only the cells inside it are, and the data is written on its columns.
+ * The sheet gains rows when it is too short to hold the result.
  * If a cell's content in `values` starts with `=`, it is interpreted as a formula.
  *
  * @example
@@ -26,24 +35,24 @@ export interface AppendRowsOptions {
  * ]);
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which columns will be appended.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> to append to, or the <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> to append within.
  * @param       {any[][]} values - A 2D array containing the data to append.
  * @param       {AppendRowsOptions | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
- * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
+ * @throws      {@link IllegalArgumentException}
  * @throws      {@link InvalidSheetException}
  * @see         {@link prependRows}
  * @see         {@link appendRow}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
  * @since       1.0.0
- * @version     1.5.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
  */
 export function appendRows(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: AppendRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet {
@@ -51,7 +60,13 @@ export function appendRows(
     throw new IllegalArgumentException();
   }
 
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   if (!isConsistent2DArray(values)) {
     throw new TypeError(
@@ -73,9 +88,29 @@ export function appendRows(
 
     const numColumns: number = values[0].length;
 
-    const lastRow: number = sheet.getLastRow();
+    // A range appends on its own columns; a sheet appends from the first column.
+    const columnStart: number = within ? within.getColumn() : 1;
 
-    let rowPosition: number = lastRow;
+    // The row the data ends at: the write starts one row below it.
+    let rowPosition: number;
+
+    if (within) {
+      const cells = within.getValues();
+
+      let filled = 0;
+
+      for (let row = cells.length; row > filled; row--) {
+        if (cells[row - 1].some((value) => !isBlank(value))) {
+          filled = row;
+
+          break;
+        }
+      }
+
+      rowPosition = within.getRow() + filled - 1;
+    } else {
+      rowPosition = sheet.getLastRow();
+    }
 
     if (effectiveOptions.afterFrozenRows !== false) {
       const frozenRows = sheet.getFrozenRows();
@@ -85,9 +120,26 @@ export function appendRows(
       }
     }
 
-    const range = sheet.getRange(rowPosition + 1, 1, numRows, numColumns);
+    const rowStart = rowPosition + 1;
 
-    range.setValues(values);
+    // The sheet grows rather than the write failing at its edge.
+    const maxRows = sheet.getMaxRows();
+
+    const neededRows = rowStart + numRows - 1 - maxRows;
+
+    if (neededRows > 0) {
+      sheet.insertRowsAfter(maxRows, neededRows);
+    }
+
+    const maxColumns = sheet.getMaxColumns();
+
+    const neededColumns = columnStart + numColumns - 1 - maxColumns;
+
+    if (neededColumns > 0) {
+      sheet.insertColumnsAfter(maxColumns, neededColumns);
+    }
+
+    sheet.getRange(rowStart, columnStart, numRows, numColumns).setValues(values);
   } catch (err: unknown) {
     throw err instanceof Error ? err.message : String(err);
   } finally {

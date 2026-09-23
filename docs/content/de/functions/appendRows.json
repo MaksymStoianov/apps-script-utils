@@ -1,22 +1,29 @@
 {
-  "summary": "Fügt Zeilen unter die bereits vorhandenen Daten eines Blattes ein.",
+  "summary": "Fügt Zeilen unter der letzten Zeile mit Daten an.",
   "description": [
-    "Geschrieben wird ab Spalte 1 der ersten neuen Zeile, und das Blatt wächst um genau so viele Zeilen, wie die Matrix hat. Anders als `Sheet#appendRow`, das eine Zeile auf einmal nimmt, geht der ganze Block in einem Aufruf hinaus.",
+    "Wird ein Blatt übergeben, zählt das ganze Blatt und geschrieben wird ab Spalte 1; wird ein Bereich übergeben, zählen nur dessen Zellen und geschrieben wird auf seinen Spalten — Daten anderswo im Blatt bestimmen die Stelle dann nicht mehr.",
+    "Nichts wird überschrieben: geschrieben wird eine Zeile unter der letzten mit Daten, wobei `0` und `false` als Daten gelten. Ist das Blatt zu kurz, erhält es weitere Zeilen. Anders als `Sheet#appendRow`, das eine Zeile nach der anderen nimmt, wird der ganze Block in einem Aufruf geschrieben.",
     "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
   ],
   "params": {
-    "sheet": "Das Blatt, in das geschrieben wird.",
+    "target": "Das Blatt, an das angefügt wird, oder der Bereich, innerhalb dessen angefügt wird.",
     "values": "Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.",
-    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+    "options": "`afterFrozenRows` beginnt unter den fixierten Zeilen, wenn die Daten davor enden."
   },
-  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "returns": "das Blatt, sodass Aufrufe verkettet werden können.",
   "throws": {
-    "InvalidSheetException": "das erste Argument ist kein Blatt.",
-    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+    "IllegalArgumentException": "kein Argument übergeben wurde.",
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist.",
+    "TypeError": "die Werte keine Matrix mit gleich langen Zeilen sind."
   },
   "examples": [
     {
-      "title": "Schreiben"
+      "title": "An ein Blatt anfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRows(sheet, [\n  [\"Ada\", \"ada@example.com\"],\n  [\"Grace\", \"grace@example.com\"]\n]);\n```"
+    },
+    {
+      "title": "Innerhalb eines Bereichs anfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRows(sheet.getRange(\"B1:C10\"), [[\"Ada\", \"ada@example.com\"]]);\n```"
     }
   ],
   "seeAlso": [

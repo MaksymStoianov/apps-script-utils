@@ -2,9 +2,9 @@
 
 # appendRow
 
-<link-summary>Fügt eine Zeile unter die bereits vorhandenen Daten eines Blattes ein.</link-summary>
+<link-summary>Fügt eine Zeile unter der letzten Zeile mit Daten an.</link-summary>
 
-<web-summary>appendRow() — Fügt eine Zeile unter die bereits vorhandenen Daten eines Blattes ein. apps-script-utils, Deutsch.</web-summary>
+<web-summary>appendRow() — Fügt eine Zeile unter der letzten Zeile mit Daten an. apps-script-utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -12,43 +12,52 @@
 
 ```typescript
 function appendRow(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: AppendRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-`appendRows` für eine einzelne Zeile, wenn nur eine geschrieben wird. Die Werte kommen als flaches Array von Zellen statt als Matrix.
+Ein Blatt wird ganz betrachtet und die Zeile ab Spalte 1 geschrieben; ein Bereich wird nur in sich betrachtet und die Zeile auf seinen Spalten geschrieben, unter der letzten Zeile des Bereichs mit Daten.
 
-Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor.
+Es ist `appendRows` mit einer Zeile: dieselben Prüfungen, dasselbe Wachsen des Blatts, wenn das Ergebnis nicht passt, und dieselbe Regel, dass eine Zelle mit `=` zur Formel wird.
 
 ## Parameter
 
-| Parameter                     | Typ                                      | Beschreibung                                                                              |
-| :---------------------------- | :--------------------------------------- | :---------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet`     | Das Blatt, in das geschrieben wird.                                                       |
-| `values`                      | `unknown`                                | Die Zellen der einen Zeile.                                                               |
-| `options` _(optional)_ `= {}` | `AppendRowsOptions \| null \| undefined` | `afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben. |
+| Parameter                     | Typ                                                                        | Beschreibung                                                                       |
+| :---------------------------- | :------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, an das angefügt wird, oder der Bereich, innerhalb dessen angefügt wird. |
+| `values`                      | `unknown`                                                                  | Eine einzelne Zeile: ein flaches Array, ein Wert je Spalte.                        |
+| `options` _(optional)_ `= {}` | `AppendRowsOptions \| null \| undefined`                                   | `afterFrozenRows` beginnt unter den fixierten Zeilen, wenn die Daten davor enden.  |
 
 ## Rückgabewert
 
-`GoogleAppsScript.Spreadsheet.Sheet` — dasselbe Blatt, damit sich Aufrufe verketten lassen.
+`GoogleAppsScript.Spreadsheet.Sheet` — das Blatt, sodass Aufrufe verkettet werden können.
 
 ## Ausnahmen
 
-| Ausnahme                | Bedingung                                             |
-| :---------------------- | :---------------------------------------------------- |
-| `InvalidSheetException` | das erste Argument ist kein Blatt.                    |
-| `TypeError`             | die Werte sind keine Matrix mit gleich langen Zeilen. |
+| Ausnahme                   | Bedingung                                                |
+| :------------------------- | :------------------------------------------------------- |
+| `IllegalArgumentException` | kein Argument übergeben wurde.                           |
+| `InvalidSheetException`    | das erste Argument weder ein Blatt noch ein Bereich ist. |
+| `TypeError`                | die Werte kein flaches Array sind.                       |
 
 ## Beispiele
 
-### Schreiben
+### An ein Blatt anfügen
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
 appendRow(sheet, ["Ada", "ada@example.com", "=TODAY()"]);
+```
+
+### Innerhalb eines Bereichs anfügen
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+appendRow(sheet.getRange("B1:D10"), ["Ada", "ada@example.com"]);
 ```
 
 ## Siehe auch
