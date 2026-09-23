@@ -2,9 +2,9 @@
 
 # getSlideIndex
 
-<link-summary>Finds the position of a slide in a presentation.</link-summary>
+<link-summary>Finds the position of a slide, in a presentation or in the active one.</link-summary>
 
-<web-summary>getSlideIndex() — Finds the position of a slide in a presentation. apps-script-utils, English.</web-summary>
+<web-summary>getSlideIndex() — Finds the position of a slide, in a presentation or in the active one. apps-script-utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -12,21 +12,21 @@
 
 ```typescript
 function getSlideIndex(
-  presentation: GoogleAppsScript.Slides.Presentation,
-  slide: GoogleAppsScript.Slides.Slide
+  slide: GoogleAppsScript.Slides.Slide,
+  presentation?: GoogleAppsScript.Slides.Presentation | null
 ): number | null;
 ```
 
 The slides are compared by their object id, so a slide read earlier is still recognised. A slide that belongs to another presentation, or has since been removed, gives `null`.
 
-The presentation comes first, as it does in [`getSlideByIndex`](getSlideByIndex.md), so the two lookups read the same way round.
+The slide comes first and the presentation is optional, the way [`getSlideByIndex`](getSlideByIndex.md) and [`getSheetByIndex`](getSheetByIndex.md) read: without one the active presentation is used, which is what a script bound to a deck already has. A standalone script has none, and then the answer is `null` rather than an error.
 
 ## Parameters
 
-| Parameter      | Type                                   | Description                  |
-| :------------- | :------------------------------------- | :--------------------------- |
-| `presentation` | `GoogleAppsScript.Slides.Presentation` | The presentation to look in. |
-| `slide`        | `GoogleAppsScript.Slides.Slide`        | The slide to locate.         |
+| Parameter                   | Type                                           | Description                                                              |
+| :-------------------------- | :--------------------------------------------- | :----------------------------------------------------------------------- |
+| `slide`                     | `GoogleAppsScript.Slides.Slide`                | The slide to look for.                                                   |
+| `presentation` _(optional)_ | `GoogleAppsScript.Slides.Presentation \| null` | The presentation to look in. Without it the active presentation is used. |
 
 ## Returns
 
@@ -34,13 +34,12 @@ The presentation comes first, as it does in [`getSlideByIndex`](getSlideByIndex.
 
 ## Examples
 
-### Looking up
+### In the active presentation
 
 ```javascript
-const presentation = SlidesApp.getActivePresentation();
-const slide = presentation.getSlides()[2];
+const slide = SlidesApp.getActivePresentation().getSlides()[2];
 
-getSlideIndex(presentation, slide); // => 2
+getSlideIndex(slide); // => 2
 ```
 
 ## See also

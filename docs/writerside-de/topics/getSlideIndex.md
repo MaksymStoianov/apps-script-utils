@@ -2,9 +2,9 @@
 
 # getSlideIndex
 
-<link-summary>Findet die Position einer Folie in einer Präsentation.</link-summary>
+<link-summary>Findet die Position einer Folie, in einer Präsentation oder in der aktiven.</link-summary>
 
-<web-summary>getSlideIndex() — Findet die Position einer Folie in einer Präsentation. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getSlideIndex() — Findet die Position einer Folie, in einer Präsentation oder in der aktiven. apps-script-utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -12,21 +12,21 @@
 
 ```typescript
 function getSlideIndex(
-  presentation: GoogleAppsScript.Slides.Presentation,
-  slide: GoogleAppsScript.Slides.Slide
+  slide: GoogleAppsScript.Slides.Slide,
+  presentation?: GoogleAppsScript.Slides.Presentation | null
 ): number | null;
 ```
 
 Die Folien werden über ihre Objekt-Id verglichen, eine früher gelesene Folie wird also weiterhin erkannt. Eine Folie aus einer anderen Präsentation oder eine inzwischen gelöschte ergibt `null`.
 
-Die Präsentation steht zuerst, wie in [`getSlideByIndex`](getSlideByIndex.md), damit sich beide Nachschlagefunktionen gleich lesen.
+Die Folie steht zuerst und die Präsentation ist optional, wie bei [`getSlideByIndex`](getSlideByIndex.md) und [`getSheetByIndex`](getSheetByIndex.md): ohne sie wird die aktive Präsentation verwendet, die ein gebundenes Skript ohnehin hat. Ein eigenständiges Skript hat keine, dann lautet die Antwort `null` statt eines Fehlers.
 
 ## Parameter
 
-| Parameter      | Typ                                    | Beschreibung                           |
-| :------------- | :------------------------------------- | :------------------------------------- |
-| `presentation` | `GoogleAppsScript.Slides.Presentation` | Die Präsentation, in der gesucht wird. |
-| `slide`        | `GoogleAppsScript.Slides.Slide`        | Die zu findende Folie.                 |
+| Parameter                   | Typ                                            | Beschreibung                                                               |
+| :-------------------------- | :--------------------------------------------- | :------------------------------------------------------------------------- |
+| `slide`                     | `GoogleAppsScript.Slides.Slide`                | Die gesuchte Folie.                                                        |
+| `presentation` _(optional)_ | `GoogleAppsScript.Slides.Presentation \| null` | Die Präsentation, in der gesucht wird. Ohne sie wird die aktive verwendet. |
 
 ## Rückgabewert
 
@@ -34,13 +34,12 @@ Die Präsentation steht zuerst, wie in [`getSlideByIndex`](getSlideByIndex.md), 
 
 ## Beispiele
 
-### Nachschlagen
+### In der aktiven Präsentation
 
 ```javascript
-const presentation = SlidesApp.getActivePresentation();
-const slide = presentation.getSlides()[2];
+const slide = SlidesApp.getActivePresentation().getSlides()[2];
 
-getSlideIndex(presentation, slide); // => 2
+getSlideIndex(slide); // => 2
 ```
 
 ## Siehe auch
