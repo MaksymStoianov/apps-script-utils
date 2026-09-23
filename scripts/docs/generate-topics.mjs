@@ -36,7 +36,7 @@ import prettier from "prettier";
 import ts from "typescript";
 
 import { LANGUAGES, SOURCE_LANGUAGE } from "./languages.mjs";
-import { buildProfiles, headHtml, searchHtml, writersideCfg } from "./site.mjs";
+import { buildProfiles, headHtml, writersideCfg } from "./site.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -975,7 +975,6 @@ for (const language of LANGUAGES) {
   // 1. Project configuration, the search widget and the structured head.
   emit(join(root, "buildprofiles.xml"), buildProfiles(language));
   emit(join(root, "head.html"), await pretty(headHtml(language), join(root, "head.html")));
-  emit(join(root, "search.html"), await pretty(searchHtml(language), join(root, "search.html")));
 
   // The configuration is the same everywhere but for the version, which comes
   // from the package, so even the English project is written rather than kept.
