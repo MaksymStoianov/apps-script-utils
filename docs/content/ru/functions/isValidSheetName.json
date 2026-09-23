@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение именем листа.",
+  "description": [
+    "То, что принимает Google Таблицы: не длиннее 100 символов, не пустое, без символов `\\ / ? * [ ]` и не зарезервированное имя `history` в любом регистре.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является именем листа; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisValidSheetName(\"Data\"); // => true\nisValidSheetName(\"Report 2026\"); // => true\nisValidSheetName(\"history\"); // => false\nisValidSheetName(\"Data/2026\"); // => false\nisValidSheetName(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSheetName"
+    },
+    {
+      "name": "requireValidSheetName"
+    }
+  ]
+}

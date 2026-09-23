@@ -1,0 +1,33 @@
+{
+  "summary": "Leert die vom Prädikat gewählten Zeilen, ohne die Zeilen zu entfernen.",
+  "description": [
+    "Der Inhalt verschwindet, die Zeilen bleiben: die Positionen verschieben sich nicht, und alles, was eine Zeile über ihre Nummer anspricht, zeigt weiter auf dieselbe Stelle. Entfernt werden sie von `deleteRowsByConditional`.",
+    "Das Blatt wird einmal gelesen und das Leeren in zusammenhängende Blöcke gruppiert, sodass auch eine verstreute Auswahl wenige Dienstaufrufe kostet."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird.",
+    "predicate": "Bekommt die Zellen der Zeile, ihre einsbasierte Position und — wenn `headerRow` gesetzt ist — die Zeile mit den Spaltennamen als Schlüsseln. `true` für die Zeilen, auf die gewirkt werden soll.",
+    "options": "`headerRow` benennt die Zeile mit den Spaltennamen. Ist sie gesetzt, kommt jede Zeile mit diesen Namen als Schlüsseln, und die Kopfzeile selbst scheidet als Kandidat aus."
+  },
+  "returns": "wie viele betroffen waren.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt.",
+    "IllegalArgumentException": "das Prädikat ist keine Funktion oder die Kopfposition keine positive ganze Zahl."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

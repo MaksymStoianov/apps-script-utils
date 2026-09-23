@@ -1,0 +1,31 @@
+{
+  "summary": "Empties the columns a predicate selects, leaving the columns in place.",
+  "description": [
+    "`clearRowsByConditional` turned on its side: the contents go, the columns stay, so the letters of the columns after them do not change.",
+    "The sheet is read once and the clearing is grouped into consecutive blocks."
+  ],
+  "params": {
+    "sheet": "The sheet to work on.",
+    "predicate": "Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on.",
+    "options": "`headerColumn` names the column holding the row names, and keeps that column out of the candidates."
+  },
+  "returns": "how many were affected.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet.",
+    "IllegalArgumentException": "the predicate is not a function, or the header position is not a positive integer."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nclearColumnsByConditional(sheet, (values) => values.every((cell) => cell === \"\"));\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "clearRowsByConditional"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение относительным путём.",
+  "description": [
+    "Точное дополнение `isAbsolute`: всё, что не начинается от корня, включая пустую строку.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является относительным путём; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisRelative(\"docs/readme.md\"); // => true\nisRelative(\"./a\"); // => true\nisRelative(\"\"); // => true\nisRelative(\"/var/log\"); // => false\nisRelative(\"https://example.com/a\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRelative"
+    },
+    {
+      "name": "requireRelative"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Retransforme les références numériques en caractères.",
+  "description": [
+    "Les références décimales (`&#60;`) et hexadécimales (`&#x3C;`) sont décodées. Les entités nommées **non** : `\"&amp;\"` revient inchangée, car il s'agit de l'inverse d'`encodeHtml`, qui n'émet que des références numériques."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide."
+  },
+  "returns": "la chaîne décodée.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "encodeHtml"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

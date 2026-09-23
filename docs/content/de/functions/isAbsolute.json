@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert ein absoluter Pfad ist.",
+  "description": [
+    "Ein Pfad, der an einer Wurzel beginnt: ein führender `/` oder ein Schema wie `https://` oder `mailto:`. Alles andere, auch die leere Zeichenkette, ist relativ.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein absoluter Pfad ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisAbsolute(\"/var/log\"); // => true\nisAbsolute(\"https://example.com/a\"); // => true\nisAbsolute(\"mailto:a@example.com\"); // => true\nisAbsolute(\"docs/readme.md\"); // => false\nisAbsolute(\"./a\"); // => false\nisAbsolute(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonAbsolute"
+    },
+    {
+      "name": "requireAbsolute"
+    }
+  ]
+}

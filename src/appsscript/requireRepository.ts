@@ -3,6 +3,11 @@ import { RepositoryIsNotDefinedException } from "../exception";
 /**
  * Ensures that a repository is defined.
  *
+ * @example
+ * ```javascript
+ * const users = requireRepository(registry.users, "The user repository is not wired up.");
+ * ```
+ *
  * @param {T | null | undefined} repository The repository object to check.
  * @param {string} [message="Repository is not defined."] The error message to throw if the repository is not defined.
  * @returns {T} The repository object.

@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob eine Version mindestens der geforderten entspricht.",
+  "description": [
+    "Entschieden wird es von `versionCompare`, der Vergleich läuft also Gruppe für Gruppe numerisch, und `1.10` steht über `1.2`. Beide Argumente müssen schlichte Punktzahlen sein; ein Vorabversions-Suffix wird nicht eingeordnet, sondern abgelehnt."
+  ],
+  "params": {
+    "currentVersion": "Die vorliegende Version.",
+    "requiredVersion": "Das akzeptable Minimum."
+  },
+  "returns": "`true`, wenn die vorliegende Version der geforderten entspricht oder höher ist.",
+  "throws": {
+    "TypeError": "eines der Argumente ist keine gültige Versionsangabe."
+  },
+  "examples": [
+    {
+      "title": "Eine Anforderung prüfen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "versionCompare"
+    },
+    {
+      "name": "nonVersionCompatible"
+    },
+    {
+      "name": "requireVersionCompatible"
+    }
+  ]
+}

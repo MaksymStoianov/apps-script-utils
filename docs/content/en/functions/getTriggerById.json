@@ -1,0 +1,24 @@
+{
+  "summary": "Finds one of the project's triggers by its id.",
+  "description": [
+    "Apps Script hands out a trigger id when a trigger is created but offers no way to look one up again, so the project's triggers are walked and compared. A trigger that has since been deleted gives `null`, which is the case a stored id has to handle."
+  ],
+  "params": {
+    "id": "The trigger id. It must not be empty."
+  },
+  "returns": "the trigger, or `null` when the project has none with that id.",
+  "throws": {
+    "EmptyStringException": "the id is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Looking up",
+      "body": "```javascript\nconst id = PropertiesService.getScriptProperties().getProperty(\"TRIGGER_ID\");\n\nconst trigger = getTriggerById(id);\n\nif (trigger !== null) {\n  ScriptApp.deleteTrigger(trigger);\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    }
+  ]
+}

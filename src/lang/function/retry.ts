@@ -4,6 +4,16 @@ import { isFunction } from "../base";
 /**
  * Options for {@link retry}.
  *
+ * @example
+ * ```javascript
+ * const options = {
+ *   attempts: 4,
+ *   delay: 500,
+ *   multiplier: 2,
+ *   maxDelay: 10000
+ * };
+ * ```
+ *
  * @property {number} [attempts=3] - Total number of attempts, including the first.
  */
 export interface RetryOptions {

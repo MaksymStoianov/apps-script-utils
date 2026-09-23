@@ -5,6 +5,11 @@ import { parseA1Notation } from "./parseA1Notation";
 /**
  * Extracts the **range part** from a full A1 notation string (e.g., `'Sheet1!A1:B2'` returns `'A1:B2'`).
  *
+ * @example
+ * ```javascript
+ * extractRangeFromA1Notation("Sheet1!A1:B2"); // => "A1:B2"
+ * ```
+ *
  * @param       {string} a1Notation - The A1 notation string (e.g., `'SheetName!A1:B2'`, `'A1:B2'`).
  * @returns     {string|null} The extracted range string (e.g., `'A1:B2'`), or `null`.
  * @throws      {Error}

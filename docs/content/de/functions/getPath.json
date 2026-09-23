@@ -1,0 +1,27 @@
+{
+  "summary": "Liest eine verschachtelte Eigenschaft über einen Pfad, mit Rückfallwert.",
+  "description": [
+    "Der Pfad ist entweder eine Punkt-Zeichenkette oder ein Array von Segmenten; Array-Indizes stehen als Zahlen darin, wie in `[\"rows\", 0, \"id\"]`. Klammernsyntax innerhalb einer Zeichenkette wird **nicht** ausgewertet: `\"rows[0].id\"` findet nichts.",
+    "Ein fehlendes oder leeres Glied irgendwo im Pfad liefert den Rückfallwert statt einer Ausnahme — genau dafür steht diese Funktion anstelle von `a.b.c`."
+  ],
+  "params": {
+    "source": "Der Wert, aus dem gelesen wird.",
+    "path": "Eine Punkt-Zeichenkette oder ein Array aus Schlüsseln und Indizes.",
+    "fallback": "Wird zurückgegeben, wenn der Pfad ins Leere führt."
+  },
+  "returns": "den Wert am Pfad oder den Rückfallwert.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "setPath"
+    },
+    {
+      "name": "flat"
+    }
+  ]
+}

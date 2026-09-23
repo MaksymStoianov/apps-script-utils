@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Gebietsschema-Code ist.",
+  "description": [
+    "`nonValidLocale(value)` ist dieselbe Prüfung wie `!isValidLocale(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Genau zwei ASCII-Buchstaben in beliebiger Schreibweise — `\"en\"`, `\"UK\"`. Ein Regions- oder Schrift-Subtag wie in `\"en-US\"` wird abgelehnt: gemeint ist der kurze Sprachcode, nicht ein vollständiges BCP-47-Tag.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Gebietsschema-Code ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonValidLocale(\"en-US\"); // => true\nnonValidLocale(\"eng\"); // => true\nnonValidLocale(\"\"); // => true\nnonValidLocale(\"en\"); // => false\nnonValidLocale(\"UK\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidLocale"
+    },
+    {
+      "name": "requireValidLocale"
+    }
+  ]
+}

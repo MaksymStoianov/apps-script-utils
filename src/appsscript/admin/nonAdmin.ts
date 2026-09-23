@@ -10,6 +10,13 @@ import { isAdmin } from "./isAdmin";
  * treats both as "not an administrator" — it logs the failure and returns
  * `false` — so a `true` here is not by itself proof of a non-administrator.
  *
+ * @example
+ * ```javascript
+ * if (nonAdmin()) {
+ *   return;
+ * }
+ * ```
+ *
  * @returns     {boolean} `true` if the user is not an administrator; otherwise, `false`.
  * @see         {@link isAdmin}
  * @see         [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory)

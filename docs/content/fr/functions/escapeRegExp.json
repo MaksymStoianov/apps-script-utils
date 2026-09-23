@@ -1,0 +1,23 @@
+{
+  "summary": "Échappe les caractères qui ont un sens dans une expression régulière.",
+  "description": [
+    "Faites passer une saisie utilisateur par ici avant d'en construire un `RegExp` : un point reste un point au lieu de correspondre à n'importe quel caractère."
+  ],
+  "params": {
+    "value": "La chaîne à échapper. Elle ne doit pas être vide."
+  },
+  "returns": "la chaîne échappée, qu'on peut insérer sans risque dans un motif.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Échappement"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "merge"
+    }
+  ]
+}

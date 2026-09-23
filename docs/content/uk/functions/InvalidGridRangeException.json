@@ -1,0 +1,24 @@
+{
+  "summary": "Очікувався GridRange, а об'єкт ним не є: межі відсутні, переплутані місцями або від'ємні.",
+  "description": [
+    "Очікувався `GridRange`, а об'єкт ним не є: межі відсутні, переплутані місцями або від'ємні.",
+    "Будь-який клас цієї ієрархії приймає необов'язкове повідомлення, інший виняток, чиє повідомлення буде перевикористано, або взагалі нічого. `isException` розпізнає їх усі; звичайний `Error` до них не належить."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Кинути й упіймати",
+      "body": "```javascript\nthrow new InvalidGridRangeException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof InvalidGridRangeException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

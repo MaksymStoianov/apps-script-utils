@@ -1,0 +1,35 @@
+{
+  "summary": "Renvoie la collection inchangée après avoir vérifié qu'aucun élément n'est `null` ni `undefined`.",
+  "description": [
+    "Une collection trouée passe toutes les autres gardes : elle n'est ni nulle, ni vide, et reste un tableau valide. Le trou ressort bien plus tard sous forme de cellule blanche ou de `Cannot read properties of undefined`. Cette garde l'attrape à la frontière et rend la collection typée sans les valeurs nulles.",
+    "Elle accepte un tableau, un `Set` ou une `Map` — pour une `Map`, ce sont les **valeurs** qui sont vérifiées, pas les clés. Une collection `null` ou `undefined` passe telle quelle : ce cas relève de `requireNonNull`, et empiler les deux gardes ne doit pas le signaler deux fois. Une collection vide passe. Seul le premier niveau est examiné. Les trous d'un tableau comptent comme `undefined`, donc `[1, , 3]` est rejeté."
+  ],
+  "params": {
+    "values": "La collection à vérifier.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé."
+  },
+  "returns": "la même collection, typée sans `null` ni `undefined` dans le type de ses éléments.",
+  "throws": {
+    "IllegalArgumentException": [
+      "un élément vaut `null` ou `undefined`.",
+      "`values` n'est ni un tableau, ni un `Set`, ni une `Map`."
+    ]
+  },
+  "examples": [
+    {
+      "title": "Vérifier une ligne avant de l'écrire"
+    },
+    {
+      "title": "Affiner le type des éléments"
+    },
+    {
+      "title": "Ce qui passe et ce qui lève"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact",
+      "note": "retire les valeurs vides au lieu de les rejeter."
+    }
+  ]
+}

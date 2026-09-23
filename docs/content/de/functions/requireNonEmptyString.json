@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als Zeichenkette mit Inhalt zurück oder wirft.",
+  "description": [
+    "Leerraum zählt nicht als Inhalt: eine Zeichenkette aus Leerzeichen besteht die Prüfung so wenig wie eine leere. Mit dieser Prüfung beginnen die meisten String-Helfer dieser Bibliothek."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet."
+  },
+  "returns": "dieselbe Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder besteht nur aus Leerraum."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "isEmpty"
+    }
+  ]
+}

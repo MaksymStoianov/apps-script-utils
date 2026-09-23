@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie l'intervalle entre deux dates dans l'unité choisie.",
+  "description": [
+    "Le résultat est la première date moins la seconde : il est donc négatif quand la seconde est postérieure. Des unités entières sont renvoyées par défaut ; passez `float` pour obtenir aussi la fraction.",
+    "Millisecondes, secondes, minutes et heures ont des longueurs fixes et sont divisées exactement. Jours, mois et années sont comptés en unités entières écoulées : deux heures de part et d'autre de minuit font donc `0` jour et non `1`."
+  ],
+  "params": {
+    "left": "La date depuis laquelle l'intervalle est mesuré.",
+    "right": "La date qui en est retranchée.",
+    "unit": "`\"millisecond\"`, `\"second\"`, `\"minute\"`, `\"hour\"`, `\"day\"`, `\"month\"` ou `\"year\"`.",
+    "float": "Conserver la partie fractionnaire au lieu de tronquer. Unités de longueur fixe seulement."
+  },
+  "returns": "l'intervalle, négatif lorsque la seconde date est postérieure.",
+  "throws": {
+    "IllegalArgumentException": "un argument n'est pas un `Date` valide, ou l'unité est inconnue."
+  },
+  "examples": [
+    {
+      "title": "Mesurer un intervalle"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "offset"
+    },
+    {
+      "name": "getDaysInMonth"
+    }
+  ]
+}

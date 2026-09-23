@@ -1,0 +1,25 @@
+{
+  "summary": "Converts a one-based column position into its letter.",
+  "description": [
+    "Indices count from zero, the way a `GridRange` does; positions count from one, the way `getRange(row, column)` does. Mixing the two is the usual source of an off-by-one in a spreadsheet script, which is why both pairs exist under separate names."
+  ],
+  "params": {
+    "position": "The one-based column position, as `getRange` takes it."
+  },
+  "returns": "the column letter.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ngetColumnLetterByPosition(1); // => \"A\"\ngetColumnLetterByPosition(27); // => \"AA\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getColumnPositionByLetter"
+    },
+    {
+      "name": "getColumnLetterByIndex"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення рядком.",
+  "description": [
+    "Перевіряється `typeof value === \"string\"`, тому порожній рядок підходить, а об'єкт `String` — ні, він об'єкт.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є рядком; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisString(\"\"); // => true\nisString(\"abc\"); // => true\nisString(1); // => false\nisString(null); // => false\nisString([]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "requireNonString"
+    }
+  ]
+}

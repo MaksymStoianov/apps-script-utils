@@ -1,0 +1,25 @@
+{
+  "summary": "Як читаються стовпці і які з них потрапляють у кандидати.",
+  "description": [
+    "`headerColumn` — стовпець з іменами рядків, рахуючи від одиниці. Як і `headerRow`, він дає кожному стовпцю ці ключі й виводить сам стовпець заголовків з числа кандидатів."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Форма"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnPredicate"
+    }
+  ]
+}

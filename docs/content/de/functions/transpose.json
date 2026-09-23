@@ -1,0 +1,36 @@
+{
+  "summary": "Vertauscht Zeilen und Spalten einer Matrix.",
+  "description": [
+    "Der Wert in Zeile `i`, Spalte `j` der Eingabe steht im Ergebnis in Zeile `j`, Spalte `i`. Es entsteht eine neue Matrix; die Eingabe bleibt unverändert.",
+    "Die Eingabe muss eine Matrix mit gleich langen Zeilen sein — die Regel, die [`isConsistent2DArray`](isConsistent2DArray.md) formuliert — denn eine ungleichmäßige Matrix hat keine Transponierte. Alles andere wirft einen einfachen `Error`.",
+    "In einer Tabelle ist das die Umrechnung zwischen den beiden Formen eines Bereichs: eine Spalte, gelesen als je eine Zeile pro Zelle, und eine einzelne Zeile mit denselben Werten."
+  ],
+  "params": {
+    "arr": "Die zu transponierende Matrix. Bleibt unverändert."
+  },
+  "returns": "eine neue Matrix mit vertauschten Zeilen und Spalten. Die Elementtypen bleiben erhalten.",
+  "throws": {
+    "Error": "die Eingabe ist keine Matrix oder ihre Zeilen sind unterschiedlich lang."
+  },
+  "examples": [
+    {
+      "title": "Zeilen werden zu Spalten"
+    },
+    {
+      "title": "Eine Liste in eine Spalte schreiben"
+    },
+    {
+      "title": "Ungültige Eingabe"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "die Form, die `transpose` verlangt."
+    },
+    {
+      "name": "chunk",
+      "note": "formt ein flaches Array zu Zeilen um."
+    }
+  ]
+}

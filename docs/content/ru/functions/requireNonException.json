@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение, убедившись, что оно не является экземпляром `Exception`.",
+  "description": [
+    "Только собственная иерархия библиотеки. Обычный `Error` не подходит — именно это делает проверку полезной в `catch`, где нужно отличить одно от другого.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение; после проверки известно, что оно не является экземпляром `Exception`.",
+  "throws": {
+    "IllegalArgumentException": "значение является экземпляром `Exception`."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireNonException(new Error()); // => new Error()\nrequireNonException({}); // => {}\nrequireNonException(new IllegalArgumentException()); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "nonException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

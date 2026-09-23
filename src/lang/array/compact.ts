@@ -3,6 +3,11 @@ import { isArray } from "../base";
 /**
  * The values JavaScript treats as false in a boolean context.
  *
+ * @example
+ * ```javascript
+ * const values = [0, "", false, null, undefined];
+ * ```
+ *
  * @since   1.11.0
  * @version 1.0.0
  */

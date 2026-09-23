@@ -1,0 +1,29 @@
+{
+  "summary": "Joins path segments with a single separator between them.",
+  "description": [
+    "Empty segments are dropped, doubled separators collapse into one, and the result is normalised afterwards — so a `..` written mid-path is resolved rather than carried along.",
+    "This is string work, not filesystem work: nothing is checked for existence."
+  ],
+  "params": {
+    "paths": "The segments to join."
+  },
+  "returns": "the joined, normalised path.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Joining",
+      "body": "```javascript\njoin(\"a\", \"b/c\"); // => \"a/b/c\"\njoin(\"a\", \"\", \"b\"); // => \"a/b\"\njoin(\"/a\", \"../b\"); // => \"/b\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "normalize"
+    },
+    {
+      "name": "parse"
+    },
+    {
+      "name": "isAbsolute"
+    }
+  ]
+}

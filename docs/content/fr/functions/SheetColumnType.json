@@ -1,0 +1,22 @@
+{
+  "summary": "Ce que peut contenir une colonne de schéma.",
+  "description": [
+    "L'une de `\"string\"`, `\"number\"`, `\"boolean\"` ou `\"date\"`. Ces quatre correspondent à ce qu'une cellule peut réellement stocker, d'où la brièveté de la liste : du texte, un nombre, une case à cocher ou une date, et tout le reste est l'un d'eux déguisé."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "SheetColumnSchema"
+    },
+    {
+      "name": "SheetSchema"
+    }
+  ]
+}

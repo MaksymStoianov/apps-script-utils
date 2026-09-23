@@ -1,0 +1,27 @@
+{
+  "summary": "Checks whether a value is **not** an email address.",
+  "description": [
+    "`nonValidEmail(value)` is the same test as `!isValidEmail(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "The address is split at a single `@`: the domain is checked the way `isValidDomain` checks one, and the local part must be non-empty and free of spaces. It is a format check, not proof that the mailbox exists.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not an email address; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonValidEmail(\"user@@example.com\"); // => true\nnonValidEmail(\"user@\"); // => true\nnonValidEmail(\"example.com\"); // => true\nnonValidEmail(\"\"); // => true\nnonValidEmail(\"user@example.com\"); // => false\nnonValidEmail(\"first.last@sub.example.co.uk\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmail"
+    },
+    {
+      "name": "requireValidEmail"
+    }
+  ]
+}

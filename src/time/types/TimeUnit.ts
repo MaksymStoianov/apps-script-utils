@@ -6,6 +6,12 @@
  * daylight-saving transition, and a month is anything from 28 to 31 days.
  * Functions taking a `TimeUnit` document which of the two they apply.
  *
+ * @example
+ * ```javascript
+ * diff(a, b, "day");
+ * offset(date, 1, "month");
+ * ```
+ *
  * @since   1.11.0
  * @version 1.0.0
  */

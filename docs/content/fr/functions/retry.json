@@ -1,0 +1,25 @@
+{
+  "summary": "Rappelle une fonction quand elle lève, avec une attente croissante entre les tentatives.",
+  "description": [
+    "L'attente part de `delay`, est multipliée par `multiplier` après chaque échec et ne dépasse jamais `maxDelay`. `shouldRetry` décide si un échec donné mérite d'être retenté — une limite de débit souvent, un mauvais argument jamais.",
+    "La fonction reçoit le numéro de tentative, à partir de `1`. Si la dernière échoue, son erreur est relancée. L'attente passe par `sleep`, qui vaut `Utilities.sleep` là où il existe et se remplace dans un test."
+  ],
+  "params": {
+    "fn": "La fonction à appeler. Elle reçoit le numéro de tentative.",
+    "options": "`attempts`, `delay`, `multiplier`, `maxDelay`, `shouldRetry` et `sleep`."
+  },
+  "returns": "ce que renvoie la fonction lors de la tentative réussie.",
+  "throws": {
+    "IllegalArgumentException": "le premier argument n'est pas une fonction, ou une option est hors de l'intervalle."
+  },
+  "examples": [
+    {
+      "title": "Retenter un appel instable"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireState"
+    }
+  ]
+}

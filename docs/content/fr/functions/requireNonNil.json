@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur après avoir vérifié qu'elle n'est pas `null` ou `undefined`.",
+  "description": [
+    "Uniquement les valeurs absentes : `0`, `\"\"` et `false` sont des valeurs présentes et ne comptent pas.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur ; après le test, elle n'est pas `null` ou `undefined`.",
+  "throws": {
+    "IllegalArgumentException": "la valeur est `null` ou `undefined`."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNonNil(0); // => 0\nrequireNonNil(\"\"); // => \"\"\nrequireNonNil(null); // throws IllegalArgumentException\nrequireNonNil(undefined); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNil"
+    },
+    {
+      "name": "nonNil"
+    },
+    {
+      "name": "requireNil"
+    }
+  ]
+}

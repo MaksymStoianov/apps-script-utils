@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є ідентифікатором аркуша.",
+  "description": [
+    "`nonValidSheetId(value)` — та сама перевірка, що й `!isValidSheetId(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Apps Script нумерує аркуші з нуля, тому ідентифікатор аркуша — невід'ємне безпечне ціле, те саме правило, що в `isCountable`. У першого аркуша таблиці ідентифікатор `0`.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є ідентифікатором аркуша; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonValidSheetId(-1); // => true\nnonValidSheetId(1.5); // => true\nnonValidSheetId(\"0\"); // => true\nnonValidSheetId(0); // => false\nnonValidSheetId(1234567890); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "requireValidSheetId"
+    }
+  ]
+}

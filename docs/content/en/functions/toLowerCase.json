@@ -1,0 +1,28 @@
+{
+  "summary": "Lowers a string, optionally tidying its whitespace.",
+  "description": [
+    "The difference from `String#toLowerCase` is the validation and the optional `trim`: an empty or non-string input throws instead of producing something surprising further down."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty.",
+    "options": "`trim` trims the string and collapses runs of whitespace into single spaces."
+  },
+  "returns": "the lowered string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ntoLowerCase(\"  Hello   World  \", { trim: true }); // => \"hello world\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toUpperCase"
+    },
+    {
+      "name": "toProperCase"
+    }
+  ]
+}

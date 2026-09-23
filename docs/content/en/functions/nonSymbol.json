@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a symbol.",
+  "description": [
+    "`nonSymbol(value)` is the same test as `!isSymbol(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Registered symbols from `Symbol.for` and the well-known symbols both pass; nothing else does.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a symbol; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonSymbol(\"id\"); // => true\nnonSymbol(null); // => true\nnonSymbol(Symbol(\"id\")); // => false\nnonSymbol(Symbol.iterator); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSymbol"
+    },
+    {
+      "name": "requireSymbol"
+    },
+    {
+      "name": "requireNonSymbol"
+    }
+  ]
+}

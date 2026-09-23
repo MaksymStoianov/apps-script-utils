@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est une plage d'une seule cellule.",
+  "description": [
+    "Une ligne et une colonne, mesurées d'après les bornes et non d'après l'écriture de la plage : les indices de fin sont exclus, une cellule unique vaut donc `endRowIndex - startRowIndex === 1`, de même pour les colonnes. Une plage dont une borne est omise est ouverte de ce côté et n'est jamais une cellule unique.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est une plage d'une seule cellule ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => true\nisCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // => false\nisCellGridRange({}); // => false\nisCellGridRange(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonCellGridRange"
+    },
+    {
+      "name": "requireCellGridRange"
+    }
+  ]
+}

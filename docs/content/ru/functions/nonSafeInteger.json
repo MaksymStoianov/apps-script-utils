@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является безопасным целым числом.",
+  "description": [
+    "`nonSafeInteger(value)` — та же проверка, что и `!isSafeInteger(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Целое число, которое точно представимо в IEEE-754. За пределами этого диапазона разные математические целые схлопываются в одно значение, и арифметика незаметно перестаёт быть точной.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является безопасным целым числом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => true\nnonSafeInteger(1.5); // => true\nnonSafeInteger(\"42\"); // => true\nnonSafeInteger(42); // => false\nnonSafeInteger(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

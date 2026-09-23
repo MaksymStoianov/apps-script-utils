@@ -1,0 +1,26 @@
+{
+  "summary": "Kodiert jedes Zeichen als numerische Zeichenreferenz.",
+  "description": [
+    "Anders als `escapeHtml`, das nur die fünf gefährlichen Zeichen anfasst, schreibt dies die ganze Zeichenkette in `&#NN;`-Referenzen um. `decodeHtml` ist die Umkehrung."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein."
+  },
+  "returns": "die kodierte Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "decodeHtml"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

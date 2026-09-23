@@ -1,0 +1,25 @@
+{
+  "summary": "Eine Spalte des Schemas eines Blattes.",
+  "description": [
+    "`name` ist die Überschrift, die in die Kopfzeile geschrieben wird; `type` sagt, was die Spalte enthält, und daraus macht `insertSchema` Formatierung und Datenprüfung. Eine Spalte ohne Typ bleibt unbeschränkt."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "SheetSchema"
+    },
+    {
+      "name": "SheetColumnType"
+    },
+    {
+      "name": "insertSchema"
+    }
+  ]
+}

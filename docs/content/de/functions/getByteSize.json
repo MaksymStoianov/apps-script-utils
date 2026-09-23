@@ -1,0 +1,26 @@
+{
+  "summary": "Gibt die Länge einer Zeichenkette in Codeeinheiten zurück.",
+  "description": [
+    "**Lesen Sie den Vorbehalt, bevor Sie das verwenden.** Name und ursprüngliche Absicht meinen die UTF-8-Byte-Länge, tatsächlich zählt die Funktion aber UTF-16-Codeeinheiten und verbreitert nur das erste angetroffene Surrogat. Bei ASCII stimmt das Maß; bei allem anderen — Kyrillisch, Griechisch, CJK, Emoji — fällt es zu klein aus. Bis das behoben ist, messen Sie mit `Utilities.newBlob(text).getBytes().length`."
+  ],
+  "params": {
+    "value": "Die zu messende Zeichenkette."
+  },
+  "returns": "die Länge in Codeeinheiten.",
+  "throws": {
+    "InvalidStringException": "der Wert ist keine Zeichenkette."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    }
+  ]
+}

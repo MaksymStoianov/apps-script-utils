@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur en tant que `NaN`, ou lève une exception.",
+  "description": [
+    "Rien n'est converti au préalable, et c'est là que ce test diffère du `isNaN` global : celui-ci convertit son argument, si bien que `isNaN(\"abc\")` et `isNaN(undefined)` renvoient `true`.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme `NaN`.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas le nombre `NaN`."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNaN(NaN); // => NaN\nrequireNaN(0 / 0); // => 0 / 0\nrequireNaN(0); // throws IllegalArgumentException\nrequireNaN(\"abc\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNaN"
+    },
+    {
+      "name": "nonNaN"
+    },
+    {
+      "name": "requireNonNaN"
+    }
+  ]
+}

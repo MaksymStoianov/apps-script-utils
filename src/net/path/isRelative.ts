@@ -3,6 +3,15 @@ import { isAbsolute } from "./isAbsolute";
 /**
  * Checks if a given string represents a relative path.
  *
+ * @example
+ * ```javascript
+ * isRelative("docs/readme.md"); // => true
+ * isRelative("./a"); // => true
+ * isRelative(""); // => true
+ * isRelative("/var/log"); // => false
+ * isRelative("https://example.com/a"); // => false
+ * ```
+ *
  * @param       {string} path - The string path to check.
  * @returns     {boolean} `true` if the path is relative; otherwise, `false`.
  * @throws      {@link EmptyStringException}

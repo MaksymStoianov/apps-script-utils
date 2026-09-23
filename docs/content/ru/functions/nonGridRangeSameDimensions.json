@@ -1,0 +1,25 @@
+{
+  "summary": "Проверяет, различаются ли два диапазона по высоте или ширине.",
+  "description": [
+    "Отрицание `isGridRangeSameDimensions` — для охранного условия, которое выходит раньше, когда копирование не поместится."
+  ],
+  "params": {
+    "range1": "Первый диапазон.",
+    "range2": "Второй диапазон."
+  },
+  "returns": "`true`, если размеры различаются.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Сравнение размеров"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeSameDimensions"
+    },
+    {
+      "name": "requireGridRangeSameDimensions"
+    }
+  ]
+}

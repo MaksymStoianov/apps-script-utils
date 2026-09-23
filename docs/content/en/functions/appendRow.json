@@ -1,0 +1,31 @@
+{
+  "summary": "Adds one row below the data already on a sheet.",
+  "description": [
+    "`appendRows` with a single row, for when only one is being written. The values go in as a flat array of cells rather than as a matrix.",
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+  ],
+  "params": {
+    "sheet": "The sheet to write into.",
+    "values": "The cells of the single row.",
+    "options": "`afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top."
+  },
+  "returns": "the same sheet, so calls can be chained.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet.",
+    "TypeError": "the values are not a matrix with rows of equal length."
+  },
+  "examples": [
+    {
+      "title": "Writing",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRow(sheet, [\"Ada\", \"ada@example.com\", \"=TODAY()\"]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendRows"
+    },
+    {
+      "name": "prependRow"
+    }
+  ]
+}

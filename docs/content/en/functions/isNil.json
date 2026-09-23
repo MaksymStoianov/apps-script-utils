@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is `null` or `undefined`.",
+  "description": [
+    "The absent values, and only those: `0`, `\"\"` and `false` are present values and do not qualify.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is `null` or `undefined`; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisNil(null); // => true\nisNil(undefined); // => true\nisNil(0); // => false\nisNil(\"\"); // => false\nisNil(false); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNil"
+    },
+    {
+      "name": "requireNil"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

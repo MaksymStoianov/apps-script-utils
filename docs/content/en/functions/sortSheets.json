@@ -1,0 +1,27 @@
+{
+  "summary": "Reorders the tabs of a spreadsheet.",
+  "description": [
+    "By name, ascending, unless a comparison function is given — it receives two sheet names and works like the one `Array#sort` takes.",
+    "The tabs are moved one at a time, and each move is a call to the service, so a spreadsheet with many sheets takes a moment."
+  ],
+  "params": {
+    "spreadsheet": "The spreadsheet whose tabs are reordered.",
+    "callback": "Compares two sheet names, as `Array#sort` expects."
+  },
+  "returns": "nothing; the spreadsheet is changed in place.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Sorting the tabs",
+      "body": "```javascript\nconst spreadsheet = SpreadsheetApp.getActive();\n\nsortSheets(spreadsheet); // alphabetically by name\n\nsortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetByIndex"
+    },
+    {
+      "name": "isValidSheetName"
+    }
+  ]
+}

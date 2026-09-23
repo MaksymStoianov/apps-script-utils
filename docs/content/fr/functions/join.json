@@ -1,0 +1,28 @@
+{
+  "summary": "Assemble des segments de chemin avec un seul séparateur entre eux.",
+  "description": [
+    "Les segments vides sont écartés, les séparateurs doublés se réduisent à un seul, et le résultat est ensuite normalisé — un `..` au milieu du chemin est donc résolu plutôt que transporté.",
+    "C'est du travail sur des chaînes, pas sur un système de fichiers : rien n'est vérifié quant à l'existence."
+  ],
+  "params": {
+    "paths": "Les segments à assembler."
+  },
+  "returns": "le chemin assemblé et normalisé.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Assemblage"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "normalize"
+    },
+    {
+      "name": "parse"
+    },
+    {
+      "name": "isAbsolute"
+    }
+  ]
+}

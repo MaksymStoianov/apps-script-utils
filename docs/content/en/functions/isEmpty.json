@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is empty.",
+  "description": [
+    "Emptiness is read per kind: `null` and `undefined`, a string with nothing but whitespace, an array, `Set` or `Map` with no entries, an object with no own keys. `0` and `false` are values, not emptiness.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is empty; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisEmpty(null); // => true\nisEmpty(\"\"); // => true\nisEmpty(\"   \"); // => true\nisEmpty([]); // => true\nisEmpty({}); // => true\nisEmpty(new Map()); // => true\nisEmpty(0); // => false\nisEmpty(false); // => false\nisEmpty(\"a\"); // => false\nisEmpty([0]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

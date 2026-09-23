@@ -1,0 +1,30 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** une longueur de tableau valide.",
+  "description": [
+    "`nonLength(value)` est le même test que `!isLength(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Un entier de `0` à `Number.MAX_SAFE_INTEGER` — l'intervalle qu'une propriété `length` peut contenir.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas une longueur de tableau valide ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonLength(-1); // => true\nnonLength(1.5); // => true\nnonLength(\"3\"); // => true\nnonLength(0); // => false\nnonLength(42); // => false\nnonLength(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "requireLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a version string.",
+  "description": [
+    "Dot-separated groups of digits, any number of them. A pre-release suffix, a leading `v` and an empty group are all rejected, so `\"1.2.3-beta\"` does not pass even though SemVer allows it.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a version string; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisValidVersion(\"1\"); // => true\nisValidVersion(\"1.2.3\"); // => true\nisValidVersion(\"2026.01.15\"); // => true\nisValidVersion(\"1.2.3-beta\"); // => false\nisValidVersion(\"v1.2\"); // => false\nisValidVersion(\"1..2\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidVersion"
+    },
+    {
+      "name": "requireValidVersion"
+    }
+  ]
+}

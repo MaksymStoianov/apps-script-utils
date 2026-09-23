@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** an integer.",
+  "description": [
+    "`nonInteger(value)` is the same test as `!isInteger(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "A number with no fractional part. Nothing is coerced, so the string `\"42\"` is not an integer, and `NaN` is not either.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not an integer; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonInteger(1.5); // => true\nnonInteger(NaN); // => true\nnonInteger(\"42\"); // => true\nnonInteger(42); // => false\nnonInteger(-7); // => false\nnonInteger(0); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isInteger"
+    },
+    {
+      "name": "requireInteger"
+    },
+    {
+      "name": "requireNonInteger"
+    }
+  ]
+}

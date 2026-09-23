@@ -4,6 +4,16 @@ import { now } from "./now";
 /**
  * One timed task, as recorded by a {@link StopWatch}.
  *
+ * @example
+ * ```javascript
+ * const watch = new StopWatch();
+ *
+ * watch.start("fetch");
+ * watch.stop();
+ *
+ * watch.getLastTaskInfo(); // { taskName: "fetch", timeMillis: …, timeSeconds: … }
+ * ```
+ *
  * @property {string} taskName - The name the task was started with; empty if none was given.
  */
 export interface TaskInfo {

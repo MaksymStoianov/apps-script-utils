@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert leer ist.",
+  "description": [
+    "Leere wird je nach Art gelesen: `null` und `undefined`, eine Zeichenkette aus reinem Leerraum, ein Array, `Set` oder `Map` ohne Einträge, ein Objekt ohne eigene Schlüssel. `0` und `false` sind Werte, keine Leere.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert leer ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisEmpty(null); // => true\nisEmpty(\"\"); // => true\nisEmpty(\"   \"); // => true\nisEmpty([]); // => true\nisEmpty({}); // => true\nisEmpty(new Map()); // => true\nisEmpty(0); // => false\nisEmpty(false); // => false\nisEmpty(\"a\"); // => false\nisEmpty([0]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

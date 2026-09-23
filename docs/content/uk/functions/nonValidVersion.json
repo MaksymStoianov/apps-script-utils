@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є рядком версії.",
+  "description": [
+    "`nonValidVersion(value)` — та сама перевірка, що й `!isValidVersion(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Групи цифр через крапку, у будь-якій кількості. Суфікс передрелізу, провідна `v` та порожня група не проходять, тому `\"1.2.3-beta\"` не підходить, хоча SemVer його дозволяє.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є рядком версії; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonValidVersion(\"1.2.3-beta\"); // => true\nnonValidVersion(\"v1.2\"); // => true\nnonValidVersion(\"1..2\"); // => true\nnonValidVersion(\"1\"); // => false\nnonValidVersion(\"1.2.3\"); // => false\nnonValidVersion(\"2026.01.15\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidVersion"
+    },
+    {
+      "name": "requireValidVersion"
+    }
+  ]
+}

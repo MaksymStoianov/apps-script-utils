@@ -1,0 +1,25 @@
+{
+  "summary": "Vérifie qu'une plage de grille n'est **pas** entièrement contenue dans une autre.",
+  "description": [
+    "La négation d'`isGridRangeContainedIn`, écrite pour qu'une clause de garde se lise comme une phrase : une plage qui ne recouvre que partiellement, comme une plage située ailleurs, répondent toutes deux `true`."
+  ],
+  "params": {
+    "range1": "La plage examinée.",
+    "range2": "La plage de comparaison."
+  },
+  "returns": "`true` si la première plage n'est pas à l'intérieur de la seconde.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Vérifier l'inclusion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "requireGridRangeContainedIn"
+    }
+  ]
+}

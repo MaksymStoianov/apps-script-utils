@@ -1,0 +1,29 @@
+{
+  "summary": "Returns the range once both are known to be the same size, or throws.",
+  "description": [
+    "The assertion form of `isGridRangeSameDimensions`. The default message states both sizes, so a mismatched copy says how far off it was."
+  ],
+  "params": {
+    "range1": "The first range.",
+    "range2": "The second range.",
+    "message": "The message of the exception. A default stating both sizes is used when omitted."
+  },
+  "returns": "the first range, unchanged.",
+  "throws": {
+    "InvalidGridRangeException": "the two ranges are not the same size."
+  },
+  "examples": [
+    {
+      "title": "Guarding a copy",
+      "body": "```javascript\nconst source = { startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 };\nconst target = { startRowIndex: 5, endRowIndex: 7, startColumnIndex: 5, endColumnIndex: 7 };\n\nrequireGridRangeSameDimensions(source, target); // => the source range\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeSameDimensions"
+    },
+    {
+      "name": "nonGridRangeSameDimensions"
+    }
+  ]
+}

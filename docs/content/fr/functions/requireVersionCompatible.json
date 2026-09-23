@@ -1,0 +1,28 @@
+{
+  "summary": "Renvoie la version une fois l'exigence satisfaite, ou lève.",
+  "description": [
+    "La forme assertive. Le message par défaut nomme les deux versions, ce qui rend une dépendance non satisfaite lisible dans le journal d'exécution."
+  ],
+  "params": {
+    "currentVersion": "La version dont on dispose.",
+    "requiredVersion": "Le minimum acceptable.",
+    "message": "Le message de l'exception. À défaut, un message nommant les deux versions est utilisé."
+  },
+  "returns": "la version disponible, inchangée.",
+  "throws": {
+    "IllegalArgumentException": "la version disponible est inférieure à celle requise."
+  },
+  "examples": [
+    {
+      "title": "Garder une dépendance"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "nonVersionCompatible"
+    }
+  ]
+}

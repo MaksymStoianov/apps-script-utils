@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение вызываемым значением.",
+  "description": [
+    "Дешёвая проверка — `typeof value === \"function\"`, — именно то, что нужно перед вызовом. `isFunction` отвечает на тот же вопрос строже.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является вызываемым значением; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisFunctionLike(function () {}); // => true\nisFunctionLike(Math.max); // => true\nisFunctionLike(null); // => false\nisFunctionLike({}); // => false\nisFunctionLike(\"fn\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    },
+    {
+      "name": "requireNonFunctionLike"
+    }
+  ]
+}

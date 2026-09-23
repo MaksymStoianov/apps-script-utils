@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que un chemin relatif, ou lève une exception.",
+  "description": [
+    "Le complément exact de `isAbsolute` : tout ce qui ne part pas d'une racine, y compris la chaîne vide.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un chemin relatif.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un chemin relatif."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireRelative(\"docs/readme.md\"); // => \"docs/readme.md\"\nrequireRelative(\"./a\"); // => \"./a\"\nrequireRelative(\"/var/log\"); // throws IllegalArgumentException\nrequireRelative(\"https://example.com/a\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRelative"
+    },
+    {
+      "name": "nonRelative"
+    }
+  ]
+}

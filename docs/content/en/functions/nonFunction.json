@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a function.",
+  "description": [
+    "`nonFunction(value)` is the same test as `!isFunction(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Classified by its internal tag, so ordinary, `async`, generator and async-generator functions all pass. A class is a function too.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a function; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonFunction(null); // => true\nnonFunction(\"fn\"); // => true\nnonFunction({}); // => true\nnonFunction(function () {}); // => false\nnonFunction(async function () {}); // => false\nnonFunction(Math.max); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunction"
+    },
+    {
+      "name": "requireFunction"
+    },
+    {
+      "name": "requireNonFunction"
+    }
+  ]
+}

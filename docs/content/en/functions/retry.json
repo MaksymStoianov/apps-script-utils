@@ -1,0 +1,26 @@
+{
+  "summary": "Calls a function again when it throws, with a growing wait between attempts.",
+  "description": [
+    "The wait starts at `delay`, is multiplied by `multiplier` after each failure and never exceeds `maxDelay`. `shouldRetry` decides whether a given failure is worth repeating at all — a rate limit usually is, a bad argument never is.",
+    "The function receives the attempt number, starting at `1`. When the last attempt fails its error is thrown on. The wait itself goes through `sleep`, which defaults to `Utilities.sleep` where that exists and can be replaced in a test."
+  ],
+  "params": {
+    "fn": "The function to call. It receives the attempt number.",
+    "options": "`attempts`, `delay`, `multiplier`, `maxDelay`, `shouldRetry` and `sleep`."
+  },
+  "returns": "whatever the function returns on the attempt that succeeds.",
+  "throws": {
+    "IllegalArgumentException": "the first argument is not a function, or an option is out of range."
+  },
+  "examples": [
+    {
+      "title": "Retrying a flaky call",
+      "body": "```javascript\nconst response = retry(() => UrlFetchApp.fetch(url), {\n  attempts: 4,\n  delay: 500,\n  multiplier: 2,\n  shouldRetry: (error) => String(error).includes(\"429\")\n});\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireState"
+    }
+  ]
+}

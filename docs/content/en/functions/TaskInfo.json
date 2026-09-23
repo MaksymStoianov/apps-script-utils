@@ -1,0 +1,20 @@
+{
+  "summary": "One timed task, as a `StopWatch` recorded it.",
+  "description": [
+    "The name the task was started with — empty when none was given — and how long it ran, in milliseconds and in seconds. The two durations are the same measurement, offered in both units so that neither the log line nor the arithmetic has to convert."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst watch = new StopWatch();\n\nwatch.start(\"fetch\");\nwatch.stop();\n\nwatch.getLastTaskInfo(); // { taskName: \"fetch\", timeMillis: …, timeSeconds: … }\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "StopWatch"
+    }
+  ]
+}

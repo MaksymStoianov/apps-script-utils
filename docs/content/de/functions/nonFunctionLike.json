@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** aufrufbar ist.",
+  "description": [
+    "`nonFunctionLike(value)` ist dieselbe Prüfung wie `!isFunctionLike(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Die billige Prüfung — `typeof value === \"function\"` — genau das, was man vor einem Aufruf braucht. `isFunction` liest dieselbe Frage strenger.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht aufrufbar ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonFunctionLike(null); // => true\nnonFunctionLike({}); // => true\nnonFunctionLike(\"fn\"); // => true\nnonFunctionLike(function () {}); // => false\nnonFunctionLike(Math.max); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    },
+    {
+      "name": "requireNonFunctionLike"
+    }
+  ]
+}

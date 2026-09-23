@@ -1,0 +1,30 @@
+{
+  "summary": "Returns the value as a locale code, or throws.",
+  "description": [
+    "Exactly two ASCII letters, in either case — `\"en\"`, `\"UK\"`. A region or a script subtag, as in `\"en-US\"`, is rejected: this is the short language code, not a full BCP 47 tag.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a locale code.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a locale code."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireValidLocale(\"en\"); // => \"en\"\nrequireValidLocale(\"UK\"); // => \"UK\"\nrequireValidLocale(\"en-US\"); // throws IllegalArgumentException\nrequireValidLocale(\"eng\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidLocale"
+    },
+    {
+      "name": "nonValidLocale"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є екземпляром `Exception`.",
+  "description": [
+    "`nonException(value)` — та сама перевірка, що й `!isException(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Лише власна ієрархія бібліотеки. Звичайний `Error` не підходить — саме це робить перевірку корисною в `catch`, де треба відрізнити одне від іншого.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є екземпляром `Exception`; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonException(new Error()); // => true\nnonException({}); // => true\nnonException(null); // => true\nnonException(new IllegalArgumentException()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    },
+    {
+      "name": "requireNonException"
+    }
+  ]
+}

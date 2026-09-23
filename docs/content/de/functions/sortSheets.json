@@ -1,0 +1,26 @@
+{
+  "summary": "Ordnet die Reiter einer Tabelle neu.",
+  "description": [
+    "Nach Namen aufsteigend, sofern keine Vergleichsfunktion übergeben wird — sie bekommt zwei Blattnamen und arbeitet wie die von `Array#sort`.",
+    "Die Reiter werden einzeln verschoben, jede Verschiebung ist ein Dienstaufruf; eine Tabelle mit vielen Blättern braucht also einen Moment."
+  ],
+  "params": {
+    "spreadsheet": "Die Tabelle, deren Reiter neu geordnet werden.",
+    "callback": "Vergleicht zwei Blattnamen, wie `Array#sort` es erwartet."
+  },
+  "returns": "nichts; die Tabelle wird an Ort und Stelle geändert.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Reiter sortieren"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetByIndex"
+    },
+    {
+      "name": "isValidSheetName"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення значенням `null` або `undefined`.",
+  "description": [
+    "Лише відсутні значення: `0`, `\"\"` і `false` — це наявні значення, вони не підходять.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є значенням `null` або `undefined`; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisNil(null); // => true\nisNil(undefined); // => true\nisNil(0); // => false\nisNil(\"\"); // => false\nisNil(false); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNil"
+    },
+    {
+      "name": "requireNil"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

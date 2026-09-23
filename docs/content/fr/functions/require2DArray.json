@@ -1,0 +1,37 @@
+{
+  "summary": "Renvoie la valeur en tant que tableau bidimensionnel non vide, ou lève une exception.",
+  "description": [
+    "La vérification à placer devant `Range#setValues`, qui rejette un tableau plat avec un message ne nommant ni l'argument ni la raison. `require2DArray` lève avant, avec le message de votre choix, et renvoie la valeur : l'appel s'insère donc dans une expression.",
+    "Il accepte exactement ce qu'accepte [`is2DArray`](is2DArray.md) : un tableau non vide dont chaque élément est un tableau. Des lignes de longueurs différentes passent ; lorsqu'elles doivent correspondre, utilisez [`requireConsistent2DArray`](requireConsistent2DArray.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. Par défaut `\"Expected a non-empty two-dimensional array.\"`"
+  },
+  "returns": "la même valeur, typée comme tableau bidimensionnel.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un tableau non vide de tableaux."
+  },
+  "examples": [
+    {
+      "title": "Valider et utiliser dans une seule expression"
+    },
+    {
+      "title": "Ce qui passe et ce qui lève"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "la même vérification sous forme de prédicat."
+    },
+    {
+      "name": "non2DArray",
+      "note": "le prédicat nié."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "exige en plus des lignes de même longueur."
+    }
+  ]
+}

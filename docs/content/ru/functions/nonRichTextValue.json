@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является форматированным текстом.",
+  "description": [
+    "`nonRichTextValue(value)` — та же проверка, что и `!isRichTextValue(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка читает тег, который объект сообщает о себе сам: `value.toString() === \"RichTextValue\"`. Обычный объект с таким же тегом тоже пройдёт — на практике это тестовый дубль.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является форматированным текстом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst value = SpreadsheetApp.newRichTextValue().setText(\"a\").build();\n\nnonRichTextValue({}); // => true\nnonRichTextValue(null); // => true\nnonRichTextValue(value); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRichTextValue"
+    },
+    {
+      "name": "requireRichTextValue"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "Ein Dienst, den das Skript erwartet hat, ist nicht da: ein nicht aktivierter erweiterter Dienst oder eine nie definierte globale Variable.",
+  "description": [
+    "Ein Dienst, den das Skript erwartet hat, ist nicht da: ein nicht aktivierter erweiterter Dienst oder eine nie definierte globale Variable.",
+    "Wird geworfen von [`requireService`](requireService.md).",
+    "Jede Klasse dieser Hierarchie nimmt eine optionale Meldung, eine andere Ausnahme, deren Meldung übernommen wird, oder gar nichts. `isException` erkennt sie alle; ein einfacher `Error` gehört nicht dazu."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Werfen und fangen",
+      "body": "```javascript\nthrow new ServiceIsNotDefinedException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof ServiceIsNotDefinedException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

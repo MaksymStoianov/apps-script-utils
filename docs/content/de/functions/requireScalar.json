@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als einen Skalar zurück oder wirft.",
+  "description": [
+    "Ein Primitivwert, der genau einen Wert trägt: String, Zahl, Boolean, Symbol oder BigInt. `null` und `undefined` sind ebenfalls primitiv, tragen aber keinen Wert und zählen nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als einen Skalar.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein Skalar."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireScalar(\"abc\"); // => \"abc\"\nrequireScalar(1); // => 1\nrequireScalar({}); // throws IllegalArgumentException\nrequireScalar([]); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

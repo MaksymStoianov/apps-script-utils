@@ -1,0 +1,27 @@
+{
+  "summary": "Renvoie un dépôt une fois établi qu'il existe, ou lève.",
+  "description": [
+    "`requireService` pour la couche au-dessus des services : une source de données qu'un conteneur devait fournir et n'a pas fournie. L'exception nomme la situation au lieu de laisser un `null` poursuivre sa route."
+  ],
+  "params": {
+    "repository": "Le dépôt à vérifier.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé."
+  },
+  "returns": "le même dépôt.",
+  "throws": {
+    "RepositoryIsNotDefinedException": "le dépôt vaut `null` ou `undefined`."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireService"
+    },
+    {
+      "name": "RepositoryIsNotDefinedException"
+    }
+  ]
+}

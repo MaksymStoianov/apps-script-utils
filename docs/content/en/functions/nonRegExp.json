@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a regular expression.",
+  "description": [
+    "`nonRegExp(value)` is the same test as `!isRegExp(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Identified by its internal tag rather than by `instanceof`, so a regular expression from another frame is recognised too.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a regular expression; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonRegExp(\"/a/\"); // => true\nnonRegExp({}); // => true\nnonRegExp(null); // => true\nnonRegExp(/a/); // => false\nnonRegExp(new RegExp(\"a\")); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRegExp"
+    },
+    {
+      "name": "requireRegExp"
+    },
+    {
+      "name": "requireNonRegExp"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Ajoute une ligne sous les données déjà présentes sur une feuille.",
+  "description": [
+    "`appendRows` pour une seule ligne, quand une seule est écrite. Les valeurs sont passées comme un tableau plat de cellules plutôt qu'une matrice.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur."
+  ],
+  "params": {
+    "sheet": "La feuille où écrire.",
+    "values": "Les cellules de l'unique ligne.",
+    "options": "`afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début."
+  },
+  "returns": "la même feuille, ce qui permet d'enchaîner les appels.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille.",
+    "TypeError": "les valeurs ne forment pas une matrice à lignes de même longueur."
+  },
+  "examples": [
+    {
+      "title": "Écriture"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendRows"
+    },
+    {
+      "name": "prependRow"
+    }
+  ]
+}

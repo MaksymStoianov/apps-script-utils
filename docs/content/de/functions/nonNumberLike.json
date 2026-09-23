@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** in eine Zahl umwandelbar ist.",
+  "description": [
+    "`nonNumberLike(value)` ist dieselbe Prüfung wie `!isNumberLike(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Eine endliche Zahl oder eine Zeichenkette, die sich in eine solche umwandelt. `NaN`, die Unendlichkeiten und die leere Zeichenkette sind ausgeschlossen — das unterscheidet die Prüfung von einem bloßen `Number(value)`.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht in eine Zahl umwandelbar ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonNumberLike(NaN); // => true\nnonNumberLike(Infinity); // => true\nnonNumberLike(\"\"); // => true\nnonNumberLike(null); // => true\nnonNumberLike(1); // => false\nnonNumberLike(\"1.5\"); // => false\nnonNumberLike(\" 42 \"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "requireNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

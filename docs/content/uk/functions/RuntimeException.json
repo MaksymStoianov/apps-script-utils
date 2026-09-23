@@ -1,0 +1,24 @@
+{
+  "summary": "Батько всіх винятків, які може спричинити робочий скрипт.",
+  "description": [
+    "Батько всіх винятків, які може спричинити робочий скрипт. Майже всі класи нижче успадковують його, а не `Exception` напряму.",
+    "Будь-який клас цієї ієрархії приймає необов'язкове повідомлення, інший виняток, чиє повідомлення буде перевикористано, або взагалі нічого. `isException` розпізнає їх усі; звичайний `Error` до них не належить."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Кинути й упіймати",
+      "body": "```javascript\nthrow new RuntimeException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof RuntimeException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

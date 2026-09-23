@@ -1,0 +1,30 @@
+{
+  "summary": "Replaces the five characters that would otherwise be read as markup.",
+  "description": [
+    "`<`, `>`, `&`, `\"` and `'` become named entities. This is what to call on anything a user supplied before it reaches an `HtmlOutput` or a template."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty."
+  },
+  "returns": "the escaped string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\nescapeHtml(\"<a>&\"); // => \"&lt;a&gt;&amp;\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "encodeHtml"
+    },
+    {
+      "name": "escapeXml"
+    },
+    {
+      "name": "merge"
+    }
+  ]
+}

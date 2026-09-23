@@ -1,0 +1,26 @@
+{
+  "summary": "Trouve une plage nommée par son nom.",
+  "description": [
+    "Une plage nommée est la façon stable de désigner un bloc de cellules qu'une personne peut déplacer dans la feuille. Apps Script ne fournit que la liste entière : les noms sont donc parcourus et comparés.",
+    "Un nom non défini donne `null`, cas à traiter lorsqu'un modèle a été modifié à la main."
+  ],
+  "params": {
+    "spreadsheet": "Le classeur où chercher.",
+    "name": "Le nom de la plage."
+  },
+  "returns": "la plage nommée, ou `null` si ce nom n'existe pas.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Recherche"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetById"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є об'єктоподібним значенням.",
+  "description": [
+    "`nonObjectLike(value)` — та сама перевірка, що й `!isObjectLike(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Усе, що приймає `isObject`, плюс функції: питання тут у тому, чи можна взагалі читати у значення властивості.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є об'єктоподібним значенням; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonObjectLike(null); // => true\nnonObjectLike(\"abc\"); // => true\nnonObjectLike(1); // => true\nnonObjectLike({}); // => false\nnonObjectLike([]); // => false\nnonObjectLike(function () {}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObjectLike"
+    },
+    {
+      "name": "requireObjectLike"
+    },
+    {
+      "name": "requireNonObjectLike"
+    }
+  ]
+}

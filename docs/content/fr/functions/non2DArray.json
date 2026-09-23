@@ -1,0 +1,35 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** un tableau bidimensionnel non vide.",
+  "description": [
+    "`non2DArray(value)` est la même vérification que `!is2DArray(value)`. Le préfixe existe pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation — voir [](validation-conventions.md).",
+    "Un tableau vide compte comme « non bidimensionnel », puisque [`is2DArray`](is2DArray.md) exige au moins une ligne.",
+    "Une réserve sur les types : la garde est déclarée comme prédicat de type, mais elle n'affine utilement que si le type de la valeur mentionne déjà `unknown[][]`. Dans la branche où la valeur *est* une matrice, TypeScript en reste à `never` plutôt qu'à un type de matrice ; utilisez alors [`is2DArray`](is2DArray.md) ou [`require2DArray`](require2DArray.md). Comme simple réponse booléenne, `non2DArray` est toujours exact."
+  ],
+  "params": {
+    "arr": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un tableau non vide de tableaux ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui compte comme non bidimensionnel"
+    },
+    {
+      "title": "Indiquer pourquoi une valeur a été rejetée"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "la forme positive."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "rejette en plus une matrice irrégulière."
+    },
+    {
+      "name": "require2DArray",
+      "note": "lève une exception au lieu de répondre."
+    }
+  ]
+}

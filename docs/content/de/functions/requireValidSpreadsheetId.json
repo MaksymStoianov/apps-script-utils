@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als eine Tabellen-Id zurück oder wirft.",
+  "description": [
+    "Mindestens 25 Zeichen aus Buchstaben, Ziffern, Bindestrichen und Unterstrichen — die Id, die in der Tabellen-URL zwischen `/d/` und `/edit` steht. Es wird nichts abgerufen, geprüft wird nur das Format.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als eine Tabellen-Id.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht eine Tabellen-Id."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => \"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"\nrequireValidSpreadsheetId(\"short-id\"); // throws IllegalArgumentException\nrequireValidSpreadsheetId(\"has space in it and is long enough to pass\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSpreadsheetId"
+    },
+    {
+      "name": "nonValidSpreadsheetId"
+    }
+  ]
+}

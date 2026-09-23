@@ -1,0 +1,29 @@
+{
+  "summary": "Stores a schema on a sheet and applies what it describes.",
+  "description": [
+    "The schema is written into the sheet's developer metadata, so it travels with the sheet — a copy of the spreadsheet carries it, and `getSchema` finds it again without reading a single cell.",
+    "The description is also put into effect: the header row is written and the columns get the formatting and the validation their types imply."
+  ],
+  "params": {
+    "sheet": "The sheet to work on.",
+    "schema": "The schema: its `version`, the `headerRow` and the `columns`."
+  },
+  "returns": "the same sheet.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet."
+  },
+  "examples": [
+    {
+      "title": "Declaring a schema",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\ninsertSchema(sheet, {\n  version: 1,\n  headerRow: 1,\n  columns: [\n    { name: \"id\", type: \"number\" },\n    { name: \"email\", type: \"string\" }\n  ]\n});\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "removeSchema"
+    }
+  ]
+}

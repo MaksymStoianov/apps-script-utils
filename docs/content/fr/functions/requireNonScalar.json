@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur après avoir vérifié qu'elle n'est pas un scalaire.",
+  "description": [
+    "Une primitive porteuse d'une seule valeur : chaîne, nombre, booléen, symbole ou bigint. `null` et `undefined` sont primitifs aussi, mais ne portent aucune valeur et ne comptent pas.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur ; après le test, elle n'est pas un scalaire.",
+  "throws": {
+    "IllegalArgumentException": "la valeur est un scalaire."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNonScalar({}); // => {}\nrequireNonScalar([]); // => []\nrequireNonScalar(\"abc\"); // throws IllegalArgumentException\nrequireNonScalar(1); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireScalar"
+    }
+  ]
+}

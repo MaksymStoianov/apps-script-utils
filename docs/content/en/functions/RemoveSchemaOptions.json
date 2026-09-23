@@ -1,0 +1,23 @@
+{
+  "summary": "How far `removeSchema` goes.",
+  "description": [
+    "`validation` also clears the data validation on the columns the schema described. It is off by default on purpose: Apps Script gives no way to tell which rule came from a schema and which a person added by hand, so clearing removes both."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst options = { validation: true };\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "removeSchema"
+    },
+    {
+      "name": "SheetSchema"
+    }
+  ]
+}

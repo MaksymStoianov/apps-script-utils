@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є лічильним числом.",
+  "description": [
+    "`nonCountable(value)` — та сама перевірка, що й `!isCountable(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Значення, придатне як кількість, довжина чи індекс від нуля: ціле, невід'ємне й достатньо мале, щоб арифметика над ним лишалася точною.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є лічильним числом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonCountable(-1); // => true\nnonCountable(1.5); // => true\nnonCountable(Number.MAX_SAFE_INTEGER + 2); // => true\nnonCountable(0); // => false\nnonCountable(42); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isCountable"
+    },
+    {
+      "name": "requireCountable"
+    }
+  ]
+}

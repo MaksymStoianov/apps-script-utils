@@ -4,6 +4,12 @@ import { isEmpty, isString } from "../base";
 /**
  * Validates that the provided value is a non-empty string.
  *
+ * @example
+ * ```javascript
+ * requireNonEmptyString("Data"); // => "Data"
+ * requireNonEmptyString("   "); // throws EmptyStringException
+ * ```
+ *
  * @param   {string | null | undefined} value - The string value to validate. Can be `null` or `undefined`.
  * @param   {string} [message] - Optional. A custom error message if the validation fails.
  * @returns {string} The validated non-empty string.

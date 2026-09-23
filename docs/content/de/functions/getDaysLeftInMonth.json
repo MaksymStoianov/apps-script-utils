@@ -1,0 +1,26 @@
+{
+  "summary": "Gibt zurück, wie viele Tage von einem Datum bis zum Monatsende bleiben.",
+  "description": [
+    "Das Datum selbst zählt nicht mit: am letzten Tag eines Monats lautet die Antwort `0`. Gemeint sind die noch kommenden Tage, was ein Kontingent oder ein Abrechnungszeitraum meist braucht."
+  ],
+  "params": {
+    "date": "Das zu lesende Datum. Es muss ein gültiges `Date` sein."
+  },
+  "returns": "die Anzahl verbleibender Tage, am letzten Tag `0`.",
+  "throws": {
+    "IllegalArgumentException": "ein Argument ist kein gültiges `Date`."
+  },
+  "examples": [
+    {
+      "title": "Zählen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getDaysInMonth"
+    },
+    {
+      "name": "diff"
+    }
+  ]
+}

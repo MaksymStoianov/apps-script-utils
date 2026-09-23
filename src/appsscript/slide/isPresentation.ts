@@ -1,6 +1,15 @@
 /**
  * Checks if a value is a {@link GoogleAppsScript.Slides.Presentation|Presentation} object.
  *
+ * @example
+ * ```javascript
+ * const presentation = SlidesApp.getActivePresentation();
+ *
+ * isPresentation(presentation); // => true
+ * isPresentation({}); // => false
+ * isPresentation(null); // => false
+ * ```
+ *
  * @param {unknown} value The value to check.
  * @returns {value is GoogleAppsScript.Slides.Presentation} `true` if the value is a {@link GoogleAppsScript.Slides.Presentation|Presentation} object, `false` otherwise.
  * @since 1.5.0

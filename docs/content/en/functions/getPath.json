@@ -1,0 +1,28 @@
+{
+  "summary": "Reads a nested property by path, with a fallback.",
+  "description": [
+    "The path is either a dotted string or an array of segments; array indices go in as numbers, as in `[\"rows\", 0, \"id\"]`. Bracket syntax inside a string is **not** parsed — `\"rows[0].id\"` finds nothing.",
+    "A missing or nil link anywhere along the path yields the fallback instead of throwing, which is the whole point over `a.b.c`."
+  ],
+  "params": {
+    "source": "The value to read from.",
+    "path": "A dotted string, or an array of keys and indices.",
+    "fallback": "Returned when the path does not resolve."
+  },
+  "returns": "the value at the path, or the fallback.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Reading",
+      "body": "```javascript\ngetPath({ a: { b: 1 } }, \"a.b\"); // => 1\ngetPath({}, \"a.b\", \"fallback\"); // => \"fallback\"\ngetPath({ rows: [{ id: 7 }] }, [\"rows\", 0, \"id\"]); // => 7\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "setPath"
+    },
+    {
+      "name": "flat"
+    }
+  ]
+}

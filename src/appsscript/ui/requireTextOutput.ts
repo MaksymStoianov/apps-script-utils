@@ -10,6 +10,15 @@ type TextOutput = GoogleAppsScript.Content.TextOutput;
  * Identification is structural: the value must carry `getMimeType` and
  * `getContent` as callable members.
  *
+ * @example
+ * ```javascript
+ * const output = ContentService.createTextOutput("hi");
+ *
+ * requireTextOutput(output); // => output
+ * requireTextOutput({}); // throws IllegalArgumentException
+ * requireTextOutput(null); // throws IllegalArgumentException
+ * ```
+ *
  * @param       {unknown} value - The value to validate.
  * @param       {string} [message="Expected a TextOutput object."] - Optional custom error message if the validation fails.
  * @returns     {GoogleAppsScript.Content.TextOutput} The validated <a href="https://developers.google.com/apps-script/reference/content/text-output"><code>TextOutput</code></a> object.

@@ -5,6 +5,15 @@ import { isPresentation } from "./isPresentation";
  * Ensures that the provided value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/slides/presentation"><code>Presentation</code></a> object,
  * throwing an exception otherwise.
  *
+ * @example
+ * ```javascript
+ * const presentation = SlidesApp.getActivePresentation();
+ *
+ * requirePresentation(presentation); // => presentation
+ * requirePresentation({}); // throws InvalidPresentationException
+ * requirePresentation(null); // throws InvalidPresentationException
+ * ```
+ *
  * @param       {unknown} value - The value to validate.
  * @param       {string} [message="Required Presentation object is missing or invalid."] - Optional custom error message if the validation fails.
  * @returns     {GoogleAppsScript.Slides.Presentation} The validated <a href="https://developers.google.com/apps-script/reference/slides/presentation"><code>Presentation</code></a> object.

@@ -3,6 +3,19 @@ import { RuntimeException } from "../../RuntimeException";
 /**
  * Represents an exception thrown when an invalid {@link GoogleAppsScript.Spreadsheet.Spreadsheet|Spreadsheet} object is provided.
  *
+ * @example
+ * ```javascript
+ * throw new InvalidSpreadsheetException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof InvalidSpreadsheetException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}

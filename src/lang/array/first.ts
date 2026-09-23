@@ -4,6 +4,13 @@ import { isInteger } from "../number";
 /**
  * Gets the first element of an array.
  *
+ * @example
+ * ```javascript
+ * first([1, 2, 3]); // => 1
+ * first([]); // => undefined
+ * first([1, 2, 3], 2); // => [1, 2]
+ * ```
+ *
  * @template T - The type of elements in the input array.
  * @param    {T[]} array - The array to read from.
  * @returns  {T | undefined} The first element, or `undefined` if the array is empty.

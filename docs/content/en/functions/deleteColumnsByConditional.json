@@ -1,0 +1,31 @@
+{
+  "summary": "Deletes the columns a predicate selects.",
+  "description": [
+    "Judged against the sheet as read, then deleted from the right edge inwards in consecutive blocks, so shifting positions cannot take the wrong column with them.",
+    "Columns are gone for good: `clearColumnsByConditional` only empties them."
+  ],
+  "params": {
+    "sheet": "The sheet to work on.",
+    "predicate": "Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on.",
+    "options": "`headerColumn` names the column holding the row names, and keeps that column out of the candidates."
+  },
+  "returns": "how many were affected.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet.",
+    "IllegalArgumentException": "the predicate is not a function, or the header position is not a positive integer."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\ndeleteColumnsByConditional(sheet, (values, position, column) => column.internal === true, {\n  headerColumn: 1\n});\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    }
+  ]
+}

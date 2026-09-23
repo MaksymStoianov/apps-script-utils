@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как идентификатор слайда или выбрасывает исключение.",
+  "description": [
+    "Буквы, цифры, дефисы и подчёркивания, хотя бы один символ. Идентификаторы слайдов короткие — `p1` вполне обычный, — поэтому минимальная длина не задаётся.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как идентификатор слайда.",
+  "throws": {
+    "IllegalArgumentException": "значение не является идентификатором слайда."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireValidSlideId(\"p1\"); // => \"p1\"\nrequireValidSlideId(\"SLIDES_api123\"); // => \"SLIDES_api123\"\nrequireValidSlideId(\"has space\"); // throws IllegalArgumentException\nrequireValidSlideId(\"\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlideId"
+    },
+    {
+      "name": "nonValidSlideId"
+    }
+  ]
+}

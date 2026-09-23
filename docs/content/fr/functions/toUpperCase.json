@@ -1,0 +1,27 @@
+{
+  "summary": "Met une chaîne en majuscules, en nettoyant au besoin ses espaces.",
+  "description": [
+    "Le pendant de `toLowerCase`, avec la même validation et le même `trim` facultatif."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide.",
+    "options": "`trim` coupe la chaîne et réduit les suites d'espaces à une seule."
+  },
+  "returns": "la chaîne en majuscules.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toLowerCase"
+    },
+    {
+      "name": "toProperCase"
+    }
+  ]
+}

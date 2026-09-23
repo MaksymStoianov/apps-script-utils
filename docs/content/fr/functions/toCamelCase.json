@@ -1,0 +1,31 @@
+{
+  "summary": "Assemble les mots d'une chaîne en camelCase.",
+  "description": [
+    "Chaque mot prend une majuscule, les séparateurs disparaissent, et la première lettre est mise en minuscule sauf si `firstWordToLowerCase` vaut `false`. Avec `clean` actif, tout ce qui n'est ni lettre ni chiffre est retiré également.",
+    "Les frontières de mots sont celles d'une expression régulière : espaces et tirets séparent les mots, un tiret bas non. `\"user_first_name\"` revient en `\"userfirstname\"`, pas en `\"userFirstName\"`."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide.",
+    "options": "`clean` retire tout ce qui n'est pas alphanumérique (actif par défaut) ; `firstWordToLowerCase` met la première lettre en minuscule (actif par défaut)."
+  },
+  "returns": "la chaîne convertie.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toKebabCase"
+    },
+    {
+      "name": "toSnakeCase"
+    },
+    {
+      "name": "toProperCase"
+    }
+  ]
+}

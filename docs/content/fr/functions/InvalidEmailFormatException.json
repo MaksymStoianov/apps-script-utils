@@ -1,0 +1,25 @@
+{
+  "summary": "Une chaîne devait être une adresse e-mail et n'en a pas la forme.",
+  "description": [
+    "Une chaîne devait être une adresse e-mail et n'en a pas la forme.",
+    "Levée par [`requireValidEmail`](requireValidEmail.md).",
+    "Toute classe de cette hiérarchie accepte un message facultatif, une autre exception dont le message est repris, ou rien du tout. `isException` les reconnaît toutes ; un `Error` ordinaire n'en fait pas partie."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lever et intercepter",
+      "body": "```javascript\nthrow new InvalidEmailFormatException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof InvalidEmailFormatException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

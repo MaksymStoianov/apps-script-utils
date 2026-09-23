@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення кодом локалі.",
+  "description": [
+    "Рівно дві латинські літери в будь-якому регістрі — `\"en\"`, `\"UK\"`. Код регіону чи писемності, як у `\"en-US\"`, не проходить: це короткий код мови, а не повний тег BCP 47.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є кодом локалі; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisValidLocale(\"en\"); // => true\nisValidLocale(\"UK\"); // => true\nisValidLocale(\"en-US\"); // => false\nisValidLocale(\"eng\"); // => false\nisValidLocale(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidLocale"
+    },
+    {
+      "name": "requireValidLocale"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a scalar.",
+  "description": [
+    "`nonScalar(value)` is the same test as `!isScalar(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "A primitive that carries a single value: string, number, boolean, symbol or bigint. `null` and `undefined` are primitives too, but they carry no value and do not qualify.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a scalar; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonScalar({}); // => true\nnonScalar([]); // => true\nnonScalar(null); // => true\nnonScalar(\"abc\"); // => false\nnonScalar(1); // => false\nnonScalar(true); // => false\nnonScalar(10n); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "requireScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

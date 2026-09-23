@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Einzelzellbereich ist.",
+  "description": [
+    "`nonCellGridRange(value)` ist dieselbe Prüfung wie `!isCellGridRange(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Eine Zeile und eine Spalte, gemessen an den Grenzen und nicht daran, wie der Bereich geschrieben wurde: die Endindizes gehören nicht dazu, eine einzelne Zelle ist also `endRowIndex - startRowIndex === 1` und ebenso bei den Spalten. Ein Bereich mit weggelassener Grenze ist in diese Richtung offen und nie eine einzelne Zelle.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Einzelzellbereich ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // => true\nnonCellGridRange({}); // => true\nnonCellGridRange(null); // => true\nnonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isCellGridRange"
+    },
+    {
+      "name": "requireCellGridRange"
+    }
+  ]
+}

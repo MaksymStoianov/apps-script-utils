@@ -1,0 +1,39 @@
+{
+  "summary": "Finds the values present in every one of the given arrays, deduplicated and in the first array's order.",
+  "description": [
+    "Order comes from the first array, and the result is deduplicated: a value repeated there appears once. Values are\ncompared with `SameValueZero`, the rule a `Set` uses, so `NaN` intersects with `NaN` — which a comparison by `===`\nnever does — and `-0` matches `0`.",
+    "The arrays after the first each become a set once, and the first is then walked a single time. The cost is linear in\nthe total input rather than the nested scan a hand-written version usually ends up being. The inputs are not\nmodified.",
+    "Called with a single array, `intersect` returns its unique values; called with none, it returns `[]`."
+  ],
+  "params": {
+    "arrays": "The arrays to intersect. Left untouched."
+  },
+  "returns": "a new array of the shared values, in the order of the first array, without duplicates.",
+  "throws": {
+    "TypeError": "Any argument is not an array."
+  },
+  "examples": [
+    {
+      "title": "Values shared by every array",
+      "body": "```javascript\nintersect([1, 2, 3], [2, 3, 4]); // => [2, 3]\nintersect([1, 2, 3], [2, 3], [3, 9]); // => [3]\nintersect([1, 2], [9]); // => []\n```"
+    },
+    {
+      "title": "Finding the rows two sheets have in common",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"intersect.ts\" include-symbol=\"findSharedIds\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction findSharedIds(active, billed) {\n  const left = active.getRange(\"A2:A\").getValues().flat();\n  const right = billed.getRange(\"A2:A\").getValues().flat();\n  return intersect(left, right);\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "Deduplication and edge cases",
+      "body": "```javascript\nintersect([1, 1, 2], [1, 2]); // => [1, 2] — the result is deduplicated\nintersect([NaN], [NaN]); // => [NaN]\nintersect([1, 2]); // => [1, 2] — a single array, deduplicated\nintersect(); // => []\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "unique",
+      "note": "deduplicates a single array."
+    },
+    {
+      "name": "without",
+      "note": "the complement: removes the values you name."
+    }
+  ]
+}

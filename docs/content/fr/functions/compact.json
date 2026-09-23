@@ -1,0 +1,32 @@
+{
+  "summary": "Retire toutes les valeurs falsy d'un tableau et affine le type des éléments sans cast.",
+  "description": [
+    "`compact` écarte `false`, `null`, `undefined`, `0`, `-0`, `0n`, `\"\"` et `NaN`, et renvoie le reste dans un nouveau tableau. L'entrée n'est pas modifiée.",
+    "L'intérêt par rapport à `array.filter(Boolean)` tient au type : TypeScript y conserve le type d'élément d'origine, si bien que l'appelant doit ensuite écarter les `null` à la main. `compact` renvoie `T[]` sans cast.",
+    "Notez que `0` et `\"\"` comptent comme falsy. Pour des données lues dans une feuille, c'est rarement le bon outil — `0` est un nombre légitime et une cellule vide arrive sous la forme `\"\"` — et `array.filter(nonNil)` ne retire alors que les valeurs absentes."
+  ],
+  "params": {
+    "array": "Le tableau à nettoyer. Il n'est pas modifié."
+  },
+  "returns": "un nouveau tableau contenant uniquement les valeurs truthy, dans leur ordre d'origine.",
+  "throws": {
+    "TypeError": "`array` n'est pas un tableau."
+  },
+  "examples": [
+    {
+      "title": "Écarter les valeurs falsy"
+    },
+    {
+      "title": "Lire une colonne sans les cellules vides"
+    },
+    {
+      "title": "Quand `nonNil` est le bon filtre"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "without",
+      "note": "retire les valeurs nommées plutôt que les valeurs falsy."
+    }
+  ]
+}

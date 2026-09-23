@@ -1,0 +1,76 @@
+# exception
+
+<link-summary>Die Ausnahmeklassen und wie man sie erweitert.</link-summary>
+
+<web-summary>Das exception-Modul von apps-script-utils: die Basisklasse Exception, die davon abgeleiteten Klassen und wie man eine eigene in die Hierarchie einfügt.</web-summary>
+
+`exception` enthält die Fehlerklassen, die der Rest der Bibliothek wirft. Nichts darin hängt von der
+Apps-Script-Laufzeit ab.
+
+## Pakete
+
+| Paket                  | Enthält                                                        |
+| :--------------------- | :------------------------------------------------------------- |
+| `exception`            | die Basisklassen und die allgemeinen Ausnahmen                 |
+| `exception/appsscript` | Fehlschläge der Helfer für Tabellen, Präsentationen, Admin SDK |
+| `exception/net`        | Fehlschläge der Authentifizierung                              |
+
+Die Hierarchie, die Fangmuster und die Tabelle, welche Funktion was wirft, stehen in [](exception-handling.md).
+Diese Seite handelt davon, die Klassen im eigenen Code zu verwenden.
+
+## Die Hierarchie erweitern
+
+Ein Skript mit eigenen Fehlerfällen kann der Hierarchie beitreten, statt blanke `Error`-Objekte zu werfen. Für alles,
+was zur Laufzeit entsteht, erweitern Sie `RuntimeException`:
+
+```typescript
+import { RuntimeException } from "apps-script-utils";
+
+export class QuotaExceededException extends RuntimeException {}
+```
+
+Das ist die ganze Klasse. `Exception` setzt `name` aus `new.target`, die Unterklasse meldet ihren eigenen Namen also
+ohne eigenen Konstruktor:
+
+```typescript
+const error = new QuotaExceededException("daily email quota reached");
+
+error.name; // "QuotaExceededException"
+error.getMessage(); // "daily email quota reached"
+Object.prototype.toString.call(error); // "[object QuotaExceededException]"
+```
+
+Sie erbt auch das Verhalten, auf das es an der Fangstelle ankommt: `Exception.isException()` erkennt sie, und
+`instanceof RuntimeException` trifft zu.
+
+## Einen gefangenen Fehler einpacken
+
+Jeder Konstruktor nimmt einen vorhandenen `Error` und übernimmt dessen Meldung — der ursprüngliche Text bleibt, der
+Typ ändert sich:
+
+```typescript
+import { RuntimeException } from "apps-script-utils";
+
+try {
+  UrlFetchApp.fetch(endpoint);
+} catch (error) {
+  throw new RuntimeException(error);
+}
+```
+
+## Eine Klasse wählen
+
+Bevorzugen Sie eine vorhandene Klasse, wo eine passt: wer bereits `IllegalArgumentException` behandelt, behandelt
+auch Ihren Fall.
+
+| Situation                                              | Klasse                                                            |
+| :----------------------------------------------------- | :---------------------------------------------------------------- |
+| Ein Argument hat den falschen Typ oder liegt außerhalb | `IllegalArgumentException`                                        |
+| Ein erforderlicher Wert war `null` oder `undefined`    | `NullPointerException`                                            |
+| Ein Zeichenketten-Argument war leer                    | `EmptyStringException`                                            |
+| Eine Berechtigung fehlte oder wurde abgelehnt          | `AuthenticationException`                                         |
+| Eine Abhängigkeit wurde nie eingerichtet               | `ServiceIsNotDefinedException`, `RepositoryIsNotDefinedException` |
+
+## Vollständige Liste
+
+[](reference-exception.md) listet jede Klasse samt Verweis auf ihren Quelltext.

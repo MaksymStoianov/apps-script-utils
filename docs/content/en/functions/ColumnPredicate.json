@@ -1,0 +1,26 @@
+{
+  "summary": "Decides whether a column is one to act on.",
+  "description": [
+    "`RowPredicate` turned on its side: the column's cells, its one-based position and — when a header column was named — the column keyed by the row names. Returning `true` selects the column."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst predicate = (values) => values.every((cell) => cell === \"\");\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnConditionalOptions"
+    }
+  ]
+}

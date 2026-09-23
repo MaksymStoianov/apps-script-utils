@@ -1,0 +1,26 @@
+{
+  "summary": "Indique si l'utilisateur courant est administrateur Workspace.",
+  "description": [
+    "L'utilisateur actif est recherché via le service Admin SDK Directory, qui doit être activé et autorisé pour le script. Tout échec — service absent, requête refusée — est journalisé et répondu par `false` : l'appel est donc sûr, même depuis la construction d'un menu.",
+    "C'est une question sur la personne qui exécute le script, pas sur une permission attachée à un document."
+  ],
+  "params": {},
+  "returns": "`true` si l'utilisateur actif est administrateur.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Conditionner une fonctionnalité"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonAdmin"
+    },
+    {
+      "name": "requireAdmin"
+    },
+    {
+      "name": "AdminDirectoryException"
+    }
+  ]
+}

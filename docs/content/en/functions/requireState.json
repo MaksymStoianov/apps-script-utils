@@ -1,0 +1,29 @@
+{
+  "summary": "Asserts that a condition holds, throwing when it does not.",
+  "description": [
+    "For the checks that are about the moment rather than the arguments: a connection that is already closed, a sheet that has not been prepared yet, a value that was supposed to be cached by now.",
+    "It is declared as a TypeScript assertion, so after the call the compiler treats the condition as true for the rest of the function."
+  ],
+  "params": {
+    "condition": "The condition that must hold.",
+    "message": "The message of the exception. A default is used when omitted."
+  },
+  "returns": "nothing; it either passes or throws.",
+  "throws": {
+    "IllegalStateException": "the condition is falsy."
+  },
+  "examples": [
+    {
+      "title": "Guarding a state",
+      "body": "```javascript\nfunction close(connection) {\n  requireState(connection.isOpen, \"The connection is already closed.\");\n\n  connection.release();\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonNull"
+    },
+    {
+      "name": "IllegalStateException"
+    }
+  ]
+}

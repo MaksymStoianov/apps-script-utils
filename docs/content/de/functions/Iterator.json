@@ -1,0 +1,26 @@
+{
+  "summary": "Ein Zeiger über eine Folge, der auch rückwärts gehen kann.",
+  "description": [
+    "Pflicht sind nur `next` und `hasNext`. Der Rest — `previous`, `hasPrevious`, `index`, `moveTo`, `size`, `toStart`, `toEnd` — ist optional, sodass eine nur vorwärts lesbare Quelle die Schnittstelle erfüllt, ohne mehr vorzugeben, als sie kann.",
+    "Es ist die Form eines seitenweisen Lesers: Zeilen, die ein Dienst in Blöcken liefert, sehen für den verbrauchenden Code wie eine Folge aus."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "Class"
+    },
+    {
+      "name": "first"
+    },
+    {
+      "name": "last"
+    }
+  ]
+}

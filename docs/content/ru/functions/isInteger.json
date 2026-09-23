@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение целым числом.",
+  "description": [
+    "Число без дробной части. Приведения типов нет, поэтому строка `\"42\"` целым числом не является, как и `NaN`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является целым числом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisInteger(42); // => true\nisInteger(-7); // => true\nisInteger(0); // => true\nisInteger(1.5); // => false\nisInteger(NaN); // => false\nisInteger(\"42\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonInteger"
+    },
+    {
+      "name": "requireInteger"
+    },
+    {
+      "name": "requireNonInteger"
+    }
+  ]
+}

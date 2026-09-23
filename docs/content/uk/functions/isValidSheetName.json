@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення назвою аркуша.",
+  "description": [
+    "Те, що приймають Google Таблиці: не довше 100 символів, не порожнє, без символів `\\ / ? * [ ]` і не зарезервована назва `history` у будь-якому регістрі.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є назвою аркуша; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisValidSheetName(\"Data\"); // => true\nisValidSheetName(\"Report 2026\"); // => true\nisValidSheetName(\"history\"); // => false\nisValidSheetName(\"Data/2026\"); // => false\nisValidSheetName(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSheetName"
+    },
+    {
+      "name": "requireValidSheetName"
+    }
+  ]
+}

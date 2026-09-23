@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que un HtmlOutput, ou lève une exception.",
+  "description": [
+    "Un objet de service Apps Script n'a pas de constructeur contre lequel un script pourrait tester, alors le garde cherche les méthodes qui définissent le type — `getContent`, `setTitle`, `setXFrameOptionsMode`. Un bouchon qui les implémente passe, et c'est ce qui rend ce code testable hors de l'environnement d'exécution.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un HtmlOutput.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un HtmlOutput."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nconst output = HtmlService.createHtmlOutput(\"<p>hi</p>\");\n\nrequireHtmlOutput(output); // => output\nrequireHtmlOutput({}); // throws IllegalArgumentException\nrequireHtmlOutput(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isHtmlOutput"
+    },
+    {
+      "name": "nonHtmlOutput"
+    }
+  ]
+}

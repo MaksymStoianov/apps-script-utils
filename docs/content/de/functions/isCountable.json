@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert eine zählbare Zahl ist.",
+  "description": [
+    "Ein Wert, der als Anzahl, Länge oder nullbasierter Index taugt: ganzzahlig, nicht negativ und klein genug, dass das Rechnen damit exakt bleibt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine zählbare Zahl ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisCountable(0); // => true\nisCountable(42); // => true\nisCountable(-1); // => false\nisCountable(1.5); // => false\nisCountable(Number.MAX_SAFE_INTEGER + 2); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonCountable"
+    },
+    {
+      "name": "requireCountable"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert ein relativer Pfad ist.",
+  "description": [
+    "Das exakte Gegenstück zu `isAbsolute`: alles, was nicht an einer Wurzel beginnt, die leere Zeichenkette eingeschlossen.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein relativer Pfad ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisRelative(\"docs/readme.md\"); // => true\nisRelative(\"./a\"); // => true\nisRelative(\"\"); // => true\nisRelative(\"/var/log\"); // => false\nisRelative(\"https://example.com/a\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRelative"
+    },
+    {
+      "name": "requireRelative"
+    }
+  ]
+}

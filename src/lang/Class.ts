@@ -4,6 +4,16 @@ import { hashCode } from "./index";
  * Abstract base class providing fundamental functionality for subclasses.
  * Intended to be extended by other classes.
  *
+ * @example
+ * ```javascript
+ * class Money extends Class {
+ *   constructor(amount) {
+ *     super();
+ *     this.amount = amount;
+ *   }
+ * }
+ * ```
+ *
  * @abstract
  * @class    Class
  * @since    1.0.0

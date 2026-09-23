@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як код локалі або викидає виняток.",
+  "description": [
+    "Рівно дві латинські літери в будь-якому регістрі — `\"en\"`, `\"UK\"`. Код регіону чи писемності, як у `\"en-US\"`, не проходить: це короткий код мови, а не повний тег BCP 47.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як код локалі.",
+  "throws": {
+    "IllegalArgumentException": "значення не є кодом локалі."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireValidLocale(\"en\"); // => \"en\"\nrequireValidLocale(\"UK\"); // => \"UK\"\nrequireValidLocale(\"en-US\"); // throws IllegalArgumentException\nrequireValidLocale(\"eng\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidLocale"
+    },
+    {
+      "name": "nonValidLocale"
+    }
+  ]
+}

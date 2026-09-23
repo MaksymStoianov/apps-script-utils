@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є назвою аркуша.",
+  "description": [
+    "`nonValidSheetName(value)` — та сама перевірка, що й `!isValidSheetName(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Те, що приймають Google Таблиці: не довше 100 символів, не порожнє, без символів `\\ / ? * [ ]` і не зарезервована назва `history` у будь-якому регістрі.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є назвою аркуша; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonValidSheetName(\"history\"); // => true\nnonValidSheetName(\"Data/2026\"); // => true\nnonValidSheetName(\"\"); // => true\nnonValidSheetName(\"Data\"); // => false\nnonValidSheetName(\"Report 2026\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetName"
+    },
+    {
+      "name": "requireValidSheetName"
+    }
+  ]
+}

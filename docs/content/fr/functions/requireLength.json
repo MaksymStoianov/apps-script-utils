@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur en tant que une longueur de tableau valide, ou lève une exception.",
+  "description": [
+    "Un entier de `0` à `Number.MAX_SAFE_INTEGER` — l'intervalle qu'une propriété `length` peut contenir.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme une longueur de tableau valide.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas une longueur de tableau valide."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireLength(0); // => 0\nrequireLength(42); // => 42\nrequireLength(-1); // throws IllegalArgumentException\nrequireLength(1.5); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "nonLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

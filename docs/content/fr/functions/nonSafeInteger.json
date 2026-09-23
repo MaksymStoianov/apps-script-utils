@@ -1,0 +1,30 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** un entier sûr.",
+  "description": [
+    "`nonSafeInteger(value)` est le même test que `!isSafeInteger(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Un entier qu'un double IEEE-754 représente exactement. Au-delà, des entiers mathématiques distincts se confondent et l'arithmétique cesse discrètement d'être exacte.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un entier sûr ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => true\nnonSafeInteger(1.5); // => true\nnonSafeInteger(\"42\"); // => true\nnonSafeInteger(42); // => false\nnonSafeInteger(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

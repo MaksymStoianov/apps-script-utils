@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является строкой версии.",
+  "description": [
+    "`nonValidVersion(value)` — та же проверка, что и `!isValidVersion(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Группы цифр через точку, в любом количестве. Суффикс предрелиза, ведущая `v` и пустая группа не проходят, поэтому `\"1.2.3-beta\"` не подходит, хотя SemVer его допускает.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является строкой версии; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonValidVersion(\"1.2.3-beta\"); // => true\nnonValidVersion(\"v1.2\"); // => true\nnonValidVersion(\"1..2\"); // => true\nnonValidVersion(\"1\"); // => false\nnonValidVersion(\"1.2.3\"); // => false\nnonValidVersion(\"2026.01.15\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidVersion"
+    },
+    {
+      "name": "requireValidVersion"
+    }
+  ]
+}

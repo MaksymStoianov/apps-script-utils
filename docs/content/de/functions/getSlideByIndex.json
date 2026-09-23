@@ -1,0 +1,28 @@
+{
+  "summary": "Findet eine Folie anhand ihrer Position in einer Präsentation.",
+  "description": [
+    "Der Index zählt ab null. Eine Position hinter dem Ende ergibt `null` statt einer Ausnahme — genau das braucht eine Schleife über ein Deck, an dem jemand gerade arbeitet."
+  ],
+  "params": {
+    "presentation": "Die Präsentation, in der gesucht wird.",
+    "index": "Die nullbasierte Position der Folie."
+  },
+  "returns": "die Folie oder `null`, wenn der Index hinter dem Ende liegt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Nachschlagen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideIndex"
+    },
+    {
+      "name": "requireSlide"
+    },
+    {
+      "name": "isValidSlideId"
+    }
+  ]
+}

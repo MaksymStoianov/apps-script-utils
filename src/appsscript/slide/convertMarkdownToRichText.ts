@@ -30,6 +30,11 @@ export interface RichTextRun {
 /**
  * Converts a Markdown-formatted string to an array of RichTextRun objects.
  *
+ * @example
+ * ```javascript
+ * const runs = convertMarkdownToRichText("**bold** and `code`");
+ * ```
+ *
  * @param {string} text The Markdown-formatted string.
  * @param {Theme} [theme={}] The theme settings for the rich text.
  * @returns {RichTextRun[]} An array of RichTextRun objects.

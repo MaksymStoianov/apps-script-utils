@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a slide id.",
+  "description": [
+    "Letters, digits, hyphens and underscores, at least one of them. Slide ids are short — `p1` is a perfectly ordinary one — so no minimum length is imposed.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a slide id; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisValidSlideId(\"p1\"); // => true\nisValidSlideId(\"SLIDES_api123\"); // => true\nisValidSlideId(\"has space\"); // => false\nisValidSlideId(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSlideId"
+    },
+    {
+      "name": "requireValidSlideId"
+    }
+  ]
+}

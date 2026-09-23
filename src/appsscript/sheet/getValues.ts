@@ -5,6 +5,16 @@ import { requireSheet } from "./requireSheet";
 /**
  * A row, as the predicate and the mapper see it.
  *
+ * @example
+ * ```javascript
+ * // What a filter receives when `headerRow` is set.
+ * const row = {
+ *   values: ["7", "ada@example.com"],
+ *   position: 2,
+ *   record: { id: "7", email: "ada@example.com" }
+ * };
+ * ```
+ *
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -27,6 +37,15 @@ export interface Row {
 
 /**
  * How {@link getValues} reads, narrows and shapes the data.
+ *
+ * @example
+ * ```javascript
+ * const config = {
+ *   headerRow: 1,
+ *   filter: (row) => row.record.status === "active",
+ *   limit: 100
+ * };
+ * ```
  *
  * @since   1.11.0
  * @version 1.0.0

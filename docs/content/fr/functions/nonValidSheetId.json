@@ -1,0 +1,27 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** un identifiant de feuille.",
+  "description": [
+    "`nonValidSheetId(value)` est le même test que `!isValidSheetId(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Apps Script numérote les feuilles à partir de zéro : un identifiant de feuille est un entier sûr non négatif — la règle qu'applique `isCountable`. La première feuille d'un classeur porte l'identifiant `0`.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un identifiant de feuille ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonValidSheetId(-1); // => true\nnonValidSheetId(1.5); // => true\nnonValidSheetId(\"0\"); // => true\nnonValidSheetId(0); // => false\nnonValidSheetId(1234567890); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "requireValidSheetId"
+    }
+  ]
+}

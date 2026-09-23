@@ -1,0 +1,36 @@
+{
+  "summary": "Échange les lignes et les colonnes d'une matrice.",
+  "description": [
+    "La valeur en ligne `i`, colonne `j` de l'entrée se retrouve en ligne `j`, colonne `i` du résultat. Une nouvelle matrice est construite ; l'entrée n'est pas modifiée.",
+    "L'entrée doit être une matrice à lignes de même longueur — la règle qu'énonce [`isConsistent2DArray`](isConsistent2DArray.md) — puisqu'une matrice irrégulière n'a pas de transposée. Tout le reste lève un `Error` ordinaire.",
+    "Dans une feuille, c'est la conversion entre les deux formes d'une même plage : une colonne lue à raison d'une ligne par cellule, et une seule ligne portant les mêmes valeurs."
+  ],
+  "params": {
+    "arr": "La matrice à transposer. Elle n'est pas modifiée."
+  },
+  "returns": "une nouvelle matrice aux lignes et colonnes échangées. Les types des éléments sont conservés.",
+  "throws": {
+    "Error": "l'entrée n'est pas une matrice, ou ses lignes diffèrent en longueur."
+  },
+  "examples": [
+    {
+      "title": "Les lignes deviennent des colonnes"
+    },
+    {
+      "title": "Écrire une liste dans une colonne"
+    },
+    {
+      "title": "Entrée invalide"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "la forme qu'exige `transpose`."
+    },
+    {
+      "name": "chunk",
+      "note": "remet un tableau plat en lignes."
+    }
+  ]
+}

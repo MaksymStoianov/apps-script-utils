@@ -1,0 +1,30 @@
+{
+  "summary": "Returns the value as a rich text value, or throws.",
+  "description": [
+    "An Apps Script service object has no constructor a script can test against, so the guard reads the tag the object reports for itself: `value.toString() === \"RichTextValue\"`. A plain object that reports the same tag passes too, which in practice means a test double.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a rich text value.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a rich text value."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nconst value = SpreadsheetApp.newRichTextValue().setText(\"a\").build();\n\nrequireRichTextValue(value); // => value\nrequireRichTextValue({}); // throws IllegalArgumentException\nrequireRichTextValue(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRichTextValue"
+    },
+    {
+      "name": "nonRichTextValue"
+    }
+  ]
+}

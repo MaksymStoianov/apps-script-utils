@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als einen leeren Wert zurück oder wirft.",
+  "description": [
+    "Leere wird je nach Art gelesen: `null` und `undefined`, eine Zeichenkette aus reinem Leerraum, ein Array, `Set` oder `Map` ohne Einträge, ein Objekt ohne eigene Schlüssel. `0` und `false` sind Werte, keine Leere.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als einen leeren Wert.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht leer."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireEmpty(null); // => null\nrequireEmpty(\"\"); // => \"\"\nrequireEmpty(0); // throws IllegalArgumentException\nrequireEmpty(false); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

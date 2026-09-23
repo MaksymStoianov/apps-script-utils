@@ -4,6 +4,14 @@ import { isObject } from "./isObject";
 /**
  * Checks if the provided value is an instance of {@link Exception} or a class that extends it.
  *
+ * @example
+ * ```javascript
+ * isException(new IllegalArgumentException()); // => true
+ * isException(new Error()); // => false
+ * isException({}); // => false
+ * isException(null); // => false
+ * ```
+ *
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is an instance of {@link Exception} (or a subclass); otherwise, `false`.
  * @see     {@link Exception}

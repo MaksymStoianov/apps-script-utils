@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a number with a fractional part.",
+  "description": [
+    "`nonDouble(value)` is the same test as `!isDouble(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "A synonym of the `Float` family, offered under the name people reach for first. In JavaScript every number already is a double, so `double` names no runtime distinction of its own.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a number with a fractional part; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonDouble(42); // => true\nnonDouble(1.0); // => true\nnonDouble(Infinity); // => true\nnonDouble(\"1.5\"); // => true\nnonDouble(1.5); // => false\nnonDouble(-0.1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isDouble"
+    },
+    {
+      "name": "requireDouble"
+    },
+    {
+      "name": "requireNonDouble"
+    }
+  ]
+}

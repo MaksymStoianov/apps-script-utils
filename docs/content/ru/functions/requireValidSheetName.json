@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как имя листа или выбрасывает исключение.",
+  "description": [
+    "То, что принимает Google Таблицы: не длиннее 100 символов, не пустое, без символов `\\ / ? * [ ]` и не зарезервированное имя `history` в любом регистре.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как имя листа.",
+  "throws": {
+    "IllegalArgumentException": "значение не является именем листа."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireValidSheetName(\"Data\"); // => \"Data\"\nrequireValidSheetName(\"Report 2026\"); // => \"Report 2026\"\nrequireValidSheetName(\"history\"); // throws IllegalArgumentException\nrequireValidSheetName(\"Data/2026\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetName"
+    },
+    {
+      "name": "nonValidSheetName"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як презентацію або викидає виняток.",
+  "description": [
+    "У сервісного об'єкта Apps Script немає конструктора, з яким скрипт міг би порівняти значення, тому перевірка шукає методи, що визначають тип, — `getId`, `getSlides`. Заглушка, яка їх реалізує, проходить, і саме це дозволяє тестувати такий код поза середовищем виконання.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як презентацію.",
+  "throws": {
+    "InvalidPresentationException": "значення не є презентацією."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nconst presentation = SlidesApp.getActivePresentation();\n\nrequirePresentation(presentation); // => presentation\nrequirePresentation({}); // throws InvalidPresentationException\nrequirePresentation(null); // throws InvalidPresentationException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isPresentation"
+    },
+    {
+      "name": "nonPresentation"
+    }
+  ]
+}

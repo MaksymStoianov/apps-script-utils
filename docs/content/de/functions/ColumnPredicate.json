@@ -1,0 +1,25 @@
+{
+  "summary": "Entscheidet, ob eine Spalte eine ist, auf die gewirkt wird.",
+  "description": [
+    "`RowPredicate` um neunzig Grad gedreht: die Zellen der Spalte, ihre einsbasierte Position und — wenn eine Kopfspalte benannt wurde — die Spalte mit den Zeilennamen als Schlüsseln. `true` wählt die Spalte aus."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnConditionalOptions"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "summary": "Nimmt das erste Element eines Arrays oder dessen erste n Elemente, ohne eigene Leerprüfung.",
+  "description": [
+    "Mit einem Argument liefert `first` ein einzelnes Element und für ein leeres Array `undefined` statt einer Ausnahme — genau das erspart jeder Aufrufstelle ihre eigene Prüfung. Mit einer Anzahl kommt stattdessen ein neues Array zurück, sodass beide Formen zur Laufzeit nie unterschieden werden müssen.",
+    "`n` wird begrenzt wie bei `Array#slice`: eine negative Anzahl ergibt ein leeres Array, eine Anzahl über der Länge das ganze Array. Die Eingabe bleibt unverändert."
+  ],
+  "params": {
+    "array": "Das Array, aus dem gelesen wird. Bleibt unverändert.",
+    "n": "Wie viele Elemente genommen werden. Eine ganze Zahl; weglassen für ein einzelnes Element."
+  },
+  "returns": "das erste Element oder ein neues Array mit höchstens `n` Elementen.",
+  "throws": {
+    "TypeError": ["`array` ist kein Array.", "`n` wurde angegeben und ist keine ganze Zahl."]
+  },
+  "examples": [
+    {
+      "title": "Ein Element oder mehrere"
+    },
+    {
+      "title": "Kopfzeile von den Daten trennen"
+    },
+    {
+      "title": "Begrenzung"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "last",
+      "note": "dieselben zwei Formen, vom Ende her."
+    }
+  ]
+}

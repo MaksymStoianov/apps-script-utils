@@ -4,6 +4,13 @@ import { appendRows, type AppendRowsOptions } from "./appendRows";
  * Appends a single row to the bottom of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
  * If a cell's content starts with `=`, it is interpreted as a formula.
  *
+ * @example
+ * ```javascript
+ * const sheet = SpreadsheetApp.getActiveSheet();
+ *
+ * appendRow(sheet, ["Ada", "ada@example.com", "=TODAY()"]);
+ * ```
+ *
  * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which the row will be appended.
  * @param       {unknown[]} values - A 1D array containing the data for the single row.
  * @param       {AppendRowsOptions | null | undefined} [options] - Additional parameters to customize the method's behavior.

@@ -1,0 +1,24 @@
+{
+  "summary": "Prüft, ob ein Wert eine nicht negative Zahl ist.",
+  "description": [
+    "Der Name bricht die Konvention der übrigen Bibliothek: überall sonst heißt das Präfix `nonX` „ist kein X“, hier heißt es „ist eine nicht negative Zahl“. Dasselbe unter dem richtigen Namen leistet `isNonNegative`, und neuer Code sollte das aufrufen."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Zahl und nicht negativ ist.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNonNegative"
+    },
+    {
+      "name": "isCountable"
+    }
+  ]
+}

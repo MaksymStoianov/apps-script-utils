@@ -10,6 +10,15 @@ import { isUi } from "./isUi";
  * API. Validating the result here produces a message that says which of those
  * happened, instead of the runtime's generic failure.
  *
+ * @example
+ * ```javascript
+ * const ui = SpreadsheetApp.getUi();
+ *
+ * requireUi(ui); // => ui
+ * requireUi({}); // throws IllegalArgumentException
+ * requireUi(null); // throws IllegalArgumentException
+ * ```
+ *
  * @param       {unknown} value - The value to validate.
  * @param       {string} [message="Expected a Ui object."] - Optional custom error message if the validation fails.
  * @returns     {GoogleAppsScript.Base.Ui} The validated <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a> object.

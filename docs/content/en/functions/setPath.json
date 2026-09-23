@@ -1,0 +1,30 @@
+{
+  "summary": "Writes a nested property by path, creating what is missing.",
+  "description": [
+    "Missing links are created along the way: a numeric segment makes an array, a string segment an object. `setPath({}, [\"rows\", 0, \"id\"], 7)` therefore produces `{ rows: [{ id: 7 }] }`.",
+    "**The target is modified in place** and returned, so the call composes but does not copy."
+  ],
+  "params": {
+    "target": "The object to write into. It is modified.",
+    "path": "A dotted string, or an array of keys and indices.",
+    "value": "The value to write."
+  },
+  "returns": "the same object, now carrying the value.",
+  "throws": {
+    "IllegalArgumentException": "the target is not an object, or the path is empty."
+  },
+  "examples": [
+    {
+      "title": "Writing",
+      "body": "```javascript\nsetPath({}, \"a.b\", 1); // => { \"a\": { \"b\": 1 } }\nsetPath({}, [\"rows\", 0, \"id\"], 7); // => { \"rows\": [{ \"id\": 7 }] }\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getPath"
+    },
+    {
+      "name": "flat"
+    }
+  ]
+}

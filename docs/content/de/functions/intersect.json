@@ -1,0 +1,36 @@
+{
+  "summary": "Findet die Werte, die in jedem der übergebenen Arrays vorkommen.",
+  "description": [
+    "Die Reihenfolge stammt aus dem ersten Array, und das Ergebnis ist dedupliziert: ein dort wiederholter Wert erscheint einmal. Verglichen wird mit `SameValueZero`, der Regel eines `Set`, sodass sich `NaN` mit `NaN` schneidet — was ein Vergleich mit `===` nie tut — und `-0` zu `0` passt.",
+    "Die Arrays nach dem ersten werden je einmal zu einer Menge, das erste wird genau einmal durchlaufen. Der Aufwand ist linear in der Gesamteingabe statt quadratisch wie bei einer handgeschriebenen Variante. Die Eingaben bleiben unverändert.",
+    "Mit einem einzigen Array liefert `intersect` dessen eindeutige Werte, ohne Argumente `[]`."
+  ],
+  "params": {
+    "arrays": "Die zu schneidenden Arrays. Bleiben unverändert."
+  },
+  "returns": "ein neues Array der gemeinsamen Werte, in der Reihenfolge des ersten Arrays, ohne Dubletten.",
+  "throws": {
+    "TypeError": "Ein Argument ist kein Array."
+  },
+  "examples": [
+    {
+      "title": "Werte, die in jedem Array vorkommen"
+    },
+    {
+      "title": "Zeilen finden, die zwei Blätter gemeinsam haben"
+    },
+    {
+      "title": "Deduplizierung und Randfälle"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "unique",
+      "note": "dedupliziert ein einzelnes Array."
+    },
+    {
+      "name": "without",
+      "note": "die Gegenrichtung: entfernt die genannten Werte."
+    }
+  ]
+}

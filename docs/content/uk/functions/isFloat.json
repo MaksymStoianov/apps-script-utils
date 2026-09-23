@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення числом з дробовою частиною.",
+  "description": [
+    "У JavaScript один числовий тип, тому `1.0` і `1` — одне значення: питання в тому, чи збереглася дріб під час виконання, а не в тому, як записано літерал. У нескінченностей дробу немає, вони виключені.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є числом з дробовою частиною; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisFloat(1.5); // => true\nisFloat(-0.1); // => true\nisFloat(42); // => false\nisFloat(1.0); // => false\nisFloat(Infinity); // => false\nisFloat(\"1.5\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonFloat"
+    },
+    {
+      "name": "requireFloat"
+    },
+    {
+      "name": "requireNonFloat"
+    }
+  ]
+}

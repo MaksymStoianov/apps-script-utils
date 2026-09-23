@@ -1,0 +1,27 @@
+{
+  "summary": "Extrait le nom de feuille d'une notation A1.",
+  "description": [
+    "Les guillemets que Sheets place autour des noms contenant espaces ou ponctuation sont retirés : `\"'My Sheet'!A1\"` donne `My Sheet`. Une notation sans nom de feuille ne donne rien."
+  ],
+  "params": {
+    "a1Notation": "La notation à lire."
+  },
+  "returns": "le nom de feuille, lorsque la notation en porte un.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Extraction"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractRangeFromA1Notation"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

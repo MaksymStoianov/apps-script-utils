@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення відносним шляхом.",
+  "description": [
+    "Точне доповнення `isAbsolute`: усе, що не починається від кореня, включно з порожнім рядком.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є відносним шляхом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisRelative(\"docs/readme.md\"); // => true\nisRelative(\"./a\"); // => true\nisRelative(\"\"); // => true\nisRelative(\"/var/log\"); // => false\nisRelative(\"https://example.com/a\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRelative"
+    },
+    {
+      "name": "requireRelative"
+    }
+  ]
+}

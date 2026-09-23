@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a slide.",
+  "description": [
+    "An Apps Script service object has no constructor a script can test against, so the guard looks for the methods that define the type — `getObjectId`, `getPageElementById`. A stub that implements them passes, which is what makes code using this guard testable outside the runtime.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a slide; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[0];\n\nisSlide(slide); // => true\nisSlide({}); // => false\nisSlide(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSlide"
+    },
+    {
+      "name": "requireSlide"
+    }
+  ]
+}

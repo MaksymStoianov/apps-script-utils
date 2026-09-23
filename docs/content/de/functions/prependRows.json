@@ -1,0 +1,30 @@
+{
+  "summary": "Fügt Zeilen über den bereits vorhandenen Daten eines Blattes ein.",
+  "description": [
+    "Am Kopf des Datenbereichs wird Platz geschaffen und die Matrix dort hineingeschrieben, vorhandene Daten werden also nicht überschrieben. Fixierte Zeilen bleiben, wo sie sind.",
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+  ],
+  "params": {
+    "sheet": "Das Blatt, in das geschrieben wird.",
+    "values": "Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.",
+    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+  },
+  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt.",
+    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+  },
+  "examples": [
+    {
+      "title": "Schreiben"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependRow"
+    },
+    {
+      "name": "appendRows"
+    }
+  ]
+}

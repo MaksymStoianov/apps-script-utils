@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is a regular expression.",
+  "description": [
+    "Identified by its internal tag rather than by `instanceof`, so a regular expression from another frame is recognised too.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a regular expression; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisRegExp(/a/); // => true\nisRegExp(new RegExp(\"a\")); // => true\nisRegExp(\"/a/\"); // => false\nisRegExp({}); // => false\nisRegExp(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRegExp"
+    },
+    {
+      "name": "requireRegExp"
+    },
+    {
+      "name": "requireNonRegExp"
+    }
+  ]
+}

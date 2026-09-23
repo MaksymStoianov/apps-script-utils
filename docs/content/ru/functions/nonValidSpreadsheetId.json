@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является идентификатором таблицы.",
+  "description": [
+    "`nonValidSpreadsheetId(value)` — та же проверка, что и `!isValidSpreadsheetId(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Не меньше 25 символов из букв, цифр, дефисов и подчёркиваний — тот идентификатор, что стоит в URL таблицы между `/d/` и `/edit`. Никаких запросов не делается, проверяется только формат.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является идентификатором таблицы; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonValidSpreadsheetId(\"short-id\"); // => true\nnonValidSpreadsheetId(\"has space in it and is long enough to pass\"); // => true\nnonValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSpreadsheetId"
+    },
+    {
+      "name": "requireValidSpreadsheetId"
+    }
+  ]
+}

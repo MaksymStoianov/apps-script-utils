@@ -1,0 +1,32 @@
+{
+  "summary": "Teilt ein Array in aufeinanderfolgende Gruppen fester Größe und prüft beide Argumente.",
+  "description": [
+    "`chunk` durchläuft das Array einmal und schneidet es in Gruppen von `size` Elementen. Geht die Länge nicht auf, enthält die letzte Gruppe den Rest und ist kürzer als die übrigen. Das Eingabe-Array bleibt unverändert.",
+    "Beide Argumente werden geprüft, bevor gearbeitet wird: eine Nicht-Array-Eingabe oder ein gebrochenes `size` führen zu einer Ausnahme statt zu einem still falschen Ergebnis. Ein `size` von null oder kleiner und ein leeres Array ergeben `[]`, keine Gruppen aus leeren Gruppen."
+  ],
+  "params": {
+    "array": "Das zu teilende Array. Bleibt unverändert.",
+    "size": "Die Länge jeder Gruppe. Eine ganze Zahl; Standardwert `1`."
+  },
+  "returns": "ein neues Array aus Gruppen. Alle Gruppen außer der letzten enthalten genau `size` Elemente.",
+  "throws": {
+    "TypeError": ["`array` ist kein Array.", "`size` ist keine ganze Zahl."]
+  },
+  "examples": [
+    {
+      "title": "Aufteilen in Gruppen fester Größe"
+    },
+    {
+      "title": "Einen großen Bereich in Portionen schreiben"
+    },
+    {
+      "title": "Randfälle"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "transpose",
+      "note": "vertauscht Zeilen und Spalten einer Matrix."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert ein Slug ist.",
+  "description": [
+    "Beginnt mit einem Buchstaben, danach Buchstaben, Ziffern, Bindestriche und Unterstriche — die Form, die ein URL-Segment oder ein Schlüssel annehmen kann. Leerzeichen, führende Ziffern und die leere Zeichenkette werden abgelehnt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Slug ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisValidSlug(\"my-page\"); // => true\nisValidSlug(\"a_1\"); // => true\nisValidSlug(\"1-page\"); // => false\nisValidSlug(\"my page\"); // => false\nisValidSlug(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSlug"
+    },
+    {
+      "name": "requireValidSlug"
+    }
+  ]
+}

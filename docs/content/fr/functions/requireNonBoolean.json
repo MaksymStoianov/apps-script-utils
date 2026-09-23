@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur après avoir vérifié qu'elle n'est pas un booléen.",
+  "description": [
+    "Seules les deux primitives passent. `new Boolean(false)` est un objet, et les chaînes `\"true\"` et `\"false\"` restent des chaînes.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur ; après le test, elle n'est pas un booléen.",
+  "throws": {
+    "IllegalArgumentException": "la valeur est un booléen."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNonBoolean(\"true\"); // => \"true\"\nrequireNonBoolean(1); // => 1\nrequireNonBoolean(true); // throws IllegalArgumentException\nrequireNonBoolean(false); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isBoolean"
+    },
+    {
+      "name": "nonBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    }
+  ]
+}

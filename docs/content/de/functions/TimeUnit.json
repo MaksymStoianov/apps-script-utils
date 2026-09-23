@@ -1,0 +1,23 @@
+{
+  "summary": "Eine Einheit, in der ein Abstand ausgedrückt werden kann.",
+  "description": [
+    "`\"millisecond\"`, `\"second\"`, `\"minute\"` und `\"hour\"` sind feste Vielfache einer Millisekunde. `\"day\"`, `\"month\"` und `\"year\"` sind Kalendereinheiten ohne feste Länge: ein Tag hat bei einer Zeitumstellung 23 oder 25 Stunden, ein Monat zwischen 28 und 31 Tage.",
+    "Welche der beiden Lesarten eine Funktion anwendet, steht auf ihrer eigenen Seite: `diff` zählt ganze Kalendereinheiten, `offset` verschiebt um sie und zieht den Monatstag nötigenfalls ans Monatsende."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

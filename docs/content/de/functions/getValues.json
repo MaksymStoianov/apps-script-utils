@@ -1,0 +1,28 @@
+{
+  "summary": "Liest die Zeilen eines Blattes, gefiltert, abgebildet und seitenweise, in einem Aufruf.",
+  "description": [
+    "Ist `headerRow` gesetzt, kommt jede Zeile als Objekt mit den Spaltennamen als Schlüsseln — genau das macht einen Filter lesbar: `row.status` statt `row[4]`. Wiederholt sich ein Name, gewinnt die linke Spalte.",
+    "`filter` engt die Zeilen ein, `offset` und `limit` blättern durch den Rest, und `mapper` bestimmt, was aus jeder übrigen Zeile wird. `display` liest die Werte so, wie ein Mensch sie sieht — ein formatiertes Datum als Text statt als `Date`. Das ist anderer Inhalt, keine Kosmetik."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird.",
+    "config": "`headerRow`, `display`, `filter`, `offset`, `limit` und `mapper`."
+  },
+  "returns": "die verbliebenen Zeilen in der Reihenfolge des Blattes.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt."
+  },
+  "examples": [
+    {
+      "title": "Zeilen lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "isConsistent2DArray"
+    }
+  ]
+}

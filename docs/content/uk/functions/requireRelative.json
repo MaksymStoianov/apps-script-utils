@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як відносний шлях або викидає виняток.",
+  "description": [
+    "Точне доповнення `isAbsolute`: усе, що не починається від кореня, включно з порожнім рядком.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як відносний шлях.",
+  "throws": {
+    "IllegalArgumentException": "значення не є відносним шляхом."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireRelative(\"docs/readme.md\"); // => \"docs/readme.md\"\nrequireRelative(\"./a\"); // => \"./a\"\nrequireRelative(\"/var/log\"); // throws IllegalArgumentException\nrequireRelative(\"https://example.com/a\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRelative"
+    },
+    {
+      "name": "nonRelative"
+    }
+  ]
+}

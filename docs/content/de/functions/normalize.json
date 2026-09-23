@@ -1,0 +1,25 @@
+{
+  "summary": "Löst die Segmente `.` und `..` eines Pfades auf.",
+  "description": [
+    "Ein `.` entfällt, ein `..` entfernt das Segment davor, wiederholte Trenner fallen zusammen, ein abschließender Trenner wird entfernt.",
+    "Das Ergebnis beginnt immer an der Wurzel: `normalize(\"a/b\")` ergibt `\"/a/b\"`. Soll ein relativer Pfad relativ bleiben, nehmen Sie `join`."
+  ],
+  "params": {
+    "path": "Der zu normalisierende Pfad."
+  },
+  "returns": "den normalisierten Pfad.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Normalisieren"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "parse"
+    }
+  ]
+}

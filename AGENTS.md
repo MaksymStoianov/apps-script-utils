@@ -122,8 +122,78 @@ Do not add function rows to the README. The tables moved out of it precisely
 because every branch touched them, and the move cost 101 rows that had to be
 recovered from the branches that lost them.
 
-Everything written into this repository is in English, whatever language the
-work is discussed in.
+Each function also has a page of its own in the same directory, in every
+language. What those pages say comes from the code — the signature, the
+parameter types, the return type, the exceptions the body throws — and from the
+prose in `docs/content/`, described in the next rule. The JSDoc is a fallback for
+functions whose prose has not been written yet:
+
+```bash
+npm run docs:generate   # writes the pages, the tree and the table links
+npm run docs:check      # fails when they are out of date; CI runs this
+```
+
+Two things the generator will not touch:
+
+- a page whose first line is not its marker comment is hand-written, and is kept
+  as it is — improve such a page by editing it, not the generator;
+- the examples under `docs/writerside/snippets/` are real TypeScript files,
+  embedded into pages with `<code-block src="…" include-symbol="…"/>` and
+  compiled by `npm run type:check`. An example that stops matching its function
+  fails the type check instead of quietly going stale.
+
+So: a new function needs its row in the reference table, its example in
+`docs/writerside/snippets/` when it deserves one, and its prose in
+`docs/content/en/functions/`. The JSDoc still matters — it is what the IDE
+shows — but it is no longer where the published description comes from.
+
+## 6a. The documentation is written once and published in five languages
+
+Source text is English: the guides, the reference tables, the JSDoc, the commit
+messages, the issues, the pull requests. A translation never edits the English
+source; it adds a file beside it.
+
+- Prose for a function page lives in `docs/content/<language>/functions/<name>.json`
+  — summary, description, parameter and return text, the conditions for each
+  exception, the titles of the examples. The example code itself is written once,
+  in English, and reused by every language.
+- A translated guide is a whole Markdown file in `docs/content/<language>/topics/`.
+- Only `docs/writerside/` is edited by hand. `docs/writerside-ru|uk|de|fr/` are
+  generated in full and must never be edited; a change there is lost on the next
+  `npm run docs:generate`.
+- A page with no translation is published in English with a notice on it, and is
+  listed in `docs/content/COVERAGE.md`. That file is generated; read it to see
+  what still needs writing.
+
+Most of those JSON files are not typed out by hand. `npm run docs:author` runs
+three writers over the text that is:
+
+- `scripts/docs/guards.mjs` — one entry per subject of the `isX`/`nonX`/`requireX`
+  families: the grammatical forms each language needs, the one thing worth
+  knowing about the subject, and the values its examples are built from;
+- `scripts/docs/author-exceptions.mjs` — one sentence per exception class;
+- `docs/content/authored/*.mjs` — everything else, one function at a time.
+
+`npm run docs:verify-examples` then executes every documented result of the form
+`expr; // => value` against the real implementation, so an example cannot quietly
+stop being true. CI runs it.
+
+`npm run docs:sync-examples` copies the first example of each symbol into the
+JSDoc above its declaration, because that comment — not the content file — is
+what an IDE shows on hover. It never touches a comment that already has an
+`@example`: a hand-written one outranks a copied one. CI checks that no symbol
+has a documented example its JSDoc is missing.
+
+Two scripts take an argument and run against a built site rather than the
+sources: `npm run docs:search-index -- <site-directory>` writes that directory's
+`search-index.json`, once per language, and `npm run docs:finalize-site -- <site-directory>`
+writes the `hreflang` links into the served HTML, the sitemap covering every
+language, and `robots.txt`. The second one has to run after all five builds sit
+in one directory — that is when it can know which pages exist in which language.
+
+The languages, and every label around the prose, are declared in
+`scripts/docs/languages.mjs`. Adding a language is a change to that file and a
+new matrix entry in `.github/workflows/docs.yml`; the rest follows.
 
 ## 7. Parity is not attributed
 

@@ -1,0 +1,39 @@
+{
+  "summary": "Returns the value as a non-empty two-dimensional array, or throws.",
+  "description": [
+    "The check to put in front of `Range#setValues`, which rejects a flat array with a message that names neither the\nargument nor the reason. `require2DArray` throws first, with a message you control, and returns the value so the\ncall composes into an expression.",
+    "It accepts exactly what [`is2DArray`](is2DArray.md) accepts: a non-empty array whose every element is an array. Rows\nof differing length pass — use [`requireConsistent2DArray`](requireConsistent2DArray.md) when they must match."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The exception message. Defaults to `\"Expected a non-empty two-dimensional array.\"`"
+  },
+  "returns": "the same value, typed as a two-dimensional array.",
+  "throws": {
+    "IllegalArgumentException": "The value is not a non-empty array of arrays."
+  },
+  "examples": [
+    {
+      "title": "Validating and using in one expression",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"require2DArray.ts\" include-symbol=\"writeRows\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction writeRows(sheet, values) {\n  const rows = require2DArray(values, \"values must be a matrix of rows\");\n  sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "What passes and what throws",
+      "body": "```javascript\nrequire2DArray([\n  [1, 2],\n  [3, 4]\n]); // => [[1, 2], [3, 4]]\nrequire2DArray([1, 2]); // throws IllegalArgumentException\nrequire2DArray([]); // throws IllegalArgumentException — no rows\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "the same test as a predicate."
+    },
+    {
+      "name": "non2DArray",
+      "note": "the negated predicate."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "also requires uniform row lengths."
+    }
+  ]
+}

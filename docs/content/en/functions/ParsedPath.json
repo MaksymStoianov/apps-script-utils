@@ -1,0 +1,27 @@
+{
+  "summary": "The parts a path breaks into.",
+  "description": [
+    "`root` is the leading separator or scheme, `dir` everything up to the last separator, `base` the file name with its extension, `name` the same without it, and `ext` the extension including its dot.",
+    "Every part is optional, and a path that lacks one comes back without that key rather than with an empty string — so a bare file name yields `base`, `name` and `ext` alone. It is the shape Node's `path.parse` returns, which is what makes the two interchangeable in code that has to run in both places."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nparse(\"/a/b/c.txt\");\n// => { root: \"/\", dir: \"/a/b\", base: \"c.txt\", name: \"c\", ext: \".txt\" }\n\nparse(\"readme.md\");\n// => { base: \"readme.md\", name: \"readme\", ext: \".md\" }\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parse"
+    },
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

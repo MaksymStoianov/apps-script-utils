@@ -1,0 +1,24 @@
+{
+  "summary": "Compares two values deeply and null-safely.",
+  "description": [
+    "Objects and arrays are walked key by key, dates by their instant, and primitives by `SameValueZero` — so `NaN` equals `NaN`, which `===` never grants. A value carrying its own `equals` method is asked instead of being taken apart.",
+    "Cycles are tolerated: a structure that refers back to itself is compared without looping."
+  ],
+  "params": {
+    "a": "The first value.",
+    "b": "The second value."
+  },
+  "returns": "`true` when the two are equal all the way down.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Comparing",
+      "body": "```javascript\nequals({ a: 1 }, { a: 1 }); // => true\nequals([1, { a: 2 }], [1, { a: 2 }]); // => true\nequals(NaN, NaN); // => true\nequals(new Date(0), new Date(0)); // => true\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "hashCode"
+    }
+  ]
+}

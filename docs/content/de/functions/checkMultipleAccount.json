@@ -1,0 +1,26 @@
+{
+  "summary": "Meldet, ob das Skript unter einem anderen Konto läuft als dem, das es gestartet hat.",
+  "description": [
+    "Wer in einem Browser bei mehreren Google-Konten angemeldet ist, kann ein Skript auslösen, das dann unter einem anderen seiner Konten läuft — und unter diesem schreibt, teilt oder mailt. Der Vergleich der Adresse des Auslösers mit der des effektiven Nutzers fängt das ab, damit das Skript es sagen kann, statt Überraschendes zu tun."
+  ],
+  "params": {
+    "email": "Die Adresse der Person, die das Skript ausgelöst hat."
+  },
+  "returns": "`true`, wenn die beiden Adressen sich unterscheiden.",
+  "throws": {
+    "InvalidEmailFormatException": "eine der Adressen fehlt oder ist fehlerhaft."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireValidEmail"
+    },
+    {
+      "name": "isEmail"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Returns the value as an absolute path, or throws.",
+  "description": [
+    "A path that starts at a root: a leading `/`, or a scheme such as `https://` or `mailto:`. Everything else, the empty string included, is relative.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as an absolute path.",
+  "throws": {
+    "IllegalArgumentException": "the value is not an absolute path."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireAbsolute(\"/var/log\"); // => \"/var/log\"\nrequireAbsolute(\"https://example.com/a\"); // => \"https://example.com/a\"\nrequireAbsolute(\"docs/readme.md\"); // throws IllegalArgumentException\nrequireAbsolute(\"./a\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAbsolute"
+    },
+    {
+      "name": "nonAbsolute"
+    }
+  ]
+}

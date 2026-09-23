@@ -4,6 +4,14 @@ import type { GridRange } from "./types";
 /**
  * Checks if two <a href="./types/GridRange.ts"><code>GridRange</code></a> objects have the exact same number of rows and columns.
  *
+ * @example
+ * ```javascript
+ * const source = { startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 };
+ * const target = { startRowIndex: 5, endRowIndex: 7, startColumnIndex: 5, endColumnIndex: 7 };
+ *
+ * isGridRangeSameDimensions(source, target); // => true
+ * ```
+ *
  * @param       {GridRange} range1 - The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
  * @param       {GridRange} range2 - The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object.
  * @returns     {boolean} `true` if both ranges are well-defined and have the identical height (number of rows) and width (number of columns), `false` otherwise.

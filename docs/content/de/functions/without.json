@@ -1,0 +1,40 @@
+{
+  "summary": "Entfernt jedes Vorkommen der genannten Werte aus einem Array.",
+  "description": [
+    "Verglichen wird mit `SameValueZero`: `without([NaN], NaN)` ergibt `[]`, was eine Suche über `indexOf` nicht kann, weil strikte Gleichheit nie auf `NaN` passt. `-0` und `0` gelten als derselbe Wert.",
+    "Die Ausschlüsse werden einmal zu einer Menge gesammelt, der Aufwand bleibt also linear in der Länge des Arrays statt quadratisch wie bei `filter` plus `includes`. Zurück kommt ein neues Array, die Eingabe bleibt unverändert. Ohne Ausschlüsse liefert `without` eine Kopie."
+  ],
+  "params": {
+    "array": "Das zu filternde Array. Bleibt unverändert.",
+    "values": "Die auszuschließenden Werte."
+  },
+  "returns": "ein neues Array ohne diese Werte, in ursprünglicher Reihenfolge.",
+  "throws": {
+    "TypeError": "`array` ist kein Array."
+  },
+  "examples": [
+    {
+      "title": "Werte ausschließen"
+    },
+    {
+      "title": "Die Leerwerte einer Spalte verwerfen"
+    },
+    {
+      "title": "Eine Spalte aus der Kopfzeile entfernen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact",
+      "note": "entfernt die falsy-Werte statt der genannten."
+    },
+    {
+      "name": "intersect",
+      "note": "behält nur die gemeinsamen Werte."
+    },
+    {
+      "name": "unique",
+      "note": "entfernt Dubletten."
+    }
+  ]
+}

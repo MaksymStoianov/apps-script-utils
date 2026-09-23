@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert ein Bereich ist.",
+  "description": [
+    "Ein Apps-Script-Dienstobjekt hat keinen Konstruktor, gegen den ein Skript prüfen könnte, also liest die Prüfung den Tag, den das Objekt über sich selbst meldet: `value.toString() === \"Range\"`. Ein einfaches Objekt mit demselben Tag besteht ebenfalls — in der Praxis ist das ein Test-Double.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Bereich ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nconst range = SpreadsheetApp.getActiveRange();\n\nisRange(range); // => true\nisRange({}); // => false\nisRange(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRange"
+    },
+    {
+      "name": "requireRange"
+    }
+  ]
+}

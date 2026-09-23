@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert ein Skalar ist.",
+  "description": [
+    "Ein Primitivwert, der genau einen Wert trägt: String, Zahl, Boolean, Symbol oder BigInt. `null` und `undefined` sind ebenfalls primitiv, tragen aber keinen Wert und zählen nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Skalar ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisScalar(\"abc\"); // => true\nisScalar(1); // => true\nisScalar(true); // => true\nisScalar(10n); // => true\nisScalar({}); // => false\nisScalar([]); // => false\nisScalar(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

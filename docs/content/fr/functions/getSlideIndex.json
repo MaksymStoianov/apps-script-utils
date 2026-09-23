@@ -1,0 +1,25 @@
+{
+  "summary": "Trouve la position d'une diapositive dans une présentation.",
+  "description": [
+    "Les diapositives sont comparées par leur identifiant d'objet : une diapositive lue plus tôt reste reconnue. Une diapositive appartenant à une autre présentation, ou supprimée depuis, donne `null`."
+  ],
+  "params": {
+    "slide": "La diapositive à localiser.",
+    "presentation": "La présentation où chercher."
+  },
+  "returns": "la position à base zéro, ou `null` si la diapositive n'y est pas.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Recherche"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideByIndex"
+    },
+    {
+      "name": "isSlide"
+    }
+  ]
+}

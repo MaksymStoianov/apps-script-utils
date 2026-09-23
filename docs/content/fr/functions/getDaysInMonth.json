@@ -1,0 +1,26 @@
+{
+  "summary": "Renvoie le nombre de jours du mois d'une date.",
+  "description": [
+    "Les années bissextiles sont gérées par le calendrier lui-même : février compte 29 jours là où il le doit. Seuls le mois et l'année comptent ; le jour et l'heure sont ignorés."
+  ],
+  "params": {
+    "date": "La date à lire. Ce doit être un `Date` valide."
+  },
+  "returns": "le nombre de jours, de 28 à 31.",
+  "throws": {
+    "IllegalArgumentException": "un argument n'est pas un `Date` valide."
+  },
+  "examples": [
+    {
+      "title": "Comptage"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getDaysLeftInMonth"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

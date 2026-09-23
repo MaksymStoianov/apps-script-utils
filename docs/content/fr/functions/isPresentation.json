@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est une présentation.",
+  "description": [
+    "Un objet de service Apps Script n'a pas de constructeur contre lequel un script pourrait tester, alors le garde cherche les méthodes qui définissent le type — `getId`, `getSlides`. Un bouchon qui les implémente passe, et c'est ce qui rend ce code testable hors de l'environnement d'exécution.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est une présentation ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nconst presentation = SlidesApp.getActivePresentation();\n\nisPresentation(presentation); // => true\nisPresentation({}); // => false\nisPresentation(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonPresentation"
+    },
+    {
+      "name": "requirePresentation"
+    }
+  ]
+}

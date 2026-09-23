@@ -1,0 +1,27 @@
+{
+  "summary": "Извлекает имя листа из нотации A1.",
+  "description": [
+    "Кавычки, которыми Таблицы обрамляют имена с пробелами или пунктуацией, снимаются, поэтому `\"'My Sheet'!A1\"` даёт `My Sheet`. Нотация без имени листа не даёт ничего."
+  ],
+  "params": {
+    "a1Notation": "Нотация для разбора."
+  },
+  "returns": "имя листа, если оно есть в нотации.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Извлечение"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractRangeFromA1Notation"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

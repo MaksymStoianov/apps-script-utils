@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Folien-Id ist.",
+  "description": [
+    "`nonValidSlideId(value)` ist dieselbe Prüfung wie `!isValidSlideId(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Buchstaben, Ziffern, Bindestriche und Unterstriche, mindestens eines davon. Folien-Ids sind kurz — `p1` ist eine ganz gewöhnliche — daher gibt es keine Mindestlänge.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Folien-Id ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonValidSlideId(\"has space\"); // => true\nnonValidSlideId(\"\"); // => true\nnonValidSlideId(\"p1\"); // => false\nnonValidSlideId(\"SLIDES_api123\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlideId"
+    },
+    {
+      "name": "requireValidSlideId"
+    }
+  ]
+}

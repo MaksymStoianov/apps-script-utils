@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine gültige Array-Länge ist.",
+  "description": [
+    "`nonLength(value)` ist dieselbe Prüfung wie `!isLength(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Eine ganze Zahl von `0` bis `Number.MAX_SAFE_INTEGER` — der Bereich, den eine `length`-Eigenschaft annehmen darf.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine gültige Array-Länge ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonLength(-1); // => true\nnonLength(1.5); // => true\nnonLength(\"3\"); // => true\nnonLength(0); // => false\nnonLength(42); // => false\nnonLength(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "requireLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

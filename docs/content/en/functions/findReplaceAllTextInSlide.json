@@ -1,0 +1,30 @@
+{
+  "summary": "Replaces every occurrence of a text on one slide.",
+  "description": [
+    "Slides offers find-and-replace across a whole presentation; this narrows it to a single slide, which is what filling one templated page at a time needs. Matching is case-sensitive unless told otherwise."
+  ],
+  "params": {
+    "slide": "The slide to work on.",
+    "findText": "The text to look for.",
+    "replaceText": "The text to put in its place.",
+    "matchCase": "Whether the search is case-sensitive. `true` by default."
+  },
+  "returns": "how many occurrences were replaced.",
+  "throws": {
+    "SlideNotFoundException": "the first argument is not a slide."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[0];\n\nconst replaced = findReplaceAllTextInSlide(slide, \"{{ client }}\", \"Acme\", false);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideByIndex"
+    },
+    {
+      "name": "requireSlide"
+    }
+  ]
+}

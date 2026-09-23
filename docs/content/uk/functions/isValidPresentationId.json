@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення ідентифікатором презентації.",
+  "description": [
+    "Не менше 25 символів з літер, цифр, дефісів і підкреслень — ідентифікатор з URL презентації. Перевіряється лише формат.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є ідентифікатором презентації; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisValidPresentationId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => true\nisValidPresentationId(\"short-id\"); // => false\nisValidPresentationId(\"has space in it and is long enough to pass\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidPresentationId"
+    },
+    {
+      "name": "requireValidPresentationId"
+    }
+  ]
+}

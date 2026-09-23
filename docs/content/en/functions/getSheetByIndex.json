@@ -1,0 +1,27 @@
+{
+  "summary": "Finds a sheet by its position in the spreadsheet.",
+  "description": [
+    "The index counts from zero, left to right as the tabs are shown. It is a position, not an identity: moving a tab changes what this returns, which is why `getSheetById` is the one to store.",
+    "An index past the end gives `null` rather than an exception."
+  ],
+  "params": {
+    "sheetIndex": "The zero-based position.",
+    "spreadsheet": "The spreadsheet to look in. The active one by default."
+  },
+  "returns": "the sheet, or `null` when the index is past the end.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Looking up",
+      "body": "```javascript\nconst first = getSheetByIndex(0);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetById"
+    },
+    {
+      "name": "sortSheets"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Блок комірок, описаний так, як його описує Sheets API.",
+  "description": [
+    "Чотири межі та, необов'язково, аркуш: `startRowIndex`, `endRowIndex`, `startColumnIndex`, `endColumnIndex` плюс `sheetId` або `sheetName`. Індекси рахуються від нуля, початкові межі включаються, кінцеві — ні, тому одна комірка займає одиницю, а не нуль.",
+    "Пропущена межа означає, що діапазон відкритий у цей бік: без меж рядків — цілий стовпець, без меж стовпців — цілий рядок, без усіх — увесь аркуш. `toA1Notation` і `parseA1Notation` перекладають між цією формою та нотацією, яку читає людина."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Форма"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    },
+    {
+      "name": "isCellGridRange"
+    }
+  ]
+}

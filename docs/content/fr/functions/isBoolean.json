@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est un booléen.",
+  "description": [
+    "Seules les deux primitives passent. `new Boolean(false)` est un objet, et les chaînes `\"true\"` et `\"false\"` restent des chaînes.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un booléen ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisBoolean(true); // => true\nisBoolean(false); // => true\nisBoolean(\"true\"); // => false\nisBoolean(1); // => false\nisBoolean(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    },
+    {
+      "name": "requireNonBoolean"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur en tant que un tableau, ou lève une exception.",
+  "description": [
+    "Le test se réduit à `Array.isArray` : un tableau venu d'un autre frame compte, un objet ressemblant à un tableau — `arguments`, une `NodeList`, `{ length: 0 }` — non.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un tableau.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un tableau."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireArray([]); // => []\nrequireArray([1, 2, 3]); // => [1, 2, 3]\nrequireArray(\"abc\"); // throws IllegalArgumentException\nrequireArray({ length: 0 }); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isArray"
+    },
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Returns the value as a version string, or throws.",
+  "description": [
+    "Dot-separated groups of digits, any number of them. A pre-release suffix, a leading `v` and an empty group are all rejected, so `\"1.2.3-beta\"` does not pass even though SemVer allows it.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a version string.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a version string."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireValidVersion(\"1\"); // => \"1\"\nrequireValidVersion(\"1.2.3\"); // => \"1.2.3\"\nrequireValidVersion(\"1.2.3-beta\"); // throws IllegalArgumentException\nrequireValidVersion(\"v1.2\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidVersion"
+    },
+    {
+      "name": "nonValidVersion"
+    }
+  ]
+}

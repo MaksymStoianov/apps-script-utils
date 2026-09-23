@@ -1,0 +1,26 @@
+{
+  "summary": "Réordonne les onglets d'un classeur.",
+  "description": [
+    "Par nom, en ordre croissant, sauf si une fonction de comparaison est fournie — elle reçoit deux noms de feuille et fonctionne comme celle d'`Array#sort`.",
+    "Les onglets sont déplacés un à un, et chaque déplacement est un appel au service : un classeur riche en feuilles prend donc un instant."
+  ],
+  "params": {
+    "spreadsheet": "Le classeur dont les onglets sont réordonnés.",
+    "callback": "Compare deux noms de feuille, comme l'attend `Array#sort`."
+  },
+  "returns": "rien ; le classeur est modifié sur place.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Trier les onglets"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetByIndex"
+    },
+    {
+      "name": "isValidSheetName"
+    }
+  ]
+}

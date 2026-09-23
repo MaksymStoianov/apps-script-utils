@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Zeichenkette ist.",
+  "description": [
+    "`nonString(value)` ist dieselbe Prüfung wie `!isString(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Geprüft wird `typeof value === \"string\"`: die leere Zeichenkette besteht, ein `String`-Objekt nicht, denn es ist ein Objekt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Zeichenkette ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonString(1); // => true\nnonString(null); // => true\nnonString([]); // => true\nnonString(\"\"); // => false\nnonString(\"abc\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "requireNonString"
+    }
+  ]
+}

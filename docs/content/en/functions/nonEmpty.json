@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** empty.",
+  "description": [
+    "`nonEmpty(value)` is the same test as `!isEmpty(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Emptiness is read per kind: `null` and `undefined`, a string with nothing but whitespace, an array, `Set` or `Map` with no entries, an object with no own keys. `0` and `false` are values, not emptiness.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not empty; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonEmpty(0); // => true\nnonEmpty(false); // => true\nnonEmpty(\"a\"); // => true\nnonEmpty([0]); // => true\nnonEmpty(null); // => false\nnonEmpty(\"\"); // => false\nnonEmpty(\"   \"); // => false\nnonEmpty([]); // => false\nnonEmpty({}); // => false\nnonEmpty(new Map()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Holt den Blattnamen aus einer A1-Notation.",
+  "description": [
+    "Die Anführungszeichen, die Sheets um Namen mit Leerzeichen oder Zeichensetzung legt, werden entfernt: `\"'My Sheet'!A1\"` ergibt `My Sheet`. Eine Notation ohne Blattnamen ergibt nichts."
+  ],
+  "params": {
+    "a1Notation": "Die zu lesende Notation."
+  },
+  "returns": "den Blattnamen, sofern die Notation einen trägt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Herauslösen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractRangeFromA1Notation"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": "Supprime le schéma stocké sur une feuille.",
+  "description": [
+    "La description stockée disparaît ; les données et la ligne d'en-tête restent exactement telles quelles. Une feuille sans schéma stocké n'est pas touchée et l'appel renvoie `false`.",
+    "`validation: true` efface en plus la validation des données sur les colonnes décrites. C'est désactivé par défaut à dessein : Apps Script ne permet pas de distinguer une règle créée par le schéma d'une règle ajoutée à la main, et l'effacement emporterait les deux."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler.",
+    "options": "`validation` efface aussi la validation des données qu'impliquait le schéma."
+  },
+  "returns": "`true` si un schéma a été supprimé.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille."
+  },
+  "examples": [
+    {
+      "title": "Supprimer un schéma"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "insertSchema"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "The internal tags a value can report, as named constants.",
+  "description": [
+    "`objectToString` returns strings like `\"[object Array]\"`; this enum gives those strings names, so a comparison reads as `ObjectTag.ARRAY` rather than as a literal that a typo can quietly break.",
+    "Several guards in the library are built on it — it is how `isRegExp` and `isFunction` recognise a value that crossed a frame boundary, where `instanceof` no longer holds."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nobjectToString([]) === ObjectTag.ARRAY; // => true\nobjectToString(null) === ObjectTag.NULL; // => true\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "objectToString"
+    },
+    {
+      "name": "isRegExp"
+    },
+    {
+      "name": "isFunction"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert ein Objekt ist.",
+  "description": [
+    "Geprüft wird `typeof value === \"object\"` ohne `null`, sodass Arrays, Daten und Klasseninstanzen zählen, eine Funktion aber nicht. Funktionen akzeptiert `isObjectLike`.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Objekt ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisObject({}); // => true\nisObject([]); // => true\nisObject(new Date()); // => true\nisObject(null); // => false\nisObject(\"abc\"); // => false\nisObject(function () {}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonObject"
+    },
+    {
+      "name": "requireObject"
+    },
+    {
+      "name": "requireNonObject"
+    }
+  ]
+}

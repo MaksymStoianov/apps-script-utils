@@ -1,0 +1,26 @@
+{
+  "summary": "Wie die Spalten eines Blattes heißen und was sie enthalten.",
+  "description": [
+    "`version` kennzeichnet das Format, damit ein späteres erkannt und nicht missverstanden wird, `headerRow` nennt die Zeile mit den Namen, und `columns` beschreibt sie von links nach rechts.",
+    "`getSchema` setzt `inferred: true`, wenn nichts hinterlegt war und die Beschreibung aus dem Inhalt des Blattes gelesen wurde — eine Vermutung, keine Festlegung."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "insertSchema"
+    },
+    {
+      "name": "SheetColumnSchema"
+    }
+  ]
+}

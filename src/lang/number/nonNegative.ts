@@ -8,6 +8,12 @@ import { isNonNegative } from "./isNonNegative";
  * non-negative number", and there is no `isNegative` being negated — so a
  * reader who knows `nonString` or `nonArray` will read this one backwards.
  *
+ * @example
+ * ```javascript
+ * nonNegative(0); // => true
+ * nonNegative(-1); // => false
+ * ```
+ *
  * @deprecated Use {@link isNonNegative} instead, which says the same thing
  * under the naming convention used across the library. This alias is kept for
  * backwards compatibility and will be removed in a future major release.

@@ -1,0 +1,26 @@
+{
+  "summary": "Renvoie combien de jours séparent une date de la fin de son mois.",
+  "description": [
+    "La date elle-même n'est pas comptée : le dernier jour du mois, la réponse est `0`. Ce sont les jours encore à venir, ce que demande d'ordinaire un quota ou une période de facturation."
+  ],
+  "params": {
+    "date": "La date à lire. Ce doit être un `Date` valide."
+  },
+  "returns": "le nombre de jours restants, `0` le dernier jour.",
+  "throws": {
+    "IllegalArgumentException": "un argument n'est pas un `Date` valide."
+  },
+  "examples": [
+    {
+      "title": "Comptage"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getDaysInMonth"
+    },
+    {
+      "name": "diff"
+    }
+  ]
+}

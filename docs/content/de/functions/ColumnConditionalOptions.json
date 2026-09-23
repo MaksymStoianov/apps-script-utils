@@ -1,0 +1,25 @@
+{
+  "summary": "Wie die Spalten gelesen werden und welche als Kandidaten gelten.",
+  "description": [
+    "`headerColumn` ist die einsbasierte Spalte mit den Zeilennamen. Wie `headerRow` versieht sie jede Spalte mit diesen Schlüsseln und nimmt die Kopfspalte selbst aus den Kandidaten."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnPredicate"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Les tags internes qu'une valeur peut déclarer, sous forme de constantes nommées.",
+  "description": [
+    "`objectToString` renvoie des chaînes comme `\"[object Array]\"` ; cet énuméré leur donne un nom, si bien qu'une comparaison se lit `ObjectTag.ARRAY` plutôt qu'un littéral qu'une faute de frappe casse en silence.",
+    "Plusieurs gardes de la bibliothèque s'appuient dessus : c'est ainsi qu'`isRegExp` et `isFunction` reconnaissent une valeur venue d'un autre frame, là où `instanceof` ne tient plus."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "objectToString"
+    },
+    {
+      "name": "isRegExp"
+    },
+    {
+      "name": "isFunction"
+    }
+  ]
+}

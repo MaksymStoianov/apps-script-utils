@@ -5,6 +5,11 @@ import { requireSheet } from "./requireSheet";
 /**
  * Decides whether a column is selected.
  *
+ * @example
+ * ```javascript
+ * const predicate = (values) => values.every((cell) => cell === "");
+ * ```
+ *
  * @param   {unknown[]} values - The column's cells, top to bottom.
  * @param   {number} position - The column's one-based position on the sheet.
  * @param   {Record<string, unknown> | null} record - The column keyed by the header column, or `null` when no header is configured.
@@ -23,6 +28,11 @@ export type ColumnPredicate = (
  *
  * The mirror of `RowConditionalOptions`: a sheet laid out in columns has its
  * names down the left rather than across the top.
+ *
+ * @example
+ * ```javascript
+ * const options = { headerColumn: 1 };
+ * ```
  *
  * @since   1.11.0
  * @version 1.0.0

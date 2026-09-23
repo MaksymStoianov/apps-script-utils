@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est une adresse e-mail.",
+  "description": [
+    "L'adresse est coupée sur un unique `@` : le domaine est vérifié comme le fait `isValidDomain`, et la partie locale doit être non vide et sans espaces. C'est un contrôle de format, pas la preuve que la boîte existe.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est une adresse e-mail ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisEmail(\"user@example.com\"); // => true\nisEmail(\"first.last@sub.example.co.uk\"); // => true\nisEmail(\"user@@example.com\"); // => false\nisEmail(\"user@\"); // => false\nisEmail(\"example.com\"); // => false\nisEmail(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidEmail"
+    },
+    {
+      "name": "requireValidEmail"
+    }
+  ]
+}

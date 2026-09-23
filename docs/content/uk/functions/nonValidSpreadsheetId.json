@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є ідентифікатором таблиці.",
+  "description": [
+    "`nonValidSpreadsheetId(value)` — та сама перевірка, що й `!isValidSpreadsheetId(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Не менше 25 символів з літер, цифр, дефісів і підкреслень — той ідентифікатор, що стоїть в URL таблиці між `/d/` та `/edit`. Жодних запитів не робиться, перевіряється лише формат.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є ідентифікатором таблиці; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonValidSpreadsheetId(\"short-id\"); // => true\nnonValidSpreadsheetId(\"has space in it and is long enough to pass\"); // => true\nnonValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSpreadsheetId"
+    },
+    {
+      "name": "requireValidSpreadsheetId"
+    }
+  ]
+}

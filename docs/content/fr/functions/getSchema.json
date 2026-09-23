@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie le schéma d'une feuille, stocké ou déduit de son contenu.",
+  "description": [
+    "Un schéma décrit les colonnes : leurs noms, leurs types et la ligne où figurent les noms. Si `insertSchema` en a stocké un sur la feuille, c'est celui-là qui revient.",
+    "Si rien n'a été stocké, la feuille est lue et un schéma est déduit de la ligne d'en-tête et des valeurs en dessous. Le résultat porte alors `inferred: true`, ce qui permet de distinguer une description déclarée d'une description devinée."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler."
+  },
+  "returns": "le schéma, ou `null` si la feuille n'a rien à décrire.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille."
+  },
+  "examples": [
+    {
+      "title": "Lire un schéma"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "insertSchema"
+    },
+    {
+      "name": "removeSchema"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

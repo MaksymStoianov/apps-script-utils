@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que une feuille, ou lève une exception.",
+  "description": [
+    "Un objet de service Apps Script n'a pas de constructeur contre lequel un script pourrait tester, alors le garde lit le tag que l'objet déclare pour lui-même : `value.toString() === \"Sheet\"`. Un objet ordinaire qui déclare le même tag passe aussi, ce qui en pratique désigne un double de test.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme une feuille.",
+  "throws": {
+    "InvalidSheetException": "la valeur n'est pas une feuille."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nrequireSheet(sheet); // => sheet\nrequireSheet({}); // throws InvalidSheetException\nrequireSheet(null); // throws InvalidSheetException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSheet"
+    },
+    {
+      "name": "nonSheet"
+    }
+  ]
+}

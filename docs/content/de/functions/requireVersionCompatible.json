@@ -1,0 +1,28 @@
+{
+  "summary": "Gibt die Version zurück, sobald sie die Anforderung erfüllt, sonst wirft sie.",
+  "description": [
+    "Die behauptende Form. Die Standardmeldung nennt beide Versionen, was eine nicht erfüllte Abhängigkeit im Ausführungsprotokoll lesbar macht."
+  ],
+  "params": {
+    "currentVersion": "Die vorliegende Version.",
+    "requiredVersion": "Das akzeptable Minimum.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung mit beiden Versionen verwendet."
+  },
+  "returns": "die vorliegende Version, unverändert.",
+  "throws": {
+    "IllegalArgumentException": "die vorliegende Version ist niedriger als gefordert."
+  },
+  "examples": [
+    {
+      "title": "Eine Abhängigkeit absichern"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "nonVersionCompatible"
+    }
+  ]
+}

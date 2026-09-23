@@ -1,0 +1,24 @@
+{
+  "summary": "Возвращает внутренний тег значения.",
+  "description": [
+    "`Object.prototype.toString.call(value)` в форме, которую можно вызывать на чём угодно, включая `null` и `undefined`. На нём построено несколько проверок библиотеки: тег переживает переход между фреймами, чего `instanceof` не умеет."
+  ],
+  "params": {
+    "value": "Значение, тег которого нужен."
+  },
+  "returns": "тег, например `\"[object Array]\"`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Чтение тега"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObject"
+    },
+    {
+      "name": "isRegExp"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Fügt Zeilen unter die bereits vorhandenen Daten eines Blattes ein.",
+  "description": [
+    "Geschrieben wird ab Spalte 1 der ersten neuen Zeile, und das Blatt wächst um genau so viele Zeilen, wie die Matrix hat. Anders als `Sheet#appendRow`, das eine Zeile auf einmal nimmt, geht der ganze Block in einem Aufruf hinaus.",
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+  ],
+  "params": {
+    "sheet": "Das Blatt, in das geschrieben wird.",
+    "values": "Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.",
+    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+  },
+  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt.",
+    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+  },
+  "examples": [
+    {
+      "title": "Schreiben"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendRow"
+    },
+    {
+      "name": "prependRows"
+    },
+    {
+      "name": "requireConsistent2DArray"
+    }
+  ]
+}

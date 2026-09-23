@@ -1,5 +1,9 @@
 # Getting started
 
+<link-summary>Requirements, installation, and a first working script.</link-summary>
+
+<web-summary>Install apps-script-utils in a Google Apps Script project — npm package, clasp setup, and a first script that reads a sheet with the library.</web-summary>
+
 ## Requirements
 
 - [Node.js](https://nodejs.org/) v22.14.0 or later

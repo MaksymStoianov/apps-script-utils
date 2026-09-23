@@ -9,6 +9,11 @@ import { isString } from "../base/isString";
  * returns the value, throwing on failure. It is therefore a `requireX`
  * function under a misleading name.
  *
+ * @example
+ * ```javascript
+ * nonEmptyString("Data", "sheetName"); // => "Data"
+ * ```
+ *
  * @deprecated Use {@link requireNonEmptyString} instead. It expresses the same
  * intent under the naming convention used across the library. This function is
  * kept as-is for backwards compatibility and will be removed in a future major

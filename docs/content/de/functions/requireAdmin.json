@@ -1,0 +1,29 @@
+{
+  "summary": "Bricht den Aufruf ab, sofern der aktuelle Nutzer kein Workspace-Administrator ist.",
+  "description": [
+    "Die behauptende Form von `isAdmin`, die an den Anfang von allem Zerstörerischen gehört. Sie gibt nichts zurück: entweder geht der Aufruf weiter oder nicht."
+  ],
+  "params": {
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet."
+  },
+  "returns": "nichts; der Aufruf besteht oder wirft.",
+  "throws": {
+    "AuthorizationException": "der aktive Nutzer ist kein Administrator."
+  },
+  "examples": [
+    {
+      "title": "Eine Aktion absichern"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAdmin"
+    },
+    {
+      "name": "nonAdmin"
+    },
+    {
+      "name": "AuthorizationException"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+# Gestion des exceptions
+
+<link-summary>La hiérarchie des exceptions, quand chaque classe est levée et comment les intercepter.</link-summary>
+
+<web-summary>Exceptions typées d'apps-script-utils : la hiérarchie sous Exception, quelle garde lève quelle classe, et comment les intercepter dans un projet Google Apps Script.</web-summary>
+
+Toute erreur que lève cette bibliothèque est une instance de la classe `Exception` ou de l'une de ses dérivées. Un
+seul `catch` suffit donc à distinguer les échecs de la bibliothèque de tout ce que lève l'environnement.
+
+## La hiérarchie
+
+```text
+Error
+└── Exception
+    └── RuntimeException
+        ├── EmptyStringException
+        ├── IllegalArgumentException
+        ├── InvalidEmailFormatException
+        ├── InvalidStringException
+        ├── NullPointerException
+        ├── RepositoryIsNotDefinedException
+        ├── ServiceIsNotDefinedException
+        ├── AuthenticationException
+        ├── AdminDirectoryException
+        ├── InvalidGridRangeException
+        ├── InvalidRangeException
+        ├── InvalidSheetException
+        ├── InvalidSpreadsheetException
+        ├── InvalidPresentationException
+        └── SlideNotFoundException
+```
+
+Deux niveaux portent du sens. `Exception` est la racine et marque une erreur comme venant de cette bibliothèque.
+`RuntimeException` la marque comme survenue pendant l'exécution, et chaque classe concrète en dérive : intercepter
+`RuntimeException` attrape donc tout ce que la bibliothèque lève aujourd'hui.
+
+## Intercepter
+
+`Exception` expose une garde de type statique, la vérification recommandée puisqu'elle restreint aussi le type :
+
+```typescript
+import { Exception, requireString } from "apps-script-utils";
+
+try {
+  requireString(input);
+} catch (error) {
+  if (Exception.isException(error)) {
+    Logger.log(`${error.name}: ${error.getMessage()}`);
+  } else {
+    throw error;
+  }
+}
+```
+
+`instanceof` fonctionne également, et c'est la façon d'attraper un échec précis :
+
+```typescript
+import { NullPointerException, requireNonNull } from "apps-script-utils";
+
+try {
+  const sheet = requireNonNull(spreadsheet.getSheetByName("Data"));
+} catch (error) {
+  if (error instanceof NullPointerException) {
+    Logger.log("Sheet 'Data' does not exist.");
+  }
+}
+```
+
+Chaque sous-classe fixe `name` dans son propre constructeur : `error.name` rapporte donc la classe concrète —
+`"NullPointerException"`, pas `"Exception"`.
+
+## Construire
+
+Chaque exception accepte un message facultatif : une chaîne, une `Error` existante dont le message est repris, ou
+toute autre valeur, qui est ignorée.
+
+```typescript
+throw new IllegalArgumentException("size must be a positive integer");
+throw new IllegalArgumentException(caughtError); // reprend caughtError.message
+throw new IllegalArgumentException(); // sans message
+```
+
+`Exception.create()` est la fabrique équivalente, pour les cas où une expression `new` ne convient pas.
+
+Ce sont des objets `Error` ordinaires en dessous : `getMessage()`, `toString()` et
+`Object.prototype.toString.call()` se comportent comme prévu.
+
+```typescript
+const error = new EmptyStringException("name is required");
+
+error.getMessage(); // "name is required"
+error.toString(); // "name is required"
+Object.prototype.toString.call(error); // "[object EmptyStringException]"
+```
+
+## Qui lève quoi
+
+| Exception                         | Levée par                                                                                                                                                                     |
+| :-------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `IllegalArgumentException`        | les gardes `requireX` pour tableaux, booléens, nombres dénombrables, fonctions, entiers, nombres, objets, scalaires et symboles, ainsi que la plupart des aides A1 et feuille |
+| `InvalidStringException`          | `requireString` et la fonction dépréciée `nonEmptyString`                                                                                                                     |
+| `EmptyStringException`            | `requireNonEmptyString`, `escapeRegExp`                                                                                                                                       |
+| `NullPointerException`            | `requireNonNull`                                                                                                                                                              |
+| `InvalidEmailFormatException`     | `requireValidEmail`                                                                                                                                                           |
+| `RepositoryIsNotDefinedException` | `requireRepository`                                                                                                                                                           |
+| `ServiceIsNotDefinedException`    | `requireService`                                                                                                                                                              |
+| `AuthenticationException`         | `requireValidToken`                                                                                                                                                           |
+| `AdminDirectoryException`         | construite dans `isAdmin` lorsque le service Admin SDK Directory n'est pas activé, et journalisée là plutôt que propagée                                                      |
+| `InvalidSheetException`           | `requireSheet`                                                                                                                                                                |
+| `InvalidSpreadsheetException`     | `requireSpreadsheet`                                                                                                                                                          |
+| `InvalidRangeException`           | `requireRange`                                                                                                                                                                |
+| `InvalidGridRangeException`       | `toA1Notation` et les aides de comparaison de `GridRange`                                                                                                                     |
+| `SlideNotFoundException`          | `requireSlide`                                                                                                                                                                |
+
+[](reference-exception.md) liste chaque classe avec un lien vers son code source.
+
+## Choisir le mode d'échec
+
+Les prédicats ne lèvent jamais ; les assertions lèvent toujours. Le choix dépend de si l'entrée fautive est
+attendue :
+
+```typescript
+// Attendu : un champ de formulaire peut légitimement être vide.
+if (nonEmpty(response)) {
+  process(response);
+}
+
+// Inattendu : une feuille absente est une configuration cassée, pas un cas à traiter.
+const sheet = requireNonNull(spreadsheet.getSheetByName("Data"), "sheet 'Data' is missing");
+```
+
+L'argument facultatif `message` vaut les quelques frappes : c'est le seul contexte dont disposera le lecteur d'un
+journal d'exécution.

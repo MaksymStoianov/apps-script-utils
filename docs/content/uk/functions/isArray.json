@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення масивом.",
+  "description": [
+    "Перевірка цілком зводиться до `Array.isArray`, тому масив з іншого фрейму підходить, а схожий на масив об'єкт — `arguments`, `NodeList`, `{ length: 0 }` — ні.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є масивом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisArray([]); // => true\nisArray([1, 2, 3]); // => true\nisArray(\"abc\"); // => false\nisArray({ length: 0 }); // => false\nisArray(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

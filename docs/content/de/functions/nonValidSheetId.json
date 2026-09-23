@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Blatt-Id ist.",
+  "description": [
+    "`nonValidSheetId(value)` ist dieselbe Prüfung wie `!isValidSheetId(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Apps Script nummeriert Blätter ab null, eine Blatt-Id ist also eine nicht negative sichere Ganzzahl — dieselbe Regel wie bei `isCountable`. Das erste Blatt einer Tabelle hat die Id `0`.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Blatt-Id ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonValidSheetId(-1); // => true\nnonValidSheetId(1.5); // => true\nnonValidSheetId(\"0\"); // => true\nnonValidSheetId(0); // => false\nnonValidSheetId(1234567890); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "requireValidSheetId"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "summary": "One row, as `getValues` hands it to a filter or a mapper.",
+  "description": [
+    "`values` is the cells left to right, `position` the one-based row on the sheet — the number a person sees in the margin — and the row keyed by column names when a header row was named.",
+    "Having the position in hand is what lets a filter report or act on a specific row afterwards."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\n// What a filter receives when `headerRow` is set.\nconst row = {\n  values: [\"7\", \"ada@example.com\"],\n  position: 2,\n  record: { id: \"7\", email: \"ada@example.com\" }\n};\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getValues"
+    },
+    {
+      "name": "RowPredicate"
+    }
+  ]
+}

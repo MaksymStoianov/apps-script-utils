@@ -1,0 +1,25 @@
+{
+  "summary": "Un argument est d'un type inadapté ou hors de l'intervalle accepté.",
+  "description": [
+    "Un argument est d'un type inadapté ou hors de l'intervalle accepté. C'est ce que lèvent la plupart des gardes `requireX`.",
+    "Levée par [`requireArray`](requireArray.md), [`requireInteger`](requireInteger.md), [`requireNonEmpty`](requireNonEmpty.md).",
+    "Toute classe de cette hiérarchie accepte un message facultatif, une autre exception dont le message est repris, ou rien du tout. `isException` les reconnaît toutes ; un `Error` ordinaire n'en fait pas partie."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lever et intercepter",
+      "body": "```javascript\nthrow new IllegalArgumentException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof IllegalArgumentException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

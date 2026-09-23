@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Abstand zweier Daten in einer gewählten Einheit zurück.",
+  "description": [
+    "Das Ergebnis ist das erste Datum minus das zweite, also negativ, wenn das zweite später liegt. Standardmäßig werden ganze Einheiten gemeldet; mit `float` kommt der Bruchteil hinzu.",
+    "Millisekunden, Sekunden, Minuten und Stunden haben feste Längen und werden exakt geteilt. Tage, Monate und Jahre zählen als ganze vergangene Einheiten — zwei Stunden über Mitternacht ergeben deshalb `0` Tage und nicht `1`."
+  ],
+  "params": {
+    "left": "Das Datum, von dem aus gemessen wird.",
+    "right": "Das Datum, das davon abgezogen wird.",
+    "unit": "`\"millisecond\"`, `\"second\"`, `\"minute\"`, `\"hour\"`, `\"day\"`, `\"month\"` oder `\"year\"`.",
+    "float": "Den Bruchteil behalten statt abzuschneiden. Nur bei Einheiten fester Länge."
+  },
+  "returns": "den Abstand, negativ wenn das zweite Datum später liegt.",
+  "throws": {
+    "IllegalArgumentException": "ein Argument ist kein gültiges `Date` oder die Einheit ist unbekannt."
+  },
+  "examples": [
+    {
+      "title": "Einen Abstand messen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "offset"
+    },
+    {
+      "name": "getDaysInMonth"
+    }
+  ]
+}

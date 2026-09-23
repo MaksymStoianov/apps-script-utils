@@ -3,6 +3,15 @@ import { isEmpty, isNil, isNumber, isString } from "../base";
 /**
  * Converts a value to an integer if possible.
  *
+ * @example
+ * ```javascript
+ * toInteger(" 42 "); // => 42
+ * toInteger("12abc"); // => 12
+ * toInteger("abc"); // => null
+ * toInteger(null); // => null
+ * toInteger(1.9); // => 1.9
+ * ```
+ *
  * @param   {unknown} value - The value to convert. Can be a `number`, `string`, `null`, `undefined`, or other types.
  * @returns {number | null} The parsed or original integer, or `null` if the value cannot be converted.
  * @since   1.0.0

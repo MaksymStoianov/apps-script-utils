@@ -1,0 +1,35 @@
+{
+  "summary": "Prüft, ob ein Wert **kein** nicht-leeres zweidimensionales Array ist.",
+  "description": [
+    "`non2DArray(value)` ist dieselbe Prüfung wie `!is2DArray(value)`. Das Präfix gibt es, damit eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung — siehe [](validation-conventions.md).",
+    "Ein leeres Array gilt als „nicht zweidimensional“, weil [`is2DArray`](is2DArray.md) mindestens eine Zeile verlangt.",
+    "Ein Vorbehalt zu den Typen: der Wächter ist als Typprädikat deklariert, verengt aber nur dann nützlich, wenn der Typ des Werts `unknown[][]` bereits als Fall enthält. In dem Zweig, in dem der Wert doch eine Matrix ist, bleibt TypeScript bei `never` statt bei einem Matrixtyp; greifen Sie dort zu [`is2DArray`](is2DArray.md) oder [`require2DArray`](require2DArray.md). Als schlichte Ja-Nein-Antwort ist `non2DArray` immer exakt."
+  ],
+  "params": {
+    "arr": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert kein nicht-leeres Array aus Arrays ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was als nicht zweidimensional gilt"
+    },
+    {
+      "title": "Melden, warum ein Wert abgelehnt wurde"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "die positive Form."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "lehnt zusätzlich eine ungleichmäßige Matrix ab."
+    },
+    {
+      "name": "require2DArray",
+      "note": "wirft eine Ausnahme statt zu antworten."
+    }
+  ]
+}

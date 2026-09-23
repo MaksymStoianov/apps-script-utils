@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** an array.",
+  "description": [
+    "`nonArray(value)` is the same test as `!isArray(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "`Array.isArray` is the whole test, so an array from another frame counts and an array-like object — `arguments`, a `NodeList`, `{ length: 0 }` — does not.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not an array; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonArray(\"abc\"); // => true\nnonArray({ length: 0 }); // => true\nnonArray(null); // => true\nnonArray([]); // => false\nnonArray([1, 2, 3]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isArray"
+    },
+    {
+      "name": "requireArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine ganze Zahl ist.",
+  "description": [
+    "Eine Zahl ohne Nachkommateil. Es wird nichts umgewandelt: die Zeichenkette `\"42\"` ist keine ganze Zahl, `NaN` ebenso wenig.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine ganze Zahl ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisInteger(42); // => true\nisInteger(-7); // => true\nisInteger(0); // => true\nisInteger(1.5); // => false\nisInteger(NaN); // => false\nisInteger(\"42\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonInteger"
+    },
+    {
+      "name": "requireInteger"
+    },
+    {
+      "name": "requireNonInteger"
+    }
+  ]
+}

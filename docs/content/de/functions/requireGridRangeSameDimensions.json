@@ -1,0 +1,28 @@
+{
+  "summary": "Gibt den Bereich zurück, sobald beide nachweislich gleich groß sind, sonst wirft er.",
+  "description": [
+    "Die behauptende Form von `isGridRangeSameDimensions`. Die Standardmeldung nennt beide Größen, eine unpassende Kopie sagt also, um wie viel sie danebenlag."
+  ],
+  "params": {
+    "range1": "Der erste Bereich.",
+    "range2": "Der zweite Bereich.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung mit beiden Größen verwendet."
+  },
+  "returns": "den ersten Bereich, unverändert.",
+  "throws": {
+    "InvalidGridRangeException": "die beiden Bereiche sind nicht gleich groß."
+  },
+  "examples": [
+    {
+      "title": "Eine Kopie absichern"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeSameDimensions"
+    },
+    {
+      "name": "nonGridRangeSameDimensions"
+    }
+  ]
+}

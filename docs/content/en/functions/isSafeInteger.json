@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is a safe integer.",
+  "description": [
+    "An integer that an IEEE-754 double represents exactly. Beyond that range distinct mathematical integers collapse onto the same value and arithmetic quietly stops being exact.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a safe integer; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisSafeInteger(42); // => true\nisSafeInteger(Number.MAX_SAFE_INTEGER); // => true\nisSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => false\nisSafeInteger(1.5); // => false\nisSafeInteger(\"42\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

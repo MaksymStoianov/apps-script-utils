@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение как безопасное целое число или выбрасывает исключение.",
+  "description": [
+    "Целое число, которое точно представимо в IEEE-754. За пределами этого диапазона разные математические целые схлопываются в одно значение, и арифметика незаметно перестаёт быть точной.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как безопасное целое число.",
+  "throws": {
+    "IllegalArgumentException": "значение не является безопасным целым числом."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireSafeInteger(42); // => 42\nrequireSafeInteger(Number.MAX_SAFE_INTEGER); // => Number.MAX_SAFE_INTEGER\nrequireSafeInteger(Number.MAX_SAFE_INTEGER + 2); // throws IllegalArgumentException\nrequireSafeInteger(1.5); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "nonSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

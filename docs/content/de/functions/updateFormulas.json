@@ -1,0 +1,28 @@
+{
+  "summary": "Schreibt die Formeln eines Blattes um.",
+  "description": [
+    "Übergeben Sie eine Zuordnung, um Blattnamen pauschal zu ersetzen — der übliche Bedarf nach einer Umbenennung oder Kopie — oder eine Funktion, um jede Formel einzeln zu entscheiden. Die Funktion bekommt die Formel und gibt die zurückzuschreibende zurück.",
+    "Besucht werden nur Zellen mit Formeln, geschrieben nur die tatsächlich geänderten; ein Aufruf ohne Änderung kostet also einen Lesevorgang und sonst nichts."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird.",
+    "rewrite": "Eine Zuordnung von altem zu neuem Blattnamen oder eine Funktion, die eine Formel nimmt und ihren Ersatz zurückgibt."
+  },
+  "returns": "wie viele Formeln umgeschrieben wurden.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt."
+  },
+  "examples": [
+    {
+      "title": "Formeln umschreiben"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

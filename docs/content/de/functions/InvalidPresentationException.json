@@ -1,0 +1,25 @@
+{
+  "summary": "Eine Präsentation war erwartet, der Wert ist keine.",
+  "description": [
+    "Eine Präsentation war erwartet, der Wert ist keine.",
+    "Wird geworfen von [`requirePresentation`](requirePresentation.md).",
+    "Jede Klasse dieser Hierarchie nimmt eine optionale Meldung, eine andere Ausnahme, deren Meldung übernommen wird, oder gar nichts. `isException` erkennt sie alle; ein einfacher `Error` gehört nicht dazu."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Werfen und fangen",
+      "body": "```javascript\nthrow new InvalidPresentationException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof InvalidPresentationException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

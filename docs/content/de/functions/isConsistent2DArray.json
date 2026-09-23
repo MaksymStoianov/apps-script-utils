@@ -1,0 +1,33 @@
+{
+  "summary": "Prüft, ob ein Wert eine nicht-leere Matrix ist, deren Zeilen alle gleich lang sind.",
+  "description": [
+    "Das ist die Prüfung vor `Range#setValues`, das eine ungleichmäßige Matrix mit einer Meldung ablehnt, die weder die betroffene Zeile noch den Grund nennt. Alles, was [`is2DArray`](is2DArray.md) verlangt, gilt auch hier — ein nicht-leeres Array aus Arrays — zuzüglich der Regel, dass jede Zeile so breit ist wie die erste."
+  ],
+  "params": {
+    "arr": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein nicht-leeres Array aus gleich langen Arrays ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Gleichmäßige Zeilen, ungleiche Zeilen und Nicht-Matrizen"
+    },
+    {
+      "title": "Vor dem Schreiben in einen Bereich"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "die Formprüfung ohne die Regel zur Zeilenlänge."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "dieselbe Prüfung, verneint."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "wirft und benennt die betroffene Zeile."
+    }
+  ]
+}

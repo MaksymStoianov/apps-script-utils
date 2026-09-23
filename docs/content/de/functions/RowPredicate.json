@@ -1,0 +1,25 @@
+{
+  "summary": "Entscheidet, ob eine Zeile eine ist, auf die gewirkt wird.",
+  "description": [
+    "Sie bekommt die Zellen der Zeile, ihre einsbasierte Position und — wenn eine Kopfzeile benannt wurde — die Zeile mit den Spaltennamen als Schlüsseln, sonst `null`. `true` wählt die Zeile aus."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowConditionalOptions"
+    }
+  ]
+}

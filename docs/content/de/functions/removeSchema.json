@@ -1,0 +1,28 @@
+{
+  "summary": "Entfernt das auf einem Blatt hinterlegte Schema.",
+  "description": [
+    "Die hinterlegte Beschreibung verschwindet; Daten und Kopfzeile bleiben genau so, wie sie sind. Ein Blatt ohne gespeichertes Schema bleibt unangetastet und der Aufruf meldet `false`.",
+    "`validation: true` löscht zusätzlich die Datenprüfung der beschriebenen Spalten. Sie ist absichtlich standardmäßig aus: Apps Script bietet keine Möglichkeit, eine vom Schema angelegte Regel von einer handgemachten zu unterscheiden, also trifft das Löschen beide."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird.",
+    "options": "`validation` löscht zusätzlich die vom Schema implizierte Datenprüfung."
+  },
+  "returns": "`true`, wenn ein Schema entfernt wurde.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt."
+  },
+  "examples": [
+    {
+      "title": "Ein Schema entfernen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "insertSchema"
+    }
+  ]
+}

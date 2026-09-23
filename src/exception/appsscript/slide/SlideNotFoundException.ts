@@ -3,6 +3,19 @@ import { RuntimeException } from "../../RuntimeException";
 /**
  * Represents an exception thrown when a {@link GoogleAppsScript.Slides.Slide|Slide} object is not found.
  *
+ * @example
+ * ```javascript
+ * throw new SlideNotFoundException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof SlideNotFoundException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}

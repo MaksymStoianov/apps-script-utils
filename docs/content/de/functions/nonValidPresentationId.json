@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Präsentations-Id ist.",
+  "description": [
+    "`nonValidPresentationId(value)` ist dieselbe Prüfung wie `!isValidPresentationId(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Mindestens 25 Zeichen aus Buchstaben, Ziffern, Bindestrichen und Unterstrichen — die Id aus einer Slides-URL. Geprüft wird nur das Format.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Präsentations-Id ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonValidPresentationId(\"short-id\"); // => true\nnonValidPresentationId(\"has space in it and is long enough to pass\"); // => true\nnonValidPresentationId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidPresentationId"
+    },
+    {
+      "name": "requireValidPresentationId"
+    }
+  ]
+}

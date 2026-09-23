@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est un scalaire.",
+  "description": [
+    "Une primitive porteuse d'une seule valeur : chaîne, nombre, booléen, symbole ou bigint. `null` et `undefined` sont primitifs aussi, mais ne portent aucune valeur et ne comptent pas.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un scalaire ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisScalar(\"abc\"); // => true\nisScalar(1); // => true\nisScalar(true); // => true\nisScalar(10n); // => true\nisScalar({}); // => false\nisScalar([]); // => false\nisScalar(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

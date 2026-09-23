@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення доменним іменем.",
+  "description": [
+    "Мітки, розділені одиночними крапками, без крапки чи дефіса на початку й у кінці та без порожніх міток. Це перевірка синтаксису: чи резолвиться домен — окреме питання.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є доменним іменем; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisValidDomain(\"example.com\"); // => true\nisValidDomain(\"sub.example.co.uk\"); // => true\nisValidDomain(\"-example.com\"); // => false\nisValidDomain(\"example..com\"); // => false\nisValidDomain(\"example.com.\"); // => false\nisValidDomain(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

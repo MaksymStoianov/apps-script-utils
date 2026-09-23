@@ -1,0 +1,31 @@
+{
+  "summary": "Inserts columns to the left of the data already on a sheet.",
+  "description": [
+    "Room is made before the first column of the data area and the matrix is written into it, one array per column, so nothing already on the sheet is overwritten.",
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+  ],
+  "params": {
+    "sheet": "The sheet to write into.",
+    "values": "A matrix of rows: one array per row, all of the same length.",
+    "options": "`afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top."
+  },
+  "returns": "the same sheet, so calls can be chained.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet.",
+    "TypeError": "the values are not a matrix with rows of equal length."
+  },
+  "examples": [
+    {
+      "title": "Writing",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumns(sheet, [[\"#\", \"1\", \"2\"]]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependColumn"
+    },
+    {
+      "name": "appendColumns"
+    }
+  ]
+}

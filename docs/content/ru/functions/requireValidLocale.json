@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как код локали или выбрасывает исключение.",
+  "description": [
+    "Ровно две латинские буквы в любом регистре — `\"en\"`, `\"UK\"`. Код региона или письменности, как в `\"en-US\"`, не проходит: это короткий код языка, а не полный тег BCP 47.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как код локали.",
+  "throws": {
+    "IllegalArgumentException": "значение не является кодом локали."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireValidLocale(\"en\"); // => \"en\"\nrequireValidLocale(\"UK\"); // => \"UK\"\nrequireValidLocale(\"en-US\"); // throws IllegalArgumentException\nrequireValidLocale(\"eng\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidLocale"
+    },
+    {
+      "name": "nonValidLocale"
+    }
+  ]
+}

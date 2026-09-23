@@ -1,0 +1,29 @@
+{
+  "summary": "Verschiebt ein Datum um eine Anzahl einer Einheit.",
+  "description": [
+    "Zurück kommt ein neues `Date`; das übergebene bleibt unberührt. Ein negativer Betrag verschiebt rückwärts.",
+    "Ein Monat weiter behält den Monatstag, wo es ihn gibt, und zieht ihn sonst ans Monatsende: der 31. Januar plus ein Monat ist der 28. Februar, nicht der 3. März."
+  ],
+  "params": {
+    "date": "Das zu lesende Datum. Es muss ein gültiges `Date` sein.",
+    "amount": "Um wie viele Einheiten verschoben wird. Negativ heißt rückwärts.",
+    "unit": "Von `\"millisecond\"` bis `\"year\"`, wie bei `diff`."
+  },
+  "returns": "ein neues, verschobenes Datum.",
+  "throws": {
+    "IllegalArgumentException": "ein Argument ist kein gültiges `Date`."
+  },
+  "examples": [
+    {
+      "title": "Ein Datum verschieben"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "getDaysInMonth"
+    }
+  ]
+}

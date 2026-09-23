@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert eine E-Mail-Adresse ist.",
+  "description": [
+    "Die Adresse wird an genau einem `@` geteilt: die Domain wird geprüft wie von `isValidDomain`, der lokale Teil muss nicht leer und frei von Leerzeichen sein. Eine Formatprüfung, kein Beleg dafür, dass das Postfach existiert.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine E-Mail-Adresse ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisEmail(\"user@example.com\"); // => true\nisEmail(\"first.last@sub.example.co.uk\"); // => true\nisEmail(\"user@@example.com\"); // => false\nisEmail(\"user@\"); // => false\nisEmail(\"example.com\"); // => false\nisEmail(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidEmail"
+    },
+    {
+      "name": "requireValidEmail"
+    }
+  ]
+}

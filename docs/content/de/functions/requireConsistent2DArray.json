@@ -1,0 +1,40 @@
+{
+  "summary": "Gibt den Wert als Matrix mit gleich langen Zeilen zurück oder wirft und benennt die Zeile.",
+  "description": [
+    "Die strenge Entsprechung zu [`require2DArray`](require2DArray.md): der Wert muss ein nicht-leeres Array aus Arrays sein **und** jede Zeile muss so breit sein wie die erste.",
+    "Weichen die Zeilen ab, nennt die Standardmeldung die betroffene Zeile und beide Breiten — was man braucht, um den Aufruf zu reparieren, und genau das, was `Range#setValues` verschweigt. Eine eigene `message` ersetzt die Standardmeldung in beiden Fehlerfällen."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet, die die Abweichung beschreibt."
+  },
+  "returns": "denselben Wert, typisiert als zweidimensionales Array.",
+  "throws": {
+    "IllegalArgumentException": [
+      "der Wert ist kein nicht-leeres Array aus Arrays.",
+      "die Zeilen sind nicht alle gleich lang."
+    ]
+  },
+  "examples": [
+    {
+      "title": "Eine Matrix, die sicher zu schreiben ist"
+    },
+    {
+      "title": "Die Meldung nennt die betroffene Zeile"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "dieselbe Prüfung als Prädikat."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "das verneinte Prädikat."
+    },
+    {
+      "name": "require2DArray",
+      "note": "lässt ungleiche Zeilen zu."
+    }
+  ]
+}

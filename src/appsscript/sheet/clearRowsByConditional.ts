@@ -5,6 +5,11 @@ import { requireSheet } from "./requireSheet";
 /**
  * Decides whether a row is selected.
  *
+ * @example
+ * ```javascript
+ * const predicate = (values, position, record) => record?.status === "done";
+ * ```
+ *
  * @param   {unknown[]} values - The row's cells, left to right.
  * @param   {number} position - The row's one-based position on the sheet.
  * @param   {Record<string, unknown> | null} record - The row keyed by the header row, or `null` when no header is configured.
@@ -20,6 +25,11 @@ export type RowPredicate = (
 
 /**
  * How the rows are read and which of them are candidates.
+ *
+ * @example
+ * ```javascript
+ * const options = { headerRow: 1 };
+ * ```
  *
  * @since   1.11.0
  * @version 1.0.0

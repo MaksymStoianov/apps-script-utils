@@ -1,0 +1,24 @@
+{
+  "summary": "Основание иерархии, наследник Error.",
+  "description": [
+    "Основание иерархии, наследник `Error`. Ловите его, чтобы поймать всё, что бросает библиотека, и ничего сверх того.",
+    "Любой класс этой иерархии принимает необязательное сообщение, другое исключение, чьё сообщение будет переиспользовано, или вообще ничего. `isException` распознаёт их все; обычный `Error` к ним не относится."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Бросить и поймать",
+      "body": "```javascript\nthrow new Exception(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof Exception) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

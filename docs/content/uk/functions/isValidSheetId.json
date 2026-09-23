@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення ідентифікатором аркуша.",
+  "description": [
+    "Apps Script нумерує аркуші з нуля, тому ідентифікатор аркуша — невід'ємне безпечне ціле, те саме правило, що в `isCountable`. У першого аркуша таблиці ідентифікатор `0`.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є ідентифікатором аркуша; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisValidSheetId(0); // => true\nisValidSheetId(1234567890); // => true\nisValidSheetId(-1); // => false\nisValidSheetId(1.5); // => false\nisValidSheetId(\"0\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSheetId"
+    },
+    {
+      "name": "requireValidSheetId"
+    }
+  ]
+}

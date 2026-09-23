@@ -1,0 +1,25 @@
+{
+  "summary": "Перевіряє, що версія нижча за потрібну.",
+  "description": [
+    "Заперечення `isVersionCompatible` — для охоронної умови, яка зупиняється раніше, якщо середовище застаре."
+  ],
+  "params": {
+    "currentVersion": "Наявна версія.",
+    "requiredVersion": "Мінімально прийнятна версія."
+  },
+  "returns": "`true`, якщо наявна версія нижча за потрібну.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ранній вихід"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "requireVersionCompatible"
+    }
+  ]
+}

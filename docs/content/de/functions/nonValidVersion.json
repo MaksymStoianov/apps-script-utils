@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Versionsangabe ist.",
+  "description": [
+    "`nonValidVersion(value)` ist dieselbe Prüfung wie `!isValidVersion(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Durch Punkte getrennte Zifferngruppen, beliebig viele. Ein Vorabversions-Suffix, ein führendes `v` und eine leere Gruppe werden abgelehnt: `\"1.2.3-beta\"` besteht also nicht, obwohl SemVer es erlaubt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Versionsangabe ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonValidVersion(\"1.2.3-beta\"); // => true\nnonValidVersion(\"v1.2\"); // => true\nnonValidVersion(\"1..2\"); // => true\nnonValidVersion(\"1\"); // => false\nnonValidVersion(\"1.2.3\"); // => false\nnonValidVersion(\"2026.01.15\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidVersion"
+    },
+    {
+      "name": "requireValidVersion"
+    }
+  ]
+}

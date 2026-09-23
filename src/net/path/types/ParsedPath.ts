@@ -1,4 +1,18 @@
 /**
+ * The parts a path breaks into, as {@link parse} reports them.
+ *
+ * Every part is optional: a path that has no directory, no extension or no root
+ * simply comes back without that key rather than with an empty string.
+ *
+ * @example
+ * ```javascript
+ * parse("/a/b/c.txt");
+ * // => { root: "/", dir: "/a/b", base: "c.txt", name: "c", ext: ".txt" }
+ *
+ * parse("readme.md");
+ * // => { base: "readme.md", name: "readme", ext: ".md" }
+ * ```
+ *
  * @since   0.1.0
  * @version 0.1.0
  */

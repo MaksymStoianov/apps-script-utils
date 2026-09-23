@@ -1,0 +1,30 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** vide.",
+  "description": [
+    "`nonEmpty(value)` est le même test que `!isEmpty(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "La vacuité se lit selon le type : `null` et `undefined`, une chaîne faite d'espaces, un tableau, `Set` ou `Map` sans entrée, un objet sans clé propre. `0` et `false` sont des valeurs, pas du vide.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas vide ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonEmpty(0); // => true\nnonEmpty(false); // => true\nnonEmpty(\"a\"); // => true\nnonEmpty([0]); // => true\nnonEmpty(null); // => false\nnonEmpty(\"\"); // => false\nnonEmpty(\"   \"); // => false\nnonEmpty([]); // => false\nnonEmpty({}); // => false\nnonEmpty(new Map()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

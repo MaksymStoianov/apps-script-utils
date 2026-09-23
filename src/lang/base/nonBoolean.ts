@@ -3,6 +3,15 @@ import { isBoolean } from "./isBoolean";
 /**
  * Checks if the provided value is NOT `boolean`.
  *
+ * @example
+ * ```javascript
+ * nonBoolean("true"); // => true
+ * nonBoolean(1); // => true
+ * nonBoolean(null); // => true
+ * nonBoolean(true); // => false
+ * nonBoolean(false); // => false
+ * ```
+ *
  * @template T
  * @param   {T | boolean} value - The value to check.
  * @returns {boolean} `true` if the value is not `boolean`; otherwise, `false`.

@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is object-like.",
+  "description": [
+    "Everything `isObject` accepts, plus functions: the question it answers is whether properties can be read off the value at all.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is object-like; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisObjectLike({}); // => true\nisObjectLike([]); // => true\nisObjectLike(function () {}); // => true\nisObjectLike(null); // => false\nisObjectLike(\"abc\"); // => false\nisObjectLike(1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonObjectLike"
+    },
+    {
+      "name": "requireObjectLike"
+    },
+    {
+      "name": "requireNonObjectLike"
+    }
+  ]
+}

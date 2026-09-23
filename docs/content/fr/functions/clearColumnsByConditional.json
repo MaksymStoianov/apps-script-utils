@@ -1,0 +1,30 @@
+{
+  "summary": "Vide les colonnes que le prédicat sélectionne, sans supprimer les colonnes.",
+  "description": [
+    "`clearRowsByConditional` pivoté d'un quart de tour : le contenu part, les colonnes restent, et les lettres des colonnes suivantes ne changent pas.",
+    "La feuille est lue une fois et l'effacement regroupé en blocs consécutifs."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler.",
+    "predicate": "Reçoit les cellules de la colonne, sa position à base un et — si `headerColumn` est défini — la colonne indexée par les noms de lignes. Renvoyez `true` pour les colonnes à traiter.",
+    "options": "`headerColumn` désigne la colonne portant les noms de lignes et l'exclut des candidates."
+  },
+  "returns": "combien ont été traitées.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille.",
+    "IllegalArgumentException": "le prédicat n'est pas une fonction, ou la position d'en-tête n'est pas un entier positif."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "clearRowsByConditional"
+    }
+  ]
+}

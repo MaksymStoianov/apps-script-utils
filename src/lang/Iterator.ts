@@ -1,6 +1,13 @@
 /**
  * Interface for navigating through a collection, where backward navigation is optional.
  *
+ * @example
+ * ```javascript
+ * while (iterator.hasNext()) {
+ *   const value = iterator.next();
+ * }
+ * ```
+ *
  * @interface
  * @template  T - type of elements in the collection.
  * @since     1.0.0

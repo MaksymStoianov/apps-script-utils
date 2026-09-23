@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як ідентифікатор таблиці або викидає виняток.",
+  "description": [
+    "Не менше 25 символів з літер, цифр, дефісів і підкреслень — той ідентифікатор, що стоїть в URL таблиці між `/d/` та `/edit`. Жодних запитів не робиться, перевіряється лише формат.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як ідентифікатор таблиці.",
+  "throws": {
+    "IllegalArgumentException": "значення не є ідентифікатором таблиці."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => \"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"\nrequireValidSpreadsheetId(\"short-id\"); // throws IllegalArgumentException\nrequireValidSpreadsheetId(\"has space in it and is long enough to pass\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSpreadsheetId"
+    },
+    {
+      "name": "nonValidSpreadsheetId"
+    }
+  ]
+}

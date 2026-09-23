@@ -1,0 +1,27 @@
+{
+  "summary": "Checks whether a value is **not** an absolute path.",
+  "description": [
+    "`nonAbsolute(value)` is the same test as `!isAbsolute(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "A path that starts at a root: a leading `/`, or a scheme such as `https://` or `mailto:`. Everything else, the empty string included, is relative.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not an absolute path; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonAbsolute(\"docs/readme.md\"); // => true\nnonAbsolute(\"./a\"); // => true\nnonAbsolute(\"\"); // => true\nnonAbsolute(\"/var/log\"); // => false\nnonAbsolute(\"https://example.com/a\"); // => false\nnonAbsolute(\"mailto:a@example.com\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAbsolute"
+    },
+    {
+      "name": "requireAbsolute"
+    }
+  ]
+}

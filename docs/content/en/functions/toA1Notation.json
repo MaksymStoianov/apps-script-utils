@@ -1,0 +1,26 @@
+{
+  "summary": "Writes a grid range as A1 notation.",
+  "description": [
+    "The bounds are read the way the Sheets API means them: the start indices are inclusive, the end indices are not. A range one row and one column wide is written as a single cell, `\"A1\"`, rather than `\"A1:A1\"`.",
+    "An index left out means the range is open in that direction, which comes back as A1 notation without that bound — a whole column or a whole row."
+  ],
+  "params": {
+    "range": "The grid range to write."
+  },
+  "returns": "the A1 notation.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Writing A1 notation",
+      "body": "```javascript\ntoA1Notation({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 }); // => \"A1:B2\"\ntoA1Notation({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => \"A1\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notation"
+    },
+    {
+      "name": "getColumnLetterByIndex"
+    }
+  ]
+}

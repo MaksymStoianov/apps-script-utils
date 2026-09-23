@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine sichere ganze Zahl ist.",
+  "description": [
+    "Eine ganze Zahl, die ein IEEE-754-Double exakt darstellt. Jenseits dieses Bereichs fallen verschiedene mathematische Ganzzahlen auf denselben Wert und das Rechnen ist still nicht mehr exakt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht eine sichere ganze Zahl ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist eine sichere ganze Zahl."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => Number.MAX_SAFE_INTEGER + 2\nrequireNonSafeInteger(1.5); // => 1.5\nrequireNonSafeInteger(42); // throws IllegalArgumentException\nrequireNonSafeInteger(Number.MAX_SAFE_INTEGER); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "nonSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    }
+  ]
+}

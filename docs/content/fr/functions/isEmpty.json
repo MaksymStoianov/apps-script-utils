@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est vide.",
+  "description": [
+    "La vacuité se lit selon le type : `null` et `undefined`, une chaîne faite d'espaces, un tableau, `Set` ou `Map` sans entrée, un objet sans clé propre. `0` et `false` sont des valeurs, pas du vide.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est vide ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisEmpty(null); // => true\nisEmpty(\"\"); // => true\nisEmpty(\"   \"); // => true\nisEmpty([]); // => true\nisEmpty({}); // => true\nisEmpty(new Map()); // => true\nisEmpty(0); // => false\nisEmpty(false); // => false\nisEmpty(\"a\"); // => false\nisEmpty([0]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

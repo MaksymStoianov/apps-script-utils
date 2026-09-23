@@ -1,0 +1,24 @@
+{
+  "summary": "Escapes the characters XML reserves.",
+  "description": [
+    "The same five characters as `escapeHtml`, for content going into an XML document rather than a page."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty."
+  },
+  "returns": "the escaped string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\nescapeXml(\"<a>&\"); // => \"&lt;a&gt;&amp;\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

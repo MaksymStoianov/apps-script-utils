@@ -12,6 +12,11 @@ const PLACEHOLDER: RegExp = /\{\{([^{}]*)\}\}/g;
 /**
  * How `merge` fills a template.
  *
+ * @example
+ * ```javascript
+ * const options = { onMissing: "empty", escape: escapeHtml };
+ * ```
+ *
  * @since   1.11.0
  * @version 1.0.0
  */

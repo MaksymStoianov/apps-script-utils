@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Funktion ist.",
+  "description": [
+    "`nonFunction(value)` ist dieselbe Prüfung wie `!isFunction(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Anhand des internen Tags bestimmt: gewöhnliche, `async`-, Generator- und Async-Generator-Funktionen bestehen alle. Eine Klasse ist ebenfalls eine Funktion.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Funktion ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonFunction(null); // => true\nnonFunction(\"fn\"); // => true\nnonFunction({}); // => true\nnonFunction(function () {}); // => false\nnonFunction(async function () {}); // => false\nnonFunction(Math.max); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunction"
+    },
+    {
+      "name": "requireFunction"
+    },
+    {
+      "name": "requireNonFunction"
+    }
+  ]
+}

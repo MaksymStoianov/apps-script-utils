@@ -1,0 +1,30 @@
+{
+  "summary": "Returns the value as a Ui object, or throws.",
+  "description": [
+    "An Apps Script service object has no constructor a script can test against, so the guard reads the tag the object reports for itself: `value.toString() === \"Ui\"`. A plain object that reports the same tag passes too, which in practice means a test double.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a Ui object.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a Ui object."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nconst ui = SpreadsheetApp.getUi();\n\nrequireUi(ui); // => ui\nrequireUi({}); // throws IllegalArgumentException\nrequireUi(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isUi"
+    },
+    {
+      "name": "nonUi"
+    }
+  ]
+}

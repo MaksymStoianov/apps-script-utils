@@ -1,0 +1,43 @@
+{
+  "summary": "Removes every occurrence of the given values from an array.",
+  "description": [
+    "Values are compared with `SameValueZero`: `without([NaN], NaN)` returns `[]`, which an `indexOf` scan cannot do\nbecause strict equality never matches `NaN`. `-0` and `0` match each other.",
+    "The exclusions are collected into a set once, so the cost stays linear in the length of the array instead of the\nquadratic scan `filter` plus `includes` would perform. A new array is returned; the input is not modified. Called\nwith no exclusions, `without` returns a copy."
+  ],
+  "params": {
+    "array": "The array to filter. Left untouched.",
+    "values": "The values to exclude."
+  },
+  "returns": "a new array without those values, in their original order.",
+  "throws": {
+    "TypeError": "`array` is not an array."
+  },
+  "examples": [
+    {
+      "title": "Excluding values",
+      "body": "```javascript\nwithout([1, 2, 3, 2], 2); // => [1, 3] — every occurrence\nwithout([1, 2, 3], 2, 3); // => [1]\nwithout([1, 2], 9); // => [1, 2] — nothing to remove\nwithout([NaN, 1], NaN); // => [1]\n```"
+    },
+    {
+      "title": "Dropping the blanks a column comes with",
+      "body": "```typescript\nimport { without } from \"apps-script-utils\";\n\nconst names = sheet.getRange(\"A2:A\").getValues().flat();\n\nwithout(names, \"\", \"N/A\"); // the real entries, in sheet order\n```"
+    },
+    {
+      "title": "Removing a column from a header row",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"without.ts\" include-symbol=\"visibleHeader\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction visibleHeader(header) {\n  return without(header, \"internalNote\", \"_rowHash\");\n}\n</code-block>\n</tab>\n</tabs>"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact",
+      "note": "removes the falsy values rather than named ones."
+    },
+    {
+      "name": "intersect",
+      "note": "keeps only the shared values."
+    },
+    {
+      "name": "unique",
+      "note": "removes duplicates."
+    }
+  ]
+}

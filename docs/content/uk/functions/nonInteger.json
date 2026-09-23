@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є цілим числом.",
+  "description": [
+    "`nonInteger(value)` — та сама перевірка, що й `!isInteger(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Число без дробової частини. Приведення типів немає, тому рядок `\"42\"` цілим числом не є, як і `NaN`.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є цілим числом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonInteger(1.5); // => true\nnonInteger(NaN); // => true\nnonInteger(\"42\"); // => true\nnonInteger(42); // => false\nnonInteger(-7); // => false\nnonInteger(0); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isInteger"
+    },
+    {
+      "name": "requireInteger"
+    },
+    {
+      "name": "requireNonInteger"
+    }
+  ]
+}

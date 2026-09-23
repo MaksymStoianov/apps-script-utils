@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення регулярним виразом.",
+  "description": [
+    "Визначається за внутрішнім тегом, а не через `instanceof`, тому розпізнається й регулярний вираз з іншого фрейму.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є регулярним виразом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisRegExp(/a/); // => true\nisRegExp(new RegExp(\"a\")); // => true\nisRegExp(\"/a/\"); // => false\nisRegExp({}); // => false\nisRegExp(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRegExp"
+    },
+    {
+      "name": "requireRegExp"
+    },
+    {
+      "name": "requireNonRegExp"
+    }
+  ]
+}

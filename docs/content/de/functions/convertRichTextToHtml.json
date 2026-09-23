@@ -1,0 +1,27 @@
+{
+  "summary": "Gibt einen Rich-Text-Zellwert als HTML aus.",
+  "description": [
+    "Jeder Abschnitt des Werts wird zu einem Span mit seinen Stilen — Stärke, Neigung, Unterstreichung, Durchstreichung, Farbe, Größe und Schriftfamilie — und ein Link zu einem Anker. Der Text selbst wird maskiert, eine Zelle mit `<b>` erscheint also als Text und nicht als Markup."
+  ],
+  "params": {
+    "richText": "Der auszugebende Rich-Text-Wert."
+  },
+  "returns": "das HTML.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    },
+    {
+      "name": "isRichTextValue"
+    },
+    {
+      "name": "highlightHtml"
+    }
+  ]
+}

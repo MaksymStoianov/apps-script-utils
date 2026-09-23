@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value as a scalar, or throws.",
+  "description": [
+    "A primitive that carries a single value: string, number, boolean, symbol or bigint. `null` and `undefined` are primitives too, but they carry no value and do not qualify.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a scalar.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a scalar."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireScalar(\"abc\"); // => \"abc\"\nrequireScalar(1); // => 1\nrequireScalar({}); // throws IllegalArgumentException\nrequireScalar([]); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

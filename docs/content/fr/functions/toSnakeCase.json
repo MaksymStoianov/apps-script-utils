@@ -1,0 +1,28 @@
+{
+  "summary": "Réécrit une chaîne en snake_case.",
+  "description": [
+    "Les règles du kebab-case avec des tirets bas à la place des tirets : espaces et tirets deviennent des tirets bas, un tiret bas est inséré à la jonction d'une minuscule et d'une majuscule, et le résultat passe en minuscules.",
+    "`clean` retire tout ce qui n'est ni lettre, ni chiffre, ni tiret bas ; `trim` réduit d'abord les espaces alentour."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide.",
+    "options": "`clean` retire la ponctuation restante ; `trim` supprime et réduit les espaces."
+  },
+  "returns": "la chaîne convertie.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toKebabCase"
+    },
+    {
+      "name": "toCamelCase"
+    }
+  ]
+}

@@ -3,6 +3,15 @@ import { isSheet } from "./isSheet";
 /**
  * Checks if the provided value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const sheet = SpreadsheetApp.getActiveSheet();
+ *
+ * nonSheet({}); // => true
+ * nonSheet(null); // => true
+ * nonSheet(sheet); // => false
+ * ```
+ *
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  * @see         {@link isSheet}

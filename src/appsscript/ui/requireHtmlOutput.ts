@@ -10,6 +10,15 @@ type HtmlOutput = GoogleAppsScript.HTML.HtmlOutput;
  * Identification is structural: the value must carry `getContent`,
  * `setTitle` and `setXFrameOptionsMode` as callable members.
  *
+ * @example
+ * ```javascript
+ * const output = HtmlService.createHtmlOutput("<p>hi</p>");
+ *
+ * requireHtmlOutput(output); // => output
+ * requireHtmlOutput({}); // throws IllegalArgumentException
+ * requireHtmlOutput(null); // throws IllegalArgumentException
+ * ```
+ *
  * @param       {unknown} value - The value to validate.
  * @param       {string} [message="Expected an HtmlOutput object."] - Optional custom error message if the validation fails.
  * @returns     {GoogleAppsScript.HTML.HtmlOutput} The validated <a href="https://developers.google.com/apps-script/reference/html/html-output"><code>HtmlOutput</code></a> object.

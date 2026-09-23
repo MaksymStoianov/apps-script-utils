@@ -1,0 +1,28 @@
+{
+  "summary": "Lit les lignes d'une feuille, filtrées, transformées et paginées en un seul appel.",
+  "description": [
+    "Avec `headerRow`, chaque ligne arrive sous forme d'objet dont les clés sont les noms de colonnes, ce qui rend un filtre lisible : `row.status` plutôt que `row[4]`. Si un nom se répète, la colonne la plus à gauche l'emporte.",
+    "`filter` restreint les lignes, `offset` et `limit` paginent le reste, et `mapper` décide de ce que devient chaque ligne conservée. `display` lit les valeurs telles qu'une personne les voit — une date formatée comme du texte plutôt que comme un `Date` — ce qui est un autre contenu, pas un réglage cosmétique."
+  ],
+  "params": {
+    "sheet": "La feuille sur laquelle travailler.",
+    "config": "`headerRow`, `display`, `filter`, `offset`, `limit` et `mapper`."
+  },
+  "returns": "les lignes conservées, dans l'ordre de la feuille.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est pas une feuille."
+  },
+  "examples": [
+    {
+      "title": "Lire des lignes"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "isConsistent2DArray"
+    }
+  ]
+}

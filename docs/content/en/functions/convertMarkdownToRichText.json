@@ -1,0 +1,26 @@
+{
+  "summary": "Turns a small subset of Markdown into styled text runs.",
+  "description": [
+    "Bold, italic, code and links are recognised and become runs carrying the style each one implies, ready to be written into a slide or a cell. A theme can change what those styles are — the font of a code run, say — without touching the text."
+  ],
+  "params": {
+    "text": "The Markdown to convert.",
+    "theme": "The styles each kind of run is given."
+  },
+  "returns": "the runs, in order, each with its text and its style.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst runs = convertMarkdownToRichText(\"**bold** and `code`\");\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertRichTextToHtml"
+    },
+    {
+      "name": "isRichTextValue"
+    }
+  ]
+}

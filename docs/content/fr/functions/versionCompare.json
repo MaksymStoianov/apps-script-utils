@@ -1,0 +1,28 @@
+{
+  "summary": "Compare deux chaînes de version numériquement.",
+  "description": [
+    "Chaque groupe séparé par des points est comparé comme un nombre : `1.10` est donc supérieur à `1.2`, là où une comparaison de chaînes conclurait l'inverse. Un groupe absent compte pour zéro, ce qui rend `\"2\"` et `\"2.0\"` égaux.",
+    "Les deux arguments doivent satisfaire `isValidVersion` : chiffres et points uniquement, sans suffixe de préversion."
+  ],
+  "params": {
+    "version1": "La première version.",
+    "version2": "La seconde version."
+  },
+  "returns": "`-1` si la première est inférieure, `0` si elles sont égales, `1` si la première est supérieure.",
+  "throws": {
+    "TypeError": "l'un des arguments n'est pas une chaîne de version valide."
+  },
+  "examples": [
+    {
+      "title": "Comparaison"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "isValidVersion"
+    }
+  ]
+}

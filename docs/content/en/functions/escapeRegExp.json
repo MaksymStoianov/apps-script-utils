@@ -1,0 +1,24 @@
+{
+  "summary": "Escapes the characters that carry meaning inside a regular expression.",
+  "description": [
+    "Put user input through this before building a `RegExp` from it, and a dot stays a dot instead of matching any character."
+  ],
+  "params": {
+    "value": "The string to escape. It must not be empty."
+  },
+  "returns": "the escaped string, safe to drop into a pattern.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Escaping",
+      "body": "```javascript\nescapeRegExp(\"a.b*c\"); // => \"a\\\\.b\\\\*c\"\n\nnew RegExp(escapeRegExp(\"1.5\")).test(\"1x5\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "merge"
+    }
+  ]
+}

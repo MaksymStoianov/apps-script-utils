@@ -1,0 +1,95 @@
+# Перші кроки
+
+<link-summary>Вимоги, встановлення та перший робочий скрипт.</link-summary>
+
+<web-summary>Встановлення apps-script-utils у проєкт Google Apps Script: пакет npm, налаштування clasp і перший скрипт, що читає аркуш за допомогою бібліотеки.</web-summary>
+
+## Вимоги
+
+- [Node.js](https://nodejs.org/) версії 22.14.0 або новішої
+- [npm](https://www.npmjs.com/) (або інший менеджер пакетів Node, наприклад pnpm)
+
+## Встановлення
+
+```bash
+npm install apps-script-utils
+```
+
+Усе експортується з кореня пакета, тому одного шляху імпорту достатньо для всієї бібліотеки:
+
+```typescript
+import { appendRows, isAdmin, parseA1Notation, requireString } from "apps-script-utils";
+```
+
+## Перші приклади
+
+### Робота з Таблицями
+
+Ефективно додати кілька рядків даних:
+
+```typescript
+import { appendRows } from "apps-script-utils";
+
+const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
+const data = [
+  ["John Doe", "john@example.com", 28],
+  ["Jane Smith", "jane@example.com", 32]
+];
+
+appendRows(sheet, data);
+```
+
+### Утиліти Admin SDK
+
+Перевірити, чи має поточний користувач права адміністратора:
+
+```typescript
+import { isAdmin } from "apps-script-utils";
+
+if (isAdmin()) {
+  Logger.log("Access granted to admin panel.");
+} else {
+  Logger.log("Access denied.");
+}
+```
+
+### Розбір нотації A1
+
+Перетворити складну нотацію A1 на структурований об'єкт:
+
+```typescript
+import { parseA1Notation } from "apps-script-utils";
+
+const rangeInfo = parseA1Notation("'Sheet1'!A1:B10");
+
+console.log(rangeInfo.sheetName); // "Sheet1"
+console.log(rangeInfo.startRowIndex); // 0
+console.log(rangeInfo.endColumnIndex); // 2
+```
+
+## Перевірка вхідних даних
+
+Більшість функцій бібліотеки відхиляють хибний ввід, а не приводять його до чогось. Родина `requireX` перетворює
+неперевірене значення на типізоване — або кидає виняток:
+
+```typescript
+import { requireString, requireNonEmptyString } from "apps-script-utils";
+
+function greet(name: unknown): string {
+  return `Hello, ${requireNonEmptyString(name)}!`;
+}
+
+greet("Ada"); // "Hello, Ada!"
+greet(""); // кидає EmptyStringException
+greet(42); // кидає InvalidStringException
+```
+
+[](validation-conventions.md) розбирає всю схему імен `isX` / `nonX` / `requireX` / `requireNonX`, а
+[](exception-handling.md) — винятки, які ці функції кидають.
+
+## Куди далі
+
+- [](validation-conventions.md) — домовленість про імена, якій підпорядкована більша частина бібліотеки.
+- [](apps-script-runtime.md) — яким помічникам потрібне середовище Apps Script і що це означає для тестів.
+- [](reference-base.md) — повний список функцій, що не залежать від середовища виконання.
+- [](reference-appsscript.md) — повний список функцій, прив'язаних до сервісів.

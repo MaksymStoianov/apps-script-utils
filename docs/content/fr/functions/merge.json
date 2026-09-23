@@ -1,0 +1,29 @@
+{
+  "summary": "Remplit les emplacements `{{ key }}` d'un gabarit depuis un objet.",
+  "description": [
+    "Les espaces dans les accolades sont ignorés : `{{name}}` et `{{ name }}` désignent le même emplacement. Une clé absente de l'objet est laissée telle quelle, ce qui rend le manque visible plutôt que silencieusement vide ; `onMissing: \"empty\"` la supprime.",
+    "`escape` prend une fonction appliquée à chaque valeur insérée — passez `escapeHtml` si le résultat part dans une page."
+  ],
+  "params": {
+    "template": "Le gabarit contenant des emplacements `{{ key }}`.",
+    "data": "L'objet d'où proviennent les valeurs.",
+    "options": "`onMissing` vaut `\"keep\"` ou `\"empty\"` ; `escape` est une fonction appliquée à chaque valeur."
+  },
+  "returns": "le gabarit, emplacements remplis.",
+  "throws": {
+    "IllegalArgumentException": "le gabarit n'est pas une chaîne, ou les données ne sont pas un objet."
+  },
+  "examples": [
+    {
+      "title": "Remplir un gabarit"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    },
+    {
+      "name": "getPath"
+    }
+  ]
+}

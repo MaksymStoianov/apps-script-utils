@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine sichere ganze Zahl ist.",
+  "description": [
+    "`nonSafeInteger(value)` ist dieselbe Prüfung wie `!isSafeInteger(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Eine ganze Zahl, die ein IEEE-754-Double exakt darstellt. Jenseits dieses Bereichs fallen verschiedene mathematische Ganzzahlen auf denselben Wert und das Rechnen ist still nicht mehr exakt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine sichere ganze Zahl ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => true\nnonSafeInteger(1.5); // => true\nnonSafeInteger(\"42\"); // => true\nnonSafeInteger(42); // => false\nnonSafeInteger(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

@@ -3,6 +3,16 @@ import { isObject } from "./isObject";
 /**
  * Checks if `value` is NOT of `Object`.
  *
+ * @example
+ * ```javascript
+ * nonObject(null); // => true
+ * nonObject("abc"); // => true
+ * nonObject(function () {}); // => true
+ * nonObject({}); // => false
+ * nonObject([]); // => false
+ * nonObject(new Date()); // => false
+ * ```
+ *
  * @template T
  * @param   {T | object} value - The value to check.
  * @returns {boolean} `true` if `value` is not an `Object`, else `false`.

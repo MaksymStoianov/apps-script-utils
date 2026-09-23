@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert eine Versionsangabe ist.",
+  "description": [
+    "Durch Punkte getrennte Zifferngruppen, beliebig viele. Ein Vorabversions-Suffix, ein führendes `v` und eine leere Gruppe werden abgelehnt: `\"1.2.3-beta\"` besteht also nicht, obwohl SemVer es erlaubt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Versionsangabe ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisValidVersion(\"1\"); // => true\nisValidVersion(\"1.2.3\"); // => true\nisValidVersion(\"2026.01.15\"); // => true\nisValidVersion(\"1.2.3-beta\"); // => false\nisValidVersion(\"v1.2\"); // => false\nisValidVersion(\"1..2\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidVersion"
+    },
+    {
+      "name": "requireValidVersion"
+    }
+  ]
+}

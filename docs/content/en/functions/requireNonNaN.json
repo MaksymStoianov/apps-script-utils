@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value after checking that it is not the `NaN` number.",
+  "description": [
+    "Nothing is coerced first, which is where this differs from the global `isNaN`: that one converts its argument, so `isNaN(\"abc\")` and `isNaN(undefined)` both report `true`.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with the `NaN` number excluded from its type.",
+  "throws": {
+    "IllegalArgumentException": "the value is the `NaN` number."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonNaN(0); // => 0\nrequireNonNaN(\"abc\"); // => \"abc\"\nrequireNonNaN(NaN); // throws IllegalArgumentException\nrequireNonNaN(0 / 0); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNaN"
+    },
+    {
+      "name": "nonNaN"
+    },
+    {
+      "name": "requireNaN"
+    }
+  ]
+}

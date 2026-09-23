@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein Array ist.",
+  "description": [
+    "Die Prüfung ist genau `Array.isArray`: ein Array aus einem anderen Frame zählt, ein array-ähnliches Objekt — `arguments`, eine `NodeList`, `{ length: 0 }` — nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht ein Array ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist ein Array."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonArray(\"abc\"); // => \"abc\"\nrequireNonArray({ length: 0 }); // => { length: 0 }\nrequireNonArray([]); // throws IllegalArgumentException\nrequireNonArray([1, 2, 3]); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isArray"
+    },
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireArray"
+    }
+  ]
+}

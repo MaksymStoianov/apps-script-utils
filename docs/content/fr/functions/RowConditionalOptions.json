@@ -1,0 +1,25 @@
+{
+  "summary": "Comment les lignes sont lues et lesquelles sont candidates.",
+  "description": [
+    "`headerRow` est la ligne, à base un, qui porte les noms de colonnes. La définir fait deux choses : le prédicat reçoit chaque ligne indexée par ces noms, et la ligne d'en-tête cesse d'être candidate — effacer ou supprimer les en-têtes n'a jamais été l'intention d'un prédicat sur les données."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowPredicate"
+    }
+  ]
+}

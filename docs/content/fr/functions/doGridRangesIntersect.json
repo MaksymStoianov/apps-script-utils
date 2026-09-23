@@ -1,0 +1,25 @@
+{
+  "summary": "Indique si deux plages de grille se recouvrent sur au moins une cellule.",
+  "description": [
+    "Des plages qui se touchent par un bord ne se recouvrent pas : les bornes de fin sont exclues, donc `A1:B2` et `C1:D2` sont voisines, pas superposées. Une borne omise signifie que la plage est ouverte de ce côté et recouvre donc tout sur cet axe."
+  ],
+  "params": {
+    "range1": "La première plage.",
+    "range2": "La seconde plage."
+  },
+  "returns": "`true` si au moins une cellule appartient aux deux.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Vérifier un recouvrement"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "isCellGridRange"
+    }
+  ]
+}

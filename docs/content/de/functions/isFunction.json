@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine Funktion ist.",
+  "description": [
+    "Anhand des internen Tags bestimmt: gewöhnliche, `async`-, Generator- und Async-Generator-Funktionen bestehen alle. Eine Klasse ist ebenfalls eine Funktion.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Funktion ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisFunction(function () {}); // => true\nisFunction(async function () {}); // => true\nisFunction(Math.max); // => true\nisFunction(null); // => false\nisFunction(\"fn\"); // => false\nisFunction({}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonFunction"
+    },
+    {
+      "name": "requireFunction"
+    },
+    {
+      "name": "requireNonFunction"
+    }
+  ]
+}

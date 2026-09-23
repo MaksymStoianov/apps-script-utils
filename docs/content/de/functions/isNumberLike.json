@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert in eine Zahl umwandelbar ist.",
+  "description": [
+    "Eine endliche Zahl oder eine Zeichenkette, die sich in eine solche umwandelt. `NaN`, die Unendlichkeiten und die leere Zeichenkette sind ausgeschlossen — das unterscheidet die Prüfung von einem bloßen `Number(value)`.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert in eine Zahl umwandelbar ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisNumberLike(1); // => true\nisNumberLike(\"1.5\"); // => true\nisNumberLike(\" 42 \"); // => true\nisNumberLike(NaN); // => false\nisNumberLike(Infinity); // => false\nisNumberLike(\"\"); // => false\nisNumberLike(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNumberLike"
+    },
+    {
+      "name": "requireNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

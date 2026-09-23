@@ -1,0 +1,29 @@
+{
+  "summary": "Ersetzt die fünf Zeichen, die sonst als Markup gelesen würden.",
+  "description": [
+    "`<`, `>`, `&`, `\"` und `'` werden zu benannten Entities. Genau das gehört auf alles angewendet, was von einem Nutzer kam, bevor es in ein `HtmlOutput` oder eine Vorlage geht."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein."
+  },
+  "returns": "die maskierte Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "encodeHtml"
+    },
+    {
+      "name": "escapeXml"
+    },
+    {
+      "name": "merge"
+    }
+  ]
+}

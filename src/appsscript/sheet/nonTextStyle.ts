@@ -3,6 +3,15 @@ import { isTextStyle } from "./isTextStyle";
 /**
  * Checks if the provided value is NOT a <a href="https://developers.google.com/apps-script/reference/spreadsheet/text-style"><code>TextStyle</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const style = SpreadsheetApp.newTextStyle().setBold(true).build();
+ *
+ * nonTextStyle({}); // => true
+ * nonTextStyle(null); // => true
+ * nonTextStyle(style); // => false
+ * ```
+ *
  * @template T
  * @param       {T | GoogleAppsScript.Spreadsheet.TextStyle} value - The value to check.
  * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/text-style"><code>TextStyle</code></a> object; otherwise, `false`.

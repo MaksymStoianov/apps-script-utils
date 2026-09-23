@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** `null` ist.",
+  "description": [
+    "`nonNull(value)` ist dieselbe Prüfung wie `!isNull(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Strikt `null`. `undefined` ist ein eigener Fall — `isNil` deckt beide ab.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht `null` ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonNull(undefined); // => true\nnonNull(0); // => true\nnonNull(\"\"); // => true\nnonNull(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNull"
+    },
+    {
+      "name": "requireNull"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

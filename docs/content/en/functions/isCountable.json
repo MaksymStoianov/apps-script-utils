@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a countable number.",
+  "description": [
+    "A value that can serve as a quantity, a length or a zero-based index: a whole number, not negative, and small enough that integer arithmetic on it is still exact.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a countable number; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisCountable(0); // => true\nisCountable(42); // => true\nisCountable(-1); // => false\nisCountable(1.5); // => false\nisCountable(Number.MAX_SAFE_INTEGER + 2); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonCountable"
+    },
+    {
+      "name": "requireCountable"
+    }
+  ]
+}

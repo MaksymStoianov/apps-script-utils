@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als eine Präsentations-Id zurück oder wirft.",
+  "description": [
+    "Mindestens 25 Zeichen aus Buchstaben, Ziffern, Bindestrichen und Unterstrichen — die Id aus einer Slides-URL. Geprüft wird nur das Format.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als eine Präsentations-Id.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht eine Präsentations-Id."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireValidPresentationId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => \"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"\nrequireValidPresentationId(\"short-id\"); // throws IllegalArgumentException\nrequireValidPresentationId(\"has space in it and is long enough to pass\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidPresentationId"
+    },
+    {
+      "name": "nonValidPresentationId"
+    }
+  ]
+}

@@ -3,6 +3,13 @@ import { isPresentation } from "./isPresentation";
 /**
  * Gets a slide by its index in the presentation.
  *
+ * @example
+ * ```javascript
+ * const presentation = SlidesApp.getActivePresentation();
+ *
+ * const first = getSlideByIndex(presentation, 0);
+ * ```
+ *
  * @param {GoogleAppsScript.Slides.Presentation} presentation The presentation object.
  * @param {number} index The zero-based index of the slide.
  * @returns {GoogleAppsScript.Slides.Slide | null} The slide at the given index, or `null` if the index is out of bounds.

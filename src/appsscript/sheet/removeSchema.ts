@@ -6,6 +6,11 @@ import { type SheetSchema } from "./types";
 /**
  * What else to take off the sheet along with the stored schema.
  *
+ * @example
+ * ```javascript
+ * const options = { validation: true };
+ * ```
+ *
  * @since   1.11.0
  * @version 1.0.0
  */

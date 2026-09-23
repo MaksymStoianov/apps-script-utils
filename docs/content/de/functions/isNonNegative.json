@@ -1,0 +1,19 @@
+{
+  "summary": "Prüft, ob ein Wert eine nicht negative Zahl ist.",
+  "description": [
+    "`NaN` zählt nicht: es ist eine Zahl, aber weder negativ noch nicht negativ. Die Unendlichkeiten verhalten sich nach ihrem Vorzeichen, `Infinity` zählt, `-Infinity` nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine nicht negative Zahl ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisNonNegative(0); // => true\nisNonNegative(-0); // => true\nisNonNegative(42); // => true\nisNonNegative(Infinity); // => true\nisNonNegative(-1); // => false\nisNonNegative(NaN); // => false\nisNonNegative(\"1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": []
+}

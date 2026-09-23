@@ -1,6 +1,15 @@
 /**
  * Checks if the provided value is an `Array`.
  *
+ * @example
+ * ```javascript
+ * isArray([]); // => true
+ * isArray([1, 2, 3]); // => true
+ * isArray("abc"); // => false
+ * isArray({ length: 0 }); // => false
+ * isArray(null); // => false
+ * ```
+ *
  * @template T - The type of elements within the array.
  * @param    {unknown} value - The value to check.
  * @returns  {boolean} `true` if the value is an `Array`; otherwise, `false`.

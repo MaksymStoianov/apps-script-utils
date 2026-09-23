@@ -1,0 +1,22 @@
+{
+  "summary": "Renvoie l'heure courante en millisecondes depuis l'époque.",
+  "description": [
+    "Une fonction nommée plutôt que des `Date.now()` disséminés dans le code, pour que la mesure du temps soit un seul endroit qu'un test peut remplacer."
+  ],
+  "params": {},
+  "returns": "l'horodatage courant en millisecondes.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Mesurer le temps écoulé"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

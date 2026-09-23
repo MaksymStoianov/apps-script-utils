@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является скалярным значением.",
+  "description": [
+    "`nonScalar(value)` — та же проверка, что и `!isScalar(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Примитив, несущий одно значение: строка, число, логическое значение, символ или bigint. `null` и `undefined` тоже примитивы, но значения не несут и не подходят.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является скалярным значением; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonScalar({}); // => true\nnonScalar([]); // => true\nnonScalar(null); // => true\nnonScalar(\"abc\"); // => false\nnonScalar(1); // => false\nnonScalar(true); // => false\nnonScalar(10n); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "requireScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

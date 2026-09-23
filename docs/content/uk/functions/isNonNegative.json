@@ -1,0 +1,19 @@
+{
+  "summary": "Перевіряє, чи є значення невід'ємним числом.",
+  "description": [
+    "`NaN` не підходить: це число, але воно не є ні від'ємним, ні невід'ємним. Нескінченності поводяться за знаком: `Infinity` підходить, `-Infinity` — ні.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є невід'ємним числом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisNonNegative(0); // => true\nisNonNegative(-0); // => true\nisNonNegative(42); // => true\nisNonNegative(Infinity); // => true\nisNonNegative(-1); // => false\nisNonNegative(NaN); // => false\nisNonNegative(\"1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": []
+}

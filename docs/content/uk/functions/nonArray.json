@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є масивом.",
+  "description": [
+    "`nonArray(value)` — та сама перевірка, що й `!isArray(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Перевірка цілком зводиться до `Array.isArray`, тому масив з іншого фрейму підходить, а схожий на масив об'єкт — `arguments`, `NodeList`, `{ length: 0 }` — ні.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є масивом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonArray(\"abc\"); // => true\nnonArray({ length: 0 }); // => true\nnonArray(null); // => true\nnonArray([]); // => false\nnonArray([1, 2, 3]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isArray"
+    },
+    {
+      "name": "requireArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

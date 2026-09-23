@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как URL-адрес или выбрасывает исключение.",
+  "description": [
+    "Адрес по схеме `http`, `https` или `ftp`, у которого после схемы что-то есть и нигде нет пробелов. Голый хост вроде `\"example.com\"` таковым не является.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как URL-адрес.",
+  "throws": {
+    "IllegalArgumentException": "значение не является URL-адресом."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireUrl(\"https://example.com\"); // => \"https://example.com\"\nrequireUrl(\"http://example.com/a?b=1\"); // => \"http://example.com/a?b=1\"\nrequireUrl(\"example.com\"); // throws IllegalArgumentException\nrequireUrl(\"https://\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isUrl"
+    },
+    {
+      "name": "nonUrl"
+    }
+  ]
+}
