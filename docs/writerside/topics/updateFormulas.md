@@ -12,7 +12,7 @@
 
 ```typescript
 function updateFormulas(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   rewrite: FormulaTransformer | Record<string, string>
 ): number;
 ```
@@ -21,12 +21,14 @@ Pass a map to replace sheet names wholesale — the usual need after a rename or
 
 Only cells that hold a formula are visited, and only the ones that actually changed are written, so a no-op costs one read and nothing else.
 
+A sheet means its whole data range; a range means only the cells inside it, so a rewrite can be confined to one block. The row and column handed to the transformer are positions on the sheet either way, which is what makes a formula's own address usable in the replacement.
+
 ## Parameters
 
-| Parameter | Type                                           | Description                                                                                       |
-| :-------- | :--------------------------------------------- | :------------------------------------------------------------------------------------------------ |
-| `sheet`   | `GoogleAppsScript.Spreadsheet.Sheet`           | The sheet to work on.                                                                             |
-| `rewrite` | `FormulaTransformer \| Record<string, string>` | A map of old sheet name to new one, or a function taking a formula and returning its replacement. |
+| Parameter | Type                                                                       | Description                                                                                                  |
+| :-------- | :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| `target`  | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet whose formulas are rewritten, or the range to rewrite within: only its cells are read and written. |
+| `rewrite` | `FormulaTransformer \| Record<string, string>`                             | A map of old sheet name to new one, or a function taking a formula and returning its replacement.            |
 
 ## Returns
 
@@ -34,9 +36,9 @@ Only cells that hold a formula are visited, and only the ones that actually chan
 
 ## Throws
 
-| Exception               | Condition                          |
-| :---------------------- | :--------------------------------- |
-| `InvalidSheetException` | the first argument is not a sheet. |
+| Exception               | Condition                                          |
+| :---------------------- | :------------------------------------------------- |
+| `InvalidSheetException` | the first argument is neither a sheet nor a range. |
 
 ## Examples
 
@@ -49,6 +51,15 @@ const sheet = SpreadsheetApp.getActiveSheet();
 updateFormulas(sheet, { Sheet1: "Data" });
 
 updateFormulas(sheet, (formula) => formula.replace(/OLD_/g, "NEW_"));
+```
+
+### Within one block
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only the formulas in D2:D100 are rewritten.
+updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 ```
 
 ## See also
