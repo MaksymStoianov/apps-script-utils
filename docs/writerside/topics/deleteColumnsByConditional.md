@@ -12,7 +12,7 @@
 
 ```typescript
 function deleteColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ Judged against the sheet as read, then deleted from the right edge inwards in co
 
 Columns are gone for good: `clearColumnsByConditional` only empties them.
 
+A sheet means its whole data range and whole columns are removed. A range means only the cells inside it: they are deleted and the ones to their right move left, while the rows above and below stay exactly where they are. Either way the predicate is given the position on the sheet, and the refusal to empty a sheet applies to the sheet form, where a sheet must keep a column.
+
 ## Parameters
 
-| Parameter                     | Type                                            | Description                                                                                                                                                        |
-| :---------------------------- | :---------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet`            | The sheet to work on.                                                                                                                                              |
-| `predicate`                   | `ColumnPredicate`                               | Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on. |
-| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined` | `headerColumn` names the column holding the row names, and keeps that column out of the candidates.                                                                |
+| Parameter                     | Type                                                                       | Description                                                                                                                                                        |
+| :---------------------------- | :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet to work on, or the range to work within: only its cells are read, and only they are removed.                                                             |
+| `predicate`                   | `ColumnPredicate`                                                          | Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on. |
+| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined`                            | `headerColumn` names the column holding the row names, and keeps that column out of the candidates.                                                                |
 
 ## Returns
 
@@ -38,7 +40,7 @@ Columns are gone for good: `clearColumnsByConditional` only empties them.
 
 | Exception                  | Condition                                                                          |
 | :------------------------- | :--------------------------------------------------------------------------------- |
-| `InvalidSheetException`    | the first argument is not a sheet.                                                 |
+| `InvalidSheetException`    | the first argument is neither a sheet nor a range.                                 |
 | `IllegalArgumentException` | the predicate is not a function, or the header position is not a positive integer. |
 
 ## Examples
@@ -51,6 +53,17 @@ const sheet = SpreadsheetApp.getActiveSheet();
 deleteColumnsByConditional(sheet, (values, position, column) => column.internal === true, {
   headerColumn: 1
 });
+```
+
+### Within one block
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:Z100 is read, and only those cells move left.
+deleteColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
+  values.every((cell) => cell === "")
+);
 ```
 
 ## See also

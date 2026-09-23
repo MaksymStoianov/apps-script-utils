@@ -12,7 +12,7 @@
 
 ```typescript
 function deleteColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ function deleteColumnsByConditional(
 
 Столбцы исчезают насовсем: только очищает их `clearColumnsByConditional`.
 
+Лист означает весь его диапазон данных, и удаляются столбцы целиком. Диапазон означает только его ячейки: они удаляются, ячейки справа сдвигаются влево, а строки выше и ниже остаются на месте. В обоих случаях предикат получает позицию на листе, а отказ опустошить лист касается формы с листом, где столбец должен остаться хотя бы один.
+
 ## Параметры
 
-| Параметр                            | Тип                                             | Описание                                                                                                                                                                         |
-| :---------------------------------- | :---------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                             | `GoogleAppsScript.Spreadsheet.Sheet`            | Лист, с которым работаем.                                                                                                                                                        |
-| `predicate`                         | `ColumnPredicate`                               | Получает ячейки столбца, его позицию от единицы и — если задан `headerColumn` — столбец с ключами по именам строк. Верните `true` для столбцов, с которыми нужно что-то сделать. |
-| `options` _(необязательный)_ `= {}` | `ColumnConditionalOptions \| null \| undefined` | `headerColumn` указывает столбец с именами строк и выводит этот столбец из числа кандидатов.                                                                                     |
+| Параметр                            | Тип                                                                        | Описание                                                                                                                                                                         |
+| :---------------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                            | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Лист, с которым работаем, или диапазон, внутри которого работаем: читаются только его ячейки, и удаляются только они.                                                            |
+| `predicate`                         | `ColumnPredicate`                                                          | Получает ячейки столбца, его позицию от единицы и — если задан `headerColumn` — столбец с ключами по именам строк. Верните `true` для столбцов, с которыми нужно что-то сделать. |
+| `options` _(необязательный)_ `= {}` | `ColumnConditionalOptions \| null \| undefined`                            | `headerColumn` указывает столбец с именами строк и выводит этот столбец из числа кандидатов.                                                                                     |
 
 ## Возвращает
 
@@ -38,7 +40,7 @@ function deleteColumnsByConditional(
 
 | Исключение                 | Условие                                                           |
 | :------------------------- | :---------------------------------------------------------------- |
-| `InvalidSheetException`    | первый аргумент не является листом.                               |
+| `InvalidSheetException`    | первый аргумент не является ни листом, ни диапазоном.             |
 | `IllegalArgumentException` | предикат не функция или позиция заголовка не положительное целое. |
 
 ## Примеры
@@ -51,6 +53,17 @@ const sheet = SpreadsheetApp.getActiveSheet();
 deleteColumnsByConditional(sheet, (values, position, column) => column.internal === true, {
   headerColumn: 1
 });
+```
+
+### Внутри одного блока
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:Z100 is read, and only those cells move left.
+deleteColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
+  values.every((cell) => cell === "")
+);
 ```
 
 ## Смотрите также

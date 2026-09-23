@@ -12,7 +12,7 @@
 
 ```typescript
 function deleteColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ Beurteilt wird am gelesenen Blatt, gelöscht vom rechten Rand nach innen in zusa
 
 Die Spalten sind dann fort: `clearColumnsByConditional` leert sie nur.
 
+Ein Blatt meint seinen ganzen Datenbereich, und es werden ganze Spalten entfernt. Ein Bereich meint nur die Zellen darin: sie werden gelöscht, die rechts davon rücken nach links, und die Zeilen darüber und darunter bleiben, wo sie sind. In beiden Fällen erhält das Prädikat die Position im Blatt; die Weigerung, ein Blatt zu leeren, gilt der Blatt-Form, in der eine Spalte bleiben muss.
+
 ## Parameter
 
-| Parameter                     | Typ                                             | Beschreibung                                                                                                                                                                                          |
-| :---------------------------- | :---------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet`            | Das Blatt, auf dem gearbeitet wird.                                                                                                                                                                   |
-| `predicate`                   | `ColumnPredicate`                               | Bekommt die Zellen der Spalte, ihre einsbasierte Position und — wenn `headerColumn` gesetzt ist — die Spalte mit den Zeilennamen als Schlüsseln. `true` für die Spalten, auf die gewirkt werden soll. |
-| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined` | `headerColumn` benennt die Spalte mit den Zeilennamen und nimmt diese Spalte aus den Kandidaten heraus.                                                                                               |
+| Parameter                     | Typ                                                                        | Beschreibung                                                                                                                                                                                          |
+| :---------------------------- | :------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, auf dem gearbeitet wird, oder der Bereich, innerhalb dessen gearbeitet wird: nur dessen Zellen werden gelesen und nur sie entfernt.                                                        |
+| `predicate`                   | `ColumnPredicate`                                                          | Bekommt die Zellen der Spalte, ihre einsbasierte Position und — wenn `headerColumn` gesetzt ist — die Spalte mit den Zeilennamen als Schlüsseln. `true` für die Spalten, auf die gewirkt werden soll. |
+| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined`                            | `headerColumn` benennt die Spalte mit den Zeilennamen und nimmt diese Spalte aus den Kandidaten heraus.                                                                                               |
 
 ## Rückgabewert
 
@@ -38,7 +40,7 @@ Die Spalten sind dann fort: `clearColumnsByConditional` leert sie nur.
 
 | Ausnahme                   | Bedingung                                                                        |
 | :------------------------- | :------------------------------------------------------------------------------- |
-| `InvalidSheetException`    | das erste Argument ist kein Blatt.                                               |
+| `InvalidSheetException`    | das erste Argument weder ein Blatt noch ein Bereich ist.                         |
 | `IllegalArgumentException` | das Prädikat ist keine Funktion oder die Kopfposition keine positive ganze Zahl. |
 
 ## Beispiele
@@ -51,6 +53,17 @@ const sheet = SpreadsheetApp.getActiveSheet();
 deleteColumnsByConditional(sheet, (values, position, column) => column.internal === true, {
   headerColumn: 1
 });
+```
+
+### Innerhalb eines Blocks
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:Z100 is read, and only those cells move left.
+deleteColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
+  values.every((cell) => cell === "")
+);
 ```
 
 ## Siehe auch

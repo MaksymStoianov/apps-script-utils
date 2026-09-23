@@ -2,22 +2,27 @@
   "summary": "Deletes the columns a predicate selects.",
   "description": [
     "Judged against the sheet as read, then deleted from the right edge inwards in consecutive blocks, so shifting positions cannot take the wrong column with them.",
-    "Columns are gone for good: `clearColumnsByConditional` only empties them."
+    "Columns are gone for good: `clearColumnsByConditional` only empties them.",
+    "A sheet means its whole data range and whole columns are removed. A range means only the cells inside it: they are deleted and the ones to their right move left, while the rows above and below stay exactly where they are. Either way the predicate is given the position on the sheet, and the refusal to empty a sheet applies to the sheet form, where a sheet must keep a column."
   ],
   "params": {
-    "sheet": "The sheet to work on.",
+    "target": "The sheet to work on, or the range to work within: only its cells are read, and only they are removed.",
     "predicate": "Receives the column's cells, its one-based position and — when `headerColumn` is set — the column keyed by the row names. Return `true` for the columns to act on.",
     "options": "`headerColumn` names the column holding the row names, and keeps that column out of the candidates."
   },
   "returns": "how many were affected.",
   "throws": {
-    "InvalidSheetException": "the first argument is not a sheet.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range.",
     "IllegalArgumentException": "the predicate is not a function, or the header position is not a positive integer."
   },
   "examples": [
     {
       "title": "In use",
       "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\ndeleteColumnsByConditional(sheet, (values, position, column) => column.internal === true, {\n  headerColumn: 1\n});\n```"
+    },
+    {
+      "title": "Within one block",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only B2:Z100 is read, and only those cells move left.\ndeleteColumnsByConditional(sheet.getRange(\"B2:Z100\"), (values) => values.every((cell) => cell === \"\"));\n```"
     }
   ],
   "seeAlso": [
