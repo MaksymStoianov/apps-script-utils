@@ -75,15 +75,28 @@ function urlOf(language, page) {
  * or the language switcher — so the same files are put in here instead.
  */
 function injections(language) {
-  const read = (name) => {
-    try {
-      return readFileSync(join(ROOT, language.root, name), "utf8").trim();
-    } catch {
-      return "";
-    }
-  };
+  try {
+    return { head: readFileSync(join(ROOT, language.root, "head.html"), "utf8").trim() };
+  } catch {
+    return { head: "" };
+  }
+}
 
-  return { head: read("head.html"), body: read("search.html") };
+/**
+ * The same page in the other languages, as a row of links.
+ *
+ * It goes at the top of the article, which puts it directly under the
+ * breadcrumbs, and it is plain HTML: a reader with no JavaScript, and a crawler
+ * that runs none, both still see every translation.
+ */
+function languageRow(language, page, present) {
+  const links = present.map((other) =>
+    other === language
+      ? `<span aria-current="true" style="opacity:0.6">${other.name}</span>`
+      : `<a href="${urlOf(other, page)}" hreflang="${other.code}">${other.name}</a>`
+  );
+
+  return `<nav class="asu-languages" aria-label="${language.strings.language}" style="margin:0 0 24px;font-size:13px;line-height:1.6;opacity:0.85">${links.join(' <span aria-hidden="true">·</span> ')}</nav>`;
 }
 
 const pages = pagesOf(root);
@@ -147,11 +160,14 @@ for (const page of pages) {
       `$1${SITE}/images/banner-1280x640.jpg$2`
     );
 
-    if (injected.body && !html.includes("asu-fab")) {
-      const body = html.lastIndexOf("</body>");
+    // Directly under the breadcrumbs, which sit above the article.
+    if (!html.includes("asu-languages")) {
+      const article = html.match(/<article[^>]*>/);
 
-      if (body !== -1) {
-        html = `${html.slice(0, body)}${injected.body}\n${html.slice(body)}`;
+      if (article) {
+        const at = html.indexOf(article[0]) + article[0].length;
+
+        html = `${html.slice(0, at)}${languageRow(language, page, present)}${html.slice(at)}`;
       }
     }
 

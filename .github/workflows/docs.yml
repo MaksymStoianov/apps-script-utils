@@ -183,7 +183,7 @@ jobs:
           missing=0
 
           for page in dir/overview.html dir/ru/overview.html dir/appendcolumns.html; do
-            for marker in 'rel="canonical"' 'asu-fab' 'asu-language-open' 'SoftwareSourceCode'; do
+            for marker in 'rel="canonical"' 'asu-languages' 'asu-ai-notice' 'SoftwareSourceCode'; do
               if ! grep -qF "$marker" "$page"; then
                 echo "::error::${page} is missing ${marker}"
                 missing=1
