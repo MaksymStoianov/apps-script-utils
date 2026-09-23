@@ -1,22 +1,28 @@
 {
-  "summary": "Fügt Zeilen über den bereits vorhandenen Daten eines Blattes ein.",
+  "summary": "Fügt Zeilen vor den Daten ein — im Blatt oder an einem Bereich.",
   "description": [
-    "Am Kopf des Datenbereichs wird Platz geschaffen und die Matrix dort hineingeschrieben, vorhandene Daten werden also nicht überschrieben. Fixierte Zeilen bleiben, wo sie sind.",
+    "Zuerst wird Platz geschaffen, dann werden die Werte hineingeschrieben, sodass nichts Vorhandenes überschrieben wird. Bei einem Blatt stehen die Zeilen ganz oben; bei einem Bereich über dessen erster Zeile, und die Werte werden auf seinen Spalten geschrieben.",
     "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
   ],
   "params": {
-    "sheet": "Das Blatt, in das geschrieben wird.",
+    "target": "Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.",
     "values": "Eine Matrix aus Zeilen: ein Array je Zeile, alle gleich lang.",
-    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+    "options": "`afterFrozenRows` fügt unter den fixierten Zeilen ein statt ganz oben. Ein Bereich bestimmt die Stelle selbst, dort bewirkt die Option nichts."
   },
-  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "returns": "das Blatt, sodass Aufrufe verkettet werden können.",
   "throws": {
-    "InvalidSheetException": "das erste Argument ist kein Blatt.",
-    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+    "IllegalArgumentException": "kein Argument übergeben wurde.",
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist.",
+    "TypeError": "die Werte keine Matrix mit gleich langen Zeilen sind."
   },
   "examples": [
     {
-      "title": "Schreiben"
+      "title": "Am Anfang eines Blatts einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRows(sheet, [\n  [\"Name\", \"Email\"],\n  [\"Ada\", \"ada@example.com\"]\n]);\n```"
+    },
+    {
+      "title": "An einem Bereich einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRows(sheet.getRange(\"B4:C13\"), [[\"Name\", \"Email\"]]);\n```"
     }
   ],
   "seeAlso": [
