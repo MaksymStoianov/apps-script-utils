@@ -12,7 +12,7 @@
 
 ```typescript
 function getValues<T = unknown>(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   config: GetValuesConfig | null | undefined = {}
 ): T[];
 ```
@@ -21,12 +21,14 @@ With `headerRow` set, each row arrives as an object keyed by the column names, w
 
 `filter` narrows the rows, `offset` and `limit` page what is left, and `mapper` decides what each surviving row becomes. `display` reads the values as a person sees them — a formatted date as its text rather than as a `Date` — which is a different thing from what is stored, not a cosmetic switch.
 
+A sheet reads its whole data range; a range reads only itself, which is one service call over a block instead of over everything. Positions stay one-based on the sheet, so a row keeps its real number and `headerRow` names a row of the sheet, not an offset into the range.
+
 ## Parameters
 
-| Parameter                    | Type                                   | Description                                                       |
-| :--------------------------- | :------------------------------------- | :---------------------------------------------------------------- |
-| `sheet`                      | `GoogleAppsScript.Spreadsheet.Sheet`   | The sheet to work on.                                             |
-| `config` _(optional)_ `= {}` | `GetValuesConfig \| null \| undefined` | `headerRow`, `display`, `filter`, `offset`, `limit` and `mapper`. |
+| Parameter                    | Type                                                                       | Description                                                          |
+| :--------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| `target`                     | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet to read, or the range to read: only its cells are fetched. |
+| `config` _(optional)_ `= {}` | `GetValuesConfig \| null \| undefined`                                     | `headerRow`, `display`, `filter`, `offset`, `limit` and `mapper`.    |
 
 ## Returns
 
@@ -34,9 +36,9 @@ With `headerRow` set, each row arrives as an object keyed by the column names, w
 
 ## Throws
 
-| Exception               | Condition                          |
-| :---------------------- | :--------------------------------- |
-| `InvalidSheetException` | the first argument is not a sheet. |
+| Exception               | Condition                                          |
+| :---------------------- | :------------------------------------------------- |
+| `InvalidSheetException` | the first argument is neither a sheet nor a range. |
 
 ## Examples
 
@@ -51,6 +53,15 @@ const active = getValues(sheet, {
   mapper: (row) => row.email,
   limit: 100
 });
+```
+
+### Reading one block
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only A1:C50 is fetched; the header is row 1 of the sheet.
+const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 ```
 
 ## See also

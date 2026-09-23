@@ -12,7 +12,7 @@
 
 ```typescript
 function getValues<T = unknown>(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   config: GetValuesConfig | null | undefined = {}
 ): T[];
 ```
@@ -21,12 +21,14 @@ Ist `headerRow` gesetzt, kommt jede Zeile als Objekt mit den Spaltennamen als Sc
 
 `filter` engt die Zeilen ein, `offset` und `limit` blättern durch den Rest, und `mapper` bestimmt, was aus jeder übrigen Zeile wird. `display` liest die Werte so, wie ein Mensch sie sieht — ein formatiertes Datum als Text statt als `Date`. Das ist anderer Inhalt, keine Kosmetik.
 
+Ein Blatt liest seinen ganzen Datenbereich; ein Bereich liest nur sich selbst — ein Dienstaufruf über einen Block statt über alles. Positionen bleiben eins-basiert im Blatt, eine Zeile behält also ihre echte Nummer, und `headerRow` benennt eine Zeile des Blatts, keinen Versatz im Bereich.
+
 ## Parameter
 
-| Parameter                    | Typ                                    | Beschreibung                                                      |
-| :--------------------------- | :------------------------------------- | :---------------------------------------------------------------- |
-| `sheet`                      | `GoogleAppsScript.Spreadsheet.Sheet`   | Das Blatt, auf dem gearbeitet wird.                               |
-| `config` _(optional)_ `= {}` | `GetValuesConfig \| null \| undefined` | `headerRow`, `display`, `filter`, `offset`, `limit` und `mapper`. |
+| Parameter                    | Typ                                                                        | Beschreibung                                                                       |
+| :--------------------------- | :------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- |
+| `target`                     | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das zu lesende Blatt oder der zu lesende Bereich: geholt werden nur dessen Zellen. |
+| `config` _(optional)_ `= {}` | `GetValuesConfig \| null \| undefined`                                     | `headerRow`, `display`, `filter`, `offset`, `limit` und `mapper`.                  |
 
 ## Rückgabewert
 
@@ -34,9 +36,9 @@ Ist `headerRow` gesetzt, kommt jede Zeile als Objekt mit den Spaltennamen als Sc
 
 ## Ausnahmen
 
-| Ausnahme                | Bedingung                          |
-| :---------------------- | :--------------------------------- |
-| `InvalidSheetException` | das erste Argument ist kein Blatt. |
+| Ausnahme                | Bedingung                                                |
+| :---------------------- | :------------------------------------------------------- |
+| `InvalidSheetException` | das erste Argument weder ein Blatt noch ein Bereich ist. |
 
 ## Beispiele
 
@@ -51,6 +53,15 @@ const active = getValues(sheet, {
   mapper: (row) => row.email,
   limit: 100
 });
+```
+
+### Einen Block lesen
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only A1:C50 is fetched; the header is row 1 of the sheet.
+const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 ```
 
 ## Siehe auch

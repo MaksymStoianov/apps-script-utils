@@ -2,20 +2,25 @@
   "summary": "Reads the rows of a sheet, filtered, mapped and paged in one call.",
   "description": [
     "With `headerRow` set, each row arrives as an object keyed by the column names, which is what makes a filter readable: `row.status` instead of `row[4]`. Where a name repeats, the leftmost column wins.",
-    "`filter` narrows the rows, `offset` and `limit` page what is left, and `mapper` decides what each surviving row becomes. `display` reads the values as a person sees them — a formatted date as its text rather than as a `Date` — which is a different thing from what is stored, not a cosmetic switch."
+    "`filter` narrows the rows, `offset` and `limit` page what is left, and `mapper` decides what each surviving row becomes. `display` reads the values as a person sees them — a formatted date as its text rather than as a `Date` — which is a different thing from what is stored, not a cosmetic switch.",
+    "A sheet reads its whole data range; a range reads only itself, which is one service call over a block instead of over everything. Positions stay one-based on the sheet, so a row keeps its real number and `headerRow` names a row of the sheet, not an offset into the range."
   ],
   "params": {
-    "sheet": "The sheet to work on.",
+    "target": "The sheet to read, or the range to read: only its cells are fetched.",
     "config": "`headerRow`, `display`, `filter`, `offset`, `limit` and `mapper`."
   },
   "returns": "the rows that survived, in sheet order.",
   "throws": {
-    "InvalidSheetException": "the first argument is not a sheet."
+    "InvalidSheetException": "the first argument is neither a sheet nor a range."
   },
   "examples": [
     {
       "title": "Reading rows",
       "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nconst active = getValues(sheet, {\n  headerRow: 1,\n  filter: (row) => row.status === \"active\",\n  mapper: (row) => row.email,\n  limit: 100\n});\n```"
+    },
+    {
+      "title": "Reading one block",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only A1:C50 is fetched; the header is row 1 of the sheet.\nconst rows = getValues(sheet.getRange(\"A1:C50\"), { headerRow: 1 });\n```"
     }
   ],
   "seeAlso": [
