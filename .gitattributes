@@ -71,7 +71,12 @@ pnpm-lock.yaml     merge=binary
 # conflicts whenever two branches land between the same pair of neighbours.
 # The driver is registered by scripts/setup-merge-driver.sh, which `npm run
 # prepare` runs.
-docs/writerside/topics/reference-*.md merge=reference-tables
+#
+# The four translated projects carry the same generated tables — same headings,
+# same order, the function name in the first cell — so they need the same
+# treatment; without it the English table merges and the other four conflict.
+docs/writerside/topics/reference-*.md   merge=reference-tables
+docs/writerside-*/topics/reference-*.md merge=reference-tables
 
 # Merge the module index files entry by entry, for the same reason: a branch
 # flips one `// TODO:` line into an export, and two branches adding neighbouring
