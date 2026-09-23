@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a slug.",
+  "description": [
+    "Starts with a letter, then letters, digits, hyphens and underscores — the shape a URL segment or a key can take. Spaces, leading digits and an empty string are rejected.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a slug; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisValidSlug(\"my-page\"); // => true\nisValidSlug(\"a_1\"); // => true\nisValidSlug(\"1-page\"); // => false\nisValidSlug(\"my page\"); // => false\nisValidSlug(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSlug"
+    },
+    {
+      "name": "requireValidSlug"
+    }
+  ]
+}

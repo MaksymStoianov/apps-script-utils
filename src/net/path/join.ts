@@ -3,8 +3,16 @@ import { isString } from "../../lang";
 /**
  * Joins all given path segments into a single normalized path string.
  *
+ * @example
+ * ```javascript
+ * join("a", "b/c"); // => "a/b/c"
+ * join("a", "", "b"); // => "a/b"
+ * join("/a", "../b"); // => "/b"
+ * ```
+ *
  * @param       {...string} paths - A variable number of string path segments to join.
  * @returns     {string} A new string representing the joined, normalized, and URL-encoded path.
+ * @see [join on the documentation site](https://maksymstoianov.github.io/apps-script-utils/join.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

@@ -1,0 +1,25 @@
+{
+  "summary": "Вирішує, чи належить рядок до тих, з якими треба щось зробити.",
+  "description": [
+    "Отримує комірки рядка, його позицію від одиниці та — якщо вказано рядок заголовків — рядок із ключами за іменами стовпців, інакше `null`. Повернення `true` вибирає рядок."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Форма"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowConditionalOptions"
+    }
+  ]
+}

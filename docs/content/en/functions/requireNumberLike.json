@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value as a numeric value, or throws.",
+  "description": [
+    "A finite number, or a string that converts to one. `NaN`, the infinities and the empty string are excluded, which is what separates this from a bare `Number(value)`.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a numeric value.",
+  "throws": {
+    "IllegalArgumentException": "the value is not convertible to a number."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNumberLike(1); // => 1\nrequireNumberLike(\"1.5\"); // => \"1.5\"\nrequireNumberLike(NaN); // throws IllegalArgumentException\nrequireNumberLike(Infinity); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "nonNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

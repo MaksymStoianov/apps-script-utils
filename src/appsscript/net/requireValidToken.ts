@@ -4,11 +4,25 @@ import { isString } from "../../lang";
 /**
  * Ensures that a valid token is provided and matches the allowed keys.
  *
+ * @example
+ * ```javascript
+ * function doPost(event) {
+ *   const key = requireValidToken(
+ *     event.parameter.key,
+ *     PropertiesService.getScriptProperties().getProperty("API_KEYS").split(","),
+ *     "Unknown API key."
+ *   );
+ *
+ *   // … the request is from someone we know
+ * }
+ * ```
+ *
  * @param {unknown} token The token to check (may include "Bearer " prefix).
  * @param {string | string[] | Record<string, unknown>} allowedKeys A single key, an array of keys, or a record containing keys.
  * @param {string} [message="Invalid API key."] The error message to throw if the token is invalid.
  * @returns {string} The original token if validation succeeds.
  * @throws {AuthenticationException} If the token is missing or does not match any allowed keys.
+ * @see [requireValidToken on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidToken.html)
  * @since 1.5.0
  */
 export function requireValidToken(

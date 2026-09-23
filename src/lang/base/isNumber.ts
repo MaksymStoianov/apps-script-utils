@@ -1,10 +1,21 @@
 /**
  * Checks if the provided value is a number.
  *
+ * @example
+ * ```javascript
+ * isNumber(0); // => true
+ * isNumber(1.5); // => true
+ * isNumber(NaN); // => true
+ * isNumber(Infinity); // => true
+ * isNumber("1"); // => false
+ * isNumber(null); // => false
+ * ```
+ *
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a number; otherwise, `false`.
  * @see     {@link nonNumber}
  * @see     {@link isNumberLike}
+ * @see     [isNumber on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isNumber.html)
  * @since   1.0.0
  * @version 1.0.0
  */

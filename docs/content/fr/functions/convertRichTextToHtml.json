@@ -1,0 +1,27 @@
+{
+  "summary": "Rend une valeur de cellule en texte enrichi sous forme de HTML.",
+  "description": [
+    "Chaque segment de la valeur devient un span portant ses styles — graisse, italique, soulignement, barré, couleur, taille et famille — et un lien devient une ancre. Le texte lui-même est échappé : une cellule contenant `<b>` ressort comme du texte, pas comme du balisage."
+  ],
+  "params": {
+    "richText": "La valeur de texte enrichi à rendre."
+  },
+  "returns": "le HTML obtenu.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    },
+    {
+      "name": "isRichTextValue"
+    },
+    {
+      "name": "highlightHtml"
+    }
+  ]
+}

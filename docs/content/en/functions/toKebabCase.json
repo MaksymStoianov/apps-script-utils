@@ -1,0 +1,32 @@
+{
+  "summary": "Rewrites a string in kebab-case.",
+  "description": [
+    "Spaces and underscores become hyphens, a hyphen is inserted where a lower-case letter meets an upper-case one, and the result is lowered. That second rule is what splits `\"userFirstName\"` into three words.",
+    "`clean` removes anything that is not a letter, a digit or a hyphen; `trim` collapses the surrounding whitespace first."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty.",
+    "options": "`clean` removes the remaining punctuation; `trim` trims and collapses whitespace."
+  },
+  "returns": "the converted string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ntoKebabCase(\"Hello World\"); // => \"hello-world\"\ntoKebabCase(\"userFirstName\"); // => \"user-first-name\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toSnakeCase"
+    },
+    {
+      "name": "toCamelCase"
+    },
+    {
+      "name": "isValidSlug"
+    }
+  ]
+}

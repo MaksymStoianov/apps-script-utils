@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як аркуш або викидає виняток.",
+  "description": [
+    "У сервісного об'єкта Apps Script немає конструктора, з яким скрипт міг би порівняти значення, тому перевірка читає тег, який об'єкт повідомляє про себе сам: `value.toString() === \"Sheet\"`. Звичайний об'єкт з таким самим тегом теж пройде — на практиці це тестовий дубль.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як аркуш.",
+  "throws": {
+    "InvalidSheetException": "значення не є аркушем."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nrequireSheet(sheet); // => sheet\nrequireSheet({}); // throws InvalidSheetException\nrequireSheet(null); // throws InvalidSheetException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSheet"
+    },
+    {
+      "name": "nonSheet"
+    }
+  ]
+}

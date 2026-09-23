@@ -34,7 +34,9 @@ function sheetMock(values: unknown[][]): SheetMock {
 
         return values.map((row: unknown[]) => [...row]);
       },
-      getNumColumns: () => width
+      getNumColumns: () => width,
+      getRow: () => 1,
+      getColumn: () => 1
     }),
     getRange: (row: number, column: number, numRows: number, numColumns: number) => ({
       clearContent: () => {
@@ -44,6 +46,26 @@ function sheetMock(values: unknown[][]): SheetMock {
   } as unknown as GoogleAppsScript.Spreadsheet.Sheet;
 
   return { sheet, cleared, reads };
+}
+
+/**
+ * A stand-in range: knows where it sits and what it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  values: unknown[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => values.length,
+    getNumColumns: () => values[0].length,
+    getValues: () => values.map((cells) => [...cells])
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
 }
 
 describe("clearRowsByConditional", () => {
@@ -213,6 +235,50 @@ describe("clearRowsByConditional", () => {
       expect(() => clearRowsByConditional(sheet, () => true, { headerRow: 1.5 })).toThrow(
         IllegalArgumentException
       );
+    });
+  });
+
+  describe("Clearing within a range", () => {
+    it("should clear only the columns of the range", () => {
+      const { sheet, cleared } = sheetMock([
+        ["keep", "drop"],
+        ["keep", "keep"]
+      ]);
+
+      const count = clearRowsByConditional(
+        rangeMock(sheet, 4, 2, [["drop"], ["keep"]]),
+        (values) => values[0] === "drop"
+      );
+
+      expect(count).toBe(1);
+      expect(cleared).toEqual([{ row: 4, column: 2, numRows: 1, numColumns: 1 }]);
+    });
+
+    it("should give the predicate the position on the sheet, not in the range", () => {
+      const { sheet } = sheetMock([["a"]]);
+
+      const seen: number[] = [];
+
+      clearRowsByConditional(rangeMock(sheet, 10, 3, [["a"], ["b"]]), (values, position) => {
+        seen.push(position);
+
+        return false;
+      });
+
+      expect(seen).toEqual([10, 11]);
+    });
+
+    it("should not read the data range at all", () => {
+      const { sheet, reads } = sheetMock([["a"]]);
+
+      clearRowsByConditional(rangeMock(sheet, 1, 1, [["a"]]), () => false);
+
+      expect(reads.count).toBe(0);
+    });
+
+    it("should throw for a first argument that is neither a sheet nor a range", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => clearRowsByConditional("A1:B2", () => true)).toThrow(InvalidSheetException);
     });
   });
 });

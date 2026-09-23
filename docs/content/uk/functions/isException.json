@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення екземпляром `Exception`.",
+  "description": [
+    "Лише власна ієрархія бібліотеки. Звичайний `Error` не підходить — саме це робить перевірку корисною в `catch`, де треба відрізнити одне від іншого.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є екземпляром `Exception`; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisException(new IllegalArgumentException()); // => true\nisException(new Error()); // => false\nisException({}); // => false\nisException(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonException"
+    },
+    {
+      "name": "requireException"
+    },
+    {
+      "name": "requireNonException"
+    }
+  ]
+}

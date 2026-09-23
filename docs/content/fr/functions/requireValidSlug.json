@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que un slug, ou lève une exception.",
+  "description": [
+    "Commence par une lettre, puis lettres, chiffres, tirets et tirets bas — la forme que peut prendre un segment d'URL ou une clé. Les espaces, un chiffre initial et la chaîne vide sont refusés.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un slug.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un slug."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireValidSlug(\"my-page\"); // => \"my-page\"\nrequireValidSlug(\"a_1\"); // => \"a_1\"\nrequireValidSlug(\"1-page\"); // throws IllegalArgumentException\nrequireValidSlug(\"my page\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlug"
+    },
+    {
+      "name": "nonValidSlug"
+    }
+  ]
+}

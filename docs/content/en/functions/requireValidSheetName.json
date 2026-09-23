@@ -1,0 +1,30 @@
+{
+  "summary": "Returns the value as a sheet name, or throws.",
+  "description": [
+    "What Google Sheets accepts: at most 100 characters, not blank, none of `\\ / ? * [ ]`, and not the reserved name `history` in any case.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a sheet name.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a sheet name."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireValidSheetName(\"Data\"); // => \"Data\"\nrequireValidSheetName(\"Report 2026\"); // => \"Report 2026\"\nrequireValidSheetName(\"history\"); // throws IllegalArgumentException\nrequireValidSheetName(\"Data/2026\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetName"
+    },
+    {
+      "name": "nonValidSheetName"
+    }
+  ]
+}

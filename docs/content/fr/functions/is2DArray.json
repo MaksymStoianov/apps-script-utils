@@ -1,0 +1,34 @@
+{
+  "summary": "Vérifie qu'une valeur est un tableau non vide dont chaque élément est lui-même un tableau.",
+  "description": [
+    "C'est la forme que renvoie `Range#getValues` et celle qu'attend `Range#setValues` : des lignes faites de cellules. `is2DArray` ne répond qu'à la question de la forme — l'égalité des longueurs de ligne relève de [`isConsistent2DArray`](isConsistent2DArray.md).",
+    "Un tableau vide n'est **pas** bidimensionnel ici : il n'y a aucune ligne à examiner, et traiter `[]` comme une matrice est exactement ce qui laisse un résultat vide filer jusqu'à un appel `setValues` qui échoue ensuite. Rien d'autre n'est examiné, une matrice de types mélangés passe donc la vérification."
+  ],
+  "params": {
+    "arr": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un tableau non vide dont chaque élément est un tableau ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui compte comme bidimensionnel"
+    },
+    {
+      "title": "Protéger une valeur qui pourrait être une matrice"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "ajoute le contrôle de longueur des lignes."
+    },
+    {
+      "name": "non2DArray",
+      "note": "la même vérification, niée."
+    },
+    {
+      "name": "require2DArray",
+      "note": "lève une exception au lieu de répondre."
+    }
+  ]
+}

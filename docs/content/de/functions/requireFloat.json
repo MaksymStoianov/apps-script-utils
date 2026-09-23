@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als eine Zahl mit Nachkommateil zurück oder wirft.",
+  "description": [
+    "JavaScript hat einen einzigen Zahlentyp, `1.0` und `1` sind derselbe Wert: gefragt ist, ob zur Laufzeit ein Bruchteil übrig bleibt, nicht wie das Literal geschrieben wurde. Die Unendlichkeiten haben keinen Bruchteil und sind ausgeschlossen.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als eine Zahl mit Nachkommateil.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht eine Zahl mit Nachkommateil."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireFloat(1.5); // => 1.5\nrequireFloat(-0.1); // => -0.1\nrequireFloat(42); // throws IllegalArgumentException\nrequireFloat(1.0); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFloat"
+    },
+    {
+      "name": "nonFloat"
+    },
+    {
+      "name": "requireNonFloat"
+    }
+  ]
+}

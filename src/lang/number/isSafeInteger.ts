@@ -20,6 +20,7 @@ import { isNumber } from "../base";
  * @returns {boolean} `true` if the value is a safe integer, otherwise `false`.
  * @see     {@link isInteger}
  * @see     {@link isNumber}
+ * @see     [isSafeInteger on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isSafeInteger.html)
  * @since   1.11.0
  * @version 1.0.0
  */

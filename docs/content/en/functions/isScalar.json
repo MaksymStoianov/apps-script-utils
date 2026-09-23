@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is a scalar.",
+  "description": [
+    "A primitive that carries a single value: string, number, boolean, symbol or bigint. `null` and `undefined` are primitives too, but they carry no value and do not qualify.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a scalar; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisScalar(\"abc\"); // => true\nisScalar(1); // => true\nisScalar(true); // => true\nisScalar(10n); // => true\nisScalar({}); // => false\nisScalar([]); // => false\nisScalar(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

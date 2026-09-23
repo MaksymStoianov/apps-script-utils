@@ -1,0 +1,33 @@
+{
+  "summary": "Schreibt die Formeln eines Blattes um.",
+  "description": [
+    "Übergeben Sie eine Zuordnung, um Blattnamen pauschal zu ersetzen — der übliche Bedarf nach einer Umbenennung oder Kopie — oder eine Funktion, um jede Formel einzeln zu entscheiden. Die Funktion bekommt die Formel und gibt die zurückzuschreibende zurück.",
+    "Besucht werden nur Zellen mit Formeln, geschrieben nur die tatsächlich geänderten; ein Aufruf ohne Änderung kostet also einen Lesevorgang und sonst nichts.",
+    "Ein Blatt meint seinen ganzen Datenbereich; ein Bereich meint nur die Zellen darin, sodass sich ein Umschreiben auf einen Block beschränken lässt. Zeile und Spalte, die der Transformer erhält, sind in beiden Fällen Positionen im Blatt — erst das macht die Adresse der Formel selbst im Ersatz brauchbar."
+  ],
+  "params": {
+    "target": "Das Blatt, dessen Formeln umgeschrieben werden, oder der Bereich, innerhalb dessen umgeschrieben wird: nur dessen Zellen werden gelesen und geschrieben.",
+    "rewrite": "Eine Zuordnung von altem zu neuem Blattnamen oder eine Funktion, die eine Formel nimmt und ihren Ersatz zurückgibt."
+  },
+  "returns": "wie viele Formeln umgeschrieben wurden.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist."
+  },
+  "examples": [
+    {
+      "title": "Formeln umschreiben"
+    },
+    {
+      "title": "Innerhalb eines Blocks",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only the formulas in D2:D100 are rewritten.\nupdateFormulas(sheet.getRange(\"D2:D100\"), { \"=SUM(A2:A)\": \"=SUM(A2:A1000)\" });\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "Turns numeric character references back into characters.",
+  "description": [
+    "Decimal (`&#60;`) and hexadecimal (`&#x3C;`) references are decoded. Named entities are **not**: `\"&amp;\"` comes back unchanged, because this is the inverse of `encodeHtml`, which only ever emits numeric references."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty."
+  },
+  "returns": "the decoded string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ndecodeHtml(\"&#60;a&#62;\"); // => \"<a>\"\ndecodeHtml(\"&amp;\"); // => \"&amp;\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "encodeHtml"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

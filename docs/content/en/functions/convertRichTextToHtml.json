@@ -1,0 +1,28 @@
+{
+  "summary": "Renders a rich text cell value as HTML.",
+  "description": [
+    "Each run of the value becomes a span carrying the styles it had — weight, slant, underline, strikethrough, colour, size and family — and a link becomes an anchor. The text itself is escaped, so a cell holding `<b>` comes out as text and not as markup."
+  ],
+  "params": {
+    "richText": "The rich text value to render."
+  },
+  "returns": "the HTML.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst range = SpreadsheetApp.getActiveRange();\n\nconst html = convertRichTextToHtml(range.getRichTextValue());\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "escapeHtml"
+    },
+    {
+      "name": "isRichTextValue"
+    },
+    {
+      "name": "highlightHtml"
+    }
+  ]
+}

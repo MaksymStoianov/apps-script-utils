@@ -1,0 +1,39 @@
+{
+  "summary": "Removes duplicates from an array, keeping the first occurrence of each value.",
+  "description": [
+    "Values are compared with `SameValueZero`, the rule a `Set` uses: `NaN` deduplicates against `NaN`, which `===` never\ndoes, and `-0` collapses with `0`. Order is the order of first appearance, and the input is not modified.",
+    "Objects are compared by identity, so two objects with the same contents are two values. The optional `iteratee`\nproduces the key each value is compared by, which is how records are deduplicated by an id rather than by identity.\nWhen keys collide, the earlier value wins."
+  ],
+  "params": {
+    "array": "The array to deduplicate. Left untouched.",
+    "iteratee": "Produces the key a value is compared by. Values compare by themselves when omitted."
+  },
+  "returns": "a new array without duplicates, in the order of first appearance.",
+  "throws": {
+    "TypeError": "`array` is not an array."
+  },
+  "examples": [
+    {
+      "title": "Deduplicating values",
+      "body": "```javascript\nunique([1, 2, 2, 3]); // => [1, 2, 3]\nunique([\"a\", \"b\", \"a\"]); // => [\"a\", \"b\"]\nunique([NaN, NaN]); // => [NaN]\nunique([0, -0]); // => [0]\n```"
+    },
+    {
+      "title": "Deduplicating records by a key",
+      "body": "```typescript\nimport { unique } from \"apps-script-utils\";\n\nconst rows = [\n  { id: 1, name: \"first\" },\n  { id: 1, name: \"second\" },\n  { id: 2, name: \"third\" }\n];\n\nunique(rows, (row) => row.id); // => [{ id: 1, name: \"first\" }, { id: 2, name: \"third\" }]\n```"
+    },
+    {
+      "title": "Collecting the distinct values of a column",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"unique.ts\" include-symbol=\"listStatuses\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction listStatuses(sheet) {\n  const column = sheet.getRange(\"C2:C\").getValues().flat();\n  return unique(column.filter((status) => status !== \"\"));\n}\n</code-block>\n</tab>\n</tabs>"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "intersect",
+      "note": "the values shared by several arrays, also deduplicated."
+    },
+    {
+      "name": "without",
+      "note": "removes the values you name."
+    }
+  ]
+}

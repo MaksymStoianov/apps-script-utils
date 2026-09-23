@@ -1,0 +1,29 @@
+{
+  "summary": "Returns the range once it is known to lie within another, or throws.",
+  "description": [
+    "The assertion form of `isGridRangeContainedIn`. The default message names both ranges in A1 notation, which is what makes the failure readable in an execution log."
+  ],
+  "params": {
+    "range1": "The range being placed.",
+    "range2": "The range it is compared against.",
+    "message": "The message of the exception. A default naming both ranges is used when omitted."
+  },
+  "returns": "the first range, unchanged.",
+  "throws": {
+    "InvalidGridRangeException": "the first range is not contained in the second."
+  },
+  "examples": [
+    {
+      "title": "Guarding a write",
+      "body": "```javascript\nconst inner = { startRowIndex: 1, endRowIndex: 2, startColumnIndex: 1, endColumnIndex: 2 };\nconst outer = { startRowIndex: 0, endRowIndex: 5, startColumnIndex: 0, endColumnIndex: 5 };\n\nrequireGridRangeContainedIn(inner, outer); // => the inner range\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "nonGridRangeContainedIn"
+    }
+  ]
+}

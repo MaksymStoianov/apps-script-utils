@@ -1,0 +1,25 @@
+{
+  "summary": "Die Werte, die JavaScript in einem booleschen Kontext als falsch behandelt.",
+  "description": [
+    "`false`, `null`, `undefined`, `0`, `0n` und die leere Zeichenkette. Den Typ gibt es, damit `compact` sagen kann, was es entfernt, und ein verengtes Array ohne Cast zurückgibt; `NaN` ist ebenfalls unwahr, hat im Typ aber keinen Platz, denn sein Typ ist `number`."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact"
+    },
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "nonNil"
+    }
+  ]
+}

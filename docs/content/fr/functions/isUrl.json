@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est une URL.",
+  "description": [
+    "Une URL en `http`, `https` ou `ftp`, avec quelque chose après le schéma et aucun espace nulle part. Un hôte seul comme `\"example.com\"` n'en est pas une.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est une URL ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisUrl(\"https://example.com\"); // => true\nisUrl(\"http://example.com/a?b=1\"); // => true\nisUrl(\"example.com\"); // => false\nisUrl(\"https://\"); // => false\nisUrl(\"https://exa mple.com\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonUrl"
+    },
+    {
+      "name": "requireUrl"
+    }
+  ]
+}

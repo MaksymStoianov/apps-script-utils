@@ -1,10 +1,20 @@
 import { deleteColumnsByConditional } from "@/appsscript";
 import { IllegalArgumentException, InvalidSheetException } from "@/exception";
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+
+type Mutable = Record<string, unknown>;
+
+interface Shifted {
+  row: number;
+  column: number;
+  numRows: number;
+  numColumns: number;
+}
 
 interface SheetMock {
   sheet: GoogleAppsScript.Spreadsheet.Sheet;
   deleted: Array<[number, number]>;
+  shifted: Shifted[];
   reads: { count: number };
 }
 
@@ -14,6 +24,8 @@ interface SheetMock {
  */
 function sheetMock(values: unknown[][], maxColumns = 26): SheetMock {
   const deleted: Array<[number, number]> = [];
+
+  const shifted: Shifted[] = [];
 
   const reads = { count: 0 };
 
@@ -26,15 +38,50 @@ function sheetMock(values: unknown[][], maxColumns = 26): SheetMock {
 
         return values.map((row: unknown[]) => [...row]);
       },
-      getNumRows: () => values.length
+      getNumRows: () => values.length,
+      getRow: () => 1,
+      getColumn: () => 1
+    }),
+    getRange: (row: number, column: number, numRows: number, numColumns: number) => ({
+      deleteCells: () => {
+        shifted.push({ row, column, numRows, numColumns });
+      }
     }),
     deleteColumns: (position: number, howMany: number) => {
       deleted.push([position, howMany]);
     }
   } as unknown as GoogleAppsScript.Spreadsheet.Sheet;
 
-  return { sheet, deleted, reads };
+  return { sheet, deleted, shifted, reads };
 }
+
+/**
+ * A stand-in range: knows where it sits and what it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  values: unknown[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => values.length,
+    getNumColumns: () => values[0].length,
+    getValues: () => values.map((cells) => [...cells])
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
+}
+
+beforeEach(() => {
+  (globalThis as Mutable).SpreadsheetApp = { Dimension: { ROWS: "ROWS", COLUMNS: "COLUMNS" } };
+});
+
+afterEach(() => {
+  delete (globalThis as Mutable).SpreadsheetApp;
+});
 
 describe("deleteColumnsByConditional", () => {
   describe("Correct input data", () => {
@@ -163,6 +210,47 @@ describe("deleteColumnsByConditional", () => {
       expect(() => deleteColumnsByConditional(sheet, () => true, { headerColumn: 1.5 })).toThrow(
         IllegalArgumentException
       );
+    });
+  });
+
+  describe("Deleting within a range", () => {
+    it("should shift only the cells of the range left", () => {
+      const { sheet, shifted } = sheetMock([["a"]]);
+
+      const count = deleteColumnsByConditional(
+        rangeMock(sheet, 3, 2, [["drop", "keep"]]),
+        (values) => values[0] === "drop"
+      );
+
+      expect(count).toBe(1);
+      expect(shifted).toEqual([{ row: 3, column: 2, numRows: 1, numColumns: 1 }]);
+    });
+
+    it("should not delete any sheet column", () => {
+      const { sheet, deleted } = sheetMock([["a"]]);
+
+      deleteColumnsByConditional(rangeMock(sheet, 1, 1, [["drop"]]), () => true);
+
+      expect(deleted).toEqual([]);
+    });
+
+    it("should give the predicate the position on the sheet, not in the range", () => {
+      const { sheet } = sheetMock([["a"]]);
+
+      const seen: number[] = [];
+
+      deleteColumnsByConditional(rangeMock(sheet, 1, 6, [["a", "b"]]), (values, position) => {
+        seen.push(position);
+
+        return false;
+      });
+
+      expect(seen).toEqual([6, 7]);
+    });
+
+    it("should throw for a first argument that is neither a sheet nor a range", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => deleteColumnsByConditional("A1:B2", () => true)).toThrow(InvalidSheetException);
     });
   });
 });

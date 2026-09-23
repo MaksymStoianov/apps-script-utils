@@ -1,14 +1,21 @@
-import { IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isFunction, isNil, requireCountable } from "../../lang";
-import { requireSheet } from "./requireSheet";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
 
 /**
  * Decides whether a column is selected.
+ *
+ * @example
+ * ```javascript
+ * const predicate = (values) => values.every((cell) => cell === "");
+ * ```
  *
  * @param   {unknown[]} values - The column's cells, top to bottom.
  * @param   {number} position - The column's one-based position on the sheet.
  * @param   {Record<string, unknown> | null} record - The column keyed by the header column, or `null` when no header is configured.
  * @returns {boolean} `true` to select the column.
+ * @see [ColumnPredicate on the documentation site](https://maksymstoianov.github.io/apps-script-utils/ColumnPredicate.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -24,6 +31,12 @@ export type ColumnPredicate = (
  * The mirror of `RowConditionalOptions`: a sheet laid out in columns has its
  * names down the left rather than across the top.
  *
+ * @example
+ * ```javascript
+ * const options = { headerColumn: 1 };
+ * ```
+ *
+ * @see [ColumnConditionalOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/ColumnConditionalOptions.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -102,21 +115,24 @@ function toColumns(values: unknown[][]): Map<number, unknown[]> {
  * @param   {unknown[][]} values - Every row of the data range.
  * @param   {ColumnPredicate} predicate - Decides whether a column is selected.
  * @param   {number} headerColumn - The one-based header column, or `0` for none.
+ * @param   {number} firstColumn - The one-based sheet column the values start at.
  * @returns {number[]} The one-based positions of the matching columns, ascending.
  */
 function selectColumns(
   values: unknown[][],
   predicate: ColumnPredicate,
-  headerColumn: number
+  headerColumn: number,
+  firstColumn: number
 ): number[] {
   const columns: Map<number, unknown[]> = toColumns(values);
 
-  const headers: unknown[] = headerColumn === 0 ? [] : (columns.get(headerColumn - 1) ?? []);
+  const headers: unknown[] =
+    headerColumn === 0 ? [] : (columns.get(headerColumn - firstColumn) ?? []);
 
   const selected: number[] = [];
 
   for (const [index, column] of columns) {
-    const position: number = index + 1;
+    const position: number = firstColumn + index;
 
     if (position === headerColumn) {
       continue;
@@ -171,24 +187,33 @@ function selectColumns(
  * });
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The sheet to clear columns on.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet to clear columns on, or the range to clear within: only its cells are read, and only they are cleared.
  * @param       {ColumnPredicate} predicate - Decides whether a column is selected.
  * @param       {ColumnConditionalOptions | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {number} How many columns were cleared.
  * @throws      {@link IllegalArgumentException} If `predicate` is not a function, or `headerColumn` is not a positive integer.
- * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
+ * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link clearRowsByConditional}
  * @see         {@link deleteColumnsByConditional}
+ * @see         [clearColumnsByConditional on the documentation site](https://maksymstoianov.github.io/apps-script-utils/clearColumnsByConditional.html)
+ * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0
- * @version     1.0.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  */
 export function clearColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number {
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   if (!isFunction(predicate)) {
     throw new IllegalArgumentException("Expected 'predicate' to be a function.");
@@ -204,16 +229,18 @@ export function clearColumnsByConditional(
     }
   }
 
-  const range: GoogleAppsScript.Spreadsheet.Range = sheet.getDataRange();
+  const range: GoogleAppsScript.Spreadsheet.Range = within ?? sheet.getDataRange();
 
   const values: unknown[][] = range.getValues();
 
   const height: number = range.getNumRows();
 
-  const selected: number[] = selectColumns(values, predicate, headerColumn);
+  const firstRow: number = range.getRow();
+
+  const selected: number[] = selectColumns(values, predicate, headerColumn, range.getColumn());
 
   for (const block of toBlocks(selected)) {
-    sheet.getRange(1, block.start, height, block.count).clearContent();
+    sheet.getRange(firstRow, block.start, height, block.count).clearContent();
   }
 
   return selected.length;

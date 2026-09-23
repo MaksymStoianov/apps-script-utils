@@ -1,0 +1,29 @@
+{
+  "summary": "Interrompt l'appel si l'utilisateur courant n'est pas administrateur Workspace.",
+  "description": [
+    "La forme assertive d'`isAdmin`, à placer en tête de toute opération destructrice. Elle ne renvoie rien : soit l'appel continue, soit il s'arrête."
+  ],
+  "params": {
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé."
+  },
+  "returns": "rien ; l'appel passe ou lève.",
+  "throws": {
+    "AuthorizationException": "l'utilisateur actif n'est pas administrateur."
+  },
+  "examples": [
+    {
+      "title": "Garder une action"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAdmin"
+    },
+    {
+      "name": "nonAdmin"
+    },
+    {
+      "name": "AuthorizationException"
+    }
+  ]
+}

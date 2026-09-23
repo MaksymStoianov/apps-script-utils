@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение строкой.",
+  "description": [
+    "Проверяется `typeof value === \"string\"`, поэтому пустая строка подходит, а объект `String` — нет, он объект.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является строкой; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisString(\"\"); // => true\nisString(\"abc\"); // => true\nisString(1); // => false\nisString(null); // => false\nisString([]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "requireNonString"
+    }
+  ]
+}

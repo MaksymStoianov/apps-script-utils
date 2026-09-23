@@ -4,10 +4,20 @@ import { ParsedPath } from "./types";
 /**
  * Returns an object from a url string.
  *
+ * @example
+ * ```javascript
+ * parse("/a/b/c.txt");
+ * // => { root: "/", dir: "/a/b", base: "c.txt", name: "c", ext: ".txt" }
+ *
+ * parse("readme.md");
+ * // => { base: "readme.md", name: "readme", ext: ".md" }
+ * ```
+ *
  * @param       {string} path - The URL path string to evaluate.
  * @returns     {ParsedPath} An object conforming to {@link ParsedPath} type with the extracted components.
  * @throws      {@link EmptyStringException}
  * @see         {@link ParsedPath}
+ * @see         [parse on the documentation site](https://maksymstoianov.github.io/apps-script-utils/parse.html)
  * @environment `Google Apps Script`, `Browser`
  */
 export function parse(path: string): ParsedPath {

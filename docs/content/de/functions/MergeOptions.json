@@ -1,0 +1,23 @@
+{
+  "summary": "Wie `merge` eine Vorlage füllt.",
+  "description": [
+    "`onMissing` entscheidet über einen Platzhalter ohne Schlüssel: `\"keep\"` — die Vorgabe — lässt ihn in der Ausgabe stehen, wo er sichtbar und nachvollziehbar ist; `\"empty\"` setzt nichts ein, was in etwas, das ein Leser sieht, aufgeräumter wirkt.",
+    "`escape` ist eine Funktion, die auf jeden eingesetzten Wert angewendet wird — `escapeHtml`, wenn das Ergebnis in eine Seite geht."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "merge"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

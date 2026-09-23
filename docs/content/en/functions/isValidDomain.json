@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether a value is a domain name.",
+  "description": [
+    "Labels separated by single dots, with no leading or trailing dot or hyphen and no empty label. It is a syntax check: whether the domain resolves is another question.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a domain name; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisValidDomain(\"example.com\"); // => true\nisValidDomain(\"sub.example.co.uk\"); // => true\nisValidDomain(\"-example.com\"); // => false\nisValidDomain(\"example..com\"); // => false\nisValidDomain(\"example.com.\"); // => false\nisValidDomain(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

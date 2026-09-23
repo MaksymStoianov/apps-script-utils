@@ -1,0 +1,35 @@
+{
+  "summary": "Takes the last element of an array, or its last n elements in their original order.",
+  "description": [
+    "This is what `array[array.length - 1]` is written for — an expression that yields `undefined` on an empty array\nwhile looking like it meant something else. `last` says it plainly and returns `undefined` in the same case.",
+    "The `n` form takes from the end but preserves the original order: `last([1, 2, 3], 2)` is `[2, 3]`, not `[3, 2]`.\n`n` is clamped, so a negative count yields an empty array and a count beyond the length yields the whole array. The\ninput is not modified."
+  ],
+  "params": {
+    "array": "The array to read from. Left untouched.",
+    "n": "How many elements to take. An integer; omit it to take a single one."
+  },
+  "returns": "`T | undefined` when `n` is omitted — the last element, or `undefined` for an empty array. `T[]` when `n` is given — a new array of at most `n` elements, in their original order.",
+  "throws": {
+    "TypeError": ["`array` is not an array.", "`n` is given and is not an integer."]
+  },
+  "examples": [
+    {
+      "title": "One element, or several",
+      "body": "```javascript\nlast([1, 2, 3]); // => 3\nlast([]); // => undefined\nlast([1, 2, 3], 2); // => [2, 3] — order preserved\n```"
+    },
+    {
+      "title": "Reading the most recent entries of a log sheet",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"last.ts\" include-symbol=\"logRecentEntries\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction logRecentEntries(sheet) {\n  const rows = sheet.getDataRange().getValues().slice(1);\n  for (const row of last(rows, 10)) {\n    Logger.log(row.join(\" | \"));\n  }\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "Clamping",
+      "body": "```javascript\nlast([1, 2], 10); // => [1, 2]\nlast([1, 2], -1); // => []\nlast([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "first",
+      "note": "the same two forms, taken from the start."
+    }
+  ]
+}

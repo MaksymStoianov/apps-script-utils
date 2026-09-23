@@ -1,0 +1,25 @@
+{
+  "summary": "Один стовпець схеми аркуша.",
+  "description": [
+    "`name` — заголовок, який пишеться в рядок заголовків; `type` каже, що в стовпці лежить, і саме з нього `insertSchema` робить форматування та перевірку даних. Стовпець без типу лишається без обмежень."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Форма"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "SheetSchema"
+    },
+    {
+      "name": "SheetColumnType"
+    },
+    {
+      "name": "insertSchema"
+    }
+  ]
+}

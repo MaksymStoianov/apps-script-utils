@@ -1,0 +1,26 @@
+{
+  "summary": "Checks whether one grid range is **not** entirely within another.",
+  "description": [
+    "The negation of `isGridRangeContainedIn`, written so that a guard clause reads as a sentence: a range that overlaps only partly, or lies elsewhere entirely, both answer `true`."
+  ],
+  "params": {
+    "range1": "The range being placed.",
+    "range2": "The range it is compared against."
+  },
+  "returns": "`true` when the first range is not inside the second.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Checking containment",
+      "body": "```javascript\nconst inner = { startRowIndex: 1, endRowIndex: 2, startColumnIndex: 1, endColumnIndex: 2 };\nconst outer = { startRowIndex: 0, endRowIndex: 5, startColumnIndex: 0, endColumnIndex: 5 };\n\nnonGridRangeContainedIn(outer, inner); // => true\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "requireGridRangeContainedIn"
+    }
+  ]
+}

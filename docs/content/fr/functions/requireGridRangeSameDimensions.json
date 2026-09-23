@@ -1,0 +1,28 @@
+{
+  "summary": "Renvoie la plage une fois établi que les deux ont la même taille, ou lève.",
+  "description": [
+    "La forme assertive d'`isGridRangeSameDimensions`. Le message par défaut indique les deux tailles : une copie mal dimensionnée dit donc de combien elle s'écarte."
+  ],
+  "params": {
+    "range1": "La première plage.",
+    "range2": "La seconde plage.",
+    "message": "Le message de l'exception. À défaut, un message indiquant les deux tailles est utilisé."
+  },
+  "returns": "la première plage, inchangée.",
+  "throws": {
+    "InvalidGridRangeException": "les deux plages n'ont pas la même taille."
+  },
+  "examples": [
+    {
+      "title": "Garder une copie"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeSameDimensions"
+    },
+    {
+      "name": "nonGridRangeSameDimensions"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "Les valeurs que JavaScript traite comme fausses dans un contexte booléen.",
+  "description": [
+    "`false`, `null`, `undefined`, `0`, `0n` et la chaîne vide. Le type existe pour que `compact` puisse dire ce qu'il retire et renvoyer un tableau restreint sans cast ; `NaN` est également faux mais n'a pas sa place dans un type, puisque son type est `number`."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact"
+    },
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "nonNil"
+    }
+  ]
+}

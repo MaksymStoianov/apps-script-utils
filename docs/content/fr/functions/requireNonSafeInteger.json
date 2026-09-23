@@ -1,0 +1,33 @@
+{
+  "summary": "Renvoie la valeur après avoir vérifié qu'elle n'est pas un entier sûr.",
+  "description": [
+    "Un entier qu'un double IEEE-754 représente exactement. Au-delà, des entiers mathématiques distincts se confondent et l'arithmétique cesse discrètement d'être exacte.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur ; après le test, elle n'est pas un entier sûr.",
+  "throws": {
+    "IllegalArgumentException": "la valeur est un entier sûr."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireNonSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => Number.MAX_SAFE_INTEGER + 2\nrequireNonSafeInteger(1.5); // => 1.5\nrequireNonSafeInteger(42); // throws IllegalArgumentException\nrequireNonSafeInteger(Number.MAX_SAFE_INTEGER); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "nonSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    }
+  ]
+}

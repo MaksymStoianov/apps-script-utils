@@ -1,10 +1,22 @@
-import { IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isFunction, isNil, requireCountable } from "../../lang";
-import { requireSheet } from "./requireSheet";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
 
 /**
  * A row, as the predicate and the mapper see it.
  *
+ * @example
+ * ```javascript
+ * // What a filter receives when `headerRow` is set.
+ * const row = {
+ *   values: ["7", "ada@example.com"],
+ *   position: 2,
+ *   record: { id: "7", email: "ada@example.com" }
+ * };
+ * ```
+ *
+ * @see [Row on the documentation site](https://maksymstoianov.github.io/apps-script-utils/Row.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -28,6 +40,16 @@ export interface Row {
 /**
  * How {@link getValues} reads, narrows and shapes the data.
  *
+ * @example
+ * ```javascript
+ * const config = {
+ *   headerRow: 1,
+ *   filter: (row) => row.record.status === "active",
+ *   limit: 100
+ * };
+ * ```
+ *
+ * @see [GetValuesConfig on the documentation site](https://maksymstoianov.github.io/apps-script-utils/GetValuesConfig.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -112,21 +134,28 @@ export interface GetValuesConfig {
  * ```
  *
  * @template    T - What each element of the result is, once a mapper has had its say.
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The sheet to read.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet to read, or the range to read: only its cells are fetched, and the rest of the sheet is not.
  * @param       {GetValuesConfig | null} [config] - How to read, narrow and shape the data.
  * @returns     {T[]} The rows: arrays, or objects when a header row is configured, or whatever the mapper returns.
  * @throws      {@link IllegalArgumentException} If any of the configured values is of the wrong kind.
- * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
+ * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+ * @see         [getValues on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getValues.html)
  * @since       1.11.0
- * @version     1.0.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  */
 export function getValues<T = unknown>(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   config: GetValuesConfig | null | undefined = {}
 ): T[] {
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   const {
     headerRow = 0,
@@ -159,16 +188,21 @@ export function getValues<T = unknown>(
     throw new IllegalArgumentException("Expected 'mapper' to be a function.");
   }
 
-  const range: GoogleAppsScript.Spreadsheet.Range = sheet.getDataRange();
+  const range: GoogleAppsScript.Spreadsheet.Range = within ?? sheet.getDataRange();
 
   const raw: unknown[][] = display ? range.getDisplayValues() : range.getValues();
 
-  const [headers = []]: unknown[][] = headerRow === 0 ? [[]] : raw.slice(headerRow - 1, headerRow);
+  const firstRow: number = range.getRow();
+
+  const headerIndex: number = headerRow === 0 ? 0 : headerRow - firstRow;
+
+  const [headers = []]: unknown[][] =
+    headerRow === 0 || headerIndex < 0 ? [[]] : raw.slice(headerIndex, headerIndex + 1);
 
   const rows: Row[] = [];
 
   for (const [index, values] of raw.entries()) {
-    const position: number = index + 1;
+    const position: number = firstRow + index;
 
     // Everything from the header row upwards is heading, not data: a title
     // above the column names is not a row anyone asked for.

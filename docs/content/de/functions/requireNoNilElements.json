@@ -1,0 +1,35 @@
+{
+  "summary": "Gibt die Sammlung unverändert zurück, nachdem geprüft wurde, dass kein Element `null` oder `undefined` ist.",
+  "description": [
+    "Eine Sammlung mit einer Lücke besteht jede andere Prüfung: sie ist nicht null, nicht leer und ein gültiges Array. Die Lücke zeigt sich viel später als leere Zelle oder als `Cannot read properties of undefined`. Diese Prüfung fängt sie an der Grenze ab und gibt die Sammlung ohne die Nil-Werte im Typ zurück.",
+    "Akzeptiert werden ein Array, ein `Set` oder eine `Map` — bei einer `Map` werden die **Werte** geprüft, nicht die Schlüssel. Eine Sammlung, die selbst `null` oder `undefined` ist, geht unverändert durch: dieser Fall gehört zu `requireNonNull`, und zwei gestapelte Prüfungen sollen ihn nicht doppelt melden. Eine leere Sammlung besteht. Geprüft wird nur die oberste Ebene. Lücken im Array zählen als `undefined`, `[1, , 3]` wird also abgelehnt."
+  ],
+  "params": {
+    "values": "Die zu prüfende Sammlung.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet."
+  },
+  "returns": "dieselbe Sammlung, im Elementtyp ohne `null` und `undefined`.",
+  "throws": {
+    "IllegalArgumentException": [
+      "ein Element ist `null` oder `undefined`.",
+      "`values` ist weder Array noch `Set` noch `Map`."
+    ]
+  },
+  "examples": [
+    {
+      "title": "Eine Zeile vor dem Schreiben prüfen"
+    },
+    {
+      "title": "Den Elementtyp verengen"
+    },
+    {
+      "title": "Was besteht und was wirft"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact",
+      "note": "entfernt die leeren Werte, statt sie abzulehnen."
+    }
+  ]
+}

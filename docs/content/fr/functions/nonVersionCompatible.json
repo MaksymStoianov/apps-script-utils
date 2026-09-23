@@ -1,0 +1,25 @@
+{
+  "summary": "Vérifie qu'une version reste en deçà de celle requise.",
+  "description": [
+    "La négation d'`isVersionCompatible`, pour la clause de garde qui s'arrête tôt quand l'environnement est trop ancien."
+  ],
+  "params": {
+    "currentVersion": "La version dont on dispose.",
+    "requiredVersion": "Le minimum acceptable."
+  },
+  "returns": "`true` si la version disponible est inférieure à celle requise.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Sortir tôt"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "requireVersionCompatible"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "summary": "Une unité dans laquelle exprimer un intervalle.",
+  "description": [
+    "`\"millisecond\"`, `\"second\"`, `\"minute\"` et `\"hour\"` sont des multiples fixes de la milliseconde. `\"day\"`, `\"month\"` et `\"year\"` sont des unités calendaires sans longueur fixe : un jour fait 23 ou 25 heures lors d'un changement d'heure, et un mois de 28 à 31 jours.",
+    "Laquelle des deux lectures s'applique est indiquée sur la page de chaque fonction : `diff` compte des unités calendaires entières, `offset` décale de ces unités et ramène le quantième en fin de mois lorsqu'il le faut."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "diff"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

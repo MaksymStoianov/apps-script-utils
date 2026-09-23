@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является значением `null`.",
+  "description": [
+    "`nonNull(value)` — та же проверка, что и `!isNull(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Строго `null`. `undefined` — отдельный случай, оба сразу покрывает `isNil`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является значением `null`; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonNull(undefined); // => true\nnonNull(0); // => true\nnonNull(\"\"); // => true\nnonNull(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNull"
+    },
+    {
+      "name": "requireNull"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

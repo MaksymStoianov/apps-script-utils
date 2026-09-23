@@ -24,6 +24,7 @@ import { isEmpty } from "./isEmpty";
  * @throws   {@link IllegalArgumentException} If the value is not empty.
  * @see      {@link isEmpty}
  * @see      {@link nonEmpty}
+ * @see      [requireEmpty on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireEmpty.html)
  * @since    1.11.0
  * @version  1.0.0
  */

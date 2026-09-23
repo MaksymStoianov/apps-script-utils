@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als `null` oder `undefined` zurück oder wirft.",
+  "description": [
+    "Nur die abwesenden Werte: `0`, `\"\"` und `false` sind vorhandene Werte und zählen nicht.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als `null` oder `undefined`.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht `null` oder `undefined`."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNil(null); // => null\nrequireNil(undefined); // => undefined\nrequireNil(0); // throws IllegalArgumentException\nrequireNil(\"\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNil"
+    },
+    {
+      "name": "nonNil"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

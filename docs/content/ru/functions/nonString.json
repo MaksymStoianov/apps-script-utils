@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является строкой.",
+  "description": [
+    "`nonString(value)` — та же проверка, что и `!isString(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Проверяется `typeof value === \"string\"`, поэтому пустая строка подходит, а объект `String` — нет, он объект.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является строкой; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonString(1); // => true\nnonString(null); // => true\nnonString([]); // => true\nnonString(\"\"); // => false\nnonString(\"abc\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "requireNonString"
+    }
+  ]
+}

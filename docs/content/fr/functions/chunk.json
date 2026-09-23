@@ -1,0 +1,32 @@
+{
+  "summary": "Découpe un tableau en groupes consécutifs de taille fixe, en validant les deux arguments.",
+  "description": [
+    "`chunk` parcourt le tableau une seule fois et le découpe en groupes de `size` éléments. Quand la longueur ne tombe pas juste, le dernier groupe contient le reste et se trouve plus court que les autres. Le tableau d'entrée n'est jamais modifié.",
+    "Les deux arguments sont validés avant tout travail : une entrée qui n'est pas un tableau, ou un `size` fractionnaire, lèvent une erreur plutôt que de produire un résultat discrètement faux. Un `size` nul ou négatif, comme une entrée vide, donnent `[]` et non des groupes vides."
+  ],
+  "params": {
+    "array": "Le tableau à découper. Il n'est pas modifié.",
+    "size": "La longueur de chaque groupe. Un entier ; `1` par défaut."
+  },
+  "returns": "un nouveau tableau de groupes. Tous sauf le dernier contiennent exactement `size` éléments.",
+  "throws": {
+    "TypeError": ["`array` n'est pas un tableau.", "`size` n'est pas un entier."]
+  },
+  "examples": [
+    {
+      "title": "Découper en groupes de taille fixe"
+    },
+    {
+      "title": "Écrire une grande plage par lots"
+    },
+    {
+      "title": "Cas limites"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "transpose",
+      "note": "échange les lignes et les colonnes d'une matrice."
+    }
+  ]
+}

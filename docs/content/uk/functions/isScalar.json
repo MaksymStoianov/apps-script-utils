@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення скалярним значенням.",
+  "description": [
+    "Примітив, що несе одне значення: рядок, число, логічне значення, символ або bigint. `null` і `undefined` теж примітиви, але значення не несуть і не підходять.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є скалярним значенням; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisScalar(\"abc\"); // => true\nisScalar(1); // => true\nisScalar(true); // => true\nisScalar(10n); // => true\nisScalar({}); // => false\nisScalar([]); // => false\nisScalar(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

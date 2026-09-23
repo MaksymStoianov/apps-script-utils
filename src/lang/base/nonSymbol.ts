@@ -3,10 +3,19 @@ import { isSymbol } from "./isSymbol";
 /**
  * Checks if the provided value is NOT `Symbol`.
  *
+ * @example
+ * ```javascript
+ * nonSymbol("id"); // => true
+ * nonSymbol(null); // => true
+ * nonSymbol(Symbol("id")); // => false
+ * nonSymbol(Symbol.iterator); // => false
+ * ```
+ *
  * @template T
  * @param   {T | symbol} value - The value to check.
  * @returns {boolean} `true` if the value is not `Symbol`; otherwise, `false`.
  * @see     {@link isSymbol}
+ * @see     [nonSymbol on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonSymbol.html)
  * @since   1.4.0
  * @version 1.0.0
  */

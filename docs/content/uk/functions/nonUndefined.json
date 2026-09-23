@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є значенням `undefined`.",
+  "description": [
+    "`nonUndefined(value)` — та сама перевірка, що й `!isUndefined(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Перевіряється `typeof value === \"undefined\"` — на відміну від прямого порівняння, це безпечно навіть для неоголошеної змінної.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є значенням `undefined`; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonUndefined(null); // => true\nnonUndefined(0); // => true\nnonUndefined(\"\"); // => true\nnonUndefined(undefined); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isUndefined"
+    },
+    {
+      "name": "requireUndefined"
+    },
+    {
+      "name": "requireNonUndefined"
+    }
+  ]
+}

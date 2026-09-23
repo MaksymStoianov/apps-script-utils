@@ -1,0 +1,28 @@
+{
+  "summary": "Raises a string to upper case, optionally tidying its whitespace.",
+  "description": [
+    "The counterpart of `toLowerCase`, with the same validation and the same optional `trim`."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty.",
+    "options": "`trim` trims the string and collapses runs of whitespace into single spaces."
+  },
+  "returns": "the upper-cased string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ntoUpperCase(\"Hello\"); // => \"HELLO\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toLowerCase"
+    },
+    {
+      "name": "toProperCase"
+    }
+  ]
+}

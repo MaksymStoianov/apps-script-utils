@@ -1,0 +1,29 @@
+{
+  "summary": "Écrit une propriété imbriquée par chemin, en créant ce qui manque.",
+  "description": [
+    "Les maillons manquants sont créés en chemin : un segment numérique fabrique un tableau, un segment textuel un objet. `setPath({}, [\"rows\", 0, \"id\"], 7)` donne donc `{ rows: [{ id: 7 }] }`.",
+    "**La cible est modifiée sur place** puis renvoyée : l'appel s'insère dans une expression mais ne copie rien."
+  ],
+  "params": {
+    "target": "L'objet où écrire. Il est modifié.",
+    "path": "Une chaîne pointée, ou un tableau de clés et d'indices.",
+    "value": "La valeur à écrire."
+  },
+  "returns": "le même objet, portant désormais la valeur.",
+  "throws": {
+    "IllegalArgumentException": "la cible n'est pas un objet, ou le chemin est vide."
+  },
+  "examples": [
+    {
+      "title": "Écriture"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getPath"
+    },
+    {
+      "name": "flat"
+    }
+  ]
+}

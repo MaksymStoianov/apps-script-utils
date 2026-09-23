@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est un nombre avec une partie fractionnaire.",
+  "description": [
+    "Un synonyme de la famille `Float`, sous le nom auquel on pense d'abord. En JavaScript, tout nombre est déjà un double : `double` ne désigne aucun cas particulier à l'exécution.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un nombre avec une partie fractionnaire ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisDouble(1.5); // => true\nisDouble(-0.1); // => true\nisDouble(42); // => false\nisDouble(1.0); // => false\nisDouble(Infinity); // => false\nisDouble(\"1.5\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonDouble"
+    },
+    {
+      "name": "requireDouble"
+    },
+    {
+      "name": "requireNonDouble"
+    }
+  ]
+}

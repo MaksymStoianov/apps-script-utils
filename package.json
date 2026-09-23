@@ -14,14 +14,25 @@
   "scripts": {
     "prepare": "husky && bash ./scripts/setup-merge-driver.sh",
     "dev": "vitest",
-    "type:check": "tsc --noEmit",
+    "type:check": "tsc --noEmit && tsc --noEmit -p config/tsconfig.docs.json",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "vitest run",
     "build": "rm -rf dist/* && tsc -b --force",
-    "build:gas": "npm run build && node scripts/gas/bundle.mjs scripts/gas/Library.js"
+    "build:gas": "npm run build && node scripts/gas/bundle.mjs scripts/gas/Library.js",
+    "docs:generate": "node scripts/docs/generate-topics.mjs",
+    "docs:check": "node scripts/docs/generate-topics.mjs --check",
+    "docs:search-index": "node scripts/docs/build-search-index.mjs",
+    "docs:finalize-site": "node scripts/docs/finalize-site.mjs",
+    "docs:author": "node scripts/docs/author-guards.mjs && node scripts/docs/author-exceptions.mjs && node scripts/docs/author-batch.mjs",
+    "docs:author-guards": "node scripts/docs/author-guards.mjs",
+    "docs:author-exceptions": "node scripts/docs/author-exceptions.mjs",
+    "docs:author-batch": "node scripts/docs/author-batch.mjs",
+    "docs:verify-examples": "node scripts/docs/verify-examples.mjs",
+    "docs:sync-examples": "node scripts/docs/sync-jsdoc-examples.mjs",
+    "docs:sync-links": "node scripts/docs/sync-jsdoc-links.mjs"
   },
   "repository": {
     "type": "git",

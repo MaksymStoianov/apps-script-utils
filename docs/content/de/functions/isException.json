@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine `Exception` ist.",
+  "description": [
+    "Nur die eigene Hierarchie der Bibliothek. Ein einfacher `Error` zählt nicht — genau das macht die Prüfung in einem `catch` nützlich, das beide unterscheiden muss.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine `Exception` ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisException(new IllegalArgumentException()); // => true\nisException(new Error()); // => false\nisException({}); // => false\nisException(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonException"
+    },
+    {
+      "name": "requireException"
+    },
+    {
+      "name": "requireNonException"
+    }
+  ]
+}

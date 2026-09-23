@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение как числовое значение или выбрасывает исключение.",
+  "description": [
+    "Конечное число или строка, которая в него превращается. `NaN`, бесконечности и пустая строка исключены — этим проверка и отличается от простого `Number(value)`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как числовое значение.",
+  "throws": {
+    "IllegalArgumentException": "значение не является преобразуемым в число."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireNumberLike(1); // => 1\nrequireNumberLike(\"1.5\"); // => \"1.5\"\nrequireNumberLike(NaN); // throws IllegalArgumentException\nrequireNumberLike(Infinity); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "nonNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

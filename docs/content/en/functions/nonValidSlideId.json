@@ -1,0 +1,27 @@
+{
+  "summary": "Checks whether a value is **not** a slide id.",
+  "description": [
+    "`nonValidSlideId(value)` is the same test as `!isValidSlideId(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Letters, digits, hyphens and underscores, at least one of them. Slide ids are short — `p1` is a perfectly ordinary one — so no minimum length is imposed.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a slide id; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonValidSlideId(\"has space\"); // => true\nnonValidSlideId(\"\"); // => true\nnonValidSlideId(\"p1\"); // => false\nnonValidSlideId(\"SLIDES_api123\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlideId"
+    },
+    {
+      "name": "requireValidSlideId"
+    }
+  ]
+}

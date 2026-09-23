@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert eine Tabellen-Id ist.",
+  "description": [
+    "Mindestens 25 Zeichen aus Buchstaben, Ziffern, Bindestrichen und Unterstrichen — die Id, die in der Tabellen-URL zwischen `/d/` und `/edit` steht. Es wird nichts abgerufen, geprüft wird nur das Format.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Tabellen-Id ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => true\nisValidSpreadsheetId(\"short-id\"); // => false\nisValidSpreadsheetId(\"has space in it and is long enough to pass\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSpreadsheetId"
+    },
+    {
+      "name": "requireValidSpreadsheetId"
+    }
+  ]
+}

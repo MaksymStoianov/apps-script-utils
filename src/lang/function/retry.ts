@@ -4,7 +4,18 @@ import { isFunction } from "../base";
 /**
  * Options for {@link retry}.
  *
+ * @example
+ * ```javascript
+ * const options = {
+ *   attempts: 4,
+ *   delay: 500,
+ *   multiplier: 2,
+ *   maxDelay: 10000
+ * };
+ * ```
+ *
  * @property {number} [attempts=3] - Total number of attempts, including the first.
+ * @see [RetryOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RetryOptions.html)
  */
 export interface RetryOptions {
   attempts?: number;
@@ -93,6 +104,7 @@ function requireNonNegative(value: number, name: string): void {
  * @throws      {IllegalArgumentException} If `fn` is not a function or an option is out of range.
  * @throws      {unknown} The last error, once the attempts are exhausted or `shouldRetry` declines.
  * @see         {@link RetryOptions}
+ * @see         [retry on the documentation site](https://maksymstoianov.github.io/apps-script-utils/retry.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

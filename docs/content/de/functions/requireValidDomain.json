@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als einen Domainnamen zurück oder wirft.",
+  "description": [
+    "Labels, durch einzelne Punkte getrennt, ohne führenden oder abschließenden Punkt oder Bindestrich und ohne leeres Label. Eine Syntaxprüfung: ob die Domain auflöst, ist eine andere Frage.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als einen Domainnamen.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein Domainname."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireValidDomain(\"example.com\"); // => \"example.com\"\nrequireValidDomain(\"sub.example.co.uk\"); // => \"sub.example.co.uk\"\nrequireValidDomain(\"-example.com\"); // throws IllegalArgumentException\nrequireValidDomain(\"example..com\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "nonValidDomain"
+    }
+  ]
+}

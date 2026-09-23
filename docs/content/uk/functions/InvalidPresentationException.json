@@ -1,0 +1,25 @@
+{
+  "summary": "Очікувалася презентація, а значення нею не є.",
+  "description": [
+    "Очікувалася презентація, а значення нею не є.",
+    "Кидається функціями [`requirePresentation`](requirePresentation.md).",
+    "Будь-який клас цієї ієрархії приймає необов'язкове повідомлення, інший виняток, чиє повідомлення буде перевикористано, або взагалі нічого. `isException` розпізнає їх усі; звичайний `Error` до них не належить."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Кинути й упіймати",
+      "body": "```javascript\nthrow new InvalidPresentationException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof InvalidPresentationException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

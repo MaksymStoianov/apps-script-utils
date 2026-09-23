@@ -1,0 +1,24 @@
+{
+  "summary": "Convertit une lettre de colonne en son indice à base zéro.",
+  "description": [
+    "Les indices comptent à partir de zéro, comme un `GridRange` ; les positions à partir de un, comme `getRange(row, column)`. Les confondre est la source habituelle d'un décalage d'une unité dans un script de feuille de calcul, d'où l'existence des deux paires sous des noms distincts."
+  ],
+  "params": {
+    "letter": "La lettre de colonne, dans n'importe quelle casse."
+  },
+  "returns": "l'indice à base zéro.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getColumnLetterByIndex"
+    },
+    {
+      "name": "getColumnPositionByLetter"
+    }
+  ]
+}

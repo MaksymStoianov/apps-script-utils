@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value after checking that it is not a safe integer.",
+  "description": [
+    "An integer that an IEEE-754 double represents exactly. Beyond that range distinct mathematical integers collapse onto the same value and arithmetic quietly stops being exact.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with a safe integer excluded from its type.",
+  "throws": {
+    "IllegalArgumentException": "the value is a safe integer."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => Number.MAX_SAFE_INTEGER + 2\nrequireNonSafeInteger(1.5); // => 1.5\nrequireNonSafeInteger(42); // throws IllegalArgumentException\nrequireNonSafeInteger(Number.MAX_SAFE_INTEGER); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSafeInteger"
+    },
+    {
+      "name": "nonSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Findet ein Blatt anhand seiner Position in der Tabelle.",
+  "description": [
+    "Der Index zählt ab null, von links nach rechts, wie die Reiter stehen. Er ist eine Position, keine Identität: ein verschobener Reiter ändert das Ergebnis — darum gehört `getSheetById` in den Speicher.",
+    "Ein Index hinter dem Ende ergibt `null` statt einer Ausnahme."
+  ],
+  "params": {
+    "sheetIndex": "Die nullbasierte Position.",
+    "spreadsheet": "Die Tabelle, in der gesucht wird. Standardmäßig die aktive."
+  },
+  "returns": "das Blatt oder `null`, wenn der Index hinter dem Ende liegt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Nachschlagen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetById"
+    },
+    {
+      "name": "sortSheets"
+    }
+  ]
+}

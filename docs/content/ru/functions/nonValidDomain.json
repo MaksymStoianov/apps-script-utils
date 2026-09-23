@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является доменным именем.",
+  "description": [
+    "`nonValidDomain(value)` — та же проверка, что и `!isValidDomain(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Метки, разделённые одиночными точками, без точки или дефиса в начале и в конце и без пустых меток. Это проверка синтаксиса: резолвится ли домен — отдельный вопрос.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является доменным именем; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonValidDomain(\"-example.com\"); // => true\nnonValidDomain(\"example..com\"); // => true\nnonValidDomain(\"example.com.\"); // => true\nnonValidDomain(\"\"); // => true\nnonValidDomain(\"example.com\"); // => false\nnonValidDomain(\"sub.example.co.uk\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "requireValidDomain"
+    }
+  ]
+}

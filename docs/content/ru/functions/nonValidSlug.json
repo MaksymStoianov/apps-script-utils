@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является слагом.",
+  "description": [
+    "`nonValidSlug(value)` — та же проверка, что и `!isValidSlug(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Начинается с буквы, дальше буквы, цифры, дефисы и подчёркивания — форма, годная для сегмента URL или ключа. Пробелы, цифра в начале и пустая строка не проходят.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является слагом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonValidSlug(\"1-page\"); // => true\nnonValidSlug(\"my page\"); // => true\nnonValidSlug(\"\"); // => true\nnonValidSlug(\"my-page\"); // => false\nnonValidSlug(\"a_1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlug"
+    },
+    {
+      "name": "requireValidSlug"
+    }
+  ]
+}

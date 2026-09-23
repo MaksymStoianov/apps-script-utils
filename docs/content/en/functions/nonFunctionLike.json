@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** callable.",
+  "description": [
+    "`nonFunctionLike(value)` is the same test as `!isFunctionLike(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "The cheap test — `typeof value === \"function\"` — which is what you want before calling something. `isFunction` is the stricter reading of the same question.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not callable; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonFunctionLike(null); // => true\nnonFunctionLike({}); // => true\nnonFunctionLike(\"fn\"); // => true\nnonFunctionLike(function () {}); // => false\nnonFunctionLike(Math.max); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    },
+    {
+      "name": "requireNonFunctionLike"
+    }
+  ]
+}

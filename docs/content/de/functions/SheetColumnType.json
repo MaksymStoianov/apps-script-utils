@@ -1,0 +1,22 @@
+{
+  "summary": "Was eine Schemaspalte enthalten darf.",
+  "description": [
+    "Eines von `\"string\"`, `\"number\"`, `\"boolean\"` oder `\"date\"`. Die vier bilden ab, was eine Tabellenzelle wirklich speichern kann — daher die kurze Liste: Text, Zahl, Kontrollkästchen oder Datum, alles andere ist eines davon in anderer Gestalt."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "SheetColumnSchema"
+    },
+    {
+      "name": "SheetSchema"
+    }
+  ]
+}

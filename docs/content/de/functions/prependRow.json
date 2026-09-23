@@ -1,0 +1,36 @@
+{
+  "summary": "Fügt eine Zeile vor den Daten ein — im Blatt oder an einem Bereich.",
+  "description": [
+    "`prependRows` mit einer einzigen Zeile: zuerst wird Platz geschaffen, sodass nichts Vorhandenes überschrieben wird. Ein Blatt bekommt die Zeile ganz oben; ein Bereich unmittelbar über seiner ersten Zeile, wobei die Werte auf den Spalten des Bereichs landen.",
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+  ],
+  "params": {
+    "target": "Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.",
+    "values": "Eine einzelne Zeile: ein flaches Array, ein Wert je Spalte.",
+    "options": "`afterFrozenRows` fügt unter den fixierten Zeilen ein statt ganz oben. Ein Bereich bestimmt die Stelle selbst, dort bewirkt die Option nichts."
+  },
+  "returns": "das Blatt, sodass Aufrufe verkettet werden können.",
+  "throws": {
+    "IllegalArgumentException": "kein Argument übergeben wurde.",
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist.",
+    "TypeError": "die Werte kein flaches Array sind."
+  },
+  "examples": [
+    {
+      "title": "Am Anfang eines Blatts einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRow(sheet, [\"Name\", \"Email\"]);\n```"
+    },
+    {
+      "title": "An einem Bereich einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRow(sheet.getRange(\"B4:C13\"), [\"Name\", \"Email\"]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependRows"
+    },
+    {
+      "name": "appendRow"
+    }
+  ]
+}

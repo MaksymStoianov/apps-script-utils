@@ -1,0 +1,25 @@
+{
+  "summary": "Сервіс, на доступність якого розраховував скрипт, недоступний: розширений сервіс не увімкнено або глобальну змінну так і не визначено.",
+  "description": [
+    "Сервіс, на доступність якого розраховував скрипт, недоступний: розширений сервіс не увімкнено або глобальну змінну так і не визначено.",
+    "Кидається функціями [`requireService`](requireService.md).",
+    "Будь-який клас цієї ієрархії приймає необов'язкове повідомлення, інший виняток, чиє повідомлення буде перевикористано, або взагалі нічого. `isException` розпізнає їх усі; звичайний `Error` до них не належить."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Кинути й упіймати",
+      "body": "```javascript\nthrow new ServiceIsNotDefinedException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof ServiceIsNotDefinedException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

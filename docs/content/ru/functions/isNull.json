@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение значением `null`.",
+  "description": [
+    "Строго `null`. `undefined` — отдельный случай, оба сразу покрывает `isNil`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является значением `null`; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisNull(null); // => true\nisNull(undefined); // => false\nisNull(0); // => false\nisNull(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNull"
+    },
+    {
+      "name": "requireNull"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

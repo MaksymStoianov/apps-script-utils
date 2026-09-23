@@ -1,0 +1,26 @@
+{
+  "summary": "Prüft, ob ein Wert ein Gebietsschema-Code ist.",
+  "description": [
+    "Genau zwei ASCII-Buchstaben in beliebiger Schreibweise — `\"en\"`, `\"UK\"`. Ein Regions- oder Schrift-Subtag wie in `\"en-US\"` wird abgelehnt: gemeint ist der kurze Sprachcode, nicht ein vollständiges BCP-47-Tag.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein Gebietsschema-Code ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisValidLocale(\"en\"); // => true\nisValidLocale(\"UK\"); // => true\nisValidLocale(\"en-US\"); // => false\nisValidLocale(\"eng\"); // => false\nisValidLocale(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidLocale"
+    },
+    {
+      "name": "requireValidLocale"
+    }
+  ]
+}

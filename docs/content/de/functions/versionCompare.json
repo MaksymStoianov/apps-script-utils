@@ -1,0 +1,28 @@
+{
+  "summary": "Vergleicht zwei Versionsangaben numerisch.",
+  "description": [
+    "Jede durch Punkte getrennte Gruppe wird als Zahl verglichen, `1.10` steht also über `1.2` — ein Zeichenkettenvergleich sähe es umgekehrt. Eine fehlende Gruppe zählt als null, womit `\"2\"` und `\"2.0\"` gleich sind.",
+    "Beide Argumente müssen `isValidVersion` erfüllen: nur Ziffern und Punkte, kein Vorabversions-Suffix."
+  ],
+  "params": {
+    "version1": "Die erste Version.",
+    "version2": "Die zweite Version."
+  },
+  "returns": "`-1`, wenn die erste kleiner ist, `0` bei Gleichheit, `1`, wenn die erste größer ist.",
+  "throws": {
+    "TypeError": "eines der Argumente ist keine gültige Versionsangabe."
+  },
+  "examples": [
+    {
+      "title": "Vergleichen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "isValidVersion"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение объектом.",
+  "description": [
+    "Проверяется `typeof value === \"object\"` с исключением `null`, поэтому массивы, даты и экземпляры классов подходят, а функция — нет. Функции принимает `isObjectLike`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является объектом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisObject({}); // => true\nisObject([]); // => true\nisObject(new Date()); // => true\nisObject(null); // => false\nisObject(\"abc\"); // => false\nisObject(function () {}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonObject"
+    },
+    {
+      "name": "requireObject"
+    },
+    {
+      "name": "requireNonObject"
+    }
+  ]
+}

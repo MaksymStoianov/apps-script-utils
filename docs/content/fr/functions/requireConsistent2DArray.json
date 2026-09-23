@@ -1,0 +1,40 @@
+{
+  "summary": "Renvoie la valeur en tant que matrice à lignes de même longueur, ou lève en nommant la ligne fautive.",
+  "description": [
+    "La contrepartie stricte de [`require2DArray`](require2DArray.md) : la valeur doit être un tableau non vide de tableaux **et** chaque ligne doit être aussi large que la première.",
+    "Quand les lignes diffèrent, le message par défaut indique la ligne fautive et les deux largeurs — l'information nécessaire pour corriger l'appel, et précisément ce que `Range#setValues` tait en rejetant une matrice irrégulière. Un `message` personnalisé remplace le message par défaut dans les deux cas d'échec."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut décrit l'écart."
+  },
+  "returns": "la même valeur, typée comme tableau bidimensionnel.",
+  "throws": {
+    "IllegalArgumentException": [
+      "la valeur n'est pas un tableau non vide de tableaux.",
+      "les lignes n'ont pas toutes la même longueur."
+    ]
+  },
+  "examples": [
+    {
+      "title": "Une matrice qu'on peut écrire sans risque"
+    },
+    {
+      "title": "Le message nomme la ligne fautive"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "la même vérification sous forme de prédicat."
+    },
+    {
+      "name": "nonConsistent2DArray",
+      "note": "le prédicat nié."
+    },
+    {
+      "name": "require2DArray",
+      "note": "accepte des lignes irrégulières."
+    }
+  ]
+}

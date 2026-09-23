@@ -1,0 +1,35 @@
+{
+  "summary": "Splits an array into consecutive groups of a fixed size, validating both arguments.",
+  "description": [
+    "`chunk` walks the array once and slices it into groups of `size` elements. When the length does not divide evenly,\nthe final group holds the remainder and is shorter than the rest. The input array is never modified.",
+    "Both arguments are validated before any work happens: a non-array input or a fractional `size` throws instead of\nreturning a quietly wrong result. A `size` of `0` or less, and an empty input, both produce `[]` rather than a group\nof empty groups."
+  ],
+  "params": {
+    "array": "The array to split. Left untouched.",
+    "size": "The length of each group. An integer; defaults to `1`."
+  },
+  "returns": "a new array of groups. Every group but the last has exactly `size` elements.",
+  "throws": {
+    "TypeError": ["`array` is not an array.", "`size` is not an integer."]
+  },
+  "examples": [
+    {
+      "title": "Splitting into fixed-size groups",
+      "body": "```javascript\nchunk([\"a\", \"b\", \"c\", \"d\"], 2); // => [[\"a\", \"b\"], [\"c\", \"d\"]]\nchunk([\"a\", \"b\", \"c\", \"d\", \"e\"], 2); // => [[\"a\", \"b\"], [\"c\", \"d\"], [\"e\"]]\n```"
+    },
+    {
+      "title": "Writing a large range in batches",
+      "body": "A single `setValues` call with tens of thousands of rows is the usual cause of an exceeded execution time. Splitting\nthe data keeps each call small and each write independently recoverable.\n\n<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"chunk.ts\" include-symbol=\"appendRows\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction appendRows(sheet, rows) {\n  for (const batch of chunk(rows, 500)) {\n    sheet.getRange(sheet.getLastRow() + 1, 1, batch.length, batch[0].length).setValues(batch);\n  }\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "Edge cases",
+      "body": "```javascript\nchunk([1, 2, 3]); // => [[1], [2], [3]] — size defaults to 1\nchunk([], 2); // => []\nchunk([1, 2, 3], 0); // => []\nchunk(\"a,b,c\", 2); // throws TypeError: Input 'array' must be an array.\nchunk([1, 2, 3], 1.5); // throws TypeError: Input 'size' must be an integer.\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "transpose",
+      "note": "swaps the rows and columns of a matrix."
+    }
+  ]
+}

@@ -23,6 +23,7 @@ import { isNaN } from "./isNaN";
  * @throws  {@link IllegalArgumentException} If the value is not the `NaN` number.
  * @see     {@link isNaN}
  * @see     {@link nonNaN}
+ * @see     [requireNaN on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNaN.html)
  * @since   1.11.0
  * @version 1.0.0
  */

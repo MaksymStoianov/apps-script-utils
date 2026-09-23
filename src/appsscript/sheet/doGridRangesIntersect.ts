@@ -7,6 +7,14 @@ import type { GridRange } from "./types";
 /**
  * Checks if two <a href="./types/GridRange.ts"><code>GridRange</code></a> objects overlap and are on the same sheet.
  *
+ * @example
+ * ```javascript
+ * const left = { startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 };
+ * const right = { startRowIndex: 1, endRowIndex: 3, startColumnIndex: 1, endColumnIndex: 3 };
+ *
+ * doGridRangesIntersect(left, right); // => true
+ * ```
+ *
  * @param       {GridRange} gridRange1 - The first <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
  * @param       {GridRange} gridRange2 - The second <a href="./types/GridRange.ts"><code>GridRange</code></a> object to check.
  * @returns     {boolean} `true` if the ranges share at least one common cell and are located on the same sheet; `false` otherwise.
@@ -14,6 +22,7 @@ import type { GridRange } from "./types";
  * @throws      <a href="../../exception/appsscript/sheet/InvalidGridRangeException.ts"><code>InvalidGridRangeException</code></a>
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
+ * @see         [doGridRangesIntersect on the documentation site](https://maksymstoianov.github.io/apps-script-utils/doGridRangesIntersect.html)
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

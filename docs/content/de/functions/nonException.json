@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine `Exception` ist.",
+  "description": [
+    "`nonException(value)` ist dieselbe Prüfung wie `!isException(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Nur die eigene Hierarchie der Bibliothek. Ein einfacher `Error` zählt nicht — genau das macht die Prüfung in einem `catch` nützlich, das beide unterscheiden muss.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine `Exception` ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonException(new Error()); // => true\nnonException({}); // => true\nnonException(null); // => true\nnonException(new IllegalArgumentException()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    },
+    {
+      "name": "requireNonException"
+    }
+  ]
+}

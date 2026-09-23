@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert aufrufbar ist.",
+  "description": [
+    "Die billige Prüfung — `typeof value === \"function\"` — genau das, was man vor einem Aufruf braucht. `isFunction` liest dieselbe Frage strenger.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert aufrufbar ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisFunctionLike(function () {}); // => true\nisFunctionLike(Math.max); // => true\nisFunctionLike(null); // => false\nisFunctionLike({}); // => false\nisFunctionLike(\"fn\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    },
+    {
+      "name": "requireNonFunctionLike"
+    }
+  ]
+}

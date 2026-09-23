@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення рядком версії.",
+  "description": [
+    "Групи цифр через крапку, у будь-якій кількості. Суфікс передрелізу, провідна `v` та порожня група не проходять, тому `\"1.2.3-beta\"` не підходить, хоча SemVer його дозволяє.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є рядком версії; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisValidVersion(\"1\"); // => true\nisValidVersion(\"1.2.3\"); // => true\nisValidVersion(\"2026.01.15\"); // => true\nisValidVersion(\"1.2.3-beta\"); // => false\nisValidVersion(\"v1.2\"); // => false\nisValidVersion(\"1..2\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidVersion"
+    },
+    {
+      "name": "requireValidVersion"
+    }
+  ]
+}

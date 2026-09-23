@@ -1,0 +1,25 @@
+{
+  "summary": "Ruft eine Funktion nach einem Fehler erneut auf, mit wachsender Wartezeit.",
+  "description": [
+    "Die Wartezeit beginnt bei `delay`, wird nach jedem Fehlschlag mit `multiplier` multipliziert und überschreitet `maxDelay` nie. `shouldRetry` entscheidet, ob ein Fehlschlag überhaupt eine Wiederholung wert ist — ein Ratenlimit meist, ein falsches Argument nie.",
+    "Die Funktion bekommt die Versuchsnummer, beginnend bei `1`. Scheitert der letzte Versuch, wird sein Fehler weitergereicht. Das Warten läuft über `sleep`, standardmäßig `Utilities.sleep`, wo es das gibt, und in Tests ersetzbar."
+  ],
+  "params": {
+    "fn": "Die aufzurufende Funktion. Sie erhält die Versuchsnummer.",
+    "options": "`attempts`, `delay`, `multiplier`, `maxDelay`, `shouldRetry` und `sleep`."
+  },
+  "returns": "was die Funktion beim erfolgreichen Versuch zurückgibt.",
+  "throws": {
+    "IllegalArgumentException": "das erste Argument ist keine Funktion oder eine Option liegt außerhalb des Bereichs."
+  },
+  "examples": [
+    {
+      "title": "Einen unzuverlässigen Aufruf wiederholen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireState"
+    }
+  ]
+}

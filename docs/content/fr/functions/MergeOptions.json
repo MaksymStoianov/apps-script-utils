@@ -1,0 +1,23 @@
+{
+  "summary": "Comment `merge` remplit un gabarit.",
+  "description": [
+    "`onMissing` décide du sort d'un emplacement sans clé : `\"keep\"`, la valeur par défaut, le laisse dans la sortie où il reste visible et traçable ; `\"empty\"` n'insère rien, ce qui est plus net dans ce qu'un lecteur verra.",
+    "`escape` est une fonction appliquée à chaque valeur insérée — `escapeHtml` lorsque le résultat part dans une page."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "merge"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Находит слайд на заданной позиции — в презентации или в активной.",
+  "description": [
+    "Индекс считается от нуля. Позиция за пределами даёт `null`, а не исключение, — именно это нужно циклу по презентации, которую кто-то может править.",
+    "Индекс идёт первым, а презентация необязательна — так же, как у [`getSheetByIndex`](getSheetByIndex.md): без неё берётся активная презентация, которая есть у скрипта, привязанного к документу. У отдельно стоящего скрипта её нет, и тогда ответ — `null`, а не исключение."
+  ],
+  "params": {
+    "presentation": "Презентация, в которой ищем. Без неё берётся активная презентация.",
+    "index": "Позиция слайда, отсчёт с нуля."
+  },
+  "returns": "слайд или `null`, если индекс за пределами.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "В активной презентации",
+      "body": "```javascript\n// A script bound to a deck needs no presentation.\nconst first = getSlideByIndex(0);\n\n// Elsewhere, name one.\nconst third = getSlideByIndex(2, SlidesApp.openById(id));\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideIndex"
+    },
+    {
+      "name": "requireSlide"
+    },
+    {
+      "name": "isValidSlideId"
+    }
+  ]
+}

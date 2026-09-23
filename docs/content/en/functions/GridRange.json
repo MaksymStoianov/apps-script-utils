@@ -1,0 +1,27 @@
+{
+  "summary": "A block of cells, described the way the Sheets API describes one.",
+  "description": [
+    "Four bounds and, optionally, the sheet: `startRowIndex`, `endRowIndex`, `startColumnIndex`, `endColumnIndex`, plus `sheetId` or `sheetName`. Indices count from zero, the start bounds are inclusive and the end bounds are not — so a single cell spans one index, not zero.",
+    "A bound left out means the range is open in that direction: no row bounds is a whole column, no column bounds a whole row, none at all the whole sheet. `toA1Notation` and `parseA1Notation` convert between this shape and the notation a person reads."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\n// A1:B2 on the first sheet.\nconst range = {\n  sheetId: 0,\n  startRowIndex: 0,\n  endRowIndex: 2,\n  startColumnIndex: 0,\n  endColumnIndex: 2\n};\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    },
+    {
+      "name": "isCellGridRange"
+    }
+  ]
+}

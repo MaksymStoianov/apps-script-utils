@@ -1,3 +1,6 @@
+import { IllegalArgumentException } from "../../exception";
+import { requireString } from "../../lang";
+
 export interface Theme {
   fontSize?: number;
   fontFamily?: string;
@@ -30,12 +33,27 @@ export interface RichTextRun {
 /**
  * Converts a Markdown-formatted string to an array of RichTextRun objects.
  *
- * @param {string} text The Markdown-formatted string.
+ * @example
+ * ```javascript
+ * const runs = convertMarkdownToRichText("**bold** and `code`");
+ * ```
+ *
+ * @param {string} text The Markdown-formatted string. An empty string yields an empty array.
  * @param {Theme} [theme={}] The theme settings for the rich text.
  * @returns {RichTextRun[]} An array of RichTextRun objects.
+ * @throws {@link IllegalArgumentException} If no argument is passed.
+ * @throws {@link InvalidStringException} If the text is not a string.
+ * @see [convertMarkdownToRichText on the documentation site](https://maksymstoianov.github.io/apps-script-utils/convertMarkdownToRichText.html)
  * @since 1.5.0
+ * @version 2.0.0
  */
 export function convertMarkdownToRichText(text: string, theme: Theme = {}): RichTextRun[] {
+  if (arguments.length === 0) {
+    throw new IllegalArgumentException();
+  }
+
+  requireString(text);
+
   const runs: RichTextRun[] = [];
 
   // Дефолтные значения темы

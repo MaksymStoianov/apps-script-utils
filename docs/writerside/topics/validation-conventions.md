@@ -1,5 +1,9 @@
 # Validation conventions
 
+<link-summary>The isX / nonX / requireX / requireNonX naming scheme and what each prefix guarantees.</link-summary>
+
+<web-summary>The validation naming scheme of apps-script-utils: isX and nonX answer questions, requireX and requireNonX validate and return, and every prefix has one signature.</web-summary>
+
 Most of this library is validation, and almost all of it follows one naming scheme. Learn the four prefixes once and
 the name of a function tells you its signature, its return value, and whether it can throw.
 
@@ -115,15 +119,15 @@ isEmpty("   ", true); // false
 isEmpty(0); // false
 ```
 
-## Coverage is still filling in
+## Coverage
 
-The four prefixes describe the intended shape of the API, not a grid that is complete today. `isX` and `nonX` are
-the most fully populated; `requireX` covers the common types; `requireNonX` currently exists only as
-`requireNonNull` and `requireNonEmptyString`. Missing combinations are tracked as issues rather than ruled out.
+The four prefixes describe a grid, and most of it is filled: every type that has an `isX` has a `nonX`, `requireX`
+covers the types a call is likely to validate, and `requireNonX` exists for the whole of `lang/base` as well as for
+the numeric kinds. A combination that is missing is missing because nothing has needed it yet, not because it is
+ruled out; open an issue and it can be added.
 
-A few entries in [](reference-base.md) also run ahead of the package exports — the function is written and has tests,
-but its module's `index.ts` does not re-export it yet. If an import fails for a function the reference lists, that is
-why.
+Every function listed in the reference has a page of its own, and every page is generated from a symbol the package
+actually exports — so a name that appears in the tables can be imported.
 
 ## One exception to the rule
 

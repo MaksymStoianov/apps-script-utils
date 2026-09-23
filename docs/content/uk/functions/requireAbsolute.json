@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як абсолютний шлях або викидає виняток.",
+  "description": [
+    "Шлях, що починається від кореня: провідний `/` або схема на кшталт `https://` чи `mailto:`. Усе інше, включно з порожнім рядком, відносне.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як абсолютний шлях.",
+  "throws": {
+    "IllegalArgumentException": "значення не є абсолютним шляхом."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireAbsolute(\"/var/log\"); // => \"/var/log\"\nrequireAbsolute(\"https://example.com/a\"); // => \"https://example.com/a\"\nrequireAbsolute(\"docs/readme.md\"); // throws IllegalArgumentException\nrequireAbsolute(\"./a\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isAbsolute"
+    },
+    {
+      "name": "nonAbsolute"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "От строки ожидалось содержимое, а она оказалась null, undefined или пустой.",
+  "description": [
+    "От строки ожидалось содержимое, а она оказалась `null`, `undefined` или пустой.",
+    "Бросается функциями [`requireNonEmptyString`](requireNonEmptyString.md).",
+    "Любой класс этой иерархии принимает необязательное сообщение, другое исключение, чьё сообщение будет переиспользовано, или вообще ничего. `isException` распознаёт их все; обычный `Error` к ним не относится."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Бросить и поймать",
+      "body": "```javascript\nthrow new EmptyStringException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof EmptyStringException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

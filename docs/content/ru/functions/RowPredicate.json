@@ -1,0 +1,25 @@
+{
+  "summary": "Решает, относится ли строка к тем, с которыми нужно что-то сделать.",
+  "description": [
+    "Получает ячейки строки, её позицию от единицы и — если указана строка заголовков — строку с ключами по именам столбцов, иначе `null`. Возврат `true` выбирает строку."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Форма"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowConditionalOptions"
+    }
+  ]
+}

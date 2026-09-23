@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение абсолютным путём.",
+  "description": [
+    "Путь, начинающийся от корня: ведущий `/` либо схема вроде `https://` или `mailto:`. Всё остальное, включая пустую строку, относительно.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является абсолютным путём; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisAbsolute(\"/var/log\"); // => true\nisAbsolute(\"https://example.com/a\"); // => true\nisAbsolute(\"mailto:a@example.com\"); // => true\nisAbsolute(\"docs/readme.md\"); // => false\nisAbsolute(\"./a\"); // => false\nisAbsolute(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonAbsolute"
+    },
+    {
+      "name": "requireAbsolute"
+    }
+  ]
+}

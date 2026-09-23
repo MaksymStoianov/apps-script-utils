@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als `NaN` zurück oder wirft.",
+  "description": [
+    "Es wird nichts vorher umgewandelt — darin unterscheidet sich die Prüfung vom globalen `isNaN`, das sein Argument konvertiert, sodass `isNaN(\"abc\")` und `isNaN(undefined)` beide `true` melden.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als `NaN`.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht die Zahl `NaN`."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNaN(NaN); // => NaN\nrequireNaN(0 / 0); // => 0 / 0\nrequireNaN(0); // throws IllegalArgumentException\nrequireNaN(\"abc\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNaN"
+    },
+    {
+      "name": "nonNaN"
+    },
+    {
+      "name": "requireNonNaN"
+    }
+  ]
+}

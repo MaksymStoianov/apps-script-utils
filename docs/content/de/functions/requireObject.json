@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als ein Objekt zurück oder wirft.",
+  "description": [
+    "Geprüft wird `typeof value === \"object\"` ohne `null`, sodass Arrays, Daten und Klasseninstanzen zählen, eine Funktion aber nicht. Funktionen akzeptiert `isObjectLike`.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als ein Objekt.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein Objekt."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireObject({}); // => {}\nrequireObject([]); // => []\nrequireObject(null); // throws IllegalArgumentException\nrequireObject(\"abc\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObject"
+    },
+    {
+      "name": "nonObject"
+    },
+    {
+      "name": "requireNonObject"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est un nombre.",
+  "description": [
+    "Le test est `typeof value === \"number\"`, que `NaN` et les deux infinis satisfont également. Utilisez `isFloat`, `isInteger` ou `isNaN` quand ces cas doivent être distingués.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un nombre ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisNumber(0); // => true\nisNumber(1.5); // => true\nisNumber(NaN); // => true\nisNumber(Infinity); // => true\nisNumber(\"1\"); // => false\nisNumber(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNumber"
+    },
+    {
+      "name": "requireNumber"
+    },
+    {
+      "name": "requireNonNumber"
+    }
+  ]
+}

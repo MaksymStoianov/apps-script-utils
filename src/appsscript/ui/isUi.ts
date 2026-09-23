@@ -3,9 +3,19 @@ import { isObject } from "../../lang";
 /**
  * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const ui = SpreadsheetApp.getUi();
+ *
+ * isUi(ui); // => true
+ * isUi({}); // => false
+ * isUi(null); // => false
+ * ```
+ *
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is an <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a> object, `false` otherwise.
  * @see         <a href="https://developers.google.com/apps-script/reference/base/ui"><code>Ui</code></a>
+ * @see         [isUi on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isUi.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`

@@ -1,0 +1,21 @@
+{
+  "summary": "Lit une liste de notations A1 séparées par des virgules.",
+  "description": [
+    "Chaque entrée est lue exactement comme `parseA1Notation` en lit une : une liste peut donc mêler notations qualifiées par une feuille et notations nues. Les espaces autour des virgules sont ignorés."
+  ],
+  "params": {
+    "a1Notations": "Les notations, séparées par des virgules."
+  },
+  "returns": "une plage analysée par entrée.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lire une liste"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

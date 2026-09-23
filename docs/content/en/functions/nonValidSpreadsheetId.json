@@ -1,0 +1,27 @@
+{
+  "summary": "Checks whether a value is **not** a spreadsheet id.",
+  "description": [
+    "`nonValidSpreadsheetId(value)` is the same test as `!isValidSpreadsheetId(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "At least 25 characters of letters, digits, hyphens and underscores — the id that sits in a spreadsheet URL between `/d/` and `/edit`. Nothing is fetched: the format is all that is checked.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a spreadsheet id; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonValidSpreadsheetId(\"short-id\"); // => true\nnonValidSpreadsheetId(\"has space in it and is long enough to pass\"); // => true\nnonValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSpreadsheetId"
+    },
+    {
+      "name": "requireValidSpreadsheetId"
+    }
+  ]
+}

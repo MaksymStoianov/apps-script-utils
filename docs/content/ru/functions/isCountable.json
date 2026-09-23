@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение счётным числом.",
+  "description": [
+    "Значение, годное как количество, длина или индекс с нуля: целое, неотрицательное и достаточно малое, чтобы арифметика над ним оставалась точной.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является счётным числом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisCountable(0); // => true\nisCountable(42); // => true\nisCountable(-1); // => false\nisCountable(1.5); // => false\nisCountable(Number.MAX_SAFE_INTEGER + 2); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonCountable"
+    },
+    {
+      "name": "requireCountable"
+    }
+  ]
+}

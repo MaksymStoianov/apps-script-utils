@@ -1,0 +1,33 @@
+{
+  "summary": "Führt gestaltete Textabschnitte wieder in Markdown zurück.",
+  "description": [
+    "Die Umkehrung von [`convertMarkdownToRichText`](convertMarkdownToRichText.md): Fett, Kursiv und Durchgestrichen werden wieder zu ihren Zeichen, ein Abschnitt mit Link zu `[Text](url)` und ein Abschnitt in der Code-Schrift des Themes zu einem Code-Span.",
+    "Ein Code-Abschnitt trägt kein eigenes Merkmal — er wird an seiner Schrift erkannt —, also übergeben Sie in beide Richtungen dasselbe Theme, dann bleibt das Paar verlustfrei. Die Abschnitte werden in der gegebenen Reihenfolge hintereinander geschrieben, ohne Nachbarn gleichen Stils zusammenzufassen; tief verschachtelte Auszeichnung kann daher anders geschrieben zurückkommen und sich dennoch gleich lesen."
+  ],
+  "params": {
+    "runs": "Die umzuwandelnden Abschnitte. Ein leeres Array ergibt eine leere Zeichenkette.",
+    "theme": "Das Theme, mit dem die Abschnitte gestaltet wurden. Gelesen wird daraus nur die Code-Schrift."
+  },
+  "returns": "das Markdown, das die Abschnitte darstellt.",
+  "throws": {
+    "IllegalArgumentException": "kein Argument übergeben wurde, der Wert kein Array ist oder ein Element kein Abschnitt mit Text ist."
+  },
+  "examples": [
+    {
+      "title": "Zurück nach Markdown",
+      "body": "```javascript\nconst runs = convertMarkdownToRichText(\"**bold** and `code`\");\n\nconvertRichTextToMarkdown(runs); // => \"**bold** and `code`\"\n```"
+    },
+    {
+      "title": "Ein Link behält die Gestaltung seines Textes",
+      "body": "```javascript\nconvertRichTextToMarkdown([\n  { text: \"site\", style: { bold: true, link: { url: \"https://example.com\" } } }\n]); // => \"[**site**](https://example.com)\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertMarkdownToRichText"
+    },
+    {
+      "name": "convertRichTextToHtml"
+    }
+  ]
+}

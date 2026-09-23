@@ -1,0 +1,25 @@
+{
+  "summary": "Der Admin-SDK-Directory-Dienst ist nicht verfügbar oder für das Skript nicht aktiviert.",
+  "description": [
+    "Der Admin-SDK-Directory-Dienst ist nicht verfügbar oder für das Skript nicht aktiviert.",
+    "Wird geworfen von [`requireAdmin`](requireAdmin.md).",
+    "Jede Klasse dieser Hierarchie nimmt eine optionale Meldung, eine andere Ausnahme, deren Meldung übernommen wird, oder gar nichts. `isException` erkennt sie alle; ein einfacher `Error` gehört nicht dazu."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Werfen und fangen",
+      "body": "```javascript\nthrow new AdminDirectoryException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof AdminDirectoryException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

@@ -3,7 +3,21 @@ import { isObject, isString } from "../lang";
 /**
  * Base exception class.
  *
+ * @example
+ * ```javascript
+ * throw new Exception("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof Exception) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends Error
+ * @see [Exception on the documentation site](https://maksymstoianov.github.io/apps-script-utils/Exception.html)
  * @since   1.0.0
  * @version 1.0.0
  */

@@ -1,0 +1,24 @@
+{
+  "summary": "Extrait la partie plage d'une notation A1.",
+  "description": [
+    "Tout ce qui suit le `!` — et la chaîne entière lorsqu'il n'y a pas de `!`, puisqu'une notation nue n'est déjà qu'une plage."
+  ],
+  "params": {
+    "a1Notation": "La notation à lire."
+  },
+  "returns": "la partie plage.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Extraction"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractSheetNameFromA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

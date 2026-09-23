@@ -32,6 +32,11 @@ export interface A1NotationParseOptions {
  * valid list of ranges, not malformed input. Anything that is not a string is
  * still rejected.
  *
+ * @example
+ * ```javascript
+ * parseA1Notations("A1:B2, C3").length; // => 2
+ * ```
+ *
  * @param       {string} value - The input string to be parsed.
  * @param       {A1NotationParseOptions} options - An object with options for parsing.
  * @returns     {GridRange[]} An array of {@link GridRange} objects.
@@ -47,6 +52,7 @@ export interface A1NotationParseOptions {
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [parseA1Notations on the documentation site](https://maksymstoianov.github.io/apps-script-utils/parseA1Notations.html)
  * @since       1.6.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

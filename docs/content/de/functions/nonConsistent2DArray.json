@@ -1,0 +1,35 @@
+{
+  "summary": "Prüft, ob ein Wert **keine** Matrix mit gleich langen Zeilen ist.",
+  "description": [
+    "`nonConsistent2DArray(value)` ist dieselbe Prüfung wie `!isConsistent2DArray(value)`, so geschrieben, dass eine Wächterklausel vorwärts gelesen wird — siehe [](validation-conventions.md).",
+    "Wie [`non2DArray`](non2DArray.md) ist die Funktion für ihre Ja-Nein-Antwort gedacht: nach der Prüfung gibt TypeScript keinen brauchbaren Matrixtyp zurück. Prüfen und zurückgeben tut [`requireConsistent2DArray`](requireConsistent2DArray.md).",
+    "Sie meldet `true` in zwei verschiedenen Fällen: eine Matrix mit unterschiedlich langen Zeilen und ein Wert, der gar keine Matrix ist. Am Ergebnis sind sie nicht zu unterscheiden; wo der Unterschied zählt, nehmen Sie [`non2DArray`](non2DArray.md)."
+  ],
+  "params": {
+    "arr": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert kein nicht-leeres Array aus gleich langen Arrays ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Beide Fehlerfälle"
+    },
+    {
+      "title": "Die beiden Fälle unterscheiden"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "die positive Form."
+    },
+    {
+      "name": "non2DArray",
+      "note": "lehnt nur die Nicht-Matrizen ab."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "wirft und benennt die betroffene Zeile."
+    }
+  ]
+}

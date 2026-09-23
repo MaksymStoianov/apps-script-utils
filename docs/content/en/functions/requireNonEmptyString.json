@@ -1,0 +1,31 @@
+{
+  "summary": "Returns the value as a string that carries something, or throws.",
+  "description": [
+    "Whitespace does not count as content: a string of spaces fails the check just as an empty one does. This is the guard most of the string helpers in this library open with."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted."
+  },
+  "returns": "the same string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or holds nothing but whitespace."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nrequireNonEmptyString(\"Data\"); // => \"Data\"\nrequireNonEmptyString(\"   \"); // throws EmptyStringException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "isEmpty"
+    }
+  ]
+}

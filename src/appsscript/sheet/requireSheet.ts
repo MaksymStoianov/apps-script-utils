@@ -4,6 +4,15 @@ import { isSheet } from "./isSheet";
 /**
  * Ensures that the provided value is a valid <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object, throwing an exception otherwise.
  *
+ * @example
+ * ```javascript
+ * const sheet = SpreadsheetApp.getActiveSheet();
+ *
+ * requireSheet(sheet); // => sheet
+ * requireSheet({}); // throws InvalidSheetException
+ * requireSheet(null); // throws InvalidSheetException
+ * ```
+ *
  * @param   {unknown} value - The value to validate as a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
  * @param   {string} [message] - Optional custom error message if the validation fails.
  * @returns {GoogleAppsScript.Spreadsheet.Sheet} The validated <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
@@ -11,6 +20,7 @@ import { isSheet } from "./isSheet";
  * @see     {@link isSheet}
  * @see     {@link nonSheet}
  * @see     <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
+ * @see     [requireSheet on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireSheet.html)
  * @since   1.5.0
  * @version 1.0.0
  */

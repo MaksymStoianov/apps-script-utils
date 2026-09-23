@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als einen Einzelzellbereich zurück oder wirft.",
+  "description": [
+    "Eine Zeile und eine Spalte, gemessen an den Grenzen und nicht daran, wie der Bereich geschrieben wurde: die Endindizes gehören nicht dazu, eine einzelne Zelle ist also `endRowIndex - startRowIndex === 1` und ebenso bei den Spalten. Ein Bereich mit weggelassener Grenze ist in diese Richtung offen und nie eine einzelne Zelle.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als einen Einzelzellbereich.",
+  "throws": {
+    "InvalidGridRangeException": "der Wert ist nicht ein Einzelzellbereich."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }); // => { startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 1 }\nrequireCellGridRange({ startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 1 }); // throws InvalidGridRangeException\nrequireCellGridRange({}); // throws InvalidGridRangeException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isCellGridRange"
+    },
+    {
+      "name": "nonCellGridRange"
+    }
+  ]
+}

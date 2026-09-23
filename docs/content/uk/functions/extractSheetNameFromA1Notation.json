@@ -1,0 +1,27 @@
+{
+  "summary": "Видобуває ім'я аркуша з нотації A1.",
+  "description": [
+    "Лапки, якими Таблиці обрамляють імена з пробілами чи пунктуацією, знімаються, тому `\"'My Sheet'!A1\"` дає `My Sheet`. Нотація без імені аркуша не дає нічого."
+  ],
+  "params": {
+    "a1Notation": "Нотація для розбору."
+  },
+  "returns": "ім'я аркуша, якщо воно є в нотації.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Видобування"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractRangeFromA1Notation"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Проверяет, является ли значение адресом электронной почты.",
+  "description": [
+    "Адрес разбивается по единственному `@`: домен проверяется так же, как в `isValidDomain`, а локальная часть должна быть непустой и без пробелов. Это проверка формата, а не доказательство того, что ящик существует.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является адресом электронной почты; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisEmail(\"user@example.com\"); // => true\nisEmail(\"first.last@sub.example.co.uk\"); // => true\nisEmail(\"user@@example.com\"); // => false\nisEmail(\"user@\"); // => false\nisEmail(\"example.com\"); // => false\nisEmail(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidEmail"
+    },
+    {
+      "name": "requireValidEmail"
+    }
+  ]
+}

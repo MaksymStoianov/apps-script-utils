@@ -1,0 +1,29 @@
+{
+  "summary": "Serialises a value to JSON with the object keys in a fixed order.",
+  "description": [
+    "`JSON.stringify` writes keys in insertion order, so two objects that carry the same data can produce different text. Here the keys of every object are sorted, which makes the output a stable key — for a cache, a checksum or a comparison.",
+    "It is what `hashCode` hashes, and the reason two equal objects hash alike."
+  ],
+  "params": {
+    "value": "The value to serialise."
+  },
+  "returns": "the JSON text, with object keys sorted.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Serialising",
+      "body": "```javascript\nstringifyJson({ b: 1, a: 2 }); // => \"{\\\"a\\\":2,\\\"b\\\":1}\"\nstringifyJson([1, \"a\", null]); // => \"[1,\\\"a\\\",null]\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseJson"
+    },
+    {
+      "name": "hashCode"
+    },
+    {
+      "name": "equals"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt das Schema eines Blattes zurück, gespeichert oder aus dem Inhalt abgeleitet.",
+  "description": [
+    "Ein Schema beschreibt die Spalten: ihre Namen, ihre Typen und die Zeile, in der die Namen stehen. Hat `insertSchema` eines auf dem Blatt hinterlegt, kommt genau das zurück.",
+    "Wurde nichts hinterlegt, wird das Blatt gelesen und ein Schema aus der Kopfzeile und den Werten darunter abgeleitet. Das Ergebnis trägt dann `inferred: true`, sodass sich eine deklarierte Beschreibung von einer erratenen unterscheiden lässt."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird."
+  },
+  "returns": "das Schema oder `null`, wenn das Blatt nichts zu beschreiben hat.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt."
+  },
+  "examples": [
+    {
+      "title": "Ein Schema lesen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "insertSchema"
+    },
+    {
+      "name": "removeSchema"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

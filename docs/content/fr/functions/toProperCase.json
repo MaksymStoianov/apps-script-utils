@@ -1,0 +1,30 @@
+{
+  "summary": "Met la première lettre de chaque mot en majuscule et le reste en minuscules.",
+  "description": [
+    "Les frontières de mots sont celles d'une expression régulière : `\"hello WORLD\"` devient `\"Hello World\"`. La ponctuation et les séparateurs restent en place."
+  ],
+  "params": {
+    "value": "La chaîne à convertir. Elle ne doit pas être vide.",
+    "options": "`trim` coupe la chaîne et réduit les suites d'espaces à une seule."
+  },
+  "returns": "la chaîne convertie.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou elle est vide."
+  },
+  "examples": [
+    {
+      "title": "Conversion"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toLowerCase"
+    },
+    {
+      "name": "toUpperCase"
+    },
+    {
+      "name": "toCamelCase"
+    }
+  ]
+}

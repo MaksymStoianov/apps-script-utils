@@ -1,0 +1,32 @@
+{
+  "summary": "Prend le premier élément d'un tableau, ou ses n premiers éléments, sans test de vacuité.",
+  "description": [
+    "Avec un seul argument, `first` renvoie un élément, et `undefined` pour un tableau vide au lieu de lever une erreur — c'est précisément ce qui épargne à chaque appel son propre test. Avec un nombre, il renvoie un nouveau tableau, de sorte que les deux formes n'ont jamais à être distinguées à l'exécution.",
+    "`n` est borné comme le fait `Array#slice` : un nombre négatif donne un tableau vide, un nombre supérieur à la longueur donne tout le tableau. L'entrée n'est pas modifiée."
+  ],
+  "params": {
+    "array": "Le tableau dans lequel lire. Il n'est pas modifié.",
+    "n": "Combien d'éléments prendre. Un entier ; omettez-le pour n'en prendre qu'un."
+  },
+  "returns": "le premier élément, ou un nouveau tableau d'au plus `n` éléments.",
+  "throws": {
+    "TypeError": ["`array` n'est pas un tableau.", "`n` est fourni et n'est pas un entier."]
+  },
+  "examples": [
+    {
+      "title": "Un élément, ou plusieurs"
+    },
+    {
+      "title": "Séparer la ligne d'en-tête des données"
+    },
+    {
+      "title": "Bornage"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "last",
+      "note": "les deux mêmes formes, prises par la fin."
+    }
+  ]
+}

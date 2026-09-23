@@ -1,15 +1,19 @@
 # Abstracts and interfaces
 
+<link-summary>The abstract base classes the library builds on.</link-summary>
+
+<web-summary>Reference of the abstract base classes in apps-script-utils and what they are extended for.</web-summary>
+
 Shared abstract classes and interfaces used as building blocks by other modules in the library.
 
-## Abstracts
+## Abstracts {id="abstracts"}
 
-| Abstract                                                                                   | Brief description                                             |
-| :----------------------------------------------------------------------------------------- | :------------------------------------------------------------ |
-| [`Class`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Class.ts) | Base abstract class for providing common class functionality. |
+| Abstract            | Brief description                                             |
+| :------------------ | :------------------------------------------------------------ |
+| [`Class`](Class.md) | Base abstract class for providing common class functionality. |
 
-## Interfaces
+## Interfaces {id="interfaces"}
 
-| Interface                                                                                        | Brief description        |
-| :----------------------------------------------------------------------------------------------- | :----------------------- |
-| [`Iterator`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Iterator.ts) | Interface for iterators. |
+| Interface                 | Brief description        |
+| :------------------------ | :----------------------- |
+| [`Iterator`](Iterator.md) | Interface for iterators. |

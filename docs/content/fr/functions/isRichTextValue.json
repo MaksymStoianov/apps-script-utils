@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est une valeur de texte enrichi.",
+  "description": [
+    "Un objet de service Apps Script n'a pas de constructeur contre lequel un script pourrait tester, alors le garde lit le tag que l'objet déclare pour lui-même : `value.toString() === \"RichTextValue\"`. Un objet ordinaire qui déclare le même tag passe aussi, ce qui en pratique désigne un double de test.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est une valeur de texte enrichi ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nconst value = SpreadsheetApp.newRichTextValue().setText(\"a\").build();\n\nisRichTextValue(value); // => true\nisRichTextValue({}); // => false\nisRichTextValue(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRichTextValue"
+    },
+    {
+      "name": "requireRichTextValue"
+    }
+  ]
+}

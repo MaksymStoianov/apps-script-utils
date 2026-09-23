@@ -1,0 +1,31 @@
+{
+  "summary": "Schreibt eine Zeichenkette in kebab-case.",
+  "description": [
+    "Leerzeichen und Unterstriche werden zu Bindestrichen, an der Grenze von Klein- zu Großbuchstabe kommt ein Bindestrich hinzu, und das Ergebnis wird klein geschrieben. Die zweite Regel zerlegt `\"userFirstName\"` in drei Wörter.",
+    "`clean` entfernt alles außer Buchstaben, Ziffern und Bindestrichen; `trim` fasst zuvor den umgebenden Leerraum zusammen."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein.",
+    "options": "`clean` entfernt die restliche Zeichensetzung; `trim` schneidet Leerraum ab und fasst ihn zusammen."
+  },
+  "returns": "die umgewandelte Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toSnakeCase"
+    },
+    {
+      "name": "toCamelCase"
+    },
+    {
+      "name": "isValidSlug"
+    }
+  ]
+}

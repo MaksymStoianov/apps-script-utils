@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** `null` or `undefined`.",
+  "description": [
+    "`nonNil(value)` is the same test as `!isNil(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "The absent values, and only those: `0`, `\"\"` and `false` are present values and do not qualify.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not `null` or `undefined`; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonNil(0); // => true\nnonNil(\"\"); // => true\nnonNil(false); // => true\nnonNil(null); // => false\nnonNil(undefined); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNil"
+    },
+    {
+      "name": "requireNil"
+    },
+    {
+      "name": "requireNonNil"
+    }
+  ]
+}

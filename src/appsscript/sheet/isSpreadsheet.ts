@@ -3,9 +3,19 @@ import { isObject } from "../../lang";
 /**
  * Checks if the given value is a Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const spreadsheet = SpreadsheetApp.getActive();
+ *
+ * isSpreadsheet(spreadsheet); // => true
+ * isSpreadsheet({}); // => false
+ * isSpreadsheet(null); // => false
+ * ```
+ *
  * @param       {unknown} value - The value to check.
  * @returns     {boolean} `true` if the value is a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object, `false` otherwise.
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a>
+ * @see         [isSpreadsheet on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isSpreadsheet.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

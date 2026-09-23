@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht aufrufbar ist.",
+  "description": [
+    "Die billige Prüfung — `typeof value === \"function\"` — genau das, was man vor einem Aufruf braucht. `isFunction` liest dieselbe Frage strenger.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht aufrufbar ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist aufrufbar."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonFunctionLike(null); // => null\nrequireNonFunctionLike({}); // => {}\nrequireNonFunctionLike(function () {}); // throws IllegalArgumentException\nrequireNonFunctionLike(Math.max); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunctionLike"
+    },
+    {
+      "name": "nonFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    }
+  ]
+}

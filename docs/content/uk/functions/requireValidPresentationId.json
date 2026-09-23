@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як ідентифікатор презентації або викидає виняток.",
+  "description": [
+    "Не менше 25 символів з літер, цифр, дефісів і підкреслень — ідентифікатор з URL презентації. Перевіряється лише формат.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як ідентифікатор презентації.",
+  "throws": {
+    "IllegalArgumentException": "значення не є ідентифікатором презентації."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireValidPresentationId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => \"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"\nrequireValidPresentationId(\"short-id\"); // throws IllegalArgumentException\nrequireValidPresentationId(\"has space in it and is long enough to pass\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidPresentationId"
+    },
+    {
+      "name": "nonValidPresentationId"
+    }
+  ]
+}

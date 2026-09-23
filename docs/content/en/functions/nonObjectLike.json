@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** object-like.",
+  "description": [
+    "`nonObjectLike(value)` is the same test as `!isObjectLike(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Everything `isObject` accepts, plus functions: the question it answers is whether properties can be read off the value at all.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not object-like; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonObjectLike(null); // => true\nnonObjectLike(\"abc\"); // => true\nnonObjectLike(1); // => true\nnonObjectLike({}); // => false\nnonObjectLike([]); // => false\nnonObjectLike(function () {}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObjectLike"
+    },
+    {
+      "name": "requireObjectLike"
+    },
+    {
+      "name": "requireNonObjectLike"
+    }
+  ]
+}

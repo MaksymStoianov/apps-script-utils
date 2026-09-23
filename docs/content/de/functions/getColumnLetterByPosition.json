@@ -1,0 +1,24 @@
+{
+  "summary": "Wandelt eine einsbasierte Spaltenposition in ihren Buchstaben um.",
+  "description": [
+    "Indizes zählen ab null, wie ein `GridRange`; Positionen ab eins, wie `getRange(row, column)`. Beides zu verwechseln ist die übliche Quelle eines Off-by-one in Tabellenskripten — darum gibt es beide Paare unter getrennten Namen."
+  ],
+  "params": {
+    "position": "Die einsbasierte Spaltenposition, wie `getRange` sie nimmt."
+  },
+  "returns": "den Spaltenbuchstaben.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getColumnPositionByLetter"
+    },
+    {
+      "name": "getColumnLetterByIndex"
+    }
+  ]
+}

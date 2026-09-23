@@ -26,6 +26,7 @@ import { isArray } from "../base";
  * @returns  {T[]} A new array without duplicates. The input is left untouched.
  * @throws   {@link TypeError} If `array` is not an array.
  * @see      {@link intersect}
+ * @see      [unique on the documentation site](https://maksymstoianov.github.io/apps-script-utils/unique.html)
  * @since    1.11.0
  * @version  1.0.0
  */

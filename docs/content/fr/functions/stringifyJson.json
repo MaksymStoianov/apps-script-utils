@@ -1,0 +1,28 @@
+{
+  "summary": "Sérialise une valeur en JSON avec un ordre de clés fixe.",
+  "description": [
+    "`JSON.stringify` écrit les clés dans l'ordre d'insertion : deux objets portant les mêmes données peuvent donc produire des textes différents. Ici, les clés de chaque objet sont triées, ce qui fait de la sortie une clé stable — pour un cache, une somme de contrôle ou une comparaison.",
+    "C'est ce que condense `hashCode`, et la raison pour laquelle deux objets égaux donnent le même condensé."
+  ],
+  "params": {
+    "value": "La valeur à sérialiser."
+  },
+  "returns": "le texte JSON, clés d'objet triées.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Sérialisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseJson"
+    },
+    {
+      "name": "hashCode"
+    },
+    {
+      "name": "equals"
+    }
+  ]
+}

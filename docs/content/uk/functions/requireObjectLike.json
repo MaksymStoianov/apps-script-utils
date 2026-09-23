@@ -1,0 +1,33 @@
+{
+  "summary": "Повертає значення як об'єктоподібне значення або викидає виняток.",
+  "description": [
+    "Усе, що приймає `isObject`, плюс функції: питання тут у тому, чи можна взагалі читати у значення властивості.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як об'єктоподібне значення.",
+  "throws": {
+    "IllegalArgumentException": "значення не є об'єктоподібним значенням."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireObjectLike({}); // => {}\nrequireObjectLike([]); // => []\nrequireObjectLike(null); // throws IllegalArgumentException\nrequireObjectLike(\"abc\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObjectLike"
+    },
+    {
+      "name": "nonObjectLike"
+    },
+    {
+      "name": "requireNonObjectLike"
+    }
+  ]
+}

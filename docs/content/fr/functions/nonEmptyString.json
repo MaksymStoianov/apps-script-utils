@@ -1,0 +1,24 @@
+{
+  "summary": "Renvoie la valeur comme chaîne non vide, en nommant l'argument en cas d'échec.",
+  "description": [
+    "L'ancienne forme de `requireNonEmptyString`, conservée pour le code qui l'appelle déjà. Son second argument est le nom à insérer dans le message, non le message lui-même — l'inverse de tous les autres gardes, et la raison de son remplacement."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "name": "Le nom d'argument à insérer dans le message. `\"value\"` par défaut."
+  },
+  "returns": "la même chaîne.",
+  "throws": {
+    "InvalidStringException": "la valeur n'est pas une chaîne, ou ne contient que des espaces."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    }
+  ]
+}

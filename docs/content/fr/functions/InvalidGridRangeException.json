@@ -1,0 +1,24 @@
+{
+  "summary": "Un GridRange était attendu et l'objet n'en est pas un valide : bornes absentes, inversées ou négatives.",
+  "description": [
+    "Un `GridRange` était attendu et l'objet n'en est pas un valide : bornes absentes, inversées ou négatives.",
+    "Toute classe de cette hiérarchie accepte un message facultatif, une autre exception dont le message est repris, ou rien du tout. `isException` les reconnaît toutes ; un `Error` ordinaire n'en fait pas partie."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lever et intercepter",
+      "body": "```javascript\nthrow new InvalidGridRangeException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof InvalidGridRangeException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

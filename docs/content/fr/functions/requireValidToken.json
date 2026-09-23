@@ -1,0 +1,28 @@
+{
+  "summary": "Renvoie un jeton une fois qu'il correspond à l'une des clés autorisées, ou lève.",
+  "description": [
+    "Les clés autorisées peuvent être une chaîne, une liste, ou un objet dont les clés sont les jetons. C'est le contrôle à l'entrée d'une application web : il renvoie le jeton pour que l'appel tienne en une expression, et lève une exception nommée sinon."
+  ],
+  "params": {
+    "token": "Le jeton présenté par l'appelant.",
+    "allowedKeys": "Une clé, une liste de clés, ou un objet indexé par celles-ci.",
+    "message": "Le message de l'exception. `\"Invalid API key.\"` par défaut."
+  },
+  "returns": "le jeton, inchangé.",
+  "throws": {
+    "AuthenticationException": "le jeton est absent ou ne correspond à aucune clé autorisée."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    },
+    {
+      "name": "AuthorizationException"
+    }
+  ]
+}

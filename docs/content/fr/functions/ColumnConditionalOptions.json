@@ -1,0 +1,25 @@
+{
+  "summary": "Comment les colonnes sont lues et lesquelles sont candidates.",
+  "description": [
+    "`headerColumn` est la colonne, à base un, qui porte les noms de lignes. Comme `headerRow`, la définir indexe chaque colonne par ces noms et exclut la colonne d'en-tête des candidates."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnPredicate"
+    }
+  ]
+}

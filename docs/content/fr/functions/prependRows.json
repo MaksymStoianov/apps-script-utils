@@ -1,0 +1,37 @@
+{
+  "summary": "Insère des lignes avant les données — dans une feuille ou au niveau d'une plage.",
+  "description": [
+    "La place est faite d'abord, puis les valeurs y sont écrites : rien de ce qui se trouve déjà dans la feuille n'est écrasé. Avec une feuille, les lignes vont tout en haut ; avec une plage, au-dessus de sa première ligne, et les valeurs sont écrites sur ses colonnes.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.",
+    "Un échec pendant l'écriture — service indisponible, feuille supprimée — revient sous la forme de l'erreur levée par le service, avec sa pile. Le verrou du document est relâché dans tous les cas."
+  ],
+  "params": {
+    "target": "La feuille dans laquelle insérer, ou la plage au niveau de laquelle insérer.",
+    "values": "Une matrice de lignes : un tableau par ligne, tous de même longueur.",
+    "options": "`afterFrozenRows` insère sous les lignes figées plutôt qu'tout en haut. Une plage décide elle-même de la position : l'option n'y change rien."
+  },
+  "returns": "la feuille, afin de chaîner les appels.",
+  "throws": {
+    "IllegalArgumentException": "aucun argument n'est passé.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage.",
+    "TypeError": "les valeurs ne forment pas une matrice de lignes de même longueur."
+  },
+  "examples": [
+    {
+      "title": "Insertion en haut d'une feuille",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRows(sheet, [\n  [\"Name\", \"Email\"],\n  [\"Ada\", \"ada@example.com\"]\n]);\n```"
+    },
+    {
+      "title": "Insertion au niveau d'une plage",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRows(sheet.getRange(\"B4:C13\"), [[\"Name\", \"Email\"]]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependRow"
+    },
+    {
+      "name": "appendRows"
+    }
+  ]
+}

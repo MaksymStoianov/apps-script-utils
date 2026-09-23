@@ -1,0 +1,25 @@
+{
+  "summary": "Remplace le nom de feuille dans une notation A1 en conservant la plage.",
+  "description": [
+    "Ce dont a besoin une réécriture de formules après le renommage ou la copie d'une feuille. Un nom qui demande des guillemets en reçoit ; une notation sans nom de feuille en obtient un."
+  ],
+  "params": {
+    "a1Notation": "La notation à réécrire.",
+    "sheetName": "Le nom de feuille à insérer."
+  },
+  "returns": "la notation réécrite.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Renommage"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractSheetNameFromA1Notation"
+    },
+    {
+      "name": "isValidSheetName"
+    }
+  ]
+}

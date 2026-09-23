@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur comme une chaîne non vide, ou lève.",
+  "description": [
+    "Les espaces ne comptent pas comme du contenu : une chaîne d'espaces échoue au test comme une chaîne vide. C'est le garde par lequel commencent la plupart des aides de chaîne de cette bibliothèque."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé."
+  },
+  "returns": "la même chaîne.",
+  "throws": {
+    "EmptyStringException": "la valeur n'est pas une chaîne, ou ne contient que des espaces."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "isEmpty"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": "Aplatit un objet imbriqué en un seul niveau de clés pointées.",
+  "description": [
+    "Les objets imbriqués deviennent des chemins pointés ; les tableaux restent entiers, car leurs indices sont des données et non de la structure. `depth` arrête la descente — `1` n'aplatit que le premier niveau.",
+    "Le chemin inverse est `getPath`, qui relit une valeur par le même type de chemin."
+  ],
+  "params": {
+    "source": "L'objet à aplatir. Ce ne doit pas être un tableau.",
+    "depth": "Combien de niveaux descendre. Un entier ; illimité par défaut."
+  },
+  "returns": "un nouvel objet plat dont les clés sont des chemins pointés.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un objet."
+  },
+  "examples": [
+    {
+      "title": "Aplatissement"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getPath"
+    },
+    {
+      "name": "setPath"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "What a sheet's columns are called and what they hold.",
+  "description": [
+    "`version` marks the format so a later one can be recognised rather than misread, `headerRow` says which row holds the names, and `columns` describes them left to right.",
+    "`getSchema` sets `inferred: true` when nothing was stored and the description was read off the sheet's own contents — a guess, not a declaration."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst schema = {\n  version: 1,\n  headerRow: 1,\n  columns: [\n    { name: \"id\", type: \"number\" },\n    { name: \"email\", type: \"string\" }\n  ]\n};\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "insertSchema"
+    },
+    {
+      "name": "SheetColumnSchema"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення слагом.",
+  "description": [
+    "Починається з літери, далі літери, цифри, дефіси та підкреслення — форма, придатна для сегмента URL чи ключа. Пробіли, цифра на початку та порожній рядок не проходять.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є слагом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisValidSlug(\"my-page\"); // => true\nisValidSlug(\"a_1\"); // => true\nisValidSlug(\"1-page\"); // => false\nisValidSlug(\"my page\"); // => false\nisValidSlug(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidSlug"
+    },
+    {
+      "name": "requireValidSlug"
+    }
+  ]
+}

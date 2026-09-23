@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение как логическое значение или выбрасывает исключение.",
+  "description": [
+    "Подходят только два примитива. `new Boolean(false)` — это объект, а строки `\"true\"` и `\"false\"` остаются строками.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как логическое значение.",
+  "throws": {
+    "IllegalArgumentException": "значение не является логическим значением."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireBoolean(true); // => true\nrequireBoolean(false); // => false\nrequireBoolean(\"true\"); // throws IllegalArgumentException\nrequireBoolean(1); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isBoolean"
+    },
+    {
+      "name": "nonBoolean"
+    },
+    {
+      "name": "requireNonBoolean"
+    }
+  ]
+}

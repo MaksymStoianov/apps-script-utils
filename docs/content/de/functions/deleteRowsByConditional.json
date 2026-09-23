@@ -1,0 +1,35 @@
+{
+  "summary": "Löscht die vom Prädikat gewählten Zeilen.",
+  "description": [
+    "Jede Zeile wird an dem Blatt gemessen, wie es gelesen wurde; gelöscht wird anschließend von unten nach oben in zusammenhängenden Blöcken. Genau das verhindert den Fehler einer selbstgeschriebenen Schleife, die die falschen Zeilen trifft, sobald die Positionen sich verschieben.",
+    "Die Zeilen sind dann fort: nur leeren tut sie `clearRowsByConditional`.",
+    "Ein Blatt meint seinen ganzen Datenbereich, und es werden ganze Zeilen entfernt. Ein Bereich meint nur die Zellen darin: sie werden gelöscht, die darunter rücken nach oben, und die Spalten neben dem Bereich bleiben, wo sie sind. In beiden Fällen erhält das Prädikat die Position im Blatt; die Weigerung, ein Blatt zu leeren, gilt der Blatt-Form, in der eine Zeile bleiben muss."
+  ],
+  "params": {
+    "target": "Das Blatt, auf dem gearbeitet wird, oder der Bereich, innerhalb dessen gearbeitet wird: nur dessen Zellen werden gelesen und nur sie entfernt.",
+    "predicate": "Bekommt die Zellen der Zeile, ihre einsbasierte Position und — wenn `headerRow` gesetzt ist — die Zeile mit den Spaltennamen als Schlüsseln. `true` für die Zeilen, auf die gewirkt werden soll.",
+    "options": "`headerRow` benennt die Zeile mit den Spaltennamen. Ist sie gesetzt, kommt jede Zeile mit diesen Namen als Schlüsseln, und die Kopfzeile selbst scheidet als Kandidat aus."
+  },
+  "returns": "wie viele betroffen waren.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist.",
+    "IllegalArgumentException": "das Prädikat ist keine Funktion oder die Kopfposition keine positive ganze Zahl."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    },
+    {
+      "title": "Innerhalb eines Blocks",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only B2:D100 is read, and only those cells move up.\ndeleteRowsByConditional(sheet.getRange(\"B2:D100\"), (values) => values.every((cell) => cell === \"\"));\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    }
+  ]
+}

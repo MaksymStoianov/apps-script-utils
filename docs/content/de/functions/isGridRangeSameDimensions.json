@@ -1,0 +1,25 @@
+{
+  "summary": "Prüft, ob zwei Rasterbereiche gleich hoch und gleich breit sind.",
+  "description": [
+    "Wo sie liegen, spielt keine Rolle, nur wie groß sie sind — die Frage vor dem Kopieren von Werten aus einem Bereich in einen anderen, denn `setValues` lehnt eine Abweichung ab."
+  ],
+  "params": {
+    "range1": "Der erste Bereich.",
+    "range2": "Der zweite Bereich."
+  },
+  "returns": "`true`, wenn beide gleich groß sind.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Größen vergleichen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonGridRangeSameDimensions"
+    },
+    {
+      "name": "requireGridRangeSameDimensions"
+    }
+  ]
+}

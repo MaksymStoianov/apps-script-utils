@@ -1,0 +1,33 @@
+{
+  "summary": "Réécrit les formules d'une feuille.",
+  "description": [
+    "Passez une table pour remplacer des noms de feuille en bloc — le besoin habituel après un renommage ou une copie — ou une fonction pour décider de chaque formule. La fonction reçoit la formule et renvoie celle à réécrire.",
+    "Seules les cellules contenant une formule sont visitées, et seules celles qui changent réellement sont écrites : un appel sans effet coûte une lecture et rien de plus.",
+    "Une feuille désigne toute sa plage de données ; une plage ne désigne que ses cellules, ce qui permet de confiner la réécriture à un bloc. La ligne et la colonne transmises au transformateur sont dans les deux cas des positions dans la feuille, ce qui rend l'adresse de la formule elle-même utilisable dans le remplacement."
+  ],
+  "params": {
+    "target": "La feuille dont les formules sont réécrites, ou la plage dans laquelle réécrire : seules ses cellules sont lues et écrites.",
+    "rewrite": "Une table ancien nom de feuille → nouveau, ou une fonction prenant une formule et renvoyant son remplacement."
+  },
+  "returns": "le nombre de formules réécrites.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage."
+  },
+  "examples": [
+    {
+      "title": "Réécrire des formules"
+    },
+    {
+      "title": "Dans un seul bloc",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only the formulas in D2:D100 are rewritten.\nupdateFormulas(sheet.getRange(\"D2:D100\"), { \"=SUM(A2:A)\": \"=SUM(A2:A1000)\" });\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

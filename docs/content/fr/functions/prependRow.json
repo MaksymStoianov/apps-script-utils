@@ -1,0 +1,36 @@
+{
+  "summary": "Insère une ligne avant les données — dans une feuille ou au niveau d'une plage.",
+  "description": [
+    "`prependRows` avec une seule ligne : la place est faite d'abord, donc rien de ce qui existe n'est écrasé. Une feuille reçoit la ligne tout en haut ; une plage la reçoit juste au-dessus de sa première ligne, les valeurs étant écrites sur les colonnes de la plage.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur."
+  ],
+  "params": {
+    "target": "La feuille dans laquelle insérer, ou la plage au niveau de laquelle insérer.",
+    "values": "Une seule ligne : un tableau plat, une valeur par colonne.",
+    "options": "`afterFrozenRows` insère sous les lignes figées plutôt qu'tout en haut. Une plage décide elle-même de la position : l'option n'y change rien."
+  },
+  "returns": "la feuille, afin de chaîner les appels.",
+  "throws": {
+    "IllegalArgumentException": "aucun argument n'est passé.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage.",
+    "TypeError": "les valeurs ne forment pas un tableau plat."
+  },
+  "examples": [
+    {
+      "title": "Insertion en haut d'une feuille",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRow(sheet, [\"Name\", \"Email\"]);\n```"
+    },
+    {
+      "title": "Insertion au niveau d'une plage",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependRow(sheet.getRange(\"B4:C13\"), [\"Name\", \"Email\"]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependRows"
+    },
+    {
+      "name": "appendRow"
+    }
+  ]
+}

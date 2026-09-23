@@ -1,0 +1,23 @@
+{
+  "summary": "Eine Zeile, wie `getValues` sie einem Filter oder Mapper übergibt.",
+  "description": [
+    "`values` sind die Zellen von links nach rechts, `position` die einsbasierte Zeile auf dem Blatt — die Nummer, die ein Mensch am Rand sieht — und dazu die Zeile mit den Spaltennamen als Schlüsseln, wenn eine Kopfzeile benannt wurde.",
+    "Die Position zur Hand zu haben ist das, was einem Filter erlaubt, hinterher auf eine bestimmte Zeile zu zeigen oder an ihr zu wirken."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getValues"
+    },
+    {
+      "name": "RowPredicate"
+    }
+  ]
+}

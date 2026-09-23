@@ -1,0 +1,27 @@
+{
+  "summary": "Encodes every character as a numeric character reference.",
+  "description": [
+    "Unlike `escapeHtml`, which touches only the five dangerous characters, this rewrites the whole string as `&#NN;` references. `decodeHtml` is its inverse."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty."
+  },
+  "returns": "the encoded string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\nencodeHtml(\"<a>\"); // => \"&#60;a&#62;\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "decodeHtml"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

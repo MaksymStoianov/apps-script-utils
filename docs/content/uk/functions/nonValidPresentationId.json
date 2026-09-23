@@ -1,0 +1,27 @@
+{
+  "summary": "Перевіряє, що значення **не** є ідентифікатором презентації.",
+  "description": [
+    "`nonValidPresentationId(value)` — та сама перевірка, що й `!isValidPresentationId(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Не менше 25 символів з літер, цифр, дефісів і підкреслень — ідентифікатор з URL презентації. Перевіряється лише формат.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є ідентифікатором презентації; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonValidPresentationId(\"short-id\"); // => true\nnonValidPresentationId(\"has space in it and is long enough to pass\"); // => true\nnonValidPresentationId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidPresentationId"
+    },
+    {
+      "name": "requireValidPresentationId"
+    }
+  ]
+}

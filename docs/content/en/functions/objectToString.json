@@ -1,0 +1,25 @@
+{
+  "summary": "Returns the internal tag of a value.",
+  "description": [
+    "`Object.prototype.toString.call(value)`, in a form that is safe to call on anything, including `null` and `undefined`. Several guards in this library are built on it, because the tag survives crossing a frame boundary where `instanceof` does not."
+  ],
+  "params": {
+    "value": "The value to tag."
+  },
+  "returns": "the tag, such as `\"[object Array]\"`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Reading the tag",
+      "body": "```javascript\nobjectToString([]); // => \"[object Array]\"\nobjectToString(null); // => \"[object Null]\"\nobjectToString(new Date()); // => \"[object Date]\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObject"
+    },
+    {
+      "name": "isRegExp"
+    }
+  ]
+}

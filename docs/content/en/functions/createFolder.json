@@ -1,0 +1,26 @@
+{
+  "summary": "Creates a folder path in Drive, reusing the folders that already exist.",
+  "description": [
+    "The path is walked segment by segment: an existing folder of that name is entered, a missing one is created. Drive allows two folders to share a name, so the first match wins rather than a second one being made."
+  ],
+  "params": {
+    "path": "The folder path, separated by `/`.",
+    "rootFolder": "Where to start. The Drive root by default."
+  },
+  "returns": "the folder at the end of the path.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nconst folder = createFolder(\"reports/2026/january\");\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

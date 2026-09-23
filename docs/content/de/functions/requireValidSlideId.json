@@ -1,0 +1,30 @@
+{
+  "summary": "Gibt den Wert als eine Folien-Id zurück oder wirft.",
+  "description": [
+    "Buchstaben, Ziffern, Bindestriche und Unterstriche, mindestens eines davon. Folien-Ids sind kurz — `p1` ist eine ganz gewöhnliche — daher gibt es keine Mindestlänge.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als eine Folien-Id.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht eine Folien-Id."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireValidSlideId(\"p1\"); // => \"p1\"\nrequireValidSlideId(\"SLIDES_api123\"); // => \"SLIDES_api123\"\nrequireValidSlideId(\"has space\"); // throws IllegalArgumentException\nrequireValidSlideId(\"\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlideId"
+    },
+    {
+      "name": "nonValidSlideId"
+    }
+  ]
+}

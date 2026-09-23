@@ -1,0 +1,26 @@
+{
+  "summary": "The abstract base the library's own classes extend.",
+  "description": [
+    "It carries the behaviour every class here is expected to have rather than any behaviour of its own, and cannot be instantiated. Extend it when a value object of yours should behave like the library's — being recognised by the guards and compared by `equals` rather than by identity."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nclass Money extends Class {\n  constructor(amount) {\n    super();\n    this.amount = amount;\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "Iterator"
+    },
+    {
+      "name": "equals"
+    },
+    {
+      "name": "hashCode"
+    }
+  ]
+}

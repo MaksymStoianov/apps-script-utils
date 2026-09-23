@@ -1,0 +1,26 @@
+{
+  "summary": "Breaks a path into its parts.",
+  "description": [
+    "The result carries `root`, `dir`, `base`, `name` and `ext`, the same five parts Node's `path.parse` reports. A part that the path does not have is simply absent from the object, so a bare file name comes back with `base`, `name` and `ext` only.",
+    "`ext` includes the dot, and a name that begins with one — `.gitignore` — is a name, not an extension."
+  ],
+  "params": {
+    "path": "The path to break apart."
+  },
+  "returns": "an object with the parts the path has.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Breaking a path apart",
+      "body": "```javascript\nparse(\"/a/b/c.txt\");\n// => { root: \"/\", dir: \"/a/b\", base: \"c.txt\", name: \"c\", ext: \".txt\" }\n\nparse(\"readme.md\");\n// => { base: \"readme.md\", name: \"readme\", ext: \".md\" }\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

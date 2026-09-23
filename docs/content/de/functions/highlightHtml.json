@@ -1,0 +1,27 @@
+{
+  "summary": "Färbt das HTML in einem Bereich wie Quellcode ein.",
+  "description": [
+    "Die Zellen werden als Text gelesen, darin Tags, Attributnamen, Werte, Kommentare und Inhalt unterschieden, und die Zellen als Rich Text zurückgeschrieben, jeder Teil in seiner Farbe. Die Farben bestimmt ein Theme."
+  ],
+  "params": {
+    "range": "Der Bereich, dessen Zellen eingefärbt werden.",
+    "theme": "Die Farbe für jede Art von Token."
+  },
+  "returns": "denselben Bereich.",
+  "throws": {
+    "InvalidRangeException": "das erste Argument ist kein Bereich."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertRichTextToHtml"
+    },
+    {
+      "name": "isRange"
+    }
+  ]
+}

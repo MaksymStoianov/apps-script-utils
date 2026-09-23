@@ -1,0 +1,30 @@
+{
+  "summary": "Returns the value as a domain name, or throws.",
+  "description": [
+    "Labels separated by single dots, with no leading or trailing dot or hyphen and no empty label. It is a syntax check: whether the domain resolves is another question.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, typed as a domain name.",
+  "throws": {
+    "IllegalArgumentException": "the value is not a domain name."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireValidDomain(\"example.com\"); // => \"example.com\"\nrequireValidDomain(\"sub.example.co.uk\"); // => \"sub.example.co.uk\"\nrequireValidDomain(\"-example.com\"); // throws IllegalArgumentException\nrequireValidDomain(\"example..com\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "nonValidDomain"
+    }
+  ]
+}

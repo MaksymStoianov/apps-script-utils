@@ -1,0 +1,19 @@
+{
+  "summary": "Vérifie si une valeur est un nombre non négatif.",
+  "description": [
+    "`NaN` ne compte pas : c'est un nombre, mais il n'est ni négatif ni non négatif. Les infinis suivent leur signe : `Infinity` compte, `-Infinity` non.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un nombre non négatif ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisNonNegative(0); // => true\nisNonNegative(-0); // => true\nisNonNegative(42); // => true\nisNonNegative(Infinity); // => true\nisNonNegative(-1); // => false\nisNonNegative(NaN); // => false\nisNonNegative(\"1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": []
+}

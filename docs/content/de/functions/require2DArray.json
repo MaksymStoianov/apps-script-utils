@@ -1,0 +1,37 @@
+{
+  "summary": "Gibt den Wert als nicht-leeres zweidimensionales Array zurück oder wirft.",
+  "description": [
+    "Die Prüfung, die vor `Range#setValues` gehört: das lehnt ein flaches Array mit einer Meldung ab, die weder das Argument noch den Grund nennt. `require2DArray` wirft vorher, mit einer Meldung Ihrer Wahl, und gibt den Wert zurück, sodass sich der Aufruf in einen Ausdruck einfügt.",
+    "Akzeptiert wird genau das, was [`is2DArray`](is2DArray.md) akzeptiert: ein nicht-leeres Array, dessen Elemente alle Arrays sind. Unterschiedlich lange Zeilen bestehen die Prüfung; müssen sie übereinstimmen, nehmen Sie [`requireConsistent2DArray`](requireConsistent2DArray.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert.",
+    "message": "Die Meldung der Ausnahme. Standard: `\"Expected a non-empty two-dimensional array.\"`"
+  },
+  "returns": "denselben Wert, typisiert als zweidimensionales Array.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist kein nicht-leeres Array aus Arrays."
+  },
+  "examples": [
+    {
+      "title": "Prüfen und im selben Ausdruck verwenden"
+    },
+    {
+      "title": "Was besteht und was wirft"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "is2DArray",
+      "note": "dieselbe Prüfung als Prädikat."
+    },
+    {
+      "name": "non2DArray",
+      "note": "das verneinte Prädikat."
+    },
+    {
+      "name": "requireConsistent2DArray",
+      "note": "verlangt zusätzlich gleiche Zeilenlängen."
+    }
+  ]
+}

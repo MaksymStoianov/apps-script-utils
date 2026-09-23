@@ -1,0 +1,25 @@
+{
+  "summary": "Takes the range part out of an A1 notation.",
+  "description": [
+    "Everything after the `!` — and the whole string when there is no `!` at all, since a bare notation is already only a range."
+  ],
+  "params": {
+    "a1Notation": "The notation to read."
+  },
+  "returns": "the range part.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Extracting",
+      "body": "```javascript\nextractRangeFromA1Notation(\"Sheet1!A1:B2\"); // => \"A1:B2\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "extractSheetNameFromA1Notation"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

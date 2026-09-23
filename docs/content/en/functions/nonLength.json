@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a valid array-like length.",
+  "description": [
+    "`nonLength(value)` is the same test as `!isLength(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "A whole number from `0` up to `Number.MAX_SAFE_INTEGER` — the range a `length` property may hold.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a valid array-like length; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonLength(-1); // => true\nnonLength(1.5); // => true\nnonLength(\"3\"); // => true\nnonLength(0); // => false\nnonLength(42); // => false\nnonLength(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "requireLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

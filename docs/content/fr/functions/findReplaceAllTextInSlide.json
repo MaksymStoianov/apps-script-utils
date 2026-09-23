@@ -1,0 +1,29 @@
+{
+  "summary": "Remplace chaque occurrence d'un texte sur une diapositive.",
+  "description": [
+    "Slides propose un rechercher-remplacer sur toute une présentation ; ici, la portée est réduite à une seule diapositive — ce qu'il faut pour remplir une page de gabarit à la fois. La casse compte, sauf indication contraire."
+  ],
+  "params": {
+    "slide": "La diapositive à traiter.",
+    "findText": "Le texte recherché.",
+    "replaceText": "Le texte qui le remplace.",
+    "matchCase": "Si la recherche respecte la casse. `true` par défaut."
+  },
+  "returns": "le nombre d'occurrences remplacées.",
+  "throws": {
+    "SlideNotFoundException": "le premier argument n'est pas une diapositive."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideByIndex"
+    },
+    {
+      "name": "requireSlide"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как строку версии или выбрасывает исключение.",
+  "description": [
+    "Группы цифр через точку, в любом количестве. Суффикс предрелиза, ведущая `v` и пустая группа не проходят, поэтому `\"1.2.3-beta\"` не подходит, хотя SemVer его допускает.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как строку версии.",
+  "throws": {
+    "IllegalArgumentException": "значение не является строкой версии."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireValidVersion(\"1\"); // => \"1\"\nrequireValidVersion(\"1.2.3\"); // => \"1.2.3\"\nrequireValidVersion(\"1.2.3-beta\"); // throws IllegalArgumentException\nrequireValidVersion(\"v1.2\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidVersion"
+    },
+    {
+      "name": "nonValidVersion"
+    }
+  ]
+}

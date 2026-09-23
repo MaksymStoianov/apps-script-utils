@@ -1,0 +1,34 @@
+{
+  "summary": "Prüft, ob ein Wert ein nicht-leeres Array ist, dessen Elemente alle Arrays sind.",
+  "description": [
+    "Das ist die Form, die `Range#getValues` zurückgibt und die `Range#setValues` erwartet: Zeilen aus Zellen. `is2DArray` beantwortet nur die Frage nach der Form — ob alle Zeilen gleich lang sind, prüft [`isConsistent2DArray`](isConsistent2DArray.md).",
+    "Ein leeres Array gilt hier **nicht** als zweidimensional: es gibt keine Zeilen zu prüfen, und `[]` als Matrix durchzulassen ist genau das, was ein leeres Ergebnis unbemerkt in einen `setValues`-Aufruf rutschen lässt. Über die Elemente selbst wird nichts weiter geprüft, eine Matrix gemischter Typen besteht die Prüfung."
+  ],
+  "params": {
+    "arr": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein nicht-leeres Array ist und jedes Element davon ein Array ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was als zweidimensional gilt"
+    },
+    {
+      "title": "Einen Wert absichern, der eine Matrix sein könnte"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "ergänzt die Prüfung auf gleiche Zeilenlänge."
+    },
+    {
+      "name": "non2DArray",
+      "note": "dieselbe Prüfung, verneint."
+    },
+    {
+      "name": "require2DArray",
+      "note": "wirft eine Ausnahme statt zu antworten."
+    }
+  ]
+}

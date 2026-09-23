@@ -3,10 +3,19 @@ import { isUndefined } from "./isUndefined";
 /**
  * Checks if the provided value is NOT `undefined`.
  *
+ * @example
+ * ```javascript
+ * nonUndefined(null); // => true
+ * nonUndefined(0); // => true
+ * nonUndefined(""); // => true
+ * nonUndefined(undefined); // => false
+ * ```
+ *
  * @template T
  * @param   {T | undefined} value - The value to check.
  * @returns {boolean} `true` if the value is not `undefined`; otherwise, `false`.
  * @see     {@link isUndefined}
+ * @see     [nonUndefined on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonUndefined.html)
  * @since   1.4.0
  * @version 1.0.0
  */

@@ -1,0 +1,27 @@
+{
+  "summary": "Finds a named range by its name.",
+  "description": [
+    "A named range is the stable way to point at a block of cells that a person may move around the sheet. Apps Script only offers the whole list, so the names are walked and compared.",
+    "A name that is not defined gives `null`, which is the case to handle when a template has been edited by hand."
+  ],
+  "params": {
+    "spreadsheet": "The spreadsheet to look in.",
+    "name": "The name of the range."
+  },
+  "returns": "the named range, or `null` when no such name is defined.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Looking up",
+      "body": "```javascript\nconst spreadsheet = SpreadsheetApp.getActive();\n\nconst range = getNamedRangeByName(spreadsheet, \"Settings\");\n\nrange?.getRange().getValues();\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetById"
+    },
+    {
+      "name": "parseA1Notation"
+    }
+  ]
+}

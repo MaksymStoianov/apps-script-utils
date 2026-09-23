@@ -4,6 +4,14 @@ import { isNil } from "./isNil";
 /**
  * Ensures that the provided object is not `null` or `undefined`.
  *
+ * @example
+ * ```javascript
+ * requireNonNull(0); // => 0
+ * requireNonNull(""); // => ""
+ * requireNonNull(null); // throws NullPointerException
+ * requireNonNull(undefined); // throws NullPointerException
+ * ```
+ *
  * @template T - The type of the object being checked.
  * @param    {T | null | undefined} value the object to validate.
  * @param    {string} [message]
@@ -11,6 +19,7 @@ import { isNil } from "./isNil";
  * @throws   {NullPointerException}
  * @see      {@link nonNull}
  * @see      {@link isNull}
+ * @see      [requireNonNull on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonNull.html)
  * @since    1.0.0
  * @version  1.0.0
  */

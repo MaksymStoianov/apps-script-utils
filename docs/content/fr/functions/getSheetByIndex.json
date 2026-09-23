@@ -1,0 +1,26 @@
+{
+  "summary": "Trouve une feuille par sa position dans le classeur.",
+  "description": [
+    "L'indice compte à partir de zéro, de gauche à droite comme les onglets sont affichés. C'est une position, pas une identité : déplacer un onglet change le résultat — d'où `getSheetById` pour ce qu'on stocke.",
+    "Un indice au-delà de la fin donne `null` plutôt qu'une exception."
+  ],
+  "params": {
+    "sheetIndex": "La position à base zéro.",
+    "spreadsheet": "Le classeur où chercher. Par défaut, celui qui est actif."
+  },
+  "returns": "la feuille, ou `null` si l'indice dépasse la fin.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Recherche"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetById"
+    },
+    {
+      "name": "sortSheets"
+    }
+  ]
+}

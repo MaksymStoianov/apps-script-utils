@@ -9,6 +9,11 @@ import { parseA1Notation } from "./parseA1Notation";
  * This function returns the sheet name as a clean string, or `null` if the
  * notation contains only the range part (e.g., `A1:B2`).
  *
+ * @example
+ * ```javascript
+ * extractSheetNameFromA1Notation("Sheet1!A1:B2"); // => "Sheet1"
+ * ```
+ *
  * @param       {string} a1Notation - The A1 notation string (e.g., `SheetName!A1`, `Sheet Name'!A:A`).
  * @returns     {string|null} The extracted sheet name, or `null` if no sheet name is present in the notation.
  * @throws      {Error}
@@ -19,6 +24,7 @@ import { parseA1Notation } from "./parseA1Notation";
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [extractSheetNameFromA1Notation on the documentation site](https://maksymstoianov.github.io/apps-script-utils/extractSheetNameFromA1Notation.html)
  * @since       1.6.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est un tableau.",
+  "description": [
+    "Le test se réduit à `Array.isArray` : un tableau venu d'un autre frame compte, un objet ressemblant à un tableau — `arguments`, une `NodeList`, `{ length: 0 }` — non.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est un tableau ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisArray([]); // => true\nisArray([1, 2, 3]); // => true\nisArray(\"abc\"); // => false\nisArray({ length: 0 }); // => false\nisArray(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

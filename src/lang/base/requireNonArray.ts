@@ -22,6 +22,7 @@ import { isArray } from "./isArray";
  * @see      {@link isArray}
  * @see      {@link nonArray}
  * @see      {@link requireArray}
+ * @see      [requireNonArray on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonArray.html)
  * @since    1.11.0
  * @version  1.0.0
  */

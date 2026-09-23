@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is a boolean.",
+  "description": [
+    "Only the two primitives pass. `new Boolean(false)` is an object, and the strings `\"true\"` and `\"false\"` are strings.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a boolean; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisBoolean(true); // => true\nisBoolean(false); // => true\nisBoolean(\"true\"); // => false\nisBoolean(1); // => false\nisBoolean(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    },
+    {
+      "name": "requireNonBoolean"
+    }
+  ]
+}

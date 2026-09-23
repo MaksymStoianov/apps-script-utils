@@ -4,9 +4,17 @@ import { isInteger } from "../number";
 /**
  * Gets the last element of an array.
  *
+ * @example
+ * ```javascript
+ * last([1, 2, 3]); // => 3
+ * last([]); // => undefined
+ * last([1, 2, 3], 2); // => [2, 3] — order preserved
+ * ```
+ *
  * @template T - The type of elements in the input array.
  * @param    {T[]} array - The array to read from.
  * @returns  {T | undefined} The last element, or `undefined` if the array is empty.
+ * @see [last on the documentation site](https://maksymstoianov.github.io/apps-script-utils/last.html)
  */
 export function last<T>(array: T[]): T | undefined;
 

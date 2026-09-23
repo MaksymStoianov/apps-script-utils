@@ -1,0 +1,26 @@
+{
+  "summary": "Produces a numeric hash for any value.",
+  "description": [
+    "The value is turned into a string first — an object through the key-sorted form `stringifyJson` produces — and the string is folded into a 32-bit integer. Two values that `equals` considers equal hash the same.",
+    "It is a bucket key, not a checksum: different values can collide, and the result is not stable across releases of the library."
+  ],
+  "params": {
+    "value": "The value to hash."
+  },
+  "returns": "a 32-bit integer; `0` for an empty string.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Hashing",
+      "body": "```javascript\nhashCode(\"abc\"); // => 96354\nhashCode(\"\"); // => 0\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "equals"
+    },
+    {
+      "name": "stringifyJson"
+    }
+  ]
+}

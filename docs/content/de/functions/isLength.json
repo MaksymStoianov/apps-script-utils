@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine gültige Array-Länge ist.",
+  "description": [
+    "Eine ganze Zahl von `0` bis `Number.MAX_SAFE_INTEGER` — der Bereich, den eine `length`-Eigenschaft annehmen darf.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine gültige Array-Länge ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisLength(0); // => true\nisLength(42); // => true\nisLength(Number.MAX_SAFE_INTEGER); // => true\nisLength(-1); // => false\nisLength(1.5); // => false\nisLength(\"3\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonLength"
+    },
+    {
+      "name": "requireLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

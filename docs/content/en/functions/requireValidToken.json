@@ -1,0 +1,29 @@
+{
+  "summary": "Returns a token once it matches one of the keys allowed, or throws.",
+  "description": [
+    "The allowed keys may be a single string, a list, or an object whose keys are the tokens. This is the check at the door of a web app: it returns the token so the call reads as one expression, and throws a named exception otherwise."
+  ],
+  "params": {
+    "token": "The token presented by the caller.",
+    "allowedKeys": "One key, a list of keys, or an object keyed by them.",
+    "message": "The message of the exception. `\"Invalid API key.\"` by default."
+  },
+  "returns": "the token, unchanged.",
+  "throws": {
+    "AuthenticationException": "the token is missing or matches none of the allowed keys."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nfunction doPost(event) {\n  const key = requireValidToken(\n    event.parameter.key,\n    PropertiesService.getScriptProperties().getProperty(\"API_KEYS\").split(\",\"),\n    \"Unknown API key.\"\n  );\n\n  // … the request is from someone we know\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    },
+    {
+      "name": "AuthorizationException"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как стиль текста или выбрасывает исключение.",
+  "description": [
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка читает тег, который объект сообщает о себе сам: `value.toString() === \"TextStyle\"`. Обычный объект с таким же тегом тоже пройдёт — на практике это тестовый дубль.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как стиль текста.",
+  "throws": {
+    "IllegalArgumentException": "значение не является стилем текста."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst style = SpreadsheetApp.newTextStyle().setBold(true).build();\n\nrequireTextStyle(style); // => style\nrequireTextStyle({}); // throws IllegalArgumentException\nrequireTextStyle(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isTextStyle"
+    },
+    {
+      "name": "nonTextStyle"
+    }
+  ]
+}

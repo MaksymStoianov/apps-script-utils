@@ -1,0 +1,26 @@
+{
+  "summary": "Les parties en lesquelles se décompose un chemin.",
+  "description": [
+    "`root` est le séparateur initial ou le schéma, `dir` tout ce qui précède le dernier séparateur, `base` le nom de fichier avec son extension, `name` le même sans elle, et `ext` l'extension, point compris.",
+    "Chaque partie est facultative, et un chemin qui n'en a pas revient sans cette clé plutôt qu'avec une chaîne vide : un simple nom de fichier ne donne que `base`, `name` et `ext`. C'est la forme que renvoie `path.parse` de Node, ce qui rend le code interchangeable entre les deux environnements."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parse"
+    },
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Reports whether two grid ranges overlap in any cell.",
+  "description": [
+    "Ranges that merely touch along an edge do not intersect: the end bounds are exclusive, so `A1:B2` and `C1:D2` are neighbours, not overlaps. A bound left out means the range is open in that direction and so overlaps anything on that axis."
+  ],
+  "params": {
+    "range1": "The first range.",
+    "range2": "The second range."
+  },
+  "returns": "`true` when at least one cell belongs to both.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Checking an overlap",
+      "body": "```javascript\nconst left = { startRowIndex: 0, endRowIndex: 2, startColumnIndex: 0, endColumnIndex: 2 };\nconst right = { startRowIndex: 1, endRowIndex: 3, startColumnIndex: 1, endColumnIndex: 3 };\n\ndoGridRangesIntersect(left, right); // => true\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "isCellGridRange"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є логічним значенням.",
+  "description": [
+    "`nonBoolean(value)` — та сама перевірка, що й `!isBoolean(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Підходять лише два примітиви. `new Boolean(false)` — це об'єкт, а рядки `\"true\"` і `\"false\"` лишаються рядками.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є логічним значенням; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonBoolean(\"true\"); // => true\nnonBoolean(1); // => true\nnonBoolean(null); // => true\nnonBoolean(true); // => false\nnonBoolean(false); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    },
+    {
+      "name": "requireNonBoolean"
+    }
+  ]
+}

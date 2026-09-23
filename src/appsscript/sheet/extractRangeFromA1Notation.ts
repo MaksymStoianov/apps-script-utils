@@ -5,6 +5,11 @@ import { parseA1Notation } from "./parseA1Notation";
 /**
  * Extracts the **range part** from a full A1 notation string (e.g., `'Sheet1!A1:B2'` returns `'A1:B2'`).
  *
+ * @example
+ * ```javascript
+ * extractRangeFromA1Notation("Sheet1!A1:B2"); // => "A1:B2"
+ * ```
+ *
  * @param       {string} a1Notation - The A1 notation string (e.g., `'SheetName!A1:B2'`, `'A1:B2'`).
  * @returns     {string|null} The extracted range string (e.g., `'A1:B2'`), or `null`.
  * @throws      {Error}
@@ -15,6 +20,7 @@ import { parseA1Notation } from "./parseA1Notation";
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [extractRangeFromA1Notation on the documentation site](https://maksymstoianov.github.io/apps-script-utils/extractRangeFromA1Notation.html)
  * @since       1.6.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як слаг або викидає виняток.",
+  "description": [
+    "Починається з літери, далі літери, цифри, дефіси та підкреслення — форма, придатна для сегмента URL чи ключа. Пробіли, цифра на початку та порожній рядок не проходять.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як слаг.",
+  "throws": {
+    "IllegalArgumentException": "значення не є слагом."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireValidSlug(\"my-page\"); // => \"my-page\"\nrequireValidSlug(\"a_1\"); // => \"a_1\"\nrequireValidSlug(\"1-page\"); // throws IllegalArgumentException\nrequireValidSlug(\"my page\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlug"
+    },
+    {
+      "name": "nonValidSlug"
+    }
+  ]
+}

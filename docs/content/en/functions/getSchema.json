@@ -1,0 +1,31 @@
+{
+  "summary": "Returns the schema of a sheet, stored or inferred from its contents.",
+  "description": [
+    "A schema describes the columns: their names, their types and the row the names live in. When `insertSchema` has stored one on the sheet, that is what comes back.",
+    "When nothing was stored, the sheet is read and a schema is inferred from the header row and the values below it. The result carries `inferred: true` in that case, so a caller can tell a description that was declared from one that was guessed."
+  ],
+  "params": {
+    "sheet": "The sheet to work on."
+  },
+  "returns": "the schema, or `null` when the sheet holds nothing to describe.",
+  "throws": {
+    "InvalidSheetException": "the first argument is not a sheet."
+  },
+  "examples": [
+    {
+      "title": "Reading a schema",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nconst schema = getSchema(sheet);\n\nschema?.columns.map((column) => column.name);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "insertSchema"
+    },
+    {
+      "name": "removeSchema"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

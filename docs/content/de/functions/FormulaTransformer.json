@@ -1,0 +1,22 @@
+{
+  "summary": "Schreibt eine Formel um.",
+  "description": [
+    "Sie bekommt die Formel sowie Zeile und Spalte, in der sie steht, und gibt die zurückzuschreibende Formel zurück. Gibt sie die erhaltene zurück, bleibt die Zelle unberührt, und `updateFormulas` schreibt nur tatsächlich geänderte Zellen."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateFormulas"
+    },
+    {
+      "name": "updateSheetNameInA1Notation"
+    }
+  ]
+}

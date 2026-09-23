@@ -1,0 +1,44 @@
+{
+  "summary": "Ajoute des colonnes après la dernière colonne contenant des données.",
+  "description": [
+    "Passez une feuille et toute la feuille est examinée ; passez une plage et seules ses cellules le sont, ce qui empêche des données situées plus bas de décaler l'écriture vers la droite. La plage décide aussi des lignes écrites ; pour une feuille, c'est toujours la ligne 1.",
+    "Les valeurs forment une matrice de lignes : un tableau par ligne, tous de même longueur. Rien n'est écrasé — l'écriture commence une colonne après la dernière qui contient des données, `0` et `false` comptant comme des données. La feuille gagne des colonnes si elle est trop étroite.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.",
+    "Un échec pendant l'écriture — service indisponible, feuille supprimée — revient sous la forme de l'erreur levée par le service, avec sa pile. Le verrou du document est relâché dans tous les cas."
+  ],
+  "params": {
+    "target": "La feuille à laquelle ajouter, ou la plage dans laquelle ajouter.",
+    "values": "Une matrice de lignes : un tableau par ligne, tous de même longueur.",
+    "options": "`afterFrozenColumns` commence l'écriture après les colonnes figées lorsque les données s'arrêtent avant elles."
+  },
+  "returns": "la feuille, afin de chaîner les appels.",
+  "throws": {
+    "IllegalArgumentException": "aucun argument n'est passé.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage.",
+    "TypeError": "les valeurs ne forment pas une matrice de lignes de même longueur."
+  },
+  "examples": [
+    {
+      "title": "Ajout à une feuille",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendColumns(sheet, [[\"total\", \"=SUM(A2:A)\"]]);\n```"
+    },
+    {
+      "title": "Ajout dans une plage",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendColumns(sheet.getRange(\"A1:D2\"), [[\"a\"], [\"b\"]]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendColumn"
+    },
+    {
+      "name": "appendRows"
+    },
+    {
+      "name": "prependColumns"
+    },
+    {
+      "name": "transpose"
+    }
+  ]
+}

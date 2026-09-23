@@ -1,0 +1,26 @@
+{
+  "summary": "Vérifie si une valeur est une chaîne de version.",
+  "description": [
+    "Des groupes de chiffres séparés par des points, en nombre quelconque. Un suffixe de préversion, un `v` initial et un groupe vide sont refusés : `\"1.2.3-beta\"` ne passe donc pas, bien que SemVer l'autorise.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est une chaîne de version ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisValidVersion(\"1\"); // => true\nisValidVersion(\"1.2.3\"); // => true\nisValidVersion(\"2026.01.15\"); // => true\nisValidVersion(\"1.2.3-beta\"); // => false\nisValidVersion(\"v1.2\"); // => false\nisValidVersion(\"1..2\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidVersion"
+    },
+    {
+      "name": "requireValidVersion"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert ein regulärer Ausdruck ist.",
+  "description": [
+    "Über den internen Tag bestimmt statt über `instanceof`, sodass auch ein regulärer Ausdruck aus einem anderen Frame erkannt wird.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert ein regulärer Ausdruck ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisRegExp(/a/); // => true\nisRegExp(new RegExp(\"a\")); // => true\nisRegExp(\"/a/\"); // => false\nisRegExp({}); // => false\nisRegExp(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonRegExp"
+    },
+    {
+      "name": "requireRegExp"
+    },
+    {
+      "name": "requireNonRegExp"
+    }
+  ]
+}

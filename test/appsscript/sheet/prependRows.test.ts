@@ -50,6 +50,27 @@ function sheetMock(lastRow = 0, lastColumn = 0, frozenRows = 0, frozenColumns = 
 }
 
 /**
+ * A stand-in range: knows where it sits and how big it is.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  numRows = 10,
+  numColumns = 4
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => numRows,
+    getNumColumns: () => numColumns,
+    getValues: () => Array.from({ length: numRows }, () => new Array(numColumns).fill(""))
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
+}
+
+/**
  * LockService is used for the document lock; a no-op stand-in suffices.
  */
 function installLockService(): void {
@@ -122,6 +143,48 @@ describe("prependRows", () => {
 
       expect(() => prependRows(sheet, ["a"])).toThrow();
       expect(inserted).toEqual([]);
+    });
+  });
+
+  describe("Inserting at a range", () => {
+    it("should insert above the first row of the range", () => {
+      const { sheet, inserted } = sheetMock(20, 5);
+
+      prependRows(rangeMock(sheet, 4, 2), [["a", "b"]]);
+
+      expect(inserted).toContainEqual(["rows", 4, 1]);
+    });
+
+    it("should write the values on the columns of the range", () => {
+      const { sheet, written } = sheetMock(20, 5);
+
+      prependRows(rangeMock(sheet, 4, 2), [["a", "b"]]);
+
+      expect(written).toEqual([
+        { row: 4, column: 2, numRows: 1, numColumns: 2, values: [["a", "b"]] }
+      ]);
+    });
+
+    it("should throw for a first argument that is neither a sheet nor a range", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => prependRows("A1:B2", [["a"]])).toThrow(InvalidSheetException);
+    });
+  });
+
+  describe("When the write fails", () => {
+    it("should let the original error through, not its message", () => {
+      const { sheet } = sheetMock(0, 0);
+
+      const boom = new Error("Service unavailable.");
+
+      // @ts-expect-error - the stand-in is narrower than the real Sheet
+      sheet.getRange = () => ({
+        setValues: () => {
+          throw boom;
+        }
+      });
+
+      expect(() => prependRows(sheet, [["a"]])).toThrow(boom);
     });
   });
 });

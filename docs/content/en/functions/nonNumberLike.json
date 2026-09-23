@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** convertible to a number.",
+  "description": [
+    "`nonNumberLike(value)` is the same test as `!isNumberLike(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "A finite number, or a string that converts to one. `NaN`, the infinities and the empty string are excluded, which is what separates this from a bare `Number(value)`.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not convertible to a number; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonNumberLike(NaN); // => true\nnonNumberLike(Infinity); // => true\nnonNumberLike(\"\"); // => true\nnonNumberLike(null); // => true\nnonNumberLike(1); // => false\nnonNumberLike(\"1.5\"); // => false\nnonNumberLike(\" 42 \"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNumberLike"
+    },
+    {
+      "name": "requireNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є припустимою довжиною масиву.",
+  "description": [
+    "`nonLength(value)` — та сама перевірка, що й `!isLength(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Ціле число від `0` до `Number.MAX_SAFE_INTEGER` — діапазон, який може містити властивість `length`.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є припустимою довжиною масиву; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonLength(-1); // => true\nnonLength(1.5); // => true\nnonLength(\"3\"); // => true\nnonLength(0); // => false\nnonLength(42); // => false\nnonLength(Number.MAX_SAFE_INTEGER); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "requireLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

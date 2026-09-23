@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine Zeichenkette ist.",
+  "description": [
+    "Geprüft wird `typeof value === \"string\"`: die leere Zeichenkette besteht, ein `String`-Objekt nicht, denn es ist ein Objekt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine Zeichenkette ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisString(\"\"); // => true\nisString(\"abc\"); // => true\nisString(1); // => false\nisString(null); // => false\nisString([]); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonString"
+    },
+    {
+      "name": "requireString"
+    },
+    {
+      "name": "requireNonString"
+    }
+  ]
+}

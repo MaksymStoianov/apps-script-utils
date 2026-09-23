@@ -1,0 +1,25 @@
+{
+  "summary": "Returns the value as a non-empty string, naming the argument in the failure.",
+  "description": [
+    "The older form of `requireNonEmptyString`, kept for the code that already calls it. Its second argument is the name to put in the message rather than the message itself, which is the opposite of every other guard here — that is why it was replaced."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "name": "The argument name to put in the message. `\"value\"` by default."
+  },
+  "returns": "the same string.",
+  "throws": {
+    "InvalidStringException": "the value is not a string, or holds nothing but whitespace."
+  },
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nnonEmptyString(\"Data\", \"sheetName\"); // => \"Data\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    }
+  ]
+}

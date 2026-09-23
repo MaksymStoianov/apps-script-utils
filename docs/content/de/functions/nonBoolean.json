@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein boolescher Wert ist.",
+  "description": [
+    "`nonBoolean(value)` ist dieselbe Prüfung wie `!isBoolean(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Nur die beiden Primitiven bestehen. `new Boolean(false)` ist ein Objekt, und die Zeichenketten `\"true\"` und `\"false\"` bleiben Zeichenketten.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein boolescher Wert ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonBoolean(\"true\"); // => true\nnonBoolean(1); // => true\nnonBoolean(null); // => true\nnonBoolean(true); // => false\nnonBoolean(false); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    },
+    {
+      "name": "requireNonBoolean"
+    }
+  ]
+}

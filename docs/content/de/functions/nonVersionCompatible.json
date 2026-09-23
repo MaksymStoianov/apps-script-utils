@@ -1,0 +1,25 @@
+{
+  "summary": "Prüft, ob eine Version hinter der geforderten zurückbleibt.",
+  "description": [
+    "Die Verneinung von `isVersionCompatible`, für die Wächterklausel, die abbricht, wenn die Umgebung zu alt ist."
+  ],
+  "params": {
+    "currentVersion": "Die vorliegende Version.",
+    "requiredVersion": "Das akzeptable Minimum."
+  },
+  "returns": "`true`, wenn die vorliegende Version niedriger ist als gefordert.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Früh aussteigen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isVersionCompatible"
+    },
+    {
+      "name": "requireVersionCompatible"
+    }
+  ]
+}

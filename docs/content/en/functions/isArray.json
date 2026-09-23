@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is an array.",
+  "description": [
+    "`Array.isArray` is the whole test, so an array from another frame counts and an array-like object — `arguments`, a `NodeList`, `{ length: 0 }` — does not.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is an array; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisArray([]); // => true\nisArray([1, 2, 3]); // => true\nisArray(\"abc\"); // => false\nisArray({ length: 0 }); // => false\nisArray(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonArray"
+    },
+    {
+      "name": "requireArray"
+    },
+    {
+      "name": "requireNonArray"
+    }
+  ]
+}

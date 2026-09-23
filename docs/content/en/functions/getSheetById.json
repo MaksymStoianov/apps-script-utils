@@ -1,0 +1,30 @@
+{
+  "summary": "Finds a sheet by its id.",
+  "description": [
+    "An id survives a rename and a reorder, which is what makes it the right handle to store in a property or a config. Apps Script offers no lookup by id, so the sheets are walked and compared.",
+    "The spreadsheet defaults to the active one. A sheet that is not there gives `null` rather than an exception, so a stored id that no longer resolves is a case to handle, not a crash."
+  ],
+  "params": {
+    "sheetId": "The sheet id to look for.",
+    "ss": "The spreadsheet to look in. The active one by default."
+  },
+  "returns": "the sheet, or `null` when no sheet carries that id.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Looking up",
+      "body": "```javascript\nconst sheet = getSheetById(0);\n\nif (sheet === null) {\n  throw new Error(\"That sheet is gone.\");\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetByIndex"
+    },
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "requireSheet"
+    }
+  ]
+}

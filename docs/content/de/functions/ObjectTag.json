@@ -1,0 +1,26 @@
+{
+  "summary": "Die internen Tags, die ein Wert melden kann, als benannte Konstanten.",
+  "description": [
+    "`objectToString` liefert Zeichenketten wie `\"[object Array]\"`; dieses Enum gibt ihnen Namen, sodass ein Vergleich `ObjectTag.ARRAY` heißt und nicht ein Literal ist, das ein Tippfehler still zerbricht.",
+    "Mehrere Prüfungen der Bibliothek bauen darauf — so erkennen `isRegExp` und `isFunction` einen Wert, der eine Frame-Grenze überschritten hat, wo `instanceof` nicht mehr greift."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "objectToString"
+    },
+    {
+      "name": "isRegExp"
+    },
+    {
+      "name": "isFunction"
+    }
+  ]
+}

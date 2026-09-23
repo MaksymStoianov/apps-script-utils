@@ -1,0 +1,34 @@
+{
+  "summary": "Rewrites the formulas on a sheet.",
+  "description": [
+    "Pass a map to replace sheet names wholesale — the usual need after a rename or a copy — or a function to decide each formula for itself. The function receives the formula and returns the one to put back.",
+    "Only cells that hold a formula are visited, and only the ones that actually changed are written, so a no-op costs one read and nothing else.",
+    "A sheet means its whole data range; a range means only the cells inside it, so a rewrite can be confined to one block. The row and column handed to the transformer are positions on the sheet either way, which is what makes a formula's own address usable in the replacement."
+  ],
+  "params": {
+    "target": "The sheet whose formulas are rewritten, or the range to rewrite within: only its cells are read and written.",
+    "rewrite": "A map of old sheet name to new one, or a function taking a formula and returning its replacement."
+  },
+  "returns": "how many formulas were rewritten.",
+  "throws": {
+    "InvalidSheetException": "the first argument is neither a sheet nor a range."
+  },
+  "examples": [
+    {
+      "title": "Rewriting formulas",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// After renaming a sheet, point the formulas at the new name.\nupdateFormulas(sheet, { \"Sheet1\": \"Data\" });\n\nupdateFormulas(sheet, (formula) => formula.replace(/OLD_/g, \"NEW_\"));\n```"
+    },
+    {
+      "title": "Within one block",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only the formulas in D2:D100 are rewritten.\nupdateFormulas(sheet.getRange(\"D2:D100\"), { \"=SUM(A2:A)\": \"=SUM(A2:A1000)\" });\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "updateSheetNameInA1Notation"
+    },
+    {
+      "name": "getValues"
+    }
+  ]
+}

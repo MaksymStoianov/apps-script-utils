@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение преобразуемым в число.",
+  "description": [
+    "Конечное число или строка, которая в него превращается. `NaN`, бесконечности и пустая строка исключены — этим проверка и отличается от простого `Number(value)`.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является преобразуемым в число; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisNumberLike(1); // => true\nisNumberLike(\"1.5\"); // => true\nisNumberLike(\" 42 \"); // => true\nisNumberLike(NaN); // => false\nisNumberLike(Infinity); // => false\nisNumberLike(\"\"); // => false\nisNumberLike(null); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNumberLike"
+    },
+    {
+      "name": "requireNumberLike"
+    },
+    {
+      "name": "requireNonNumberLike"
+    }
+  ]
+}

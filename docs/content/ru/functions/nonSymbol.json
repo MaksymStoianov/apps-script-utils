@@ -1,0 +1,30 @@
+{
+  "summary": "Проверяет, что значение **не** является символом.",
+  "description": [
+    "`nonSymbol(value)` — та же проверка, что и `!isSymbol(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "Подходят и символы из `Symbol.for`, и общеизвестные символы; больше ничего.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является символом; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nnonSymbol(\"id\"); // => true\nnonSymbol(null); // => true\nnonSymbol(Symbol(\"id\")); // => false\nnonSymbol(Symbol.iterator); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSymbol"
+    },
+    {
+      "name": "requireSymbol"
+    },
+    {
+      "name": "requireNonSymbol"
+    }
+  ]
+}

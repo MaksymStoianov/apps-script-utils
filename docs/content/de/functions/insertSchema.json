@@ -1,0 +1,28 @@
+{
+  "summary": "Hinterlegt ein Schema auf einem Blatt und wendet an, was es beschreibt.",
+  "description": [
+    "Das Schema wird in die Developer-Metadaten des Blattes geschrieben und reist damit mit: eine Kopie der Tabelle trägt es mit sich, und `getSchema` findet es wieder, ohne eine Zelle zu lesen.",
+    "Die Beschreibung wird zugleich umgesetzt: die Kopfzeile wird geschrieben und die Spalten bekommen Formatierung und Datenprüfung, die sich aus ihren Typen ergeben."
+  ],
+  "params": {
+    "sheet": "Das Blatt, auf dem gearbeitet wird.",
+    "schema": "Das Schema: `version`, `headerRow` und `columns`."
+  },
+  "returns": "dasselbe Blatt.",
+  "throws": {
+    "InvalidSheetException": "das erste Argument ist kein Blatt."
+  },
+  "examples": [
+    {
+      "title": "Ein Schema festlegen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSchema"
+    },
+    {
+      "name": "removeSchema"
+    }
+  ]
+}

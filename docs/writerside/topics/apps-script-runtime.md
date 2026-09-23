@@ -1,5 +1,9 @@
 # The Apps Script runtime
 
+<link-summary>Which functions need the Apps Script runtime and which run anywhere.</link-summary>
+
+<web-summary>Which parts of apps-script-utils depend on Google Apps Script services and which run in Node.js or a test suite, and what that means for testing your code.</web-summary>
+
 The library is one package, but its functions do not all run in the same places. Knowing which side of the line a
 function sits on decides whether you can unit test it, and whether it costs a service call.
 

@@ -97,6 +97,10 @@ function removeStoredSchema(sheet: GoogleAppsScript.Spreadsheet.Sheet): void {
  * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
  * @see         {@link getSchema}
  * @see         {@link removeSchema}
+ * @see         [insertSchema on the documentation site](https://maksymstoianov.github.io/apps-script-utils/insertSchema.html)
+ * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
+ * @see         [Class DataValidation](https://developers.google.com/apps-script/reference/spreadsheet/data-validation)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

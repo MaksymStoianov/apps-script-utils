@@ -1,0 +1,27 @@
+{
+  "summary": "Lit une propriété imbriquée par chemin, avec valeur de repli.",
+  "description": [
+    "Le chemin est soit une chaîne pointée, soit un tableau de segments ; les indices de tableau y figurent en nombres, comme dans `[\"rows\", 0, \"id\"]`. La syntaxe à crochets dans une chaîne n'est **pas** analysée : `\"rows[0].id\"` ne trouve rien.",
+    "Un maillon absent ou nul n'importe où sur le chemin renvoie la valeur de repli au lieu de lever, et c'est tout l'intérêt face à `a.b.c`."
+  ],
+  "params": {
+    "source": "La valeur d'où lire.",
+    "path": "Une chaîne pointée, ou un tableau de clés et d'indices.",
+    "fallback": "Renvoyée lorsque le chemin n'aboutit pas."
+  },
+  "returns": "la valeur au chemin, ou la valeur de repli.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lecture"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "setPath"
+    },
+    {
+      "name": "flat"
+    }
+  ]
+}

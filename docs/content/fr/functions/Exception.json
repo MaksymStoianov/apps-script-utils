@@ -1,0 +1,24 @@
+{
+  "summary": "La racine de la hiérarchie, dérivée d'Error.",
+  "description": [
+    "La racine de la hiérarchie, dérivée d'`Error`. Interceptez-la pour attraper tout ce que lève la bibliothèque, et rien d'autre.",
+    "Toute classe de cette hiérarchie accepte un message facultatif, une autre exception dont le message est repris, ou rien du tout. `isException` les reconnaît toutes ; un `Error` ordinaire n'en fait pas partie."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Lever et intercepter",
+      "body": "```javascript\nthrow new Exception(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof Exception) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

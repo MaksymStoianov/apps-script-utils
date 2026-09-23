@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение значением `undefined`.",
+  "description": [
+    "Проверяется `typeof value === \"undefined\"` — в отличие от прямого сравнения, это безопасно даже для необъявленной переменной.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является значением `undefined`; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisUndefined(undefined); // => true\nisUndefined(null); // => false\nisUndefined(0); // => false\nisUndefined(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonUndefined"
+    },
+    {
+      "name": "requireUndefined"
+    },
+    {
+      "name": "requireNonUndefined"
+    }
+  ]
+}

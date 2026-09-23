@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein relativer Pfad ist.",
+  "description": [
+    "`nonRelative(value)` ist dieselbe Prüfung wie `!isRelative(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Das exakte Gegenstück zu `isAbsolute`: alles, was nicht an einer Wurzel beginnt, die leere Zeichenkette eingeschlossen.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein relativer Pfad ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonRelative(\"/var/log\"); // => true\nnonRelative(\"https://example.com/a\"); // => true\nnonRelative(\"docs/readme.md\"); // => false\nnonRelative(\"./a\"); // => false\nnonRelative(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isRelative"
+    },
+    {
+      "name": "requireRelative"
+    }
+  ]
+}

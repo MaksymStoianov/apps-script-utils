@@ -1,0 +1,30 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** eine Zahl mit Nachkommateil ist.",
+  "description": [
+    "`nonDouble(value)` ist dieselbe Prüfung wie `!isDouble(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Ein Synonym der `Float`-Familie unter dem Namen, zu dem man zuerst greift. In JavaScript ist jede Zahl ohnehin ein Double, `double` benennt also keinen eigenen Laufzeitfall.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht eine Zahl mit Nachkommateil ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonDouble(42); // => true\nnonDouble(1.0); // => true\nnonDouble(Infinity); // => true\nnonDouble(\"1.5\"); // => true\nnonDouble(1.5); // => false\nnonDouble(-0.1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isDouble"
+    },
+    {
+      "name": "requireDouble"
+    },
+    {
+      "name": "requireNonDouble"
+    }
+  ]
+}

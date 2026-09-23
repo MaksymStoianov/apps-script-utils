@@ -1,0 +1,25 @@
+{
+  "summary": "Décide si une colonne fait partie de celles à traiter.",
+  "description": [
+    "`RowPredicate` pivoté d'un quart de tour : les cellules de la colonne, sa position à base un et — si une colonne d'en-tête a été désignée — la colonne indexée par les noms de lignes. Renvoyer `true` sélectionne la colonne."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Forme"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnConditionalOptions"
+    }
+  ]
+}

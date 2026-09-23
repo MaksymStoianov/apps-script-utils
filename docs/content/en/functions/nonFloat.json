@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** a number with a fractional part.",
+  "description": [
+    "`nonFloat(value)` is the same test as `!isFloat(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "JavaScript has one numeric type, so `1.0` and `1` are the same value: the question answered is whether a fraction survives at runtime, not how the literal was written. The infinities have no fraction and are excluded.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a number with a fractional part; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonFloat(42); // => true\nnonFloat(1.0); // => true\nnonFloat(Infinity); // => true\nnonFloat(\"1.5\"); // => true\nnonFloat(1.5); // => false\nnonFloat(-0.1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFloat"
+    },
+    {
+      "name": "requireFloat"
+    },
+    {
+      "name": "requireNonFloat"
+    }
+  ]
+}

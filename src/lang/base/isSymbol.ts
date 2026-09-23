@@ -1,9 +1,18 @@
 /**
  * Checks if the provided value is a `Symbol`.
  *
+ * @example
+ * ```javascript
+ * isSymbol(Symbol("id")); // => true
+ * isSymbol(Symbol.iterator); // => true
+ * isSymbol("id"); // => false
+ * isSymbol(null); // => false
+ * ```
+ *
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a `Symbol`; otherwise, `false`.
  * @see     {@link nonSymbol}
+ * @see     [isSymbol on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isSymbol.html)
  * @since   1.0.0
  * @version 1.0.0
  */

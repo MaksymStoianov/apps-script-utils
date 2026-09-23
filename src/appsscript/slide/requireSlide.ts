@@ -4,10 +4,21 @@ import { isSlide } from "./isSlide";
 /**
  * Ensures that the given value is a {@link GoogleAppsScript.Slides.Slide|Slide} object.
  *
+ * @example
+ * ```javascript
+ * const slide = SlidesApp.getActivePresentation().getSlides()[0];
+ *
+ * requireSlide(slide); // => slide
+ * requireSlide({}); // throws SlideNotFoundException
+ * requireSlide(null); // throws SlideNotFoundException
+ * ```
+ *
  * @param {unknown} value The value to check.
  * @param {string} [message="Required Slide context is missing or invalid."] The error message to throw if the value is not a {@link GoogleAppsScript.Slides.Slide|Slide}.
  * @returns {GoogleAppsScript.Slides.Slide} The {@link GoogleAppsScript.Slides.Slide|Slide} object.
  * @throws {SlideNotFoundException} If the value is not a {@link GoogleAppsScript.Slides.Slide|Slide}.
+ * @see [requireSlide on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireSlide.html)
+ * @see [Class Slide](https://developers.google.com/apps-script/reference/slides/slide)
  * @since 1.5.0
  */
 export function requireSlide(

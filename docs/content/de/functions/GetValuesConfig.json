@@ -1,0 +1,23 @@
+{
+  "summary": "Wie `getValues` ein Blatt liest.",
+  "description": [
+    "`headerRow` benennt die Zeile der Spaltennamen und versieht jede Zeile mit diesen Schlüsseln. `display` liest die Werte so, wie ein Mensch sie sieht, statt wie sie gespeichert sind. `filter` behält Zeilen, `offset` und `limit` blättern durch das Behaltene, `mapper` bestimmt, was daraus wird.",
+    "Die Reihenfolge steht fest: erst filtern, dann überspringen, dann begrenzen, dann abbilden — ein Limit zählt also passende Zeilen, nicht gelesene."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Form"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getValues"
+    },
+    {
+      "name": "Row"
+    }
+  ]
+}

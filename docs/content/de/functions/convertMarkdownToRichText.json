@@ -1,0 +1,28 @@
+{
+  "summary": "Verwandelt eine kleine Teilmenge von Markdown in formatierte Textabschnitte.",
+  "description": [
+    "Fett, kursiv, Code und Links werden erkannt und zu Abschnitten mit dem jeweils passenden Stil, bereit für eine Folie oder eine Zelle. Ein Theme ändert diese Stile — etwa die Schrift eines Code-Abschnitts — ohne den Text anzufassen."
+  ],
+  "params": {
+    "text": "Das umzuwandelnde Markdown.",
+    "theme": "Die Stile, die jede Art von Abschnitt erhält."
+  },
+  "returns": "die Abschnitte der Reihe nach, jeder mit Text und Stil.",
+  "throws": {
+    "IllegalArgumentException": "kein Argument übergeben wurde.",
+    "InvalidStringException": "der Text keine Zeichenkette ist. Eine leere Zeichenkette ist zulässig und ergibt ein leeres Array."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertRichTextToHtml"
+    },
+    {
+      "name": "isRichTextValue"
+    }
+  ]
+}

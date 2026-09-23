@@ -1,0 +1,26 @@
+{
+  "summary": "Meldet, ob der aktuelle Nutzer ein Workspace-Administrator ist.",
+  "description": [
+    "Der aktive Nutzer wird über den Admin-SDK-Directory-Dienst nachgeschlagen, der für das Skript aktiviert und autorisiert sein muss. Geht etwas schief — der Dienst fehlt, die Abfrage wird abgelehnt — wird es protokolliert und mit `false` beantwortet; der Aufruf ist also auch beim Aufbau eines Menüs sicher.",
+    "Es ist eine Frage über die Person, die das Skript ausführt, nicht über eine Berechtigung an einem Dokument."
+  ],
+  "params": {},
+  "returns": "`true`, wenn der aktive Nutzer Administrator ist.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Eine Funktion absichern"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonAdmin"
+    },
+    {
+      "name": "requireAdmin"
+    },
+    {
+      "name": "AdminDirectoryException"
+    }
+  ]
+}

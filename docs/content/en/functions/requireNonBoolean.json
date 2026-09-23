@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value after checking that it is not a boolean.",
+  "description": [
+    "Only the two primitives pass. `new Boolean(false)` is an object, and the strings `\"true\"` and `\"false\"` are strings.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with a boolean excluded from its type.",
+  "throws": {
+    "IllegalArgumentException": "the value is a boolean."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonBoolean(\"true\"); // => \"true\"\nrequireNonBoolean(1); // => 1\nrequireNonBoolean(true); // throws IllegalArgumentException\nrequireNonBoolean(false); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isBoolean"
+    },
+    {
+      "name": "nonBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    }
+  ]
+}

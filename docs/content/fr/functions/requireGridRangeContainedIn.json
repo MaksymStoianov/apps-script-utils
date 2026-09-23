@@ -1,0 +1,28 @@
+{
+  "summary": "Renvoie la plage une fois établi qu'elle est contenue dans une autre, ou lève.",
+  "description": [
+    "La forme assertive d'`isGridRangeContainedIn`. Le message par défaut nomme les deux plages en notation A1, ce qui rend l'échec lisible dans le journal d'exécution."
+  ],
+  "params": {
+    "range1": "La plage examinée.",
+    "range2": "La plage de comparaison.",
+    "message": "Le message de l'exception. À défaut, un message nommant les deux plages est utilisé."
+  },
+  "returns": "la première plage, inchangée.",
+  "throws": {
+    "InvalidGridRangeException": "la première plage n'est pas contenue dans la seconde."
+  },
+  "examples": [
+    {
+      "title": "Garder une écriture"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isGridRangeContainedIn"
+    },
+    {
+      "name": "nonGridRangeContainedIn"
+    }
+  ]
+}

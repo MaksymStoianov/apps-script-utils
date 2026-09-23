@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert als ein Symbol zurück oder wirft.",
+  "description": [
+    "Registrierte Symbole aus `Symbol.for` und die wohlbekannten Symbole bestehen beide; sonst nichts.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert, typisiert als ein Symbol.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist nicht ein Symbol."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireSymbol(Symbol(\"id\")); // => Symbol(\"id\")\nrequireSymbol(Symbol.iterator); // => Symbol.iterator\nrequireSymbol(\"id\"); // throws IllegalArgumentException\nrequireSymbol(null); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSymbol"
+    },
+    {
+      "name": "nonSymbol"
+    },
+    {
+      "name": "requireNonSymbol"
+    }
+  ]
+}

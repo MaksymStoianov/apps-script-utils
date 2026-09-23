@@ -1,0 +1,27 @@
+{
+  "summary": "Reports whether the current user is a Workspace administrator.",
+  "description": [
+    "The active user is looked up through the Admin SDK Directory service, which the script has to have enabled and be authorised for. Anything that goes wrong — the service missing, the lookup refused — is logged and answered as `false`, so the call is safe to make from a menu builder.",
+    "It is a question about the person running the script, not about a permission on a document."
+  ],
+  "params": {},
+  "returns": "`true` when the active user is an administrator.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Gating a feature",
+      "body": "```javascript\nif (isAdmin()) {\n  showAdminMenu();\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonAdmin"
+    },
+    {
+      "name": "requireAdmin"
+    },
+    {
+      "name": "AdminDirectoryException"
+    }
+  ]
+}

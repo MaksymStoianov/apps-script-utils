@@ -3,9 +3,23 @@ import { RuntimeException } from "./RuntimeException";
 /**
  * Represents an exception thrown when a service is not defined.
  *
+ * @example
+ * ```javascript
+ * throw new ServiceIsNotDefinedException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof ServiceIsNotDefinedException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
+ * @see     [ServiceIsNotDefinedException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/ServiceIsNotDefinedException.html)
  * @since   1.5.0
  * @version 1.0.0
  */

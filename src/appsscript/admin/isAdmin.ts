@@ -6,9 +6,17 @@ import { nonFunction } from "../../lang";
  *
  * **Note:** Requires the [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory) to be enabled.
  *
+ * @example
+ * ```javascript
+ * if (isAdmin()) {
+ *   showAdminMenu();
+ * }
+ * ```
+ *
  * @returns     {boolean} `true` if the user is an administrator; otherwise, `false`.
  * @see         <a href="https://developers.google.com/apps-script/reference/base/user"><code>User</code></a>
  * @see         [Admin SDK Directory Service](https://developers.google.cn/apps-script/advanced/admin-sdk-directory)
+ * @see         [isAdmin on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isAdmin.html)
  * @since       1.5.0
  * @version     1.1.0
  * @environment `Google Apps Script`

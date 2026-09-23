@@ -1,0 +1,24 @@
+{
+  "summary": "How `getValues` reads a sheet.",
+  "description": [
+    "`headerRow` names the row of column names and keys every row by them. `display` reads the values as a person sees them rather than as they are stored. `filter` keeps rows, `offset` and `limit` page what is kept, and `mapper` decides what each one becomes.",
+    "The order is fixed: filter, then offset, then limit, then mapper — so a limit counts matching rows, not rows read."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst config = {\n  headerRow: 1,\n  filter: (row) => row.record.status === \"active\",\n  limit: 100\n};\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getValues"
+    },
+    {
+      "name": "Row"
+    }
+  ]
+}

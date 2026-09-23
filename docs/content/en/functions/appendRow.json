@@ -1,0 +1,36 @@
+{
+  "summary": "Adds one row after the last row that holds data.",
+  "description": [
+    "A sheet is examined whole and the row is written from column 1; a range is examined only inside itself and the row is written on its columns, below the last row of the range that holds data.",
+    "It is `appendRows` with one row: the same guards, the same growth of the sheet when the result would not fit, and the same rule that a cell whose text starts with `=` becomes a formula."
+  ],
+  "params": {
+    "target": "The sheet to append to, or the range to append within.",
+    "values": "A single row: a flat array, one value per column.",
+    "options": "`afterFrozenRows` starts the write below the frozen rows when the data ends before them."
+  },
+  "returns": "the sheet, so calls can be chained.",
+  "throws": {
+    "IllegalArgumentException": "no argument is passed.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range.",
+    "TypeError": "the values are not a flat array."
+  },
+  "examples": [
+    {
+      "title": "Appending to a sheet",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRow(sheet, [\"Ada\", \"ada@example.com\", \"=TODAY()\"]);\n```"
+    },
+    {
+      "title": "Appending within a range",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRow(sheet.getRange(\"B1:D10\"), [\"Ada\", \"ada@example.com\"]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendRows"
+    },
+    {
+      "name": "prependRow"
+    }
+  ]
+}

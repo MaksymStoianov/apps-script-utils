@@ -1,0 +1,26 @@
+{
+  "summary": "Verwandelt numerische Zeichenreferenzen zurück in Zeichen.",
+  "description": [
+    "Dezimale (`&#60;`) und hexadezimale (`&#x3C;`) Referenzen werden dekodiert. Benannte Entities **nicht**: `\"&amp;\"` kommt unverändert zurück, denn dies ist die Umkehrung von `encodeHtml`, das ausschließlich numerische Referenzen erzeugt."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein."
+  },
+  "returns": "die dekodierte Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "encodeHtml"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

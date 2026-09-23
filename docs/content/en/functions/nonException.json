@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** an `Exception`.",
+  "description": [
+    "`nonException(value)` is the same test as `!isException(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "The library's own hierarchy only. A plain `Error` does not qualify, which is exactly what makes the check useful in a `catch` block that has to tell the two apart.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not an `Exception`; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonException(new Error()); // => true\nnonException({}); // => true\nnonException(null); // => true\nnonException(new IllegalArgumentException()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    },
+    {
+      "name": "requireNonException"
+    }
+  ]
+}

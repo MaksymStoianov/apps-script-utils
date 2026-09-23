@@ -1,0 +1,26 @@
+{
+  "summary": "Decides whether a row is one to act on.",
+  "description": [
+    "It receives the row's cells, its one-based position and — when a header row was named — the row keyed by the column names, which is `null` otherwise. Returning `true` selects the row."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst predicate = (values, position, record) => record?.status === \"done\";\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearRowsByConditional"
+    },
+    {
+      "name": "deleteRowsByConditional"
+    },
+    {
+      "name": "RowConditionalOptions"
+    }
+  ]
+}

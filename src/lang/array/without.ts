@@ -25,6 +25,7 @@ import { isArray } from "../base";
  * @throws   {@link TypeError} If `array` is not an array.
  * @see      {@link compact}
  * @see      {@link intersect}
+ * @see      [without on the documentation site](https://maksymstoianov.github.io/apps-script-utils/without.html)
  * @since    1.11.0
  * @version  1.0.0
  */

@@ -1,0 +1,24 @@
+{
+  "summary": "How `merge` fills a template.",
+  "description": [
+    "`onMissing` decides what happens to a placeholder whose key is absent: `\"keep\"`, the default, leaves it in the output where it is visible and traceable; `\"empty\"` substitutes nothing, which is tidier in something a reader will see.",
+    "`escape` is a function applied to every substituted value — `escapeHtml` when the result goes into a page."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst options = { onMissing: \"empty\", escape: escapeHtml };\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "merge"
+    },
+    {
+      "name": "escapeHtml"
+    }
+  ]
+}

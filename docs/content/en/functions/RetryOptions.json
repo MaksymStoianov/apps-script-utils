@@ -1,0 +1,21 @@
+{
+  "summary": "How `retry` waits and when it gives up.",
+  "description": [
+    "`attempts` caps the tries, `delay` is the wait before the second one, `multiplier` grows each later wait and `maxDelay` caps a single one.",
+    "`shouldRetry` receives the error and the attempt that failed and decides whether repeating is worth it at all; `sleep` performs the wait, defaulting to `Utilities.sleep` where it exists, which is what lets a test run without waiting."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst options = {\n  attempts: 4,\n  delay: 500,\n  multiplier: 2,\n  maxDelay: 10000\n};\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "retry"
+    }
+  ]
+}

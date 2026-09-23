@@ -22,6 +22,7 @@ import { IllegalArgumentException } from "../exception";
  * @returns {number} The number of days in that month, between 28 and 31.
  * @throws  {@link IllegalArgumentException} If the value is not a valid `Date`.
  * @see     {@link getDaysLeftInMonth}
+ * @see     [getDaysInMonth on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getDaysInMonth.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -1,0 +1,33 @@
+{
+  "summary": "Turns styled text runs back into Markdown.",
+  "description": [
+    "The inverse of [`convertMarkdownToRichText`](convertMarkdownToRichText.md): bold, italic and strikethrough become their markers again, a run carrying a link becomes `[text](url)`, and a run set in the theme's code font becomes a code span.",
+    "A code run carries no flag of its own — it is recognised by its font — so pass the same theme both ways and the pair round-trips. Runs are written one after another in the order given, without merging neighbours that share a style, so deeply nested formatting may come back expressed differently while reading the same."
+  ],
+  "params": {
+    "runs": "The runs to convert. An empty array gives an empty string.",
+    "theme": "The theme the runs were styled with. Only the code font is read from it."
+  },
+  "returns": "the Markdown representing the runs.",
+  "throws": {
+    "IllegalArgumentException": "no argument is passed, the value is not an array, or an element is not a run with text."
+  },
+  "examples": [
+    {
+      "title": "Back to Markdown",
+      "body": "```javascript\nconst runs = convertMarkdownToRichText(\"**bold** and `code`\");\n\nconvertRichTextToMarkdown(runs); // => \"**bold** and `code`\"\n```"
+    },
+    {
+      "title": "A link keeps its text styled",
+      "body": "```javascript\nconvertRichTextToMarkdown([\n  { text: \"site\", style: { bold: true, link: { url: \"https://example.com\" } } }\n]); // => \"[**site**](https://example.com)\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "convertMarkdownToRichText"
+    },
+    {
+      "name": "convertRichTextToHtml"
+    }
+  ]
+}

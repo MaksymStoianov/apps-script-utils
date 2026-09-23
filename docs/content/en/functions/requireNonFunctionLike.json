@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value after checking that it is not callable.",
+  "description": [
+    "The cheap test — `typeof value === \"function\"` — which is what you want before calling something. `isFunction` is the stricter reading of the same question.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with callable excluded from its type.",
+  "throws": {
+    "IllegalArgumentException": "the value is callable."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonFunctionLike(null); // => null\nrequireNonFunctionLike({}); // => {}\nrequireNonFunctionLike(function () {}); // throws IllegalArgumentException\nrequireNonFunctionLike(Math.max); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isFunctionLike"
+    },
+    {
+      "name": "nonFunctionLike"
+    },
+    {
+      "name": "requireFunctionLike"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Returns the value after checking that it is not an integer.",
+  "description": [
+    "A number with no fractional part. Nothing is coerced, so the string `\"42\"` is not an integer, and `NaN` is not either.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to validate.",
+    "message": "The message of the exception. A default is used when omitted.",
+    "strict": "When `true`, a string counts as empty only if it has no characters at all; by default whitespace is trimmed first."
+  },
+  "returns": "the same value, with an integer excluded from its type.",
+  "throws": {
+    "IllegalArgumentException": "the value is an integer."
+  },
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nrequireNonInteger(1.5); // => 1.5\nrequireNonInteger(NaN); // => NaN\nrequireNonInteger(42); // throws IllegalArgumentException\nrequireNonInteger(-7); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isInteger"
+    },
+    {
+      "name": "nonInteger"
+    },
+    {
+      "name": "requireInteger"
+    }
+  ]
+}

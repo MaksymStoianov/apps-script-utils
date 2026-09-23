@@ -27,6 +27,7 @@ import { requireNonEmptyString } from "../lang";
  * @returns {object} The parsed object if successful, or `null` if the JSON could not be parsed even after attempted corrections.
  * @throws  {@link EmptyStringException}
  * @see     {@link stringifyJson}
+ * @see     [parseJson on the documentation site](https://maksymstoianov.github.io/apps-script-utils/parseJson.html)
  * @since   1.0.0
  * @version 1.0.0
  * @deprecated This function is deprecated and will be removed in future versions.

@@ -1,14 +1,21 @@
-import { IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isFunction, isNil, requireCountable } from "../../lang";
-import { requireSheet } from "./requireSheet";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
 
 /**
  * Decides whether a row is selected.
+ *
+ * @example
+ * ```javascript
+ * const predicate = (values, position, record) => record?.status === "done";
+ * ```
  *
  * @param   {unknown[]} values - The row's cells, left to right.
  * @param   {number} position - The row's one-based position on the sheet.
  * @param   {Record<string, unknown> | null} record - The row keyed by the header row, or `null` when no header is configured.
  * @returns {boolean} `true` to select the row.
+ * @see [RowPredicate on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RowPredicate.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -21,6 +28,12 @@ export type RowPredicate = (
 /**
  * How the rows are read and which of them are candidates.
  *
+ * @example
+ * ```javascript
+ * const options = { headerRow: 1 };
+ * ```
+ *
+ * @see [RowConditionalOptions on the documentation site](https://maksymstoianov.github.io/apps-script-utils/RowConditionalOptions.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -72,21 +85,29 @@ function toBlocks(positions: number[]): Block[] {
 /**
  * Selects the rows a predicate matches.
  *
- * @param   {unknown[][]} values - Every row of the data range.
+ * @param   {unknown[][]} values - Every row of the range being examined.
  * @param   {RowPredicate} predicate - Decides whether a row is selected.
  * @param   {number} headerRow - The one-based header row, or `0` for none.
+ * @param   {number} firstRow - The one-based sheet row the values start at.
  * @returns {number[]} The one-based positions of the matching rows, ascending.
  */
-function selectRows(values: unknown[][], predicate: RowPredicate, headerRow: number): number[] {
+function selectRows(
+  values: unknown[][],
+  predicate: RowPredicate,
+  headerRow: number,
+  firstRow: number
+): number[] {
   // slice rather than an index expression: the position is data, and no other
   // file in this library relies on Array.prototype.at.
+  const headerIndex: number = headerRow === 0 ? 0 : headerRow - firstRow;
+
   const [headers = []]: unknown[][] =
-    headerRow === 0 ? [[]] : values.slice(headerRow - 1, headerRow);
+    headerRow === 0 || headerIndex < 0 ? [[]] : values.slice(headerIndex, headerIndex + 1);
 
   const selected: number[] = [];
 
   for (const [index, row] of values.entries()) {
-    const position: number = index + 1;
+    const position: number = firstRow + index;
 
     if (position === headerRow) {
       continue;
@@ -137,24 +158,33 @@ function selectRows(values: unknown[][], predicate: RowPredicate, headerRow: num
  * });
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The sheet to clear rows on.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet to clear rows on, or the range to clear within: only its cells are read, and only they are cleared.
  * @param       {RowPredicate} predicate - Decides whether a row is selected.
  * @param       {RowConditionalOptions | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {number} How many rows were cleared.
  * @throws      {@link IllegalArgumentException} If `predicate` is not a function, or `headerRow` is not a positive integer.
- * @throws      {@link InvalidSheetException} If `sheet` is not a Sheet.
+ * @throws      {@link InvalidSheetException} If the first argument is neither a Sheet nor a Range.
  * @see         {@link clearColumnsByConditional}
  * @see         {@link deleteRowsByConditional}
+ * @see         [clearRowsByConditional on the documentation site](https://maksymstoianov.github.io/apps-script-utils/clearRowsByConditional.html)
+ * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @since       1.11.0
- * @version     1.0.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  */
 export function clearRowsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: RowPredicate,
   options: RowConditionalOptions | null | undefined = {}
 ): number {
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   if (!isFunction(predicate)) {
     throw new IllegalArgumentException("Expected 'predicate' to be a function.");
@@ -170,16 +200,18 @@ export function clearRowsByConditional(
     }
   }
 
-  const range: GoogleAppsScript.Spreadsheet.Range = sheet.getDataRange();
+  const range: GoogleAppsScript.Spreadsheet.Range = within ?? sheet.getDataRange();
 
   const values: unknown[][] = range.getValues();
 
   const width: number = range.getNumColumns();
 
-  const selected: number[] = selectRows(values, predicate, headerRow);
+  const firstColumn: number = range.getColumn();
+
+  const selected: number[] = selectRows(values, predicate, headerRow, range.getRow());
 
   for (const block of toBlocks(selected)) {
-    sheet.getRange(block.start, 1, block.count, width).clearContent();
+    sheet.getRange(block.start, firstColumn, block.count, width).clearContent();
   }
 
   return selected.length;

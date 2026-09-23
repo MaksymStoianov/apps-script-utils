@@ -23,6 +23,7 @@ import { nonFunction } from "./nonFunction";
  * @see      {@link isFunction}
  * @see      {@link nonFunction}
  * @see      {@link requireFunction}
+ * @see      [requireNonFunction on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonFunction.html)
  * @since    1.11.0
  * @version  1.0.0
  */

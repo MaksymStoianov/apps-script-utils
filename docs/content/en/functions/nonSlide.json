@@ -1,0 +1,27 @@
+{
+  "summary": "Checks whether a value is **not** a slide.",
+  "description": [
+    "`nonSlide(value)` is the same test as `!isSlide(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "An Apps Script service object has no constructor a script can test against, so the guard looks for the methods that define the type — `getObjectId`, `getPageElementById`. A stub that implements them passes, which is what makes code using this guard testable outside the runtime.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a slide; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[0];\n\nnonSlide({}); // => true\nnonSlide(null); // => true\nnonSlide(slide); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isSlide"
+    },
+    {
+      "name": "requireSlide"
+    }
+  ]
+}

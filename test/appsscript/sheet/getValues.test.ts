@@ -28,11 +28,34 @@ function sheetMock(values: unknown[][], displayed?: string[][]): SheetMock {
         return (displayed ?? values.map((row: unknown[]) => row.map(String))).map(
           (row: unknown[]) => [...row]
         );
-      }
+      },
+      getRow: () => 1,
+      getColumn: () => 1
     })
   } as unknown as GoogleAppsScript.Spreadsheet.Sheet;
 
   return { sheet, reads };
+}
+
+/**
+ * A stand-in range: knows where it sits and what it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  values: unknown[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => values.length,
+    getNumColumns: () => values[0].length,
+    getValues: () => values.map((cells) => [...cells]),
+    getDisplayValues: () => values.map((cells) => cells.map(String))
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
 }
 
 describe("getValues", () => {
@@ -272,6 +295,46 @@ describe("getValues", () => {
 
       expect(() => getValues(sheet, { filter: "x" as never })).toThrow(IllegalArgumentException);
       expect(() => getValues(sheet, { mapper: 42 as never })).toThrow(IllegalArgumentException);
+    });
+  });
+
+  describe("Reading a range", () => {
+    it("should read the range instead of the data range", () => {
+      const { sheet, reads } = sheetMock([["ignored"]]);
+
+      const rows = getValues(rangeMock(sheet, 5, 2, [["a"], ["b"]]));
+
+      expect(rows).toStrictEqual([["a"], ["b"]]);
+      expect(reads.values).toBe(0);
+    });
+
+    it("should number the rows from the position of the range", () => {
+      const { sheet } = sheetMock([["ignored"]]);
+
+      const positions = getValues(rangeMock(sheet, 5, 2, [["a"], ["b"]]), {
+        mapper: (row) => row.position
+      });
+
+      expect(positions).toStrictEqual([5, 6]);
+    });
+
+    it("should find a header row at its position on the sheet", () => {
+      const { sheet } = sheetMock([["ignored"]]);
+
+      const rows = getValues(
+        rangeMock(sheet, 4, 1, [
+          ["Name", "Age"],
+          ["Ada", 36]
+        ]),
+        { headerRow: 4 }
+      );
+
+      expect(rows).toStrictEqual([{ Name: "Ada", Age: 36 }]);
+    });
+
+    it("should throw for a first argument that is neither a sheet nor a range", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => getValues("A1:B2")).toThrow(InvalidSheetException);
     });
   });
 });

@@ -1,0 +1,25 @@
+{
+  "summary": "Legt einen Ordnerpfad in Drive an und nutzt bereits vorhandene Ordner weiter.",
+  "description": [
+    "Der Pfad wird Segment für Segment durchlaufen: ein vorhandener Ordner dieses Namens wird betreten, ein fehlender angelegt. Drive erlaubt gleichnamige Ordner, daher gewinnt der erste Treffer, statt dass ein zweiter entsteht."
+  ],
+  "params": {
+    "path": "Der Ordnerpfad, durch `/` getrennt.",
+    "rootFolder": "Wo begonnen wird. Standardmäßig die Drive-Wurzel."
+  },
+  "returns": "der Ordner am Ende des Pfades.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

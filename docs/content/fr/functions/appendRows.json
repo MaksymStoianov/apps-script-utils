@@ -1,0 +1,41 @@
+{
+  "summary": "Ajoute des lignes après la dernière ligne contenant des données.",
+  "description": [
+    "Passez une feuille et toute la feuille est examinée, l'écriture commençant en colonne 1 ; passez une plage et seules ses cellules le sont, l'écriture se faisant sur ses colonnes — des données ailleurs dans la feuille ne décident plus de l'emplacement du bloc.",
+    "Rien n'est écrasé : l'écriture commence une ligne sous la dernière qui contient des données, `0` et `false` comptant comme des données. La feuille gagne des lignes si elle est trop courte. Contrairement à `Sheet#appendRow`, qui prend une ligne à la fois, tout le bloc est écrit en un seul appel.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur.",
+    "Un échec pendant l'écriture — service indisponible, feuille supprimée — revient sous la forme de l'erreur levée par le service, avec sa pile. Le verrou du document est relâché dans tous les cas."
+  ],
+  "params": {
+    "target": "La feuille à laquelle ajouter, ou la plage dans laquelle ajouter.",
+    "values": "Une matrice de lignes : un tableau par ligne, tous de même longueur.",
+    "options": "`afterFrozenRows` commence l'écriture sous les lignes figées lorsque les données s'arrêtent avant elles."
+  },
+  "returns": "la feuille, afin de chaîner les appels.",
+  "throws": {
+    "IllegalArgumentException": "aucun argument n'est passé.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage.",
+    "TypeError": "les valeurs ne forment pas une matrice de lignes de même longueur."
+  },
+  "examples": [
+    {
+      "title": "Ajout à une feuille",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRows(sheet, [\n  [\"Ada\", \"ada@example.com\"],\n  [\"Grace\", \"grace@example.com\"]\n]);\n```"
+    },
+    {
+      "title": "Ajout dans une plage",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRows(sheet.getRange(\"B1:C10\"), [[\"Ada\", \"ada@example.com\"]]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendRow"
+    },
+    {
+      "name": "prependRows"
+    },
+    {
+      "name": "requireConsistent2DArray"
+    }
+  ]
+}

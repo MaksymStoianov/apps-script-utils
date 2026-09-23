@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que un nom de feuille, ou lève une exception.",
+  "description": [
+    "Ce que Google Sheets accepte : au plus 100 caractères, non vide, aucun des caractères `\\ / ? * [ ]`, et pas le nom réservé `history`, quelle que soit la casse.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un nom de feuille.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un nom de feuille."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireValidSheetName(\"Data\"); // => \"Data\"\nrequireValidSheetName(\"Report 2026\"); // => \"Report 2026\"\nrequireValidSheetName(\"history\"); // throws IllegalArgumentException\nrequireValidSheetName(\"Data/2026\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetName"
+    },
+    {
+      "name": "nonValidSheetName"
+    }
+  ]
+}

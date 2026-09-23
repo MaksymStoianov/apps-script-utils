@@ -1,0 +1,31 @@
+{
+  "summary": "Capitalises the first letter of every word and lowers the rest.",
+  "description": [
+    "Word boundaries are those of a regular expression, so `\"hello WORLD\"` becomes `\"Hello World\"`. Punctuation and separators are left exactly where they were."
+  ],
+  "params": {
+    "value": "The string to convert. It must not be empty.",
+    "options": "`trim` trims the string and collapses runs of whitespace into single spaces."
+  },
+  "returns": "the converted string.",
+  "throws": {
+    "EmptyStringException": "the value is not a string, or is empty."
+  },
+  "examples": [
+    {
+      "title": "Converting",
+      "body": "```javascript\ntoProperCase(\"hello WORLD\"); // => \"Hello World\"\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toLowerCase"
+    },
+    {
+      "name": "toUpperCase"
+    },
+    {
+      "name": "toCamelCase"
+    }
+  ]
+}

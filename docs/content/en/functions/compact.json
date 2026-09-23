@@ -1,0 +1,35 @@
+{
+  "summary": "Removes every falsy value from an array and narrows the element type without a cast.",
+  "description": [
+    "`compact` drops `false`, `null`, `undefined`, `0`, `-0`, `0n`, `\"\"` and `NaN`, and returns what is left in a new\narray. The input is not modified.",
+    "The point of the function over a plain `array.filter(Boolean)` is the type: TypeScript keeps the original element\ntype through `filter(Boolean)`, so the caller has to assert the nulls away afterwards. `compact` returns `T[]`\nwithout a cast.",
+    "Note that `0` and `\"\"` count as falsy. For values read out of a spreadsheet that is usually the wrong tool — `0` is\na legitimate number and an empty cell arrives as `\"\"` — and `array.filter(nonNil)` removes only the absent values."
+  ],
+  "params": {
+    "array": "Falsy>`"
+  },
+  "returns": "a new array holding only the truthy values, in their original order.",
+  "throws": {
+    "TypeError": "`array` is not an array."
+  },
+  "examples": [
+    {
+      "title": "Dropping the falsy values",
+      "body": "```javascript\ncompact([0, 1, false, 2, \"\", 3, null]); // => [1, 2, 3]\ncompact([NaN, undefined]); // => []\ncompact([0, \"\"]); // => [] — both are falsy\n```"
+    },
+    {
+      "title": "Reading a column without the blanks",
+      "body": "The column arrives as `Array<string | null>` and leaves as `string[]`, with no cast in between.\n\n<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"compact.ts\" include-symbol=\"readIds\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction readIds(sheet) {\n  const column = sheet.getRange(\"A2:A\").getValues().flat();\n  return compact(column);\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "When `nonNil` is the better filter",
+      "body": "```typescript\nimport { nonNil } from \"apps-script-utils\";\n\nconst cells = [0, \"\", 5, null]; // a column read from a sheet\n\ncompact(cells); // => [5] — drops the legitimate 0 and the empty cell\ncells.filter(nonNil); // => [0, \"\", 5] — drops only the absent values\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "without",
+      "note": "removes the values you name, rather than the falsy ones."
+    }
+  ]
+}

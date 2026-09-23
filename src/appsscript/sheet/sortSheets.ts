@@ -4,12 +4,23 @@ import { isSpreadsheet } from "./isSpreadsheet";
 /**
  * Sorts all sheets in a spreadsheet alphabetically by name.
  *
+ * @example
+ * ```javascript
+ * const spreadsheet = SpreadsheetApp.getActive();
+ *
+ * sortSheets(spreadsheet); // alphabetically by name
+ *
+ * sortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed
+ * ```
+ *
  * @param       {GoogleAppsScript.Spreadsheet.Spreadsheet} spreadsheet - The spreadsheet object.
  * @param       {(a: string, b: string) => number} [callback] - An optional callback function for custom sorting.
  * @returns     {void}
  * @throws      {@link IllegalArgumentException}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [sortSheets on the documentation site](https://maksymstoianov.github.io/apps-script-utils/sortSheets.html)
+ * @see         [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
  * @since       1.5.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

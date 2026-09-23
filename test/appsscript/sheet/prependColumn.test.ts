@@ -47,6 +47,27 @@ function sheetMock(lastColumn = 3, frozenColumns = 0): SheetMock {
 }
 
 /**
+ * A stand-in range: knows where it sits and how big it is.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  numRows = 10,
+  numColumns = 4
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => numRows,
+    getNumColumns: () => numColumns,
+    getValues: () => Array.from({ length: numRows }, () => new Array(numColumns).fill(""))
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
+}
+
+/**
  * LockService is used for the document lock; a no-op stand-in suffices.
  */
 function installLockService(): void {
@@ -174,6 +195,19 @@ describe("prependColumn", () => {
 
       expect(() => prependColumn(sheet, [])).toThrow(IllegalArgumentException);
       expect(inserted).toStrictEqual([]);
+    });
+  });
+
+  describe("Inserting at a range", () => {
+    it("should insert before the first column of the range and write on its rows", () => {
+      const { sheet, written, inserted } = sheetMock();
+
+      prependColumn(rangeMock(sheet, 4, 3), ["Name", "Ada"]);
+
+      expect(inserted).toStrictEqual([[3, 1]]);
+      expect(written).toStrictEqual([
+        { row: 4, column: 3, numRows: 2, numColumns: 1, values: [["Name"], ["Ada"]] }
+      ]);
     });
   });
 });

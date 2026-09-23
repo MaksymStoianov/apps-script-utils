@@ -3,12 +3,22 @@ import { isSpreadsheet } from "./isSpreadsheet";
 /**
  * Checks if the provided value is NOT a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object.
  *
+ * @example
+ * ```javascript
+ * const spreadsheet = SpreadsheetApp.getActive();
+ *
+ * nonSpreadsheet({}); // => true
+ * nonSpreadsheet(null); // => true
+ * nonSpreadsheet(spreadsheet); // => false
+ * ```
+ *
  * @template T
  * @param       {T | GoogleAppsScript.Spreadsheet.Spreadsheet} value - The value to check.
  * @returns     {boolean} `true` if the value is not a <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a> object; otherwise, `false`.
  * @see         {@link isSpreadsheet}
  * @see         {@link requireSpreadsheet}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"><code>Spreadsheet</code></a>
+ * @see         [nonSpreadsheet on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonSpreadsheet.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`

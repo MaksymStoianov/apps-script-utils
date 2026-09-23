@@ -1,0 +1,40 @@
+{
+  "summary": "Retire d'un tableau toutes les occurrences des valeurs indiquées.",
+  "description": [
+    "La comparaison suit `SameValueZero` : `without([NaN], NaN)` renvoie `[]`, ce qu'un parcours par `indexOf` ne sait pas faire puisque l'égalité stricte ne correspond jamais à `NaN`. `-0` et `0` se correspondent.",
+    "Les exclusions sont rassemblées une fois dans un ensemble, si bien que le coût reste linéaire en la longueur du tableau au lieu du parcours quadratique qu'imposerait `filter` combiné à `includes`. Un nouveau tableau est renvoyé ; l'entrée n'est pas modifiée. Sans exclusion, `without` renvoie une copie."
+  ],
+  "params": {
+    "array": "Le tableau à filtrer. Il n'est pas modifié.",
+    "values": "Les valeurs à exclure."
+  },
+  "returns": "un nouveau tableau sans ces valeurs, dans leur ordre d'origine.",
+  "throws": {
+    "TypeError": "`array` n'est pas un tableau."
+  },
+  "examples": [
+    {
+      "title": "Exclure des valeurs"
+    },
+    {
+      "title": "Écarter les blancs d'une colonne"
+    },
+    {
+      "title": "Retirer une colonne d'une ligne d'en-tête"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "compact",
+      "note": "retire les valeurs falsy plutôt que celles qu'on nomme."
+    },
+    {
+      "name": "intersect",
+      "note": "ne garde que les valeurs communes."
+    },
+    {
+      "name": "unique",
+      "note": "retire les doublons."
+    }
+  ]
+}

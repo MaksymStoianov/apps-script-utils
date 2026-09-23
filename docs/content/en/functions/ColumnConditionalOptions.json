@@ -1,0 +1,26 @@
+{
+  "summary": "How the columns are read and which of them are candidates.",
+  "description": [
+    "`headerColumn` is the one-based column holding the row names. As with `headerRow`, setting it keys each column by those names and keeps the header column itself out of the candidates."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Shape",
+      "body": "```javascript\nconst options = { headerColumn: 1 };\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnPredicate"
+    }
+  ]
+}

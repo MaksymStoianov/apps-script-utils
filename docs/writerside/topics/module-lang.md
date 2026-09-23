@@ -1,5 +1,9 @@
 # lang
 
+<link-summary>The runtime-independent language utilities: guards, arrays, numbers, objects, strings.</link-summary>
+
+<web-summary>The lang module of apps-script-utils: type guards, array and matrix helpers, number classification, object hashing, and string conversion, all runtime-independent.</web-summary>
+
 `lang` holds the language-level utilities — the parts of the library that know nothing about Google Apps Script and
 run anywhere JavaScript does.
 
@@ -118,8 +122,8 @@ objectToString(null); // "[object Null]"
 hashCode("apps-script-utils"); // a stable numeric hash
 ```
 
-`objectToString` is the internal tag, not `String(value)`, which makes it the reliable way to tell an array from a
-date from a plain object. It is exported as `toString` from the package root.
+`objectToString` reports the internal tag rather than `String(value)`, which makes it the reliable way to tell an
+array from a date from a plain object — and the tag survives crossing a frame boundary, where `instanceof` does not.
 
 ## Full list
 

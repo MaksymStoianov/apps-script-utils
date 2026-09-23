@@ -1,0 +1,36 @@
+{
+  "summary": "Adds one column after the last column that holds data.",
+  "description": [
+    "The values fill the column downwards: one value per row. A sheet is examined whole and the column is written from row 1; a range is examined only inside itself and the column is written on its rows, right of the last column of the range that holds data.",
+    "It is `appendColumns` with one column: the same guards, the same growth of the sheet when the result would not fit, and the same rule that a cell whose text starts with `=` becomes a formula."
+  ],
+  "params": {
+    "target": "The sheet to append to, or the range to append within.",
+    "values": "A single column: a flat array, one value per row.",
+    "options": "`afterFrozenColumns` starts the write past the frozen columns when the data ends before them."
+  },
+  "returns": "the sheet, so calls can be chained.",
+  "throws": {
+    "IllegalArgumentException": "no argument is passed.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range.",
+    "TypeError": "the values are not a flat array."
+  },
+  "examples": [
+    {
+      "title": "Appending to a sheet",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendColumn(sheet, [\"status\", \"new\", \"new\"]);\n```"
+    },
+    {
+      "title": "Appending within a range",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendColumn(sheet.getRange(\"A1:D3\"), [\"status\", \"new\", \"new\"]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "appendColumns"
+    },
+    {
+      "name": "prependColumn"
+    }
+  ]
+}

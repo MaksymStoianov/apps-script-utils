@@ -1,0 +1,27 @@
+{
+  "summary": "Проверяет, что значение **не** является объектом TextOutput.",
+  "description": [
+    "`nonTextOutput(value)` — та же проверка, что и `!isTextOutput(value)`, записанная так, чтобы охранное условие читалось как утверждение, а не как отрицание.",
+    "У сервисного объекта Apps Script нет конструктора, с которым скрипт мог бы сравнить значение, поэтому проверка ищет методы, определяющие тип, — `getMimeType`, `getContent`. Заглушка, реализующая их, проходит, и именно это позволяет тестировать такой код вне среды выполнения.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение не является объектом TextOutput; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nconst output = ContentService.createTextOutput(\"hi\");\n\nnonTextOutput({}); // => true\nnonTextOutput(null); // => true\nnonTextOutput(output); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isTextOutput"
+    },
+    {
+      "name": "requireTextOutput"
+    }
+  ]
+}

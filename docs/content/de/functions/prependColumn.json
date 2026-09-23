@@ -1,0 +1,36 @@
+{
+  "summary": "Fügt eine Spalte vor den Daten ein — im Blatt oder an einem Bereich.",
+  "description": [
+    "`prependColumns` mit einer einzigen Spalte: zuerst wird Platz geschaffen, sodass nichts Vorhandenes überschrieben wird. Ein Blatt bekommt die Spalte an seinen Anfang; ein Bereich unmittelbar vor seine erste Spalte, wobei die Werte auf den Zeilen des Bereichs landen.",
+    "Die Werte kommen als flaches Array von Zellen, von oben nach unten. Ohne sie wird eine leere Spalte eingefügt.",
+    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+  ],
+  "params": {
+    "target": "Das Blatt, in das eingefügt wird, oder der Bereich, an dem eingefügt wird.",
+    "values": "Die Zellen der einen Spalte, von oben nach unten. Ohne Angabe entsteht eine leere Spalte.",
+    "options": "`afterFrozenColumns` fügt hinter den fixierten Spalten ein statt ganz am Anfang. Ein Bereich bestimmt die Stelle selbst, dort bewirkt die Option nichts."
+  },
+  "returns": "das Blatt, sodass Aufrufe verkettet werden können.",
+  "throws": {
+    "IllegalArgumentException": "Werte übergeben wurden, die kein nicht-leeres flaches Array sind.",
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist."
+  },
+  "examples": [
+    {
+      "title": "Am Anfang eines Blatts einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumn(sheet, [\"Name\", \"Ada\", \"Grace\"]);\n```"
+    },
+    {
+      "title": "An einem Bereich einfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumn(sheet.getRange(\"C4:F13\"), [\"Name\", \"Ada\"]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependColumns"
+    },
+    {
+      "name": "appendColumn"
+    }
+  ]
+}

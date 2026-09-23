@@ -30,6 +30,7 @@ const SHEETS_URL = /docs\.google\.com\/spreadsheets/;
  * @throws      {@link IllegalArgumentException} If the value is not a valid spreadsheet identifier.
  * @see         {@link isValidSpreadsheetId}
  * @see         {@link nonValidSpreadsheetId}
+ * @see         [requireValidSpreadsheetId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireValidSpreadsheetId.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

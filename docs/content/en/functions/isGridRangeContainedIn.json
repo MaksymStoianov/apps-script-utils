@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether one grid range lies entirely within another.",
+  "description": [
+    "Containment is inclusive: a range contains itself. An absent bound on the outer range means it is open in that direction and so contains anything on that axis, which is how a whole column or a whole sheet is expressed.",
+    "This is the check to run before writing into a range a user chose, so that a write cannot spill outside the area the script owns."
+  ],
+  "params": {
+    "range1": "The range being placed.",
+    "range2": "The range it is compared against."
+  },
+  "returns": "`true` when the first range lies inside the second.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Checking containment",
+      "body": "```javascript\nconst inner = { startRowIndex: 1, endRowIndex: 2, startColumnIndex: 1, endColumnIndex: 2 };\nconst outer = { startRowIndex: 0, endRowIndex: 5, startColumnIndex: 0, endColumnIndex: 5 };\n\nisGridRangeContainedIn(inner, outer); // => true\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonGridRangeContainedIn"
+    },
+    {
+      "name": "requireGridRangeContainedIn"
+    },
+    {
+      "name": "doGridRangesIntersect"
+    }
+  ]
+}

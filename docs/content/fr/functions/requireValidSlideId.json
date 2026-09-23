@@ -1,0 +1,30 @@
+{
+  "summary": "Renvoie la valeur en tant que un identifiant de diapositive, ou lève une exception.",
+  "description": [
+    "Lettres, chiffres, tirets et tirets bas, au moins un caractère. Les identifiants de diapositive sont courts — `p1` est tout à fait ordinaire — donc aucune longueur minimale n'est imposée.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à valider.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé.",
+    "strict": "Avec `true`, une chaîne n'est vide que si elle ne contient aucun caractère ; par défaut, les espaces sont retirés d'abord."
+  },
+  "returns": "la même valeur, typée comme un identifiant de diapositive.",
+  "throws": {
+    "IllegalArgumentException": "la valeur n'est pas un identifiant de diapositive."
+  },
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nrequireValidSlideId(\"p1\"); // => \"p1\"\nrequireValidSlideId(\"SLIDES_api123\"); // => \"SLIDES_api123\"\nrequireValidSlideId(\"has space\"); // throws IllegalArgumentException\nrequireValidSlideId(\"\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlideId"
+    },
+    {
+      "name": "nonValidSlideId"
+    }
+  ]
+}

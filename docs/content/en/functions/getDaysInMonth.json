@@ -1,0 +1,27 @@
+{
+  "summary": "Returns how many days the month of a date has.",
+  "description": [
+    "Leap years are handled by the calendar itself, so February is 29 days where it should be. Only the month and the year of the date matter; the day and the time are ignored."
+  ],
+  "params": {
+    "date": "The date to read. It must be a valid `Date`."
+  },
+  "returns": "the number of days, from 28 to 31.",
+  "throws": {
+    "IllegalArgumentException": "an argument is not a valid `Date`."
+  },
+  "examples": [
+    {
+      "title": "Counting",
+      "body": "```javascript\ngetDaysInMonth(new Date(2026, 1, 10)); // => 28\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getDaysLeftInMonth"
+    },
+    {
+      "name": "offset"
+    }
+  ]
+}

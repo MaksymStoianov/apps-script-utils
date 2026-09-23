@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein HtmlOutput ist.",
+  "description": [
+    "`nonHtmlOutput(value)` ist dieselbe Prüfung wie `!isHtmlOutput(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Ein Apps-Script-Dienstobjekt hat keinen Konstruktor, gegen den ein Skript prüfen könnte, also sucht die Prüfung die Methoden, die den Typ ausmachen — `getContent`, `setTitle`, `setXFrameOptionsMode`. Ein Stub, der sie umsetzt, besteht, und genau das macht Code mit dieser Prüfung außerhalb der Laufzeit testbar.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein HtmlOutput ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nconst output = HtmlService.createHtmlOutput(\"<p>hi</p>\");\n\nnonHtmlOutput({}); // => true\nnonHtmlOutput(null); // => true\nnonHtmlOutput(output); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isHtmlOutput"
+    },
+    {
+      "name": "requireHtmlOutput"
+    }
+  ]
+}

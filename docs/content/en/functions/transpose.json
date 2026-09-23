@@ -1,0 +1,39 @@
+{
+  "summary": "Swaps the rows and columns of a matrix.",
+  "description": [
+    "The value at row `i`, column `j` of the input is at row `j`, column `i` of the result. A new matrix is built; the\ninput is not modified.",
+    "The input must be a matrix with uniform row lengths — the rule\n[`isConsistent2DArray`](isConsistent2DArray.md) states — since a ragged input has no transpose. Anything else throws\na plain `Error`.",
+    "In a spreadsheet this is the conversion between the two shapes a range comes in: a column read as one row per cell,\nand a single row holding the same values."
+  ],
+  "params": {
+    "arr": "The matrix to transpose. Left untouched."
+  },
+  "returns": "a new matrix with the rows and columns swapped. Element types are preserved.",
+  "throws": {
+    "Error": "The input is not a matrix, or its rows differ in length."
+  },
+  "examples": [
+    {
+      "title": "Rows become columns",
+      "body": "```javascript\ntranspose([\n  [1, 2, 3],\n  [4, 5, 6]\n]);\n// => [\n//   [1, 4],\n//   [2, 5],\n//   [3, 6]\n// ]\n```"
+    },
+    {
+      "title": "Writing a list down a column",
+      "body": "`setValues` wants one row per cell to fill a column, and a flat list is not that shape.\n\n<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"transpose.ts\" include-symbol=\"writeColumn\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction writeColumn(sheet, values) {\n  const column = transpose([values]);\n  sheet.getRange(1, 1, column.length, 1).setValues(column);\n}\n</code-block>\n</tab>\n</tabs>"
+    },
+    {
+      "title": "Invalid input",
+      "body": "```javascript\ntranspose([1, 2, 3]); // throws Error: Input must be a 2D array.\ntranspose([[1, 2], [3]]); // throws Error: Input must be a 2D array.\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "the shape `transpose` requires."
+    },
+    {
+      "name": "chunk",
+      "note": "reshapes a flat array into rows."
+    }
+  ]
+}

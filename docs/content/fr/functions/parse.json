@@ -1,0 +1,25 @@
+{
+  "summary": "Décompose un chemin en ses parties.",
+  "description": [
+    "Le résultat porte `root`, `dir`, `base`, `name` et `ext`, les cinq mêmes parties que rapporte `path.parse` de Node. Une partie que le chemin n'a pas est simplement absente de l'objet : un simple nom de fichier revient avec `base`, `name` et `ext` seulement.",
+    "`ext` inclut le point, et un nom qui commence par un point — `.gitignore` — est un nom, pas une extension."
+  ],
+  "params": {
+    "path": "Le chemin à décomposer."
+  },
+  "returns": "un objet portant les parties présentes dans le chemin.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Décomposer un chemin"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "join"
+    },
+    {
+      "name": "normalize"
+    }
+  ]
+}

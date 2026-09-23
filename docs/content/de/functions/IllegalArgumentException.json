@@ -1,0 +1,25 @@
+{
+  "summary": "Ein Argument war von der falschen Art oder lag außerhalb des akzeptierten Bereichs.",
+  "description": [
+    "Ein Argument war von der falschen Art oder lag außerhalb des akzeptierten Bereichs. Das werfen die meisten `requireX`-Prüfungen.",
+    "Wird geworfen von [`requireArray`](requireArray.md), [`requireInteger`](requireInteger.md), [`requireNonEmpty`](requireNonEmpty.md).",
+    "Jede Klasse dieser Hierarchie nimmt eine optionale Meldung, eine andere Ausnahme, deren Meldung übernommen wird, oder gar nichts. `isException` erkennt sie alle; ein einfacher `Error` gehört nicht dazu."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Werfen und fangen",
+      "body": "```javascript\nthrow new IllegalArgumentException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof IllegalArgumentException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

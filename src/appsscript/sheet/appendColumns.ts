@@ -1,6 +1,14 @@
-import { IllegalArgumentException } from "../../exception";
-import { isConsistent2DArray } from "../../lang";
-import { requireSheet } from "./requireSheet";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
+import { isConsistent2DArray, isNil } from "../../lang";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
+
+/**
+ * A cell counts as data unless it is empty: `0` and `false` are values a caller put there.
+ */
+function isBlank(value: unknown): boolean {
+  return value === "" || isNil(value);
+}
 
 export interface Options {
   /**
@@ -11,10 +19,12 @@ export interface Options {
 }
 
 /**
- * Appends columns to the right of the current data area on a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>sheet</code></a>.
+ * Appends columns after the last column that holds data, without overwriting anything.
+ * Given a <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> the whole sheet is examined; given a <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> only the cells inside it are, and the values are written on its rows.
+ * The sheet gains columns when it is too narrow to hold the result.
  * If a cell's content starts with `=`, it will be interpreted as a formula.
  *
- * @example
+ * @example (Appending to a sheet)
  * ```javascript
  * const ss = SpreadsheetApp.getActiveSpreadsheet();
  * const sheet = ss.getSheetByName('Sheet Name');
@@ -26,23 +36,33 @@ export interface Options {
  * ]);
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object to which columns will be appended.
+ * @example (Appending within a range)
+ * ```javascript
+ * const ss = SpreadsheetApp.getActiveSpreadsheet();
+ * const sheet = ss.getSheetByName('Sheet Name');
+ *
+ * // Data further down the sheet does not move the write.
+ * appendColumns(sheet.getRange("A1:D2"), [["a"], ["b"]]);
+ * ```
+ *
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> to append to, or the <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a> to append within.
  * @param       {any[][]} values - A 2D array containing the data to append.
  * @param       {Options | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a> object.
- * @throws      <a href="../../exception/IllegalArgumentException.ts"><code>IllegalArgumentException</code></a>
+ * @throws      {@link IllegalArgumentException}
  * @throws      {@link InvalidSheetException}
  * @see         {@link appendColumn}
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
+ * @see         [appendColumns on the documentation site](https://maksymstoianov.github.io/apps-script-utils/appendColumns.html)
  * @since       1.0.0
- * @version     1.4.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
  */
 export function appendColumns(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet {
@@ -50,7 +70,13 @@ export function appendColumns(
     throw new IllegalArgumentException();
   }
 
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   if (!isConsistent2DArray(values)) {
     throw new TypeError(
@@ -72,9 +98,31 @@ export function appendColumns(
 
     const numColumns: number = values[0].length;
 
-    const lastCol: number = sheet.getLastColumn();
+    // A range appends on its own rows; a sheet appends from the first row.
+    const rowPosition: number = within ? within.getRow() : 1;
 
-    let columnPosition: number = lastCol;
+    // The column the data ends at: the write starts one column further right.
+    let columnPosition: number;
+
+    if (within) {
+      const cells = within.getValues();
+
+      let filled = 0;
+
+      for (const row of cells) {
+        for (let column = row.length; column > filled; column--) {
+          if (!isBlank(row[column - 1])) {
+            filled = column;
+
+            break;
+          }
+        }
+      }
+
+      columnPosition = within.getColumn() + filled - 1;
+    } else {
+      columnPosition = sheet.getLastColumn();
+    }
 
     if (effectiveOptions.afterFrozenColumns !== false) {
       const frozenColumns = sheet.getFrozenColumns();
@@ -84,11 +132,26 @@ export function appendColumns(
       }
     }
 
-    const range = sheet.getRange(1, columnPosition, numRows, numColumns);
+    const columnStart = columnPosition + 1;
 
-    range.setValues(values);
-  } catch (err: unknown) {
-    throw err instanceof Error ? err.message : String(err);
+    // The sheet grows rather than the write failing at its edge.
+    const maxColumns = sheet.getMaxColumns();
+
+    const neededColumns = columnStart + numColumns - 1 - maxColumns;
+
+    if (neededColumns > 0) {
+      sheet.insertColumnsAfter(maxColumns, neededColumns);
+    }
+
+    const maxRows = sheet.getMaxRows();
+
+    const neededRows = rowPosition + numRows - 1 - maxRows;
+
+    if (neededRows > 0) {
+      sheet.insertRowsAfter(maxRows, neededRows);
+    }
+
+    sheet.getRange(rowPosition, columnStart, numRows, numColumns).setValues(values);
   } finally {
     lock?.releaseLock();
   }

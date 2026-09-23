@@ -1,0 +1,36 @@
+{
+  "summary": "Inserts one column before the data, on a sheet or at a range.",
+  "description": [
+    "`prependColumns` with a single column: room is made first, so nothing already there is overwritten. A sheet gets the column at its start; a range gets it immediately before its first column, with the values written on the range's rows.",
+    "The values go in as a flat array of cells, top to bottom. Omit them and an empty column is inserted.",
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+  ],
+  "params": {
+    "target": "The sheet to insert into, or the range to insert at.",
+    "values": "The cells of the single column, top to bottom. Omit for an empty column.",
+    "options": "`afterFrozenColumns` inserts after the frozen columns instead of at the very start. A range decides the position itself, so the option does nothing there."
+  },
+  "returns": "the sheet, so calls can be chained.",
+  "throws": {
+    "IllegalArgumentException": "the values are given but are not a non-empty flat array.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range."
+  },
+  "examples": [
+    {
+      "title": "Inserting at the start of a sheet",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumn(sheet, [\"Name\", \"Ada\", \"Grace\"]);\n```"
+    },
+    {
+      "title": "Inserting at a range",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumn(sheet.getRange(\"C4:F13\"), [\"Name\", \"Ada\"]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependColumns"
+    },
+    {
+      "name": "appendColumn"
+    }
+  ]
+}

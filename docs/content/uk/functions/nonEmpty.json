@@ -1,0 +1,30 @@
+{
+  "summary": "Перевіряє, що значення **не** є порожнім значенням.",
+  "description": [
+    "`nonEmpty(value)` — та сама перевірка, що й `!isEmpty(value)`, записана так, щоб охоронна умова читалася як твердження, а не як заперечення.",
+    "Порожнеча визначається за типом: `null` і `undefined`, рядок з самих пробілів, масив, `Set` чи `Map` без елементів, об'єкт без власних ключів. `0` і `false` — це значення, а не порожнеча.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення не є порожнім значенням; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nnonEmpty(0); // => true\nnonEmpty(false); // => true\nnonEmpty(\"a\"); // => true\nnonEmpty([0]); // => true\nnonEmpty(null); // => false\nnonEmpty(\"\"); // => false\nnonEmpty(\"   \"); // => false\nnonEmpty([]); // => false\nnonEmpty({}); // => false\nnonEmpty(new Map()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmpty"
+    },
+    {
+      "name": "requireEmpty"
+    },
+    {
+      "name": "requireNonEmpty"
+    }
+  ]
+}

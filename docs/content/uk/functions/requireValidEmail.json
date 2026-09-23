@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як адресу електронної пошти або викидає виняток.",
+  "description": [
+    "Адреса розбивається за єдиним `@`: домен перевіряється так само, як у `isValidDomain`, а локальна частина має бути непорожньою і без пробілів. Це перевірка формату, а не доказ того, що скринька існує.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як адресу електронної пошти.",
+  "throws": {
+    "InvalidEmailFormatException": "значення не є адресою електронної пошти."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireValidEmail(\"user@example.com\"); // => \"user@example.com\"\nrequireValidEmail(\"first.last@sub.example.co.uk\"); // => \"first.last@sub.example.co.uk\"\nrequireValidEmail(\"user@@example.com\"); // throws InvalidEmailFormatException\nrequireValidEmail(\"user@\"); // throws InvalidEmailFormatException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isEmail"
+    },
+    {
+      "name": "nonValidEmail"
+    }
+  ]
+}

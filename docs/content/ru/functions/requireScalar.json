@@ -1,0 +1,33 @@
+{
+  "summary": "Возвращает значение как скалярное значение или выбрасывает исключение.",
+  "description": [
+    "Примитив, несущий одно значение: строка, число, логическое значение, символ или bigint. `null` и `undefined` тоже примитивы, но значения не несут и не подходят.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как скалярное значение.",
+  "throws": {
+    "IllegalArgumentException": "значение не является скалярным значением."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireScalar(\"abc\"); // => \"abc\"\nrequireScalar(1); // => 1\nrequireScalar({}); // throws IllegalArgumentException\nrequireScalar([]); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isScalar"
+    },
+    {
+      "name": "nonScalar"
+    },
+    {
+      "name": "requireNonScalar"
+    }
+  ]
+}

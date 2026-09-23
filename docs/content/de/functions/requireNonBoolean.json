@@ -1,0 +1,33 @@
+{
+  "summary": "Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein boolescher Wert ist.",
+  "description": [
+    "Nur die beiden Primitiven bestehen. `new Boolean(false)` ist ein Objekt, und die Zeichenketten `\"true\"` und `\"false\"` bleiben Zeichenketten.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu validierende Wert.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet.",
+    "strict": "Bei `true` gilt eine Zeichenkette nur dann als leer, wenn sie gar keine Zeichen enthält; standardmäßig wird zuvor Leerraum entfernt."
+  },
+  "returns": "denselben Wert; nach der Prüfung steht fest, dass er nicht ein boolescher Wert ist.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist ein boolescher Wert."
+  },
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nrequireNonBoolean(\"true\"); // => \"true\"\nrequireNonBoolean(1); // => 1\nrequireNonBoolean(true); // throws IllegalArgumentException\nrequireNonBoolean(false); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isBoolean"
+    },
+    {
+      "name": "nonBoolean"
+    },
+    {
+      "name": "requireBoolean"
+    }
+  ]
+}

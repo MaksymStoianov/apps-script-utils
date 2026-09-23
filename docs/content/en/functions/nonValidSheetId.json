@@ -1,0 +1,27 @@
+{
+  "summary": "Checks whether a value is **not** a sheet id.",
+  "description": [
+    "`nonValidSheetId(value)` is the same test as `!isValidSheetId(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "Apps Script numbers its sheets from zero, so a sheet id is a non-negative safe integer — the same rule `isCountable` applies. The id of the first sheet in a spreadsheet is `0`.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not a sheet id; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonValidSheetId(-1); // => true\nnonValidSheetId(1.5); // => true\nnonValidSheetId(\"0\"); // => true\nnonValidSheetId(0); // => false\nnonValidSheetId(1234567890); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "requireValidSheetId"
+    }
+  ]
+}

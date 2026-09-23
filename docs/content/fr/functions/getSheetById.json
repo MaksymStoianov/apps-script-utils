@@ -1,0 +1,29 @@
+{
+  "summary": "Trouve une feuille par son identifiant.",
+  "description": [
+    "Un identifiant survit à un renommage et à un réordonnancement : c'est donc la bonne poignée à ranger dans une propriété ou une configuration. Apps Script n'offre pas de recherche par identifiant, les feuilles sont donc parcourues et comparées.",
+    "Le classeur est par défaut celui qui est actif. Une feuille absente donne `null` plutôt qu'une exception : un identifiant stocké qui ne résout plus est un cas à traiter, pas un plantage."
+  ],
+  "params": {
+    "sheetId": "L'identifiant de feuille recherché.",
+    "ss": "Le classeur où chercher. Par défaut, celui qui est actif."
+  },
+  "returns": "la feuille, ou `null` si aucune ne porte cet identifiant.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Recherche"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSheetByIndex"
+    },
+    {
+      "name": "isValidSheetId"
+    },
+    {
+      "name": "requireSheet"
+    }
+  ]
+}

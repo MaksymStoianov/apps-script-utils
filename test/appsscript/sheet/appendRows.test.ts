@@ -18,6 +18,7 @@ interface Written {
 interface SheetMock {
   sheet: GoogleAppsScript.Spreadsheet.Sheet;
   written: Written[];
+  inserted: Array<[string, number, number]>;
 }
 
 /**
@@ -26,14 +27,24 @@ interface SheetMock {
 function sheetMock(lastRow = 0, lastColumn = 0, frozenRows = 0, frozenColumns = 0): SheetMock {
   const written: Written[] = [];
 
+  const inserted: Array<[string, number, number]> = [];
+
   const sheet = {
     toString: () => "Sheet",
     getLastRow: () => lastRow,
     getLastColumn: () => lastColumn,
+    getMaxRows: () => 1000,
+    getMaxColumns: () => 26,
     getFrozenRows: () => frozenRows,
     getFrozenColumns: () => frozenColumns,
     insertRowsBefore: () => undefined,
     insertColumnsBefore: () => undefined,
+    insertRowsAfter: (position: number, howMany: number) => {
+      inserted.push(["rowsAfter", position, howMany]);
+    },
+    insertColumnsAfter: (position: number, howMany: number) => {
+      inserted.push(["columnsAfter", position, howMany]);
+    },
     getRange: (row: number, column: number, numRows: number, numColumns: number) => ({
       setValues: (values: unknown[][]) => {
         written.push({ row, column, numRows, numColumns, values });
@@ -41,7 +52,27 @@ function sheetMock(lastRow = 0, lastColumn = 0, frozenRows = 0, frozenColumns = 
     })
   } as unknown as GoogleAppsScript.Spreadsheet.Sheet;
 
-  return { sheet, written };
+  return { sheet, written, inserted };
+}
+
+/**
+ * A stand-in range: knows where it sits and what it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  values: unknown[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => values.length,
+    getNumColumns: () => values[0].length,
+    getValues: () => values
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
 }
 
 /**
@@ -160,6 +191,106 @@ describe("appendRows", () => {
 
       expect(() => appendRows(sheet, ["a", "b"])).toThrow();
       expect(written).toEqual([]);
+    });
+  });
+
+  describe("Appending within a range", () => {
+    it("should write below the last populated row of the range", () => {
+      const { sheet, written } = sheetMock(50, 5);
+
+      appendRows(
+        rangeMock(sheet, 1, 1, [
+          ["x", "y"],
+          ["", ""],
+          ["", ""]
+        ]),
+        [["a", "b"]]
+      );
+
+      expect(written[0].row).toBe(2);
+      expect(written[0].column).toBe(1);
+    });
+
+    it("should ignore data outside the range", () => {
+      const { sheet, written } = sheetMock(50, 5);
+
+      // The sheet has data down to row 50; the range stops at row 3.
+      appendRows(rangeMock(sheet, 1, 2, [["x"], [""], [""]]), [["a"]]);
+
+      expect(written[0].row).toBe(2);
+      expect(written[0].column).toBe(2);
+    });
+
+    it("should write at the first row of an empty range", () => {
+      const { sheet, written } = sheetMock(0, 0);
+
+      appendRows(rangeMock(sheet, 4, 2, [[""], [""]]), [["a"]]);
+
+      expect(written[0].row).toBe(4);
+      expect(written[0].column).toBe(2);
+    });
+
+    it("should treat zero and false as data", () => {
+      const { sheet, written } = sheetMock(0, 0);
+
+      appendRows(rangeMock(sheet, 1, 1, [[0], [false], [""]]), [["a"]]);
+
+      expect(written[0].row).toBe(3);
+    });
+
+    it("should grow the sheet when the values do not fit", () => {
+      const { sheet, inserted } = sheetMock(0, 0);
+
+      appendRows(rangeMock(sheet, 999, 1, [["x"], [""]]), [["a"], ["b"]]);
+
+      expect(inserted).toContainEqual(["rowsAfter", 1000, 1]);
+    });
+
+    it("should throw for a first argument that is neither a sheet nor a range", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => appendRows("A1:B2", [["a"]])).toThrow(InvalidSheetException);
+    });
+  });
+
+  describe("When the write fails", () => {
+    it("should let the original error through, not its message", () => {
+      const { sheet } = sheetMock(0, 0);
+
+      const boom = new Error("Service unavailable.");
+
+      // @ts-expect-error - the stand-in is narrower than the real Sheet
+      sheet.getRange = () => ({
+        setValues: () => {
+          throw boom;
+        }
+      });
+
+      expect(() => appendRows(sheet, [["a"]])).toThrow(boom);
+    });
+
+    it("should release the lock even then", () => {
+      const released: number[] = [];
+
+      (globalThis as Mutable).LockService = {
+        getDocumentLock: () => ({
+          waitLock: () => undefined,
+          releaseLock: () => {
+            released.push(1);
+          }
+        })
+      };
+
+      const { sheet } = sheetMock(0, 0);
+
+      // @ts-expect-error - the stand-in is narrower than the real Sheet
+      sheet.getRange = () => ({
+        setValues: () => {
+          throw new Error("Service unavailable.");
+        }
+      });
+
+      expect(() => appendRows(sheet, [["a"]])).toThrow(Error);
+      expect(released).toHaveLength(1);
     });
   });
 });

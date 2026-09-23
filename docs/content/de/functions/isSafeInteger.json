@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert eine sichere ganze Zahl ist.",
+  "description": [
+    "Eine ganze Zahl, die ein IEEE-754-Double exakt darstellt. Jenseits dieses Bereichs fallen verschiedene mathematische Ganzzahlen auf denselben Wert und das Rechnen ist still nicht mehr exakt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert eine sichere ganze Zahl ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisSafeInteger(42); // => true\nisSafeInteger(Number.MAX_SAFE_INTEGER); // => true\nisSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => false\nisSafeInteger(1.5); // => false\nisSafeInteger(\"42\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

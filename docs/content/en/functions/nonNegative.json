@@ -1,0 +1,25 @@
+{
+  "summary": "Checks whether a value is a number that is not negative.",
+  "description": [
+    "The name breaks the convention the rest of the library follows: everywhere else a `nonX` prefix means “is not X”, and here it means “is a non-negative number”. `isNonNegative` says the same thing under the right name and is what new code should call."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is a number and is not negative.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "In use",
+      "body": "```javascript\nnonNegative(0); // => true\nnonNegative(-1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isNonNegative"
+    },
+    {
+      "name": "isCountable"
+    }
+  ]
+}

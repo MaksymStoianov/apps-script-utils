@@ -3,9 +3,23 @@ import { RuntimeException } from "../RuntimeException";
 /**
  * Represents an exception thrown during authentication failures.
  *
+ * @example
+ * ```javascript
+ * throw new AuthenticationException("something specific about this call");
+ *
+ * try {
+ *   doWork();
+ * } catch (error) {
+ *   if (error instanceof AuthenticationException) {
+ *     // handled
+ *   }
+ * }
+ * ```
+ *
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
+ * @see     [AuthenticationException on the documentation site](https://maksymstoianov.github.io/apps-script-utils/AuthenticationException.html)
  * @since   1.5.0
  * @version 1.0.0
  */

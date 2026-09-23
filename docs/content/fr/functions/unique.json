@@ -1,0 +1,36 @@
+{
+  "summary": "Retire les doublons d'un tableau en gardant la première occurrence de chaque valeur.",
+  "description": [
+    "La comparaison suit `SameValueZero`, la règle d'un `Set` : `NaN` se dédoublonne avec `NaN`, ce que `===` ne fait jamais, et `-0` se confond avec `0`. L'ordre est celui de la première apparition, et l'entrée n'est pas modifiée.",
+    "Les objets sont comparés par identité : deux objets de même contenu sont donc deux valeurs. L'`iteratee` facultative produit la clé de comparaison, ce qui permet de dédoublonner des enregistrements par un identifiant plutôt que par leur identité. À clé égale, c'est la valeur rencontrée en premier qui l'emporte."
+  ],
+  "params": {
+    "array": "Le tableau à dédoublonner. Il n'est pas modifié.",
+    "iteratee": "Produit la clé selon laquelle une valeur est comparée. Sans elle, les valeurs se comparent entre elles."
+  },
+  "returns": "un nouveau tableau sans doublons, dans l'ordre de première apparition.",
+  "throws": {
+    "TypeError": "`array` n'est pas un tableau."
+  },
+  "examples": [
+    {
+      "title": "Dédoublonner des valeurs"
+    },
+    {
+      "title": "Dédoublonner des enregistrements par une clé"
+    },
+    {
+      "title": "Recueillir les valeurs distinctes d'une colonne"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "intersect",
+      "note": "les valeurs communes à plusieurs tableaux, également dédoublonnées."
+    },
+    {
+      "name": "without",
+      "note": "retire les valeurs nommées."
+    }
+  ]
+}

@@ -28,6 +28,7 @@ import { isNaN } from "./isNaN";
  * @see      {@link isNaN}
  * @see      {@link nonNaN}
  * @see      {@link requireNaN}
+ * @see      [requireNonNaN on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonNaN.html)
  * @since    1.11.0
  * @version  1.0.0
  */

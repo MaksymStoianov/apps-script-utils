@@ -15,6 +15,20 @@ import { isObject } from "./isObject";
  * - Returns `false` for any other value, including numbers (even 0), booleans, functions,
  * or objects that are not empty according to the above rules.
  *
+ * @example
+ * ```javascript
+ * isEmpty(null); // => true
+ * isEmpty(""); // => true
+ * isEmpty("   "); // => true
+ * isEmpty([]); // => true
+ * isEmpty({}); // => true
+ * isEmpty(new Map()); // => true
+ * isEmpty(0); // => false
+ * isEmpty(false); // => false
+ * isEmpty("a"); // => false
+ * isEmpty([0]); // => false
+ * ```
+ *
  * @param   {unknown} value - The value to check for emptiness.
  * @param   {boolean} [strict=false] - The strictness mode for string validation.
  * - If `false` (default), strings containing only whitespace characters (spaces, tabs, newlines)
@@ -22,6 +36,7 @@ import { isObject } from "./isObject";
  * - If `true`, only a string with zero length (`""`) is considered empty.
  * @returns {boolean} `true` if the value is empty; otherwise, `false`.
  * @see     {@link nonEmpty}
+ * @see     [isEmpty on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isEmpty.html)
  * @since   1.0.0
  * @version 1.1.0
  */

@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est de type objet.",
+  "description": [
+    "Tout ce qu'accepte `isObject`, plus les fonctions : la question posée est de savoir si l'on peut lire des propriétés sur la valeur.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est de type objet ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisObjectLike({}); // => true\nisObjectLike([]); // => true\nisObjectLike(function () {}); // => true\nisObjectLike(null); // => false\nisObjectLike(\"abc\"); // => false\nisObjectLike(1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonObjectLike"
+    },
+    {
+      "name": "requireObjectLike"
+    },
+    {
+      "name": "requireNonObjectLike"
+    }
+  ]
+}

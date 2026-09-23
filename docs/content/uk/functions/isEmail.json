@@ -1,0 +1,26 @@
+{
+  "summary": "Перевіряє, чи є значення адресою електронної пошти.",
+  "description": [
+    "Адреса розбивається за єдиним `@`: домен перевіряється так само, як у `isValidDomain`, а локальна частина має бути непорожньою і без пробілів. Це перевірка формату, а не доказ того, що скринька існує.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є адресою електронної пошти; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisEmail(\"user@example.com\"); // => true\nisEmail(\"first.last@sub.example.co.uk\"); // => true\nisEmail(\"user@@example.com\"); // => false\nisEmail(\"user@\"); // => false\nisEmail(\"example.com\"); // => false\nisEmail(\"\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonValidEmail"
+    },
+    {
+      "name": "requireValidEmail"
+    }
+  ]
+}

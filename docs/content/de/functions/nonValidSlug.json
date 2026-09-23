@@ -1,0 +1,27 @@
+{
+  "summary": "Prüft, ob ein Wert **nicht** ein Slug ist.",
+  "description": [
+    "`nonValidSlug(value)` ist dieselbe Prüfung wie `!isValidSlug(value)`, so geschrieben, dass eine Wächterklausel sich wie ein Satz liest und nicht wie eine Verneinung.",
+    "Beginnt mit einem Buchstaben, danach Buchstaben, Ziffern, Bindestriche und Unterstriche — die Form, die ein URL-Segment oder ein Schlüssel annehmen kann. Leerzeichen, führende Ziffern und die leere Zeichenkette werden abgelehnt.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert nicht ein Slug ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nnonValidSlug(\"1-page\"); // => true\nnonValidSlug(\"my page\"); // => true\nnonValidSlug(\"\"); // => true\nnonValidSlug(\"my-page\"); // => false\nnonValidSlug(\"a_1\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSlug"
+    },
+    {
+      "name": "requireValidSlug"
+    }
+  ]
+}

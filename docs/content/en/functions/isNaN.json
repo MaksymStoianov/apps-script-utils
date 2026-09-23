@@ -1,0 +1,29 @@
+{
+  "summary": "Checks whether a value is the `NaN` number.",
+  "description": [
+    "Nothing is coerced first, which is where this differs from the global `isNaN`: that one converts its argument, so `isNaN(\"abc\")` and `isNaN(undefined)` both report `true`.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is the `NaN` number; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nisNaN(NaN); // => true\nisNaN(0 / 0); // => true\nisNaN(0); // => false\nisNaN(\"abc\"); // => false\nisNaN(undefined); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonNaN"
+    },
+    {
+      "name": "requireNaN"
+    },
+    {
+      "name": "requireNonNaN"
+    }
+  ]
+}

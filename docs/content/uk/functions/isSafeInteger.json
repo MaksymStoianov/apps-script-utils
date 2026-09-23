@@ -1,0 +1,29 @@
+{
+  "summary": "Перевіряє, чи є значення безпечним цілим числом.",
+  "description": [
+    "Ціле число, яке точно представне в IEEE-754. За межами цього діапазону різні математичні цілі схлопуються в одне значення, і арифметика непомітно перестає бути точною.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, що перевіряється."
+  },
+  "returns": "`true`, якщо значення є безпечним цілим числом; інакше `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nisSafeInteger(42); // => true\nisSafeInteger(Number.MAX_SAFE_INTEGER); // => true\nisSafeInteger(Number.MAX_SAFE_INTEGER + 2); // => false\nisSafeInteger(1.5); // => false\nisSafeInteger(\"42\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonSafeInteger"
+    },
+    {
+      "name": "requireSafeInteger"
+    },
+    {
+      "name": "requireNonSafeInteger"
+    }
+  ]
+}

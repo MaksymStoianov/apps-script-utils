@@ -1,0 +1,30 @@
+{
+  "summary": "Повертає значення як доменне ім'я або викидає виняток.",
+  "description": [
+    "Мітки, розділені одиночними крапками, без крапки чи дефіса на початку й у кінці та без порожніх міток. Це перевірка синтаксису: чи резолвиться домен — окреме питання.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як доменне ім'я.",
+  "throws": {
+    "IllegalArgumentException": "значення не є доменним іменем."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireValidDomain(\"example.com\"); // => \"example.com\"\nrequireValidDomain(\"sub.example.co.uk\"); // => \"sub.example.co.uk\"\nrequireValidDomain(\"-example.com\"); // throws IllegalArgumentException\nrequireValidDomain(\"example..com\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidDomain"
+    },
+    {
+      "name": "nonValidDomain"
+    }
+  ]
+}

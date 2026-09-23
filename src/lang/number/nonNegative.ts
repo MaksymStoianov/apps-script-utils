@@ -8,12 +8,19 @@ import { isNonNegative } from "./isNonNegative";
  * non-negative number", and there is no `isNegative` being negated — so a
  * reader who knows `nonString` or `nonArray` will read this one backwards.
  *
+ * @example
+ * ```javascript
+ * nonNegative(0); // => true
+ * nonNegative(-1); // => false
+ * ```
+ *
  * @deprecated Use {@link isNonNegative} instead, which says the same thing
  * under the naming convention used across the library. This alias is kept for
  * backwards compatibility and will be removed in a future major release.
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a number and is not negative; otherwise, `false`.
  * @see     {@link isNonNegative}
+ * @see     [nonNegative on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonNegative.html)
  * @since   1.0.0
  * @version 1.1.0
  */

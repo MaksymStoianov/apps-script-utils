@@ -3,8 +3,14 @@ import { requireString } from "../../lang";
 /**
  * Returns the length of a string in `UTF-8` encoding, measured in bytes.
  *
+ * @example
+ * ```javascript
+ * getByteSize("abc"); // => 3
+ * ```
+ *
  * @param       {string} value - The string whose length will be calculated in bytes.
  * @returns     {number} The length of the input string in bytes.
+ * @see [getByteSize on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getByteSize.html)
  * @since       1.0.0
  * @version     1.0.0
  * @environment `Google Apps Script`

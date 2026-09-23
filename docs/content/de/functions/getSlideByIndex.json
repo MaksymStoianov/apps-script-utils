@@ -1,0 +1,30 @@
+{
+  "summary": "Findet die Folie an einer Position, in einer Präsentation oder in der aktiven.",
+  "description": [
+    "Der Index zählt ab null. Eine Position hinter dem Ende ergibt `null` statt einer Ausnahme — genau das braucht eine Schleife über ein Deck, an dem jemand gerade arbeitet.",
+    "Der Index steht zuerst und die Präsentation ist optional, wie bei [`getSheetByIndex`](getSheetByIndex.md): ohne sie wird die aktive Präsentation verwendet, die ein an ein Dokument gebundenes Skript ohnehin hat. Ein eigenständiges Skript hat keine, dann lautet die Antwort `null` statt eines Fehlers."
+  ],
+  "params": {
+    "presentation": "Die Präsentation, in der gesucht wird. Ohne sie wird die aktive verwendet.",
+    "index": "Die nullbasierte Position der Folie."
+  },
+  "returns": "die Folie oder `null`, wenn der Index hinter dem Ende liegt.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "In der aktiven Präsentation",
+      "body": "```javascript\n// A script bound to a deck needs no presentation.\nconst first = getSlideByIndex(0);\n\n// Elsewhere, name one.\nconst third = getSlideByIndex(2, SlidesApp.openById(id));\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideIndex"
+    },
+    {
+      "name": "requireSlide"
+    },
+    {
+      "name": "isValidSlideId"
+    }
+  ]
+}

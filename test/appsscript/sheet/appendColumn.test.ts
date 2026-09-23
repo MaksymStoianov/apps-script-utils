@@ -50,6 +50,26 @@ function sheetMock(lastRow = 0, lastColumn = 0, frozenRows = 0, frozenColumns = 
 }
 
 /**
+ * A stand-in range: knows where it sits and what it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  values: unknown[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => values.length,
+    getNumColumns: () => values[0].length,
+    getValues: () => values
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
+}
+
+/**
  * LockService is used for the document lock; a no-op stand-in suffices.
  */
 function installLockService(): void {
@@ -79,13 +99,26 @@ describe("appendColumn", () => {
       expect(written).toHaveLength(1);
     });
 
-    // Inherited from appendColumns — see #450.
-    it("should currently write onto the last populated column", () => {
+    it("should write the values down one column, not across a row", () => {
+      const { sheet, written } = sheetMock(0, 2);
+
+      appendColumn(sheet, ["a", "b"]);
+
+      expect(written[0]).toEqual({
+        row: 1,
+        column: 3,
+        numRows: 2,
+        numColumns: 1,
+        values: [["a"], ["b"]]
+      });
+    });
+
+    it("should write after the last populated column", () => {
       const { sheet, written } = sheetMock(0, 2);
 
       appendColumn(sheet, ["a"]);
 
-      expect(written[0].column).toBe(2);
+      expect(written[0].column).toBe(3);
     });
 
     it("should return the sheet", () => {
@@ -95,10 +128,34 @@ describe("appendColumn", () => {
     });
   });
 
+  describe("Appending within a range", () => {
+    it("should write after the last populated column of the range", () => {
+      const { sheet, written } = sheetMock(0, 20);
+
+      appendColumn(
+        rangeMock(sheet, 1, 1, [
+          ["x", "", ""],
+          ["y", "", ""]
+        ]),
+        ["a", "b"]
+      );
+
+      expect(written[0]).toEqual({
+        row: 1,
+        column: 2,
+        numRows: 2,
+        numColumns: 1,
+        values: [["a"], ["b"]]
+      });
+    });
+  });
+
   describe("Incorrect input data", () => {
-    it("should throw for anything that is not a Sheet", () => {
+    it("should throw for anything that is neither a Sheet nor a Range", () => {
       // @ts-expect-error - testing invalid types
       expect(() => appendColumn({}, ["a"])).toThrow(InvalidSheetException);
+      // @ts-expect-error - testing invalid types
+      expect(() => appendColumn("A1:B2", ["a"])).toThrow(InvalidSheetException);
     });
 
     it("should throw when the column is not an array", () => {

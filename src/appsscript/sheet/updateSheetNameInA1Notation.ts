@@ -6,6 +6,11 @@ import { parseA1Notation } from "./parseA1Notation";
 /**
  * Updates or sets the sheet name within an A1 notation string, while preserving the range information (e.g., `A1:B2`).
  *
+ * @example
+ * ```javascript
+ * updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
+ * ```
+ *
  * @param       {string} a1Notation - The source A1 notation, which may or may not include a sheet name (e.g., `'Sheet Name'!A1:B2` or `A1:B2`).
  * @param       {string|null} [sheetName] - The new sheet name to set.
  * Pass `null` or `undefined` to remove any existing sheet name and return only the range.
@@ -16,6 +21,7 @@ import { parseA1Notation } from "./parseA1Notation";
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
+ * @see         [updateSheetNameInA1Notation on the documentation site](https://maksymstoianov.github.io/apps-script-utils/updateSheetNameInA1Notation.html)
  * @since       1.6.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

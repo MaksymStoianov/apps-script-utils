@@ -20,6 +20,7 @@ import { isNonNegative } from "./isNonNegative";
  * @returns {boolean} `true` if the value is a non-negative safe integer; otherwise, `false`.
  * @see     {@link isNonNegative}
  * @see     {@link isSafeInteger}
+ * @see     [isCountable on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isCountable.html)
  * @since   1.5.0
  * @version 1.1.0
  */

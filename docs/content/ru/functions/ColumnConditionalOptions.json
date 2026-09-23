@@ -1,0 +1,25 @@
+{
+  "summary": "Как читаются столбцы и какие из них попадают в кандидаты.",
+  "description": [
+    "`headerColumn` — столбец с именами строк, считая от единицы. Как и `headerRow`, он снабжает каждый столбец этими ключами и выводит сам столбец заголовков из числа кандидатов."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Форма"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "clearColumnsByConditional"
+    },
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "ColumnPredicate"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Повертає значення як припустиму довжину масиву або викидає виняток.",
+  "description": [
+    "Ціле число від `0` до `Number.MAX_SAFE_INTEGER` — діапазон, який може містити властивість `length`.",
+    "`isX` та `nonX` відповідають на питання й ніколи не переривають виконання; `requireX` і `requireNonX` повертають значення або викидають виняток. Схему розібрано в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значення, яке потрібно перевірити.",
+    "message": "Повідомлення винятку. Якщо не задано, використовується типове повідомлення.",
+    "strict": "За `true` рядок вважається порожнім, лише якщо в ньому зовсім немає символів; типово пробіли спершу відкидаються."
+  },
+  "returns": "те саме значення, вже перевірене як припустиму довжину масиву.",
+  "throws": {
+    "IllegalArgumentException": "значення не є припустимою довжиною масиву."
+  },
+  "examples": [
+    {
+      "title": "Що проходить, а що ні",
+      "body": "```javascript\nrequireLength(0); // => 0\nrequireLength(42); // => 42\nrequireLength(-1); // throws IllegalArgumentException\nrequireLength(1.5); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isLength"
+    },
+    {
+      "name": "nonLength"
+    },
+    {
+      "name": "requireNonLength"
+    }
+  ]
+}

@@ -4,6 +4,15 @@ import { isCountable, isEmpty } from "../../lang";
 /**
  * Retrieves a Google Sheet by its unique ID.
  *
+ * @example
+ * ```javascript
+ * const sheet = getSheetById(0);
+ *
+ * if (sheet === null) {
+ *   throw new Error("That sheet is gone.");
+ * }
+ * ```
+ *
  * @param       {number} sheetId - The unique ID of the sheet to retrieve.
  * @param       {GoogleAppsScript.Spreadsheet.Spreadsheet | null} [ss] - The Spreadsheet object to search within. Defaults to the active Spreadsheet if not provided.
  * @returns     {GoogleAppsScript.Spreadsheet.Sheet | null} The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object if found, otherwise `null`.
@@ -11,6 +20,8 @@ import { isCountable, isEmpty } from "../../lang";
  * @see         {@link getSheetByIndex}
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [getSheetById on the documentation site](https://maksymstoianov.github.io/apps-script-utils/getSheetById.html)
+ * @see         [Class Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet)
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`

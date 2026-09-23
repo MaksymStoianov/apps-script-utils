@@ -1,0 +1,29 @@
+{
+  "summary": "Проверяет, является ли значение функцией.",
+  "description": [
+    "Определяется по внутреннему тегу, поэтому подходят обычные, `async`, генераторы и асинхронные генераторы. Класс — тоже функция.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Проверяемое значение."
+  },
+  "returns": "`true`, если значение является функцией; иначе `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nisFunction(function () {}); // => true\nisFunction(async function () {}); // => true\nisFunction(Math.max); // => true\nisFunction(null); // => false\nisFunction(\"fn\"); // => false\nisFunction({}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonFunction"
+    },
+    {
+      "name": "requireFunction"
+    },
+    {
+      "name": "requireNonFunction"
+    }
+  ]
+}

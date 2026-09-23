@@ -1,0 +1,26 @@
+{
+  "summary": "Misst die Zeit einer Folge benannter Aufgaben.",
+  "description": [
+    "`start` beginnt eine Aufgabe, `stop` beendet sie; es läuft immer nur eine. Danach meldet die Uhr die letzte Aufgabe, die ganze Liste und die Summe, in Millisekunden oder Sekunden.",
+    "Sie dient dazu, herauszufinden, wohin die sechs Minuten einer Ausführung gehen: die Schritte benennen, einmal laufen lassen, die Summen lesen. `setKeepTaskList(false)` hält die Liste klein, wenn eine Schleife tausende Schritte misst."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Einen Lauf messen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "TaskInfo"
+    },
+    {
+      "name": "now"
+    },
+    {
+      "name": "diff"
+    }
+  ]
+}

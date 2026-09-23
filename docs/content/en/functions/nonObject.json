@@ -1,0 +1,30 @@
+{
+  "summary": "Checks whether a value is **not** an object.",
+  "description": [
+    "`nonObject(value)` is the same test as `!isObject(value)`, written so that a guard clause reads as a sentence rather than as a negation.",
+    "The test is `typeof value === \"object\"` with `null` excluded, so arrays, dates and class instances all count, while a function does not. `isObjectLike` is the one that also accepts functions.",
+    "`isX` and `nonX` answer a question and never interrupt control flow; `requireX` and `requireNonX` hand the value back or throw. The scheme is explained in [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "The value to check."
+  },
+  "returns": "`true` when the value is not an object; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What passes and what does not",
+      "body": "```javascript\nnonObject(null); // => true\nnonObject(\"abc\"); // => true\nnonObject(function () {}); // => true\nnonObject({}); // => false\nnonObject([]); // => false\nnonObject(new Date()); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isObject"
+    },
+    {
+      "name": "requireObject"
+    },
+    {
+      "name": "requireNonObject"
+    }
+  ]
+}

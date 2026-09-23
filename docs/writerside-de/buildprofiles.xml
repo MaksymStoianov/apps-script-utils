@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE buildprofiles SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-profiles.dtd">
+
+<buildprofiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
+
+    <variables>
+        <web-root>https://maksymstoianov.github.io/apps-script-utils/de</web-root>
+        <noindex-content>false</noindex-content>
+        <generate-canonicals>true</generate-canonicals>
+        <locale-code>de-DE</locale-code>
+        <product-web-url>https://github.com/MaksymStoianov/apps-script-utils</product-web-url>
+        <og-image>https://maksymstoianov.github.io/apps-script-utils/images/banner-1280x640.jpg</og-image>
+        <include-in-head>head.html</include-in-head>
+        <include-after-body>search.html</include-after-body>
+    </variables>
+
+    <footer>
+        <notice>Diese Dokumentation wurde mit KI (Claude) aus dem Quellcode der Bibliothek erzeugt.</notice>
+        <copyright>2025–2026 Maksym Stoianov. Licensed under Apache-2.0.</copyright>
+        <link href="https://github.com/MaksymStoianov/apps-script-utils">GitHub</link>
+        <link href="https://www.npmjs.com/package/apps-script-utils">npm</link>
+        <link href="https://maksymstoianov.github.io/apps-script-utils/">English</link>
+        <link href="https://maksymstoianov.github.io/apps-script-utils/ru/">Русский</link>
+        <link href="https://maksymstoianov.github.io/apps-script-utils/uk/">Українська</link>
+        <link href="https://maksymstoianov.github.io/apps-script-utils/de/">Deutsch</link>
+        <link href="https://maksymstoianov.github.io/apps-script-utils/fr/">Français</link>
+        <link href="https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=footer&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit">Banner artwork: Daryna Mikhailenko</link>
+    </footer>
+
+    <sitemap priority="0.5" change-frequency="weekly"/>
+
+    <llms-txt/>
+
+</buildprofiles>

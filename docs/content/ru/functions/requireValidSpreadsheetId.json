@@ -1,0 +1,30 @@
+{
+  "summary": "Возвращает значение как идентификатор таблицы или выбрасывает исключение.",
+  "description": [
+    "Не меньше 25 символов из букв, цифр, дефисов и подчёркиваний — тот идентификатор, что стоит в URL таблицы между `/d/` и `/edit`. Никаких запросов не делается, проверяется только формат.",
+    "`isX` и `nonX` отвечают на вопрос и никогда не прерывают выполнение; `requireX` и `requireNonX` возвращают значение или выбрасывают исключение. Схема разобрана в [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Значение, которое нужно проверить.",
+    "message": "Сообщение исключения. Если не задано, используется сообщение по умолчанию.",
+    "strict": "При `true` строка считается пустой, только если в ней вовсе нет символов; по умолчанию пробелы сначала отбрасываются."
+  },
+  "returns": "то же значение, уже проверенное как идентификатор таблицы.",
+  "throws": {
+    "IllegalArgumentException": "значение не является идентификатором таблицы."
+  },
+  "examples": [
+    {
+      "title": "Что проходит, а что нет",
+      "body": "```javascript\nrequireValidSpreadsheetId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => \"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"\nrequireValidSpreadsheetId(\"short-id\"); // throws IllegalArgumentException\nrequireValidSpreadsheetId(\"has space in it and is long enough to pass\"); // throws IllegalArgumentException\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidSpreadsheetId"
+    },
+    {
+      "name": "nonValidSpreadsheetId"
+    }
+  ]
+}

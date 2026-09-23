@@ -1,0 +1,37 @@
+{
+  "summary": "Inserts columns before the data, on a sheet or at a range.",
+  "description": [
+    "Room is made first and the values are written into it, so nothing already on the sheet is overwritten. Given a sheet the columns go to its start; given a range they go before the range's first column and the values are written on its rows.",
+    "The matrix is indexed by row and then by column, and it has to be exactly `count` columns wide. Passing no values inserts empty columns.",
+    "A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows."
+  ],
+  "params": {
+    "target": "The sheet to insert into, or the range to insert at.",
+    "count": "How many columns to insert. `0` does nothing.",
+    "values": "A matrix indexed by row then column, exactly `count` columns wide. Omit it for empty columns.",
+    "options": "`afterFrozenColumns` inserts after the frozen columns instead of at the very start. A range decides the position itself, so the option does nothing there."
+  },
+  "returns": "the sheet, so calls can be chained.",
+  "throws": {
+    "IllegalArgumentException": "`count` is not a non-negative safe integer, or the values do not match it.",
+    "InvalidSheetException": "the first argument is neither a sheet nor a range."
+  },
+  "examples": [
+    {
+      "title": "Inserting at the start of a sheet",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumns(sheet, 2, [\n  [\"A1\", \"B1\"],\n  [\"A2\", \"B2\"]\n]);\n```"
+    },
+    {
+      "title": "Inserting at a range",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumns(sheet.getRange(\"C4:F13\"), 1, [[\"note\"]]);\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "prependColumn"
+    },
+    {
+      "name": "appendColumns"
+    }
+  ]
+}

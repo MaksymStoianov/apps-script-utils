@@ -1,0 +1,27 @@
+{
+  "summary": "Finds the position of a slide, in a presentation or in the active one.",
+  "description": [
+    "The slides are compared by their object id, so a slide read earlier is still recognised. A slide that belongs to another presentation, or has since been removed, gives `null`.",
+    "The slide comes first and the presentation is optional, the way [`getSlideByIndex`](getSlideByIndex.md) and [`getSheetByIndex`](getSheetByIndex.md) read: without one the active presentation is used, which is what a script bound to a deck already has. A standalone script has none, and then the answer is `null` rather than an error."
+  ],
+  "params": {
+    "slide": "The slide to look for.",
+    "presentation": "The presentation to look in. Without it the active presentation is used."
+  },
+  "returns": "the zero-based position, or `null` when the slide is not there.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "In the active presentation",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[2];\n\ngetSlideIndex(slide); // => 2\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideByIndex"
+    },
+    {
+      "name": "isSlide"
+    }
+  ]
+}

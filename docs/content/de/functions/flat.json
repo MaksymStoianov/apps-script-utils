@@ -1,0 +1,28 @@
+{
+  "summary": "Flacht ein verschachteltes Objekt auf eine Ebene mit Punktschlüsseln ab.",
+  "description": [
+    "Verschachtelte Objekte werden zu Punktpfaden; Arrays bleiben ganz, denn ihre Indizes sind Daten, keine Struktur. `depth` beendet den Abstieg — `1` flacht nur die erste Ebene ab.",
+    "Der umgekehrte Weg ist `getPath`, das einen Wert über denselben Pfadtyp wieder ausliest."
+  ],
+  "params": {
+    "source": "Das abzuflachende Objekt. Es darf kein Array sein.",
+    "depth": "Wie viele Ebenen abgestiegen wird. Eine ganze Zahl; standardmäßig unbegrenzt."
+  },
+  "returns": "ein neues flaches Objekt mit Punktpfaden als Schlüsseln.",
+  "throws": {
+    "IllegalArgumentException": "der Wert ist kein Objekt."
+  },
+  "examples": [
+    {
+      "title": "Abflachen"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getPath"
+    },
+    {
+      "name": "setPath"
+    }
+  ]
+}

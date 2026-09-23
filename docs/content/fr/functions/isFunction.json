@@ -1,0 +1,29 @@
+{
+  "summary": "Vérifie si une valeur est une fonction.",
+  "description": [
+    "Déterminé par le tag interne : fonctions ordinaires, `async`, générateurs et générateurs asynchrones passent toutes. Une classe est également une fonction.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur est une fonction ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nisFunction(function () {}); // => true\nisFunction(async function () {}); // => true\nisFunction(Math.max); // => true\nisFunction(null); // => false\nisFunction(\"fn\"); // => false\nisFunction({}); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonFunction"
+    },
+    {
+      "name": "requireFunction"
+    },
+    {
+      "name": "requireNonFunction"
+    }
+  ]
+}

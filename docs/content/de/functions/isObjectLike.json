@@ -1,0 +1,29 @@
+{
+  "summary": "Prüft, ob ein Wert objektartig ist.",
+  "description": [
+    "Alles, was `isObject` akzeptiert, und zusätzlich Funktionen: die Frage ist, ob sich am Wert überhaupt Eigenschaften lesen lassen.",
+    "`isX` und `nonX` beantworten eine Frage und unterbrechen den Ablauf nie; `requireX` und `requireNonX` geben den Wert zurück oder werfen. Das Schema erklärt [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "Der zu prüfende Wert."
+  },
+  "returns": "`true`, wenn der Wert objektartig ist; sonst `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Was besteht und was nicht",
+      "body": "```javascript\nisObjectLike({}); // => true\nisObjectLike([]); // => true\nisObjectLike(function () {}); // => true\nisObjectLike(null); // => false\nisObjectLike(\"abc\"); // => false\nisObjectLike(1); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "nonObjectLike"
+    },
+    {
+      "name": "requireObjectLike"
+    },
+    {
+      "name": "requireNonObjectLike"
+    }
+  ]
+}

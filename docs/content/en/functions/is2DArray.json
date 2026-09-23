@@ -1,0 +1,37 @@
+{
+  "summary": "Checks whether a value is a non-empty array whose every element is an array.",
+  "description": [
+    "This is the shape `Range#getValues` returns and `Range#setValues` expects: rows holding cells. `is2DArray` answers\nonly the shape question — whether the rows all have the same length is\n[`isConsistent2DArray`](isConsistent2DArray.md).",
+    "An empty array is **not** two-dimensional here: there are no rows to examine, and treating `[]` as a matrix is what\nlets an empty result slip through into a `setValues` call that then fails. Nothing else about the elements is\ninspected, so a matrix of mixed types passes.",
+    "As a TypeScript type predicate it narrows the value to `Array<Array<unknown>>` inside the branch."
+  ],
+  "params": {
+    "arr": "The value to check."
+  },
+  "returns": "`true` if the value is a non-empty array and every element of it is an array; otherwise `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "What counts as two-dimensional",
+      "body": "```javascript\nis2DArray([[1, 2], [3]]); // => true — ragged, but still 2D\nis2DArray([[1], 2]); // => false — one element is not an array\nis2DArray([]); // => false — no rows\nis2DArray(\"abc\"); // => false\n```"
+    },
+    {
+      "title": "Guarding a value that may be a matrix",
+      "body": "<tabs group=\"code\">\n<tab title=\"TypeScript\" group-key=\"ts\">\n<code-block lang=\"typescript\" src=\"is2DArray.ts\" include-symbol=\"countCells\"/>\n</tab>\n<tab title=\"JavaScript\" group-key=\"js\">\n<code-block lang=\"javascript\">\nfunction countCells(value) {\n  if (!is2DArray(value)) {\n    return 0;\n  }\n  return value.reduce((total, row) => total + row.length, 0);\n}\n</code-block>\n</tab>\n</tabs>"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isConsistent2DArray",
+      "note": "adds the uniform row length check."
+    },
+    {
+      "name": "non2DArray",
+      "note": "the same test, negated."
+    },
+    {
+      "name": "require2DArray",
+      "note": "throws instead of answering."
+    }
+  ]
+}

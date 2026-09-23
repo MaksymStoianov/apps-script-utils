@@ -1,0 +1,23 @@
+{
+  "summary": "Compare deux valeurs en profondeur et sans risque avec null.",
+  "description": [
+    "Les objets et les tableaux sont parcourus clé par clé, les dates comparées par leur instant, et les primitives par `SameValueZero` — `NaN` égale donc `NaN`, ce que `===` n'accorde jamais. Une valeur portant sa propre méthode `equals` est interrogée plutôt que démontée.",
+    "Les cycles sont tolérés : une structure qui se référence elle-même est comparée sans boucler."
+  ],
+  "params": {
+    "a": "La première valeur.",
+    "b": "La seconde valeur."
+  },
+  "returns": "`true` si les deux sont égales jusqu'au bout.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Comparaison"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "hashCode"
+    }
+  ]
+}

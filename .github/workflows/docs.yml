@@ -1,4 +1,5 @@
-# Builds the Writerside documentation in `docs/writerside/` and publishes it to GitHub Pages.
+# Builds the Writerside documentation in `docs/writerside*/` and publishes it to
+# GitHub Pages: English at the site root, the other languages under /<code>/.
 #
 # https://www.jetbrains.com/help/writerside/deploy-docs-to-github-pages.html
 # https://github.com/JetBrains/writerside-github-action
@@ -11,7 +12,8 @@ on:
       - main
   pull_request:
     paths:
-      - "docs/writerside/**"
+      - "docs/**"
+      - "scripts/docs/**"
       - ".github/workflows/docs.yml"
   workflow_dispatch:
 
@@ -23,19 +25,67 @@ concurrency:
 
 env:
   # The builder locates the module as `<module>/<instance>`, a single path
-  # segment plus the instance id from docs/writerside/asu.tree, resolved against
-  # the source directory. The rest of the path goes to the action's `location`.
+  # segment plus the instance id from the tree file, resolved against the source
+  # directory. The rest of the path goes to the action's `location`.
   LOCATION: docs
-  INSTANCE: writerside/asu
-  # The instance id in capitals, which is how the builder names its artifact.
+  # Every language project uses the instance id `asu`, so the builder names its
+  # artifact the same way in each of them.
   ARTIFACT: webHelpASU2-all.zip
-  # Writerside builder image version.
-  DOCKER_VERSION: 243.22562
+  # Writerside builder image version. It has to be recent enough to understand
+  # the llms.txt generation that the build profiles switch on; the version below
+  # is the one the Writerside documentation currently names.
+  DOCKER_VERSION: 2026.08.0328
 
 jobs:
+  # The language projects and the reference pages are generated from src/ and
+  # docs/content/. This fails the run when they have not been regenerated.
+  generated:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check that the documentation matches the sources
+        run: node scripts/docs/generate-topics.mjs --check
+
+      # Every documented result of the form `expr; // => value` is executed
+      # against the real implementation.
+      - name: Check the documented examples
+        run: node scripts/docs/verify-examples.mjs
+
+      # The JSDoc an IDE shows has to carry the same example as the page.
+      - name: Check the examples in the sources
+        run: node scripts/docs/sync-jsdoc-examples.mjs --check
+
+      # And the same links: to the page itself, and to the Apps Script reference.
+      - name: Check the links in the sources
+        run: node scripts/docs/sync-jsdoc-links.mjs --check
+
   build:
+    needs: generated
     runs-on: ubuntu-latest
     timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language:
+          - { code: en, module: writerside }
+          - { code: ru, module: writerside-ru }
+          - { code: uk, module: writerside-uk }
+          - { code: de, module: writerside-de }
+          - { code: fr, module: writerside-fr }
 
     steps:
       - name: Checkout repository
@@ -45,13 +95,13 @@ jobs:
         uses: JetBrains/writerside-github-action@v4
         with:
           location: ${{ env.LOCATION }}
-          instance: ${{ env.INSTANCE }}
+          instance: ${{ matrix.language.module }}/asu
           docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Upload build results
         uses: actions/upload-artifact@v4
         with:
-          name: docs
+          name: docs-${{ matrix.language.code }}
           path: |
             artifacts/${{ env.ARTIFACT }}
             artifacts/report.json
@@ -62,17 +112,27 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    strategy:
+      fail-fast: false
+      matrix:
+        language:
+          - { code: en, module: writerside }
+          - { code: ru, module: writerside-ru }
+          - { code: uk, module: writerside-uk }
+          - { code: de, module: writerside-de }
+          - { code: fr, module: writerside-fr }
+
     steps:
       - name: Download build results
         uses: actions/download-artifact@v4
         with:
-          name: docs
+          name: docs-${{ matrix.language.code }}
           path: artifacts
 
       - name: Check for broken links and other problems
         uses: JetBrains/writerside-checker-action@v1
         with:
-          instance: ${{ env.INSTANCE }}
+          instance: ${{ matrix.language.module }}/asu
 
   deploy:
     # Only the default branch publishes; pull requests stop after build and test.
@@ -90,13 +150,42 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Download build results
         uses: actions/download-artifact@v4
         with:
-          name: docs
+          pattern: docs-*
+          path: artifacts
 
-      - name: Unzip the web help artifact
-        run: unzip -qq "${ARTIFACT}" -d dir
+      - name: Assemble the site
+        run: |
+          set -euo pipefail
+
+          unzip -qq "artifacts/docs-en/${ARTIFACT}" -d dir
+
+          for code in ru uk de fr; do
+            unzip -qq "artifacts/docs-${code}/${ARTIFACT}" -d "dir/${code}"
+          done
+
+      # Feeds the search widget injected by each project's search.html. Every
+      # language gets its own index, next to its own pages.
+      - name: Build the search indexes
+        run: |
+          set -euo pipefail
+
+          node scripts/docs/build-search-index.mjs dir
+
+          for code in ru uk de fr; do
+            node scripts/docs/build-search-index.mjs "dir/${code}"
+          done
+
+      # Writes the hreflang links into the served HTML, one sitemap covering
+      # every language, and robots.txt. It has to run after all five builds are
+      # in place, because that is when the alternates are known.
+      - name: Finalize the site for crawlers
+        run: node scripts/docs/finalize-site.mjs dir
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

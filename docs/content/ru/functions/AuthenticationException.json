@@ -1,0 +1,24 @@
+{
+  "summary": "Аутентификация не удалась: установить, кто вызывает, не получилось.",
+  "description": [
+    "Аутентификация не удалась: установить, кто вызывает, не получилось.",
+    "Любой класс этой иерархии принимает необязательное сообщение, другое исключение, чьё сообщение будет переиспользовано, или вообще ничего. `isException` распознаёт их все; обычный `Error` к ним не относится."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Бросить и поймать",
+      "body": "```javascript\nthrow new AuthenticationException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof AuthenticationException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

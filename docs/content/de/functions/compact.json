@@ -1,0 +1,32 @@
+{
+  "summary": "Entfernt jeden falsy-Wert aus einem Array und verengt dabei den Elementtyp ohne Cast.",
+  "description": [
+    "`compact` verwirft `false`, `null`, `undefined`, `0`, `-0`, `0n`, `\"\"` und `NaN` und gibt den Rest als neues Array zurück. Die Eingabe bleibt unverändert.",
+    "Der Gewinn gegenüber `array.filter(Boolean)` liegt im Typ: TypeScript behält dort den ursprünglichen Elementtyp, sodass der Aufrufer die `null` anschließend selbst wegcasten muss. `compact` liefert `T[]` ohne Cast.",
+    "Beachten Sie, dass auch `0` und `\"\"` als falsy gelten. Für Tabellendaten ist das meist das falsche Werkzeug — `0` ist eine gültige Zahl und eine leere Zelle kommt als `\"\"` an — dort entfernt `array.filter(nonNil)` nur die fehlenden Werte."
+  ],
+  "params": {
+    "array": "Das zu bereinigende Array. Bleibt unverändert."
+  },
+  "returns": "ein neues Array nur mit den truthy-Werten, in ursprünglicher Reihenfolge.",
+  "throws": {
+    "TypeError": "`array` ist kein Array."
+  },
+  "examples": [
+    {
+      "title": "Die falsy-Werte verwerfen"
+    },
+    {
+      "title": "Eine Spalte ohne leere Zellen lesen"
+    },
+    {
+      "title": "Wann `nonNil` der bessere Filter ist"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "without",
+      "note": "entfernt die genannten Werte statt der falsy-Werte."
+    }
+  ]
+}

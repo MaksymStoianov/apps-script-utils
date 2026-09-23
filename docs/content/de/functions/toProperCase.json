@@ -1,0 +1,30 @@
+{
+  "summary": "Schreibt den ersten Buchstaben jedes Wortes groß und den Rest klein.",
+  "description": [
+    "Wortgrenzen sind die eines regulären Ausdrucks, aus `\"hello WORLD\"` wird also `\"Hello World\"`. Zeichensetzung und Trenner bleiben unangetastet."
+  ],
+  "params": {
+    "value": "Die umzuwandelnde Zeichenkette. Sie darf nicht leer sein.",
+    "options": "`trim` schneidet die Zeichenkette und fasst Folgen von Leerraum zu einem Leerzeichen zusammen."
+  },
+  "returns": "die umgewandelte Zeichenkette.",
+  "throws": {
+    "EmptyStringException": "der Wert ist keine Zeichenkette oder ist leer."
+  },
+  "examples": [
+    {
+      "title": "Umwandeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "toLowerCase"
+    },
+    {
+      "name": "toUpperCase"
+    },
+    {
+      "name": "toCamelCase"
+    }
+  ]
+}

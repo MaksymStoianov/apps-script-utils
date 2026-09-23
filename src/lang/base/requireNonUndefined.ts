@@ -22,6 +22,7 @@ import { isUndefined } from "./isUndefined";
  * @see      {@link isUndefined}
  * @see      {@link nonUndefined}
  * @see      {@link requireNonNull}
+ * @see      [requireNonUndefined on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requireNonUndefined.html)
  * @since    1.11.0
  * @version  1.0.0
  */

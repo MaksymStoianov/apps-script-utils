@@ -1,0 +1,36 @@
+{
+  "summary": "Entfernt Dubletten aus einem Array und behält das erste Vorkommen jedes Werts.",
+  "description": [
+    "Verglichen wird mit `SameValueZero`, der Regel eines `Set`: `NaN` dedupliziert gegen `NaN`, was `===` nie tut, und `-0` fällt mit `0` zusammen. Die Reihenfolge ist die des ersten Auftretens, die Eingabe bleibt unverändert.",
+    "Objekte werden über ihre Identität verglichen, zwei inhaltsgleiche Objekte sind also zwei Werte. Die optionale `iteratee` liefert den Schlüssel, über den verglichen wird — so werden Datensätze über eine Id statt über ihre Identität dedupliziert. Bei gleichem Schlüssel gewinnt der frühere Wert."
+  ],
+  "params": {
+    "array": "Das zu deduplizierende Array. Bleibt unverändert.",
+    "iteratee": "Liefert den Schlüssel, über den ein Wert verglichen wird. Ohne sie vergleichen sich die Werte selbst."
+  },
+  "returns": "ein neues Array ohne Dubletten, in der Reihenfolge des ersten Auftretens.",
+  "throws": {
+    "TypeError": "`array` ist kein Array."
+  },
+  "examples": [
+    {
+      "title": "Werte deduplizieren"
+    },
+    {
+      "title": "Datensätze über einen Schlüssel deduplizieren"
+    },
+    {
+      "title": "Die verschiedenen Werte einer Spalte sammeln"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "intersect",
+      "note": "die gemeinsamen Werte mehrerer Arrays, ebenfalls dedupliziert."
+    },
+    {
+      "name": "without",
+      "note": "entfernt die genannten Werte."
+    }
+  ]
+}

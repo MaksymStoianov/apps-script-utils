@@ -1,0 +1,28 @@
+{
+  "summary": "Affirme qu'une condition tient, et lève dans le cas contraire.",
+  "description": [
+    "Pour les vérifications qui portent sur le moment plutôt que sur les arguments : une connexion déjà fermée, une feuille pas encore préparée, une valeur censée être en cache à cet instant.",
+    "Elle est déclarée comme assertion TypeScript : après l'appel, le compilateur tient la condition pour vraie jusqu'à la fin de la fonction."
+  ],
+  "params": {
+    "condition": "La condition qui doit tenir.",
+    "message": "Le message de l'exception. À défaut, un message par défaut est utilisé."
+  },
+  "returns": "rien ; l'appel passe ou lève.",
+  "throws": {
+    "IllegalStateException": "la condition est fausse."
+  },
+  "examples": [
+    {
+      "title": "Garder un état"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonNull"
+    },
+    {
+      "name": "IllegalStateException"
+    }
+  ]
+}

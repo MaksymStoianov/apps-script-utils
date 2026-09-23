@@ -5,6 +5,14 @@ import type { GridRange } from "./types";
  * Checks if a <a href="./types/GridRange.ts"><code>GridRange</code></a> is entirely contained within another <a href="./types/GridRange.ts"><code>GridRange</code></a>.
  * Both ranges must be located on the same sheet (either by `sheetId` or by `sheetName`).
  *
+ * @example
+ * ```javascript
+ * const inner = { startRowIndex: 1, endRowIndex: 2, startColumnIndex: 1, endColumnIndex: 2 };
+ * const outer = { startRowIndex: 0, endRowIndex: 5, startColumnIndex: 0, endColumnIndex: 5 };
+ *
+ * isGridRangeContainedIn(inner, outer); // => true
+ * ```
+ *
  * @param       {GridRange} gridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a subset (child range).
  * @param       {GridRange} containerGridRange - The <a href="./types/GridRange.ts"><code>GridRange</code></a> object that is potentially a superset (parent range).
  * @returns     {boolean} `true` if `gridRange` is fully contained within `containerGridRange` and they are on the same sheet;
@@ -12,6 +20,7 @@ import type { GridRange } from "./types";
  * @see         <a href="./types/GridRange.ts"><code>GridRange</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/range"><code>Range</code></a>
  * @see         <a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet"><code>Sheet</code></a>
+ * @see         [isGridRangeContainedIn on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isGridRangeContainedIn.html)
  * @since       1.0.0
  * @version     1.1.0
  * @environment `Google Apps Script`, `Browser`

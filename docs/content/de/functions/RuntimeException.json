@@ -1,0 +1,24 @@
+{
+  "summary": "Die Oberklasse jeder Ausnahme, die ein laufendes Skript auslösen kann.",
+  "description": [
+    "Die Oberklasse jeder Ausnahme, die ein laufendes Skript auslösen kann. Fast alle Klassen darunter erweitern sie statt `Exception` direkt.",
+    "Jede Klasse dieser Hierarchie nimmt eine optionale Meldung, eine andere Ausnahme, deren Meldung übernommen wird, oder gar nichts. `isException` erkennt sie alle; ein einfacher `Error` gehört nicht dazu."
+  ],
+  "params": {},
+  "returns": "",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Werfen und fangen",
+      "body": "```javascript\nthrow new RuntimeException(\"something specific about this call\");\n\ntry {\n  doWork();\n} catch (error) {\n  if (error instanceof RuntimeException) {\n    // handled\n  }\n}\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isException"
+    },
+    {
+      "name": "requireException"
+    }
+  ]
+}

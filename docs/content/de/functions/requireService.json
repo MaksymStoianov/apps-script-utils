@@ -1,0 +1,27 @@
+{
+  "summary": "Gibt einen Dienst zurück, sobald er nachweislich existiert, sonst wirft er.",
+  "description": [
+    "Ein nie aktivierter erweiterter Dienst ist schlicht eine undefinierte globale Variable, und der Fehler fällt weit entfernt von seiner Ursache als `ReferenceError` an. Hier wird daraus eine benannte Ausnahme mit einer Meldung, die sagt, was einzuschalten ist."
+  ],
+  "params": {
+    "service": "Der zu prüfende Dienst.",
+    "message": "Die Meldung der Ausnahme. Ohne Angabe wird eine Standardmeldung verwendet."
+  },
+  "returns": "denselben Dienst.",
+  "throws": {
+    "ServiceIsNotDefinedException": "der Dienst ist `null` oder `undefined`."
+  },
+  "examples": [
+    {
+      "title": "Im Einsatz"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireRepository"
+    },
+    {
+      "name": "ServiceIsNotDefinedException"
+    }
+  ]
+}

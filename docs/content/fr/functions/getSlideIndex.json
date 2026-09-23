@@ -1,0 +1,27 @@
+{
+  "summary": "Trouve la position d'une diapositive, dans une présentation ou dans celle active.",
+  "description": [
+    "Les diapositives sont comparées par leur identifiant d'objet : une diapositive lue plus tôt reste reconnue. Une diapositive appartenant à une autre présentation, ou supprimée depuis, donne `null`.",
+    "La diapositive vient en premier et la présentation est facultative, comme pour [`getSlideByIndex`](getSlideByIndex.md) et [`getSheetByIndex`](getSheetByIndex.md) : sans elle, la présentation active est utilisée — celle qu'un script lié à un document possède déjà. Un script autonome n'en a pas, et la réponse est alors `null` plutôt qu'une erreur."
+  ],
+  "params": {
+    "slide": "La diapositive recherchée.",
+    "presentation": "La présentation dans laquelle chercher. À défaut, la présentation active est utilisée."
+  },
+  "returns": "la position à base zéro, ou `null` si la diapositive n'y est pas.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Dans la présentation active",
+      "body": "```javascript\nconst slide = SlidesApp.getActivePresentation().getSlides()[2];\n\ngetSlideIndex(slide); // => 2\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "getSlideByIndex"
+    },
+    {
+      "name": "isSlide"
+    }
+  ]
+}

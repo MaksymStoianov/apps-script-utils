@@ -1,0 +1,35 @@
+{
+  "summary": "Vide les colonnes que le prédicat sélectionne, sans supprimer les colonnes.",
+  "description": [
+    "`clearRowsByConditional` pivoté d'un quart de tour : le contenu part, les colonnes restent, et les lettres des colonnes suivantes ne changent pas.",
+    "La feuille est lue une fois et l'effacement regroupé en blocs consécutifs.",
+    "Une feuille désigne toute sa plage de données ; une plage ne désigne que les cellules qu'elle contient, le reste de la feuille n'étant ni lu ni touché. Dans les deux cas, le prédicat reçoit la position dans la feuille : une colonne garde son vrai numéro."
+  ],
+  "params": {
+    "target": "La feuille sur laquelle travailler, ou la plage dans laquelle travailler : seules ses cellules sont lues, et seules elles sont vidées.",
+    "predicate": "Reçoit les cellules de la colonne, sa position à base un et — si `headerColumn` est défini — la colonne indexée par les noms de lignes. Renvoyez `true` pour les colonnes à traiter.",
+    "options": "`headerColumn` désigne la colonne portant les noms de lignes et l'exclut des candidates."
+  },
+  "returns": "combien ont été traitées.",
+  "throws": {
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage.",
+    "IllegalArgumentException": "le prédicat n'est pas une fonction, ou la position d'en-tête n'est pas un entier positif."
+  },
+  "examples": [
+    {
+      "title": "Utilisation"
+    },
+    {
+      "title": "Dans un seul bloc",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\n// Only B2:Z100 is read, and only those cells are cleared.\nclearColumnsByConditional(sheet.getRange(\"B2:Z100\"), (values) => values.every((cell) => cell === \"\"));\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "deleteColumnsByConditional"
+    },
+    {
+      "name": "clearRowsByConditional"
+    }
+  ]
+}

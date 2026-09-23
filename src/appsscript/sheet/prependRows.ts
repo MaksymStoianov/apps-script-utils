@@ -1,6 +1,7 @@
-import { IllegalArgumentException } from "../../exception";
+import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isConsistent2DArray } from "../../lang";
-import { requireSheet } from "./requireSheet";
+import { isRange } from "./isRange";
+import { isSheet } from "./isSheet";
 
 export interface PrependRowsOptions {
   /**
@@ -26,7 +27,7 @@ export interface PrependRowsOptions {
  * ]);
  * ```
  *
- * @param       {GoogleAppsScript.Spreadsheet.Sheet} sheet - The Google Apps Script {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object to which columns will be prepended.
+ * @param       {GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range} target - The sheet to insert into, or the range to insert at: the rows appear above the range's first row and the values are written on its columns.
  * @param       {any[][]} values - A 2D array containing the data to prepend.
  * @param       {PrependRowsOptions | null} [options] - Additional parameters to customize the method's behavior.
  * @returns     {GoogleAppsScript.Spreadsheet.Sheet} The {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet} object.
@@ -38,14 +39,15 @@ export interface PrependRowsOptions {
  * @see         {@link GoogleAppsScript.Spreadsheet.Sheet|Sheet}
  * @see         [Class Range](https://developers.google.com/apps-script/reference/spreadsheet/range)
  * @see         [Class Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet)
+ * @see         [prependRows on the documentation site](https://maksymstoianov.github.io/apps-script-utils/prependRows.html)
  * @since       1.0.0
- * @version     1.4.0
+ * @version     2.0.0
  * @environment `Google Apps Script`
  * @author      Maksym Stoianov <stoianov.maksym@gmail.com>
  * @license     Apache-2.0
  */
 export function prependRows(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: PrependRowsOptions | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet {
@@ -53,7 +55,13 @@ export function prependRows(
     throw new IllegalArgumentException();
   }
 
-  requireSheet(sheet);
+  const within = isRange(target) ? target : null;
+
+  const sheet = within ? within.getSheet() : target;
+
+  if (!isSheet(sheet)) {
+    throw new InvalidSheetException();
+  }
 
   if (!isConsistent2DArray(values)) {
     throw new TypeError(
@@ -77,11 +85,13 @@ export function prependRows(
 
     const lastRow = sheet.getLastRow();
 
-    let rowPosition = 1;
-
     const frozenRows = sheet.getFrozenRows();
 
-    if (effectiveOptions.afterFrozenRows !== false) {
+    // A range says where to insert, so the frozen-row option has nothing to
+    // decide; without one the rows go to the top of the sheet.
+    let rowPosition = within ? within.getRow() : 1;
+
+    if (!within && effectiveOptions.afterFrozenRows !== false) {
       rowPosition = frozenRows + 1;
 
       if (rowPosition < frozenRows) {
@@ -89,19 +99,23 @@ export function prependRows(
       }
     }
 
+    const columnPosition = within ? within.getColumn() : 1;
+
     if (rowPosition <= lastRow) {
       sheet.insertRowsBefore(rowPosition, numRows);
 
-      if (effectiveOptions.afterFrozenRows === false && frozenRows > 0) {
+      // Inserting at or above the boundary pushes it along with the data;
+      // put it back when the caller asked to prepend before it.
+      if (
+        effectiveOptions.afterFrozenRows === false &&
+        frozenRows > 0 &&
+        rowPosition <= frozenRows
+      ) {
         sheet.setFrozenRows(frozenRows);
       }
     }
 
-    const range = sheet.getRange(rowPosition, 1, numRows, numColumns);
-
-    range.setValues(values);
-  } catch (err: unknown) {
-    throw err instanceof Error ? err.message : String(err);
+    sheet.getRange(rowPosition, columnPosition, numRows, numColumns).setValues(values);
   } finally {
     lock?.releaseLock();
   }

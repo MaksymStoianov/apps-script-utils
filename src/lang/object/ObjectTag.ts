@@ -2,7 +2,14 @@
  * Enum representing `Object#toString` result references in uppercase.
  * Provides a standardized way to identify object types.
  *
+ * @example
+ * ```javascript
+ * objectToString([]) === ObjectTag.ARRAY; // => true
+ * objectToString(null) === ObjectTag.NULL; // => true
+ * ```
+ *
  * @enum
+ * @see [ObjectTag on the documentation site](https://maksymstoianov.github.io/apps-script-utils/ObjectTag.html)
  * @since   1.0.0
  * @version 1.0.0
  */

@@ -4,10 +4,21 @@ import { isNil } from "./isNil";
 /**
  * Checks if the provided value is a function.
  *
+ * @example
+ * ```javascript
+ * isFunction(function () {}); // => true
+ * isFunction(async function () {}); // => true
+ * isFunction(Math.max); // => true
+ * isFunction(null); // => false
+ * isFunction("fn"); // => false
+ * isFunction({}); // => false
+ * ```
+ *
  * @param   {unknown} value - The value to check.
  * @returns {boolean} `true` if the value is a function; otherwise, `false`.
  * @see     {@link nonFunction}
  * @see     {@link isFunctionLike}
+ * @see     [isFunction on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isFunction.html)
  * @since   1.0.0
  * @version 1.2.0
  */

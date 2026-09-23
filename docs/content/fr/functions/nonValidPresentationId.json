@@ -1,0 +1,27 @@
+{
+  "summary": "Vérifie qu'une valeur n'est **pas** un identifiant de présentation.",
+  "description": [
+    "`nonValidPresentationId(value)` est le même test que `!isValidPresentationId(value)`, écrit pour qu'une clause de garde se lise comme une phrase plutôt que comme une négation.",
+    "Au moins 25 caractères parmi lettres, chiffres, tirets et tirets bas — l'identifiant tiré d'une URL Slides. Seul le format est vérifié.",
+    "`isX` et `nonX` répondent à une question sans jamais interrompre le flot ; `requireX` et `requireNonX` rendent la valeur ou lèvent. Le schéma est expliqué dans [](validation-conventions.md)."
+  ],
+  "params": {
+    "value": "La valeur à vérifier."
+  },
+  "returns": "`true` si la valeur n'est pas un identifiant de présentation ; sinon `false`.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Ce qui passe et ce qui ne passe pas",
+      "body": "```javascript\nnonValidPresentationId(\"short-id\"); // => true\nnonValidPresentationId(\"has space in it and is long enough to pass\"); // => true\nnonValidPresentationId(\"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms\"); // => false\n```"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "isValidPresentationId"
+    },
+    {
+      "name": "requireValidPresentationId"
+    }
+  ]
+}

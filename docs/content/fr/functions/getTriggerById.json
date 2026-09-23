@@ -1,0 +1,23 @@
+{
+  "summary": "Trouve l'un des déclencheurs du projet par son identifiant.",
+  "description": [
+    "Apps Script attribue un identifiant à la création d'un déclencheur mais n'offre aucun moyen de le retrouver : les déclencheurs du projet sont donc parcourus et comparés. Un déclencheur supprimé depuis donne `null`, cas que doit gérer un identifiant stocké."
+  ],
+  "params": {
+    "id": "L'identifiant du déclencheur. Il ne doit pas être vide."
+  },
+  "returns": "le déclencheur, ou `null` si le projet n'en a aucun avec cet identifiant.",
+  "throws": {
+    "EmptyStringException": "l'identifiant n'est pas une chaîne, ou il est vide."
+  },
+  "examples": [
+    {
+      "title": "Recherche"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "requireNonEmptyString"
+    }
+  ]
+}

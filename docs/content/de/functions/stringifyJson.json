@@ -1,0 +1,28 @@
+{
+  "summary": "Serialisiert einen Wert nach JSON mit fester Schlüsselreihenfolge.",
+  "description": [
+    "`JSON.stringify` schreibt Schlüssel in Einfügereihenfolge, zwei Objekte mit denselben Daten können also unterschiedlichen Text ergeben. Hier werden die Schlüssel jedes Objekts sortiert, womit die Ausgabe als stabiler Schlüssel taugt — für einen Cache, eine Prüfsumme oder einen Vergleich.",
+    "Genau das hasht `hashCode`, und deshalb hashen zwei gleiche Objekte gleich."
+  ],
+  "params": {
+    "value": "Der zu serialisierende Wert."
+  },
+  "returns": "den JSON-Text mit sortierten Objektschlüsseln.",
+  "throws": {},
+  "examples": [
+    {
+      "title": "Serialisieren"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "parseJson"
+    },
+    {
+      "name": "hashCode"
+    },
+    {
+      "name": "equals"
+    }
+  ]
+}

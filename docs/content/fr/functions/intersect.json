@@ -1,0 +1,36 @@
+{
+  "summary": "Trouve les valeurs présentes dans chacun des tableaux fournis.",
+  "description": [
+    "L'ordre vient du premier tableau et le résultat est dédoublonné : une valeur qui s'y répète n'apparaît qu'une fois. La comparaison suit `SameValueZero`, la règle d'un `Set`, si bien que `NaN` s'intersecte avec `NaN` — ce qu'une comparaison par `===` ne fait jamais — et que `-0` correspond à `0`.",
+    "Les tableaux suivants deviennent chacun un ensemble une fois pour toutes, et le premier est parcouru une seule fois. Le coût est linéaire en la taille totale des entrées plutôt que quadratique comme dans une version écrite à la main. Les entrées ne sont pas modifiées.",
+    "Appelé avec un seul tableau, `intersect` renvoie ses valeurs uniques ; appelé sans argument, il renvoie `[]`."
+  ],
+  "params": {
+    "arrays": "Les tableaux à intersecter. Ils ne sont pas modifiés."
+  },
+  "returns": "un nouveau tableau des valeurs communes, dans l'ordre du premier tableau, sans doublons.",
+  "throws": {
+    "TypeError": "L'un des arguments n'est pas un tableau."
+  },
+  "examples": [
+    {
+      "title": "Les valeurs communes à tous les tableaux"
+    },
+    {
+      "title": "Trouver les lignes communes à deux feuilles"
+    },
+    {
+      "title": "Dédoublonnage et cas limites"
+    }
+  ],
+  "seeAlso": [
+    {
+      "name": "unique",
+      "note": "dédoublonne un seul tableau."
+    },
+    {
+      "name": "without",
+      "note": "l'opération inverse : retire les valeurs nommées."
+    }
+  ]
+}
