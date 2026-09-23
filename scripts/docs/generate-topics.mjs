@@ -935,6 +935,8 @@ function copyInto(fromDir, toDir, filter = () => true) {
   }
 }
 
+const VERSION = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")).version;
+
 // --- run ------------------------------------------------------------------
 
 const entries = collectFacts();
@@ -975,8 +977,11 @@ for (const language of LANGUAGES) {
   emit(join(root, "head.html"), await pretty(headHtml(language), join(root, "head.html")));
   emit(join(root, "search.html"), await pretty(searchHtml(language), join(root, "search.html")));
 
+  // The configuration is the same everywhere but for the version, which comes
+  // from the package, so even the English project is written rather than kept.
+  emit(join(root, "writerside.cfg"), writersideCfg(VERSION));
+
   if (language !== SOURCE_LANGUAGE) {
-    emit(join(root, "writerside.cfg"), writersideCfg());
     emit(
       join(root, "asu.tree"),
       localiseTree(readFileSync(join(sourceRoot, "asu.tree"), "utf8"), language)

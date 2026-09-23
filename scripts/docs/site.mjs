@@ -34,7 +34,7 @@ function widget(language) {
 const ARTWORK =
   "https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=footer&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit";
 
-export function writersideCfg() {
+export function writersideCfg(version) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ihp SYSTEM "https://resources.jetbrains.com/writerside/1.0/ihp.dtd">
 
@@ -42,7 +42,7 @@ export function writersideCfg() {
     <topics dir="topics" web-path="topics"/>
     <images dir="images" web-path="images"/>
     <snippets src="snippets"/>
-    <instance src="asu.tree"/>
+    <instance src="asu.tree" version="${version}"/>
 </ihp>
 `;
 }
@@ -61,6 +61,7 @@ export function buildProfiles(language) {
         <locale-code>${language.locale}</locale-code>
         <product-web-url>https://github.com/MaksymStoianov/apps-script-utils</product-web-url>
         <og-image>${SITE}/images/banner-1280x640.jpg</og-image>
+        <versions-switcher>${SITE}/help-versions.json</versions-switcher>
         <include-in-head>head.html</include-in-head>
         <include-after-body>search.html</include-after-body>
     </variables>
