@@ -1,22 +1,28 @@
 {
-  "summary": "Fügt eine Spalte rechts neben den bereits vorhandenen Daten eines Blattes ein.",
+  "summary": "Fügt eine Spalte hinter der letzten Spalte mit Daten an.",
   "description": [
-    "`appendColumns` für eine einzelne Spalte. Die Werte kommen als flaches Array von Zellen, von oben nach unten.",
-    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+    "Die Werte füllen die Spalte von oben nach unten: ein Wert je Zeile. Ein Blatt wird ganz betrachtet und die Spalte ab Zeile 1 geschrieben; ein Bereich wird nur in sich betrachtet und die Spalte auf seinen Zeilen geschrieben, rechts der letzten Spalte des Bereichs mit Daten.",
+    "Es ist `appendColumns` mit einer Spalte: dieselben Prüfungen, dasselbe Wachsen des Blatts, wenn das Ergebnis nicht passt, und dieselbe Regel, dass eine Zelle mit `=` zur Formel wird."
   ],
   "params": {
-    "sheet": "Das Blatt, in das geschrieben wird.",
-    "values": "Die Zellen der einen Zeile.",
-    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+    "target": "Das Blatt, an das angefügt wird, oder der Bereich, innerhalb dessen angefügt wird.",
+    "values": "Eine einzelne Spalte: ein flaches Array, ein Wert je Zeile.",
+    "options": "`afterFrozenColumns` beginnt hinter den fixierten Spalten, wenn die Daten davor enden."
   },
-  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "returns": "das Blatt, sodass Aufrufe verkettet werden können.",
   "throws": {
-    "InvalidSheetException": "das erste Argument ist kein Blatt.",
-    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+    "IllegalArgumentException": "kein Argument übergeben wurde.",
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist.",
+    "TypeError": "die Werte kein flaches Array sind."
   },
   "examples": [
     {
-      "title": "Schreiben"
+      "title": "An ein Blatt anfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendColumn(sheet, [\"status\", \"new\", \"new\"]);\n```"
+    },
+    {
+      "title": "Innerhalb eines Bereichs anfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendColumn(sheet.getRange(\"A1:D3\"), [\"status\", \"new\", \"new\"]);\n```"
     }
   ],
   "seeAlso": [

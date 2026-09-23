@@ -2,9 +2,9 @@
 
 # appendColumns
 
-<link-summary>Adds columns to the right of the data already on a sheet.</link-summary>
+<link-summary>Adds columns after the last column that holds data.</link-summary>
 
-<web-summary>appendColumns() — Adds columns to the right of the data already on a sheet. apps-script-utils, English.</web-summary>
+<web-summary>appendColumns() — Adds columns after the last column that holds data. apps-script-utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -12,38 +12,41 @@
 
 ```typescript
 function appendColumns(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values: unknown,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-The matrix is read as columns: one array per column, written from row 1 rightwards of the last column that holds data. `transpose` is what turns rows into that shape.
+Pass a sheet and the whole sheet is examined; pass a range and only the cells inside it are, which is how data further down the sheet is kept from pushing the write to the right. A range also decides the rows written on — the sheet always starts at row 1.
+
+The values are a matrix of rows: one array per row, all of the same length. Nothing is overwritten — the write starts one column past the last one holding data, and `0` and `false` count as data. The sheet gains columns when it is too narrow for the result.
 
 A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows.
 
 ## Parameters
 
-| Parameter                     | Type                                 | Description                                                                                       |
-| :---------------------------- | :----------------------------------- | :------------------------------------------------------------------------------------------------ |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet` | The sheet to write into.                                                                          |
-| `values`                      | `unknown`                            | A matrix of rows: one array per row, all of the same length.                                      |
-| `options` _(optional)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top. |
+| Parameter                     | Type                                                                       | Description                                                                                   |
+| :---------------------------- | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet to append to, or the range to append within.                                        |
+| `values`                      | `unknown`                                                                  | A matrix of rows: one array per row, all of the same length.                                  |
+| `options` _(optional)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` starts the write past the frozen columns when the data ends before them. |
 
 ## Returns
 
-`GoogleAppsScript.Spreadsheet.Sheet` — the same sheet, so calls can be chained.
+`GoogleAppsScript.Spreadsheet.Sheet` — the sheet, so calls can be chained.
 
 ## Throws
 
-| Exception               | Condition                                              |
-| :---------------------- | :----------------------------------------------------- |
-| `InvalidSheetException` | the first argument is not a sheet.                     |
-| `TypeError`             | the values are not a matrix with rows of equal length. |
+| Exception                  | Condition                                              |
+| :------------------------- | :----------------------------------------------------- |
+| `IllegalArgumentException` | no argument is passed.                                 |
+| `InvalidSheetException`    | the first argument is neither a sheet nor a range.     |
+| `TypeError`                | the values are not a matrix with rows of equal length. |
 
 ## Examples
 
-### Writing
+### Appending to a sheet
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
@@ -51,9 +54,18 @@ const sheet = SpreadsheetApp.getActiveSheet();
 appendColumns(sheet, [["total", "=SUM(A2:A)"]]);
 ```
 
+### Appending within a range
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+appendColumns(sheet.getRange("A1:D2"), [["a"], ["b"]]);
+```
+
 ## See also
 
 - [`appendColumn`](appendColumn.md)
+- [`appendRows`](appendRows.md)
 - [`prependColumns`](prependColumns.md)
 - [`transpose`](transpose.md)
 - [](reference-appsscript.md)
