@@ -36,13 +36,7 @@ import prettier from "prettier";
 import ts from "typescript";
 
 import { LANGUAGES, SOURCE_LANGUAGE } from "./languages.mjs";
-import {
-  buildProfiles,
-  headHtml,
-  searchHtml,
-  solutionBuildProfiles,
-  writersideCfg
-} from "./site.mjs";
+import { buildProfiles, headHtml, searchHtml, writersideCfg } from "./site.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -1096,10 +1090,6 @@ for (const topic of new Set(entries.map((entry) => entry.referenceTopic))) {
     )
   );
 }
-
-// 4a. The profile the builder actually reads: `docs` is opened as a solution of
-// five modules, and a profile inside a module is ignored.
-emit(join(ROOT, "docs", "buildprofiles.xml"), solutionBuildProfiles());
 
 // 5. Every page has to be reachable: the Writerside build refuses to link to a
 // topic the navigation does not list, and the tree is written by hand.

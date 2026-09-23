@@ -68,54 +68,6 @@ function settings(language, depth = 2) {
     .join("\n");
 }
 
-/**
- * The build profile of the whole documentation solution.
- *
- * The builder opens `docs` as a solution of five modules, and a profile that
- * sits inside a module is not read — canonical links, the og:image, the
- * injected head and body and the footer were all silently dropped. This file
- * lives at the solution root and names each instance the way the build does,
- * `<module>/<instance>`.
- */
-export function solutionBuildProfiles() {
-  const profiles = LANGUAGES.map((language) => {
-    const module = language.root.replace(/^docs\//, "");
-
-    return `    <build-profile instance="${module}/asu">
-        <variables>
-${settings(language, 3)
-  .replace(/<include-(in-head|after-body)>/g, (tag) => tag)
-  .replace(/>head\.html</g, `>${module}/head.html<`)
-  .replace(/>search\.html</g, `>${module}/search.html<`)}
-        </variables>
-
-        <footer>
-            <notice>${language.strings.aiNotice}</notice>
-            <copyright>2025–2026 Maksym Stoianov. Licensed under Apache-2.0.</copyright>
-            <link href="https://github.com/MaksymStoianov/apps-script-utils">GitHub</link>
-            <link href="https://www.npmjs.com/package/apps-script-utils">npm</link>
-${LANGUAGES.map((other) => `            <link href="${other.webRoot}/">${other.name}</link>`).join("\n")}
-            <link href="${ARTWORK}">Banner artwork: Daryna Mikhailenko</link>
-        </footer>
-
-        <sitemap priority="0.5" change-frequency="weekly"/>
-
-        <llms-txt/>
-    </build-profile>`;
-  });
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE buildprofiles SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-profiles.dtd">
-
-<buildprofiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
-
-${profiles.join("\n\n")}
-
-</buildprofiles>
-`;
-}
-
 export function buildProfiles(language) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE buildprofiles SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-profiles.dtd">
@@ -126,16 +78,6 @@ export function buildProfiles(language) {
     <variables>
 ${settings(language)}
     </variables>
-
-    <!-- The same settings again, scoped to the instance. Nothing configured
-         here reached the published site — no canonicals, an empty og:image, and
-         neither include — so both forms are declared until a build says which
-         one this builder honours. Tracked in #539. -->
-    <build-profile instance="asu">
-        <variables>
-${settings(language, 3)}
-        </variables>
-    </build-profile>
 
     <footer>
         <notice>${language.strings.aiNotice}</notice>
@@ -233,6 +175,17 @@ export function searchHtml(language) {
     border-radius: 4px;
     font: 500 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
     opacity: 0.7;
+  }
+
+  /* In the header the button is the help application's own, so everything the
+     floating pair sets has to come back off. */
+  .asu-in-header {
+    position: static;
+    margin: 0 2px;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    box-shadow: none;
   }
 
   #asu-language-menu {

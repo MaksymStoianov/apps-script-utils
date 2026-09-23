@@ -134,12 +134,11 @@ jobs:
         with:
           instance: ${{ matrix.language.module }}/asu
 
-  # The page the reader gets is the finalized one, not what the builder emits:
-  # the structured data, the canonical link, the language switcher, the search
-  # widget and the notice are written in by scripts/docs/finalize-site.mjs,
-  # because the build profile that would carry them is ignored on this builder.
-  # A page that comes out without them should fail here, not be noticed on the
-  # live site a release later.
+  # Everything the build profile carries — the structured data, the canonical
+  # link, the language switcher, the search widget — is easy to lose silently:
+  # it was missing from the site for a while and nobody noticed. This assembles
+  # the five builds the way the deploy does and fails when a page comes out
+  # without them.
   assembled:
     needs: build
     runs-on: ubuntu-latest
@@ -184,7 +183,7 @@ jobs:
           missing=0
 
           for page in dir/overview.html dir/ru/overview.html dir/appendcolumns.html; do
-            for marker in 'rel="canonical"' 'asu-fab' 'SoftwareSourceCode' 'asu-ai-notice'; do
+            for marker in 'rel="canonical"' 'asu-fab' 'asu-language-open' 'SoftwareSourceCode'; do
               if ! grep -qF "$marker" "$page"; then
                 echo "::error::${page} is missing ${marker}"
                 missing=1
