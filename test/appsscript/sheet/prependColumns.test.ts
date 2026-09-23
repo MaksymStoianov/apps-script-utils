@@ -57,6 +57,27 @@ function sheetMock(lastColumn = 0, frozenColumns = 0, maxColumns = 26): SheetMoc
 }
 
 /**
+ * A stand-in range: knows where it sits and how big it is.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  numRows = 10,
+  numColumns = 4
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => numRows,
+    getNumColumns: () => numColumns,
+    getValues: () => Array.from({ length: numRows }, () => new Array(numColumns).fill(""))
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
+}
+
+/**
  * LockService is used for the document lock; a no-op stand-in suffices.
  */
 function installLockService(): void {
@@ -218,6 +239,51 @@ describe("prependColumns", () => {
       const { sheet } = sheetMock(3, 0, 26);
 
       expect(() => prependColumns(sheet, 30)).toThrow("Those columns are out of bounds.");
+    });
+  });
+
+  describe("Inserting at a range", () => {
+    it("should insert before the first column of the range", () => {
+      const { sheet, inserted } = sheetMock(8);
+
+      prependColumns(rangeMock(sheet, 1, 3), 2);
+
+      expect(inserted).toEqual([[3, 2]]);
+    });
+
+    it("should write the values on the rows of the range", () => {
+      const { sheet, written } = sheetMock(8);
+
+      prependColumns(rangeMock(sheet, 4, 3), 2, [
+        ["a", "b"],
+        ["c", "d"]
+      ]);
+
+      expect(written).toEqual([
+        {
+          row: 4,
+          column: 3,
+          numRows: 2,
+          numColumns: 2,
+          values: [
+            ["a", "b"],
+            ["c", "d"]
+          ]
+        }
+      ]);
+    });
+
+    it("should leave the frozen boundary alone when inserting past it", () => {
+      const { sheet, frozenSetTo } = sheetMock(8, 2);
+
+      prependColumns(rangeMock(sheet, 1, 5), 1);
+
+      expect(frozenSetTo).toEqual([]);
+    });
+
+    it("should throw for a first argument that is neither a sheet nor a range", () => {
+      // @ts-expect-error - testing invalid types
+      expect(() => prependColumns("A1:B2", 1)).toThrow(InvalidSheetException);
     });
   });
 });

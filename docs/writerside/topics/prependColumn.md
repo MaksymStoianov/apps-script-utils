@@ -2,9 +2,9 @@
 
 # prependColumn
 
-<link-summary>Inserts one column to the left of the data already on a sheet.</link-summary>
+<link-summary>Inserts one column before the data, on a sheet or at a range.</link-summary>
 
-<web-summary>prependColumn() — Inserts one column to the left of the data already on a sheet. apps-script-utils, English.</web-summary>
+<web-summary>prependColumn() — Inserts one column before the data, on a sheet or at a range. apps-script-utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -12,43 +12,53 @@
 
 ```typescript
 function prependColumn(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   values?: unknown[] | null,
   options: Options | null | undefined = {}
 ): GoogleAppsScript.Spreadsheet.Sheet;
 ```
 
-`prependColumns` with a single column. The values go in as a flat array of cells, top to bottom.
+`prependColumns` with a single column: room is made first, so nothing already there is overwritten. A sheet gets the column at its start; a range gets it immediately before its first column, with the values written on the range's rows.
+
+The values go in as a flat array of cells, top to bottom. Omit them and an empty column is inserted.
 
 A cell whose text starts with `=` is written as a formula, not as text — the same rule the editor follows.
 
 ## Parameters
 
-| Parameter                     | Type                                 | Description                                                                                       |
-| :---------------------------- | :----------------------------------- | :------------------------------------------------------------------------------------------------ |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet` | The sheet to write into.                                                                          |
-| `values` _(optional)_         | `unknown[] \| null`                  | The cells of the single row.                                                                      |
-| `options` _(optional)_ `= {}` | `Options \| null \| undefined`       | `afterFrozenRows` puts the new rows immediately below the frozen ones instead of at the very top. |
+| Parameter                     | Type                                                                       | Description                                                                                                                                                |
+| :---------------------------- | :------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | The sheet to insert into, or the range to insert at.                                                                                                       |
+| `values` _(optional)_         | `unknown[] \| null`                                                        | The cells of the single column, top to bottom. Omit for an empty column.                                                                                   |
+| `options` _(optional)_ `= {}` | `Options \| null \| undefined`                                             | `afterFrozenColumns` inserts after the frozen columns instead of at the very start. A range decides the position itself, so the option does nothing there. |
 
 ## Returns
 
-`GoogleAppsScript.Spreadsheet.Sheet` — the same sheet, so calls can be chained.
+`GoogleAppsScript.Spreadsheet.Sheet` — the sheet, so calls can be chained.
 
 ## Throws
 
-| Exception               | Condition                                              |
-| :---------------------- | :----------------------------------------------------- |
-| `InvalidSheetException` | the first argument is not a sheet.                     |
-| `TypeError`             | the values are not a matrix with rows of equal length. |
+| Exception                  | Condition                                                |
+| :------------------------- | :------------------------------------------------------- |
+| `IllegalArgumentException` | the values are given but are not a non-empty flat array. |
+| `InvalidSheetException`    | the first argument is neither a sheet nor a range.       |
 
 ## Examples
 
-### Writing
+### Inserting at the start of a sheet
 
 ```javascript
 const sheet = SpreadsheetApp.getActiveSheet();
 
-prependColumn(sheet, ["#", "1", "2"]);
+prependColumn(sheet, ["Name", "Ada", "Grace"]);
+```
+
+### Inserting at a range
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+prependColumn(sheet.getRange("C4:F13"), ["Name", "Ada"]);
 ```
 
 ## See also

@@ -1,22 +1,29 @@
 {
-  "summary": "Insère des colonnes à gauche des données déjà présentes sur une feuille.",
+  "summary": "Insère des colonnes avant les données — dans une feuille ou au niveau d'une plage.",
   "description": [
-    "De la place est faite avant la première colonne de la zone de données et la matrice y est écrite, un tableau par colonne : rien d'existant n'est écrasé.",
-    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur."
+    "La place est faite d'abord, puis les valeurs y sont écrites : rien de ce qui se trouve déjà dans la feuille n'est écrasé. Avec une feuille, les colonnes vont à son début ; avec une plage, juste avant sa première colonne, et les valeurs sont écrites sur ses lignes.",
+    "La matrice est indexée par ligne puis par colonne et doit faire exactement `count` colonnes de large. Sans valeurs, les colonnes insérées restent vides.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur."
   ],
   "params": {
-    "sheet": "La feuille où écrire.",
-    "values": "Une matrice de lignes : un tableau par ligne, toutes de même longueur.",
-    "options": "`afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début."
+    "target": "La feuille dans laquelle insérer, ou la plage au niveau de laquelle insérer.",
+    "count": "Combien de colonnes insérer. `0` ne fait rien.",
+    "values": "Une matrice indexée par ligne puis colonne, large d'exactement `count`. Omettez-la pour des colonnes vides.",
+    "options": "`afterFrozenColumns` insère après les colonnes figées plutôt qu'au tout début. Une plage décide elle-même de la position : l'option n'y change rien."
   },
-  "returns": "la même feuille, ce qui permet d'enchaîner les appels.",
+  "returns": "la feuille, afin de chaîner les appels.",
   "throws": {
-    "InvalidSheetException": "le premier argument n'est pas une feuille.",
-    "TypeError": "les valeurs ne forment pas une matrice à lignes de même longueur."
+    "IllegalArgumentException": "`count` n'est pas un entier sûr positif ou nul, ou les valeurs ne lui correspondent pas.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage."
   },
   "examples": [
     {
-      "title": "Écriture"
+      "title": "Insertion au début d'une feuille",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumns(sheet, 2, [\n  [\"A1\", \"B1\"],\n  [\"A2\", \"B2\"]\n]);\n```"
+    },
+    {
+      "title": "Insertion au niveau d'une plage",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumns(sheet.getRange(\"C4:F13\"), 1, [[\"note\"]]);\n```"
     }
   ],
   "seeAlso": [

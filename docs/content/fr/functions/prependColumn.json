@@ -1,22 +1,28 @@
 {
-  "summary": "Insère une colonne à gauche des données déjà présentes sur une feuille.",
+  "summary": "Insère une colonne avant les données — dans une feuille ou au niveau d'une plage.",
   "description": [
-    "`prependColumns` pour une seule colonne. Les valeurs sont passées comme un tableau plat de cellules, de haut en bas.",
-    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle qu'applique l'éditeur."
+    "`prependColumns` avec une seule colonne : la place est faite d'abord, donc rien de ce qui existe n'est écrasé. Une feuille reçoit la colonne à son début ; une plage la reçoit juste avant sa première colonne, les valeurs étant écrites sur les lignes de la plage.",
+    "Les valeurs se donnent comme un tableau plat de cellules, de haut en bas. Sans elles, une colonne vide est insérée.",
+    "Une cellule dont le texte commence par `=` est écrite comme une formule, pas comme du texte — la règle de l'éditeur."
   ],
   "params": {
-    "sheet": "La feuille où écrire.",
-    "values": "Les cellules de l'unique ligne.",
-    "options": "`afterFrozenRows` place les nouvelles lignes juste sous les lignes figées plutôt qu'en tout début."
+    "target": "La feuille dans laquelle insérer, ou la plage au niveau de laquelle insérer.",
+    "values": "Les cellules de la colonne, de haut en bas. Omettez-les pour une colonne vide.",
+    "options": "`afterFrozenColumns` insère après les colonnes figées plutôt qu'au tout début. Une plage décide elle-même de la position : l'option n'y change rien."
   },
-  "returns": "la même feuille, ce qui permet d'enchaîner les appels.",
+  "returns": "la feuille, afin de chaîner les appels.",
   "throws": {
-    "InvalidSheetException": "le premier argument n'est pas une feuille.",
-    "TypeError": "les valeurs ne forment pas une matrice à lignes de même longueur."
+    "IllegalArgumentException": "des valeurs sont fournies mais ne forment pas un tableau plat non vide.",
+    "InvalidSheetException": "le premier argument n'est ni une feuille ni une plage."
   },
   "examples": [
     {
-      "title": "Écriture"
+      "title": "Insertion au début d'une feuille",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumn(sheet, [\"Name\", \"Ada\", \"Grace\"]);\n```"
+    },
+    {
+      "title": "Insertion au niveau d'une plage",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nprependColumn(sheet.getRange(\"C4:F13\"), [\"Name\", \"Ada\"]);\n```"
     }
   ],
   "seeAlso": [
