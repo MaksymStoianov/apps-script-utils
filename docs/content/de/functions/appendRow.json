@@ -1,22 +1,28 @@
 {
-  "summary": "Fügt eine Zeile unter die bereits vorhandenen Daten eines Blattes ein.",
+  "summary": "Fügt eine Zeile unter der letzten Zeile mit Daten an.",
   "description": [
-    "`appendRows` für eine einzelne Zeile, wenn nur eine geschrieben wird. Die Werte kommen als flaches Array von Zellen statt als Matrix.",
-    "Eine Zelle, deren Text mit `=` beginnt, wird als Formel geschrieben, nicht als Text — dieselbe Regel wie im Editor."
+    "Ein Blatt wird ganz betrachtet und die Zeile ab Spalte 1 geschrieben; ein Bereich wird nur in sich betrachtet und die Zeile auf seinen Spalten geschrieben, unter der letzten Zeile des Bereichs mit Daten.",
+    "Es ist `appendRows` mit einer Zeile: dieselben Prüfungen, dasselbe Wachsen des Blatts, wenn das Ergebnis nicht passt, und dieselbe Regel, dass eine Zelle mit `=` zur Formel wird."
   ],
   "params": {
-    "sheet": "Das Blatt, in das geschrieben wird.",
-    "values": "Die Zellen der einen Zeile.",
-    "options": "`afterFrozenRows` setzt die neuen Zeilen direkt unter die fixierten statt ganz nach oben."
+    "target": "Das Blatt, an das angefügt wird, oder der Bereich, innerhalb dessen angefügt wird.",
+    "values": "Eine einzelne Zeile: ein flaches Array, ein Wert je Spalte.",
+    "options": "`afterFrozenRows` beginnt unter den fixierten Zeilen, wenn die Daten davor enden."
   },
-  "returns": "dasselbe Blatt, damit sich Aufrufe verketten lassen.",
+  "returns": "das Blatt, sodass Aufrufe verkettet werden können.",
   "throws": {
-    "InvalidSheetException": "das erste Argument ist kein Blatt.",
-    "TypeError": "die Werte sind keine Matrix mit gleich langen Zeilen."
+    "IllegalArgumentException": "kein Argument übergeben wurde.",
+    "InvalidSheetException": "das erste Argument weder ein Blatt noch ein Bereich ist.",
+    "TypeError": "die Werte kein flaches Array sind."
   },
   "examples": [
     {
-      "title": "Schreiben"
+      "title": "An ein Blatt anfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRow(sheet, [\"Ada\", \"ada@example.com\", \"=TODAY()\"]);\n```"
+    },
+    {
+      "title": "Innerhalb eines Bereichs anfügen",
+      "body": "```javascript\nconst sheet = SpreadsheetApp.getActiveSheet();\n\nappendRow(sheet.getRange(\"B1:D10\"), [\"Ada\", \"ada@example.com\"]);\n```"
     }
   ],
   "seeAlso": [

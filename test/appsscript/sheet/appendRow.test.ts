@@ -49,6 +49,26 @@ function sheetMock(lastRow = 0, lastColumn = 0, frozenRows = 0, frozenColumns = 
 }
 
 /**
+ * A stand-in range: knows where it sits and what it holds.
+ */
+function rangeMock(
+  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  row: number,
+  column: number,
+  values: unknown[][]
+): GoogleAppsScript.Spreadsheet.Range {
+  return {
+    toString: () => "Range",
+    getSheet: () => sheet,
+    getRow: () => row,
+    getColumn: () => column,
+    getNumRows: () => values.length,
+    getNumColumns: () => values[0].length,
+    getValues: () => values
+  } as unknown as GoogleAppsScript.Spreadsheet.Range;
+}
+
+/**
  * LockService is used for the document lock; a no-op stand-in suffices.
  */
 function installLockService(): void {
@@ -95,10 +115,32 @@ describe("appendRow", () => {
     });
   });
 
+  describe("Appending within a range", () => {
+    it("should write below the last populated row of the range", () => {
+      const { sheet, written } = sheetMock(50);
+
+      appendRow(rangeMock(sheet, 1, 2, [["x"], [""], [""]]), ["a", "b"]);
+
+      expect(written).toEqual([
+        { row: 2, column: 2, numRows: 1, numColumns: 2, values: [["a", "b"]] }
+      ]);
+    });
+
+    it("should write at the first row of an empty range", () => {
+      const { sheet, written } = sheetMock(0);
+
+      appendRow(rangeMock(sheet, 4, 1, [[""], [""]]), ["a"]);
+
+      expect(written[0].row).toBe(4);
+    });
+  });
+
   describe("Incorrect input data", () => {
-    it("should throw for anything that is not a Sheet", () => {
+    it("should throw for anything that is neither a Sheet nor a Range", () => {
       // @ts-expect-error - testing invalid types
       expect(() => appendRow({}, ["a"])).toThrow(InvalidSheetException);
+      // @ts-expect-error - testing invalid types
+      expect(() => appendRow("A1:B2", ["a"])).toThrow(InvalidSheetException);
     });
 
     it("should throw when the row is not an array", () => {
