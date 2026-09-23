@@ -27,6 +27,13 @@ Bold, italic, code and links are recognised and become runs carrying the style e
 
 `RichTextRun[]` — the runs, in order, each with its text and its style.
 
+## Throws
+
+| Exception                  | Condition                                                                       |
+| :------------------------- | :------------------------------------------------------------------------------ |
+| `IllegalArgumentException` | no argument is passed.                                                          |
+| `InvalidStringException`   | the text is not a string. An empty string is accepted and gives an empty array. |
+
 ## Examples
 
 ### In use

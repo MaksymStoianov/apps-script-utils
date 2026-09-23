@@ -27,6 +27,13 @@ Fett, kursiv, Code und Links werden erkannt und zu Abschnitten mit dem jeweils p
 
 `RichTextRun[]` — die Abschnitte der Reihe nach, jeder mit Text und Stil.
 
+## Ausnahmen
+
+| Ausnahme                   | Bedingung                                                                                          |
+| :------------------------- | :------------------------------------------------------------------------------------------------- |
+| `IllegalArgumentException` | kein Argument übergeben wurde.                                                                     |
+| `InvalidStringException`   | der Text keine Zeichenkette ist. Eine leere Zeichenkette ist zulässig und ergibt ein leeres Array. |
+
 ## Beispiele
 
 ### Im Einsatz

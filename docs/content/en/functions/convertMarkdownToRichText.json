@@ -8,7 +8,10 @@
     "theme": "The styles each kind of run is given."
   },
   "returns": "the runs, in order, each with its text and its style.",
-  "throws": {},
+  "throws": {
+    "IllegalArgumentException": "no argument is passed.",
+    "InvalidStringException": "the text is not a string. An empty string is accepted and gives an empty array."
+  },
   "examples": [
     {
       "title": "In use",

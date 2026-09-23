@@ -27,6 +27,13 @@ Gras, italique, code et liens sont reconnus et deviennent des segments portant l
 
 `RichTextRun[]` — les segments, dans l'ordre, chacun avec son texte et son style.
 
+## Exceptions
+
+| Exception                  | Condition                                                                             |
+| :------------------------- | :------------------------------------------------------------------------------------ |
+| `IllegalArgumentException` | aucun argument n'est passé.                                                           |
+| `InvalidStringException`   | le texte n'est pas une chaîne. Une chaîne vide est acceptée et donne un tableau vide. |
+
 ## Exemples
 
 ### Utilisation

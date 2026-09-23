@@ -8,7 +8,10 @@
     "theme": "Les styles attribués à chaque type de segment."
   },
   "returns": "les segments, dans l'ordre, chacun avec son texte et son style.",
-  "throws": {},
+  "throws": {
+    "IllegalArgumentException": "aucun argument n'est passé.",
+    "InvalidStringException": "le texte n'est pas une chaîne. Une chaîne vide est acceptée et donne un tableau vide."
+  },
   "examples": [
     {
       "title": "Utilisation"
