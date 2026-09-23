@@ -512,6 +512,12 @@
      * its own classes. Until it appears — or if it never does — they stay the
      * floating pair they were.
      */
+    var watcher = null;
+
+    var poll = 0;
+
+    var deadline = 0;
+
     function mountInHeader() {
       var switchers = document.querySelector(".wh-header__switchers");
 
@@ -537,18 +543,34 @@
     }
 
     if (!mountInHeader()) {
-      var watcher = new MutationObserver(function () {
-        if (mountInHeader()) {
-          watcher.disconnect();
-        }
-      });
+      // The header can finish rendering between the check above and the observer
+      // below, and then no mutation ever follows to react to — which is exactly
+      // what happened on the published site. Polling closes that gap; the
+      // observer keeps the common case instant.
+      watcher = new MutationObserver(check);
 
-      watcher.observe(document.body, { childList: true, subtree: true });
+      poll = window.setInterval(check, 150);
 
-      // A header that has not arrived within a few seconds is not coming.
-      window.setTimeout(function () {
+      deadline = window.setTimeout(stop, 15000);
+
+      watcher.observe(document.documentElement, { childList: true, subtree: true });
+
+      check();
+    }
+
+    function check() {
+      if (mountInHeader()) {
+        stop();
+      }
+    }
+
+    function stop() {
+      if (watcher) {
         watcher.disconnect();
-      }, 8000);
+      }
+
+      window.clearInterval(poll);
+      window.clearTimeout(deadline);
     }
 
     /**

@@ -155,14 +155,18 @@ for (const page of pages) {
       }
     }
 
-    // Said once at the end of every page, in that page's language.
+    // Said once at the end of every page, in that page's language. It goes
+    // inside the article: a paragraph left at the end of `body` is laid out by
+    // the application's own grid and lands at the top of the page.
     if (!html.includes("asu-ai-notice")) {
-      const body = html.lastIndexOf("</body>");
+      const notice = `<p class="asu-ai-notice" style="margin:40px 0 0;padding-top:16px;border-top:1px solid rgba(39,40,44,0.16);font-size:13px;line-height:1.5;opacity:0.7">${language.strings.aiNotice}</p>`;
 
-      if (body !== -1) {
-        const notice = `<p class="asu-ai-notice" style="margin:32px 0 16px;padding-top:16px;border-top:1px solid rgba(39,40,44,0.16);font-size:13px;line-height:1.5;opacity:0.7;text-align:center">${language.strings.aiNotice}</p>`;
+      const article = html.lastIndexOf("</article>");
 
-        html = `${html.slice(0, body)}${notice}\n${html.slice(body)}`;
+      const at = article === -1 ? html.lastIndexOf("</body>") : article;
+
+      if (at !== -1) {
+        html = `${html.slice(0, at)}${notice}\n${html.slice(at)}`;
       }
     }
 
