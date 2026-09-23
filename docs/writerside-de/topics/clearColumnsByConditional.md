@@ -12,7 +12,7 @@
 
 ```typescript
 function clearColumnsByConditional(
-  sheet: GoogleAppsScript.Spreadsheet.Sheet,
+  target: GoogleAppsScript.Spreadsheet.Sheet | GoogleAppsScript.Spreadsheet.Range,
   predicate: ColumnPredicate,
   options: ColumnConditionalOptions | null | undefined = {}
 ): number;
@@ -22,13 +22,15 @@ function clearColumnsByConditional(
 
 Das Blatt wird einmal gelesen, das Leeren in zusammenhängende Blöcke gruppiert.
 
+Ein Blatt meint seinen ganzen Datenbereich; ein Bereich meint nur die Zellen darin, der Rest des Blatts wird weder gelesen noch berührt. In beiden Fällen erhält das Prädikat die Position im Blatt, eine Spalte behält also ihre echte Nummer.
+
 ## Parameter
 
-| Parameter                     | Typ                                             | Beschreibung                                                                                                                                                                                          |
-| :---------------------------- | :---------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sheet`                       | `GoogleAppsScript.Spreadsheet.Sheet`            | Das Blatt, auf dem gearbeitet wird.                                                                                                                                                                   |
-| `predicate`                   | `ColumnPredicate`                               | Bekommt die Zellen der Spalte, ihre einsbasierte Position und — wenn `headerColumn` gesetzt ist — die Spalte mit den Zeilennamen als Schlüsseln. `true` für die Spalten, auf die gewirkt werden soll. |
-| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined` | `headerColumn` benennt die Spalte mit den Zeilennamen und nimmt diese Spalte aus den Kandidaten heraus.                                                                                               |
+| Parameter                     | Typ                                                                        | Beschreibung                                                                                                                                                                                          |
+| :---------------------------- | :------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`                      | `GoogleAppsScript.Spreadsheet.Sheet \| GoogleAppsScript.Spreadsheet.Range` | Das Blatt, auf dem gearbeitet wird, oder der Bereich, innerhalb dessen gearbeitet wird: nur dessen Zellen werden gelesen, und nur sie werden geleert.                                                 |
+| `predicate`                   | `ColumnPredicate`                                                          | Bekommt die Zellen der Spalte, ihre einsbasierte Position und — wenn `headerColumn` gesetzt ist — die Spalte mit den Zeilennamen als Schlüsseln. `true` für die Spalten, auf die gewirkt werden soll. |
+| `options` _(optional)_ `= {}` | `ColumnConditionalOptions \| null \| undefined`                            | `headerColumn` benennt die Spalte mit den Zeilennamen und nimmt diese Spalte aus den Kandidaten heraus.                                                                                               |
 
 ## Rückgabewert
 
@@ -38,7 +40,7 @@ Das Blatt wird einmal gelesen, das Leeren in zusammenhängende Blöcke gruppiert
 
 | Ausnahme                   | Bedingung                                                                        |
 | :------------------------- | :------------------------------------------------------------------------------- |
-| `InvalidSheetException`    | das erste Argument ist kein Blatt.                                               |
+| `InvalidSheetException`    | das erste Argument weder ein Blatt noch ein Bereich ist.                         |
 | `IllegalArgumentException` | das Prädikat ist keine Funktion oder die Kopfposition keine positive ganze Zahl. |
 
 ## Beispiele
@@ -49,6 +51,17 @@ Das Blatt wird einmal gelesen, das Leeren in zusammenhängende Blöcke gruppiert
 const sheet = SpreadsheetApp.getActiveSheet();
 
 clearColumnsByConditional(sheet, (values) => values.every((cell) => cell === ""));
+```
+
+### Innerhalb eines Blocks
+
+```javascript
+const sheet = SpreadsheetApp.getActiveSheet();
+
+// Only B2:Z100 is read, and only those cells are cleared.
+clearColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
+  values.every((cell) => cell === "")
+);
 ```
 
 ## Siehe auch
