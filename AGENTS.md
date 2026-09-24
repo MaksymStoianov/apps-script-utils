@@ -22,11 +22,26 @@ reverted apart, and turn one conflict into three.
 
 ## 2. Every bug and every feature gets an issue, and a commit closes it
 
-1. **Issue first.** Before fixing a bug or building a feature, open one:
+1. **Issue first.** Before fixing a bug or building a feature, open one, and
+   open it complete — labelled, scheduled, owned and on the board:
 
    ```bash
-   gh issue create --title "..." --body "..." --label Kind/Bug   # or Kind/Feature
+   gh issue create --title "..." --body "..." \
+     --label Kind/Bug --label Priority/Medium \
+     --milestone v2.1.x --assignee MaksymStoianov
+   gh project item-add 2 --owner MaksymStoianov --url <issue-url>
    ```
+
+   - **Labels.** One `Kind/*` label — `Kind/Bug`, `Kind/Feature`,
+     `Kind/Enhancement` or `Kind/Documentation`, with `Kind/Security` added
+     when it applies — and one `Priority/*` label. GitHub's default `bug`,
+     `enhancement` and `documentation` labels do not exist in this repository.
+   - **Milestone.** A fix, a documentation change or build work goes to the
+     open patch line (`v2.1.x`); a new function or a behaviour change goes to
+     the next minor (`v2.2.x`). No issue is left without one.
+   - **Assignee.** The maintainer, `MaksymStoianov`, unless told otherwise.
+   - **Board.** The issue joins project 2 the moment it is filed, in `Todo`.
+     `Backlog` is not used for open work.
 
    One issue per distinct bug or feature.
 
@@ -50,6 +65,27 @@ reverted apart, and turn one conflict into three.
 
 4. **Don't leave the trail one-sided.** An issue whose work has landed must be
    closed; a change that landed without an issue gets one retroactively.
+
+5. **Move the card as the work moves.** The board is read as the state of the
+   work, so the agent doing the work keeps it current:
+
+   | When                                  | Status        |
+   | ------------------------------------- | ------------- |
+   | The issue is filed                    | `Todo`        |
+   | The branch is created and work starts | `In progress` |
+   | The pull request is opened            | `In review`   |
+   | The issue closes                      | `Done`        |
+
+   ```bash
+   gh project item-edit --project-id PVT_kwHOAmq0uM4BkEV2 --id <item-id> \
+     --field-id PVTSSF_lAHOAmq0uM4BkEV2zhi2Un8 --single-select-option-id <id>
+   # Todo a1e00ed2 · In progress 95d2f606 · In review b7de4a4a · Done 85dc5e33
+   ```
+
+   `<item-id>` is what `gh project item-add` printed, or comes from
+   `gh project item-list 2 --owner MaksymStoianov --format json`. An issue
+   closed as superseded or not planned keeps the milestone of the release
+   cycle in which that was decided, so the milestone view stays complete.
 
 Note that the issue closes when the commit reaches the **default branch**, which
 is `main`. Merging a pull request into `develop` does not close anything — the
