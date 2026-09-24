@@ -25,7 +25,7 @@ reverted apart, and turn one conflict into three.
 1. **Issue first.** Before fixing a bug or building a feature, open one:
 
    ```bash
-   gh issue create --title "..." --body "..." --label bug        # or --label enhancement
+   gh issue create --title "..." --body "..." --label Kind/Bug   # or Kind/Feature
    ```
 
    One issue per distinct bug or feature.
