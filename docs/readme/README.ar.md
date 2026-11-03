@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![شعار مشروع Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![شعار مشروع Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,11 +8,11 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | **العربية** | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | **العربية** | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
 <div dir="rtl" lang="ar">
 
-> أُنجزت هذه الترجمة بمساعدة الذكاء الاصطناعي انطلاقًا من [README.md](README.md) للإصدار 2.1.1. النسخة المرجعية هي ملف README الإنجليزي؛ ونرحّب بالتصحيحات — راجع [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> أُنجزت هذه الترجمة بمساعدة الذكاء الاصطناعي انطلاقًا من [README.md](../../README.md) للإصدار 2.1.1. النسخة المرجعية هي ملف README الإنجليزي؛ ونرحّب بالتصحيحات — راجع [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # أدوات مساعدة لمشاريع Google Apps Script™
 
@@ -22,8 +22,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -127,7 +127,7 @@ npm install @bootgs/utils
 ## التوثيق
 
 التوثيق الكامل منشور على **<https://bootgs.github.io/utils/>** (بالإنجليزية): أدلة، وشروحات لكل وحدة، والمرجع
-الكامل للدوال. يوجد مصدره في [`docs/writerside/`](docs/writerside/) ويُعاد بناؤه مع كل دفع (push) إلى `main`.
+الكامل للدوال. يوجد مصدره في [`docs/writerside/`](../writerside/) ويُعاد بناؤه مع كل دفع (push) إلى `main`.
 
 ترتيب مقترح للقراءة:
 
@@ -270,7 +270,7 @@ npm run dev
 
 ## الدوال حسب الفئة
 
-انتقل المرجع الكامل للدوال إلى موقع التوثيق (بالإنجليزية)، الذي يُبنى من [`docs/writerside/`](docs/writerside/)
+انتقل المرجع الكامل للدوال إلى موقع التوثيق (بالإنجليزية)، الذي يُبنى من [`docs/writerside/`](../writerside/)
 ويُنشر مع كل دفع (push) إلى `main`:
 
 **<https://bootgs.github.io/utils/>**
@@ -291,7 +291,7 @@ npm run dev
 
 ## المساهمة
 
-نرحّب بالمساهمات. راجع [CONTRIBUTING.md](CONTRIBUTING.md) للاطلاع على الدليل الكامل. باختصار:
+نرحّب بالمساهمات. راجع [CONTRIBUTING.md](../../CONTRIBUTING.md) للاطلاع على الدليل الكامل. باختصار:
 
 1. أنشئ نسخة (fork) من المستودع وفرعًا للميزة أو الإصلاح الذي تعمل عليه.
 2. أضف اختبارات أو حدّثها لتغطية تغييراتك.
@@ -299,15 +299,15 @@ npm run dev
 4. لا تعدّل `CHANGELOG.md` يدويًا — فهو يُولَّد تلقائيًا بواسطة [release-please](https://github.com/googleapis/release-please).
 5. افتح طلب دمج (pull request) يصف ما الذي تغيّر ولماذا.
 
-اتبع أسلوب الشيفرة واصطلاحات التسمية المعتمدة. راجع [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) للاطلاع على قواعد
+اتبع أسلوب الشيفرة واصطلاحات التسمية المعتمدة. راجع [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md) للاطلاع على قواعد
 المجتمع.
 
 ## الدعم
 
 - للإبلاغ عن الأخطاء أو طلب الميزات، ابحث عن [issue](https://github.com/bootgs/utils/issues) أو افتح واحدة على
   GitHub.
-- لمعرفة أحدث التغييرات، راجع [سجل التغييرات](CHANGELOG.md).
-- للإبلاغ عن ثغرة أمنية، اتبع [سياسة الأمان](SECURITY.md) بدلًا من فتح issue عامة.
+- لمعرفة أحدث التغييرات، راجع [سجل التغييرات](../../CHANGELOG.md).
+- للإبلاغ عن ثغرة أمنية، اتبع [سياسة الأمان](../../SECURITY.md) بدلًا من فتح issue عامة.
 - لدعم استمرار التطوير، راجع [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
 ## خارطة الطريق
@@ -318,14 +318,14 @@ npm run dev
 
 ## سجل التغييرات
 
-للاطلاع على قائمة مفصّلة بالتغييرات حسب الإصدار، راجع [CHANGELOG.md](CHANGELOG.md).
+للاطلاع على قائمة مفصّلة بالتغييرات حسب الإصدار، راجع [CHANGELOG.md](../../CHANGELOG.md).
 
 ## الترخيص
 
-هذا المشروع مرخّص بموجب Apache License 2.0. راجع [LICENSE](LICENSE) لمزيد من التفاصيل.
+هذا المشروع مرخّص بموجب Apache License 2.0. راجع [LICENSE](../../LICENSE) لمزيد من التفاصيل.
 
 رسم الشعار ليس جزءًا من ذلك الترخيص. إنه من أعمال مؤلفته، ويجوز إعادة استخدامه دون تعديل مع ذكر اسم المؤلفة وربط
-الإشارة إليها برابط، ويخضع لـ [docs/assets/images/README.md](docs/assets/images/README.md).
+الإشارة إليها برابط، ويخضع لـ [docs/assets/images/README.md](../assets/images/README.md).
 
 ## العلامات التجارية
 

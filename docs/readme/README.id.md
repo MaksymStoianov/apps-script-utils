@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Banner proyek Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![Banner proyek Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | **Bahasa Indonesia** | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | **Bahasa Indonesia** | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Terjemahan ini dibuat dengan bantuan AI dari [README.md](README.md) untuk versi 2.1.1. Versi acuannya adalah README berbahasa Inggris; koreksi sangat kami harapkan — lihat [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Terjemahan ini dibuat dengan bantuan AI dari [README.md](../../README.md) untuk versi 2.1.1. Versi acuannya adalah README berbahasa Inggris; koreksi sangat kami harapkan — lihat [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Utilitas untuk Google Apps Script™
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -111,7 +111,7 @@ npm install @bootgs/utils
 ## Dokumentasi
 
 Dokumentasi lengkap diterbitkan di **<https://bootgs.github.io/utils/>** (dalam bahasa Inggris): panduan, penjelasan
-per modul, dan referensi fungsi selengkapnya. Sumbernya ada di [`docs/writerside/`](docs/writerside/) dan dibangun
+per modul, dan referensi fungsi selengkapnya. Sumbernya ada di [`docs/writerside/`](../writerside/) dan dibangun
 ulang pada setiap push ke `main`.
 
 Urutan membaca yang disarankan:
@@ -228,7 +228,7 @@ npm run dev
 ## Fungsi per kategori
 
 Referensi fungsi selengkapnya telah dipindahkan ke situs dokumentasi, yang dibangun dari
-[`docs/writerside/`](docs/writerside/) dan diterbitkan pada setiap push ke `main`:
+[`docs/writerside/`](../writerside/) dan diterbitkan pada setiap push ke `main`:
 
 **<https://bootgs.github.io/utils/>**
 
@@ -249,7 +249,7 @@ terikat pada layanan Google, apa konsekuensinya, dan apa artinya bagi pengujian.
 
 ## Berkontribusi
 
-Kontribusi sangat kami sambut. Panduan lengkapnya ada di [CONTRIBUTING.md](CONTRIBUTING.md). Ringkasnya:
+Kontribusi sangat kami sambut. Panduan lengkapnya ada di [CONTRIBUTING.md](../../CONTRIBUTING.md). Ringkasnya:
 
 1. Fork repositori dan buat branch untuk fitur atau perbaikan bug Anda.
 2. Tambahkan atau perbarui pengujian yang mencakup perubahan Anda.
@@ -257,13 +257,13 @@ Kontribusi sangat kami sambut. Panduan lengkapnya ada di [CONTRIBUTING.md](CONTR
 4. Jangan mengedit `CHANGELOG.md` secara manual — file ini dibuat otomatis oleh [release-please](https://github.com/googleapis/release-please).
 5. Buka pull request yang menjelaskan apa yang berubah dan alasannya.
 
-Ikuti gaya kode dan konvensi penamaan yang sudah ada. Pedoman komunitas ada di [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+Ikuti gaya kode dan konvensi penamaan yang sudah ada. Pedoman komunitas ada di [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md).
 
 ## Dukungan
 
 - Untuk bug atau permintaan fitur, cari atau buka [issue](https://github.com/bootgs/utils/issues) di GitHub.
-- Untuk perubahan terbaru, lihat [catatan perubahan](CHANGELOG.md).
-- Untuk melaporkan kerentanan keamanan, ikuti [kebijakan keamanan](SECURITY.md) alih-alih membuka issue publik.
+- Untuk perubahan terbaru, lihat [catatan perubahan](../../CHANGELOG.md).
+- Untuk melaporkan kerentanan keamanan, ikuti [kebijakan keamanan](../../SECURITY.md) alih-alih membuka issue publik.
 - Untuk mendukung pengembangan yang berkelanjutan, lihat [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
 ## Peta jalan
@@ -275,15 +275,15 @@ Tidak ada dokumen peta jalan terpisah yang bisa tertinggal darinya: untuk mengus
 
 ## Catatan perubahan
 
-Untuk daftar perubahan per versi secara terperinci, lihat [CHANGELOG.md](CHANGELOG.md).
+Untuk daftar perubahan per versi secara terperinci, lihat [CHANGELOG.md](../../CHANGELOG.md).
 
 ## Lisensi
 
-Proyek ini dilisensikan di bawah Apache License 2.0. Lihat [LICENSE](LICENSE) untuk detailnya.
+Proyek ini dilisensikan di bawah Apache License 2.0. Lihat [LICENSE](../../LICENSE) untuk detailnya.
 
 Karya seni banner tidak termasuk dalam lisensi tersebut. Karya ini milik pembuatnya, boleh digunakan ulang tanpa
 diubah dengan mencantumkan nama pembuat beserta tautannya, dan diatur oleh
-[docs/assets/images/README.md](docs/assets/images/README.md).
+[docs/assets/images/README.md](../assets/images/README.md).
 
 ## Merek dagang
 

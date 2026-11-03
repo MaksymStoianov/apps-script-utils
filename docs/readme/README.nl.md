@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Projectbanner van Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![Projectbanner van Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | **Nederlands** | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | **Nederlands** | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Deze vertaling is met behulp van AI gemaakt op basis van [README.md](README.md) voor versie 2.1.1. De referentieversie is de Engelse README; correcties zijn welkom — zie [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Deze vertaling is met behulp van AI gemaakt op basis van [README.md](../../README.md) voor versie 2.1.1. De referentieversie is de Engelse README; correcties zijn welkom — zie [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Hulpprogramma's voor Google Apps Script™
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -111,7 +111,7 @@ npm install @bootgs/utils
 ## Documentatie
 
 De volledige documentatie staat op **<https://bootgs.github.io/utils/>** (in het Engels): handleidingen, uitleg per
-module en de complete functiereferentie. De bron staat in [`docs/writerside/`](docs/writerside/) en wordt bij elke
+module en de complete functiereferentie. De bron staat in [`docs/writerside/`](../writerside/) en wordt bij elke
 push naar `main` opnieuw gebouwd.
 
 Een goede leesvolgorde:
@@ -228,7 +228,7 @@ npm run dev
 ## Functies per categorie
 
 De volledige functiereferentie is verhuisd naar de documentatiesite (in het Engels), die wordt gebouwd vanuit
-[`docs/writerside/`](docs/writerside/) en bij elke push naar `main` wordt gepubliceerd:
+[`docs/writerside/`](../writerside/) en bij elke push naar `main` wordt gepubliceerd:
 
 **<https://bootgs.github.io/utils/>**
 
@@ -249,7 +249,7 @@ een Google-service gebonden zijn, wat dat kost en wat het betekent voor het test
 
 ## Bijdragen
 
-Bijdragen zijn welkom. Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor de volledige handleiding. Kort samengevat:
+Bijdragen zijn welkom. Zie [CONTRIBUTING.md](../../CONTRIBUTING.md) voor de volledige handleiding. Kort samengevat:
 
 1. Fork de repository en maak een branch aan voor je feature of bugfix.
 2. Voeg tests toe of werk ze bij zodat ze je wijzigingen dekken.
@@ -257,14 +257,14 @@ Bijdragen zijn welkom. Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor de volledige 
 4. Bewerk `CHANGELOG.md` niet handmatig: het bestand wordt automatisch gegenereerd door [release-please](https://github.com/googleapis/release-please).
 5. Open een pull request waarin je beschrijft wat er is veranderd en waarom.
 
-Volg de bestaande codestijl en naamgevingsconventies. Zie [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) voor de
+Volg de bestaande codestijl en naamgevingsconventies. Zie [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md) voor de
 gemeenschapsrichtlijnen.
 
 ## Ondersteuning
 
 - Voor bugs of featureverzoeken: zoek of open een [issue](https://github.com/bootgs/utils/issues) op GitHub.
-- Voor recente wijzigingen: zie de [changelog](CHANGELOG.md).
-- Om een beveiligingsprobleem te melden, volg je het [beveiligingsbeleid](SECURITY.md) in plaats van een openbare
+- Voor recente wijzigingen: zie de [changelog](../../CHANGELOG.md).
+- Om een beveiligingsprobleem te melden, volg je het [beveiligingsbeleid](../../SECURITY.md) in plaats van een openbare
   issue te openen.
 - Om de verdere ontwikkeling te steunen: zie [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
@@ -276,15 +276,15 @@ gaan lopen: wil je iets voorstellen, open dan een [issue](https://github.com/boo
 
 ## Changelog
 
-Een gedetailleerde lijst met wijzigingen per versie vind je in [CHANGELOG.md](CHANGELOG.md).
+Een gedetailleerde lijst met wijzigingen per versie vind je in [CHANGELOG.md](../../CHANGELOG.md).
 
 ## Licentie
 
-Dit project valt onder de Apache License 2.0. Zie [LICENSE](LICENSE) voor details.
+Dit project valt onder de Apache License 2.0. Zie [LICENSE](../../LICENSE) voor details.
 
 De bannerillustratie valt niet onder die licentie. Het is het werk van de maker, mag ongewijzigd worden hergebruikt
 mits de maker wordt vermeld en die vermelding een link bevat, en valt onder
-[docs/assets/images/README.md](docs/assets/images/README.md).
+[docs/assets/images/README.md](../assets/images/README.md).
 
 ## Handelsmerken
 

@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Баннер проекта Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![Баннер проекта Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | **Русский** | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | **Русский** | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Этот перевод выполнен с помощью ИИ по [README.md](README.md) для версии 2.1.1. Основной считается английская версия README; исправления приветствуются — см. [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Этот перевод выполнен с помощью ИИ по [README.md](../../README.md) для версии 2.1.1. Основной считается английская версия README; исправления приветствуются — см. [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Утилиты для Google Apps Script™
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -113,7 +113,7 @@ npm install @bootgs/utils
 
 Полная документация опубликована по адресу **<https://bootgs.github.io/utils/ru/>** —
 руководства, обзоры отдельных модулей и полный справочник функций. Её исходники лежат в
-[`docs/writerside-ru/`](docs/writerside-ru/) и пересобираются после каждого push в `main`.
+[`docs/writerside-ru/`](../writerside-ru/) и пересобираются после каждого push в `main`.
 
 Рекомендуемый порядок чтения:
 
@@ -229,7 +229,7 @@ npm run dev
 ## Функции по категориям
 
 Полный справочник функций переехал на сайт документации, который собирается из
-[`docs/writerside-ru/`](docs/writerside-ru/) и публикуется после каждого push в `main`:
+[`docs/writerside-ru/`](../writerside-ru/) и публикуется после каждого push в `main`:
 
 **<https://bootgs.github.io/utils/ru/>**
 
@@ -251,7 +251,7 @@ npm run dev
 
 ## Участие в разработке
 
-Вклад приветствуется. Полное руководство — в [CONTRIBUTING.md](CONTRIBUTING.md). Вкратце:
+Вклад приветствуется. Полное руководство — в [CONTRIBUTING.md](../../CONTRIBUTING.md). Вкратце:
 
 1. Сделайте форк репозитория и создайте ветку для своей функции или исправления.
 2. Добавьте или обновите тесты, покрывающие ваши изменения.
@@ -260,14 +260,14 @@ npm run dev
 5. Откройте pull request с описанием того, что изменилось и почему.
 
 Придерживайтесь существующего стиля кода и соглашений об именах. Правила сообщества — в
-[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+[CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md).
 
 ## Поддержка
 
 - Чтобы сообщить об ошибке или предложить функцию, найдите или откройте
   [issue](https://github.com/bootgs/utils/issues) на GitHub.
-- Последние изменения — в [журнале изменений](CHANGELOG.md).
-- Чтобы сообщить об уязвимости, следуйте [политике безопасности](SECURITY.md), а не открывайте публичный issue.
+- Последние изменения — в [журнале изменений](../../CHANGELOG.md).
+- Чтобы сообщить об уязвимости, следуйте [политике безопасности](../../SECURITY.md), а не открывайте публичный issue.
 - Поддержать дальнейшую разработку можно через [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
 ## Дорожная карта
@@ -278,14 +278,14 @@ npm run dev
 
 ## Журнал изменений
 
-Подробный список изменений по версиям — в [CHANGELOG.md](CHANGELOG.md).
+Подробный список изменений по версиям — в [CHANGELOG.md](../../CHANGELOG.md).
 
 ## Лицензия
 
-Проект распространяется по лицензии Apache License 2.0. Подробности — в [LICENSE](LICENSE).
+Проект распространяется по лицензии Apache License 2.0. Подробности — в [LICENSE](../../LICENSE).
 
 Иллюстрация баннера не подпадает под эту лицензию. Это работа её автора; её можно использовать без изменений,
-указав автора со ссылкой, а условия описаны в [docs/assets/images/README.md](docs/assets/images/README.md).
+указав автора со ссылкой, а условия описаны в [docs/assets/images/README.md](../assets/images/README.md).
 
 ## Товарные знаки
 

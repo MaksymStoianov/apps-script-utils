@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Google Apps Script Utils 專案橫幅](docs/assets/images/banner-1280x640.jpg)
+![Google Apps Script Utils 專案橫幅](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | **繁體中文**
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | **繁體中文**
 
-> 本翻譯以 AI 輔助，依據版本 2.1.1 的 [README.md](README.md) 製作。參考版本為英文版 README；歡迎提出修正，請參閱 [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations)。
+> 本翻譯以 AI 輔助，依據版本 2.1.1 的 [README.md](../../README.md) 製作。參考版本為英文版 README；歡迎提出修正，請參閱 [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations)。
 
 # Google Apps Script™ 工具函式庫
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -99,7 +99,7 @@ npm install @bootgs/utils
 
 ## 文件
 
-完整文件發布於 **<https://bootgs.github.io/utils/>**（英文），包含指南、各模組的逐步說明，以及完整的函式參考。其原始檔位於 [`docs/writerside/`](docs/writerside/)，每次推送到 `main` 時都會重新建置。
+完整文件發布於 **<https://bootgs.github.io/utils/>**（英文），包含指南、各模組的逐步說明，以及完整的函式參考。其原始檔位於 [`docs/writerside/`](../writerside/)，每次推送到 `main` 時都會重新建置。
 
 建議的閱讀順序：
 
@@ -211,7 +211,7 @@ npm run dev
 
 ## 依類別分類的函式
 
-完整的函式參考已移至文件網站（英文）。該網站由 [`docs/writerside/`](docs/writerside/) 建置，每次推送到 `main` 時發布：
+完整的函式參考已移至文件網站（英文）。該網站由 [`docs/writerside/`](../writerside/) 建置，每次推送到 `main` 時發布：
 
 **<https://bootgs.github.io/utils/>**
 
@@ -227,7 +227,7 @@ npm run dev
 
 ## 參與貢獻
 
-歡迎參與貢獻。完整指南請參閱 [CONTRIBUTING.md](CONTRIBUTING.md)。簡要步驟如下：
+歡迎參與貢獻。完整指南請參閱 [CONTRIBUTING.md](../../CONTRIBUTING.md)。簡要步驟如下：
 
 1. Fork 本儲存庫，並為你的新功能或錯誤修正建立分支。
 2. 新增或更新測試，以涵蓋你的變更。
@@ -235,13 +235,13 @@ npm run dev
 4. 請勿手動編輯 `CHANGELOG.md`，它由 [release-please](https://github.com/googleapis/release-please) 自動產生。
 5. 開啟 pull request，說明變更了什麼以及原因。
 
-請遵循既有的程式碼風格與命名慣例。社群準則請參閱 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
+請遵循既有的程式碼風格與命名慣例。社群準則請參閱 [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md)。
 
 ## 支援
 
 - 如需回報錯誤或提出功能需求，請在 GitHub 上搜尋或開啟 [issue](https://github.com/bootgs/utils/issues)。
-- 近期的變更請參閱[變更紀錄](CHANGELOG.md)。
-- 如需回報安全漏洞，請依照[安全政策](SECURITY.md)辦理，不要開啟公開的 issue。
+- 近期的變更請參閱[變更紀錄](../../CHANGELOG.md)。
+- 如需回報安全漏洞，請依照[安全政策](../../SECURITY.md)辦理，不要開啟公開的 issue。
 - 如想支持專案的持續開發，請前往 [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov)。
 
 ## 路線圖
@@ -250,13 +250,13 @@ npm run dev
 
 ## 變更紀錄
 
-依版本列出的詳細變更清單，請參閱 [CHANGELOG.md](CHANGELOG.md)。
+依版本列出的詳細變更清單，請參閱 [CHANGELOG.md](../../CHANGELOG.md)。
 
 ## 授權條款
 
-本專案採用 Apache License 2.0 授權。詳情請參閱 [LICENSE](LICENSE)。
+本專案採用 Apache License 2.0 授權。詳情請參閱 [LICENSE](../../LICENSE)。
 
-橫幅插圖不在該授權範圍內。它是作者的作品，在標註作者並附上連結的前提下，可不經修改地重複使用，相關規範請見 [docs/assets/images/README.md](docs/assets/images/README.md)。
+橫幅插圖不在該授權範圍內。它是作者的作品，在標註作者並附上連結的前提下，可不經修改地重複使用，相關規範請見 [docs/assets/images/README.md](../assets/images/README.md)。
 
 ## 商標
 

@@ -251,16 +251,19 @@ The project uses [Vitest](https://vitest.dev/) for testing.
 
 ### README Translations
 
-`README.md` is the authoritative version. The `README.<code>.md` files next to it are AI-assisted translations of it
-into Ukrainian (`uk`), Russian (`ru`), German (`de`), French (`fr`), Spanish (`es`), Portuguese (`pt`), Italian (`it`),
-Dutch (`nl`), Polish (`pl`), Czech (`cs`), Turkish (`tr`), Arabic (`ar`), Indonesian (`id`), Vietnamese (`vi`),
-Japanese (`ja`), Korean (`ko`), Simplified Chinese (`zh`) and Traditional Chinese (`zh-TW`). Corrections from native
-speakers are welcome as ordinary pull requests.
+`README.md` in the repository root is the authoritative version. The `docs/readme/README.<code>.md` files are
+AI-assisted translations of it into Ukrainian (`uk`), Russian (`ru`), German (`de`), French (`fr`), Spanish (`es`),
+Portuguese (`pt`), Italian (`it`), Dutch (`nl`), Polish (`pl`), Czech (`cs`), Turkish (`tr`), Arabic (`ar`),
+Indonesian (`id`), Vietnamese (`vi`), Japanese (`ja`), Korean (`ko`), Simplified Chinese (`zh`) and Traditional
+Chinese (`zh-TW`). Corrections from native speakers are welcome as ordinary pull requests.
 
 - **Keep the shape**: every README carries the same language switcher under the banner, and every translation has
   the same `##`/`###` headings as `README.md`. Translate prose only; code blocks, function names, commands, package
   names, URLs and badges stay as they are. Ukrainian, Russian, German and French link to their own documentation
   under `/<code>/`; the other languages link to the English documentation.
+- **Links are relative to `docs/readme/`**: other translations are `README.<code>.md`, English is `../../README.md`,
+  repository-root files are `../../<file>` (for example `../../CONTRIBUTING.md`) and paths under `docs/` drop the
+  prefix (for example `../writerside/`).
 - **Right-to-left languages**: the Arabic README wraps its prose in `<div dir="rtl" lang="ar">` … `</div>` blocks,
   with a blank line inside each wrapper so GitHub still renders the Markdown. Code blocks, badges, the scripts table
   and the switcher stay outside the wrappers, left to right; headings stay ordinary `##`/`###` lines.
@@ -273,8 +276,9 @@ speakers are welcome as ordinary pull requests.
   ```bash
   npm run docs:check-i18n
   ```
-  It fails when a translation is missing, lacks the switcher, has a different number of `##`/`###` headings than
-  `README.md`, or its note names a version other than the one in `package.json`. It does not compare wording.
+  It fails when a translation is missing, lacks the switcher, has a relative link to a file that does not exist, has
+  a different number of `##`/`###` headings than `README.md`, or its note names a version other than the one in
+  `package.json`. It does not compare wording.
 
 ## License
 

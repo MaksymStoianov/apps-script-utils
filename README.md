@@ -8,7 +8,7 @@
     </small>
 </p>
 
-**English** | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+**English** | [Українська](docs/readme/README.uk.md) | [Русский](docs/readme/README.ru.md) | [Deutsch](docs/readme/README.de.md) | [Français](docs/readme/README.fr.md) | [Español](docs/readme/README.es.md) | [Português](docs/readme/README.pt.md) | [Italiano](docs/readme/README.it.md) | [Nederlands](docs/readme/README.nl.md) | [Polski](docs/readme/README.pl.md) | [Čeština](docs/readme/README.cs.md) | [Türkçe](docs/readme/README.tr.md) | [العربية](docs/readme/README.ar.md) | [Bahasa Indonesia](docs/readme/README.id.md) | [Tiếng Việt](docs/readme/README.vi.md) | [日本語](docs/readme/README.ja.md) | [한국어](docs/readme/README.ko.md) | [简体中文](docs/readme/README.zh.md) | [繁體中文](docs/readme/README.zh-TW.md)
 
 # Utilities for Google Apps Script™
 
@@ -30,7 +30,7 @@
 
 <!-- TOC -->
 
-- [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script-projects)
+- [Utilities for Google Apps Script™ projects](#utilities-for-google-apps-script)
   - [Overview](#overview)
   - [Key Features](#key-features)
   - [AI Agent Skills](#ai-agent-skills)

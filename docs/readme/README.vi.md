@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Banner del proyecto Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![Banner del proyecto Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | **Tiếng Việt** | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | **Tiếng Việt** | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Bản dịch này được thực hiện với sự hỗ trợ của AI từ [README.md](README.md) cho phiên bản 2.1.1. Phiên bản tham chiếu là README tiếng Anh; mọi góp ý chỉnh sửa đều được hoan nghênh — xem [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Bản dịch này được thực hiện với sự hỗ trợ của AI từ [README.md](../../README.md) cho phiên bản 2.1.1. Phiên bản tham chiếu là README tiếng Anh; mọi góp ý chỉnh sửa đều được hoan nghênh — xem [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Tiện ích cho Google Apps Script™
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -112,7 +112,7 @@ npm install @bootgs/utils
 
 Tài liệu đầy đủ được xuất bản tại **<https://bootgs.github.io/utils/>** (bằng tiếng Anh): các hướng
 dẫn, phần giới thiệu từng module và tài liệu tham chiếu đầy đủ của các hàm. Mã nguồn của tài liệu nằm trong
-[`docs/writerside/`](docs/writerside/) và được build lại mỗi lần push lên `main`.
+[`docs/writerside/`](../writerside/) và được build lại mỗi lần push lên `main`.
 
 Thứ tự đọc được đề xuất:
 
@@ -228,7 +228,7 @@ npm run dev
 ## Hàm theo danh mục
 
 Tài liệu tham chiếu đầy đủ của các hàm đã được chuyển sang trang tài liệu, được build từ
-[`docs/writerside/`](docs/writerside/) và xuất bản mỗi lần push lên `main`:
+[`docs/writerside/`](../writerside/) và xuất bản mỗi lần push lên `main`:
 
 **<https://bootgs.github.io/utils/>**
 
@@ -250,7 +250,7 @@ thử.
 
 ## Đóng góp
 
-Chúng tôi hoan nghênh mọi đóng góp. Xem hướng dẫn đầy đủ tại [CONTRIBUTING.md](CONTRIBUTING.md). Tóm tắt:
+Chúng tôi hoan nghênh mọi đóng góp. Xem hướng dẫn đầy đủ tại [CONTRIBUTING.md](../../CONTRIBUTING.md). Tóm tắt:
 
 1. Fork kho mã và tạo một nhánh cho tính năng hoặc bản sửa lỗi của bạn.
 2. Thêm hoặc cập nhật kiểm thử để bao phủ các thay đổi của bạn.
@@ -258,15 +258,15 @@ Chúng tôi hoan nghênh mọi đóng góp. Xem hướng dẫn đầy đủ tạ
 4. Không chỉnh sửa `CHANGELOG.md` thủ công — tệp này được tạo tự động bởi [release-please](https://github.com/googleapis/release-please).
 5. Mở một pull request mô tả những gì đã thay đổi và lý do.
 
-Hãy tuân theo phong cách mã và quy ước đặt tên hiện có. Xem [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) để biết các quy
+Hãy tuân theo phong cách mã và quy ước đặt tên hiện có. Xem [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md) để biết các quy
 tắc của cộng đồng.
 
 ## Hỗ trợ
 
 - Đối với lỗi hoặc yêu cầu tính năng, hãy tìm kiếm hoặc mở một [issue](https://github.com/bootgs/utils/issues)
   trên GitHub.
-- Để xem các thay đổi gần đây, hãy xem [nhật ký thay đổi](CHANGELOG.md).
-- Để báo cáo lỗ hổng bảo mật, hãy làm theo [chính sách bảo mật](SECURITY.md) thay vì mở một issue công khai.
+- Để xem các thay đổi gần đây, hãy xem [nhật ký thay đổi](../../CHANGELOG.md).
+- Để báo cáo lỗ hổng bảo mật, hãy làm theo [chính sách bảo mật](../../SECURITY.md) thay vì mở một issue công khai.
 - Để ủng hộ việc phát triển liên tục, hãy xem [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
 ## Lộ trình
@@ -277,15 +277,15 @@ Những việc đã lên kế hoạch, đang thực hiện hoặc đã hoàn th�
 
 ## Nhật ký thay đổi
 
-Để xem danh sách chi tiết các thay đổi theo từng phiên bản, hãy xem [CHANGELOG.md](CHANGELOG.md).
+Để xem danh sách chi tiết các thay đổi theo từng phiên bản, hãy xem [CHANGELOG.md](../../CHANGELOG.md).
 
 ## Giấy phép
 
-Dự án này được cấp phép theo Apache License 2.0. Xem [LICENSE](LICENSE) để biết chi tiết.
+Dự án này được cấp phép theo Apache License 2.0. Xem [LICENSE](../../LICENSE) để biết chi tiết.
 
 Hình minh họa banner không thuộc phạm vi giấy phép đó. Đây là tác phẩm của tác giả, có thể được tái sử dụng mà không
 chỉnh sửa với điều kiện ghi công tác giả kèm liên kết, và được điều chỉnh bởi
-[docs/assets/images/README.md](docs/assets/images/README.md).
+[docs/assets/images/README.md](../assets/images/README.md).
 
 ## Nhãn hiệu
 

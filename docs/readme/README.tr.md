@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Google Apps Script Utils proje banner'ı](docs/assets/images/banner-1280x640.jpg)
+![Google Apps Script Utils proje banner'ı](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | **Türkçe** | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | **Türkçe** | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Bu çeviri, 2.1.1 sürümü için [README.md](README.md) dosyasından yapay zekâ desteğiyle yapılmıştır. Referans sürüm İngilizce README'dir; düzeltmelerinizi bekliyoruz — bkz. [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Bu çeviri, 2.1.1 sürümü için [README.md](../../README.md) dosyasından yapay zekâ desteğiyle yapılmıştır. Referans sürüm İngilizce README'dir; düzeltmelerinizi bekliyoruz — bkz. [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Google Apps Script™ için yardımcı araçlar
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -110,7 +110,7 @@ npm install @bootgs/utils
 ## Dokümantasyon
 
 Dokümantasyonun tamamı **<https://bootgs.github.io/utils/>** adresinde (İngilizce) yayımlanır: kılavuzlar, her modül
-için adım adım anlatımlar ve eksiksiz fonksiyon başvurusu. Kaynağı [`docs/writerside/`](docs/writerside/) dizinindedir
+için adım adım anlatımlar ve eksiksiz fonksiyon başvurusu. Kaynağı [`docs/writerside/`](../writerside/) dizinindedir
 ve `main` dalına yapılan her push'ta yeniden derlenir.
 
 Önerilen okuma sırası:
@@ -226,7 +226,7 @@ npm run dev
 
 ## Kategorilere göre fonksiyonlar
 
-Fonksiyon başvurusunun tamamı, [`docs/writerside/`](docs/writerside/) dizininden derlenen ve `main` dalına yapılan her
+Fonksiyon başvurusunun tamamı, [`docs/writerside/`](../writerside/) dizininden derlenen ve `main` dalına yapılan her
 push'ta yayımlanan dokümantasyon sitesine taşındı (İngilizce):
 
 **<https://bootgs.github.io/utils/>**
@@ -249,7 +249,7 @@ ele alır.
 
 ## Katkıda bulunma
 
-Katkılarınızı memnuniyetle karşılıyoruz. Kılavuzun tamamı için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına bakın.
+Katkılarınızı memnuniyetle karşılıyoruz. Kılavuzun tamamı için [CONTRIBUTING.md](../../CONTRIBUTING.md) dosyasına bakın.
 Özetle:
 
 1. Depoyu fork'layın ve özelliğiniz ya da hata düzeltmeniz için bir dal oluşturun.
@@ -258,15 +258,15 @@ Katkılarınızı memnuniyetle karşılıyoruz. Kılavuzun tamamı için [CONTRI
 4. `CHANGELOG.md` dosyasını elle düzenlemeyin — [release-please](https://github.com/googleapis/release-please) tarafından otomatik olarak oluşturulur.
 5. Neyin neden değiştiğini açıklayan bir pull request açın.
 
-Mevcut kod stiline ve adlandırma kurallarına uyun. Topluluk kuralları için [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+Mevcut kod stiline ve adlandırma kurallarına uyun. Topluluk kuralları için [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md)
 dosyasına bakın.
 
 ## Destek
 
 - Hatalar veya özellik istekleri için GitHub'da bir [issue](https://github.com/bootgs/utils/issues)
   arayın ya da açın.
-- Son değişiklikler için [değişiklik günlüğüne](CHANGELOG.md) bakın.
-- Bir güvenlik açığı bildirmek için herkese açık bir issue açmak yerine [güvenlik politikasını](SECURITY.md) izleyin.
+- Son değişiklikler için [değişiklik günlüğüne](../../CHANGELOG.md) bakın.
+- Bir güvenlik açığı bildirmek için herkese açık bir issue açmak yerine [güvenlik politikasını](../../SECURITY.md) izleyin.
 - Süregelen geliştirmeyi desteklemek için [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov) sayfasına
   bakın.
 
@@ -279,14 +279,14 @@ açın.
 
 ## Değişiklik günlüğü
 
-Sürümlere göre değişikliklerin ayrıntılı listesi için [CHANGELOG.md](CHANGELOG.md) dosyasına bakın.
+Sürümlere göre değişikliklerin ayrıntılı listesi için [CHANGELOG.md](../../CHANGELOG.md) dosyasına bakın.
 
 ## Lisans
 
-Bu proje Apache License 2.0 ile lisanslanmıştır. Ayrıntılar için [LICENSE](LICENSE) dosyasına bakın.
+Bu proje Apache License 2.0 ile lisanslanmıştır. Ayrıntılar için [LICENSE](../../LICENSE) dosyasına bakın.
 
 Banner görseli bu lisansın kapsamında değildir. Sanatçısına aittir; sanatçının adı belirtilip bu atıf bağlantıyla
-verildiği sürece değiştirilmeden yeniden kullanılabilir ve [docs/assets/images/README.md](docs/assets/images/README.md)
+verildiği sürece değiştirilmeden yeniden kullanılabilir ve [docs/assets/images/README.md](../assets/images/README.md)
 kapsamındadır.
 
 ## Ticari markalar

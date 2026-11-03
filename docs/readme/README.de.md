@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Projektbanner für Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![Projektbanner für Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | **Deutsch** | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | **Deutsch** | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Diese Übersetzung wurde mit KI-Unterstützung aus [README.md](README.md) für Version 2.1.1 erstellt. Maßgeblich ist die englische README; Korrekturen sind willkommen — siehe [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Diese Übersetzung wurde mit KI-Unterstützung aus [README.md](../../README.md) für Version 2.1.1 erstellt. Maßgeblich ist die englische README; Korrekturen sind willkommen — siehe [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Werkzeuge für Google Apps Script™
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -113,7 +113,7 @@ npm install @bootgs/utils
 
 Die vollständige Dokumentation ist unter **<https://bootgs.github.io/utils/de/>** veröffentlicht —
 Anleitungen, Rundgänge durch die einzelnen Module und die komplette Funktionsreferenz. Ihre Quelle liegt in
-[`docs/writerside-de/`](docs/writerside-de/) und wird bei jedem Push auf `main` neu gebaut.
+[`docs/writerside-de/`](../writerside-de/) und wird bei jedem Push auf `main` neu gebaut.
 
 Eine sinnvolle Lesereihenfolge:
 
@@ -229,7 +229,7 @@ npm run dev
 ## Funktionen nach Kategorie
 
 Die vollständige Funktionsreferenz ist auf die Dokumentationsseite umgezogen, die aus
-[`docs/writerside-de/`](docs/writerside-de/) gebaut und bei jedem Push auf `main` veröffentlicht wird:
+[`docs/writerside-de/`](../writerside-de/) gebaut und bei jedem Push auf `main` veröffentlicht wird:
 
 **<https://bootgs.github.io/utils/de/>**
 
@@ -250,7 +250,7 @@ behandelt, welche Helfer an einen Google-Dienst gebunden sind, was das kostet un
 
 ## Mitwirken
 
-Beiträge sind willkommen. Die vollständige Anleitung steht in [CONTRIBUTING.md](CONTRIBUTING.md). Kurz gefasst:
+Beiträge sind willkommen. Die vollständige Anleitung steht in [CONTRIBUTING.md](../../CONTRIBUTING.md). Kurz gefasst:
 
 1. Forken Sie das Repository und legen Sie einen Branch für Ihr Feature oder Ihren Bugfix an.
 2. Fügen Sie Tests hinzu oder passen Sie sie an, sodass Ihre Änderungen abgedeckt sind.
@@ -259,14 +259,14 @@ Beiträge sind willkommen. Die vollständige Anleitung steht in [CONTRIBUTING.md
 5. Öffnen Sie einen Pull Request, der beschreibt, was sich geändert hat und warum.
 
 Halten Sie sich an den bestehenden Codestil und die Namenskonventionen. Die Regeln der Community stehen in
-[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+[CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md).
 
 ## Unterstützung
 
 - Für Fehlermeldungen oder Feature-Wünsche suchen oder eröffnen Sie ein
   [Issue](https://github.com/bootgs/utils/issues) auf GitHub.
-- Die jüngsten Änderungen finden Sie im [Änderungsprotokoll](CHANGELOG.md).
-- Um eine Sicherheitslücke zu melden, folgen Sie der [Sicherheitsrichtlinie](SECURITY.md), statt ein öffentliches
+- Die jüngsten Änderungen finden Sie im [Änderungsprotokoll](../../CHANGELOG.md).
+- Um eine Sicherheitslücke zu melden, folgen Sie der [Sicherheitsrichtlinie](../../SECURITY.md), statt ein öffentliches
   Issue zu eröffnen.
 - Die weitere Entwicklung können Sie über [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov) unterstützen.
 
@@ -278,15 +278,15 @@ nicht: Um etwas vorzuschlagen, eröffnen Sie ein [Issue](https://github.com/boot
 
 ## Änderungsprotokoll
 
-Eine ausführliche Liste der Änderungen nach Version finden Sie in [CHANGELOG.md](CHANGELOG.md).
+Eine ausführliche Liste der Änderungen nach Version finden Sie in [CHANGELOG.md](../../CHANGELOG.md).
 
 ## Lizenz
 
-Dieses Projekt steht unter der Apache License 2.0. Einzelheiten finden Sie in [LICENSE](LICENSE).
+Dieses Projekt steht unter der Apache License 2.0. Einzelheiten finden Sie in [LICENSE](../../LICENSE).
 
 Das Bannerbild fällt nicht unter diese Lizenz. Es ist das Werk seiner Urheberin, darf unverändert weiterverwendet
 werden, sofern die Urheberin genannt und die Nennung verlinkt wird, und ist in
-[docs/assets/images/README.md](docs/assets/images/README.md) geregelt.
+[docs/assets/images/README.md](../assets/images/README.md) geregelt.
 
 ## Marken
 

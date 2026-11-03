@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Google Apps Script Utils 프로젝트 배너](docs/assets/images/banner-1280x640.jpg)
+![Google Apps Script Utils 프로젝트 배너](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | **한국어** | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | **한국어** | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> 이 번역은 버전 2.1.1의 [README.md](README.md)를 바탕으로 AI의 도움을 받아 작성했습니다. 기준이 되는 버전은 영어 README이며, 수정 제안을 환영합니다. 자세한 내용은 [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations)를 참고하세요.
+> 이 번역은 버전 2.1.1의 [README.md](../../README.md)를 바탕으로 AI의 도움을 받아 작성했습니다. 기준이 되는 버전은 영어 README이며, 수정 제안을 환영합니다. 자세한 내용은 [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations)를 참고하세요.
 
 # Google Apps Script™용 유틸리티
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -99,7 +99,7 @@ npm install @bootgs/utils
 
 ## 문서
 
-전체 문서는 **<https://bootgs.github.io/utils/>**(영어)에 게시되어 있습니다. 가이드, 모듈별 안내, 전체 함수 레퍼런스를 담고 있습니다. 소스는 [`docs/writerside/`](docs/writerside/)에 있으며 `main`에 push할 때마다 다시 빌드됩니다.
+전체 문서는 **<https://bootgs.github.io/utils/>**(영어)에 게시되어 있습니다. 가이드, 모듈별 안내, 전체 함수 레퍼런스를 담고 있습니다. 소스는 [`docs/writerside/`](../writerside/)에 있으며 `main`에 push할 때마다 다시 빌드됩니다.
 
 추천하는 읽는 순서:
 
@@ -211,7 +211,7 @@ npm run dev
 
 ## 카테고리별 함수
 
-전체 함수 레퍼런스는 문서 사이트(영어)로 옮겨졌습니다. 이 사이트는 [`docs/writerside/`](docs/writerside/)에서 빌드되며 `main`에 push할 때마다 게시됩니다.
+전체 함수 레퍼런스는 문서 사이트(영어)로 옮겨졌습니다. 이 사이트는 [`docs/writerside/`](../writerside/)에서 빌드되며 `main`에 push할 때마다 게시됩니다.
 
 **<https://bootgs.github.io/utils/>**
 
@@ -227,7 +227,7 @@ npm run dev
 
 ## 기여하기
 
-기여를 환영합니다. 전체 가이드는 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요. 요약하면 다음과 같습니다.
+기여를 환영합니다. 전체 가이드는 [CONTRIBUTING.md](../../CONTRIBUTING.md)를 참고하세요. 요약하면 다음과 같습니다.
 
 1. 저장소를 포크하고 기능 추가나 버그 수정을 위한 브랜치를 만듭니다.
 2. 변경 사항을 검증하는 테스트를 추가하거나 업데이트합니다.
@@ -235,13 +235,13 @@ npm run dev
 4. `CHANGELOG.md`는 직접 수정하지 마세요. [release-please](https://github.com/googleapis/release-please)가 자동으로 생성합니다.
 5. 무엇을 왜 변경했는지 설명하는 풀 리퀘스트를 엽니다.
 
-기존 코드 스타일과 명명 규칙을 따라 주세요. 커뮤니티 가이드라인은 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)를 참고하세요.
+기존 코드 스타일과 명명 규칙을 따라 주세요. 커뮤니티 가이드라인은 [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md)를 참고하세요.
 
 ## 지원
 
 - 버그 신고나 기능 요청은 GitHub에서 [이슈](https://github.com/bootgs/utils/issues)를 검색하거나 새로 등록해 주세요.
-- 최근 변경 사항은 [변경 이력](CHANGELOG.md)을 참고하세요.
-- 보안 취약점은 공개 이슈를 여는 대신 [보안 정책](SECURITY.md)에 따라 신고해 주세요.
+- 최근 변경 사항은 [변경 이력](../../CHANGELOG.md)을 참고하세요.
+- 보안 취약점은 공개 이슈를 여는 대신 [보안 정책](../../SECURITY.md)에 따라 신고해 주세요.
 - 지속적인 개발을 후원하려면 [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov)를 참고하세요.
 
 ## 로드맵
@@ -250,13 +250,13 @@ npm run dev
 
 ## 변경 이력
 
-버전별 변경 사항의 자세한 목록은 [CHANGELOG.md](CHANGELOG.md)를 참고하세요.
+버전별 변경 사항의 자세한 목록은 [CHANGELOG.md](../../CHANGELOG.md)를 참고하세요.
 
 ## 라이선스
 
-이 프로젝트는 Apache License 2.0에 따라 배포됩니다. 자세한 내용은 [LICENSE](LICENSE)를 참고하세요.
+이 프로젝트는 Apache License 2.0에 따라 배포됩니다. 자세한 내용은 [LICENSE](../../LICENSE)를 참고하세요.
 
-배너 일러스트는 이 라이선스에 포함되지 않습니다. 이 작품은 작가의 저작물로, 작가를 표기하고 그 표기에 링크를 걸면 수정하지 않은 상태로 재사용할 수 있으며, [docs/assets/images/README.md](docs/assets/images/README.md)의 적용을 받습니다.
+배너 일러스트는 이 라이선스에 포함되지 않습니다. 이 작품은 작가의 저작물로, 작가를 표기하고 그 표기에 링크를 걸면 수정하지 않은 상태로 재사용할 수 있으며, [docs/assets/images/README.md](../assets/images/README.md)의 적용을 받습니다.
 
 ## 상표
 

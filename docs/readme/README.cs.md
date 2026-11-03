@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Banner projektu Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![Banner projektu Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | **Čeština** | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | **Čeština** | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Tento překlad vznikl s pomocí AI z [README.md](README.md) pro verzi 2.1.1. Referenční verzí je anglické README; opravy jsou vítány — viz [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Tento překlad vznikl s pomocí AI z [README.md](../../README.md) pro verzi 2.1.1. Referenční verzí je anglické README; opravy jsou vítány — viz [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Utility pro Google Apps Script™
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -112,7 +112,7 @@ npm install @bootgs/utils
 
 Úplná dokumentace je zveřejněna na **<https://bootgs.github.io/utils/>** (v angličtině):
 průvodci, procházky jednotlivými moduly a kompletní reference funkcí. Její zdroj je v
-[`docs/writerside/`](docs/writerside/) a znovu se sestavuje při každém push do `main`.
+[`docs/writerside/`](../writerside/) a znovu se sestavuje při každém push do `main`.
 
 Doporučené pořadí čtení:
 
@@ -228,7 +228,7 @@ npm run dev
 ## Funkce podle kategorií
 
 Úplná reference funkcí se přesunula na web s dokumentací, který se sestavuje z
-[`docs/writerside/`](docs/writerside/) a zveřejňuje při každém push do `main`:
+[`docs/writerside/`](../writerside/) a zveřejňuje při každém push do `main`:
 
 **<https://bootgs.github.io/utils/>**
 
@@ -249,7 +249,7 @@ vysvětluje, které pomocné funkce jsou vázány na službu Google, co to stoj�
 
 ## Jak přispět
 
-Příspěvky jsou vítány. Úplný návod najdete v [CONTRIBUTING.md](CONTRIBUTING.md). Ve zkratce:
+Příspěvky jsou vítány. Úplný návod najdete v [CONTRIBUTING.md](../../CONTRIBUTING.md). Ve zkratce:
 
 1. Vytvořte fork repozitáře a založte větev pro novou funkci nebo opravu chyby.
 2. Přidejte nebo aktualizujte testy, které pokrývají vaše změny.
@@ -258,14 +258,14 @@ Příspěvky jsou vítány. Úplný návod najdete v [CONTRIBUTING.md](CONTRIBUT
 5. Otevřete pull request s popisem toho, co se změnilo a proč.
 
 Dodržujte stávající styl kódu a konvence pojmenování. Pravidla komunity najdete v
-[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+[CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md).
 
 ## Podpora
 
 - Chyby nebo požadavky na nové funkce vyhledejte nebo nahlaste jako [issue](https://github.com/bootgs/utils/issues)
   na GitHubu.
-- Nedávné změny najdete v [seznamu změn](CHANGELOG.md).
-- Bezpečnostní zranitelnost nahlaste podle [bezpečnostní politiky](SECURITY.md), nikoli ve veřejném issue.
+- Nedávné změny najdete v [seznamu změn](../../CHANGELOG.md).
+- Bezpečnostní zranitelnost nahlaste podle [bezpečnostní politiky](../../SECURITY.md), nikoli ve veřejném issue.
 - Chcete-li podpořit další vývoj, navštivte [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
 ## Plán vývoje
@@ -276,14 +276,14 @@ chcete-li něco navrhnout, otevřete [issue](https://github.com/bootgs/utils/iss
 
 ## Seznam změn
 
-Podrobný seznam změn podle verzí najdete v [CHANGELOG.md](CHANGELOG.md).
+Podrobný seznam změn podle verzí najdete v [CHANGELOG.md](../../CHANGELOG.md).
 
 ## Licence
 
-Tento projekt je licencován pod licencí Apache License 2.0. Podrobnosti najdete v [LICENSE](LICENSE).
+Tento projekt je licencován pod licencí Apache License 2.0. Podrobnosti najdete v [LICENSE](../../LICENSE).
 
 Ilustrace banneru není součástí této licence. Je dílem své autorky, smí být znovu použita bez úprav, pokud je autorka
-uvedena a uvedení odkazuje na její stránky, a vztahuje se na ni [docs/assets/images/README.md](docs/assets/images/README.md).
+uvedena a uvedení odkazuje na její stránky, a vztahuje se na ni [docs/assets/images/README.md](../assets/images/README.md).
 
 ## Ochranné známky
 
