@@ -108,7 +108,7 @@
     "@types/eslint-plugin-security": "^3.0.1",
     "@types/google-apps-script": "^2.0.12",
     "@types/node": "^25.0.9",
-    "@vitest/coverage-v8": "^4.1.11",
+    "@vitest/coverage-v8": "^4.1.12",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-googleappsscript": "^1.0.5",
@@ -119,6 +119,6 @@
     "reflect-metadata": "^0.2.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.53.0",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.12"
   }
 }
