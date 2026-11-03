@@ -4,7 +4,7 @@
 
 <link-summary>Löst die Segmente `.` und `..` eines Pfades auf.</link-summary>
 
-<web-summary>normalize() — Löst die Segmente `.` und `..` eines Pfades auf. apps-script-utils, Deutsch.</web-summary>
+<web-summary>normalize() — Löst die Segmente `.` und `..` eines Pfades auf. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code></p>
@@ -45,4 +45,4 @@ normalize("/a/b/../c/"); // => "/a/c"
 
 ## Quellcode
 
-[`src/net/path/normalize.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/normalize.ts)
+[`src/net/path/normalize.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/normalize.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Як `getValues` читає аркуш.</link-summary>
 
-<web-summary>GetValuesConfig — Як `getValues` читає аркуш. apps-script-utils, Українська.</web-summary>
+<web-summary>GetValuesConfig — Як `getValues` читає аркуш. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -38,4 +38,4 @@ const config = {
 
 ## Вихідний код
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

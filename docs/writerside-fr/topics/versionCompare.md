@@ -4,7 +4,7 @@
 
 <link-summary>Compare deux chaînes de version numériquement.</link-summary>
 
-<web-summary>versionCompare() — Compare deux chaînes de version numériquement. apps-script-utils, Français.</web-summary>
+<web-summary>versionCompare() — Compare deux chaînes de version numériquement. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -53,4 +53,4 @@ versionCompare("1.2.3", "1.2.3-beta"); // throws TypeError
 
 ## Code source
 
-[`src/lang/string/versionCompare.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/versionCompare.ts)
+[`src/lang/string/versionCompare.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/versionCompare.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є лічильним числом.</link-summary>
 
-<web-summary>nonCountable() — Перевіряє, що значення **не** є лічильним числом. apps-script-utils, Українська.</web-summary>
+<web-summary>nonCountable() — Перевіряє, що значення **не** є лічильним числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -52,4 +52,4 @@ nonCountable(42); // => false
 
 ## Вихідний код
 
-[`src/lang/number/nonCountable.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonCountable.ts)
+[`src/lang/number/nonCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonCountable.ts)

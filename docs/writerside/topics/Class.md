@@ -4,7 +4,7 @@
 
 <link-summary>The abstract base the library's own classes extend.</link-summary>
 
-<web-summary>Class — The abstract base the library's own classes extend. apps-script-utils, English.</web-summary>
+<web-summary>Class — The abstract base the library's own classes extend. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang</code> · Since: 1.0.0</p>
@@ -38,4 +38,4 @@ class Money extends Class {
 
 ## Source
 
-[`src/lang/Class.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Class.ts)
+[`src/lang/Class.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Class.ts)

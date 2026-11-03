@@ -4,7 +4,7 @@
 
 <link-summary>Rappelle une fonction quand elle lève, avec une attente croissante entre les tentatives.</link-summary>
 
-<web-summary>retry() — Rappelle une fonction quand elle lève, avec une attente croissante entre les tentatives. apps-script-utils, Français.</web-summary>
+<web-summary>retry() — Rappelle une fonction quand elle lève, avec une attente croissante entre les tentatives. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/function</code> · Disponible depuis: 1.11.0</p>
@@ -55,4 +55,4 @@ const response = retry(() => UrlFetchApp.fetch(url), {
 
 ## Code source
 
-[`src/lang/function/retry.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/function/retry.ts)
+[`src/lang/function/retry.ts`](https://github.com/bootgs/utils/blob/main/src/lang/function/retry.ts)

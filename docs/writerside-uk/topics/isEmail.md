@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення адресою електронної пошти.</link-summary>
 
-<web-summary>isEmail() — Перевіряє, чи є значення адресою електронної пошти. apps-script-utils, Українська.</web-summary>
+<web-summary>isEmail() — Перевіряє, чи є значення адресою електронної пошти. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isEmail(""); // => false
 
 ## Вихідний код
 
-[`src/lang/string/isEmail.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isEmail.ts)
+[`src/lang/string/isEmail.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isEmail.ts)

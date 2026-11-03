@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Versionsangabe ist.</link-summary>
 
-<web-summary>nonValidVersion() — Prüft, ob ein Wert **nicht** eine Versionsangabe ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonValidVersion() — Prüft, ob ein Wert **nicht** eine Versionsangabe ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.11.0</p>
@@ -51,4 +51,4 @@ nonValidVersion("2026.01.15"); // => false
 
 ## Quellcode
 
-[`src/lang/string/nonValidVersion.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidVersion.ts)
+[`src/lang/string/nonValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidVersion.ts)

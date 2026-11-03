@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є числом.</link-summary>
 
-<web-summary>requireNonNumber() — Повертає значення, переконавшись, що воно не є числом. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonNumber() — Повертає значення, переконавшись, що воно не є числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonNumber(1.5); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonNumber.ts)
+[`src/lang/base/requireNonNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonNumber.ts)

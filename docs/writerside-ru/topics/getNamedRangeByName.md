@@ -4,7 +4,7 @@
 
 <link-summary>Находит именованный диапазон по имени.</link-summary>
 
-<web-summary>getNamedRangeByName() — Находит именованный диапазон по имени. apps-script-utils, Русский.</web-summary>
+<web-summary>getNamedRangeByName() — Находит именованный диапазон по имени. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ range?.getRange().getValues();
 
 ## Исходный код
 
-[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)
+[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)

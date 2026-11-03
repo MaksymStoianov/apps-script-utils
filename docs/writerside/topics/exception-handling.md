@@ -2,7 +2,7 @@
 
 <link-summary>The exception hierarchy, when each class is thrown, and how to catch them.</link-summary>
 
-<web-summary>Typed exceptions in apps-script-utils: the hierarchy under Exception, which guard throws which class, and how to catch them in a Google Apps Script project.</web-summary>
+<web-summary>Typed exceptions in @bootgs/utils: the hierarchy under Exception, which guard throws which class, and how to catch them in a Google Apps Script project.</web-summary>
 
 Every error this library raises is an instance of one class, `Exception`, or of something that extends it. A single
 `catch` clause can therefore tell the library's own failures apart from anything else the runtime throws.
@@ -39,7 +39,7 @@ so catching `RuntimeException` catches everything the library currently throws.
 `Exception` exposes a static type guard, which is the recommended test because it also narrows the type:
 
 ```typescript
-import { Exception, requireString } from "apps-script-utils";
+import { Exception, requireString } from "@bootgs/utils";
 
 try {
   requireString(input);
@@ -55,7 +55,7 @@ try {
 `instanceof` works as well, and is the way to catch one specific failure:
 
 ```typescript
-import { NullPointerException, requireNonNull } from "apps-script-utils";
+import { NullPointerException, requireNonNull } from "@bootgs/utils";
 
 try {
   const sheet = requireNonNull(spreadsheet.getSheetByName("Data"));

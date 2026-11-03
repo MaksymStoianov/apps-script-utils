@@ -4,7 +4,7 @@
 
 <link-summary>La base abstraite dont héritent les classes de la bibliothèque.</link-summary>
 
-<web-summary>Class — La base abstraite dont héritent les classes de la bibliothèque. apps-script-utils, Français.</web-summary>
+<web-summary>Class — La base abstraite dont héritent les classes de la bibliothèque. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang</code> · Disponible depuis: 1.0.0</p>
@@ -38,4 +38,4 @@ class Money extends Class {
 
 ## Code source
 
-[`src/lang/Class.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Class.ts)
+[`src/lang/Class.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Class.ts)

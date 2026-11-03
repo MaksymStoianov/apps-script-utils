@@ -4,7 +4,7 @@
 
 <link-summary>Заменяет имя листа в нотации A1, сохраняя диапазон.</link-summary>
 
-<web-summary>updateSheetNameInA1Notation() — Заменяет имя листа в нотации A1, сохраняя диапазон. apps-script-utils, Русский.</web-summary>
+<web-summary>updateSheetNameInA1Notation() — Заменяет имя листа в нотации A1, сохраняя диапазон. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.6.0</p>
@@ -45,4 +45,4 @@ updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
 
 ## Исходный код
 
-[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)
+[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)

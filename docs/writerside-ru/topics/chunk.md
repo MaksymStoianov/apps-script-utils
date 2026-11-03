@@ -4,7 +4,7 @@
 
 <link-summary>Делит массив на последовательные группы фиксированного размера, проверяя оба аргумента.</link-summary>
 
-<web-summary>chunk() — Делит массив на последовательные группы фиксированного размера, проверяя оба аргумента. apps-script-utils, Русский.</web-summary>
+<web-summary>chunk() — Делит массив на последовательные группы фиксированного размера, проверяя оба аргумента. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.0.0</p>
@@ -82,4 +82,4 @@ chunk([1, 2, 3], 1.5); // throws TypeError: Input 'size' must be an integer.
 
 ## Исходный код
 
-[`src/lang/array/chunk.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/chunk.ts)
+[`src/lang/array/chunk.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/chunk.ts)

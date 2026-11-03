@@ -4,7 +4,7 @@
 
 <link-summary>Maskiert die Zeichen, die in einem regulären Ausdruck eine Bedeutung tragen.</link-summary>
 
-<web-summary>escapeRegExp() — Maskiert die Zeichen, die in einem regulären Ausdruck eine Bedeutung tragen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>escapeRegExp() — Maskiert die Zeichen, die in einem regulären Ausdruck eine Bedeutung tragen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -49,4 +49,4 @@ new RegExp(escapeRegExp("1.5")).test("1x5"); // => false
 
 ## Quellcode
 
-[`src/lang/string/escapeRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/escapeRegExp.ts)
+[`src/lang/string/escapeRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/escapeRegExp.ts)

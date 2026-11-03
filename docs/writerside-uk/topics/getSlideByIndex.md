@@ -4,7 +4,7 @@
 
 <link-summary>Знаходить слайд на заданій позиції — у презентації або в активній.</link-summary>
 
-<web-summary>getSlideByIndex() — Знаходить слайд на заданій позиції — у презентації або в активній. apps-script-utils, Українська.</web-summary>
+<web-summary>getSlideByIndex() — Знаходить слайд на заданій позиції — у презентації або в активній. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.5.0</p>
@@ -55,4 +55,4 @@ const third = getSlideByIndex(2, SlidesApp.openById(id));
 
 ## Вихідний код
 
-[`src/appsscript/slide/getSlideByIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/getSlideByIndex.ts)
+[`src/appsscript/slide/getSlideByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/getSlideByIndex.ts)

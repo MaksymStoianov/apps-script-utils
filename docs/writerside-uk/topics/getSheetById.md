@@ -4,7 +4,7 @@
 
 <link-summary>Знаходить аркуш за ідентифікатором.</link-summary>
 
-<web-summary>getSheetById() — Знаходить аркуш за ідентифікатором. apps-script-utils, Українська.</web-summary>
+<web-summary>getSheetById() — Знаходить аркуш за ідентифікатором. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -55,4 +55,4 @@ if (sheet === null) {
 
 ## Вихідний код
 
-[`src/appsscript/sheet/getSheetById.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSheetById.ts)
+[`src/appsscript/sheet/getSheetById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetById.ts)

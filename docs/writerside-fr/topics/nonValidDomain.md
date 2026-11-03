@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un nom de domaine.</link-summary>
 
-<web-summary>nonValidDomain() — Vérifie qu'une valeur n'est **pas** un nom de domaine. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidDomain() — Vérifie qu'une valeur n'est **pas** un nom de domaine. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Disponible depuis: 1.11.0</p>
@@ -51,4 +51,4 @@ nonValidDomain("sub.example.co.uk"); // => false
 
 ## Code source
 
-[`src/net/path/nonValidDomain.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonValidDomain.ts)
+[`src/net/path/nonValidDomain.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/nonValidDomain.ts)

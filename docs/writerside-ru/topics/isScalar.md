@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение скалярным значением.</link-summary>
 
-<web-summary>isScalar() — Проверяет, является ли значение скалярным значением. apps-script-utils, Русский.</web-summary>
+<web-summary>isScalar() — Проверяет, является ли значение скалярным значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -53,4 +53,4 @@ isScalar(null); // => false
 
 ## Исходный код
 
-[`src/lang/base/isScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isScalar.ts)
+[`src/lang/base/isScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isScalar.ts)

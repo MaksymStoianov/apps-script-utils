@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является строкой версии.</link-summary>
 
-<web-summary>nonValidVersion() — Проверяет, что значение **не** является строкой версии. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidVersion() — Проверяет, что значение **не** является строкой версии. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -51,4 +51,4 @@ nonValidVersion("2026.01.15"); // => false
 
 ## Исходный код
 
-[`src/lang/string/nonValidVersion.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidVersion.ts)
+[`src/lang/string/nonValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidVersion.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Returns the interval between two dates in a chosen unit.</link-summary>
 
-<web-summary>diff() — Returns the interval between two dates in a chosen unit. apps-script-utils, English.</web-summary>
+<web-summary>diff() — Returns the interval between two dates in a chosen unit. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code> · Since: 1.11.0</p>
@@ -60,4 +60,4 @@ diff(new Date(2026, 0, 2, 1), new Date(2026, 0, 1, 23), "day"); // => 0
 
 ## Source
 
-[`src/time/diff.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/diff.ts)
+[`src/time/diff.ts`](https://github.com/bootgs/utils/blob/main/src/time/diff.ts)

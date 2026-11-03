@@ -4,7 +4,7 @@
 
 <link-summary>Indique si deux plages de grille se recouvrent sur au moins une cellule.</link-summary>
 
-<web-summary>doGridRangesIntersect() — Indique si deux plages de grille se recouvrent sur au moins une cellule. apps-script-utils, Français.</web-summary>
+<web-summary>doGridRangesIntersect() — Indique si deux plages de grille se recouvrent sur au moins une cellule. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -47,4 +47,4 @@ doGridRangesIntersect(left, right); // => true
 
 ## Code source
 
-[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)
+[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)

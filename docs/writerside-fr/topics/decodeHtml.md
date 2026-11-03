@@ -4,7 +4,7 @@
 
 <link-summary>Retransforme les références numériques en caractères.</link-summary>
 
-<web-summary>decodeHtml() — Retransforme les références numériques en caractères. apps-script-utils, Français.</web-summary>
+<web-summary>decodeHtml() — Retransforme les références numériques en caractères. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>html</code> · Disponible depuis: 1.0.0</p>
@@ -49,4 +49,4 @@ decodeHtml("&amp;"); // => "&amp;"
 
 ## Code source
 
-[`src/html/decodeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/decodeHtml.ts)
+[`src/html/decodeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/decodeHtml.ts)

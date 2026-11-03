@@ -4,7 +4,7 @@
 
 <link-summary>null или undefined оказались там, где требовался объект.</link-summary>
 
-<web-summary>NullPointerException — null или undefined оказались там, где требовался объект. apps-script-utils, Русский.</web-summary>
+<web-summary>NullPointerException — null или undefined оказались там, где требовался объект. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/NullPointerException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/NullPointerException.ts)
+[`src/exception/NullPointerException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/NullPointerException.ts)

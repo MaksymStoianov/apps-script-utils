@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Präsentations-Id zurück oder wirft.</link-summary>
 
-<web-summary>requireValidPresentationId() — Gibt den Wert als eine Präsentations-Id zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireValidPresentationId() — Gibt den Wert als eine Präsentations-Id zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.11.0</p>
@@ -56,4 +56,4 @@ requireValidPresentationId("has space in it and is long enough to pass"); // thr
 
 ## Quellcode
 
-[`src/appsscript/slide/requireValidPresentationId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requireValidPresentationId.ts)
+[`src/appsscript/slide/requireValidPresentationId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireValidPresentationId.ts)

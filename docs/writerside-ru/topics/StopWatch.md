@@ -4,7 +4,7 @@
 
 <link-summary>Измеряет время последовательности именованных задач.</link-summary>
 
-<web-summary>StopWatch — Измеряет время последовательности именованных задач. apps-script-utils, Русский.</web-summary>
+<web-summary>StopWatch — Измеряет время последовательности именованных задач. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time</code> · Доступно с: 1.11.0</p>
@@ -45,4 +45,4 @@ watch.getTotalTimeMillis();
 
 ## Исходный код
 
-[`src/time/StopWatch.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

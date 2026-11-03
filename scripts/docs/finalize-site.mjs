@@ -228,7 +228,7 @@ writeFileSync(
 writeFileSync(
   join(root, "llms-languages.txt"),
   [
-    "# apps-script-utils — documentation in five languages",
+    "# @bootgs/utils — documentation in five languages",
     "",
     ...LANGUAGES.map((language) => `- ${language.name}: ${language.webRoot}/llms.txt`),
     ""

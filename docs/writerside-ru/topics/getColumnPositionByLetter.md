@@ -4,7 +4,7 @@
 
 <link-summary>Преобразует букву столбца в его позицию, считая от единицы.</link-summary>
 
-<web-summary>getColumnPositionByLetter() — Преобразует букву столбца в его позицию, считая от единицы. apps-script-utils, Русский.</web-summary>
+<web-summary>getColumnPositionByLetter() — Преобразует букву столбца в его позицию, считая от единицы. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -44,4 +44,4 @@ getColumnPositionByLetter("AA"); // => 27
 
 ## Исходный код
 
-[`src/appsscript/sheet/getColumnPositionByLetter.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getColumnPositionByLetter.ts)
+[`src/appsscript/sheet/getColumnPositionByLetter.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getColumnPositionByLetter.ts)

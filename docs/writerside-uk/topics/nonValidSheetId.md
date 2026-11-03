@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є ідентифікатором аркуша.</link-summary>
 
-<web-summary>nonValidSheetId() — Перевіряє, що значення **не** є ідентифікатором аркуша. apps-script-utils, Українська.</web-summary>
+<web-summary>nonValidSheetId() — Перевіряє, що значення **не** є ідентифікатором аркуша. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSheetId(1234567890); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)
+[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)

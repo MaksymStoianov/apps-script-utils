@@ -1,4 +1,4 @@
-import { requireConsistent2DArray } from "apps-script-utils";
+import { requireConsistent2DArray } from "@bootgs/utils";
 
 /**
  * Accepts only a matrix whose rows are all the same width. The default message

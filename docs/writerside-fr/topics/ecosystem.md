@@ -4,7 +4,7 @@
 
 <link-summary>Le framework boot.gs, bâti sur cette bibliothèque, et les Agent Skills qui apprennent aux agents IA à s'en servir.</link-summary>
 
-<web-summary>Comment apps-script-utils s'articule avec le framework boot.gs pour Google Apps Script et avec les Agent Skills qui apprennent à Claude Code, Gemini CLI et Cursor à utiliser les deux.</web-summary>
+<web-summary>Comment @bootgs/utils s'articule avec le framework boot.gs pour Google Apps Script et avec les Agent Skills qui apprennent à Claude Code, Gemini CLI et Cursor à utiliser les deux.</web-summary>
 
 La bibliothèque est utile à elle seule : on l'installe, on importe une fonction, c'est fait. Elle fait aussi partie
 d'un petit écosystème pour le développement Google Apps Script, et deux voisins méritent d'être connus.
@@ -31,7 +31,7 @@ export class SheetController {
 }
 ```
 
-**Le lien avec cette bibliothèque est une dépendance, pas une rivalité.** `bootgs` inscrit `apps-script-utils` parmi
+**Le lien avec cette bibliothèque est une dépendance, pas une rivalité.** `bootgs` inscrit `@bootgs/utils` parmi
 ses dépendances d'exécution : un projet boot.gs dispose donc déjà de chaque fonction décrite ici, sans seconde
 installation. C'est de ces gardes que sont faites sa validation de paramètres et sa résolution de services.
 
@@ -39,7 +39,7 @@ Que choisir :
 
 | Ce dont vous avez besoin                                                               | Ce que vous prenez                    |
 | :------------------------------------------------------------------------------------- | :------------------------------------ |
-| Des aides dans un script existant — quelques fonctions, sans nouvelle architecture     | `apps-script-utils` seul              |
+| Des aides dans un script existant — quelques fonctions, sans nouvelle architecture     | `@bootgs/utils` seul                  |
 | Routage, contrôleurs, injection de dépendances, une application web avec des endpoints | `bootgs`, la bibliothèque est incluse |
 
 ## Agent Skills — apprendre cette bibliothèque à un agent IA
@@ -53,7 +53,7 @@ Le catalogue se divise en deux :
 
 | Skill                           | Couvre                                                                                         |
 | :------------------------------ | :--------------------------------------------------------------------------------------------- |
-| `apps-script-utils`             | cette bibliothèque : la convention `isX`/`nonX`/`requireX`, les gardes, les aides              |
+| `@bootgs/utils`                 | cette bibliothèque : la convention `isX`/`nonX`/`requireX`, les gardes, les aides              |
 | `apps-script-triggers`          | déclencheurs simples et installables, forme des événements, quotas                             |
 | `apps-script-services`          | usage économe en quota de `SpreadsheetApp`, `PropertiesService`, `CacheService`, `LockService` |
 | `apps-script-ui`                | menus, barres latérales, boîtes de dialogue et les pièges de `google.script.run`               |

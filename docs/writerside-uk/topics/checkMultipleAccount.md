@@ -4,7 +4,7 @@
 
 <link-summary>Повідомляє, що скрипт виконується від іншого облікового запису, ніж той, що його запустив.</link-summary>
 
-<web-summary>checkMultipleAccount() — Повідомляє, що скрипт виконується від іншого облікового запису, ніж той, що його запустив. apps-script-utils, Українська.</web-summary>
+<web-summary>checkMultipleAccount() — Повідомляє, що скрипт виконується від іншого облікового запису, ніж той, що його запустив. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно з: 1.0.0</p>
@@ -52,4 +52,4 @@ function onOpen(event) {
 
 ## Вихідний код
 
-[`src/appsscript/ui/checkMultipleAccount.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/checkMultipleAccount.ts)
+[`src/appsscript/ui/checkMultipleAccount.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/checkMultipleAccount.ts)

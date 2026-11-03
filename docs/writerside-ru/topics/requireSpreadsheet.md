@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как таблицу или выбрасывает исключение.</link-summary>
 
-<web-summary>requireSpreadsheet() — Возвращает значение как таблицу или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireSpreadsheet() — Возвращает значение как таблицу или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSpreadsheet(null); // throws InvalidSpreadsheetException
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)
+[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)

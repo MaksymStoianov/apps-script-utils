@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert objektartig ist.</link-summary>
 
-<web-summary>isObjectLike() — Prüft, ob ein Wert objektartig ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isObjectLike() — Prüft, ob ein Wert objektartig ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -52,4 +52,4 @@ isObjectLike(1); // => false
 
 ## Quellcode
 
-[`src/lang/base/isObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isObjectLike.ts)
+[`src/lang/base/isObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isObjectLike.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення викликаним значенням.</link-summary>
 
-<web-summary>isFunctionLike() — Перевіряє, чи є значення викликаним значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>isFunctionLike() — Перевіряє, чи є значення викликаним значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.2.0</p>
@@ -51,4 +51,4 @@ isFunctionLike("fn"); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isFunctionLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isFunctionLike.ts)
+[`src/lang/base/isFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isFunctionLike.ts)

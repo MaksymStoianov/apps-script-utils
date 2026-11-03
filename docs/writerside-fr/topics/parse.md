@@ -4,7 +4,7 @@
 
 <link-summary>Décompose un chemin en ses parties.</link-summary>
 
-<web-summary>parse() — Décompose un chemin en ses parties. apps-script-utils, Français.</web-summary>
+<web-summary>parse() — Décompose un chemin en ses parties. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code></p>
@@ -48,4 +48,4 @@ parse("readme.md");
 
 ## Code source
 
-[`src/net/path/parse.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/parse.ts)
+[`src/net/path/parse.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/parse.ts)

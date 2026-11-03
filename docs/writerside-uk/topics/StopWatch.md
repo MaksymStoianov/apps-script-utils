@@ -4,7 +4,7 @@
 
 <link-summary>Вимірює час послідовності іменованих завдань.</link-summary>
 
-<web-summary>StopWatch — Вимірює час послідовності іменованих завдань. apps-script-utils, Українська.</web-summary>
+<web-summary>StopWatch — Вимірює час послідовності іменованих завдань. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time</code> · Доступно з: 1.11.0</p>
@@ -45,4 +45,4 @@ watch.getTotalTimeMillis();
 
 ## Вихідний код
 
-[`src/time/StopWatch.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

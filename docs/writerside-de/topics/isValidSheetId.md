@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Blatt-Id ist.</link-summary>
 
-<web-summary>isValidSheetId() — Prüft, ob ein Wert eine Blatt-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isValidSheetId() — Prüft, ob ein Wert eine Blatt-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetId("0"); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)
+[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)

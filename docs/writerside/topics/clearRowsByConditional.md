@@ -4,7 +4,7 @@
 
 <link-summary>Empties the rows a predicate selects, leaving the rows in place.</link-summary>
 
-<web-summary>clearRowsByConditional() — Empties the rows a predicate selects, leaving the rows in place. apps-script-utils, English.</web-summary>
+<web-summary>clearRowsByConditional() — Empties the rows a predicate selects, leaving the rows in place. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -75,4 +75,4 @@ clearRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cell
 
 ## Source
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Finds one of the project's triggers by its id.</link-summary>
 
-<web-summary>getTriggerById() — Finds one of the project's triggers by its id. apps-script-utils, English.</web-summary>
+<web-summary>getTriggerById() — Finds one of the project's triggers by its id. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/base</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ if (trigger !== null) {
 
 ## Source
 
-[`src/appsscript/base/getTriggerById.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getTriggerById.ts)
+[`src/appsscript/base/getTriggerById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getTriggerById.ts)

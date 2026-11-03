@@ -4,7 +4,7 @@
 
 <link-summary>Части, на которые распадается путь.</link-summary>
 
-<web-summary>ParsedPath — Части, на которые распадается путь. apps-script-utils, Русский.</web-summary>
+<web-summary>ParsedPath — Части, на которые распадается путь. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path/types</code> · Доступно с: 0.1.0</p>
@@ -39,4 +39,4 @@ parse("readme.md");
 
 ## Исходный код
 
-[`src/net/path/types/ParsedPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/types/ParsedPath.ts)
+[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/types/ParsedPath.ts)

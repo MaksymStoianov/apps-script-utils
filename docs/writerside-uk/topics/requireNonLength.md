@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є припустимою довжиною масиву.</link-summary>
 
-<web-summary>requireNonLength() — Повертає значення, переконавшись, що воно не є припустимою довжиною масиву. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonLength() — Повертає значення, переконавшись, що воно не є припустимою довжиною масиву. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonLength(42); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonLength.ts)
+[`src/lang/base/requireNonLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonLength.ts)

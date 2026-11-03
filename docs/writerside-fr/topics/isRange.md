@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une plage.</link-summary>
 
-<web-summary>isRange() — Vérifie si une valeur est une plage. apps-script-utils, Français.</web-summary>
+<web-summary>isRange() — Vérifie si une valeur est une plage. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isRange(null); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/isRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isRange.ts)
+[`src/appsscript/sheet/isRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isRange.ts)

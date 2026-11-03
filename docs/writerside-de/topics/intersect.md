@@ -4,7 +4,7 @@
 
 <link-summary>Findet die Werte, die in jedem der übergebenen Arrays vorkommen.</link-summary>
 
-<web-summary>intersect() — Findet die Werte, die in jedem der übergebenen Arrays vorkommen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>intersect() — Findet die Werte, die in jedem der übergebenen Arrays vorkommen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -80,4 +80,4 @@ intersect(); // => []
 
 ## Quellcode
 
-[`src/lang/array/intersect.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/intersect.ts)
+[`src/lang/array/intersect.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/intersect.ts)

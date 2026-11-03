@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** the `NaN` number.</link-summary>
 
-<web-summary>nonNaN() — Checks whether a value is **not** the `NaN` number. apps-script-utils, English.</web-summary>
+<web-summary>nonNaN() — Checks whether a value is **not** the `NaN` number. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonNaN(0 / 0); // => false
 
 ## Source
 
-[`src/lang/number/nonNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonNaN.ts)
+[`src/lang/number/nonNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonNaN.ts)

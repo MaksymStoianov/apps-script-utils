@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a boolean.</link-summary>
 
-<web-summary>nonBoolean() — Checks whether a value is **not** a boolean. apps-script-utils, English.</web-summary>
+<web-summary>nonBoolean() — Checks whether a value is **not** a boolean. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.1.0</p>
@@ -53,4 +53,4 @@ nonBoolean(false); // => false
 
 ## Source
 
-[`src/lang/base/nonBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonBoolean.ts)
+[`src/lang/base/nonBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonBoolean.ts)

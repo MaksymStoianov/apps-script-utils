@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает версию, убедившись, что она удовлетворяет требованию, иначе бросает исключение.</link-summary>
 
-<web-summary>requireVersionCompatible() — Возвращает версию, убедившись, что она удовлетворяет требованию, иначе бросает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireVersionCompatible() — Возвращает версию, убедившись, что она удовлетворяет требованию, иначе бросает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -54,4 +54,4 @@ requireVersionCompatible("1.3.0", "1.2.0"); // => "1.3.0"
 
 ## Исходный код
 
-[`src/lang/string/requireVersionCompatible.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireVersionCompatible.ts)
+[`src/lang/string/requireVersionCompatible.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireVersionCompatible.ts)

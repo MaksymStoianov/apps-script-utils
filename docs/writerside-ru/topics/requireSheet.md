@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как лист или выбрасывает исключение.</link-summary>
 
-<web-summary>requireSheet() — Возвращает значение как лист или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireSheet() — Возвращает значение как лист или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -56,4 +56,4 @@ requireSheet(null); // throws InvalidSheetException
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireSheet.ts)
+[`src/appsscript/sheet/requireSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSheet.ts)

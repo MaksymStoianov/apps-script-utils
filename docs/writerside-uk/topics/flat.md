@@ -4,7 +4,7 @@
 
 <link-summary>Розгортає вкладений об'єкт в один рівень з ключами через крапку.</link-summary>
 
-<web-summary>flat() — Розгортає вкладений об'єкт в один рівень з ключами через крапку. apps-script-utils, Українська.</web-summary>
+<web-summary>flat() — Розгортає вкладений об'єкт в один рівень з ключами через крапку. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно з: 1.11.0</p>
@@ -52,4 +52,4 @@ flat({ a: { b: { c: 1 } } }, 1); // => { "a.b": { "c": 1 } }
 
 ## Вихідний код
 
-[`src/lang/object/flat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/flat.ts)
+[`src/lang/object/flat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/flat.ts)

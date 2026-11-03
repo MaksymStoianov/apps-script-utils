@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que une expression régulière, ou lève une exception.</link-summary>
 
-<web-summary>requireRegExp() — Renvoie la valeur en tant que une expression régulière, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireRegExp() — Renvoie la valeur en tant que une expression régulière, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -55,4 +55,4 @@ requireRegExp({}); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireRegExp.ts)
+[`src/lang/base/requireRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireRegExp.ts)

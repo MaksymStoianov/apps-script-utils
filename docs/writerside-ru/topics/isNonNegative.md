@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение неотрицательным числом.</link-summary>
 
-<web-summary>isNonNegative() — Проверяет, является ли значение неотрицательным числом. apps-script-utils, Русский.</web-summary>
+<web-summary>isNonNegative() — Проверяет, является ли значение неотрицательным числом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -50,4 +50,4 @@ isNonNegative("1"); // => false
 
 ## Исходный код
 
-[`src/lang/number/isNonNegative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isNonNegative.ts)
+[`src/lang/number/isNonNegative.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isNonNegative.ts)

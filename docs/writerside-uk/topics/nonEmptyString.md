@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як непорожній рядок, називаючи аргумент у повідомленні про помилку.</link-summary>
 
-<web-summary>nonEmptyString() — Повертає значення як непорожній рядок, називаючи аргумент у повідомленні про помилку. apps-script-utils, Українська.</web-summary>
+<web-summary>nonEmptyString() — Повертає значення як непорожній рядок, називаючи аргумент у повідомленні про помилку. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.5.0 · <b>Застаріло</b></p>
@@ -50,4 +50,4 @@ nonEmptyString("Data", "sheetName"); // => "Data"
 
 ## Вихідний код
 
-[`src/lang/string/nonEmptyString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonEmptyString.ts)
+[`src/lang/string/nonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonEmptyString.ts)

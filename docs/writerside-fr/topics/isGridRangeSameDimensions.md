@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si deux plages de grille ont la même hauteur et la même largeur.</link-summary>
 
-<web-summary>isGridRangeSameDimensions() — Vérifie si deux plages de grille ont la même hauteur et la même largeur. apps-script-utils, Français.</web-summary>
+<web-summary>isGridRangeSameDimensions() — Vérifie si deux plages de grille ont la même hauteur et la même largeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -48,4 +48,4 @@ isGridRangeSameDimensions(source, target); // => true
 
 ## Code source
 
-[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)

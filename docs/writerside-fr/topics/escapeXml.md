@@ -4,7 +4,7 @@
 
 <link-summary>Échappe les caractères réservés par XML.</link-summary>
 
-<web-summary>escapeXml() — Échappe les caractères réservés par XML. apps-script-utils, Français.</web-summary>
+<web-summary>escapeXml() — Échappe les caractères réservés par XML. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>html</code> · Disponible depuis: 1.0.0</p>
@@ -47,4 +47,4 @@ escapeXml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Code source
 
-[`src/html/escapeXml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/escapeXml.ts)
+[`src/html/escapeXml.ts`](https://github.com/bootgs/utils/blob/main/src/html/escapeXml.ts)

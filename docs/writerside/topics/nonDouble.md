@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a number with a fractional part.</link-summary>
 
-<web-summary>nonDouble() — Checks whether a value is **not** a number with a fractional part. apps-script-utils, English.</web-summary>
+<web-summary>nonDouble() — Checks whether a value is **not** a number with a fractional part. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ nonDouble(-0.1); // => false
 
 ## Source
 
-[`src/lang/number/nonDouble.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonDouble.ts)
+[`src/lang/number/nonDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonDouble.ts)

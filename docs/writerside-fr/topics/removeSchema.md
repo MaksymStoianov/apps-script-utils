@@ -4,7 +4,7 @@
 
 <link-summary>Supprime le schéma stocké sur une feuille.</link-summary>
 
-<web-summary>removeSchema() — Supprime le schéma stocké sur une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>removeSchema() — Supprime le schéma stocké sur une feuille. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -57,4 +57,4 @@ removeSchema(sheet, { validation: true }); // also clears the rules it implied
 
 ## Code source
 
-[`src/appsscript/sheet/removeSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/removeSchema.ts)
+[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/removeSchema.ts)

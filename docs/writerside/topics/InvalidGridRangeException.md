@@ -4,7 +4,7 @@
 
 <link-summary>A GridRange was expected and the object is not a valid one — its bounds are missing, out of order or negative.</link-summary>
 
-<web-summary>InvalidGridRangeException — A GridRange was expected and the object is not a valid one — its bounds are missing, out of order or negative. apps-script-utils, English.</web-summary>
+<web-summary>InvalidGridRangeException — A GridRange was expected and the object is not a valid one — its bounds are missing, out of order or negative. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/sheet</code> · Since: 1.5.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Source
 
-[`src/exception/appsscript/sheet/InvalidGridRangeException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidGridRangeException.ts)
+[`src/exception/appsscript/sheet/InvalidGridRangeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidGridRangeException.ts)

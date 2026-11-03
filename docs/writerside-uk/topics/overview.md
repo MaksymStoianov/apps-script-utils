@@ -2,15 +2,15 @@
 
 # Огляд
 
-<link-summary>Що таке apps-script-utils, що входить до бібліотеки та як побудована ця документація.</link-summary>
+<link-summary>Що таке @bootgs/utils, що входить до бібліотеки та як побудована ця документація.</link-summary>
 
-<web-summary>apps-script-utils — бібліотека утиліт на TypeScript для Google Apps Script: робота з таблицями та нотацією A1, перевірки isX/nonX/requireX, типізовані винятки.</web-summary>
+<web-summary>@bootgs/utils — бібліотека утиліт на TypeScript для Google Apps Script: робота з таблицями та нотацією A1, перевірки isX/nonX/requireX, типізовані винятки.</web-summary>
 
 ![Банер проєкту Google Apps Script Utils](banner-1280x640.jpg)
 
 _Художниця: [Дарина Михайленко](https://darynamikhailenko.com/?utm_source=docs&utm_medium=overview&utm_campaign=apps-script-utils&utm_content=banner-artist-credit)_
 
-**apps-script-utils** — бібліотека утиліт на TypeScript, створена саме для **Google Apps Script**. Вона збирає в
+**@bootgs/utils** — бібліотека утиліт на TypeScript, створена саме для **Google Apps Script**. Вона збирає в
 одному протестованому пакеті те, що в кожному проєкті на GAS однаково доводиться писати руками: роботу з таблицями
 та нотацією A1, перевірку типів і значень (`isX`/`nonX`/`requireX`), перетворення рядків і масивів, типізовані
 винятки та багато іншого.

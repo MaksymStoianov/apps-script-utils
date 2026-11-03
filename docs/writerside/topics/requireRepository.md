@@ -4,7 +4,7 @@
 
 <link-summary>Returns a repository once it is known to exist, or throws.</link-summary>
 
-<web-summary>requireRepository() — Returns a repository once it is known to exist, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireRepository() — Returns a repository once it is known to exist, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript</code> · Since: 1.5.0</p>
@@ -52,4 +52,4 @@ const users = requireRepository(registry.users, "The user repository is not wire
 
 ## Source
 
-[`src/appsscript/requireRepository.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/requireRepository.ts)
+[`src/appsscript/requireRepository.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/requireRepository.ts)

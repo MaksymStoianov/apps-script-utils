@@ -4,7 +4,7 @@
 
 <link-summary>Remplace les cinq caractères qui seraient autrement lus comme du balisage.</link-summary>
 
-<web-summary>escapeHtml() — Remplace les cinq caractères qui seraient autrement lus comme du balisage. apps-script-utils, Français.</web-summary>
+<web-summary>escapeHtml() — Remplace les cinq caractères qui seraient autrement lus comme du balisage. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>html</code> · Disponible depuis: 1.0.0</p>
@@ -49,4 +49,4 @@ escapeHtml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Code source
 
-[`src/html/escapeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/escapeHtml.ts)
+[`src/html/escapeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/escapeHtml.ts)

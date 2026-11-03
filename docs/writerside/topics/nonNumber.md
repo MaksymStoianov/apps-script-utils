@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a number.</link-summary>
 
-<web-summary>nonNumber() — Checks whether a value is **not** a number. apps-script-utils, English.</web-summary>
+<web-summary>nonNumber() — Checks whether a value is **not** a number. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -54,4 +54,4 @@ nonNumber(Infinity); // => false
 
 ## Source
 
-[`src/lang/base/nonNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNumber.ts)
+[`src/lang/base/nonNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNumber.ts)

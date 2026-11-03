@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une plage de grille est entièrement contenue dans une autre.</link-summary>
 
-<web-summary>isGridRangeContainedIn() — Vérifie si une plage de grille est entièrement contenue dans une autre. apps-script-utils, Français.</web-summary>
+<web-summary>isGridRangeContainedIn() — Vérifie si une plage de grille est entièrement contenue dans une autre. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isGridRangeContainedIn(inner, outer); // => true
 
 ## Code source
 
-[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)
+[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)

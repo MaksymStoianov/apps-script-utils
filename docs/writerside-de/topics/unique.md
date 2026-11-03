@@ -4,7 +4,7 @@
 
 <link-summary>Entfernt Dubletten aus einem Array und behält das erste Vorkommen jedes Werts.</link-summary>
 
-<web-summary>unique() — Entfernt Dubletten aus einem Array und behält das erste Vorkommen jedes Werts. apps-script-utils, Deutsch.</web-summary>
+<web-summary>unique() — Entfernt Dubletten aus einem Array und behält das erste Vorkommen jedes Werts. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -49,7 +49,7 @@ unique([0, -0]); // => [0]
 ### Datensätze über einen Schlüssel deduplizieren
 
 ```typescript
-import { unique } from "apps-script-utils";
+import { unique } from "@bootgs/utils";
 
 const rows = [
   { id: 1, name: "first" },
@@ -84,4 +84,4 @@ function listStatuses(sheet) {
 
 ## Quellcode
 
-[`src/lang/array/unique.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/unique.ts)
+[`src/lang/array/unique.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/unique.ts)

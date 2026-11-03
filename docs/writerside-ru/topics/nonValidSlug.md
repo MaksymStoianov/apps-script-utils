@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является слагом.</link-summary>
 
-<web-summary>nonValidSlug() — Проверяет, что значение **не** является слагом. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidSlug() — Проверяет, что значение **не** является слагом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSlug("a_1"); // => false
 
 ## Исходный код
 
-[`src/lang/string/nonValidSlug.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidSlug.ts)
+[`src/lang/string/nonValidSlug.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidSlug.ts)

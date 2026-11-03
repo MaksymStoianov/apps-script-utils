@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un classeur.</link-summary>
 
-<web-summary>nonSpreadsheet() — Vérifie qu'une valeur n'est **pas** un classeur. apps-script-utils, Français.</web-summary>
+<web-summary>nonSpreadsheet() — Vérifie qu'une valeur n'est **pas** un classeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSpreadsheet(spreadsheet); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)
+[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)

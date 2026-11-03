@@ -4,7 +4,7 @@
 
 <link-summary>Сервіс, на доступність якого розраховував скрипт, недоступний: розширений сервіс не увімкнено або глобальну змінну так і не визначено.</link-summary>
 
-<web-summary>ServiceIsNotDefinedException — Сервіс, на доступність якого розраховував скрипт, недоступний: розширений сервіс не увімкнено або глобальну змінну так і не визначено. apps-script-utils, Українська.</web-summary>
+<web-summary>ServiceIsNotDefinedException — Сервіс, на доступність якого розраховував скрипт, недоступний: розширений сервіс не увімкнено або глобальну змінну так і не визначено. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)
+[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)

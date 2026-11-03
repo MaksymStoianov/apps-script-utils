@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une matrice dont les lignes ont toutes la même longueur.</link-summary>
 
-<web-summary>nonConsistent2DArray() — Vérifie qu'une valeur n'est **pas** une matrice dont les lignes ont toutes la même longueur. apps-script-utils, Français.</web-summary>
+<web-summary>nonConsistent2DArray() — Vérifie qu'une valeur n'est **pas** une matrice dont les lignes ont toutes la même longueur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -75,4 +75,4 @@ function describeShape(rows) {
 
 ## Code source
 
-[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/nonConsistent2DArray.ts)
+[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/nonConsistent2DArray.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Склеює слова рядка в camelCase.</link-summary>
 
-<web-summary>toCamelCase() — Склеює слова рядка в camelCase. apps-script-utils, Українська.</web-summary>
+<web-summary>toCamelCase() — Склеює слова рядка в camelCase. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -54,4 +54,4 @@ toCamelCase("user_first_name"); // => "userfirstname"
 
 ## Вихідний код
 
-[`src/lang/string/toCamelCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toCamelCase.ts)
+[`src/lang/string/toCamelCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toCamelCase.ts)

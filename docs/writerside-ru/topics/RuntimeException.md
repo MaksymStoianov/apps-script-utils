@@ -4,7 +4,7 @@
 
 <link-summary>Родитель всех исключений, которые может вызвать работающий скрипт.</link-summary>
 
-<web-summary>RuntimeException — Родитель всех исключений, которые может вызвать работающий скрипт. apps-script-utils, Русский.</web-summary>
+<web-summary>RuntimeException — Родитель всех исключений, которые может вызвать работающий скрипт. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/RuntimeException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/RuntimeException.ts)
+[`src/exception/RuntimeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RuntimeException.ts)

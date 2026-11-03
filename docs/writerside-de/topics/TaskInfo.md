@@ -4,7 +4,7 @@
 
 <link-summary>Eine gemessene Aufgabe, wie eine `StopWatch` sie festgehalten hat.</link-summary>
 
-<web-summary>TaskInfo — Eine gemessene Aufgabe, wie eine `StopWatch` sie festgehalten hat. apps-script-utils, Deutsch.</web-summary>
+<web-summary>TaskInfo — Eine gemessene Aufgabe, wie eine `StopWatch` sie festgehalten hat. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time</code></p>
@@ -36,4 +36,4 @@ watch.getLastTaskInfo(); // { taskName: "fetch", timeMillis: …, timeSeconds: �
 
 ## Quellcode
 
-[`src/time/StopWatch.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

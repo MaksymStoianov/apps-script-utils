@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення абсолютним шляхом.</link-summary>
 
-<web-summary>isAbsolute() — Перевіряє, чи є значення абсолютним шляхом. apps-script-utils, Українська.</web-summary>
+<web-summary>isAbsolute() — Перевіряє, чи є значення абсолютним шляхом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isAbsolute(""); // => false
 
 ## Вихідний код
 
-[`src/net/path/isAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/isAbsolute.ts)
+[`src/net/path/isAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isAbsolute.ts)

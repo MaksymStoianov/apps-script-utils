@@ -4,7 +4,7 @@
 
 <link-summary>Décide si une colonne fait partie de celles à traiter.</link-summary>
 
-<web-summary>ColumnPredicate — Décide si une colonne fait partie de celles à traiter. apps-script-utils, Français.</web-summary>
+<web-summary>ColumnPredicate — Décide si une colonne fait partie de celles à traiter. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -33,4 +33,4 @@ const predicate = (values) => values.every((cell) => cell === "");
 
 ## Code source
 
-[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)
+[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)

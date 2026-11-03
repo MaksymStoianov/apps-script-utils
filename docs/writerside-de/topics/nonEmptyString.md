@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als nicht leere Zeichenkette zurück und nennt im Fehlerfall das Argument.</link-summary>
 
-<web-summary>nonEmptyString() — Gibt den Wert als nicht leere Zeichenkette zurück und nennt im Fehlerfall das Argument. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonEmptyString() — Gibt den Wert als nicht leere Zeichenkette zurück und nennt im Fehlerfall das Argument. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.5.0 · <b>Veraltet</b></p>
@@ -50,4 +50,4 @@ nonEmptyString("Data", "sheetName"); // => "Data"
 
 ## Quellcode
 
-[`src/lang/string/nonEmptyString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonEmptyString.ts)
+[`src/lang/string/nonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonEmptyString.ts)

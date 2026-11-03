@@ -4,7 +4,7 @@
 
 <link-summary>Findet ein Blatt anhand seiner Id.</link-summary>
 
-<web-summary>getSheetById() — Findet ein Blatt anhand seiner Id. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getSheetById() — Findet ein Blatt anhand seiner Id. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -55,4 +55,4 @@ if (sheet === null) {
 
 ## Quellcode
 
-[`src/appsscript/sheet/getSheetById.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSheetById.ts)
+[`src/appsscript/sheet/getSheetById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetById.ts)

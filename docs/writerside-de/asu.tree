@@ -2,7 +2,7 @@
 <!DOCTYPE instance-profile SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="asu"
-                  name="apps-script-utils (Deutsch)"
+                  name="@bootgs/utils (Deutsch)"
                   start-page="overview.md">
 
     <toc-element topic="overview.md"/>

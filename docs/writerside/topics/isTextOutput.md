@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a TextOutput.</link-summary>
 
-<web-summary>isTextOutput() — Checks whether a value is a TextOutput. apps-script-utils, English.</web-summary>
+<web-summary>isTextOutput() — Checks whether a value is a TextOutput. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isTextOutput(null); // => false
 
 ## Source
 
-[`src/appsscript/ui/isTextOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/isTextOutput.ts)
+[`src/appsscript/ui/isTextOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/isTextOutput.ts)

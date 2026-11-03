@@ -4,7 +4,7 @@
 
 <link-summary>The call arrived at the wrong moment: the arguments may be perfectly valid, but the object is not in a state that allows it.</link-summary>
 
-<web-summary>IllegalStateException — The call arrived at the wrong moment: the arguments may be perfectly valid, but the object is not in a state that allows it. apps-script-utils, English.</web-summary>
+<web-summary>IllegalStateException — The call arrived at the wrong moment: the arguments may be perfectly valid, but the object is not in a state that allows it. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.11.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/IllegalStateException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/IllegalStateException.ts)
+[`src/exception/IllegalStateException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalStateException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение экземпляром `Exception`.</link-summary>
 
-<web-summary>isException() — Проверяет, является ли значение экземпляром `Exception`. apps-script-utils, Русский.</web-summary>
+<web-summary>isException() — Проверяет, является ли значение экземпляром `Exception`. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -50,4 +50,4 @@ isException(null); // => false
 
 ## Исходный код
 
-[`src/lang/base/isException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isException.ts)
+[`src/lang/base/isException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isException.ts)

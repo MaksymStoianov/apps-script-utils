@@ -4,7 +4,7 @@
 
 <link-summary>Gibt die Sammlung unverändert zurück, nachdem geprüft wurde, dass kein Element `null` oder `undefined` ist.</link-summary>
 
-<web-summary>requireNoNilElements() — Gibt die Sammlung unverändert zurück, nachdem geprüft wurde, dass kein Element `null` oder `undefined` ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNoNilElements() — Gibt die Sammlung unverändert zurück, nachdem geprüft wurde, dass kein Element `null` oder `undefined` ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -62,7 +62,7 @@ function appendContact(sheet, name, email) {
 ### Den Elementtyp verengen
 
 ```typescript
-import { requireNoNilElements } from "apps-script-utils";
+import { requireNoNilElements } from "@bootgs/utils";
 
 const values: Array<string | null> = readColumn();
 
@@ -87,4 +87,4 @@ requireNoNilElements([1, , 3]); // throws — a hole is undefined
 
 ## Quellcode
 
-[`src/lang/array/requireNoNilElements.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/requireNoNilElements.ts)
+[`src/lang/array/requireNoNilElements.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/requireNoNilElements.ts)

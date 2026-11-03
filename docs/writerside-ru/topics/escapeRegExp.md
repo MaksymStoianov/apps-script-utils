@@ -4,7 +4,7 @@
 
 <link-summary>Экранирует символы, которые имеют особое значение в регулярном выражении.</link-summary>
 
-<web-summary>escapeRegExp() — Экранирует символы, которые имеют особое значение в регулярном выражении. apps-script-utils, Русский.</web-summary>
+<web-summary>escapeRegExp() — Экранирует символы, которые имеют особое значение в регулярном выражении. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -49,4 +49,4 @@ new RegExp(escapeRegExp("1.5")).test("1x5"); // => false
 
 ## Исходный код
 
-[`src/lang/string/escapeRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/escapeRegExp.ts)
+[`src/lang/string/escapeRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/escapeRegExp.ts)

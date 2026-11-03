@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як стиль тексту або викидає виняток.</link-summary>
 
-<web-summary>requireTextStyle() — Повертає значення як стиль тексту або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireTextStyle() — Повертає значення як стиль тексту або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -59,4 +59,4 @@ requireTextStyle(null); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)
+[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є слайдом.</link-summary>
 
-<web-summary>nonSlide() — Перевіряє, що значення **не** є слайдом. apps-script-utils, Українська.</web-summary>
+<web-summary>nonSlide() — Перевіряє, що значення **не** є слайдом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSlide(slide); // => false
 
 ## Вихідний код
 
-[`src/appsscript/slide/nonSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonSlide.ts)
+[`src/appsscript/slide/nonSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonSlide.ts)

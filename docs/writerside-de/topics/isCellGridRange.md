@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein Einzelzellbereich ist.</link-summary>
 
-<web-summary>isCellGridRange() — Prüft, ob ein Wert ein Einzelzellbereich ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isCellGridRange() — Prüft, ob ein Wert ein Einzelzellbereich ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -49,4 +49,4 @@ isCellGridRange(null); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)
+[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)

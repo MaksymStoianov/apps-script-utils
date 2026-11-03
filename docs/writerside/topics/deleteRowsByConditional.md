@@ -4,7 +4,7 @@
 
 <link-summary>Deletes the rows a predicate selects.</link-summary>
 
-<web-summary>deleteRowsByConditional() — Deletes the rows a predicate selects. apps-script-utils, English.</web-summary>
+<web-summary>deleteRowsByConditional() — Deletes the rows a predicate selects. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -74,4 +74,4 @@ deleteRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cel
 
 ## Source
 
-[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)
+[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Removes duplicates from an array, keeping the first occurrence of each value.</link-summary>
 
-<web-summary>unique() — Removes duplicates from an array, keeping the first occurrence of each value. apps-script-utils, English.</web-summary>
+<web-summary>unique() — Removes duplicates from an array, keeping the first occurrence of each value. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -52,7 +52,7 @@ unique([0, -0]); // => [0]
 ### Deduplicating records by a key
 
 ```typescript
-import { unique } from "apps-script-utils";
+import { unique } from "@bootgs/utils";
 
 const rows = [
   { id: 1, name: "first" },
@@ -87,4 +87,4 @@ function listStatuses(sheet) {
 
 ## Source
 
-[`src/lang/array/unique.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/unique.ts)
+[`src/lang/array/unique.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/unique.ts)

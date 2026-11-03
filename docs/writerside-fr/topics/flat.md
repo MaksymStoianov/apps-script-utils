@@ -4,7 +4,7 @@
 
 <link-summary>Aplatit un objet imbriqué en un seul niveau de clés pointées.</link-summary>
 
-<web-summary>flat() — Aplatit un objet imbriqué en un seul niveau de clés pointées. apps-script-utils, Français.</web-summary>
+<web-summary>flat() — Aplatit un objet imbriqué en un seul niveau de clés pointées. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Disponible depuis: 1.11.0</p>
@@ -52,4 +52,4 @@ flat({ a: { b: { c: 1 } } }, 1); // => { "a.b": { "c": 1 } }
 
 ## Code source
 
-[`src/lang/object/flat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/flat.ts)
+[`src/lang/object/flat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/flat.ts)

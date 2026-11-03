@@ -4,7 +4,7 @@
 
 <link-summary>Ожидался лист, а значение им не является.</link-summary>
 
-<web-summary>InvalidSheetException — Ожидался лист, а значение им не является. apps-script-utils, Русский.</web-summary>
+<web-summary>InvalidSheetException — Ожидался лист, а значение им не является. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>The caller is known but is not allowed to do this.</link-summary>
 
-<web-summary>AuthorizationException — The caller is known but is not allowed to do this. apps-script-utils, English.</web-summary>
+<web-summary>AuthorizationException — The caller is known but is not allowed to do this. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.11.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Source
 
-[`src/exception/AuthorizationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/AuthorizationException.ts)
+[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/AuthorizationException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Einzelzellbereich ist.</link-summary>
 
-<web-summary>nonCellGridRange() — Prüft, ob ein Wert **nicht** ein Einzelzellbereich ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonCellGridRange() — Prüft, ob ein Wert **nicht** ein Einzelzellbereich ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -49,4 +49,4 @@ nonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endCol
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)
+[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)

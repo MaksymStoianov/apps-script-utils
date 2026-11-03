@@ -1,4 +1,4 @@
-import { first } from "apps-script-utils";
+import { first } from "@bootgs/utils";
 
 /**
  * Splits a sheet into its header row and its data rows, and says so when the

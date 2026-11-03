@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un classeur.</link-summary>
 
-<web-summary>isSpreadsheet() — Vérifie si une valeur est un classeur. apps-script-utils, Français.</web-summary>
+<web-summary>isSpreadsheet() — Vérifie si une valeur est un classeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isSpreadsheet(null); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)
+[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)

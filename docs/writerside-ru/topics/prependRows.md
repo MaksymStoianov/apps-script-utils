@@ -4,7 +4,7 @@
 
 <link-summary>Вставляет строки перед данными — на листе или у диапазона.</link-summary>
 
-<web-summary>prependRows() — Вставляет строки перед данными — на листе или у диапазона. apps-script-utils, Русский.</web-summary>
+<web-summary>prependRows() — Вставляет строки перед данными — на листе или у диапазона. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -75,4 +75,4 @@ prependRows(sheet.getRange("B4:C13"), [["Name", "Email"]]);
 
 ## Исходный код
 
-[`src/appsscript/sheet/prependRows.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/prependRows.ts)
+[`src/appsscript/sheet/prependRows.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependRows.ts)

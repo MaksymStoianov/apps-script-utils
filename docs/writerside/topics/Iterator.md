@@ -4,7 +4,7 @@
 
 <link-summary>A cursor over a sequence, which may also walk backwards.</link-summary>
 
-<web-summary>Iterator — A cursor over a sequence, which may also walk backwards. apps-script-utils, English.</web-summary>
+<web-summary>Iterator — A cursor over a sequence, which may also walk backwards. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang</code> · Since: 1.0.0</p>
@@ -37,4 +37,4 @@ while (iterator.hasNext()) {
 
 ## Source
 
-[`src/lang/Iterator.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Iterator.ts)
+[`src/lang/Iterator.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Iterator.ts)

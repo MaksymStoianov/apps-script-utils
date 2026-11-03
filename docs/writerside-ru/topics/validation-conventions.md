@@ -4,7 +4,7 @@
 
 <link-summary>Схема имён isX / nonX / requireX / requireNonX и что гарантирует каждый префикс.</link-summary>
 
-<web-summary>Схема именования проверок в apps-script-utils: isX и nonX отвечают на вопрос, requireX и requireNonX проверяют и возвращают значение; у каждого префикса своя сигнатура.</web-summary>
+<web-summary>Схема именования проверок в @bootgs/utils: isX и nonX отвечают на вопрос, requireX и requireNonX проверяют и возвращают значение; у каждого префикса своя сигнатура.</web-summary>
 
 Большая часть библиотеки — это проверки, и почти все они подчиняются одной схеме имён. Выучите четыре префикса один
 раз, и имя функции само расскажет её сигнатуру, возвращаемое значение и то, может ли она бросить исключение.
@@ -27,7 +27,7 @@
 Стражи `isX` объявлены как type predicates в TypeScript, поэтому внутри ветки компилятор сужает тип значения:
 
 ```typescript
-import { isString } from "apps-script-utils";
+import { isString } from "@bootgs/utils";
 
 function describe(value: unknown): string {
   if (isString(value)) {
@@ -41,7 +41,7 @@ function describe(value: unknown): string {
 `nonX` сужает в обратную сторону — он убирает `X` из типа, а не подтверждает его:
 
 ```typescript
-import { nonString } from "apps-script-utils";
+import { nonString } from "@bootgs/utils";
 
 function lengthOf(value: string | number): number {
   if (nonString(value)) {
@@ -61,7 +61,7 @@ function lengthOf(value: string | number): number {
 `requireX` проверяет и возвращает, поэтому вызов встраивается в выражение, а не требует отдельного оператора:
 
 ```typescript
-import { requireNumber, requireString } from "apps-script-utils";
+import { requireNumber, requireString } from "@bootgs/utils";
 
 function repeat(text: unknown, times: unknown): string {
   return requireString(text).repeat(requireNumber(times));
@@ -108,7 +108,7 @@ _использовать_ значение как этот тип:
 `NullPointerException`:
 
 ```typescript
-import { requireNonNull } from "apps-script-utils";
+import { requireNonNull } from "@bootgs/utils";
 
 const sheet = requireNonNull(spreadsheet.getSheetByName("Data"), "sheet 'Data' is missing");
 ```

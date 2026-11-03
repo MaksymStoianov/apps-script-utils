@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є безпечним цілим числом.</link-summary>
 
-<web-summary>nonSafeInteger() — Перевіряє, що значення **не** є безпечним цілим числом. apps-script-utils, Українська.</web-summary>
+<web-summary>nonSafeInteger() — Перевіряє, що значення **не** є безпечним цілим числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSafeInteger(Number.MAX_SAFE_INTEGER); // => false
 
 ## Вихідний код
 
-[`src/lang/number/nonSafeInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonSafeInteger.ts)
+[`src/lang/number/nonSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonSafeInteger.ts)

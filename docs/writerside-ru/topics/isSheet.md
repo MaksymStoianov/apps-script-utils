@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение листом.</link-summary>
 
-<web-summary>isSheet() — Проверяет, является ли значение листом. apps-script-utils, Русский.</web-summary>
+<web-summary>isSheet() — Проверяет, является ли значение листом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isSheet(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/isSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isSheet.ts)
+[`src/appsscript/sheet/isSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSheet.ts)

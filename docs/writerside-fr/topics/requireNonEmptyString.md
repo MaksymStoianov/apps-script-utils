@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur comme une chaîne non vide, ou lève.</link-summary>
 
-<web-summary>requireNonEmptyString() — Renvoie la valeur comme une chaîne non vide, ou lève. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonEmptyString() — Renvoie la valeur comme une chaîne non vide, ou lève. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ requireNonEmptyString("   "); // throws EmptyStringException
 
 ## Code source
 
-[`src/lang/string/requireNonEmptyString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireNonEmptyString.ts)
+[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireNonEmptyString.ts)

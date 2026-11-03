@@ -4,7 +4,7 @@
 
 <link-summary>Échange les lignes et les colonnes d'une matrice.</link-summary>
 
-<web-summary>transpose() — Échange les lignes et les colonnes d'une matrice. apps-script-utils, Français.</web-summary>
+<web-summary>transpose() — Échange les lignes et les colonnes d'une matrice. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.0.0</p>
@@ -85,4 +85,4 @@ transpose([[1, 2], [3]]); // throws Error: Input must be a 2D array.
 
 ## Code source
 
-[`src/lang/array/transpose.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/transpose.ts)
+[`src/lang/array/transpose.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/transpose.ts)

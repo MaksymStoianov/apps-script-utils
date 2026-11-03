@@ -4,7 +4,7 @@
 
 <link-summary>Findet die Position einer Folie, in einer Präsentation oder in der aktiven.</link-summary>
 
-<web-summary>getSlideIndex() — Findet die Position einer Folie, in einer Präsentation oder in der aktiven. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getSlideIndex() — Findet die Position einer Folie, in einer Präsentation oder in der aktiven. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -52,4 +52,4 @@ getSlideIndex(slide); // => 2
 
 ## Quellcode
 
-[`src/appsscript/slide/getSlideIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/getSlideIndex.ts)
+[`src/appsscript/slide/getSlideIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/getSlideIndex.ts)

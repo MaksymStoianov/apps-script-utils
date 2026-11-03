@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как URL-адрес или выбрасывает исключение.</link-summary>
 
-<web-summary>requireUrl() — Возвращает значение как URL-адрес или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireUrl() — Возвращает значение как URL-адрес или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/url</code> · Доступно с: 1.11.0</p>
@@ -54,4 +54,4 @@ requireUrl("https://"); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/net/url/requireUrl.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/url/requireUrl.ts)
+[`src/net/url/requireUrl.ts`](https://github.com/bootgs/utils/blob/main/src/net/url/requireUrl.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є презентацією.</link-summary>
 
-<web-summary>nonPresentation() — Перевіряє, що значення **не** є презентацією. apps-script-utils, Українська.</web-summary>
+<web-summary>nonPresentation() — Перевіряє, що значення **не** є презентацією. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonPresentation(presentation); // => false
 
 ## Вихідний код
 
-[`src/appsscript/slide/nonPresentation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonPresentation.ts)
+[`src/appsscript/slide/nonPresentation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonPresentation.ts)

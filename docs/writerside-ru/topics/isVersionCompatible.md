@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что версия не ниже требуемой.</link-summary>
 
-<web-summary>isVersionCompatible() — Проверяет, что версия не ниже требуемой. apps-script-utils, Русский.</web-summary>
+<web-summary>isVersionCompatible() — Проверяет, что версия не ниже требуемой. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isVersionCompatible("1.2.0", "1.3.0"); // => false
 
 ## Исходный код
 
-[`src/lang/string/isVersionCompatible.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isVersionCompatible.ts)
+[`src/lang/string/isVersionCompatible.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isVersionCompatible.ts)

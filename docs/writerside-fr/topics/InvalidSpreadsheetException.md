@@ -4,7 +4,7 @@
 
 <link-summary>Un classeur était attendu et la valeur n'en est pas un.</link-summary>
 
-<web-summary>InvalidSpreadsheetException — Un classeur était attendu et la valeur n'en est pas un. apps-script-utils, Français.</web-summary>
+<web-summary>InvalidSpreadsheetException — Un classeur était attendu et la valeur n'en est pas un. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/sheet</code> · Disponible depuis: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Code source
 
-[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)

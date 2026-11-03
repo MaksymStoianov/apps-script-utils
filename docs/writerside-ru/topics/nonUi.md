@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является объектом Ui.</link-summary>
 
-<web-summary>nonUi() — Проверяет, что значение **не** является объектом Ui. apps-script-utils, Русский.</web-summary>
+<web-summary>nonUi() — Проверяет, что значение **не** является объектом Ui. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ nonUi(ui); // => false
 
 ## Исходный код
 
-[`src/appsscript/ui/nonUi.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/nonUi.ts)
+[`src/appsscript/ui/nonUi.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/nonUi.ts)

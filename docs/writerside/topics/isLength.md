@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a valid array-like length.</link-summary>
 
-<web-summary>isLength() — Checks whether a value is a valid array-like length. apps-script-utils, English.</web-summary>
+<web-summary>isLength() — Checks whether a value is a valid array-like length. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -50,4 +50,4 @@ isLength("3"); // => false
 
 ## Source
 
-[`src/lang/base/isLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isLength.ts)
+[`src/lang/base/isLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isLength.ts)

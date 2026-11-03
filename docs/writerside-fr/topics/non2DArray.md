@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un tableau bidimensionnel non vide.</link-summary>
 
-<web-summary>non2DArray() — Vérifie qu'une valeur n'est **pas** un tableau bidimensionnel non vide. apps-script-utils, Français.</web-summary>
+<web-summary>non2DArray() — Vérifie qu'une valeur n'est **pas** un tableau bidimensionnel non vide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -73,4 +73,4 @@ function validateShape(rows) {
 
 ## Code source
 
-[`src/lang/array/non2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/non2DArray.ts)
+[`src/lang/array/non2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/non2DArray.ts)

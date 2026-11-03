@@ -4,7 +4,7 @@
 
 <link-summary>The parts a path breaks into.</link-summary>
 
-<web-summary>ParsedPath — The parts a path breaks into. apps-script-utils, English.</web-summary>
+<web-summary>ParsedPath — The parts a path breaks into. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path/types</code> · Since: 0.1.0</p>
@@ -39,4 +39,4 @@ parse("readme.md");
 
 ## Source
 
-[`src/net/path/types/ParsedPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/types/ParsedPath.ts)
+[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/types/ParsedPath.ts)

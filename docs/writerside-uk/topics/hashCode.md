@@ -4,7 +4,7 @@
 
 <link-summary>Обчислює числовий хеш для будь-якого значення.</link-summary>
 
-<web-summary>hashCode() — Обчислює числовий хеш для будь-якого значення. apps-script-utils, Українська.</web-summary>
+<web-summary>hashCode() — Обчислює числовий хеш для будь-якого значення. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно з: 1.0.0</p>
@@ -45,4 +45,4 @@ hashCode(""); // => 0
 
 ## Вихідний код
 
-[`src/lang/object/hashCode.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/hashCode.ts)
+[`src/lang/object/hashCode.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/hashCode.ts)

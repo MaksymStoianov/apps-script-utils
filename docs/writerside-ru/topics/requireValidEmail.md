@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как адрес электронной почты или выбрасывает исключение.</link-summary>
 
-<web-summary>requireValidEmail() — Возвращает значение как адрес электронной почты или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireValidEmail() — Возвращает значение как адрес электронной почты или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -54,4 +54,4 @@ requireValidEmail("user@"); // throws InvalidEmailFormatException
 
 ## Исходный код
 
-[`src/lang/string/requireValidEmail.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireValidEmail.ts)
+[`src/lang/string/requireValidEmail.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidEmail.ts)

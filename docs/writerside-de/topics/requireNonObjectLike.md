@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht objektartig ist.</link-summary>
 
-<web-summary>requireNonObjectLike() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht objektartig ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonObjectLike() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht objektartig ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonObjectLike([]); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonObjectLike.ts)
+[`src/lang/base/requireNonObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonObjectLike.ts)

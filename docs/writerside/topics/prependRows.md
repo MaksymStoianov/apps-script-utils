@@ -4,7 +4,7 @@
 
 <link-summary>Inserts rows before the data, on a sheet or at a range.</link-summary>
 
-<web-summary>prependRows() — Inserts rows before the data, on a sheet or at a range. apps-script-utils, English.</web-summary>
+<web-summary>prependRows() — Inserts rows before the data, on a sheet or at a range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -75,4 +75,4 @@ prependRows(sheet.getRange("B4:C13"), [["Name", "Email"]]);
 
 ## Source
 
-[`src/appsscript/sheet/prependRows.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/prependRows.ts)
+[`src/appsscript/sheet/prependRows.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependRows.ts)

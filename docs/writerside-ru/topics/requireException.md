@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как `Exception` или выбрасывает исключение.</link-summary>
 
-<web-summary>requireException() — Возвращает значение как `Exception` или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireException() — Возвращает значение как `Exception` или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -54,4 +54,4 @@ requireException({}); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireException.ts)
+[`src/lang/base/requireException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Разбирает список нотаций A1, перечисленных через запятую.</link-summary>
 
-<web-summary>parseA1Notations() — Разбирает список нотаций A1, перечисленных через запятую. apps-script-utils, Русский.</web-summary>
+<web-summary>parseA1Notations() — Разбирает список нотаций A1, перечисленных через запятую. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.6.0</p>
@@ -44,4 +44,4 @@ parseA1Notations("A1:B2, C3").length; // => 2
 
 ## Исходный код
 
-[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)
+[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)

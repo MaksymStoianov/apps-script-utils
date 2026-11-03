@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення ідентифікатором слайда.</link-summary>
 
-<web-summary>isValidSlideId() — Перевіряє, чи є значення ідентифікатором слайда. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidSlideId() — Перевіряє, чи є значення ідентифікатором слайда. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.5.0</p>
@@ -49,4 +49,4 @@ isValidSlideId(""); // => false
 
 ## Вихідний код
 
-[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isValidSlideId.ts)
+[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isValidSlideId.ts)

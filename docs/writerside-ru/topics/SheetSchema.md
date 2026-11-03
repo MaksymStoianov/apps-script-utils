@@ -4,7 +4,7 @@
 
 <link-summary>Как называются столбцы листа и что в них лежит.</link-summary>
 
-<web-summary>SheetSchema — Как называются столбцы листа и что в них лежит. apps-script-utils, Русский.</web-summary>
+<web-summary>SheetSchema — Как называются столбцы листа и что в них лежит. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet/types</code> · Доступно с: 1.11.0</p>
@@ -42,4 +42,4 @@ const schema = {
 
 ## Исходный код
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

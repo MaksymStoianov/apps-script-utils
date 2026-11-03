@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un nombre dénombrable.</link-summary>
 
-<web-summary>isCountable() — Vérifie si une valeur est un nombre dénombrable. apps-script-utils, Français.</web-summary>
+<web-summary>isCountable() — Vérifie si une valeur est un nombre dénombrable. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.5.0</p>
@@ -50,4 +50,4 @@ isCountable(Number.MAX_SAFE_INTEGER + 2); // => false
 
 ## Code source
 
-[`src/lang/number/isCountable.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isCountable.ts)
+[`src/lang/number/isCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isCountable.ts)

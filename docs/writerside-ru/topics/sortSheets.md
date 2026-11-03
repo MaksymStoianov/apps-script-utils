@@ -4,7 +4,7 @@
 
 <link-summary>Переупорядочивает вкладки таблицы.</link-summary>
 
-<web-summary>sortSheets() — Переупорядочивает вкладки таблицы. apps-script-utils, Русский.</web-summary>
+<web-summary>sortSheets() — Переупорядочивает вкладки таблицы. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -54,4 +54,4 @@ sortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed
 
 ## Исходный код
 
-[`src/appsscript/sheet/sortSheets.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/sortSheets.ts)
+[`src/appsscript/sheet/sortSheets.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/sortSheets.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Очищает строки, выбранные предикатом, не удаляя сами строки.</link-summary>
 
-<web-summary>clearRowsByConditional() — Очищает строки, выбранные предикатом, не удаляя сами строки. apps-script-utils, Русский.</web-summary>
+<web-summary>clearRowsByConditional() — Очищает строки, выбранные предикатом, не удаляя сами строки. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -75,4 +75,4 @@ clearRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cell
 
 ## Исходный код
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

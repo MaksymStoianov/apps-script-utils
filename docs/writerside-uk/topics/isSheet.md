@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення аркушем.</link-summary>
 
-<web-summary>isSheet() — Перевіряє, чи є значення аркушем. apps-script-utils, Українська.</web-summary>
+<web-summary>isSheet() — Перевіряє, чи є значення аркушем. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isSheet(null); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isSheet.ts)
+[`src/appsscript/sheet/isSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSheet.ts)

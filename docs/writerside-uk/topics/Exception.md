@@ -4,7 +4,7 @@
 
 <link-summary>Основа ієрархії, нащадок Error.</link-summary>
 
-<web-summary>Exception — Основа ієрархії, нащадок Error. apps-script-utils, Українська.</web-summary>
+<web-summary>Exception — Основа ієрархії, нащадок Error. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/Exception.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/Exception.ts)
+[`src/exception/Exception.ts`](https://github.com/bootgs/utils/blob/main/src/exception/Exception.ts)

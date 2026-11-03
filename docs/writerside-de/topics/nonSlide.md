@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Folie ist.</link-summary>
 
-<web-summary>nonSlide() — Prüft, ob ein Wert **nicht** eine Folie ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonSlide() — Prüft, ob ein Wert **nicht** eine Folie ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSlide(slide); // => false
 
 ## Quellcode
 
-[`src/appsscript/slide/nonSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonSlide.ts)
+[`src/appsscript/slide/nonSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonSlide.ts)

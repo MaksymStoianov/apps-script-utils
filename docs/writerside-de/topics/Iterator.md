@@ -4,7 +4,7 @@
 
 <link-summary>Ein Zeiger über eine Folge, der auch rückwärts gehen kann.</link-summary>
 
-<web-summary>Iterator — Ein Zeiger über eine Folge, der auch rückwärts gehen kann. apps-script-utils, Deutsch.</web-summary>
+<web-summary>Iterator — Ein Zeiger über eine Folge, der auch rückwärts gehen kann. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang</code> · Verfügbar seit: 1.0.0</p>
@@ -37,4 +37,4 @@ while (iterator.hasNext()) {
 
 ## Quellcode
 
-[`src/lang/Iterator.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Iterator.ts)
+[`src/lang/Iterator.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Iterator.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein relativer Pfad ist.</link-summary>
 
-<web-summary>nonRelative() — Prüft, ob ein Wert **nicht** ein relativer Pfad ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonRelative() — Prüft, ob ein Wert **nicht** ein relativer Pfad ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code> · Verfügbar seit: 1.11.0</p>
@@ -50,4 +50,4 @@ nonRelative(""); // => false
 
 ## Quellcode
 
-[`src/net/path/nonRelative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonRelative.ts)
+[`src/net/path/nonRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/nonRelative.ts)

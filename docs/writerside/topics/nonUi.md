@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a Ui object.</link-summary>
 
-<web-summary>nonUi() — Checks whether a value is **not** a Ui object. apps-script-utils, English.</web-summary>
+<web-summary>nonUi() — Checks whether a value is **not** a Ui object. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonUi(ui); // => false
 
 ## Source
 
-[`src/appsscript/ui/nonUi.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/nonUi.ts)
+[`src/appsscript/ui/nonUi.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/nonUi.ts)

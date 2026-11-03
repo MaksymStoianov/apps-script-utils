@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Skalar ist.</link-summary>
 
-<web-summary>nonScalar() — Prüft, ob ein Wert **nicht** ein Skalar ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonScalar() — Prüft, ob ein Wert **nicht** ein Skalar ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.4.0</p>
@@ -55,4 +55,4 @@ nonScalar(10n); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonScalar.ts)
+[`src/lang/base/nonScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonScalar.ts)

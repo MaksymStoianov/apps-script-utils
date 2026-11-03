@@ -4,7 +4,7 @@
 
 <link-summary>Verwandelt numerische Zeichenreferenzen zurück in Zeichen.</link-summary>
 
-<web-summary>decodeHtml() — Verwandelt numerische Zeichenreferenzen zurück in Zeichen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>decodeHtml() — Verwandelt numerische Zeichenreferenzen zurück in Zeichen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>html</code> · Verfügbar seit: 1.0.0</p>
@@ -49,4 +49,4 @@ decodeHtml("&amp;"); // => "&amp;"
 
 ## Quellcode
 
-[`src/html/decodeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/decodeHtml.ts)
+[`src/html/decodeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/decodeHtml.ts)

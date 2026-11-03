@@ -4,7 +4,7 @@
 
 <link-summary>Wandelt einen nullbasierten Spaltenindex in seinen Buchstaben um.</link-summary>
 
-<web-summary>getColumnLetterByIndex() — Wandelt einen nullbasierten Spaltenindex in seinen Buchstaben um. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getColumnLetterByIndex() — Wandelt einen nullbasierten Spaltenindex in seinen Buchstaben um. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ getColumnLetterByIndex(26); // => "AA"
 
 ## Quellcode
 
-[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)
+[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)

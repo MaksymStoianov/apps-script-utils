@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether two grid ranges differ in height or width.</link-summary>
 
-<web-summary>nonGridRangeSameDimensions() — Checks whether two grid ranges differ in height or width. apps-script-utils, English.</web-summary>
+<web-summary>nonGridRangeSameDimensions() — Checks whether two grid ranges differ in height or width. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeSameDimensions(source, target); // => true
 
 ## Source
 
-[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)

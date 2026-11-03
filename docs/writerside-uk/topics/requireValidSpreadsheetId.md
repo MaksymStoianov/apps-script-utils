@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як ідентифікатор таблиці або викидає виняток.</link-summary>
 
-<web-summary>requireValidSpreadsheetId() — Повертає значення як ідентифікатор таблиці або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidSpreadsheetId() — Повертає значення як ідентифікатор таблиці або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ requireValidSpreadsheetId("has space in it and is long enough to pass"); // thro
 
 ## Вихідний код
 
-[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)
+[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)

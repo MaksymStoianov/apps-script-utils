@@ -14,7 +14,7 @@ import { isEmpty, isString } from "../base";
  *
  * @param   {string} value - The string value to validate as a locale code.
  * @returns {boolean} `true` if the input is a valid two-letter locale code; otherwise, `false`.
- * @see [isValidLocale on the documentation site](https://maksymstoianov.github.io/apps-script-utils/isvalidlocale.html)
+ * @see [isValidLocale on the documentation site](https://bootgs.github.io/utils/isvalidlocale.html)
  * @since   1.0.0
  * @version 1.0.0
  */

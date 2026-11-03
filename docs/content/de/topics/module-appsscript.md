@@ -2,7 +2,7 @@
 
 <link-summary>Die Google-Apps-Script-Helfer: Tabellen, A1-Notation, Oberfläche, Drive und das Admin SDK.</link-summary>
 
-<web-summary>Das appsscript-Modul von apps-script-utils: Helfer für Tabellen und A1-Notation, Blattprüfungen, Oberfläche, Drive, Slides und Admin SDK für Google Apps Script.</web-summary>
+<web-summary>Das appsscript-Modul von @bootgs/utils: Helfer für Tabellen und A1-Notation, Blattprüfungen, Oberfläche, Drive, Slides und Admin SDK für Google Apps Script.</web-summary>
 
 `appsscript` enthält alles, was einen Google-Dienst berührt. Es ist der Teil der Bibliothek, der nur innerhalb der
 Apps-Script-Laufzeit läuft — was das beim Testen bedeutet, steht in [](apps-script-runtime.md).
@@ -26,7 +26,7 @@ halboffenen Grenzen, wie die Sheets-API sie führt, und nicht mit den einsbasier
 nehmen:
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import { parseA1Notation } from "@bootgs/utils";
 
 parseA1Notation("Sheet1!A1:B10");
 // {
@@ -47,7 +47,7 @@ Offene Notationen werden ebenfalls gelesen: `"5:15"` lässt die Spaltengrenzen o
 `toA1Notation` ist die Umkehrung:
 
 ```typescript
-import { toA1Notation } from "apps-script-utils";
+import { toA1Notation } from "@bootgs/utils";
 
 toA1Notation({ startRowIndex: 0, endRowIndex: 10, startColumnIndex: 0, endColumnIndex: 2 });
 // "A1:B10"
@@ -56,7 +56,7 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 10, startColumnIndex: 0, endColumn
 `parseA1Notations` nimmt eine durch Kommas getrennte Liste und gibt je Eintrag einen `GridRange` zurück:
 
 ```typescript
-import { parseA1Notations } from "apps-script-utils";
+import { parseA1Notations } from "@bootgs/utils";
 
 parseA1Notations("Sheet1!A1:B2, Sheet1!D1"); // zwei GridRange-Objekte
 ```
@@ -68,7 +68,7 @@ import {
   extractRangeFromA1Notation,
   extractSheetNameFromA1Notation,
   updateSheetNameInA1Notation
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 extractSheetNameFromA1Notation("'My Sheet'!A1"); // "My Sheet"
 extractRangeFromA1Notation("'My Sheet'!A1:B2"); // "A1:B2"
@@ -85,7 +85,7 @@ import {
   getColumnIndexByLetter,
   getColumnLetterByIndex,
   getColumnPositionByLetter
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 getColumnIndexByLetter("A"); // 0
 getColumnIndexByLetter("AZ"); // 51
@@ -104,7 +104,7 @@ import {
   isCellGridRange,
   isGridRangeContainedIn,
   isGridRangeSameDimensions
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 const header = { startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 5 };
 const body = { startRowIndex: 1, endRowIndex: 100, startColumnIndex: 0, endColumnIndex: 5 };
@@ -116,7 +116,7 @@ isCellGridRange(header); // false — er umfasst fünf Spalten
 ## Zeilen und Spalten schreiben
 
 ```typescript
-import { appendRows, prependRows, appendColumns } from "apps-script-utils";
+import { appendRows, prependRows, appendColumns } from "@bootgs/utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 
@@ -136,7 +136,7 @@ je Zeile. Alle Zeilen müssen gleich lang sein; `isConsistent2DArray` aus [](mod
 Dieselbe Konvention wie im Rest der Bibliothek, angewandt auf die Apps-Script-Klassen:
 
 ```typescript
-import { isSheet, isSpreadsheet, isRange, requireSheet } from "apps-script-utils";
+import { isSheet, isSpreadsheet, isRange, requireSheet } from "@bootgs/utils";
 
 function rowCount(value: unknown): number {
   return requireSheet(value).getLastRow();
@@ -149,7 +149,7 @@ function rowCount(value: unknown): number {
 ## Präsentationen
 
 ```typescript
-import { getSlideByIndex, findReplaceAllTextInSlide, requireSlide } from "apps-script-utils";
+import { getSlideByIndex, findReplaceAllTextInSlide, requireSlide } from "@bootgs/utils";
 
 const presentation = SlidesApp.getActivePresentation();
 
@@ -167,7 +167,7 @@ der Wert keine Folie ist.
 ## Admin SDK
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import { isAdmin } from "@bootgs/utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");

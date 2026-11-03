@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine E-Mail-Adresse ist.</link-summary>
 
-<web-summary>isEmail() — Prüft, ob ein Wert eine E-Mail-Adresse ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isEmail() — Prüft, ob ein Wert eine E-Mail-Adresse ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isEmail(""); // => false
 
 ## Quellcode
 
-[`src/lang/string/isEmail.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isEmail.ts)
+[`src/lang/string/isEmail.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isEmail.ts)

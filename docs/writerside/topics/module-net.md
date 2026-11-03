@@ -2,7 +2,7 @@
 
 <link-summary>URL, path, and domain helpers.</link-summary>
 
-<web-summary>The net module of apps-script-utils: URL validation, path parsing, joining and normalisation, and domain checks that work inside Google Apps Script.</web-summary>
+<web-summary>The net module of @bootgs/utils: URL validation, path parsing, joining and normalisation, and domain checks that work inside Google Apps Script.</web-summary>
 
 `net` covers paths, URLs, and the pieces around them. Like `lang`, it does not depend on the Apps Script runtime.
 
@@ -20,7 +20,7 @@ object — see [](module-appsscript.md).
 ## Paths
 
 ```typescript
-import { join, normalize, parse, isAbsolute, isRelative } from "apps-script-utils";
+import { join, normalize, parse, isAbsolute, isRelative } from "@bootgs/utils";
 
 join("/a", "b", "../c"); // "/a/c"
 normalize("/a/b/../c"); // "/a/c"
@@ -38,7 +38,7 @@ code that has to assemble a location out of parts without a real filesystem unde
 ## Domains and URLs
 
 ```typescript
-import { isValidDomain, isUrl } from "apps-script-utils";
+import { isValidDomain, isUrl } from "@bootgs/utils";
 
 isValidDomain("example.com"); // true
 isValidDomain("not a domain"); // false

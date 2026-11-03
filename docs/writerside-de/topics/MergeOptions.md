@@ -4,7 +4,7 @@
 
 <link-summary>Wie `merge` eine Vorlage füllt.</link-summary>
 
-<web-summary>MergeOptions — Wie `merge` eine Vorlage füllt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>MergeOptions — Wie `merge` eine Vorlage füllt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.11.0</p>
@@ -34,4 +34,4 @@ const options = { onMissing: "empty", escape: escapeHtml };
 
 ## Quellcode
 
-[`src/lang/string/merge.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

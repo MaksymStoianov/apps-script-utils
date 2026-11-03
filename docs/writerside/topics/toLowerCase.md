@@ -4,7 +4,7 @@
 
 <link-summary>Lowers a string, optionally tidying its whitespace.</link-summary>
 
-<web-summary>toLowerCase() — Lowers a string, optionally tidying its whitespace. apps-script-utils, English.</web-summary>
+<web-summary>toLowerCase() — Lowers a string, optionally tidying its whitespace. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -49,4 +49,4 @@ toLowerCase("  Hello   World  ", { trim: true }); // => "hello world"
 
 ## Source
 
-[`src/lang/string/toLowerCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toLowerCase.ts)
+[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toLowerCase.ts)

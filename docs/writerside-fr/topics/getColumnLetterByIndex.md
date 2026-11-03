@@ -4,7 +4,7 @@
 
 <link-summary>Convertit un indice de colonne à base zéro en sa lettre.</link-summary>
 
-<web-summary>getColumnLetterByIndex() — Convertit un indice de colonne à base zéro en sa lettre. apps-script-utils, Français.</web-summary>
+<web-summary>getColumnLetterByIndex() — Convertit un indice de colonne à base zéro en sa lettre. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -44,4 +44,4 @@ getColumnLetterByIndex(26); // => "AA"
 
 ## Code source
 
-[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)
+[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une chaîne de version.</link-summary>
 
-<web-summary>nonValidVersion() — Vérifie qu'une valeur n'est **pas** une chaîne de version. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidVersion() — Vérifie qu'une valeur n'est **pas** une chaîne de version. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.11.0</p>
@@ -51,4 +51,4 @@ nonValidVersion("2026.01.15"); // => false
 
 ## Code source
 
-[`src/lang/string/nonValidVersion.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidVersion.ts)
+[`src/lang/string/nonValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidVersion.ts)

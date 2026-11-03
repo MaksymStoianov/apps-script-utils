@@ -4,7 +4,7 @@
 
 <link-summary>Finds a named range by its name.</link-summary>
 
-<web-summary>getNamedRangeByName() — Finds a named range by its name. apps-script-utils, English.</web-summary>
+<web-summary>getNamedRangeByName() — Finds a named range by its name. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ range?.getRange().getValues();
 
 ## Source
 
-[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)
+[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)

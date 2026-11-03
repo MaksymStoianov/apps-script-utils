@@ -4,7 +4,7 @@
 
 <link-summary>Fills the `{{ key }}` placeholders of a template from an object.</link-summary>
 
-<web-summary>merge() — Fills the `{{ key }}` placeholders of a template from an object. apps-script-utils, English.</web-summary>
+<web-summary>merge() — Fills the `{{ key }}` placeholders of a template from an object. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ merge("Hi {{ name }}!", {}, { onMissing: "empty" }); // => "Hi !"
 
 ## Source
 
-[`src/lang/string/merge.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

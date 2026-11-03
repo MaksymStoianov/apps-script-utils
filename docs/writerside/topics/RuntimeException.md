@@ -4,7 +4,7 @@
 
 <link-summary>The parent of every exception a running script can provoke.</link-summary>
 
-<web-summary>RuntimeException — The parent of every exception a running script can provoke. apps-script-utils, English.</web-summary>
+<web-summary>RuntimeException — The parent of every exception a running script can provoke. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Source
 
-[`src/exception/RuntimeException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/RuntimeException.ts)
+[`src/exception/RuntimeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RuntimeException.ts)

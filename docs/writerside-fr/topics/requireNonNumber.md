@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas un nombre.</link-summary>
 
-<web-summary>requireNonNumber() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un nombre. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonNumber() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un nombre. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonNumber(1.5); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonNumber.ts)
+[`src/lang/base/requireNonNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonNumber.ts)

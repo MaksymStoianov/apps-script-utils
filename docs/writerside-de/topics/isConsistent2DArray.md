@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine nicht-leere Matrix ist, deren Zeilen alle gleich lang sind.</link-summary>
 
-<web-summary>isConsistent2DArray() — Prüft, ob ein Wert eine nicht-leere Matrix ist, deren Zeilen alle gleich lang sind. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isConsistent2DArray() — Prüft, ob ein Wert eine nicht-leere Matrix ist, deren Zeilen alle gleich lang sind. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.0.0</p>
@@ -69,4 +69,4 @@ function write(sheet, rows) {
 
 ## Quellcode
 
-[`src/lang/array/isConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/isConsistent2DArray.ts)
+[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/isConsistent2DArray.ts)

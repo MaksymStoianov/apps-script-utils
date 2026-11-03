@@ -4,7 +4,7 @@
 
 <link-summary>Replaces every occurrence of a text on one slide.</link-summary>
 
-<web-summary>findReplaceAllTextInSlide() — Replaces every occurrence of a text on one slide. apps-script-utils, English.</web-summary>
+<web-summary>findReplaceAllTextInSlide() — Replaces every occurrence of a text on one slide. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -59,4 +59,4 @@ const replaced = findReplaceAllTextInSlide(slide, "{{ client }}", "Acme", false)
 
 ## Source
 
-[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)
+[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Compare deux valeurs en profondeur et sans risque avec null.</link-summary>
 
-<web-summary>equals() — Compare deux valeurs en profondeur et sans risque avec null. apps-script-utils, Français.</web-summary>
+<web-summary>equals() — Compare deux valeurs en profondeur et sans risque avec null. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Disponible depuis: 1.11.0</p>
@@ -47,4 +47,4 @@ equals(new Date(0), new Date(0)); // => true
 
 ## Code source
 
-[`src/lang/object/equals.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/equals.ts)
+[`src/lang/object/equals.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/equals.ts)

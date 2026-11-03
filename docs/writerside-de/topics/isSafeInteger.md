@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine sichere ganze Zahl ist.</link-summary>
 
-<web-summary>isSafeInteger() — Prüft, ob ein Wert eine sichere ganze Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isSafeInteger() — Prüft, ob ein Wert eine sichere ganze Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -51,4 +51,4 @@ isSafeInteger("42"); // => false
 
 ## Quellcode
 
-[`src/lang/number/isSafeInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isSafeInteger.ts)
+[`src/lang/number/isSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isSafeInteger.ts)

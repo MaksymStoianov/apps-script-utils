@@ -4,7 +4,7 @@
 
 <link-summary>A sheet was expected and the value is not one.</link-summary>
 
-<web-summary>InvalidSheetException — A sheet was expected and the value is not one. apps-script-utils, English.</web-summary>
+<web-summary>InvalidSheetException — A sheet was expected and the value is not one. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/sheet</code> · Since: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Source
 
-[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)

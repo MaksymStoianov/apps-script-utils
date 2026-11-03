@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение именем листа.</link-summary>
 
-<web-summary>isValidSheetName() — Проверяет, является ли значение именем листа. apps-script-utils, Русский.</web-summary>
+<web-summary>isValidSheetName() — Проверяет, является ли значение именем листа. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetName(""); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)
+[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)

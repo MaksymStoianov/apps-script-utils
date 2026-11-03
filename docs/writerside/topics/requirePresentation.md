@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a presentation, or throws.</link-summary>
 
-<web-summary>requirePresentation() — Returns the value as a presentation, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requirePresentation() — Returns the value as a presentation, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.11.0</p>
@@ -59,4 +59,4 @@ requirePresentation(null); // throws InvalidPresentationException
 
 ## Source
 
-[`src/appsscript/slide/requirePresentation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requirePresentation.ts)
+[`src/appsscript/slide/requirePresentation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requirePresentation.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Tabellen-Id ist.</link-summary>
 
-<web-summary>isValidSpreadsheetId() — Prüft, ob ein Wert eine Tabellen-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isValidSpreadsheetId() — Prüft, ob ein Wert eine Tabellen-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -48,4 +48,4 @@ isValidSpreadsheetId("has space in it and is long enough to pass"); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)
+[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)

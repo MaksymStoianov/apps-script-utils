@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un chemin absolu.</link-summary>
 
-<web-summary>isAbsolute() — Vérifie si une valeur est un chemin absolu. apps-script-utils, Français.</web-summary>
+<web-summary>isAbsolute() — Vérifie si une valeur est un chemin absolu. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isAbsolute(""); // => false
 
 ## Code source
 
-[`src/net/path/isAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/isAbsolute.ts)
+[`src/net/path/isAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isAbsolute.ts)

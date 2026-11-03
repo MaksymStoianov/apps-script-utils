@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une chaîne de version.</link-summary>
 
-<web-summary>isValidVersion() — Vérifie si une valeur est une chaîne de version. apps-script-utils, Français.</web-summary>
+<web-summary>isValidVersion() — Vérifie si une valeur est une chaîne de version. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -49,4 +49,4 @@ isValidVersion("1..2"); // => false
 
 ## Code source
 
-[`src/lang/string/isValidVersion.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isValidVersion.ts)
+[`src/lang/string/isValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidVersion.ts)

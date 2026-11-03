@@ -4,7 +4,7 @@
 
 <link-summary>Блок ячеек, описанный так, как его описывает Sheets API.</link-summary>
 
-<web-summary>GridRange — Блок ячеек, описанный так, как его описывает Sheets API. apps-script-utils, Русский.</web-summary>
+<web-summary>GridRange — Блок ячеек, описанный так, как его описывает Sheets API. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet/types</code> · Доступно с: 1.0.0</p>
@@ -42,4 +42,4 @@ const range = {
 
 ## Исходный код
 
-[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/GridRange.ts)
+[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/GridRange.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Бере останній елемент масиву або його останні n елементів у початковому порядку.</link-summary>
 
-<web-summary>last() — Бере останній елемент масиву або його останні n елементів у початковому порядку. apps-script-utils, Українська.</web-summary>
+<web-summary>last() — Бере останній елемент масиву або його останні n елементів у початковому порядку. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -81,4 +81,4 @@ last([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Вихідний код
 
-[`src/lang/array/last.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/last.ts)
+[`src/lang/array/last.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/last.ts)

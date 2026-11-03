@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как массив или выбрасывает исключение.</link-summary>
 
-<web-summary>requireArray() — Возвращает значение как массив или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireArray() — Возвращает значение как массив или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireArray({ length: 0 }); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireArray.ts)
+[`src/lang/base/requireArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireArray.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Un curseur sur une suite, capable aussi de reculer.</link-summary>
 
-<web-summary>Iterator — Un curseur sur une suite, capable aussi de reculer. apps-script-utils, Français.</web-summary>
+<web-summary>Iterator — Un curseur sur une suite, capable aussi de reculer. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang</code> · Disponible depuis: 1.0.0</p>
@@ -37,4 +37,4 @@ while (iterator.hasNext()) {
 
 ## Code source
 
-[`src/lang/Iterator.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Iterator.ts)
+[`src/lang/Iterator.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Iterator.ts)

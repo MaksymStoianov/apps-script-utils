@@ -4,7 +4,7 @@
 
 <link-summary>Zerlegt einen Pfad in seine Teile.</link-summary>
 
-<web-summary>parse() — Zerlegt einen Pfad in seine Teile. apps-script-utils, Deutsch.</web-summary>
+<web-summary>parse() — Zerlegt einen Pfad in seine Teile. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code></p>
@@ -48,4 +48,4 @@ parse("readme.md");
 
 ## Quellcode
 
-[`src/net/path/parse.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/parse.ts)
+[`src/net/path/parse.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/parse.ts)

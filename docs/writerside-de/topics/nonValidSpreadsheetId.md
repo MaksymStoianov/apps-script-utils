@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Tabellen-Id ist.</link-summary>
 
-<web-summary>nonValidSpreadsheetId() — Prüft, ob ein Wert **nicht** eine Tabellen-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonValidSpreadsheetId() — Prüft, ob ein Wert **nicht** eine Tabellen-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -48,4 +48,4 @@ nonValidSpreadsheetId("1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"); // => fal
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)
+[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)

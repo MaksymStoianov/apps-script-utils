@@ -4,7 +4,7 @@
 
 <link-summary>Entfernt das auf einem Blatt hinterlegte Schema.</link-summary>
 
-<web-summary>removeSchema() — Entfernt das auf einem Blatt hinterlegte Schema. apps-script-utils, Deutsch.</web-summary>
+<web-summary>removeSchema() — Entfernt das auf einem Blatt hinterlegte Schema. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ removeSchema(sheet, { validation: true }); // also clears the rules it implied
 
 ## Quellcode
 
-[`src/appsscript/sheet/removeSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/removeSchema.ts)
+[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/removeSchema.ts)

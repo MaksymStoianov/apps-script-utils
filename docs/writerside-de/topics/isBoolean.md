@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein boolescher Wert ist.</link-summary>
 
-<web-summary>isBoolean() — Prüft, ob ein Wert ein boolescher Wert ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isBoolean() — Prüft, ob ein Wert ein boolescher Wert ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isBoolean(null); // => false
 
 ## Quellcode
 
-[`src/lang/base/isBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isBoolean.ts)
+[`src/lang/base/isBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isBoolean.ts)

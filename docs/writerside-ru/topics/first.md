@@ -4,7 +4,7 @@
 
 <link-summary>Берёт первый элемент массива или его первые n элементов, без отдельной проверки на пустоту.</link-summary>
 
-<web-summary>first() — Берёт первый элемент массива или его первые n элементов, без отдельной проверки на пустоту. apps-script-utils, Русский.</web-summary>
+<web-summary>first() — Берёт первый элемент массива или его первые n элементов, без отдельной проверки на пустоту. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -83,4 +83,4 @@ first([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Исходный код
 
-[`src/lang/array/first.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/first.ts)
+[`src/lang/array/first.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/first.ts)

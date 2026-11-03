@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** de type objet.</link-summary>
 
-<web-summary>nonObjectLike() — Vérifie qu'une valeur n'est **pas** de type objet. apps-script-utils, Français.</web-summary>
+<web-summary>nonObjectLike() — Vérifie qu'une valeur n'est **pas** de type objet. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -54,4 +54,4 @@ nonObjectLike(function () {}); // => false
 
 ## Code source
 
-[`src/lang/base/nonObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonObjectLike.ts)
+[`src/lang/base/nonObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonObjectLike.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як рядок версії або викидає виняток.</link-summary>
 
-<web-summary>requireValidVersion() — Повертає значення як рядок версії або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidVersion() — Повертає значення як рядок версії або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidVersion("v1.2"); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/string/requireValidVersion.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireValidVersion.ts)
+[`src/lang/string/requireValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidVersion.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob zwei Rasterbereiche gleich hoch und gleich breit sind.</link-summary>
 
-<web-summary>isGridRangeSameDimensions() — Prüft, ob zwei Rasterbereiche gleich hoch und gleich breit sind. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isGridRangeSameDimensions() — Prüft, ob zwei Rasterbereiche gleich hoch und gleich breit sind. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -48,4 +48,4 @@ isGridRangeSameDimensions(source, target); // => true
 
 ## Quellcode
 
-[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)

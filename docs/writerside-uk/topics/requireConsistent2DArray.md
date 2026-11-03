@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як двовимірний масив з однаковою довжиною рядків або викидає виняток.</link-summary>
 
-<web-summary>requireConsistent2DArray() — Повертає значення як двовимірний масив з однаковою довжиною рядків або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireConsistent2DArray() — Повертає значення як двовимірний масив з однаковою довжиною рядків або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -79,4 +79,4 @@ requireConsistent2DArray([1, 2], "rows must be a matrix");
 
 ## Вихідний код
 
-[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/requireConsistent2DArray.ts)
+[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/requireConsistent2DArray.ts)

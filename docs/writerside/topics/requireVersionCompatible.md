@@ -4,7 +4,7 @@
 
 <link-summary>Returns the version once it is known to meet the requirement, or throws.</link-summary>
 
-<web-summary>requireVersionCompatible() — Returns the version once it is known to meet the requirement, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireVersionCompatible() — Returns the version once it is known to meet the requirement, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ requireVersionCompatible("1.3.0", "1.2.0"); // => "1.3.0"
 
 ## Source
 
-[`src/lang/string/requireVersionCompatible.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireVersionCompatible.ts)
+[`src/lang/string/requireVersionCompatible.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireVersionCompatible.ts)

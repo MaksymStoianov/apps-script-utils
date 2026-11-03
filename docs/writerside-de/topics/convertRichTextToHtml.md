@@ -4,7 +4,7 @@
 
 <link-summary>Gibt einen Rich-Text-Zellwert als HTML aus.</link-summary>
 
-<web-summary>convertRichTextToHtml() — Gibt einen Rich-Text-Zellwert als HTML aus. apps-script-utils, Deutsch.</web-summary>
+<web-summary>convertRichTextToHtml() — Gibt einen Rich-Text-Zellwert als HTML aus. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -46,4 +46,4 @@ const html = convertRichTextToHtml(range.getRichTextValue());
 
 ## Quellcode
 
-[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)
+[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)

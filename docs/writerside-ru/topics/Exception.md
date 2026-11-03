@@ -4,7 +4,7 @@
 
 <link-summary>Основание иерархии, наследник Error.</link-summary>
 
-<web-summary>Exception — Основание иерархии, наследник Error. apps-script-utils, Русский.</web-summary>
+<web-summary>Exception — Основание иерархии, наследник Error. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/Exception.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/Exception.ts)
+[`src/exception/Exception.ts`](https://github.com/bootgs/utils/blob/main/src/exception/Exception.ts)

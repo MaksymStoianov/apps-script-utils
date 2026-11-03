@@ -2,7 +2,7 @@
 
 <link-summary>Every exception class the library throws.</link-summary>
 
-<web-summary>Reference of the exception classes in apps-script-utils: what each one means and which functions throw it.</web-summary>
+<web-summary>Reference of the exception classes in @bootgs/utils: what each one means and which functions throw it.</web-summary>
 
 Typed exception classes used throughout the library. Domain-specific exceptions (Sheets, Slides, Admin SDK, network)
 extend a common `Exception` base class for consistent error handling.

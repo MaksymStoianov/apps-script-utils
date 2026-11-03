@@ -4,7 +4,7 @@
 
 <link-summary>Видаляє з масиву повтори, зберігаючи перше входження кожного значення.</link-summary>
 
-<web-summary>unique() — Видаляє з масиву повтори, зберігаючи перше входження кожного значення. apps-script-utils, Українська.</web-summary>
+<web-summary>unique() — Видаляє з масиву повтори, зберігаючи перше входження кожного значення. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -49,7 +49,7 @@ unique([0, -0]); // => [0]
 ### Дедуплікація записів за ключем
 
 ```typescript
-import { unique } from "apps-script-utils";
+import { unique } from "@bootgs/utils";
 
 const rows = [
   { id: 1, name: "first" },
@@ -84,4 +84,4 @@ function listStatuses(sheet) {
 
 ## Вихідний код
 
-[`src/lang/array/unique.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/unique.ts)
+[`src/lang/array/unique.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/unique.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення безпечним цілим числом.</link-summary>
 
-<web-summary>isSafeInteger() — Перевіряє, чи є значення безпечним цілим числом. apps-script-utils, Українська.</web-summary>
+<web-summary>isSafeInteger() — Перевіряє, чи є значення безпечним цілим числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -51,4 +51,4 @@ isSafeInteger("42"); // => false
 
 ## Вихідний код
 
-[`src/lang/number/isSafeInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isSafeInteger.ts)
+[`src/lang/number/isSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isSafeInteger.ts)

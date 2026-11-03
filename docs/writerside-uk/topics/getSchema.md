@@ -4,7 +4,7 @@
 
 <link-summary>Повертає схему аркуша — збережену або виведену з його вмісту.</link-summary>
 
-<web-summary>getSchema() — Повертає схему аркуша — збережену або виведену з його вмісту. apps-script-utils, Українська.</web-summary>
+<web-summary>getSchema() — Повертає схему аркуша — збережену або виведену з його вмісту. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -55,4 +55,4 @@ schema?.columns.map((column) => column.name);
 
 ## Вихідний код
 
-[`src/appsscript/sheet/getSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSchema.ts)
+[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSchema.ts)

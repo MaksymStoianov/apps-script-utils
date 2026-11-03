@@ -4,7 +4,7 @@
 
 <link-summary>Fügt Spalten hinter der letzten Spalte mit Daten an.</link-summary>
 
-<web-summary>appendColumns() — Fügt Spalten hinter der letzten Spalte mit Daten an. apps-script-utils, Deutsch.</web-summary>
+<web-summary>appendColumns() — Fügt Spalten hinter der letzten Spalte mit Daten an. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -76,4 +76,4 @@ appendColumns(sheet.getRange("A1:D2"), [["a"], ["b"]]);
 
 ## Quellcode
 
-[`src/appsscript/sheet/appendColumns.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/appendColumns.ts)
+[`src/appsscript/sheet/appendColumns.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/appendColumns.ts)

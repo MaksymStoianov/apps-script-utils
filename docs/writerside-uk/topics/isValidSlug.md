@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення слагом.</link-summary>
 
-<web-summary>isValidSlug() — Перевіряє, чи є значення слагом. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidSlug() — Перевіряє, чи є значення слагом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -48,4 +48,4 @@ isValidSlug(""); // => false
 
 ## Вихідний код
 
-[`src/lang/string/isValidSlug.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isValidSlug.ts)
+[`src/lang/string/isValidSlug.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidSlug.ts)

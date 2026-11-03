@@ -4,7 +4,7 @@
 
 <link-summary>Очікувався GridRange, а об'єкт ним не є: межі відсутні, переплутані місцями або від'ємні.</link-summary>
 
-<web-summary>InvalidGridRangeException — Очікувався GridRange, а об'єкт ним не є: межі відсутні, переплутані місцями або від'ємні. apps-script-utils, Українська.</web-summary>
+<web-summary>InvalidGridRangeException — Очікувався GridRange, а об'єкт ним не є: межі відсутні, переплутані місцями або від'ємні. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/sheet</code> · Доступно з: 1.5.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/appsscript/sheet/InvalidGridRangeException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidGridRangeException.ts)
+[`src/exception/appsscript/sheet/InvalidGridRangeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidGridRangeException.ts)

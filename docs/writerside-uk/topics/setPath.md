@@ -4,7 +4,7 @@
 
 <link-summary>Записує вкладену властивість за шляхом, створюючи те, чого бракує.</link-summary>
 
-<web-summary>setPath() — Записує вкладену властивість за шляхом, створюючи те, чого бракує. apps-script-utils, Українська.</web-summary>
+<web-summary>setPath() — Записує вкладену властивість за шляхом, створюючи те, чого бракує. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ setPath({}, ["rows", 0, "id"], 7); // => { "rows": [{ "id": 7 }] }
 
 ## Вихідний код
 
-[`src/lang/object/setPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/setPath.ts)
+[`src/lang/object/setPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/setPath.ts)

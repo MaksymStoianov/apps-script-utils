@@ -4,7 +4,7 @@
 
 <link-summary>Le schéma de noms isX / nonX / requireX / requireNonX et ce que garantit chaque préfixe.</link-summary>
 
-<web-summary>Le schéma de nommage des validations dans apps-script-utils : isX et nonX répondent à une question, requireX et requireNonX valident et renvoient la valeur — chaque préfixe a sa signature.</web-summary>
+<web-summary>Le schéma de nommage des validations dans @bootgs/utils : isX et nonX répondent à une question, requireX et requireNonX valident et renvoient la valeur — chaque préfixe a sa signature.</web-summary>
 
 L'essentiel de cette bibliothèque est fait de validations, et presque toutes suivent un seul schéma de noms.
 Apprenez les quatre préfixes une fois, et le nom d'une fonction vous dira sa signature, sa valeur de retour et si
@@ -28,7 +28,7 @@ Les gardes `isX` sont déclarés comme prédicats de type TypeScript : le compil
 branche.
 
 ```typescript
-import { isString } from "apps-script-utils";
+import { isString } from "@bootgs/utils";
 
 function describe(value: unknown): string {
   if (isString(value)) {
@@ -42,7 +42,7 @@ function describe(value: unknown): string {
 `nonX` restreint dans l'autre sens — il retire `X` du type plutôt que de le confirmer :
 
 ```typescript
-import { nonString } from "apps-script-utils";
+import { nonString } from "@bootgs/utils";
 
 function lengthOf(value: string | number): number {
   if (nonString(value)) {
@@ -62,7 +62,7 @@ comme une phrase et non comme une négation — ce qui compte là où l'alternat
 `requireX` valide et renvoie : l'appel s'insère dans une expression au lieu d'exiger une instruction séparée.
 
 ```typescript
-import { requireNumber, requireString } from "apps-script-utils";
+import { requireNumber, requireString } from "@bootgs/utils";
 
 function repeat(text: unknown, times: unknown): string {
   return requireString(text).repeat(requireNumber(times));
@@ -109,7 +109,7 @@ Trois noms couvrent les cas vides, et la distinction est exacte :
 lève `NullPointerException`.
 
 ```typescript
-import { requireNonNull } from "apps-script-utils";
+import { requireNonNull } from "@bootgs/utils";
 
 const sheet = requireNonNull(spreadsheet.getSheetByName("Data"), "sheet 'Data' is missing");
 ```

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur est un tableau non vide dont chaque élément est lui-même un tableau.</link-summary>
 
-<web-summary>is2DArray() — Vérifie qu'une valeur est un tableau non vide dont chaque élément est lui-même un tableau. apps-script-utils, Français.</web-summary>
+<web-summary>is2DArray() — Vérifie qu'une valeur est un tableau non vide dont chaque élément est lui-même un tableau. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.0.0</p>
@@ -68,4 +68,4 @@ function countCells(value) {
 
 ## Code source
 
-[`src/lang/array/is2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/is2DArray.ts)
+[`src/lang/array/is2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/is2DArray.ts)

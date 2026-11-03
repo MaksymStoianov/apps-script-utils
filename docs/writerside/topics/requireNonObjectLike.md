@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not object-like.</link-summary>
 
-<web-summary>requireNonObjectLike() — Returns the value after checking that it is not object-like. apps-script-utils, English.</web-summary>
+<web-summary>requireNonObjectLike() — Returns the value after checking that it is not object-like. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonObjectLike([]); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNonObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonObjectLike.ts)
+[`src/lang/base/requireNonObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonObjectLike.ts)

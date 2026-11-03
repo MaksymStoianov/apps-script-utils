@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a matrix with uniform row lengths, or throws naming the offending row.</link-summary>
 
-<web-summary>requireConsistent2DArray() — Returns the value as a matrix with uniform row lengths, or throws naming the offending row. apps-script-utils, English.</web-summary>
+<web-summary>requireConsistent2DArray() — Returns the value as a matrix with uniform row lengths, or throws naming the offending row. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -82,4 +82,4 @@ requireConsistent2DArray([1, 2], "rows must be a matrix");
 
 ## Source
 
-[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/requireConsistent2DArray.ts)
+[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/requireConsistent2DArray.ts)

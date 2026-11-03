@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a boolean.</link-summary>
 
-<web-summary>isBoolean() — Checks whether a value is a boolean. apps-script-utils, English.</web-summary>
+<web-summary>isBoolean() — Checks whether a value is a boolean. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isBoolean(null); // => false
 
 ## Source
 
-[`src/lang/base/isBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isBoolean.ts)
+[`src/lang/base/isBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isBoolean.ts)

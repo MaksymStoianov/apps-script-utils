@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether one grid range lies entirely within another.</link-summary>
 
-<web-summary>isGridRangeContainedIn() — Checks whether one grid range lies entirely within another. apps-script-utils, English.</web-summary>
+<web-summary>isGridRangeContainedIn() — Checks whether one grid range lies entirely within another. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isGridRangeContainedIn(inner, outer); // => true
 
 ## Source
 
-[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)
+[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)

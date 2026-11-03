@@ -4,7 +4,7 @@
 
 <link-summary>Behauptet, dass eine Bedingung gilt, und wirft, wenn nicht.</link-summary>
 
-<web-summary>requireState() — Behauptet, dass eine Bedingung gilt, und wirft, wenn nicht. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireState() — Behauptet, dass eine Bedingung gilt, und wirft, wenn nicht. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ function close(connection) {
 
 ## Quellcode
 
-[`src/lang/base/requireState.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireState.ts)
+[`src/lang/base/requireState.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireState.ts)

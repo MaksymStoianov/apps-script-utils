@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den internen Tag eines Werts zurück.</link-summary>
 
-<web-summary>objectToString() — Gibt den internen Tag eines Werts zurück. apps-script-utils, Deutsch.</web-summary>
+<web-summary>objectToString() — Gibt den internen Tag eines Werts zurück. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/object</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ objectToString(new Date()); // => "[object Date]"
 
 ## Quellcode
 
-[`src/lang/object/objectToString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/objectToString.ts)
+[`src/lang/object/objectToString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/objectToString.ts)

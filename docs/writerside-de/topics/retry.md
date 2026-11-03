@@ -4,7 +4,7 @@
 
 <link-summary>Ruft eine Funktion nach einem Fehler erneut auf, mit wachsender Wartezeit.</link-summary>
 
-<web-summary>retry() — Ruft eine Funktion nach einem Fehler erneut auf, mit wachsender Wartezeit. apps-script-utils, Deutsch.</web-summary>
+<web-summary>retry() — Ruft eine Funktion nach einem Fehler erneut auf, mit wachsender Wartezeit. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/function</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ const response = retry(() => UrlFetchApp.fetch(url), {
 
 ## Quellcode
 
-[`src/lang/function/retry.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/function/retry.ts)
+[`src/lang/function/retry.ts`](https://github.com/bootgs/utils/blob/main/src/lang/function/retry.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Transforme un petit sous-ensemble de Markdown en segments de texte stylés.</link-summary>
 
-<web-summary>convertMarkdownToRichText() — Transforme un petit sous-ensemble de Markdown en segments de texte stylés. apps-script-utils, Français.</web-summary>
+<web-summary>convertMarkdownToRichText() — Transforme un petit sous-ensemble de Markdown en segments de texte stylés. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -50,4 +50,4 @@ const runs = convertMarkdownToRichText("**bold** and `code`");
 
 ## Code source
 
-[`src/appsscript/slide/convertMarkdownToRichText.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/convertMarkdownToRichText.ts)
+[`src/appsscript/slide/convertMarkdownToRichText.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/convertMarkdownToRichText.ts)

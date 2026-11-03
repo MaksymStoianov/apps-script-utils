@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є скалярним значенням.</link-summary>
 
-<web-summary>requireNonScalar() — Повертає значення, переконавшись, що воно не є скалярним значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonScalar() — Повертає значення, переконавшись, що воно не є скалярним значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonScalar(1); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonScalar.ts)
+[`src/lang/base/requireNonScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonScalar.ts)

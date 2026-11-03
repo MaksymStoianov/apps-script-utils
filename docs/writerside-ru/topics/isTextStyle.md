@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение стилем текста.</link-summary>
 
-<web-summary>isTextStyle() — Проверяет, является ли значение стилем текста. apps-script-utils, Русский.</web-summary>
+<web-summary>isTextStyle() — Проверяет, является ли значение стилем текста. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isTextStyle(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/isTextStyle.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isTextStyle.ts)
+[`src/appsscript/sheet/isTextStyle.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isTextStyle.ts)

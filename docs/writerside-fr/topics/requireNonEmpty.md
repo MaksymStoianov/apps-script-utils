@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas vide.</link-summary>
 
-<web-summary>requireNonEmpty() — Renvoie la valeur après avoir vérifié qu'elle n'est pas vide. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonEmpty() — Renvoie la valeur après avoir vérifié qu'elle n'est pas vide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -60,4 +60,4 @@ requireNonEmpty(""); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonEmpty.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonEmpty.ts)
+[`src/lang/base/requireNonEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonEmpty.ts)

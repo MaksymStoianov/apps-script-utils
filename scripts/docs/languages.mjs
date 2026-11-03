@@ -9,7 +9,7 @@
  * around the prose. The prose itself lives in `docs/content/<code>/`.
  */
 
-export const SITE = "https://maksymstoianov.github.io/apps-script-utils";
+export const SITE = "https://bootgs.github.io/utils";
 
 export const LANGUAGES = [
   {
@@ -18,7 +18,7 @@ export const LANGUAGES = [
     name: "English",
     root: "docs/writerside",
     webRoot: SITE,
-    instanceName: "apps-script-utils",
+    instanceName: "@bootgs/utils",
     strings: {
       parameters: "Parameters",
       parameter: "Parameter",
@@ -64,7 +64,7 @@ export const LANGUAGES = [
     name: "Русский",
     root: "docs/writerside-ru",
     webRoot: `${SITE}/ru`,
-    instanceName: "apps-script-utils (Русский)",
+    instanceName: "@bootgs/utils (Русский)",
     strings: {
       parameters: "Параметры",
       parameter: "Параметр",
@@ -111,7 +111,7 @@ export const LANGUAGES = [
     name: "Українська",
     root: "docs/writerside-uk",
     webRoot: `${SITE}/uk`,
-    instanceName: "apps-script-utils (Українська)",
+    instanceName: "@bootgs/utils (Українська)",
     strings: {
       parameters: "Параметри",
       parameter: "Параметр",
@@ -158,7 +158,7 @@ export const LANGUAGES = [
     name: "Deutsch",
     root: "docs/writerside-de",
     webRoot: `${SITE}/de`,
-    instanceName: "apps-script-utils (Deutsch)",
+    instanceName: "@bootgs/utils (Deutsch)",
     strings: {
       parameters: "Parameter",
       parameter: "Parameter",
@@ -205,7 +205,7 @@ export const LANGUAGES = [
     name: "Français",
     root: "docs/writerside-fr",
     webRoot: `${SITE}/fr`,
-    instanceName: "apps-script-utils (Français)",
+    instanceName: "@bootgs/utils (Français)",
     strings: {
       parameters: "Paramètres",
       parameter: "Paramètre",

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення назвою аркуша.</link-summary>
 
-<web-summary>isValidSheetName() — Перевіряє, чи є значення назвою аркуша. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidSheetName() — Перевіряє, чи є значення назвою аркуша. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetName(""); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)
+[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)

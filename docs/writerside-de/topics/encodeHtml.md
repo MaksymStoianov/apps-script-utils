@@ -4,7 +4,7 @@
 
 <link-summary>Kodiert jedes Zeichen als numerische Zeichenreferenz.</link-summary>
 
-<web-summary>encodeHtml() — Kodiert jedes Zeichen als numerische Zeichenreferenz. apps-script-utils, Deutsch.</web-summary>
+<web-summary>encodeHtml() — Kodiert jedes Zeichen als numerische Zeichenreferenz. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>html</code> · Verfügbar seit: 1.0.0</p>
@@ -48,4 +48,4 @@ encodeHtml("<a>"); // => "&#60;a&#62;"
 
 ## Quellcode
 
-[`src/html/encodeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/encodeHtml.ts)
+[`src/html/encodeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/encodeHtml.ts)

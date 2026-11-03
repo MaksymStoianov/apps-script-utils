@@ -26,7 +26,7 @@ import { isEmpty } from "./isEmpty";
  * @see      {@link nonEmpty}
  * @see      {@link requireEmpty}
  * @see      {@link requireNonEmptyString}
- * @see      [requireNonEmpty on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirenonempty.html)
+ * @see      [requireNonEmpty on the documentation site](https://bootgs.github.io/utils/requirenonempty.html)
  * @since    1.11.0
  * @version  1.0.0
  */

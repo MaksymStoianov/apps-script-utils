@@ -4,7 +4,7 @@
 
 <link-summary>Сериализует значение в JSON с фиксированным порядком ключей.</link-summary>
 
-<web-summary>stringifyJson() — Сериализует значение в JSON с фиксированным порядком ключей. apps-script-utils, Русский.</web-summary>
+<web-summary>stringifyJson() — Сериализует значение в JSON с фиксированным порядком ключей. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>json</code> · Доступно с: 1.0.0</p>
@@ -46,4 +46,4 @@ stringifyJson([1, "a", null]); // => "[1,\"a\",null]"
 
 ## Исходный код
 
-[`src/json/stringifyJson.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/json/stringifyJson.ts)
+[`src/json/stringifyJson.ts`](https://github.com/bootgs/utils/blob/main/src/json/stringifyJson.ts)

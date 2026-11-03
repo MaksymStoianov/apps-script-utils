@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein Gebietsschema-Code ist.</link-summary>
 
-<web-summary>isValidLocale() — Prüft, ob ein Wert ein Gebietsschema-Code ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isValidLocale() — Prüft, ob ein Wert ein Gebietsschema-Code ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -48,4 +48,4 @@ isValidLocale(""); // => false
 
 ## Quellcode
 
-[`src/lang/string/isValidLocale.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isValidLocale.ts)
+[`src/lang/string/isValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidLocale.ts)

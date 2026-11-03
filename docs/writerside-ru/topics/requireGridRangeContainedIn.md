@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает диапазон, убедившись, что он лежит внутри другого, иначе бросает исключение.</link-summary>
 
-<web-summary>requireGridRangeContainedIn() — Возвращает диапазон, убедившись, что он лежит внутри другого, иначе бросает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireGridRangeContainedIn() — Возвращает диапазон, убедившись, что он лежит внутри другого, иначе бросает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ requireGridRangeContainedIn(inner, outer); // => the inner range
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)
+[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)

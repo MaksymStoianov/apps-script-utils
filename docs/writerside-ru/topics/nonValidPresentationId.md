@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является идентификатором презентации.</link-summary>
 
-<web-summary>nonValidPresentationId() — Проверяет, что значение **не** является идентификатором презентации. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidPresentationId() — Проверяет, что значение **не** является идентификатором презентации. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно с: 1.11.0</p>
@@ -48,4 +48,4 @@ nonValidPresentationId("1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"); // => fa
 
 ## Исходный код
 
-[`src/appsscript/slide/nonValidPresentationId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonValidPresentationId.ts)
+[`src/appsscript/slide/nonValidPresentationId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonValidPresentationId.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Абстрактная основа, от которой наследуют собственные классы библиотеки.</link-summary>
 
-<web-summary>Class — Абстрактная основа, от которой наследуют собственные классы библиотеки. apps-script-utils, Русский.</web-summary>
+<web-summary>Class — Абстрактная основа, от которой наследуют собственные классы библиотеки. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang</code> · Доступно с: 1.0.0</p>
@@ -38,4 +38,4 @@ class Money extends Class {
 
 ## Исходный код
 
-[`src/lang/Class.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Class.ts)
+[`src/lang/Class.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Class.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Вызывающий известен, но делать это ему не разрешено.</link-summary>
 
-<web-summary>AuthorizationException — Вызывающий известен, но делать это ему не разрешено. apps-script-utils, Русский.</web-summary>
+<web-summary>AuthorizationException — Вызывающий известен, но делать это ему не разрешено. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.11.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/AuthorizationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/AuthorizationException.ts)
+[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/AuthorizationException.ts)

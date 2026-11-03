@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a number with a fractional part.</link-summary>
 
-<web-summary>isFloat() — Checks whether a value is a number with a fractional part. apps-script-utils, English.</web-summary>
+<web-summary>isFloat() — Checks whether a value is a number with a fractional part. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -52,4 +52,4 @@ isFloat("1.5"); // => false
 
 ## Source
 
-[`src/lang/number/isFloat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isFloat.ts)
+[`src/lang/number/isFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isFloat.ts)

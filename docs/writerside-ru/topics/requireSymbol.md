@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как символ или выбрасывает исключение.</link-summary>
 
-<web-summary>requireSymbol() — Возвращает значение как символ или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireSymbol() — Возвращает значение как символ или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireSymbol(null); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireSymbol.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireSymbol.ts)
+[`src/lang/base/requireSymbol.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireSymbol.ts)

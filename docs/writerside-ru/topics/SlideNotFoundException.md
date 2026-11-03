@@ -4,7 +4,7 @@
 
 <link-summary>Ожидался слайд, а значение им не является, либо запрошенного слайда в презентации нет.</link-summary>
 
-<web-summary>SlideNotFoundException — Ожидался слайд, а значение им не является, либо запрошенного слайда в презентации нет. apps-script-utils, Русский.</web-summary>
+<web-summary>SlideNotFoundException — Ожидался слайд, а значение им не является, либо запрошенного слайда в презентации нет. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/slide</code> · Доступно с: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)
+[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)

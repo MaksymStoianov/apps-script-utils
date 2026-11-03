@@ -4,7 +4,7 @@
 
 <link-summary>Повертає кількість днів у місяці вказаної дати.</link-summary>
 
-<web-summary>getDaysInMonth() — Повертає кількість днів у місяці вказаної дати. apps-script-utils, Українська.</web-summary>
+<web-summary>getDaysInMonth() — Повертає кількість днів у місяці вказаної дати. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time</code> · Доступно з: 1.11.0</p>
@@ -48,4 +48,4 @@ getDaysInMonth(new Date(2026, 1, 10)); // => 28
 
 ## Вихідний код
 
-[`src/time/getDaysInMonth.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/getDaysInMonth.ts)
+[`src/time/getDaysInMonth.ts`](https://github.com/bootgs/utils/blob/main/src/time/getDaysInMonth.ts)

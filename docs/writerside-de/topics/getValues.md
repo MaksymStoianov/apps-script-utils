@@ -4,7 +4,7 @@
 
 <link-summary>Liest die Zeilen eines Blattes, gefiltert, abgebildet und seitenweise, in einem Aufruf.</link-summary>
 
-<web-summary>getValues() — Liest die Zeilen eines Blattes, gefiltert, abgebildet und seitenweise, in einem Aufruf. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getValues() — Liest die Zeilen eines Blattes, gefiltert, abgebildet und seitenweise, in einem Aufruf. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -73,4 +73,4 @@ const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 
 ## Quellcode
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є порожнім значенням.</link-summary>
 
-<web-summary>requireNonEmpty() — Повертає значення, переконавшись, що воно не є порожнім значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonEmpty() — Повертає значення, переконавшись, що воно не є порожнім значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -60,4 +60,4 @@ requireNonEmpty(""); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonEmpty.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonEmpty.ts)
+[`src/lang/base/requireNonEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonEmpty.ts)

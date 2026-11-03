@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un slug.</link-summary>
 
-<web-summary>nonValidSlug() — Vérifie qu'une valeur n'est **pas** un slug. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidSlug() — Vérifie qu'une valeur n'est **pas** un slug. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSlug("a_1"); // => false
 
 ## Code source
 
-[`src/lang/string/nonValidSlug.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidSlug.ts)
+[`src/lang/string/nonValidSlug.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidSlug.ts)

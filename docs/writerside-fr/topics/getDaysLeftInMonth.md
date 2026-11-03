@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie combien de jours séparent une date de la fin de son mois.</link-summary>
 
-<web-summary>getDaysLeftInMonth() — Renvoie combien de jours séparent une date de la fin de son mois. apps-script-utils, Français.</web-summary>
+<web-summary>getDaysLeftInMonth() — Renvoie combien de jours séparent une date de la fin de son mois. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code> · Disponible depuis: 1.11.0</p>
@@ -49,4 +49,4 @@ getDaysLeftInMonth(new Date(2026, 0, 20)); // => 11
 
 ## Code source
 
-[`src/time/getDaysLeftInMonth.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/getDaysLeftInMonth.ts)
+[`src/time/getDaysLeftInMonth.ts`](https://github.com/bootgs/utils/blob/main/src/time/getDaysLeftInMonth.ts)

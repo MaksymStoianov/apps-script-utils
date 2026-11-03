@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Zahl ist.</link-summary>
 
-<web-summary>nonNumber() — Prüft, ob ein Wert **nicht** eine Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonNumber() — Prüft, ob ein Wert **nicht** eine Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -54,4 +54,4 @@ nonNumber(Infinity); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNumber.ts)
+[`src/lang/base/nonNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNumber.ts)

@@ -8,7 +8,7 @@ import { isArray } from "../base";
  * const values = [0, "", false, null, undefined];
  * ```
  *
- * @see [Falsy on the documentation site](https://maksymstoianov.github.io/apps-script-utils/falsy.html)
+ * @see [Falsy on the documentation site](https://bootgs.github.io/utils/falsy.html)
  * @since   1.11.0
  * @version 1.0.0
  */
@@ -38,7 +38,7 @@ export type Falsy = false | null | undefined | 0 | 0n | "";
  * @returns  {T[]} A new array without the falsy values. The input is left untouched.
  * @throws   {@link TypeError} If `array` is not an array.
  * @see      {@link nonNil}
- * @see      [compact on the documentation site](https://maksymstoianov.github.io/apps-script-utils/compact.html)
+ * @see      [compact on the documentation site](https://bootgs.github.io/utils/compact.html)
  * @since    1.11.0
  * @version  1.0.0
  */

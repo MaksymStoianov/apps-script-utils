@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Zeichenkette zurück oder wirft.</link-summary>
 
-<web-summary>requireString() — Gibt den Wert als eine Zeichenkette zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireString() — Gibt den Wert als eine Zeichenkette zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -55,4 +55,4 @@ requireString(null); // throws InvalidStringException
 
 ## Quellcode
 
-[`src/lang/base/requireString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireString.ts)
+[`src/lang/base/requireString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireString.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>A string was expected to be an email address and does not have the shape of one.</link-summary>
 
-<web-summary>InvalidEmailFormatException — A string was expected to be an email address and does not have the shape of one. apps-script-utils, English.</web-summary>
+<web-summary>InvalidEmailFormatException — A string was expected to be an email address and does not have the shape of one. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/InvalidEmailFormatException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/InvalidEmailFormatException.ts)
+[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidEmailFormatException.ts)

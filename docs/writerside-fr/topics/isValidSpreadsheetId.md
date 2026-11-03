@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un identifiant de classeur.</link-summary>
 
-<web-summary>isValidSpreadsheetId() — Vérifie si une valeur est un identifiant de classeur. apps-script-utils, Français.</web-summary>
+<web-summary>isValidSpreadsheetId() — Vérifie si une valeur est un identifiant de classeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.5.0</p>
@@ -48,4 +48,4 @@ isValidSpreadsheetId("has space in it and is long enough to pass"); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)
+[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)

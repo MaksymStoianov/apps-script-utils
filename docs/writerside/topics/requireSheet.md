@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a sheet, or throws.</link-summary>
 
-<web-summary>requireSheet() — Returns the value as a sheet, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireSheet() — Returns the value as a sheet, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.5.0</p>
@@ -56,4 +56,4 @@ requireSheet(null); // throws InvalidSheetException
 
 ## Source
 
-[`src/appsscript/sheet/requireSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireSheet.ts)
+[`src/appsscript/sheet/requireSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSheet.ts)

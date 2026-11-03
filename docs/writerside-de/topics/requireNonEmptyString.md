@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als Zeichenkette mit Inhalt zurück oder wirft.</link-summary>
 
-<web-summary>requireNonEmptyString() — Gibt den Wert als Zeichenkette mit Inhalt zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonEmptyString() — Gibt den Wert als Zeichenkette mit Inhalt zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ requireNonEmptyString("   "); // throws EmptyStringException
 
 ## Quellcode
 
-[`src/lang/string/requireNonEmptyString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireNonEmptyString.ts)
+[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireNonEmptyString.ts)

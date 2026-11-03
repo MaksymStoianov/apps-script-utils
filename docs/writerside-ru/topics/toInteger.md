@@ -4,7 +4,7 @@
 
 <link-summary>Извлекает число из значения или сообщает, что числа нет.</link-summary>
 
-<web-summary>toInteger() — Извлекает число из значения или сообщает, что числа нет. apps-script-utils, Русский.</web-summary>
+<web-summary>toInteger() — Извлекает число из значения или сообщает, что числа нет. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.0.0</p>
@@ -49,4 +49,4 @@ toInteger(1.9); // => 1.9
 
 ## Исходный код
 
-[`src/lang/number/toInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/toInteger.ts)
+[`src/lang/number/toInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/toInteger.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Переписывает одну формулу.</link-summary>
 
-<web-summary>FormulaTransformer — Переписывает одну формулу. apps-script-utils, Русский.</web-summary>
+<web-summary>FormulaTransformer — Переписывает одну формулу. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -32,4 +32,4 @@ const rewrite = (formula, row, column) => formula.replace("Sheet1", "Data");
 
 ## Исходный код
 
-[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/updateFormulas.ts)
+[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateFormulas.ts)

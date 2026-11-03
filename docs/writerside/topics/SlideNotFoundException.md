@@ -4,7 +4,7 @@
 
 <link-summary>A slide was expected and the value is not one, or the slide asked for does not exist in the presentation.</link-summary>
 
-<web-summary>SlideNotFoundException — A slide was expected and the value is not one, or the slide asked for does not exist in the presentation. apps-script-utils, English.</web-summary>
+<web-summary>SlideNotFoundException — A slide was expected and the value is not one, or the slide asked for does not exist in the presentation. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/slide</code> · Since: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Source
 
-[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)
+[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)

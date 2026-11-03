@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение числом.</link-summary>
 
-<web-summary>isNumber() — Проверяет, является ли значение числом. apps-script-utils, Русский.</web-summary>
+<web-summary>isNumber() — Проверяет, является ли значение числом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -52,4 +52,4 @@ isNumber(null); // => false
 
 ## Исходный код
 
-[`src/lang/base/isNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isNumber.ts)
+[`src/lang/base/isNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isNumber.ts)

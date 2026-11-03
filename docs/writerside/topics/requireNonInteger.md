@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not an integer.</link-summary>
 
-<web-summary>requireNonInteger() — Returns the value after checking that it is not an integer. apps-script-utils, English.</web-summary>
+<web-summary>requireNonInteger() — Returns the value after checking that it is not an integer. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonInteger(-7); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireNonInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNonInteger.ts)
+[`src/lang/number/requireNonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonInteger.ts)

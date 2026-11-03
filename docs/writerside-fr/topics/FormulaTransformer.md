@@ -4,7 +4,7 @@
 
 <link-summary>Réécrit une formule.</link-summary>
 
-<web-summary>FormulaTransformer — Réécrit une formule. apps-script-utils, Français.</web-summary>
+<web-summary>FormulaTransformer — Réécrit une formule. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -32,4 +32,4 @@ const rewrite = (formula, row, column) => formula.replace("Sheet1", "Data");
 
 ## Code source
 
-[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/updateFormulas.ts)
+[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateFormulas.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur est un nombre non négatif.</link-summary>
 
-<web-summary>nonNegative() — Vérifie qu'une valeur est un nombre non négatif. apps-script-utils, Français.</web-summary>
+<web-summary>nonNegative() — Vérifie qu'une valeur est un nombre non négatif. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.0.0 · <b>Déprécié</b></p>
@@ -47,4 +47,4 @@ nonNegative(-1); // => false
 
 ## Code source
 
-[`src/lang/number/nonNegative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonNegative.ts)
+[`src/lang/number/nonNegative.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonNegative.ts)

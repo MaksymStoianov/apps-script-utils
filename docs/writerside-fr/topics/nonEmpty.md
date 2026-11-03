@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** vide.</link-summary>
 
-<web-summary>nonEmpty() — Vérifie qu'une valeur n'est **pas** vide. apps-script-utils, Français.</web-summary>
+<web-summary>nonEmpty() — Vérifie qu'une valeur n'est **pas** vide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.1.0</p>
@@ -56,4 +56,4 @@ nonEmpty(new Map()); // => false
 
 ## Code source
 
-[`src/lang/base/nonEmpty.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonEmpty.ts)
+[`src/lang/base/nonEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonEmpty.ts)

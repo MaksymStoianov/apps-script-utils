@@ -4,7 +4,7 @@
 
 <link-summary>Ожидалась таблица, а значение ею не является.</link-summary>
 
-<web-summary>InvalidSpreadsheetException — Ожидалась таблица, а значение ею не является. apps-script-utils, Русский.</web-summary>
+<web-summary>InvalidSpreadsheetException — Ожидалась таблица, а значение ею не является. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)

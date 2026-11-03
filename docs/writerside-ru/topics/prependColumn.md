@@ -4,7 +4,7 @@
 
 <link-summary>Вставляет один столбец перед данными — на листе или у диапазона.</link-summary>
 
-<web-summary>prependColumn() — Вставляет один столбец перед данными — на листе или у диапазона. apps-script-utils, Русский.</web-summary>
+<web-summary>prependColumn() — Вставляет один столбец перед данными — на листе или у диапазона. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -71,4 +71,4 @@ prependColumn(sheet.getRange("C4:F13"), ["Name", "Ada"]);
 
 ## Исходный код
 
-[`src/appsscript/sheet/prependColumn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/prependColumn.ts)
+[`src/appsscript/sheet/prependColumn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependColumn.ts)

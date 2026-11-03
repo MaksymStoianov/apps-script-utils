@@ -4,7 +4,7 @@
 
 <link-summary>Met une chaîne en majuscules, en nettoyant au besoin ses espaces.</link-summary>
 
-<web-summary>toUpperCase() — Met une chaîne en majuscules, en nettoyant au besoin ses espaces. apps-script-utils, Français.</web-summary>
+<web-summary>toUpperCase() — Met une chaîne en majuscules, en nettoyant au besoin ses espaces. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -49,4 +49,4 @@ toUpperCase("Hello"); // => "HELLO"
 
 ## Code source
 
-[`src/lang/string/toUpperCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toUpperCase.ts)
+[`src/lang/string/toUpperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toUpperCase.ts)

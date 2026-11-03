@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является URL-адресом.</link-summary>
 
-<web-summary>nonUrl() — Проверяет, что значение **не** является URL-адресом. apps-script-utils, Русский.</web-summary>
+<web-summary>nonUrl() — Проверяет, что значение **не** является URL-адресом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/url</code> · Доступно с: 1.11.0</p>
@@ -52,4 +52,4 @@ nonUrl("http://example.com/a?b=1"); // => false
 
 ## Исходный код
 
-[`src/net/url/nonUrl.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/url/nonUrl.ts)
+[`src/net/url/nonUrl.ts`](https://github.com/bootgs/utils/blob/main/src/net/url/nonUrl.ts)

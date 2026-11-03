@@ -4,7 +4,7 @@
 
 <link-summary>Значения, которые JavaScript считает ложными в логическом контексте.</link-summary>
 
-<web-summary>Falsy — Значения, которые JavaScript считает ложными в логическом контексте. apps-script-utils, Русский.</web-summary>
+<web-summary>Falsy — Значения, которые JavaScript считает ложными в логическом контексте. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -33,4 +33,4 @@ const values = [0, "", false, null, undefined];
 
 ## Исходный код
 
-[`src/lang/array/compact.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/compact.ts)
+[`src/lang/array/compact.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/compact.ts)

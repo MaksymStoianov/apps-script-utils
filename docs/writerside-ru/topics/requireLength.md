@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как допустимую длину массива или выбрасывает исключение.</link-summary>
 
-<web-summary>requireLength() — Возвращает значение как допустимую длину массива или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireLength() — Возвращает значение как допустимую длину массива или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -58,4 +58,4 @@ requireLength(1.5); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireLength.ts)
+[`src/lang/base/requireLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireLength.ts)

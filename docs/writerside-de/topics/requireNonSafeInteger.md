@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine sichere ganze Zahl ist.</link-summary>
 
-<web-summary>requireNonSafeInteger() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine sichere ganze Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonSafeInteger() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine sichere ganze Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonSafeInteger(Number.MAX_SAFE_INTEGER); // throws IllegalArgumentExcepti
 
 ## Quellcode
 
-[`src/lang/number/requireNonSafeInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNonSafeInteger.ts)
+[`src/lang/number/requireNonSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonSafeInteger.ts)

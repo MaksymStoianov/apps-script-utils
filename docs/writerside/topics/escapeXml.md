@@ -4,7 +4,7 @@
 
 <link-summary>Escapes the characters XML reserves.</link-summary>
 
-<web-summary>escapeXml() — Escapes the characters XML reserves. apps-script-utils, English.</web-summary>
+<web-summary>escapeXml() — Escapes the characters XML reserves. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>html</code> · Since: 1.0.0</p>
@@ -47,4 +47,4 @@ escapeXml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Source
 
-[`src/html/escapeXml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/escapeXml.ts)
+[`src/html/escapeXml.ts`](https://github.com/bootgs/utils/blob/main/src/html/escapeXml.ts)

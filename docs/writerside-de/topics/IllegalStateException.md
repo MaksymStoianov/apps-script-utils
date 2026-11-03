@@ -4,7 +4,7 @@
 
 <link-summary>Der Aufruf kam zum falschen Zeitpunkt: die Argumente mögen gültig sein, aber das Objekt ist nicht in einem Zustand, der ihn erlaubt.</link-summary>
 
-<web-summary>IllegalStateException — Der Aufruf kam zum falschen Zeitpunkt: die Argumente mögen gültig sein, aber das Objekt ist nicht in einem Zustand, der ihn erlaubt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>IllegalStateException — Der Aufruf kam zum falschen Zeitpunkt: die Argumente mögen gültig sein, aber das Objekt ist nicht in einem Zustand, der ihn erlaubt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.11.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/IllegalStateException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/IllegalStateException.ts)
+[`src/exception/IllegalStateException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalStateException.ts)

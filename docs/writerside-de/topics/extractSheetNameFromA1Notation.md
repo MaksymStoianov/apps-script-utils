@@ -4,7 +4,7 @@
 
 <link-summary>Holt den Blattnamen aus einer A1-Notation.</link-summary>
 
-<web-summary>extractSheetNameFromA1Notation() — Holt den Blattnamen aus einer A1-Notation. apps-script-utils, Deutsch.</web-summary>
+<web-summary>extractSheetNameFromA1Notation() — Holt den Blattnamen aus einer A1-Notation. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.6.0</p>
@@ -45,4 +45,4 @@ extractSheetNameFromA1Notation("Sheet1!A1:B2"); // => "Sheet1"
 
 ## Quellcode
 
-[`src/appsscript/sheet/extractSheetNameFromA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/extractSheetNameFromA1Notation.ts)
+[`src/appsscript/sheet/extractSheetNameFromA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/extractSheetNameFromA1Notation.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Розфарбовує HTML у діапазоні як вихідний код.</link-summary>
 
-<web-summary>highlightHtml() — Розфарбовує HTML у діапазоні як вихідний код. apps-script-utils, Українська.</web-summary>
+<web-summary>highlightHtml() — Розфарбовує HTML у діапазоні як вихідний код. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -58,4 +58,4 @@ highlightHtml(range);
 
 ## Вихідний код
 
-[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/highlightHtml.ts)
+[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/highlightHtml.ts)

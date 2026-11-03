@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a domain name.</link-summary>
 
-<web-summary>isValidDomain() — Checks whether a value is a domain name. apps-script-utils, English.</web-summary>
+<web-summary>isValidDomain() — Checks whether a value is a domain name. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code></p>
@@ -51,4 +51,4 @@ isValidDomain(""); // => false
 
 ## Source
 
-[`src/net/path/isValidDomain.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/isValidDomain.ts)
+[`src/net/path/isValidDomain.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isValidDomain.ts)

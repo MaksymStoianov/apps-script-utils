@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a countable number, or throws.</link-summary>
 
-<web-summary>requireCountable() — Returns the value as a countable number, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireCountable() — Returns the value as a countable number, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ requireCountable(1.5); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireCountable.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireCountable.ts)
+[`src/lang/number/requireCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireCountable.ts)

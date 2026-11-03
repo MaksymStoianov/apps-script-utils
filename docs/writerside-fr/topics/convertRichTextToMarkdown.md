@@ -4,7 +4,7 @@
 
 <link-summary>Ramène des fragments de texte stylés vers du Markdown.</link-summary>
 
-<web-summary>convertRichTextToMarkdown() — Ramène des fragments de texte stylés vers du Markdown. apps-script-utils, Français.</web-summary>
+<web-summary>convertRichTextToMarkdown() — Ramène des fragments de texte stylés vers du Markdown. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 2.0.0</p>
@@ -61,4 +61,4 @@ convertRichTextToMarkdown([
 
 ## Code source
 
-[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)
+[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)

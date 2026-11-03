@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает длину строки в кодовых единицах.</link-summary>
 
-<web-summary>getByteSize() — Возвращает длину строки в кодовых единицах. apps-script-utils, Русский.</web-summary>
+<web-summary>getByteSize() — Возвращает длину строки в кодовых единицах. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/base</code> · Доступно с: 1.0.0</p>
@@ -48,4 +48,4 @@ getByteSize("abc"); // => 3
 
 ## Исходный код
 
-[`src/appsscript/base/getByteSize.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)
+[`src/appsscript/base/getByteSize.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getByteSize.ts)

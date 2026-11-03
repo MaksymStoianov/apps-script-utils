@@ -4,7 +4,7 @@
 
 <link-summary>Remplace chaque occurrence d'un texte sur une diapositive.</link-summary>
 
-<web-summary>findReplaceAllTextInSlide() — Remplace chaque occurrence d'un texte sur une diapositive. apps-script-utils, Français.</web-summary>
+<web-summary>findReplaceAllTextInSlide() — Remplace chaque occurrence d'un texte sur une diapositive. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -59,4 +59,4 @@ const replaced = findReplaceAllTextInSlide(slide, "{{ client }}", "Acme", false)
 
 ## Code source
 
-[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)
+[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)

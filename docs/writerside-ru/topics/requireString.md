@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как строку или выбрасывает исключение.</link-summary>
 
-<web-summary>requireString() — Возвращает значение как строку или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireString() — Возвращает значение как строку или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -55,4 +55,4 @@ requireString(null); // throws InvalidStringException
 
 ## Исходный код
 
-[`src/lang/base/requireString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireString.ts)
+[`src/lang/base/requireString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireString.ts)

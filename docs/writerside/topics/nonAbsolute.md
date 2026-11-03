@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** an absolute path.</link-summary>
 
-<web-summary>nonAbsolute() — Checks whether a value is **not** an absolute path. apps-script-utils, English.</web-summary>
+<web-summary>nonAbsolute() — Checks whether a value is **not** an absolute path. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Since: 1.11.0</p>
@@ -51,4 +51,4 @@ nonAbsolute("mailto:a@example.com"); // => false
 
 ## Source
 
-[`src/net/path/nonAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonAbsolute.ts)
+[`src/net/path/nonAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/nonAbsolute.ts)

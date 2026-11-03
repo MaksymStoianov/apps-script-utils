@@ -4,7 +4,7 @@
 
 <link-summary>Die Wurzel der Hierarchie, abgeleitet von Error.</link-summary>
 
-<web-summary>Exception — Die Wurzel der Hierarchie, abgeleitet von Error. apps-script-utils, Deutsch.</web-summary>
+<web-summary>Exception — Die Wurzel der Hierarchie, abgeleitet von Error. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/Exception.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/Exception.ts)
+[`src/exception/Exception.ts`](https://github.com/bootgs/utils/blob/main/src/exception/Exception.ts)

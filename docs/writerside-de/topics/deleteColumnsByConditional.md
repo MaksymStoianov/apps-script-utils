@@ -4,7 +4,7 @@
 
 <link-summary>Löscht die vom Prädikat gewählten Spalten.</link-summary>
 
-<web-summary>deleteColumnsByConditional() — Löscht die vom Prädikat gewählten Spalten. apps-script-utils, Deutsch.</web-summary>
+<web-summary>deleteColumnsByConditional() — Löscht die vom Prädikat gewählten Spalten. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -76,4 +76,4 @@ deleteColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
 
 ## Quellcode
 
-[`src/appsscript/sheet/deleteColumnsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/deleteColumnsByConditional.ts)
+[`src/appsscript/sheet/deleteColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/deleteColumnsByConditional.ts)

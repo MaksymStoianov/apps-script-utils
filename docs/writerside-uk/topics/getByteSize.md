@@ -4,7 +4,7 @@
 
 <link-summary>Повертає довжину рядка в кодових одиницях.</link-summary>
 
-<web-summary>getByteSize() — Повертає довжину рядка в кодових одиницях. apps-script-utils, Українська.</web-summary>
+<web-summary>getByteSize() — Повертає довжину рядка в кодових одиницях. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/base</code> · Доступно з: 1.0.0</p>
@@ -48,4 +48,4 @@ getByteSize("abc"); // => 3
 
 ## Вихідний код
 
-[`src/appsscript/base/getByteSize.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)
+[`src/appsscript/base/getByteSize.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getByteSize.ts)

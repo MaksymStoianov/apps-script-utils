@@ -1,4 +1,4 @@
-import { non2DArray, nonConsistent2DArray } from "apps-script-utils";
+import { non2DArray, nonConsistent2DArray } from "@bootgs/utils";
 
 /**
  * Validates the shape of a value before it reaches `setValues`, and returns

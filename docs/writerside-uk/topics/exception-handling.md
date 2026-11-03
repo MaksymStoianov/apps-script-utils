@@ -4,7 +4,7 @@
 
 <link-summary>Ієрархія винятків, коли кидається кожен клас і як їх ловити.</link-summary>
 
-<web-summary>Типізовані винятки apps-script-utils: ієрархія під Exception, яка перевірка який клас кидає і як ловити їх у проєкті Google Apps Script.</web-summary>
+<web-summary>Типізовані винятки @bootgs/utils: ієрархія під Exception, яка перевірка який клас кидає і як ловити їх у проєкті Google Apps Script.</web-summary>
 
 Будь-яка помилка, яку підіймає ця бібліотека, — екземпляр класу `Exception` або його нащадка. Тому одного блоку
 `catch` досить, щоб відрізнити збої бібліотеки від усього іншого, що кидає середовище виконання.
@@ -41,7 +41,7 @@ Error
 У `Exception` є статичний страж типу — рекомендована перевірка, бо вона заодно звужує тип:
 
 ```typescript
-import { Exception, requireString } from "apps-script-utils";
+import { Exception, requireString } from "@bootgs/utils";
 
 try {
   requireString(input);
@@ -57,7 +57,7 @@ try {
 `instanceof` теж працює — ним ловлять один конкретний збій:
 
 ```typescript
-import { NullPointerException, requireNonNull } from "apps-script-utils";
+import { NullPointerException, requireNonNull } from "@bootgs/utils";
 
 try {
   const sheet = requireNonNull(spreadsheet.getSheetByName("Data"));

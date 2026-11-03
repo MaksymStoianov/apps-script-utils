@@ -4,7 +4,7 @@
 
 <link-summary>Вставляє один рядок перед даними — на аркуші або біля діапазону.</link-summary>
 
-<web-summary>prependRow() — Вставляє один рядок перед даними — на аркуші або біля діапазону. apps-script-utils, Українська.</web-summary>
+<web-summary>prependRow() — Вставляє один рядок перед даними — на аркуші або біля діапазону. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -70,4 +70,4 @@ prependRow(sheet.getRange("B4:C13"), ["Name", "Email"]);
 
 ## Вихідний код
 
-[`src/appsscript/sheet/prependRow.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/prependRow.ts)
+[`src/appsscript/sheet/prependRow.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependRow.ts)

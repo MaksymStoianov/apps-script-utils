@@ -4,7 +4,7 @@
 
 <link-summary>Fügt eine Zeile unter der letzten Zeile mit Daten an.</link-summary>
 
-<web-summary>appendRow() — Fügt eine Zeile unter der letzten Zeile mit Daten an. apps-script-utils, Deutsch.</web-summary>
+<web-summary>appendRow() — Fügt eine Zeile unter der letzten Zeile mit Daten an. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -70,4 +70,4 @@ appendRow(sheet.getRange("B1:D10"), ["Ada", "ada@example.com"]);
 
 ## Quellcode
 
-[`src/appsscript/sheet/appendRow.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/appendRow.ts)
+[`src/appsscript/sheet/appendRow.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/appendRow.ts)

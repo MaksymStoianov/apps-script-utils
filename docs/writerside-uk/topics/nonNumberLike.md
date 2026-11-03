@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є перетворюваним на число.</link-summary>
 
-<web-summary>nonNumberLike() — Перевіряє, що значення **не** є перетворюваним на число. apps-script-utils, Українська.</web-summary>
+<web-summary>nonNumberLike() — Перевіряє, що значення **не** є перетворюваним на число. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonNumberLike(" 42 "); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNumberLike.ts)
+[`src/lang/base/nonNumberLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNumberLike.ts)

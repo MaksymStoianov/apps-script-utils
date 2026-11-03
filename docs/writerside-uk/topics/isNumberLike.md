@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення перетворюваним на число.</link-summary>
 
-<web-summary>isNumberLike() — Перевіряє, чи є значення перетворюваним на число. apps-script-utils, Українська.</web-summary>
+<web-summary>isNumberLike() — Перевіряє, чи є значення перетворюваним на число. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isNumberLike(null); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isNumberLike.ts)
+[`src/lang/base/isNumberLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isNumberLike.ts)

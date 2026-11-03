@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine ganze Zahl ist.</link-summary>
 
-<web-summary>isInteger() — Prüft, ob ein Wert eine ganze Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isInteger() — Prüft, ob ein Wert eine ganze Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.5.0</p>
@@ -52,4 +52,4 @@ isInteger("42"); // => false
 
 ## Quellcode
 
-[`src/lang/number/isInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isInteger.ts)
+[`src/lang/number/isInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isInteger.ts)

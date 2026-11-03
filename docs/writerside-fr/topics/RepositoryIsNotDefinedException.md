@@ -4,7 +4,7 @@
 
 <link-summary>Un dépôt que le script attendait n'est pas là.</link-summary>
 
-<web-summary>RepositoryIsNotDefinedException — Un dépôt que le script attendait n'est pas là. apps-script-utils, Français.</web-summary>
+<web-summary>RepositoryIsNotDefinedException — Un dépôt que le script attendait n'est pas là. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)
+[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)

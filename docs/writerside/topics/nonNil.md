@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** `null` or `undefined`.</link-summary>
 
-<web-summary>nonNil() — Checks whether a value is **not** `null` or `undefined`. apps-script-utils, English.</web-summary>
+<web-summary>nonNil() — Checks whether a value is **not** `null` or `undefined`. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -53,4 +53,4 @@ nonNil(undefined); // => false
 
 ## Source
 
-[`src/lang/base/nonNil.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNil.ts)
+[`src/lang/base/nonNil.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNil.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является объектоподобным значением.</link-summary>
 
-<web-summary>nonObjectLike() — Проверяет, что значение **не** является объектоподобным значением. apps-script-utils, Русский.</web-summary>
+<web-summary>nonObjectLike() — Проверяет, что значение **не** является объектоподобным значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -54,4 +54,4 @@ nonObjectLike(function () {}); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonObjectLike.ts)
+[`src/lang/base/nonObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonObjectLike.ts)

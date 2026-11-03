@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение — непустой массив, каждый элемент которого сам является массивом.</link-summary>
 
-<web-summary>is2DArray() — Проверяет, что значение — непустой массив, каждый элемент которого сам является массивом. apps-script-utils, Русский.</web-summary>
+<web-summary>is2DArray() — Проверяет, что значение — непустой массив, каждый элемент которого сам является массивом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.0.0</p>
@@ -68,4 +68,4 @@ function countCells(value) {
 
 ## Исходный код
 
-[`src/lang/array/is2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/is2DArray.ts)
+[`src/lang/array/is2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/is2DArray.ts)

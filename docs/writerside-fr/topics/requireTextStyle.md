@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un style de texte, ou lève une exception.</link-summary>
 
-<web-summary>requireTextStyle() — Renvoie la valeur en tant que un style de texte, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireTextStyle() — Renvoie la valeur en tant que un style de texte, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -59,4 +59,4 @@ requireTextStyle(null); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)
+[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)

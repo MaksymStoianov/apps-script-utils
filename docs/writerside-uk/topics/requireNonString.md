@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є рядком.</link-summary>
 
-<web-summary>requireNonString() — Повертає значення, переконавшись, що воно не є рядком. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonString() — Повертає значення, переконавшись, що воно не є рядком. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonString("abc"); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonString.ts)
+[`src/lang/base/requireNonString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonString.ts)

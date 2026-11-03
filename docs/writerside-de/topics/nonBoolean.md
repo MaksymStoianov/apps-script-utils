@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein boolescher Wert ist.</link-summary>
 
-<web-summary>nonBoolean() — Prüft, ob ein Wert **nicht** ein boolescher Wert ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonBoolean() — Prüft, ob ein Wert **nicht** ein boolescher Wert ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.1.0</p>
@@ -53,4 +53,4 @@ nonBoolean(false); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonBoolean.ts)
+[`src/lang/base/nonBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonBoolean.ts)

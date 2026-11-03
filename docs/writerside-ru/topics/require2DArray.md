@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как непустой двумерный массив или выбрасывает исключение.</link-summary>
 
-<web-summary>require2DArray() — Возвращает значение как непустой двумерный массив или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>require2DArray() — Возвращает значение как непустой двумерный массив или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -76,4 +76,4 @@ require2DArray([]); // throws IllegalArgumentException — no rows
 
 ## Исходный код
 
-[`src/lang/array/require2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/require2DArray.ts)
+[`src/lang/array/require2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/require2DArray.ts)

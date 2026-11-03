@@ -1,4 +1,4 @@
-import { isConsistent2DArray } from "apps-script-utils";
+import { isConsistent2DArray } from "@bootgs/utils";
 
 /**
  * Writes a matrix to a sheet, refusing a ragged one with a message that says

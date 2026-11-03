@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение логическим значением.</link-summary>
 
-<web-summary>isBoolean() — Проверяет, является ли значение логическим значением. apps-script-utils, Русский.</web-summary>
+<web-summary>isBoolean() — Проверяет, является ли значение логическим значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isBoolean(null); // => false
 
 ## Исходный код
 
-[`src/lang/base/isBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isBoolean.ts)
+[`src/lang/base/isBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isBoolean.ts)

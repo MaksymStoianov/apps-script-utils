@@ -4,7 +4,7 @@
 
 <link-summary>Entfernt jedes Vorkommen der genannten Werte aus einem Array.</link-summary>
 
-<web-summary>without() — Entfernt jedes Vorkommen der genannten Werte aus einem Array. apps-script-utils, Deutsch.</web-summary>
+<web-summary>without() — Entfernt jedes Vorkommen der genannten Werte aus einem Array. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -49,7 +49,7 @@ without([NaN, 1], NaN); // => [1]
 ### Die Leerwerte einer Spalte verwerfen
 
 ```typescript
-import { without } from "apps-script-utils";
+import { without } from "@bootgs/utils";
 
 const names = sheet.getRange("A2:A").getValues().flat();
 
@@ -80,4 +80,4 @@ function visibleHeader(header) {
 
 ## Quellcode
 
-[`src/lang/array/without.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/without.ts)
+[`src/lang/array/without.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/without.ts)

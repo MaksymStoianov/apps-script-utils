@@ -5,13 +5,13 @@
                xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
 
     <variables>
-        <web-root>https://maksymstoianov.github.io/apps-script-utils/fr</web-root>
+        <web-root>https://bootgs.github.io/utils/fr</web-root>
         <noindex-content>false</noindex-content>
         <generate-canonicals>true</generate-canonicals>
         <locale-code>fr-FR</locale-code>
-        <product-web-url>https://github.com/MaksymStoianov/apps-script-utils</product-web-url>
-        <og-image>https://maksymstoianov.github.io/apps-script-utils/images/banner-1280x640.jpg</og-image>
-        <versions-switcher>https://maksymstoianov.github.io/apps-script-utils/help-versions.json</versions-switcher>
+        <product-web-url>https://github.com/bootgs/utils</product-web-url>
+        <og-image>https://bootgs.github.io/utils/images/banner-1280x640.jpg</og-image>
+        <versions-switcher>https://bootgs.github.io/utils/help-versions.json</versions-switcher>
         <include-in-head>head.html</include-in-head>
         <include-after-body>search.html</include-after-body>
     </variables>
@@ -19,13 +19,13 @@
     <footer>
         <notice>Cette documentation a été générée par une IA (Claude) à partir du code source de la bibliothèque.</notice>
         <copyright>2025–2026 Maksym Stoianov. Licensed under Apache-2.0.</copyright>
-        <link href="https://github.com/MaksymStoianov/apps-script-utils">GitHub</link>
-        <link href="https://www.npmjs.com/package/apps-script-utils">npm</link>
-        <link href="https://maksymstoianov.github.io/apps-script-utils/">English</link>
-        <link href="https://maksymstoianov.github.io/apps-script-utils/ru/">Русский</link>
-        <link href="https://maksymstoianov.github.io/apps-script-utils/uk/">Українська</link>
-        <link href="https://maksymstoianov.github.io/apps-script-utils/de/">Deutsch</link>
-        <link href="https://maksymstoianov.github.io/apps-script-utils/fr/">Français</link>
+        <link href="https://github.com/bootgs/utils">GitHub</link>
+        <link href="https://www.npmjs.com/package/@bootgs/utils">npm</link>
+        <link href="https://bootgs.github.io/utils/">English</link>
+        <link href="https://bootgs.github.io/utils/ru/">Русский</link>
+        <link href="https://bootgs.github.io/utils/uk/">Українська</link>
+        <link href="https://bootgs.github.io/utils/de/">Deutsch</link>
+        <link href="https://bootgs.github.io/utils/fr/">Français</link>
         <link href="https://darynamikhailenko.com/?utm_source=docs&amp;utm_medium=footer&amp;utm_campaign=apps-script-utils&amp;utm_content=banner-artist-credit">Banner artwork: Daryna Mikhailenko</link>
     </footer>
 

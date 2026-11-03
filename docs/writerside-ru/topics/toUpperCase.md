@@ -4,7 +4,7 @@
 
 <link-summary>Приводит строку к верхнему регистру, при желании прибирая пробелы.</link-summary>
 
-<web-summary>toUpperCase() — Приводит строку к верхнему регистру, при желании прибирая пробелы. apps-script-utils, Русский.</web-summary>
+<web-summary>toUpperCase() — Приводит строку к верхнему регистру, при желании прибирая пробелы. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -49,4 +49,4 @@ toUpperCase("Hello"); // => "HELLO"
 
 ## Исходный код
 
-[`src/lang/string/toUpperCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toUpperCase.ts)
+[`src/lang/string/toUpperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toUpperCase.ts)

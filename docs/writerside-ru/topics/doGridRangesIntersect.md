@@ -4,7 +4,7 @@
 
 <link-summary>Сообщает, пересекаются ли два диапазона хотя бы в одной ячейке.</link-summary>
 
-<web-summary>doGridRangesIntersect() — Сообщает, пересекаются ли два диапазона хотя бы в одной ячейке. apps-script-utils, Русский.</web-summary>
+<web-summary>doGridRangesIntersect() — Сообщает, пересекаются ли два диапазона хотя бы в одной ячейке. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -47,4 +47,4 @@ doGridRangesIntersect(left, right); // => true
 
 ## Исходный код
 
-[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)
+[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Retire d'un tableau toutes les occurrences des valeurs indiquées.</link-summary>
 
-<web-summary>without() — Retire d'un tableau toutes les occurrences des valeurs indiquées. apps-script-utils, Français.</web-summary>
+<web-summary>without() — Retire d'un tableau toutes les occurrences des valeurs indiquées. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -49,7 +49,7 @@ without([NaN, 1], NaN); // => [1]
 ### Écarter les blancs d'une colonne
 
 ```typescript
-import { without } from "apps-script-utils";
+import { without } from "@bootgs/utils";
 
 const names = sheet.getRange("A2:A").getValues().flat();
 
@@ -80,4 +80,4 @@ function visibleHeader(header) {
 
 ## Code source
 
-[`src/lang/array/without.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/without.ts)
+[`src/lang/array/without.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/without.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как счётное число или выбрасывает исключение.</link-summary>
 
-<web-summary>requireCountable() — Возвращает значение как счётное число или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireCountable() — Возвращает значение как счётное число или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ requireCountable(1.5); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/number/requireCountable.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireCountable.ts)
+[`src/lang/number/requireCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireCountable.ts)

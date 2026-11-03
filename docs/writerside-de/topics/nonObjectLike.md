@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** objektartig ist.</link-summary>
 
-<web-summary>nonObjectLike() — Prüft, ob ein Wert **nicht** objektartig ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonObjectLike() — Prüft, ob ein Wert **nicht** objektartig ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ nonObjectLike(function () {}); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonObjectLike.ts)
+[`src/lang/base/nonObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonObjectLike.ts)

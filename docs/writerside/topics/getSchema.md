@@ -4,7 +4,7 @@
 
 <link-summary>Returns the schema of a sheet, stored or inferred from its contents.</link-summary>
 
-<web-summary>getSchema() — Returns the schema of a sheet, stored or inferred from its contents. apps-script-utils, English.</web-summary>
+<web-summary>getSchema() — Returns the schema of a sheet, stored or inferred from its contents. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ schema?.columns.map((column) => column.name);
 
 ## Source
 
-[`src/appsscript/sheet/getSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSchema.ts)
+[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSchema.ts)

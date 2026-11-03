@@ -4,7 +4,7 @@
 
 <link-summary>Преобразует форматированное значение ячейки в HTML.</link-summary>
 
-<web-summary>convertRichTextToHtml() — Преобразует форматированное значение ячейки в HTML. apps-script-utils, Русский.</web-summary>
+<web-summary>convertRichTextToHtml() — Преобразует форматированное значение ячейки в HTML. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -46,4 +46,4 @@ const html = convertRichTextToHtml(range.getRichTextValue());
 
 ## Исходный код
 
-[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)
+[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Каким функциям нужна среда Apps Script, а какие работают где угодно.</link-summary>
 
-<web-summary>Какие части apps-script-utils зависят от сервисов Google Apps Script, а какие работают в Node.js и в тестах, и что это значит для тестирования вашего кода.</web-summary>
+<web-summary>Какие части @bootgs/utils зависят от сервисов Google Apps Script, а какие работают в Node.js и в тестах, и что это значит для тестирования вашего кода.</web-summary>
 
 Библиотека одна, но её функции работают не в одних и тех же местах. От того, по какую сторону черты стоит функция,
 зависит, получится ли покрыть её модульным тестом и стоит ли она обращения к сервису.
@@ -51,7 +51,7 @@ for (const row of rows) {
 То же рассуждение верно и для проверок. Проверяйте форму данных до того, как они дойдут до сервиса, а не после:
 
 ```typescript
-import { IllegalArgumentException, appendRows, isConsistent2DArray } from "apps-script-utils";
+import { IllegalArgumentException, appendRows, isConsistent2DArray } from "@bootgs/utils";
 
 if (!isConsistent2DArray(rows)) {
   throw new IllegalArgumentException("every row must have the same number of columns");

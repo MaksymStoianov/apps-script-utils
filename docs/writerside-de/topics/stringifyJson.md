@@ -4,7 +4,7 @@
 
 <link-summary>Serialisiert einen Wert nach JSON mit fester Schlüsselreihenfolge.</link-summary>
 
-<web-summary>stringifyJson() — Serialisiert einen Wert nach JSON mit fester Schlüsselreihenfolge. apps-script-utils, Deutsch.</web-summary>
+<web-summary>stringifyJson() — Serialisiert einen Wert nach JSON mit fester Schlüsselreihenfolge. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>json</code> · Verfügbar seit: 1.0.0</p>
@@ -46,4 +46,4 @@ stringifyJson([1, "a", null]); // => "[1,\"a\",null]"
 
 ## Quellcode
 
-[`src/json/stringifyJson.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/json/stringifyJson.ts)
+[`src/json/stringifyJson.ts`](https://github.com/bootgs/utils/blob/main/src/json/stringifyJson.ts)

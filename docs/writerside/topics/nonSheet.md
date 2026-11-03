@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a sheet.</link-summary>
 
-<web-summary>nonSheet() — Checks whether a value is **not** a sheet. apps-script-utils, English.</web-summary>
+<web-summary>nonSheet() — Checks whether a value is **not** a sheet. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.3.0</p>
@@ -53,4 +53,4 @@ nonSheet(sheet); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonSheet.ts)
+[`src/appsscript/sheet/nonSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonSheet.ts)

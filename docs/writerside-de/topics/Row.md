@@ -4,7 +4,7 @@
 
 <link-summary>Eine Zeile, wie `getValues` sie einem Filter oder Mapper übergibt.</link-summary>
 
-<web-summary>Row — Eine Zeile, wie `getValues` sie einem Filter oder Mapper übergibt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>Row — Eine Zeile, wie `getValues` sie einem Filter oder Mapper übergibt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -39,4 +39,4 @@ const row = {
 
 ## Quellcode
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

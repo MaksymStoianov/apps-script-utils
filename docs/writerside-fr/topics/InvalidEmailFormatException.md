@@ -4,7 +4,7 @@
 
 <link-summary>Une chaîne devait être une adresse e-mail et n'en a pas la forme.</link-summary>
 
-<web-summary>InvalidEmailFormatException — Une chaîne devait être une adresse e-mail et n'en a pas la forme. apps-script-utils, Français.</web-summary>
+<web-summary>InvalidEmailFormatException — Une chaîne devait être une adresse e-mail et n'en a pas la forme. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/InvalidEmailFormatException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/InvalidEmailFormatException.ts)
+[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidEmailFormatException.ts)

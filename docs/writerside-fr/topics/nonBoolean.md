@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un booléen.</link-summary>
 
-<web-summary>nonBoolean() — Vérifie qu'une valeur n'est **pas** un booléen. apps-script-utils, Français.</web-summary>
+<web-summary>nonBoolean() — Vérifie qu'une valeur n'est **pas** un booléen. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.1.0</p>
@@ -53,4 +53,4 @@ nonBoolean(false); // => false
 
 ## Code source
 
-[`src/lang/base/nonBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonBoolean.ts)
+[`src/lang/base/nonBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonBoolean.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie un dépôt une fois établi qu'il existe, ou lève.</link-summary>
 
-<web-summary>requireRepository() — Renvoie un dépôt une fois établi qu'il existe, ou lève. apps-script-utils, Français.</web-summary>
+<web-summary>requireRepository() — Renvoie un dépôt une fois établi qu'il existe, ou lève. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript</code> · Disponible depuis: 1.5.0</p>
@@ -52,4 +52,4 @@ const users = requireRepository(registry.users, "The user repository is not wire
 
 ## Code source
 
-[`src/appsscript/requireRepository.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/requireRepository.ts)
+[`src/appsscript/requireRepository.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/requireRepository.ts)

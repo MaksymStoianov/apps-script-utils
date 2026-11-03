@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є регулярним виразом.</link-summary>
 
-<web-summary>requireNonRegExp() — Повертає значення, переконавшись, що воно не є регулярним виразом. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonRegExp() — Повертає значення, переконавшись, що воно не є регулярним виразом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonRegExp(new RegExp("a")); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonRegExp.ts)
+[`src/lang/base/requireNonRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonRegExp.ts)

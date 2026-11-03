@@ -4,7 +4,7 @@
 
 <link-summary>Один рядок у тому вигляді, в якому `getValues` передає його фільтру чи перетворювачу.</link-summary>
 
-<web-summary>Row — Один рядок у тому вигляді, в якому `getValues` передає його фільтру чи перетворювачу. apps-script-utils, Українська.</web-summary>
+<web-summary>Row — Один рядок у тому вигляді, в якому `getValues` передає його фільтру чи перетворювачу. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -39,4 +39,4 @@ const row = {
 
 ## Вихідний код
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

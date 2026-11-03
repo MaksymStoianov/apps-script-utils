@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як непорожній двовимірний масив або викидає виняток.</link-summary>
 
-<web-summary>require2DArray() — Повертає значення як непорожній двовимірний масив або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>require2DArray() — Повертає значення як непорожній двовимірний масив або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -76,4 +76,4 @@ require2DArray([]); // throws IllegalArgumentException — no rows
 
 ## Вихідний код
 
-[`src/lang/array/require2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/require2DArray.ts)
+[`src/lang/array/require2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/require2DArray.ts)

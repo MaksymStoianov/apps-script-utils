@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як об'єкт HtmlOutput або викидає виняток.</link-summary>
 
-<web-summary>requireHtmlOutput() — Повертає значення як об'єкт HtmlOutput або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireHtmlOutput() — Повертає значення як об'єкт HtmlOutput або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно з: 1.11.0</p>
@@ -59,4 +59,4 @@ requireHtmlOutput(null); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/appsscript/ui/requireHtmlOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/requireHtmlOutput.ts)
+[`src/appsscript/ui/requireHtmlOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/requireHtmlOutput.ts)

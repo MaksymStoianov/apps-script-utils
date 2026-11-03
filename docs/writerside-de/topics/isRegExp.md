@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein regulärer Ausdruck ist.</link-summary>
 
-<web-summary>isRegExp() — Prüft, ob ein Wert ein regulärer Ausdruck ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isRegExp() — Prüft, ob ein Wert ein regulärer Ausdruck ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isRegExp(null); // => false
 
 ## Quellcode
 
-[`src/lang/base/isRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isRegExp.ts)
+[`src/lang/base/isRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isRegExp.ts)

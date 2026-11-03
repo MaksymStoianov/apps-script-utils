@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является объектом HtmlOutput.</link-summary>
 
-<web-summary>nonHtmlOutput() — Проверяет, что значение **не** является объектом HtmlOutput. apps-script-utils, Русский.</web-summary>
+<web-summary>nonHtmlOutput() — Проверяет, что значение **не** является объектом HtmlOutput. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ nonHtmlOutput(output); // => false
 
 ## Исходный код
 
-[`src/appsscript/ui/nonHtmlOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/nonHtmlOutput.ts)
+[`src/appsscript/ui/nonHtmlOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/nonHtmlOutput.ts)

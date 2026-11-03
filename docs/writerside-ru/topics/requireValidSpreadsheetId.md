@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как идентификатор таблицы или выбрасывает исключение.</link-summary>
 
-<web-summary>requireValidSpreadsheetId() — Возвращает значение как идентификатор таблицы или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireValidSpreadsheetId() — Возвращает значение как идентификатор таблицы или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ requireValidSpreadsheetId("has space in it and is long enough to pass"); // thro
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)
+[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)

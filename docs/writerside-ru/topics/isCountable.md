@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение счётным числом.</link-summary>
 
-<web-summary>isCountable() — Проверяет, является ли значение счётным числом. apps-script-utils, Русский.</web-summary>
+<web-summary>isCountable() — Проверяет, является ли значение счётным числом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.5.0</p>
@@ -50,4 +50,4 @@ isCountable(Number.MAX_SAFE_INTEGER + 2); // => false
 
 ## Исходный код
 
-[`src/lang/number/isCountable.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isCountable.ts)
+[`src/lang/number/isCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isCountable.ts)

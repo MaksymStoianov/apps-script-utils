@@ -4,7 +4,7 @@
 
 <link-summary>Аргумент оказался не того рода или вне диапазона, который принимает функция.</link-summary>
 
-<web-summary>IllegalArgumentException — Аргумент оказался не того рода или вне диапазона, который принимает функция. apps-script-utils, Русский.</web-summary>
+<web-summary>IllegalArgumentException — Аргумент оказался не того рода или вне диапазона, который принимает функция. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/IllegalArgumentException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/IllegalArgumentException.ts)
+[`src/exception/IllegalArgumentException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalArgumentException.ts)

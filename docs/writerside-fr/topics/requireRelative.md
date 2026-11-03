@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un chemin relatif, ou lève une exception.</link-summary>
 
-<web-summary>requireRelative() — Renvoie la valeur en tant que un chemin relatif, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireRelative() — Renvoie la valeur en tant que un chemin relatif, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Disponible depuis: 1.11.0</p>
@@ -54,4 +54,4 @@ requireRelative("https://example.com/a"); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/net/path/requireRelative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/requireRelative.ts)
+[`src/net/path/requireRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireRelative.ts)

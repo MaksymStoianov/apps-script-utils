@@ -4,7 +4,7 @@
 
 <link-summary>Assemble les mots d'une chaîne en camelCase.</link-summary>
 
-<web-summary>toCamelCase() — Assemble les mots d'une chaîne en camelCase. apps-script-utils, Français.</web-summary>
+<web-summary>toCamelCase() — Assemble les mots d'une chaîne en camelCase. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -54,4 +54,4 @@ toCamelCase("user_first_name"); // => "userfirstname"
 
 ## Code source
 
-[`src/lang/string/toCamelCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toCamelCase.ts)
+[`src/lang/string/toCamelCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toCamelCase.ts)

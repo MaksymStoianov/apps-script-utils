@@ -4,7 +4,7 @@
 
 <link-summary>Prend le dernier élément d'un tableau, ou ses n derniers éléments dans leur ordre d'origine.</link-summary>
 
-<web-summary>last() — Prend le dernier élément d'un tableau, ou ses n derniers éléments dans leur ordre d'origine. apps-script-utils, Français.</web-summary>
+<web-summary>last() — Prend le dernier élément d'un tableau, ou ses n derniers éléments dans leur ordre d'origine. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -81,4 +81,4 @@ last([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Code source
 
-[`src/lang/array/last.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/last.ts)
+[`src/lang/array/last.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/last.ts)

@@ -19,7 +19,7 @@
     },
     {
       "title": "Dropping the blanks a column comes with",
-      "body": "```typescript\nimport { without } from \"apps-script-utils\";\n\nconst names = sheet.getRange(\"A2:A\").getValues().flat();\n\nwithout(names, \"\", \"N/A\"); // the real entries, in sheet order\n```"
+      "body": "```typescript\nimport { without } from \"@bootgs/utils\";\n\nconst names = sheet.getRange(\"A2:A\").getValues().flat();\n\nwithout(names, \"\", \"N/A\"); // the real entries, in sheet order\n```"
     },
     {
       "title": "Removing a column from a header row",

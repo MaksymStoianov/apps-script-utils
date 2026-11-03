@@ -4,7 +4,7 @@
 
 <link-summary>Trouve l'un des déclencheurs du projet par son identifiant.</link-summary>
 
-<web-summary>getTriggerById() — Trouve l'un des déclencheurs du projet par son identifiant. apps-script-utils, Français.</web-summary>
+<web-summary>getTriggerById() — Trouve l'un des déclencheurs du projet par son identifiant. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/base</code> · Disponible depuis: 1.11.0</p>
@@ -54,4 +54,4 @@ if (trigger !== null) {
 
 ## Code source
 
-[`src/appsscript/base/getTriggerById.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getTriggerById.ts)
+[`src/appsscript/base/getTriggerById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getTriggerById.ts)

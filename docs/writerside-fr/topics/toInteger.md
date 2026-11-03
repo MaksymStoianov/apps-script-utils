@@ -4,7 +4,7 @@
 
 <link-summary>Extrait un nombre d'une valeur, ou signale qu'il n'y en a pas.</link-summary>
 
-<web-summary>toInteger() — Extrait un nombre d'une valeur, ou signale qu'il n'y en a pas. apps-script-utils, Français.</web-summary>
+<web-summary>toInteger() — Extrait un nombre d'une valeur, ou signale qu'il n'y en a pas. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.0.0</p>
@@ -49,4 +49,4 @@ toInteger(1.9); // => 1.9
 
 ## Code source
 
-[`src/lang/number/toInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/toInteger.ts)
+[`src/lang/number/toInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/toInteger.ts)

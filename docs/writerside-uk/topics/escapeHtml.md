@@ -4,7 +4,7 @@
 
 <link-summary>Замінює п'ять символів, які інакше були б прочитані як розмітка.</link-summary>
 
-<web-summary>escapeHtml() — Замінює п'ять символів, які інакше були б прочитані як розмітка. apps-script-utils, Українська.</web-summary>
+<web-summary>escapeHtml() — Замінює п'ять символів, які інакше були б прочитані як розмітка. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>html</code> · Доступно з: 1.0.0</p>
@@ -49,4 +49,4 @@ escapeHtml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Вихідний код
 
-[`src/html/escapeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/escapeHtml.ts)
+[`src/html/escapeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/escapeHtml.ts)

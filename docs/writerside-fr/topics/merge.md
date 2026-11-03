@@ -4,7 +4,7 @@
 
 <link-summary>Remplit les emplacements `{{ key }}` d'un gabarit depuis un objet.</link-summary>
 
-<web-summary>merge() — Remplit les emplacements `{{ key }}` d'un gabarit depuis un objet. apps-script-utils, Français.</web-summary>
+<web-summary>merge() — Remplit les emplacements `{{ key }}` d'un gabarit depuis un objet. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.11.0</p>
@@ -54,4 +54,4 @@ merge("Hi {{ name }}!", {}, { onMissing: "empty" }); // => "Hi !"
 
 ## Code source
 
-[`src/lang/string/merge.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

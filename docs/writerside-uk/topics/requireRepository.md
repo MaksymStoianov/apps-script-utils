@@ -4,7 +4,7 @@
 
 <link-summary>Повертає репозиторій, переконавшись, що він існує, інакше кидає виняток.</link-summary>
 
-<web-summary>requireRepository() — Повертає репозиторій, переконавшись, що він існує, інакше кидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireRepository() — Повертає репозиторій, переконавшись, що він існує, інакше кидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript</code> · Доступно з: 1.5.0</p>
@@ -52,4 +52,4 @@ const users = requireRepository(registry.users, "The user repository is not wire
 
 ## Вихідний код
 
-[`src/appsscript/requireRepository.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/requireRepository.ts)
+[`src/appsscript/requireRepository.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/requireRepository.ts)

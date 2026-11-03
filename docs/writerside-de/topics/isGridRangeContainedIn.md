@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Rasterbereich vollständig in einem anderen liegt.</link-summary>
 
-<web-summary>isGridRangeContainedIn() — Prüft, ob ein Rasterbereich vollständig in einem anderen liegt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isGridRangeContainedIn() — Prüft, ob ein Rasterbereich vollständig in einem anderen liegt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isGridRangeContainedIn(inner, outer); // => true
 
 ## Quellcode
 
-[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)
+[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)

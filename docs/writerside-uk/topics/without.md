@@ -4,7 +4,7 @@
 
 <link-summary>Видаляє з масиву всі входження перелічених значень.</link-summary>
 
-<web-summary>without() — Видаляє з масиву всі входження перелічених значень. apps-script-utils, Українська.</web-summary>
+<web-summary>without() — Видаляє з масиву всі входження перелічених значень. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -49,7 +49,7 @@ without([NaN, 1], NaN); // => [1]
 ### Відкидання порожніх значень стовпця
 
 ```typescript
-import { without } from "apps-script-utils";
+import { without } from "@bootgs/utils";
 
 const names = sheet.getRange("A2:A").getValues().flat();
 
@@ -80,4 +80,4 @@ function visibleHeader(header) {
 
 ## Вихідний код
 
-[`src/lang/array/without.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/without.ts)
+[`src/lang/array/without.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/without.ts)

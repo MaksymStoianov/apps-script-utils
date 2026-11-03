@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que une plage d'une seule cellule, ou lève une exception.</link-summary>
 
-<web-summary>requireCellGridRange() — Renvoie la valeur en tant que une plage d'une seule cellule, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireCellGridRange() — Renvoie la valeur en tant que une plage d'une seule cellule, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -56,4 +56,4 @@ requireCellGridRange({}); // throws InvalidGridRangeException
 
 ## Code source
 
-[`src/appsscript/sheet/requireCellGridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireCellGridRange.ts)
+[`src/appsscript/sheet/requireCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireCellGridRange.ts)

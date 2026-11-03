@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является функцией.</link-summary>
 
-<web-summary>requireNonFunction() — Возвращает значение, убедившись, что оно не является функцией. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonFunction() — Возвращает значение, убедившись, что оно не является функцией. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNonFunction(async function () {}); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonFunction.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonFunction.ts)
+[`src/lang/base/requireNonFunction.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonFunction.ts)

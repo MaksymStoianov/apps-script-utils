@@ -4,7 +4,7 @@
 
 <link-summary>Authentication failed: who the caller is could not be established.</link-summary>
 
-<web-summary>AuthenticationException — Authentication failed: who the caller is could not be established. apps-script-utils, English.</web-summary>
+<web-summary>AuthenticationException — Authentication failed: who the caller is could not be established. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/net</code> · Since: 1.5.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Source
 
-[`src/exception/net/AuthenticationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/net/AuthenticationException.ts)
+[`src/exception/net/AuthenticationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/net/AuthenticationException.ts)

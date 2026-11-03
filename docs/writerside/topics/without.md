@@ -4,7 +4,7 @@
 
 <link-summary>Removes every occurrence of the given values from an array.</link-summary>
 
-<web-summary>without() — Removes every occurrence of the given values from an array. apps-script-utils, English.</web-summary>
+<web-summary>without() — Removes every occurrence of the given values from an array. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -52,7 +52,7 @@ without([NaN, 1], NaN); // => [1]
 ### Dropping the blanks a column comes with
 
 ```typescript
-import { without } from "apps-script-utils";
+import { without } from "@bootgs/utils";
 
 const names = sheet.getRange("A2:A").getValues().flat();
 
@@ -83,4 +83,4 @@ function visibleHeader(header) {
 
 ## Source
 
-[`src/lang/array/without.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/without.ts)
+[`src/lang/array/without.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/without.ts)

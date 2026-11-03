@@ -4,7 +4,7 @@
 
 <link-summary>Очікувалася презентація, а значення нею не є.</link-summary>
 
-<web-summary>InvalidPresentationException — Очікувалася презентація, а значення нею не є. apps-script-utils, Українська.</web-summary>
+<web-summary>InvalidPresentationException — Очікувалася презентація, а значення нею не є. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/slide</code> · Доступно з: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)
+[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)

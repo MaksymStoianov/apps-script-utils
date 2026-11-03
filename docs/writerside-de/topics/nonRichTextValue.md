@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Rich-Text-Wert ist.</link-summary>
 
-<web-summary>nonRichTextValue() — Prüft, ob ein Wert **nicht** ein Rich-Text-Wert ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonRichTextValue() — Prüft, ob ein Wert **nicht** ein Rich-Text-Wert ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -53,4 +53,4 @@ nonRichTextValue(value); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)
+[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)

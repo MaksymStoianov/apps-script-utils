@@ -4,7 +4,7 @@
 
 <link-summary>Від рядка очікувалася адреса електронної пошти, а її форма їй не відповідає.</link-summary>
 
-<web-summary>InvalidEmailFormatException — Від рядка очікувалася адреса електронної пошти, а її форма їй не відповідає. apps-script-utils, Українська.</web-summary>
+<web-summary>InvalidEmailFormatException — Від рядка очікувалася адреса електронної пошти, а її форма їй не відповідає. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/InvalidEmailFormatException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/InvalidEmailFormatException.ts)
+[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidEmailFormatException.ts)

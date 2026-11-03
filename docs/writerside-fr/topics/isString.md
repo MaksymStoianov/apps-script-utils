@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une chaîne de caractères.</link-summary>
 
-<web-summary>isString() — Vérifie si une valeur est une chaîne de caractères. apps-script-utils, Français.</web-summary>
+<web-summary>isString() — Vérifie si une valeur est une chaîne de caractères. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isString([]); // => false
 
 ## Code source
 
-[`src/lang/base/isString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isString.ts)
+[`src/lang/base/isString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isString.ts)

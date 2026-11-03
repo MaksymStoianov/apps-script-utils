@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як доменне ім'я або викидає виняток.</link-summary>
 
-<web-summary>requireValidDomain() — Повертає значення як доменне ім'я або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidDomain() — Повертає значення як доменне ім'я або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidDomain("example..com"); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/net/path/requireValidDomain.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/requireValidDomain.ts)
+[`src/net/path/requireValidDomain.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireValidDomain.ts)

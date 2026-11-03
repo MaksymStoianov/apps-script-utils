@@ -4,7 +4,7 @@
 
 <link-summary>Un argument est d'un type inadapté ou hors de l'intervalle accepté.</link-summary>
 
-<web-summary>IllegalArgumentException — Un argument est d'un type inadapté ou hors de l'intervalle accepté. apps-script-utils, Français.</web-summary>
+<web-summary>IllegalArgumentException — Un argument est d'un type inadapté ou hors de l'intervalle accepté. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/IllegalArgumentException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/IllegalArgumentException.ts)
+[`src/exception/IllegalArgumentException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalArgumentException.ts)

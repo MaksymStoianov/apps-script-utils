@@ -4,7 +4,7 @@
 
 <link-summary>Перериває виклик, якщо поточний користувач не адміністратор Workspace.</link-summary>
 
-<web-summary>requireAdmin() — Перериває виклик, якщо поточний користувач не адміністратор Workspace. apps-script-utils, Українська.</web-summary>
+<web-summary>requireAdmin() — Перериває виклик, якщо поточний користувач не адміністратор Workspace. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/admin</code> · Доступно з: 1.11.0</p>
@@ -54,4 +54,4 @@ function deleteEverything() {
 
 ## Вихідний код
 
-[`src/appsscript/admin/requireAdmin.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/admin/requireAdmin.ts)
+[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/requireAdmin.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение объектом.</link-summary>
 
-<web-summary>isObject() — Проверяет, является ли значение объектом. apps-script-utils, Русский.</web-summary>
+<web-summary>isObject() — Проверяет, является ли значение объектом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -52,4 +52,4 @@ isObject(function () {}); // => false
 
 ## Исходный код
 
-[`src/lang/base/isObject.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isObject.ts)
+[`src/lang/base/isObject.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isObject.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>A string was expected to carry something and was null, undefined or empty.</link-summary>
 
-<web-summary>EmptyStringException — A string was expected to carry something and was null, undefined or empty. apps-script-utils, English.</web-summary>
+<web-summary>EmptyStringException — A string was expected to carry something and was null, undefined or empty. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/EmptyStringException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/EmptyStringException.ts)
+[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/EmptyStringException.ts)

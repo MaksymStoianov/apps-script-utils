@@ -4,7 +4,7 @@
 
 <link-summary>Les parties en lesquelles se décompose un chemin.</link-summary>
 
-<web-summary>ParsedPath — Les parties en lesquelles se décompose un chemin. apps-script-utils, Français.</web-summary>
+<web-summary>ParsedPath — Les parties en lesquelles se décompose un chemin. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path/types</code> · Disponible depuis: 0.1.0</p>
@@ -39,4 +39,4 @@ parse("readme.md");
 
 ## Code source
 
-[`src/net/path/types/ParsedPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/types/ParsedPath.ts)
+[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/types/ParsedPath.ts)

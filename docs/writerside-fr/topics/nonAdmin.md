@@ -4,7 +4,7 @@
 
 <link-summary>Indique que l'utilisateur courant n'est **pas** administrateur Workspace.</link-summary>
 
-<web-summary>nonAdmin() — Indique que l'utilisateur courant n'est **pas** administrateur Workspace. apps-script-utils, Français.</web-summary>
+<web-summary>nonAdmin() — Indique que l'utilisateur courant n'est **pas** administrateur Workspace. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/admin</code> · Disponible depuis: 1.11.0</p>
@@ -39,4 +39,4 @@ if (nonAdmin()) {
 
 ## Code source
 
-[`src/appsscript/admin/nonAdmin.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/admin/nonAdmin.ts)
+[`src/appsscript/admin/nonAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/nonAdmin.ts)

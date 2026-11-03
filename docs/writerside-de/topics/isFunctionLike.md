@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert aufrufbar ist.</link-summary>
 
-<web-summary>isFunctionLike() — Prüft, ob ein Wert aufrufbar ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isFunctionLike() — Prüft, ob ein Wert aufrufbar ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.2.0</p>
@@ -51,4 +51,4 @@ isFunctionLike("fn"); // => false
 
 ## Quellcode
 
-[`src/lang/base/isFunctionLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isFunctionLike.ts)
+[`src/lang/base/isFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isFunctionLike.ts)

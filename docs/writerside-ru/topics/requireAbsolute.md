@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как абсолютный путь или выбрасывает исключение.</link-summary>
 
-<web-summary>requireAbsolute() — Возвращает значение как абсолютный путь или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireAbsolute() — Возвращает значение как абсолютный путь или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно с: 1.11.0</p>
@@ -54,4 +54,4 @@ requireAbsolute("./a"); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/net/path/requireAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/requireAbsolute.ts)
+[`src/net/path/requireAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireAbsolute.ts)

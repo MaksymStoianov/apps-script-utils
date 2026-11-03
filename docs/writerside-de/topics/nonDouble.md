@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Zahl mit Nachkommateil ist.</link-summary>
 
-<web-summary>nonDouble() — Prüft, ob ein Wert **nicht** eine Zahl mit Nachkommateil ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonDouble() — Prüft, ob ein Wert **nicht** eine Zahl mit Nachkommateil ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ nonDouble(-0.1); // => false
 
 ## Quellcode
 
-[`src/lang/number/nonDouble.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonDouble.ts)
+[`src/lang/number/nonDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonDouble.ts)

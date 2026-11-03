@@ -4,7 +4,7 @@
 
 <link-summary>Переписывает строку в kebab-case.</link-summary>
 
-<web-summary>toKebabCase() — Переписывает строку в kebab-case. apps-script-utils, Русский.</web-summary>
+<web-summary>toKebabCase() — Переписывает строку в kebab-case. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -53,4 +53,4 @@ toKebabCase("userFirstName"); // => "user-first-name"
 
 ## Исходный код
 
-[`src/lang/string/toKebabCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toKebabCase.ts)
+[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toKebabCase.ts)

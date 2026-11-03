@@ -4,7 +4,7 @@
 
 <link-summary>Colore le HTML d'une plage comme du code source.</link-summary>
 
-<web-summary>highlightHtml() — Colore le HTML d'une plage comme du code source. apps-script-utils, Français.</web-summary>
+<web-summary>highlightHtml() — Colore le HTML d'une plage comme du code source. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -58,4 +58,4 @@ highlightHtml(range);
 
 ## Code source
 
-[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/highlightHtml.ts)
+[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/highlightHtml.ts)

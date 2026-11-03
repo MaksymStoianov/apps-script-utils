@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является доменным именем.</link-summary>
 
-<web-summary>nonValidDomain() — Проверяет, что значение **не** является доменным именем. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidDomain() — Проверяет, что значение **не** является доменным именем. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно с: 1.11.0</p>
@@ -51,4 +51,4 @@ nonValidDomain("sub.example.co.uk"); // => false
 
 ## Исходный код
 
-[`src/net/path/nonValidDomain.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonValidDomain.ts)
+[`src/net/path/nonValidDomain.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/nonValidDomain.ts)

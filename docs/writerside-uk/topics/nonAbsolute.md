@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є абсолютним шляхом.</link-summary>
 
-<web-summary>nonAbsolute() — Перевіряє, що значення **не** є абсолютним шляхом. apps-script-utils, Українська.</web-summary>
+<web-summary>nonAbsolute() — Перевіряє, що значення **не** є абсолютним шляхом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно з: 1.11.0</p>
@@ -51,4 +51,4 @@ nonAbsolute("mailto:a@example.com"); // => false
 
 ## Вихідний код
 
-[`src/net/path/nonAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonAbsolute.ts)
+[`src/net/path/nonAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/nonAbsolute.ts)

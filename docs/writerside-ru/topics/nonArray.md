@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является массивом.</link-summary>
 
-<web-summary>nonArray() — Проверяет, что значение **не** является массивом. apps-script-utils, Русский.</web-summary>
+<web-summary>nonArray() — Проверяет, что значение **не** является массивом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.4.0</p>
@@ -53,4 +53,4 @@ nonArray([1, 2, 3]); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonArray.ts)
+[`src/lang/base/nonArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonArray.ts)

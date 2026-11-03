@@ -4,7 +4,7 @@
 
 <link-summary>Удаляет из массива все ложные значения и сужает тип элементов без приведения.</link-summary>
 
-<web-summary>compact() — Удаляет из массива все ложные значения и сужает тип элементов без приведения. apps-script-utils, Русский.</web-summary>
+<web-summary>compact() — Удаляет из массива все ложные значения и сужает тип элементов без приведения. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -67,7 +67,7 @@ function readIds(sheet) {
 ### Когда `nonNil` подходит лучше
 
 ```typescript
-import { nonNil } from "apps-script-utils";
+import { nonNil } from "@bootgs/utils";
 
 const cells = [0, "", 5, null]; // a column read from a sheet
 
@@ -82,4 +82,4 @@ cells.filter(nonNil); // => [0, "", 5] — drops only the absent values
 
 ## Исходный код
 
-[`src/lang/array/compact.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/compact.ts)
+[`src/lang/array/compact.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/compact.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Réécrit les formules d'une feuille.</link-summary>
 
-<web-summary>updateFormulas() — Réécrit les formules d'une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>updateFormulas() — Réécrit les formules d'une feuille. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -71,4 +71,4 @@ updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 
 ## Code source
 
-[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/updateFormulas.ts)
+[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateFormulas.ts)

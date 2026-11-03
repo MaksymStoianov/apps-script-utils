@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un code de locale.</link-summary>
 
-<web-summary>isValidLocale() — Vérifie si une valeur est un code de locale. apps-script-utils, Français.</web-summary>
+<web-summary>isValidLocale() — Vérifie si une valeur est un code de locale. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -48,4 +48,4 @@ isValidLocale(""); // => false
 
 ## Code source
 
-[`src/lang/string/isValidLocale.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isValidLocale.ts)
+[`src/lang/string/isValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidLocale.ts)

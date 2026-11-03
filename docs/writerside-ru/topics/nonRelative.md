@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является относительным путём.</link-summary>
 
-<web-summary>nonRelative() — Проверяет, что значение **не** является относительным путём. apps-script-utils, Русский.</web-summary>
+<web-summary>nonRelative() — Проверяет, что значение **не** является относительным путём. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно с: 1.11.0</p>
@@ -50,4 +50,4 @@ nonRelative(""); // => false
 
 ## Исходный код
 
-[`src/net/path/nonRelative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonRelative.ts)
+[`src/net/path/nonRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/nonRelative.ts)

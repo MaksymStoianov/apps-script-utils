@@ -4,7 +4,7 @@
 
 <link-summary>Очікувався аркуш, а значення ним не є.</link-summary>
 
-<web-summary>InvalidSheetException — Очікувався аркуш, а значення ним не є. apps-script-utils, Українська.</web-summary>
+<web-summary>InvalidSheetException — Очікувався аркуш, а значення ним не є. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/sheet</code> · Доступно з: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)

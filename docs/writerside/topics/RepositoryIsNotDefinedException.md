@@ -4,7 +4,7 @@
 
 <link-summary>A repository the script expected to be available is not.</link-summary>
 
-<web-summary>RepositoryIsNotDefinedException — A repository the script expected to be available is not. apps-script-utils, English.</web-summary>
+<web-summary>RepositoryIsNotDefinedException — A repository the script expected to be available is not. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)
+[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein Blattname ist.</link-summary>
 
-<web-summary>isValidSheetName() — Prüft, ob ein Wert ein Blattname ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isValidSheetName() — Prüft, ob ein Wert ein Blattname ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetName(""); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)
+[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen numerischen Wert zurück oder wirft.</link-summary>
 
-<web-summary>requireNumberLike() — Gibt den Wert als einen numerischen Wert zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNumberLike() — Gibt den Wert als einen numerischen Wert zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNumberLike(Infinity); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNumberLike.ts)
+[`src/lang/base/requireNumberLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNumberLike.ts)

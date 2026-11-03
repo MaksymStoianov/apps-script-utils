@@ -2,7 +2,7 @@
 
 <link-summary>Das Framework boot.gs, das auf dieser Bibliothek aufbaut, und die Agent Skills, die KI-Agenten den Umgang damit beibringen.</link-summary>
 
-<web-summary>Wie apps-script-utils mit dem boot.gs-Framework für Google Apps Script zusammenhängt und mit den Agent Skills, die Claude Code, Gemini CLI und Cursor den Umgang mit beidem beibringen.</web-summary>
+<web-summary>Wie @bootgs/utils mit dem boot.gs-Framework für Google Apps Script zusammenhängt und mit den Agent Skills, die Claude Code, Gemini CLI und Cursor den Umgang mit beidem beibringen.</web-summary>
 
 Die Bibliothek ist für sich allein nützlich: installieren, eine Funktion importieren, fertig. Sie ist zugleich Teil
 eines kleinen Ökosystems für die Entwicklung mit Google Apps Script, und zwei Nachbarn lohnen die Bekanntschaft.
@@ -29,7 +29,7 @@ export class SheetController {
 }
 ```
 
-**Das Verhältnis zu dieser Bibliothek ist eine Abhängigkeit, keine Rivalität.** `bootgs` führt `apps-script-utils`
+**Das Verhältnis zu dieser Bibliothek ist eine Abhängigkeit, keine Rivalität.** `bootgs` führt `@bootgs/utils`
 unter seinen Laufzeitabhängigkeiten, ein boot.gs-Projekt hat also jede hier beschriebene Funktion bereits an Bord,
 ohne zweite Installation. Aus diesen Prüfungen sind seine Parametervalidierung und seine Dienstsuche gebaut.
 
@@ -37,7 +37,7 @@ Wozu man greift:
 
 | Was gebraucht wird                                                            | Was man nimmt                          |
 | :---------------------------------------------------------------------------- | :------------------------------------- |
-| Helfer in einem bestehenden Skript — ein paar Funktionen, keine neue Struktur | `apps-script-utils` allein             |
+| Helfer in einem bestehenden Skript — ein paar Funktionen, keine neue Struktur | `@bootgs/utils` allein                 |
 | Routing, Controller, Dependency Injection, eine Web-App mit echten Endpunkten | `bootgs`, die Bibliothek ist enthalten |
 
 ## Agent Skills — einem KI-Agenten diese Bibliothek beibringen
@@ -50,7 +50,7 @@ Der Katalog zerfällt in zwei Teile:
 
 | Skill                           | Behandelt                                                                                            |
 | :------------------------------ | :--------------------------------------------------------------------------------------------------- |
-| `apps-script-utils`             | diese Bibliothek: die Konvention `isX`/`nonX`/`requireX`, die Prüfungen, die Helfer                  |
+| `@bootgs/utils`                 | diese Bibliothek: die Konvention `isX`/`nonX`/`requireX`, die Prüfungen, die Helfer                  |
 | `apps-script-triggers`          | einfache und installierbare Trigger, die Gestalt der Ereignisse, Kontingente                         |
 | `apps-script-services`          | kontingentschonende Nutzung von `SpreadsheetApp`, `PropertiesService`, `CacheService`, `LockService` |
 | `apps-script-ui`                | Menüs, Seitenleisten, Dialoge und die Fallstricke von `google.script.run`                            |

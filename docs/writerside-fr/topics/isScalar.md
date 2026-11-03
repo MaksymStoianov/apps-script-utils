@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un scalaire.</link-summary>
 
-<web-summary>isScalar() — Vérifie si une valeur est un scalaire. apps-script-utils, Français.</web-summary>
+<web-summary>isScalar() — Vérifie si une valeur est un scalaire. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -53,4 +53,4 @@ isScalar(null); // => false
 
 ## Code source
 
-[`src/lang/base/isScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isScalar.ts)
+[`src/lang/base/isScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isScalar.ts)

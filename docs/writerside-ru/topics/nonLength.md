@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является допустимой длиной массива.</link-summary>
 
-<web-summary>nonLength() — Проверяет, что значение **не** является допустимой длиной массива. apps-script-utils, Русский.</web-summary>
+<web-summary>nonLength() — Проверяет, что значение **не** является допустимой длиной массива. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -52,4 +52,4 @@ nonLength(Number.MAX_SAFE_INTEGER); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonLength.ts)
+[`src/lang/base/nonLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonLength.ts)

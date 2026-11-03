@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la plage une fois établi que les deux ont la même taille, ou lève.</link-summary>
 
-<web-summary>requireGridRangeSameDimensions() — Renvoie la plage une fois établi que les deux ont la même taille, ou lève. apps-script-utils, Français.</web-summary>
+<web-summary>requireGridRangeSameDimensions() — Renvoie la plage une fois établi que les deux ont la même taille, ou lève. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -57,4 +57,4 @@ requireGridRangeSameDimensions(source, target); // => the source range
 
 ## Code source
 
-[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)

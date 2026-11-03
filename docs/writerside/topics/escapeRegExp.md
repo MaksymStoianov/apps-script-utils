@@ -4,7 +4,7 @@
 
 <link-summary>Escapes the characters that carry meaning inside a regular expression.</link-summary>
 
-<web-summary>escapeRegExp() — Escapes the characters that carry meaning inside a regular expression. apps-script-utils, English.</web-summary>
+<web-summary>escapeRegExp() — Escapes the characters that carry meaning inside a regular expression. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -49,4 +49,4 @@ new RegExp(escapeRegExp("1.5")).test("1x5"); // => false
 
 ## Source
 
-[`src/lang/string/escapeRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/escapeRegExp.ts)
+[`src/lang/string/escapeRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/escapeRegExp.ts)

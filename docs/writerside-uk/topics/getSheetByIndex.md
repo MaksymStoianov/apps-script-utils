@@ -4,7 +4,7 @@
 
 <link-summary>Знаходить аркуш за його позицією в таблиці.</link-summary>
 
-<web-summary>getSheetByIndex() — Знаходить аркуш за його позицією в таблиці. apps-script-utils, Українська.</web-summary>
+<web-summary>getSheetByIndex() — Знаходить аркуш за його позицією в таблиці. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code></p>
@@ -50,4 +50,4 @@ const first = getSheetByIndex(0);
 
 ## Вихідний код
 
-[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)
+[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)

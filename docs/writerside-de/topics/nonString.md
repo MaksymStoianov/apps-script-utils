@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Zeichenkette ist.</link-summary>
 
-<web-summary>nonString() — Prüft, ob ein Wert **nicht** eine Zeichenkette ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonString() — Prüft, ob ein Wert **nicht** eine Zeichenkette ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -53,4 +53,4 @@ nonString("abc"); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonString.ts)
+[`src/lang/base/nonString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonString.ts)

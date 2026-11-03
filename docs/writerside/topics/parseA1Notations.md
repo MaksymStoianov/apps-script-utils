@@ -4,7 +4,7 @@
 
 <link-summary>Reads a comma-separated list of A1 notations.</link-summary>
 
-<web-summary>parseA1Notations() — Reads a comma-separated list of A1 notations. apps-script-utils, English.</web-summary>
+<web-summary>parseA1Notations() — Reads a comma-separated list of A1 notations. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.6.0</p>
@@ -44,4 +44,4 @@ parseA1Notations("A1:B2, C3").length; // => 2
 
 ## Source
 
-[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)
+[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Lit une propriété imbriquée par chemin, avec valeur de repli.</link-summary>
 
-<web-summary>getPath() — Lit une propriété imbriquée par chemin, avec valeur de repli. apps-script-utils, Français.</web-summary>
+<web-summary>getPath() — Lit une propriété imbriquée par chemin, avec valeur de repli. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Disponible depuis: 1.11.0</p>
@@ -52,4 +52,4 @@ getPath({ rows: [{ id: 7 }] }, ["rows", 0, "id"]); // => 7
 
 ## Code source
 
-[`src/lang/object/getPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/getPath.ts)
+[`src/lang/object/getPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/getPath.ts)

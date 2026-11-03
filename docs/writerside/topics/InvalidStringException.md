@@ -4,7 +4,7 @@
 
 <link-summary>A string was expected and something else arrived.</link-summary>
 
-<web-summary>InvalidStringException — A string was expected and something else arrived. apps-script-utils, English.</web-summary>
+<web-summary>InvalidStringException — A string was expected and something else arrived. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/InvalidStringException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/InvalidStringException.ts)
+[`src/exception/InvalidStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidStringException.ts)

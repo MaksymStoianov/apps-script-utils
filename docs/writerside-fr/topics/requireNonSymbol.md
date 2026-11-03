@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas un symbole.</link-summary>
 
-<web-summary>requireNonSymbol() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un symbole. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonSymbol() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un symbole. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonSymbol(Symbol.iterator); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonSymbol.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonSymbol.ts)
+[`src/lang/base/requireNonSymbol.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonSymbol.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a range.</link-summary>
 
-<web-summary>isRange() — Checks whether a value is a range. apps-script-utils, English.</web-summary>
+<web-summary>isRange() — Checks whether a value is a range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isRange(null); // => false
 
 ## Source
 
-[`src/appsscript/sheet/isRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isRange.ts)
+[`src/appsscript/sheet/isRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isRange.ts)

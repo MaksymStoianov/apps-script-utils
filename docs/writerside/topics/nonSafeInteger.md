@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a safe integer.</link-summary>
 
-<web-summary>nonSafeInteger() — Checks whether a value is **not** a safe integer. apps-script-utils, English.</web-summary>
+<web-summary>nonSafeInteger() — Checks whether a value is **not** a safe integer. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSafeInteger(Number.MAX_SAFE_INTEGER); // => false
 
 ## Source
 
-[`src/lang/number/nonSafeInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonSafeInteger.ts)
+[`src/lang/number/nonSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonSafeInteger.ts)

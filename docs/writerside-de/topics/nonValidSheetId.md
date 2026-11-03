@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Blatt-Id ist.</link-summary>
 
-<web-summary>nonValidSheetId() — Prüft, ob ein Wert **nicht** eine Blatt-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonValidSheetId() — Prüft, ob ein Wert **nicht** eine Blatt-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSheetId(1234567890); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)
+[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)

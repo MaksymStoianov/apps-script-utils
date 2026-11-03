@@ -4,7 +4,7 @@
 
 <link-summary>Ein Dienst, den das Skript erwartet hat, ist nicht da: ein nicht aktivierter erweiterter Dienst oder eine nie definierte globale Variable.</link-summary>
 
-<web-summary>ServiceIsNotDefinedException — Ein Dienst, den das Skript erwartet hat, ist nicht da: ein nicht aktivierter erweiterter Dienst oder eine nie definierte globale Variable. apps-script-utils, Deutsch.</web-summary>
+<web-summary>ServiceIsNotDefinedException — Ein Dienst, den das Skript erwartet hat, ist nicht da: ein nicht aktivierter erweiterter Dienst oder eine nie definierte globale Variable. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)
+[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)

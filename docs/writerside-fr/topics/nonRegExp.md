@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une expression régulière.</link-summary>
 
-<web-summary>nonRegExp() — Vérifie qu'une valeur n'est **pas** une expression régulière. apps-script-utils, Français.</web-summary>
+<web-summary>nonRegExp() — Vérifie qu'une valeur n'est **pas** une expression régulière. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -53,4 +53,4 @@ nonRegExp(new RegExp("a")); // => false
 
 ## Code source
 
-[`src/lang/base/nonRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonRegExp.ts)
+[`src/lang/base/nonRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonRegExp.ts)

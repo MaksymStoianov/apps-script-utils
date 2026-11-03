@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення — непорожній масив, кожен елемент якого сам є масивом.</link-summary>
 
-<web-summary>is2DArray() — Перевіряє, що значення — непорожній масив, кожен елемент якого сам є масивом. apps-script-utils, Українська.</web-summary>
+<web-summary>is2DArray() — Перевіряє, що значення — непорожній масив, кожен елемент якого сам є масивом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.0.0</p>
@@ -68,4 +68,4 @@ function countCells(value) {
 
 ## Вихідний код
 
-[`src/lang/array/is2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/is2DArray.ts)
+[`src/lang/array/is2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/is2DArray.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Échappe les caractères qui ont un sens dans une expression régulière.</link-summary>
 
-<web-summary>escapeRegExp() — Échappe les caractères qui ont un sens dans une expression régulière. apps-script-utils, Français.</web-summary>
+<web-summary>escapeRegExp() — Échappe les caractères qui ont un sens dans une expression régulière. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -49,4 +49,4 @@ new RegExp(escapeRegExp("1.5")).test("1x5"); // => false
 
 ## Code source
 
-[`src/lang/string/escapeRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/escapeRegExp.ts)
+[`src/lang/string/escapeRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/escapeRegExp.ts)

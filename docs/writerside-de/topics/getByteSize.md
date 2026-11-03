@@ -4,7 +4,7 @@
 
 <link-summary>Gibt die Länge einer Zeichenkette in Codeeinheiten zurück.</link-summary>
 
-<web-summary>getByteSize() — Gibt die Länge einer Zeichenkette in Codeeinheiten zurück. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getByteSize() — Gibt die Länge einer Zeichenkette in Codeeinheiten zurück. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/base</code> · Verfügbar seit: 1.0.0</p>
@@ -48,4 +48,4 @@ getByteSize("abc"); // => 3
 
 ## Quellcode
 
-[`src/appsscript/base/getByteSize.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)
+[`src/appsscript/base/getByteSize.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getByteSize.ts)

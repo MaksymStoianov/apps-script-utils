@@ -4,7 +4,7 @@
 
 <link-summary>Reads A1 notation into a grid range.</link-summary>
 
-<web-summary>parseA1Notation() — Reads A1 notation into a grid range. apps-script-utils, English.</web-summary>
+<web-summary>parseA1Notation() — Reads A1 notation into a grid range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ parseA1Notation("A1").sheetName; // => null
 
 ## Source
 
-[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)
+[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)

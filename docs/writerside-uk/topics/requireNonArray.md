@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є масивом.</link-summary>
 
-<web-summary>requireNonArray() — Повертає значення, переконавшись, що воно не є масивом. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonArray() — Повертає значення, переконавшись, що воно не є масивом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonArray([1, 2, 3]); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonArray.ts)
+[`src/lang/base/requireNonArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonArray.ts)

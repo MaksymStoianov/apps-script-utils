@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является идентификатором листа.</link-summary>
 
-<web-summary>nonValidSheetId() — Проверяет, что значение **не** является идентификатором листа. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidSheetId() — Проверяет, что значение **не** является идентификатором листа. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSheetId(1234567890); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)
+[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)

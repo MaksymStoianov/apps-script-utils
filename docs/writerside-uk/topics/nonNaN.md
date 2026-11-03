@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є числом `NaN`.</link-summary>
 
-<web-summary>nonNaN() — Перевіряє, що значення **не** є числом `NaN`. apps-script-utils, Українська.</web-summary>
+<web-summary>nonNaN() — Перевіряє, що значення **не** є числом `NaN`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonNaN(0 / 0); // => false
 
 ## Вихідний код
 
-[`src/lang/number/nonNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonNaN.ts)
+[`src/lang/number/nonNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonNaN.ts)

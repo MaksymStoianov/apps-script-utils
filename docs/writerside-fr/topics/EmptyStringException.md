@@ -4,7 +4,7 @@
 
 <link-summary>Une chaîne devait contenir quelque chose et s'est révélée null, undefined ou vide.</link-summary>
 
-<web-summary>EmptyStringException — Une chaîne devait contenir quelque chose et s'est révélée null, undefined ou vide. apps-script-utils, Français.</web-summary>
+<web-summary>EmptyStringException — Une chaîne devait contenir quelque chose et s'est révélée null, undefined ou vide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/EmptyStringException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/EmptyStringException.ts)
+[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/EmptyStringException.ts)

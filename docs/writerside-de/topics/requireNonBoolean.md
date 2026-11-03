@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein boolescher Wert ist.</link-summary>
 
-<web-summary>requireNonBoolean() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein boolescher Wert ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonBoolean() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein boolescher Wert ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonBoolean(false); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonBoolean.ts)
+[`src/lang/base/requireNonBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonBoolean.ts)

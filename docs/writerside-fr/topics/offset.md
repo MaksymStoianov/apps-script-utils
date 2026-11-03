@@ -4,7 +4,7 @@
 
 <link-summary>Décale une date d'un certain nombre d'unités.</link-summary>
 
-<web-summary>offset() — Décale une date d'un certain nombre d'unités. apps-script-utils, Français.</web-summary>
+<web-summary>offset() — Décale une date d'un certain nombre d'unités. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code> · Disponible depuis: 1.11.0</p>
@@ -55,4 +55,4 @@ offset(start, -1, "day"); // 30 January 2026
 
 ## Code source
 
-[`src/time/offset.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/offset.ts)
+[`src/time/offset.ts`](https://github.com/bootgs/utils/blob/main/src/time/offset.ts)

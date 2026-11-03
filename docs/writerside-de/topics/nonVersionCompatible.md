@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob eine Version hinter der geforderten zurückbleibt.</link-summary>
 
-<web-summary>nonVersionCompatible() — Prüft, ob eine Version hinter der geforderten zurückbleibt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonVersionCompatible() — Prüft, ob eine Version hinter der geforderten zurückbleibt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.11.0</p>
@@ -43,4 +43,4 @@ nonVersionCompatible("1.2.0", "1.3.0"); // => true
 
 ## Quellcode
 
-[`src/lang/string/nonVersionCompatible.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonVersionCompatible.ts)
+[`src/lang/string/nonVersionCompatible.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonVersionCompatible.ts)

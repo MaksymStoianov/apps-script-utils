@@ -4,7 +4,7 @@
 
 <link-summary>Добавляет одну строку после последней строки с данными.</link-summary>
 
-<web-summary>appendRow() — Добавляет одну строку после последней строки с данными. apps-script-utils, Русский.</web-summary>
+<web-summary>appendRow() — Добавляет одну строку после последней строки с данными. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -70,4 +70,4 @@ appendRow(sheet.getRange("B1:D10"), ["Ada", "ada@example.com"]);
 
 ## Исходный код
 
-[`src/appsscript/sheet/appendRow.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/appendRow.ts)
+[`src/appsscript/sheet/appendRow.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/appendRow.ts)

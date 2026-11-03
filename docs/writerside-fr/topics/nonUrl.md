@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une URL.</link-summary>
 
-<web-summary>nonUrl() — Vérifie qu'une valeur n'est **pas** une URL. apps-script-utils, Français.</web-summary>
+<web-summary>nonUrl() — Vérifie qu'une valeur n'est **pas** une URL. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/url</code> · Disponible depuis: 1.11.0</p>
@@ -52,4 +52,4 @@ nonUrl("http://example.com/a?b=1"); // => false
 
 ## Code source
 
-[`src/net/url/nonUrl.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/url/nonUrl.ts)
+[`src/net/url/nonUrl.ts`](https://github.com/bootgs/utils/blob/main/src/net/url/nonUrl.ts)

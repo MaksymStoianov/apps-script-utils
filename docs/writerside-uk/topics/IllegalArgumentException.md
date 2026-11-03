@@ -4,7 +4,7 @@
 
 <link-summary>Аргумент виявився не того роду або поза діапазоном, який приймає функція.</link-summary>
 
-<web-summary>IllegalArgumentException — Аргумент виявився не того роду або поза діапазоном, який приймає функція. apps-script-utils, Українська.</web-summary>
+<web-summary>IllegalArgumentException — Аргумент виявився не того роду або поза діапазоном, який приймає функція. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/IllegalArgumentException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/IllegalArgumentException.ts)
+[`src/exception/IllegalArgumentException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalArgumentException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Funktion zurück oder wirft.</link-summary>
 
-<web-summary>requireFunction() — Gibt den Wert als eine Funktion zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireFunction() — Gibt den Wert als eine Funktion zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireFunction("fn"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireFunction.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireFunction.ts)
+[`src/lang/base/requireFunction.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireFunction.ts)

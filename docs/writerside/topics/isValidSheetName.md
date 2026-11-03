@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a sheet name.</link-summary>
 
-<web-summary>isValidSheetName() — Checks whether a value is a sheet name. apps-script-utils, English.</web-summary>
+<web-summary>isValidSheetName() — Checks whether a value is a sheet name. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetName(""); // => false
 
 ## Source
 
-[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)
+[`src/appsscript/sheet/isValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetName.ts)

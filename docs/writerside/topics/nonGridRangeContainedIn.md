@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether one grid range is **not** entirely within another.</link-summary>
 
-<web-summary>nonGridRangeContainedIn() — Checks whether one grid range is **not** entirely within another. apps-script-utils, English.</web-summary>
+<web-summary>nonGridRangeContainedIn() — Checks whether one grid range is **not** entirely within another. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeContainedIn(outer, inner); // => true
 
 ## Source
 
-[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)
+[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)

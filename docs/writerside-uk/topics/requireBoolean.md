@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як логічне значення або викидає виняток.</link-summary>
 
-<web-summary>requireBoolean() — Повертає значення як логічне значення або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireBoolean() — Повертає значення як логічне значення або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -55,4 +55,4 @@ requireBoolean(1); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireBoolean.ts)
+[`src/lang/base/requireBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireBoolean.ts)

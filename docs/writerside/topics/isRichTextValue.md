@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a rich text value.</link-summary>
 
-<web-summary>isRichTextValue() — Checks whether a value is a rich text value. apps-script-utils, English.</web-summary>
+<web-summary>isRichTextValue() — Checks whether a value is a rich text value. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isRichTextValue(null); // => false
 
 ## Source
 
-[`src/appsscript/sheet/isRichTextValue.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isRichTextValue.ts)
+[`src/appsscript/sheet/isRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isRichTextValue.ts)

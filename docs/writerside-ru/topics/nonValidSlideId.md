@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является идентификатором слайда.</link-summary>
 
-<web-summary>nonValidSlideId() — Проверяет, что значение **не** является идентификатором слайда. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidSlideId() — Проверяет, что значение **не** является идентификатором слайда. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно с: 1.11.0</p>
@@ -49,4 +49,4 @@ nonValidSlideId("SLIDES_api123"); // => false
 
 ## Исходный код
 
-[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)
+[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)

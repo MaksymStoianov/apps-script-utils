@@ -4,7 +4,7 @@
 
 <link-summary>Замінює ім'я аркуша в нотації A1, зберігаючи діапазон.</link-summary>
 
-<web-summary>updateSheetNameInA1Notation() — Замінює ім'я аркуша в нотації A1, зберігаючи діапазон. apps-script-utils, Українська.</web-summary>
+<web-summary>updateSheetNameInA1Notation() — Замінює ім'я аркуша в нотації A1, зберігаючи діапазон. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.6.0</p>
@@ -45,4 +45,4 @@ updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
 
 ## Вихідний код
 
-[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)
+[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)

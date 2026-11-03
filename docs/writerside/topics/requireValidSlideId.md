@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a slide id, or throws.</link-summary>
 
-<web-summary>requireValidSlideId() — Returns the value as a slide id, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidSlideId() — Returns the value as a slide id, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSlideId(""); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)
+[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)

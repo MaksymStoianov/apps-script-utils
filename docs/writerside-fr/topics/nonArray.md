@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un tableau.</link-summary>
 
-<web-summary>nonArray() — Vérifie qu'une valeur n'est **pas** un tableau. apps-script-utils, Français.</web-summary>
+<web-summary>nonArray() — Vérifie qu'une valeur n'est **pas** un tableau. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.4.0</p>
@@ -53,4 +53,4 @@ nonArray([1, 2, 3]); // => false
 
 ## Code source
 
-[`src/lang/base/nonArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonArray.ts)
+[`src/lang/base/nonArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonArray.ts)

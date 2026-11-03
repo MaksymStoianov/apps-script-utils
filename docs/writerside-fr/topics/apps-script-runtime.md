@@ -4,7 +4,7 @@
 
 <link-summary>Quelles fonctions exigent l'environnement Apps Script et lesquelles s'exécutent partout.</link-summary>
 
-<web-summary>Quelles parties d'apps-script-utils dépendent des services Google Apps Script et lesquelles tournent dans Node.js ou une suite de tests — et ce que cela implique pour tester votre code.</web-summary>
+<web-summary>Quelles parties d'@bootgs/utils dépendent des services Google Apps Script et lesquelles tournent dans Node.js ou une suite de tests — et ce que cela implique pour tester votre code.</web-summary>
 
 La bibliothèque est un seul paquet, mais ses fonctions ne s'exécutent pas toutes aux mêmes endroits. Le côté de la
 ligne où se trouve une fonction décide si vous pouvez la tester unitairement et si elle coûte un appel de service.
@@ -53,7 +53,7 @@ Le même raisonnement vaut pour la validation. Vérifiez la forme des données a
 pas après :
 
 ```typescript
-import { IllegalArgumentException, appendRows, isConsistent2DArray } from "apps-script-utils";
+import { IllegalArgumentException, appendRows, isConsistent2DArray } from "@bootgs/utils";
 
 if (!isConsistent2DArray(rows)) {
   throw new IllegalArgumentException("every row must have the same number of columns");

@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen Bereich zurück oder wirft.</link-summary>
 
-<web-summary>requireRange() — Gibt den Wert als einen Bereich zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireRange() — Gibt den Wert als einen Bereich zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -56,4 +56,4 @@ requireRange(null); // throws InvalidRangeException
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireRange.ts)
+[`src/appsscript/sheet/requireRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireRange.ts)

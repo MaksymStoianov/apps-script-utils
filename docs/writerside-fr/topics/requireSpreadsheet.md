@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un classeur, ou lève une exception.</link-summary>
 
-<web-summary>requireSpreadsheet() — Renvoie la valeur en tant que un classeur, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireSpreadsheet() — Renvoie la valeur en tant que un classeur, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSpreadsheet(null); // throws InvalidSpreadsheetException
 
 ## Code source
 
-[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)
+[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)

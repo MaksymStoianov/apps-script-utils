@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un tableau.</link-summary>
 
-<web-summary>isArray() — Vérifie si une valeur est un tableau. apps-script-utils, Français.</web-summary>
+<web-summary>isArray() — Vérifie si une valeur est un tableau. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.4.0</p>
@@ -51,4 +51,4 @@ isArray(null); // => false
 
 ## Code source
 
-[`src/lang/base/isArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isArray.ts)
+[`src/lang/base/isArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isArray.ts)

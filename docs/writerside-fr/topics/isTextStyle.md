@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un style de texte.</link-summary>
 
-<web-summary>isTextStyle() — Vérifie si une valeur est un style de texte. apps-script-utils, Français.</web-summary>
+<web-summary>isTextStyle() — Vérifie si une valeur est un style de texte. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isTextStyle(null); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/isTextStyle.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isTextStyle.ts)
+[`src/appsscript/sheet/isTextStyle.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isTextStyle.ts)

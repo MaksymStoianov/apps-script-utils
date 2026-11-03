@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является числом с дробной частью.</link-summary>
 
-<web-summary>requireNonDouble() — Возвращает значение, убедившись, что оно не является числом с дробной частью. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonDouble() — Возвращает значение, убедившись, что оно не является числом с дробной частью. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonDouble(-0.1); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/number/requireNonDouble.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNonDouble.ts)
+[`src/lang/number/requireNonDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonDouble.ts)

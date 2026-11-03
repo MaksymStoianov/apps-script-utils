@@ -4,7 +4,7 @@
 
 <link-summary>Что может лежать в столбце схемы.</link-summary>
 
-<web-summary>SheetColumnType — Что может лежать в столбце схемы. apps-script-utils, Русский.</web-summary>
+<web-summary>SheetColumnType — Что может лежать в столбце схемы. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet/types</code> · Доступно с: 1.11.0</p>
@@ -32,4 +32,4 @@ const type = "date";
 
 ## Исходный код
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

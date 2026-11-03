@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є ідентифікатором таблиці.</link-summary>
 
-<web-summary>nonValidSpreadsheetId() — Перевіряє, що значення **не** є ідентифікатором таблиці. apps-script-utils, Українська.</web-summary>
+<web-summary>nonValidSpreadsheetId() — Перевіряє, що значення **не** є ідентифікатором таблиці. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -48,4 +48,4 @@ nonValidSpreadsheetId("1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"); // => fal
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)
+[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)

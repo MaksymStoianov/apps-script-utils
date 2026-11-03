@@ -4,7 +4,7 @@
 
 <link-summary>Екранує символи, зарезервовані в XML.</link-summary>
 
-<web-summary>escapeXml() — Екранує символи, зарезервовані в XML. apps-script-utils, Українська.</web-summary>
+<web-summary>escapeXml() — Екранує символи, зарезервовані в XML. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>html</code> · Доступно з: 1.0.0</p>
@@ -47,4 +47,4 @@ escapeXml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Вихідний код
 
-[`src/html/escapeXml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/escapeXml.ts)
+[`src/html/escapeXml.ts`](https://github.com/bootgs/utils/blob/main/src/html/escapeXml.ts)

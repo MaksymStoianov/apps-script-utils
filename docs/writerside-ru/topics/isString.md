@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение строкой.</link-summary>
 
-<web-summary>isString() — Проверяет, является ли значение строкой. apps-script-utils, Русский.</web-summary>
+<web-summary>isString() — Проверяет, является ли значение строкой. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isString([]); // => false
 
 ## Исходный код
 
-[`src/lang/base/isString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isString.ts)
+[`src/lang/base/isString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isString.ts)

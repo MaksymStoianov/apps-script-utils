@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является логическим значением.</link-summary>
 
-<web-summary>requireNonBoolean() — Возвращает значение, убедившись, что оно не является логическим значением. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonBoolean() — Возвращает значение, убедившись, что оно не является логическим значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonBoolean(false); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonBoolean.ts)
+[`src/lang/base/requireNonBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonBoolean.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a slide id.</link-summary>
 
-<web-summary>isValidSlideId() — Checks whether a value is a slide id. apps-script-utils, English.</web-summary>
+<web-summary>isValidSlideId() — Checks whether a value is a slide id. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -49,4 +49,4 @@ isValidSlideId(""); // => false
 
 ## Source
 
-[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isValidSlideId.ts)
+[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isValidSlideId.ts)

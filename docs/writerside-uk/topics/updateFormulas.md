@@ -4,7 +4,7 @@
 
 <link-summary>Переписує формули на аркуші.</link-summary>
 
-<web-summary>updateFormulas() — Переписує формули на аркуші. apps-script-utils, Українська.</web-summary>
+<web-summary>updateFormulas() — Переписує формули на аркуші. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -71,4 +71,4 @@ updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 
 ## Вихідний код
 
-[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/updateFormulas.ts)
+[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateFormulas.ts)

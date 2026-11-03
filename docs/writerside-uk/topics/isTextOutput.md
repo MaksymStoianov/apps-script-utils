@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення об'єктом TextOutput.</link-summary>
 
-<web-summary>isTextOutput() — Перевіряє, чи є значення об'єктом TextOutput. apps-script-utils, Українська.</web-summary>
+<web-summary>isTextOutput() — Перевіряє, чи є значення об'єктом TextOutput. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isTextOutput(null); // => false
 
 ## Вихідний код
 
-[`src/appsscript/ui/isTextOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/isTextOutput.ts)
+[`src/appsscript/ui/isTextOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/isTextOutput.ts)

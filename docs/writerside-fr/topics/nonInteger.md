@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un entier.</link-summary>
 
-<web-summary>nonInteger() — Vérifie qu'une valeur n'est **pas** un entier. apps-script-utils, Français.</web-summary>
+<web-summary>nonInteger() — Vérifie qu'une valeur n'est **pas** un entier. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.11.0</p>
@@ -54,4 +54,4 @@ nonInteger(0); // => false
 
 ## Code source
 
-[`src/lang/number/nonInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonInteger.ts)
+[`src/lang/number/nonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonInteger.ts)

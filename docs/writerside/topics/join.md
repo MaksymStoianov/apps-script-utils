@@ -4,7 +4,7 @@
 
 <link-summary>Joins path segments with a single separator between them.</link-summary>
 
-<web-summary>join() — Joins path segments with a single separator between them. apps-script-utils, English.</web-summary>
+<web-summary>join() — Joins path segments with a single separator between them. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Since: 1.0.0</p>
@@ -47,4 +47,4 @@ join("/a", "../b"); // => "/b"
 
 ## Source
 
-[`src/net/path/join.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/join.ts)
+[`src/net/path/join.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/join.ts)

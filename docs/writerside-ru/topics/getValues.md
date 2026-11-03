@@ -4,7 +4,7 @@
 
 <link-summary>Читает строки листа, фильтруя, преобразуя и разбивая на страницы за один вызов.</link-summary>
 
-<web-summary>getValues() — Читает строки листа, фильтруя, преобразуя и разбивая на страницы за один вызов. apps-script-utils, Русский.</web-summary>
+<web-summary>getValues() — Читает строки листа, фильтруя, преобразуя и разбивая на страницы за один вызов. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -73,4 +73,4 @@ const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 
 ## Исходный код
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

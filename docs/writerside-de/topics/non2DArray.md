@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **kein** nicht-leeres zweidimensionales Array ist.</link-summary>
 
-<web-summary>non2DArray() — Prüft, ob ein Wert **kein** nicht-leeres zweidimensionales Array ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>non2DArray() — Prüft, ob ein Wert **kein** nicht-leeres zweidimensionales Array ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -73,4 +73,4 @@ function validateShape(rows) {
 
 ## Quellcode
 
-[`src/lang/array/non2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/non2DArray.ts)
+[`src/lang/array/non2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/non2DArray.ts)

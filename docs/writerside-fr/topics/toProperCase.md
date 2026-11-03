@@ -4,7 +4,7 @@
 
 <link-summary>Met la première lettre de chaque mot en majuscule et le reste en minuscules.</link-summary>
 
-<web-summary>toProperCase() — Met la première lettre de chaque mot en majuscule et le reste en minuscules. apps-script-utils, Français.</web-summary>
+<web-summary>toProperCase() — Met la première lettre de chaque mot en majuscule et le reste en minuscules. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -50,4 +50,4 @@ toProperCase("hello WORLD"); // => "Hello World"
 
 ## Code source
 
-[`src/lang/string/toProperCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toProperCase.ts)
+[`src/lang/string/toProperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toProperCase.ts)

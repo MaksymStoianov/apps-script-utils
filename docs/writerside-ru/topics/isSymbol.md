@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение символом.</link-summary>
 
-<web-summary>isSymbol() — Проверяет, является ли значение символом. apps-script-utils, Русский.</web-summary>
+<web-summary>isSymbol() — Проверяет, является ли значение символом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -50,4 +50,4 @@ isSymbol(null); // => false
 
 ## Исходный код
 
-[`src/lang/base/isSymbol.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isSymbol.ts)
+[`src/lang/base/isSymbol.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isSymbol.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як презентацію або викидає виняток.</link-summary>
 
-<web-summary>requirePresentation() — Повертає значення як презентацію або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requirePresentation() — Повертає значення як презентацію або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.11.0</p>
@@ -59,4 +59,4 @@ requirePresentation(null); // throws InvalidPresentationException
 
 ## Вихідний код
 
-[`src/appsscript/slide/requirePresentation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requirePresentation.ts)
+[`src/appsscript/slide/requirePresentation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requirePresentation.ts)

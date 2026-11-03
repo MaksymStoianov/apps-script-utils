@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un scalaire.</link-summary>
 
-<web-summary>nonScalar() — Vérifie qu'une valeur n'est **pas** un scalaire. apps-script-utils, Français.</web-summary>
+<web-summary>nonScalar() — Vérifie qu'une valeur n'est **pas** un scalaire. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.4.0</p>
@@ -55,4 +55,4 @@ nonScalar(10n); // => false
 
 ## Code source
 
-[`src/lang/base/nonScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonScalar.ts)
+[`src/lang/base/nonScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonScalar.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a range.</link-summary>
 
-<web-summary>nonRange() — Checks whether a value is **not** a range. apps-script-utils, English.</web-summary>
+<web-summary>nonRange() — Checks whether a value is **not** a range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.3.0</p>
@@ -53,4 +53,4 @@ nonRange(range); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonRange.ts)
+[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRange.ts)

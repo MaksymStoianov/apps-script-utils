@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення значенням `undefined`.</link-summary>
 
-<web-summary>isUndefined() — Перевіряє, чи є значення значенням `undefined`. apps-script-utils, Українська.</web-summary>
+<web-summary>isUndefined() — Перевіряє, чи є значення значенням `undefined`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -50,4 +50,4 @@ isUndefined(""); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isUndefined.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isUndefined.ts)
+[`src/lang/base/isUndefined.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isUndefined.ts)

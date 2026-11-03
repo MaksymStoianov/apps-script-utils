@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как число с дробной частью или выбрасывает исключение.</link-summary>
 
-<web-summary>requireDouble() — Возвращает значение как число с дробной частью или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireDouble() — Возвращает значение как число с дробной частью или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -58,4 +58,4 @@ requireDouble(1.0); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/number/requireDouble.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireDouble.ts)
+[`src/lang/number/requireDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireDouble.ts)

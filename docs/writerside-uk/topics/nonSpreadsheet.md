@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є таблицею.</link-summary>
 
-<web-summary>nonSpreadsheet() — Перевіряє, що значення **не** є таблицею. apps-script-utils, Українська.</web-summary>
+<web-summary>nonSpreadsheet() — Перевіряє, що значення **не** є таблицею. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSpreadsheet(spreadsheet); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)
+[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)

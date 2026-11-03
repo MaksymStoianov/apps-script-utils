@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як діапазон або викидає виняток.</link-summary>
 
-<web-summary>requireRange() — Повертає значення як діапазон або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireRange() — Повертає значення як діапазон або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.5.0</p>
@@ -56,4 +56,4 @@ requireRange(null); // throws InvalidRangeException
 
 ## Вихідний код
 
-[`src/appsscript/sheet/requireRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireRange.ts)
+[`src/appsscript/sheet/requireRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireRange.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is an object.</link-summary>
 
-<web-summary>isObject() — Checks whether a value is an object. apps-script-utils, English.</web-summary>
+<web-summary>isObject() — Checks whether a value is an object. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -52,4 +52,4 @@ isObject(function () {}); // => false
 
 ## Source
 
-[`src/lang/base/isObject.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isObject.ts)
+[`src/lang/base/isObject.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isObject.ts)

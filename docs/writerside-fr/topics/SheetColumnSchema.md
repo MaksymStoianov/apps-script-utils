@@ -4,7 +4,7 @@
 
 <link-summary>Une colonne du schéma d'une feuille.</link-summary>
 
-<web-summary>SheetColumnSchema — Une colonne du schéma d'une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>SheetColumnSchema — Une colonne du schéma d'une feuille. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet/types</code> · Disponible depuis: 1.11.0</p>
@@ -33,4 +33,4 @@ const column = { name: "created", type: "date" };
 
 ## Code source
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

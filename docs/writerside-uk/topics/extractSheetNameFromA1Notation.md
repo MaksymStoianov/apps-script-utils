@@ -4,7 +4,7 @@
 
 <link-summary>Видобуває ім'я аркуша з нотації A1.</link-summary>
 
-<web-summary>extractSheetNameFromA1Notation() — Видобуває ім'я аркуша з нотації A1. apps-script-utils, Українська.</web-summary>
+<web-summary>extractSheetNameFromA1Notation() — Видобуває ім'я аркуша з нотації A1. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.6.0</p>
@@ -45,4 +45,4 @@ extractSheetNameFromA1Notation("Sheet1!A1:B2"); // => "Sheet1"
 
 ## Вихідний код
 
-[`src/appsscript/sheet/extractSheetNameFromA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/extractSheetNameFromA1Notation.ts)
+[`src/appsscript/sheet/extractSheetNameFromA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/extractSheetNameFromA1Notation.ts)

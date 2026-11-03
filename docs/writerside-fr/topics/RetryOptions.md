@@ -4,7 +4,7 @@
 
 <link-summary>Comment `retry` attend et quand il renonce.</link-summary>
 
-<web-summary>RetryOptions — Comment `retry` attend et quand il renonce. apps-script-utils, Français.</web-summary>
+<web-summary>RetryOptions — Comment `retry` attend et quand il renonce. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/function</code></p>
@@ -38,4 +38,4 @@ const options = {
 
 ## Code source
 
-[`src/lang/function/retry.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/function/retry.ts)
+[`src/lang/function/retry.ts`](https://github.com/bootgs/utils/blob/main/src/lang/function/retry.ts)

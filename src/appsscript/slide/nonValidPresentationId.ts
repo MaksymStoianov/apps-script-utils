@@ -18,7 +18,7 @@ import { isValidPresentationId } from "./isValidPresentationId";
  * @returns     {boolean} `true` if the value is not a valid presentation identifier; otherwise, `false`.
  * @see         {@link isValidPresentationId}
  * @see         {@link requireValidPresentationId}
- * @see         [nonValidPresentationId on the documentation site](https://maksymstoianov.github.io/apps-script-utils/nonvalidpresentationid.html)
+ * @see         [nonValidPresentationId on the documentation site](https://bootgs.github.io/utils/nonvalidpresentationid.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

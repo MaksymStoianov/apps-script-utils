@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein regulärer Ausdruck ist.</link-summary>
 
-<web-summary>requireNonRegExp() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein regulärer Ausdruck ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonRegExp() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein regulärer Ausdruck ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonRegExp(new RegExp("a")); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonRegExp.ts)
+[`src/lang/base/requireNonRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonRegExp.ts)

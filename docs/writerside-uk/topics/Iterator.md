@@ -4,7 +4,7 @@
 
 <link-summary>Курсор по послідовності, який уміє йти й назад.</link-summary>
 
-<web-summary>Iterator — Курсор по послідовності, який уміє йти й назад. apps-script-utils, Українська.</web-summary>
+<web-summary>Iterator — Курсор по послідовності, який уміє йти й назад. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang</code> · Доступно з: 1.0.0</p>
@@ -37,4 +37,4 @@ while (iterator.hasNext()) {
 
 ## Вихідний код
 
-[`src/lang/Iterator.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Iterator.ts)
+[`src/lang/Iterator.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Iterator.ts)

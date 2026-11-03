@@ -4,7 +4,7 @@
 
 <link-summary>Внутрішні теги, які може повідомити значення, у вигляді іменованих констант.</link-summary>
 
-<web-summary>ObjectTag — Внутрішні теги, які може повідомити значення, у вигляді іменованих констант. apps-script-utils, Українська.</web-summary>
+<web-summary>ObjectTag — Внутрішні теги, які може повідомити значення, у вигляді іменованих констант. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно з: 1.0.0</p>
@@ -36,4 +36,4 @@ objectToString(null) === ObjectTag.NULL; // => true
 
 ## Вихідний код
 
-[`src/lang/object/ObjectTag.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/ObjectTag.ts)
+[`src/lang/object/ObjectTag.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/ObjectTag.ts)

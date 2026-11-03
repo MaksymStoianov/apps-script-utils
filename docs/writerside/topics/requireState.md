@@ -4,7 +4,7 @@
 
 <link-summary>Asserts that a condition holds, throwing when it does not.</link-summary>
 
-<web-summary>requireState() — Asserts that a condition holds, throwing when it does not. apps-script-utils, English.</web-summary>
+<web-summary>requireState() — Asserts that a condition holds, throwing when it does not. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ function close(connection) {
 
 ## Source
 
-[`src/lang/base/requireState.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireState.ts)
+[`src/lang/base/requireState.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireState.ts)

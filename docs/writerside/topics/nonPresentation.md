@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a presentation.</link-summary>
 
-<web-summary>nonPresentation() — Checks whether a value is **not** a presentation. apps-script-utils, English.</web-summary>
+<web-summary>nonPresentation() — Checks whether a value is **not** a presentation. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonPresentation(presentation); // => false
 
 ## Source
 
-[`src/appsscript/slide/nonPresentation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonPresentation.ts)
+[`src/appsscript/slide/nonPresentation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonPresentation.ts)

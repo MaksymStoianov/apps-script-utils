@@ -4,7 +4,7 @@
 
 <link-summary>Die Authentifizierung schlug fehl: wer aufruft, ließ sich nicht feststellen.</link-summary>
 
-<web-summary>AuthenticationException — Die Authentifizierung schlug fehl: wer aufruft, ließ sich nicht feststellen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>AuthenticationException — Die Authentifizierung schlug fehl: wer aufruft, ließ sich nicht feststellen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception/net</code> · Verfügbar seit: 1.5.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/net/AuthenticationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/net/AuthenticationException.ts)
+[`src/exception/net/AuthenticationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/net/AuthenticationException.ts)

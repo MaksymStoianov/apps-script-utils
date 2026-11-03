@@ -4,7 +4,7 @@
 
 <link-summary>Indique si l'utilisateur courant est administrateur Workspace.</link-summary>
 
-<web-summary>isAdmin() — Indique si l'utilisateur courant est administrateur Workspace. apps-script-utils, Français.</web-summary>
+<web-summary>isAdmin() — Indique si l'utilisateur courant est administrateur Workspace. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/admin</code> · Disponible depuis: 1.5.0</p>
@@ -43,4 +43,4 @@ if (isAdmin()) {
 
 ## Code source
 
-[`src/appsscript/admin/isAdmin.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/admin/isAdmin.ts)
+[`src/appsscript/admin/isAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/isAdmin.ts)

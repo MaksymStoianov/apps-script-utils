@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** aufrufbar ist.</link-summary>
 
-<web-summary>nonFunctionLike() — Prüft, ob ein Wert **nicht** aufrufbar ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonFunctionLike() — Prüft, ob ein Wert **nicht** aufrufbar ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -53,4 +53,4 @@ nonFunctionLike(Math.max); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonFunctionLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonFunctionLike.ts)
+[`src/lang/base/nonFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonFunctionLike.ts)

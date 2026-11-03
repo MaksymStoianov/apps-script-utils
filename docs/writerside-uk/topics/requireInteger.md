@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як ціле число або викидає виняток.</link-summary>
 
-<web-summary>requireInteger() — Повертає значення як ціле число або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireInteger() — Повертає значення як ціле число або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -55,4 +55,4 @@ requireInteger(NaN); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/number/requireInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireInteger.ts)
+[`src/lang/number/requireInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireInteger.ts)

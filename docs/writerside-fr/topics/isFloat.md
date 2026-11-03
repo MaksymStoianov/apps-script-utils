@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un nombre avec une partie fractionnaire.</link-summary>
 
-<web-summary>isFloat() — Vérifie si une valeur est un nombre avec une partie fractionnaire. apps-script-utils, Français.</web-summary>
+<web-summary>isFloat() — Vérifie si une valeur est un nombre avec une partie fractionnaire. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.11.0</p>
@@ -52,4 +52,4 @@ isFloat("1.5"); // => false
 
 ## Code source
 
-[`src/lang/number/isFloat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isFloat.ts)
+[`src/lang/number/isFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isFloat.ts)

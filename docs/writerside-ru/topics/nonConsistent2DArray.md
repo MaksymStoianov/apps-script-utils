@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является двумерным массивом с одинаковой длиной строк.</link-summary>
 
-<web-summary>nonConsistent2DArray() — Проверяет, что значение **не** является двумерным массивом с одинаковой длиной строк. apps-script-utils, Русский.</web-summary>
+<web-summary>nonConsistent2DArray() — Проверяет, что значение **не** является двумерным массивом с одинаковой длиной строк. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -75,4 +75,4 @@ function describeShape(rows) {
 
 ## Исходный код
 
-[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/nonConsistent2DArray.ts)
+[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/nonConsistent2DArray.ts)

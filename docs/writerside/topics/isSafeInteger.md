@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a safe integer.</link-summary>
 
-<web-summary>isSafeInteger() — Checks whether a value is a safe integer. apps-script-utils, English.</web-summary>
+<web-summary>isSafeInteger() — Checks whether a value is a safe integer. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -51,4 +51,4 @@ isSafeInteger("42"); // => false
 
 ## Source
 
-[`src/lang/number/isSafeInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isSafeInteger.ts)
+[`src/lang/number/isSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isSafeInteger.ts)

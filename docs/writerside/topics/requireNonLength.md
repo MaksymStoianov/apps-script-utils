@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not a valid array-like length.</link-summary>
 
-<web-summary>requireNonLength() — Returns the value after checking that it is not a valid array-like length. apps-script-utils, English.</web-summary>
+<web-summary>requireNonLength() — Returns the value after checking that it is not a valid array-like length. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonLength(42); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNonLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonLength.ts)
+[`src/lang/base/requireNonLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonLength.ts)

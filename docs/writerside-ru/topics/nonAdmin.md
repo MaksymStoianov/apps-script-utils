@@ -4,7 +4,7 @@
 
 <link-summary>Сообщает, что текущий пользователь **не** является администратором Workspace.</link-summary>
 
-<web-summary>nonAdmin() — Сообщает, что текущий пользователь **не** является администратором Workspace. apps-script-utils, Русский.</web-summary>
+<web-summary>nonAdmin() — Сообщает, что текущий пользователь **не** является администратором Workspace. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/admin</code> · Доступно с: 1.11.0</p>
@@ -39,4 +39,4 @@ if (nonAdmin()) {
 
 ## Исходный код
 
-[`src/appsscript/admin/nonAdmin.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/admin/nonAdmin.ts)
+[`src/appsscript/admin/nonAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/nonAdmin.ts)

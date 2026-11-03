@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein regulärer Ausdruck ist.</link-summary>
 
-<web-summary>nonRegExp() — Prüft, ob ein Wert **nicht** ein regulärer Ausdruck ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonRegExp() — Prüft, ob ein Wert **nicht** ein regulärer Ausdruck ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -53,4 +53,4 @@ nonRegExp(new RegExp("a")); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonRegExp.ts)
+[`src/lang/base/nonRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonRegExp.ts)

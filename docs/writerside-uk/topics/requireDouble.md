@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як число з дробовою частиною або викидає виняток.</link-summary>
 
-<web-summary>requireDouble() — Повертає значення як число з дробовою частиною або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireDouble() — Повертає значення як число з дробовою частиною або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireDouble(1.0); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/number/requireDouble.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireDouble.ts)
+[`src/lang/number/requireDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireDouble.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as an empty value, or throws.</link-summary>
 
-<web-summary>requireEmpty() — Returns the value as an empty value, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireEmpty() — Returns the value as an empty value, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -60,4 +60,4 @@ requireEmpty(false); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireEmpty.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireEmpty.ts)
+[`src/lang/base/requireEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireEmpty.ts)

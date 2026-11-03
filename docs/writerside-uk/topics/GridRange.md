@@ -4,7 +4,7 @@
 
 <link-summary>Блок комірок, описаний так, як його описує Sheets API.</link-summary>
 
-<web-summary>GridRange — Блок комірок, описаний так, як його описує Sheets API. apps-script-utils, Українська.</web-summary>
+<web-summary>GridRange — Блок комірок, описаний так, як його описує Sheets API. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet/types</code> · Доступно з: 1.0.0</p>
@@ -42,4 +42,4 @@ const range = {
 
 ## Вихідний код
 
-[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/GridRange.ts)
+[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/GridRange.ts)

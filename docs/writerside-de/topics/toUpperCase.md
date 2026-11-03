@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt eine Zeichenkette groß und räumt auf Wunsch den Leerraum auf.</link-summary>
 
-<web-summary>toUpperCase() — Schreibt eine Zeichenkette groß und räumt auf Wunsch den Leerraum auf. apps-script-utils, Deutsch.</web-summary>
+<web-summary>toUpperCase() — Schreibt eine Zeichenkette groß und räumt auf Wunsch den Leerraum auf. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -49,4 +49,4 @@ toUpperCase("Hello"); // => "HELLO"
 
 ## Quellcode
 
-[`src/lang/string/toUpperCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toUpperCase.ts)
+[`src/lang/string/toUpperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toUpperCase.ts)

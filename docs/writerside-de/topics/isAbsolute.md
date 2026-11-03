@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein absoluter Pfad ist.</link-summary>
 
-<web-summary>isAbsolute() — Prüft, ob ein Wert ein absoluter Pfad ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isAbsolute() — Prüft, ob ein Wert ein absoluter Pfad ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isAbsolute(""); // => false
 
 ## Quellcode
 
-[`src/net/path/isAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/isAbsolute.ts)
+[`src/net/path/isAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isAbsolute.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is an integer.</link-summary>
 
-<web-summary>isInteger() — Checks whether a value is an integer. apps-script-utils, English.</web-summary>
+<web-summary>isInteger() — Checks whether a value is an integer. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.5.0</p>
@@ -52,4 +52,4 @@ isInteger("42"); // => false
 
 ## Source
 
-[`src/lang/number/isInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isInteger.ts)
+[`src/lang/number/isInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isInteger.ts)

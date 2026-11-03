@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Präsentations-Id ist.</link-summary>
 
-<web-summary>isValidPresentationId() — Prüft, ob ein Wert eine Präsentations-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isValidPresentationId() — Prüft, ob ein Wert eine Präsentations-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -48,4 +48,4 @@ isValidPresentationId("has space in it and is long enough to pass"); // => false
 
 ## Quellcode
 
-[`src/appsscript/slide/isValidPresentationId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isValidPresentationId.ts)
+[`src/appsscript/slide/isValidPresentationId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isValidPresentationId.ts)

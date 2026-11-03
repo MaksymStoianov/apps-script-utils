@@ -4,7 +4,7 @@
 
 <link-summary>Verschiebt ein Datum um eine Anzahl einer Einheit.</link-summary>
 
-<web-summary>offset() — Verschiebt ein Datum um eine Anzahl einer Einheit. apps-script-utils, Deutsch.</web-summary>
+<web-summary>offset() — Verschiebt ein Datum um eine Anzahl einer Einheit. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ offset(start, -1, "day"); // 30 January 2026
 
 ## Quellcode
 
-[`src/time/offset.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/offset.ts)
+[`src/time/offset.ts`](https://github.com/bootgs/utils/blob/main/src/time/offset.ts)

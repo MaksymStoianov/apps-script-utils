@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Folie ist.</link-summary>
 
-<web-summary>isSlide() — Prüft, ob ein Wert eine Folie ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isSlide() — Prüft, ob ein Wert eine Folie ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -51,4 +51,4 @@ isSlide(null); // => false
 
 ## Quellcode
 
-[`src/appsscript/slide/isSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isSlide.ts)
+[`src/appsscript/slide/isSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isSlide.ts)

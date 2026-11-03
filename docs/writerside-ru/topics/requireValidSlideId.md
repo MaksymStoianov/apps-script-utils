@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как идентификатор слайда или выбрасывает исключение.</link-summary>
 
-<web-summary>requireValidSlideId() — Возвращает значение как идентификатор слайда или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireValidSlideId() — Возвращает значение как идентификатор слайда или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSlideId(""); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)
+[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)

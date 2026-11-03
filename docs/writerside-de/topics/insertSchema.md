@@ -4,7 +4,7 @@
 
 <link-summary>Hinterlegt ein Schema auf einem Blatt und wendet an, was es beschreibt.</link-summary>
 
-<web-summary>insertSchema() — Hinterlegt ein Schema auf einem Blatt und wendet an, was es beschreibt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>insertSchema() — Hinterlegt ein Schema auf einem Blatt und wendet an, was es beschreibt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -66,4 +66,4 @@ insertSchema(sheet, {
 
 ## Quellcode
 
-[`src/appsscript/sheet/insertSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/insertSchema.ts)
+[`src/appsscript/sheet/insertSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/insertSchema.ts)

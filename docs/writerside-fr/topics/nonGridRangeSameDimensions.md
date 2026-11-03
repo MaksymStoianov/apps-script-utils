@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si deux plages de grille diffèrent en hauteur ou en largeur.</link-summary>
 
-<web-summary>nonGridRangeSameDimensions() — Vérifie si deux plages de grille diffèrent en hauteur ou en largeur. apps-script-utils, Français.</web-summary>
+<web-summary>nonGridRangeSameDimensions() — Vérifie si deux plages de grille diffèrent en hauteur ou en largeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeSameDimensions(source, target); // => true
 
 ## Code source
 
-[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)

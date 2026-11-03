@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas un booléen.</link-summary>
 
-<web-summary>requireNonBoolean() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un booléen. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonBoolean() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un booléen. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonBoolean(false); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonBoolean.ts)
+[`src/lang/base/requireNonBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonBoolean.ts)

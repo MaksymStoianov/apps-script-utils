@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є двовимірним масивом з однаковою довжиною рядків.</link-summary>
 
-<web-summary>nonConsistent2DArray() — Перевіряє, що значення **не** є двовимірним масивом з однаковою довжиною рядків. apps-script-utils, Українська.</web-summary>
+<web-summary>nonConsistent2DArray() — Перевіряє, що значення **не** є двовимірним масивом з однаковою довжиною рядків. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -75,4 +75,4 @@ function describeShape(rows) {
 
 ## Вихідний код
 
-[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/nonConsistent2DArray.ts)
+[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/nonConsistent2DArray.ts)

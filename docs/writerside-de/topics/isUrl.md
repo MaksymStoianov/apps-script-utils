@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine URL ist.</link-summary>
 
-<web-summary>isUrl() — Prüft, ob ein Wert eine URL ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isUrl() — Prüft, ob ein Wert eine URL ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/url</code> · Verfügbar seit: 1.0.0</p>
@@ -50,4 +50,4 @@ isUrl("https://exa mple.com"); // => false
 
 ## Quellcode
 
-[`src/net/url/isUrl.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/url/isUrl.ts)
+[`src/net/url/isUrl.ts`](https://github.com/bootgs/utils/blob/main/src/net/url/isUrl.ts)

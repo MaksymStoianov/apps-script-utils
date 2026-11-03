@@ -4,7 +4,7 @@
 
 <link-summary>Розбирає шлях на складові частини.</link-summary>
 
-<web-summary>parse() — Розбирає шлях на складові частини. apps-script-utils, Українська.</web-summary>
+<web-summary>parse() — Розбирає шлях на складові частини. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code></p>
@@ -48,4 +48,4 @@ parse("readme.md");
 
 ## Вихідний код
 
-[`src/net/path/parse.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/parse.ts)
+[`src/net/path/parse.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/parse.ts)

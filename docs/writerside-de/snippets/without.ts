@@ -1,4 +1,4 @@
-import { without } from "apps-script-utils";
+import { without } from "@bootgs/utils";
 
 /**
  * Hides the internal columns from a header row before it is shown to a user.

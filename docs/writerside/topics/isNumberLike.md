@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is convertible to a number.</link-summary>
 
-<web-summary>isNumberLike() — Checks whether a value is convertible to a number. apps-script-utils, English.</web-summary>
+<web-summary>isNumberLike() — Checks whether a value is convertible to a number. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isNumberLike(null); // => false
 
 ## Source
 
-[`src/lang/base/isNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isNumberLike.ts)
+[`src/lang/base/isNumberLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isNumberLike.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Füllt die `{{ key }}`-Platzhalter einer Vorlage aus einem Objekt.</link-summary>
 
-<web-summary>merge() — Füllt die `{{ key }}`-Platzhalter einer Vorlage aus einem Objekt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>merge() — Füllt die `{{ key }}`-Platzhalter einer Vorlage aus einem Objekt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ merge("Hi {{ name }}!", {}, { onMissing: "empty" }); // => "Hi !"
 
 ## Quellcode
 
-[`src/lang/string/merge.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

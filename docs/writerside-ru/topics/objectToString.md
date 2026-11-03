@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает внутренний тег значения.</link-summary>
 
-<web-summary>objectToString() — Возвращает внутренний тег значения. apps-script-utils, Русский.</web-summary>
+<web-summary>objectToString() — Возвращает внутренний тег значения. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно с: 1.0.0</p>
@@ -44,4 +44,4 @@ objectToString(new Date()); // => "[object Date]"
 
 ## Исходный код
 
-[`src/lang/object/objectToString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/objectToString.ts)
+[`src/lang/object/objectToString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/objectToString.ts)

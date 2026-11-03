@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как `NaN` или выбрасывает исключение.</link-summary>
 
-<web-summary>requireNaN() — Возвращает значение как `NaN` или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNaN() — Возвращает значение как `NaN` или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNaN("abc"); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/number/requireNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNaN.ts)
+[`src/lang/number/requireNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNaN.ts)

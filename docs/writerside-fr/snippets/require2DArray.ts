@@ -1,4 +1,4 @@
-import { require2DArray } from "apps-script-utils";
+import { require2DArray } from "@bootgs/utils";
 
 /**
  * Validates the argument at the boundary of the function, with a message that

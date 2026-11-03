@@ -2,7 +2,7 @@
 
 <link-summary>Helfer für URLs, Pfade und Domains.</link-summary>
 
-<web-summary>Das net-Modul von apps-script-utils: URL-Prüfung, Pfade zerlegen, zusammenfügen und normalisieren, Domain-Prüfungen — alles auch innerhalb von Google Apps Script.</web-summary>
+<web-summary>Das net-Modul von @bootgs/utils: URL-Prüfung, Pfade zerlegen, zusammenfügen und normalisieren, Domain-Prüfungen — alles auch innerhalb von Google Apps Script.</web-summary>
 
 `net` behandelt Pfade, URLs und das, was darum herum liegt. Wie `lang` hängt es nicht von der Apps-Script-Laufzeit
 ab.
@@ -21,7 +21,7 @@ Script gebunden ist — siehe [](module-appsscript.md).
 ## Pfade
 
 ```typescript
-import { join, normalize, parse, isAbsolute, isRelative } from "apps-script-utils";
+import { join, normalize, parse, isAbsolute, isRelative } from "@bootgs/utils";
 
 join("/a", "b", "../c"); // "/a/c"
 normalize("/a/b/../c"); // "/a/c"
@@ -39,7 +39,7 @@ Sie sind der Form von Nodes `path`-Modul nachgebildet, was sie für den Aufbau v
 ## Domains und URLs
 
 ```typescript
-import { isValidDomain, isUrl } from "apps-script-utils";
+import { isValidDomain, isUrl } from "@bootgs/utils";
 
 isValidDomain("example.com"); // true
 isValidDomain("not a domain"); // false

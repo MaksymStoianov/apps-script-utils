@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a sheet id.</link-summary>
 
-<web-summary>nonValidSheetId() — Checks whether a value is **not** a sheet id. apps-script-utils, English.</web-summary>
+<web-summary>nonValidSheetId() — Checks whether a value is **not** a sheet id. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSheetId(1234567890); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)
+[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)

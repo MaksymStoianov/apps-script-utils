@@ -4,7 +4,7 @@
 
 <link-summary>An argument was of the wrong kind or outside the range the function accepts.</link-summary>
 
-<web-summary>IllegalArgumentException — An argument was of the wrong kind or outside the range the function accepts. apps-script-utils, English.</web-summary>
+<web-summary>IllegalArgumentException — An argument was of the wrong kind or outside the range the function accepts. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/IllegalArgumentException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/IllegalArgumentException.ts)
+[`src/exception/IllegalArgumentException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalArgumentException.ts)

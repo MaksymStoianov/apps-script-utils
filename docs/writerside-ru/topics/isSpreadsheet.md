@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение таблицей.</link-summary>
 
-<web-summary>isSpreadsheet() — Проверяет, является ли значение таблицей. apps-script-utils, Русский.</web-summary>
+<web-summary>isSpreadsheet() — Проверяет, является ли значение таблицей. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isSpreadsheet(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)
+[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)

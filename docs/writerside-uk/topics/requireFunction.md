@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як функцію або викидає виняток.</link-summary>
 
-<web-summary>requireFunction() — Повертає значення як функцію або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireFunction() — Повертає значення як функцію або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -55,4 +55,4 @@ requireFunction("fn"); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireFunction.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireFunction.ts)
+[`src/lang/base/requireFunction.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireFunction.ts)

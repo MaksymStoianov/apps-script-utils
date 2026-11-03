@@ -4,7 +4,7 @@
 
 <link-summary>Finds a sheet by its id.</link-summary>
 
-<web-summary>getSheetById() — Finds a sheet by its id. apps-script-utils, English.</web-summary>
+<web-summary>getSheetById() — Finds a sheet by its id. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -55,4 +55,4 @@ if (sheet === null) {
 
 ## Source
 
-[`src/appsscript/sheet/getSheetById.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSheetById.ts)
+[`src/appsscript/sheet/getSheetById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetById.ts)

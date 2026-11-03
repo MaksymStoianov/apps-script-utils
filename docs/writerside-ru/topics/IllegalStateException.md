@@ -4,7 +4,7 @@
 
 <link-summary>Вызов пришёл не вовремя: аргументы могут быть совершенно правильными, но объект не в том состоянии, которое позволяет этот вызов.</link-summary>
 
-<web-summary>IllegalStateException — Вызов пришёл не вовремя: аргументы могут быть совершенно правильными, но объект не в том состоянии, которое позволяет этот вызов. apps-script-utils, Русский.</web-summary>
+<web-summary>IllegalStateException — Вызов пришёл не вовремя: аргументы могут быть совершенно правильными, но объект не в том состоянии, которое позволяет этот вызов. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.11.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/IllegalStateException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/IllegalStateException.ts)
+[`src/exception/IllegalStateException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalStateException.ts)

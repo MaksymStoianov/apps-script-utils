@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a slide.</link-summary>
 
-<web-summary>nonSlide() — Checks whether a value is **not** a slide. apps-script-utils, English.</web-summary>
+<web-summary>nonSlide() — Checks whether a value is **not** a slide. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSlide(slide); // => false
 
 ## Source
 
-[`src/appsscript/slide/nonSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonSlide.ts)
+[`src/appsscript/slide/nonSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonSlide.ts)

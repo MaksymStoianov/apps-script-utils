@@ -4,7 +4,7 @@
 
 <link-summary>Supprime les lignes que le prédicat sélectionne.</link-summary>
 
-<web-summary>deleteRowsByConditional() — Supprime les lignes que le prédicat sélectionne. apps-script-utils, Français.</web-summary>
+<web-summary>deleteRowsByConditional() — Supprime les lignes que le prédicat sélectionne. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -74,4 +74,4 @@ deleteRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cel
 
 ## Code source
 
-[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)
+[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)

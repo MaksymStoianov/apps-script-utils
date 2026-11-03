@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение слайдом.</link-summary>
 
-<web-summary>isSlide() — Проверяет, является ли значение слайдом. apps-script-utils, Русский.</web-summary>
+<web-summary>isSlide() — Проверяет, является ли значение слайдом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно с: 1.5.0</p>
@@ -51,4 +51,4 @@ isSlide(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/slide/isSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isSlide.ts)
+[`src/appsscript/slide/isSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isSlide.ts)

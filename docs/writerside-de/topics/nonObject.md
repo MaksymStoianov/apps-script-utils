@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Objekt ist.</link-summary>
 
-<web-summary>nonObject() — Prüft, ob ein Wert **nicht** ein Objekt ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonObject() — Prüft, ob ein Wert **nicht** ein Objekt ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ nonObject(new Date()); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonObject.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonObject.ts)
+[`src/lang/base/nonObject.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonObject.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une valeur de texte enrichi.</link-summary>
 
-<web-summary>nonRichTextValue() — Vérifie qu'une valeur n'est **pas** une valeur de texte enrichi. apps-script-utils, Français.</web-summary>
+<web-summary>nonRichTextValue() — Vérifie qu'une valeur n'est **pas** une valeur de texte enrichi. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -53,4 +53,4 @@ nonRichTextValue(value); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)
+[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)

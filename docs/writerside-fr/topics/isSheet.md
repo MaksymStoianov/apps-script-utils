@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une feuille.</link-summary>
 
-<web-summary>isSheet() — Vérifie si une valeur est une feuille. apps-script-utils, Français.</web-summary>
+<web-summary>isSheet() — Vérifie si une valeur est une feuille. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isSheet(null); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/isSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isSheet.ts)
+[`src/appsscript/sheet/isSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSheet.ts)

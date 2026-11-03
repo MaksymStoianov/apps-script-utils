@@ -4,7 +4,7 @@
 
 <link-summary>Подставляет значения объекта в плейсхолдеры `{{ key }}` шаблона.</link-summary>
 
-<web-summary>merge() — Подставляет значения объекта в плейсхолдеры `{{ key }}` шаблона. apps-script-utils, Русский.</web-summary>
+<web-summary>merge() — Подставляет значения объекта в плейсхолдеры `{{ key }}` шаблона. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -54,4 +54,4 @@ merge("Hi {{ name }}!", {}, { onMissing: "empty" }); // => "Hi !"
 
 ## Исходный код
 
-[`src/lang/string/merge.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

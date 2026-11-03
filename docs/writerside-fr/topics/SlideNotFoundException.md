@@ -4,7 +4,7 @@
 
 <link-summary>Une diapositive était attendue et la valeur n'en est pas une, ou la diapositive demandée n'existe pas dans la présentation.</link-summary>
 
-<web-summary>SlideNotFoundException — Une diapositive était attendue et la valeur n'en est pas une, ou la diapositive demandée n'existe pas dans la présentation. apps-script-utils, Français.</web-summary>
+<web-summary>SlideNotFoundException — Une diapositive était attendue et la valeur n'en est pas une, ou la diapositive demandée n'existe pas dans la présentation. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Code source
 
-[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)
+[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)

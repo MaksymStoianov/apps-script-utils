@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not `null` or `undefined`.</link-summary>
 
-<web-summary>requireNonNil() — Returns the value after checking that it is not `null` or `undefined`. apps-script-utils, English.</web-summary>
+<web-summary>requireNonNil() — Returns the value after checking that it is not `null` or `undefined`. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonNil(undefined); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNonNil.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonNil.ts)
+[`src/lang/base/requireNonNil.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonNil.ts)

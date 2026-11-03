@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a locale code, or throws.</link-summary>
 
-<web-summary>requireValidLocale() — Returns the value as a locale code, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidLocale() — Returns the value as a locale code, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidLocale("eng"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/string/requireValidLocale.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireValidLocale.ts)
+[`src/lang/string/requireValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidLocale.ts)

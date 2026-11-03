@@ -2,7 +2,7 @@
 
 <link-summary>Усі функції бібліотеки, прив'язані до Google Apps Script, за сервісами.</link-summary>
 
-<web-summary>Довідник функцій apps-script-utils для Google Apps Script: таблиці, нотація A1, інтерфейс, Диск, Презентації та Admin SDK — з типами значень, що повертаються.</web-summary>
+<web-summary>Довідник функцій @bootgs/utils для Google Apps Script: таблиці, нотація A1, інтерфейс, Диск, Презентації та Admin SDK — з типами значень, що повертаються.</web-summary>
 
 Функції, прив'язані до конкретних сервісів Google Apps Script: Таблиці, Презентації, Admin SDK, Диск, Документи,
 Форми, мережеві запити та вбудовані класи інтерфейсу.
@@ -28,11 +28,11 @@
 
 ## Методи Google Документів {id="google-docs-methods"}
 
-Помічники для Google Документів. Поки не реалізовані. Будемо раді внеску — дивіться [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Помічники для Google Документів. Поки не реалізовані. Будемо раді внеску — дивіться [Contributing](https://github.com/bootgs/utils/blob/main/CONTRIBUTING.md).
 
 ## Методи Google Форм {id="google-forms-methods"}
 
-Помічники для Google Форм. Поки не реалізовані. Будемо раді внеску — дивіться [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Помічники для Google Форм. Поки не реалізовані. Будемо раді внеску — дивіться [Contributing](https://github.com/bootgs/utils/blob/main/CONTRIBUTING.md).
 
 ## Методи Google Таблиць {id="google-sheets-methods"}
 

@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la longueur d'une chaîne en unités de code.</link-summary>
 
-<web-summary>getByteSize() — Renvoie la longueur d'une chaîne en unités de code. apps-script-utils, Français.</web-summary>
+<web-summary>getByteSize() — Renvoie la longueur d'une chaîne en unités de code. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/base</code> · Disponible depuis: 1.0.0</p>
@@ -48,4 +48,4 @@ getByteSize("abc"); // => 3
 
 ## Code source
 
-[`src/appsscript/base/getByteSize.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)
+[`src/appsscript/base/getByteSize.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getByteSize.ts)

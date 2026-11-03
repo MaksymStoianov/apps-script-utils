@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є числом `NaN`.</link-summary>
 
-<web-summary>requireNonNaN() — Повертає значення, переконавшись, що воно не є числом `NaN`. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonNaN() — Повертає значення, переконавшись, що воно не є числом `NaN`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonNaN(0 / 0); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/number/requireNonNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNonNaN.ts)
+[`src/lang/number/requireNonNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonNaN.ts)

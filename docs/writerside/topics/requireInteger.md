@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as an integer, or throws.</link-summary>
 
-<web-summary>requireInteger() — Returns the value as an integer, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireInteger() — Returns the value as an integer, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ requireInteger(NaN); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireInteger.ts)
+[`src/lang/number/requireInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireInteger.ts)

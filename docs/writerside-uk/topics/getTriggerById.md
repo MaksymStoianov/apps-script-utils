@@ -4,7 +4,7 @@
 
 <link-summary>Знаходить тригер проєкту за ідентифікатором.</link-summary>
 
-<web-summary>getTriggerById() — Знаходить тригер проєкту за ідентифікатором. apps-script-utils, Українська.</web-summary>
+<web-summary>getTriggerById() — Знаходить тригер проєкту за ідентифікатором. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/base</code> · Доступно з: 1.11.0</p>
@@ -54,4 +54,4 @@ if (trigger !== null) {
 
 ## Вихідний код
 
-[`src/appsscript/base/getTriggerById.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getTriggerById.ts)
+[`src/appsscript/base/getTriggerById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getTriggerById.ts)

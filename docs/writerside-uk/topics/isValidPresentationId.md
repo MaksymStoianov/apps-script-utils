@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення ідентифікатором презентації.</link-summary>
 
-<web-summary>isValidPresentationId() — Перевіряє, чи є значення ідентифікатором презентації. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidPresentationId() — Перевіряє, чи є значення ідентифікатором презентації. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.5.0</p>
@@ -48,4 +48,4 @@ isValidPresentationId("has space in it and is long enough to pass"); // => false
 
 ## Вихідний код
 
-[`src/appsscript/slide/isValidPresentationId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isValidPresentationId.ts)
+[`src/appsscript/slide/isValidPresentationId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isValidPresentationId.ts)

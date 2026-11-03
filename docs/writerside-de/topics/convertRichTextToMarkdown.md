@@ -4,7 +4,7 @@
 
 <link-summary>Führt gestaltete Textabschnitte wieder in Markdown zurück.</link-summary>
 
-<web-summary>convertRichTextToMarkdown() — Führt gestaltete Textabschnitte wieder in Markdown zurück. apps-script-utils, Deutsch.</web-summary>
+<web-summary>convertRichTextToMarkdown() — Führt gestaltete Textabschnitte wieder in Markdown zurück. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 2.0.0</p>
@@ -61,4 +61,4 @@ convertRichTextToMarkdown([
 
 ## Quellcode
 
-[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)
+[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)

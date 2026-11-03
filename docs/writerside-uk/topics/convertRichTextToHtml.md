@@ -4,7 +4,7 @@
 
 <link-summary>Перетворює форматоване значення комірки на HTML.</link-summary>
 
-<web-summary>convertRichTextToHtml() — Перетворює форматоване значення комірки на HTML. apps-script-utils, Українська.</web-summary>
+<web-summary>convertRichTextToHtml() — Перетворює форматоване значення комірки на HTML. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -46,4 +46,4 @@ const html = convertRichTextToHtml(range.getRichTextValue());
 
 ## Вихідний код
 
-[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)
+[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)

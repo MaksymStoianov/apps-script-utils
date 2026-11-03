@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення значенням `null`.</link-summary>
 
-<web-summary>isNull() — Перевіряє, чи є значення значенням `null`. apps-script-utils, Українська.</web-summary>
+<web-summary>isNull() — Перевіряє, чи є значення значенням `null`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -50,4 +50,4 @@ isNull(""); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isNull.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isNull.ts)
+[`src/lang/base/isNull.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isNull.ts)

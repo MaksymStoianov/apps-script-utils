@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une plage d'une seule cellule.</link-summary>
 
-<web-summary>nonCellGridRange() — Vérifie qu'une valeur n'est **pas** une plage d'une seule cellule. apps-script-utils, Français.</web-summary>
+<web-summary>nonCellGridRange() — Vérifie qu'une valeur n'est **pas** une plage d'une seule cellule. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -49,4 +49,4 @@ nonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endCol
 
 ## Code source
 
-[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)
+[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)

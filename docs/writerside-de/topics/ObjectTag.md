@@ -4,7 +4,7 @@
 
 <link-summary>Die internen Tags, die ein Wert melden kann, als benannte Konstanten.</link-summary>
 
-<web-summary>ObjectTag — Die internen Tags, die ein Wert melden kann, als benannte Konstanten. apps-script-utils, Deutsch.</web-summary>
+<web-summary>ObjectTag — Die internen Tags, die ein Wert melden kann, als benannte Konstanten. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/object</code> · Verfügbar seit: 1.0.0</p>
@@ -36,4 +36,4 @@ objectToString(null) === ObjectTag.NULL; // => true
 
 ## Quellcode
 
-[`src/lang/object/ObjectTag.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/ObjectTag.ts)
+[`src/lang/object/ObjectTag.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/ObjectTag.ts)

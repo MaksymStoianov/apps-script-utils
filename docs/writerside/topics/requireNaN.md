@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as `NaN`, or throws.</link-summary>
 
-<web-summary>requireNaN() — Returns the value as `NaN`, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireNaN() — Returns the value as `NaN`, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNaN("abc"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNaN.ts)
+[`src/lang/number/requireNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNaN.ts)

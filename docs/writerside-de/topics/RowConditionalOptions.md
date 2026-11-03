@@ -4,7 +4,7 @@
 
 <link-summary>Wie die Zeilen gelesen werden und welche als Kandidaten gelten.</link-summary>
 
-<web-summary>RowConditionalOptions — Wie die Zeilen gelesen werden und welche als Kandidaten gelten. apps-script-utils, Deutsch.</web-summary>
+<web-summary>RowConditionalOptions — Wie die Zeilen gelesen werden und welche als Kandidaten gelten. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -33,4 +33,4 @@ const options = { headerRow: 1 };
 
 ## Quellcode
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Записывает диапазон `GridRange` в нотации A1.</link-summary>
 
-<web-summary>toA1Notation() — Записывает диапазон `GridRange` в нотации A1. apps-script-utils, Русский.</web-summary>
+<web-summary>toA1Notation() — Записывает диапазон `GridRange` в нотации A1. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -47,4 +47,4 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnI
 
 ## Исходный код
 
-[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/toA1Notation.ts)
+[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/toA1Notation.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein Bereich ist.</link-summary>
 
-<web-summary>isRange() — Prüft, ob ein Wert ein Bereich ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isRange() — Prüft, ob ein Wert ein Bereich ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isRange(null); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isRange.ts)
+[`src/appsscript/sheet/isRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isRange.ts)

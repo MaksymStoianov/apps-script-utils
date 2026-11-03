@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie un jeton une fois qu'il correspond à l'une des clés autorisées, ou lève.</link-summary>
 
-<web-summary>requireValidToken() — Renvoie un jeton une fois qu'il correspond à l'une des clés autorisées, ou lève. apps-script-utils, Français.</web-summary>
+<web-summary>requireValidToken() — Renvoie un jeton une fois qu'il correspond à l'une des clés autorisées, ou lève. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/net</code> · Disponible depuis: 1.5.0</p>
@@ -62,4 +62,4 @@ function doPost(event) {
 
 ## Code source
 
-[`src/appsscript/net/requireValidToken.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/net/requireValidToken.ts)
+[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/net/requireValidToken.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Зводить рядок до верхнього регістру, за бажанням прибираючи пробіли.</link-summary>
 
-<web-summary>toUpperCase() — Зводить рядок до верхнього регістру, за бажанням прибираючи пробіли. apps-script-utils, Українська.</web-summary>
+<web-summary>toUpperCase() — Зводить рядок до верхнього регістру, за бажанням прибираючи пробіли. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -49,4 +49,4 @@ toUpperCase("Hello"); // => "HELLO"
 
 ## Вихідний код
 
-[`src/lang/string/toUpperCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toUpperCase.ts)
+[`src/lang/string/toUpperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toUpperCase.ts)

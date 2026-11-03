@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a number with a fractional part, or throws.</link-summary>
 
-<web-summary>requireFloat() — Returns the value as a number with a fractional part, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireFloat() — Returns the value as a number with a fractional part, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireFloat(1.0); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireFloat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireFloat.ts)
+[`src/lang/number/requireFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireFloat.ts)

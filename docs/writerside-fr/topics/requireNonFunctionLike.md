@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas appelable.</link-summary>
 
-<web-summary>requireNonFunctionLike() — Renvoie la valeur après avoir vérifié qu'elle n'est pas appelable. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonFunctionLike() — Renvoie la valeur après avoir vérifié qu'elle n'est pas appelable. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNonFunctionLike(Math.max); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonFunctionLike.ts)
+[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonFunctionLike.ts)

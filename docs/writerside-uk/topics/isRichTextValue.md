@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення форматованим текстом.</link-summary>
 
-<web-summary>isRichTextValue() — Перевіряє, чи є значення форматованим текстом. apps-script-utils, Українська.</web-summary>
+<web-summary>isRichTextValue() — Перевіряє, чи є значення форматованим текстом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isRichTextValue(null); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isRichTextValue.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isRichTextValue.ts)
+[`src/appsscript/sheet/isRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isRichTextValue.ts)

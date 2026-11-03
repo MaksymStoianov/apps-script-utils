@@ -17,7 +17,7 @@ import { isFunction } from "./isFunction";
  * @throws  {@link IllegalArgumentException} If the value is not a function.
  * @see     {@link isFunction}
  * @see     {@link nonFunction}
- * @see     [requireFunction on the documentation site](https://maksymstoianov.github.io/apps-script-utils/requirefunction.html)
+ * @see     [requireFunction on the documentation site](https://bootgs.github.io/utils/requirefunction.html)
  * @since   1.11.0
  * @version 1.0.0
  */

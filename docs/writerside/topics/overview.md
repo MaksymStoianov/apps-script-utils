@@ -1,14 +1,14 @@
 # Overview
 
-<link-summary>What apps-script-utils is, what it covers, and how this documentation is organised.</link-summary>
+<link-summary>What @bootgs/utils is, what it covers, and how this documentation is organised.</link-summary>
 
-<web-summary>apps-script-utils is a TypeScript utility library for Google Apps Script: spreadsheet and A1-notation helpers, isX/nonX/requireX validation, and typed exceptions.</web-summary>
+<web-summary>@bootgs/utils is a TypeScript utility library for Google Apps Script: spreadsheet and A1-notation helpers, isX/nonX/requireX validation, and typed exceptions.</web-summary>
 
 ![Project banner for Google Apps Script Utils](banner-1280x640.jpg)
 
 _Artist: [Daryna Mikhailenko](https://darynamikhailenko.com/?utm_source=docs&utm_medium=overview&utm_campaign=apps-script-utils&utm_content=banner-artist-credit)_
 
-**apps-script-utils** is a TypeScript utility library purpose-built for **Google Apps Script**. It brings together the
+**@bootgs/utils** is a TypeScript utility library purpose-built for **Google Apps Script**. It brings together the
 helpers every GAS project ends up writing by hand — spreadsheet and A1-notation manipulation, type/value validation
 (`isX`/`nonX`/`requireX`), string and array transforms, typed exceptions, and more — in a single, well-documented, and
 fully tested package.

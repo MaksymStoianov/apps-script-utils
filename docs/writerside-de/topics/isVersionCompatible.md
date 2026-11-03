@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob eine Version mindestens der geforderten entspricht.</link-summary>
 
-<web-summary>isVersionCompatible() — Prüft, ob eine Version mindestens der geforderten entspricht. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isVersionCompatible() — Prüft, ob eine Version mindestens der geforderten entspricht. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isVersionCompatible("1.2.0", "1.3.0"); // => false
 
 ## Quellcode
 
-[`src/lang/string/isVersionCompatible.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isVersionCompatible.ts)
+[`src/lang/string/isVersionCompatible.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isVersionCompatible.ts)

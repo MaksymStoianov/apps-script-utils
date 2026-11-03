@@ -4,7 +4,7 @@
 
 <link-summary>Единица, в которой можно выразить интервал.</link-summary>
 
-<web-summary>TimeUnit — Единица, в которой можно выразить интервал. apps-script-utils, Русский.</web-summary>
+<web-summary>TimeUnit — Единица, в которой можно выразить интервал. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time/types</code> · Доступно с: 1.11.0</p>
@@ -35,4 +35,4 @@ offset(date, 1, "month");
 
 ## Исходный код
 
-[`src/time/types/TimeUnit.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/types/TimeUnit.ts)
+[`src/time/types/TimeUnit.ts`](https://github.com/bootgs/utils/blob/main/src/time/types/TimeUnit.ts)

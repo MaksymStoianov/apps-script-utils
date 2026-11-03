@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення презентацією.</link-summary>
 
-<web-summary>isPresentation() — Перевіряє, чи є значення презентацією. apps-script-utils, Українська.</web-summary>
+<web-summary>isPresentation() — Перевіряє, чи є значення презентацією. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.5.0</p>
@@ -51,4 +51,4 @@ isPresentation(null); // => false
 
 ## Вихідний код
 
-[`src/appsscript/slide/isPresentation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isPresentation.ts)
+[`src/appsscript/slide/isPresentation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isPresentation.ts)

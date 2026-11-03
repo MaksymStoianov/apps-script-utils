@@ -4,7 +4,7 @@
 
 <link-summary>Flacht ein verschachteltes Objekt auf eine Ebene mit Punktschlüsseln ab.</link-summary>
 
-<web-summary>flat() — Flacht ein verschachteltes Objekt auf eine Ebene mit Punktschlüsseln ab. apps-script-utils, Deutsch.</web-summary>
+<web-summary>flat() — Flacht ein verschachteltes Objekt auf eine Ebene mit Punktschlüsseln ab. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/object</code> · Verfügbar seit: 1.11.0</p>
@@ -52,4 +52,4 @@ flat({ a: { b: { c: 1 } } }, 1); // => { "a.b": { "c": 1 } }
 
 ## Quellcode
 
-[`src/lang/object/flat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/flat.ts)
+[`src/lang/object/flat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/flat.ts)

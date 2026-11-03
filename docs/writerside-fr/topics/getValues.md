@@ -4,7 +4,7 @@
 
 <link-summary>Lit les lignes d'une feuille, filtrées, transformées et paginées en un seul appel.</link-summary>
 
-<web-summary>getValues() — Lit les lignes d'une feuille, filtrées, transformées et paginées en un seul appel. apps-script-utils, Français.</web-summary>
+<web-summary>getValues() — Lit les lignes d'une feuille, filtrées, transformées et paginées en un seul appel. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -73,4 +73,4 @@ const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 
 ## Code source
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

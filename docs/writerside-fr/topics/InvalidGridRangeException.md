@@ -4,7 +4,7 @@
 
 <link-summary>Un GridRange était attendu et l'objet n'en est pas un valide : bornes absentes, inversées ou négatives.</link-summary>
 
-<web-summary>InvalidGridRangeException — Un GridRange était attendu et l'objet n'en est pas un valide : bornes absentes, inversées ou négatives. apps-script-utils, Français.</web-summary>
+<web-summary>InvalidGridRangeException — Un GridRange était attendu et l'objet n'en est pas un valide : bornes absentes, inversées ou négatives. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/sheet</code> · Disponible depuis: 1.5.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Code source
 
-[`src/exception/appsscript/sheet/InvalidGridRangeException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidGridRangeException.ts)
+[`src/exception/appsscript/sheet/InvalidGridRangeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidGridRangeException.ts)

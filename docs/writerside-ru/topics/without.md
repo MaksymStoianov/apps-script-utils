@@ -4,7 +4,7 @@
 
 <link-summary>Удаляет из массива все вхождения перечисленных значений.</link-summary>
 
-<web-summary>without() — Удаляет из массива все вхождения перечисленных значений. apps-script-utils, Русский.</web-summary>
+<web-summary>without() — Удаляет из массива все вхождения перечисленных значений. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -49,7 +49,7 @@ without([NaN, 1], NaN); // => [1]
 ### Отбрасывание пустых значений столбца
 
 ```typescript
-import { without } from "apps-script-utils";
+import { without } from "@bootgs/utils";
 
 const names = sheet.getRange("A2:A").getValues().flat();
 
@@ -80,4 +80,4 @@ function visibleHeader(header) {
 
 ## Исходный код
 
-[`src/lang/array/without.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/without.ts)
+[`src/lang/array/without.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/without.ts)

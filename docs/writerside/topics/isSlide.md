@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a slide.</link-summary>
 
-<web-summary>isSlide() — Checks whether a value is a slide. apps-script-utils, English.</web-summary>
+<web-summary>isSlide() — Checks whether a value is a slide. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -51,4 +51,4 @@ isSlide(null); // => false
 
 ## Source
 
-[`src/appsscript/slide/isSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isSlide.ts)
+[`src/appsscript/slide/isSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isSlide.ts)

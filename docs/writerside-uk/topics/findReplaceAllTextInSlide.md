@@ -4,7 +4,7 @@
 
 <link-summary>Замінює всі входження тексту на одному слайді.</link-summary>
 
-<web-summary>findReplaceAllTextInSlide() — Замінює всі входження тексту на одному слайді. apps-script-utils, Українська.</web-summary>
+<web-summary>findReplaceAllTextInSlide() — Замінює всі входження тексту на одному слайді. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.5.0</p>
@@ -59,4 +59,4 @@ const replaced = findReplaceAllTextInSlide(slide, "{{ client }}", "Acme", false)
 
 ## Вихідний код
 
-[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)
+[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)

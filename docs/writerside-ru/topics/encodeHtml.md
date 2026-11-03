@@ -4,7 +4,7 @@
 
 <link-summary>Кодирует каждый символ числовой ссылкой.</link-summary>
 
-<web-summary>encodeHtml() — Кодирует каждый символ числовой ссылкой. apps-script-utils, Русский.</web-summary>
+<web-summary>encodeHtml() — Кодирует каждый символ числовой ссылкой. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>html</code> · Доступно с: 1.0.0</p>
@@ -48,4 +48,4 @@ encodeHtml("<a>"); // => "&#60;a&#62;"
 
 ## Исходный код
 
-[`src/html/encodeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/encodeHtml.ts)
+[`src/html/encodeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/encodeHtml.ts)

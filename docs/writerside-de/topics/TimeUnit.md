@@ -4,7 +4,7 @@
 
 <link-summary>Eine Einheit, in der ein Abstand ausgedrückt werden kann.</link-summary>
 
-<web-summary>TimeUnit — Eine Einheit, in der ein Abstand ausgedrückt werden kann. apps-script-utils, Deutsch.</web-summary>
+<web-summary>TimeUnit — Eine Einheit, in der ein Abstand ausgedrückt werden kann. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time/types</code> · Verfügbar seit: 1.11.0</p>
@@ -35,4 +35,4 @@ offset(date, 1, "month");
 
 ## Quellcode
 
-[`src/time/types/TimeUnit.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/types/TimeUnit.ts)
+[`src/time/types/TimeUnit.ts`](https://github.com/bootgs/utils/blob/main/src/time/types/TimeUnit.ts)

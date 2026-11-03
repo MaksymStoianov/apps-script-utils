@@ -4,7 +4,7 @@
 
 <link-summary>Wie die Spalten eines Blattes heißen und was sie enthalten.</link-summary>
 
-<web-summary>SheetSchema — Wie die Spalten eines Blattes heißen und was sie enthalten. apps-script-utils, Deutsch.</web-summary>
+<web-summary>SheetSchema — Wie die Spalten eines Blattes heißen und was sie enthalten. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet/types</code> · Verfügbar seit: 1.11.0</p>
@@ -42,4 +42,4 @@ const schema = {
 
 ## Quellcode
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

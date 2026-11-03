@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є числом з дробовою частиною.</link-summary>
 
-<web-summary>nonFloat() — Перевіряє, що значення **не** є числом з дробовою частиною. apps-script-utils, Українська.</web-summary>
+<web-summary>nonFloat() — Перевіряє, що значення **не** є числом з дробовою частиною. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -54,4 +54,4 @@ nonFloat(-0.1); // => false
 
 ## Вихідний код
 
-[`src/lang/number/nonFloat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonFloat.ts)
+[`src/lang/number/nonFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonFloat.ts)

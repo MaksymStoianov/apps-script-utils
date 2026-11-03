@@ -4,7 +4,7 @@
 
 <link-summary>Vide les colonnes que le prédicat sélectionne, sans supprimer les colonnes.</link-summary>
 
-<web-summary>clearColumnsByConditional() — Vide les colonnes que le prédicat sélectionne, sans supprimer les colonnes. apps-script-utils, Français.</web-summary>
+<web-summary>clearColumnsByConditional() — Vide les colonnes que le prédicat sélectionne, sans supprimer les colonnes. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -74,4 +74,4 @@ clearColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
 
 ## Code source
 
-[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)
+[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение объектом Ui.</link-summary>
 
-<web-summary>isUi() — Проверяет, является ли значение объектом Ui. apps-script-utils, Русский.</web-summary>
+<web-summary>isUi() — Проверяет, является ли значение объектом Ui. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isUi(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/ui/isUi.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/isUi.ts)
+[`src/appsscript/ui/isUi.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/isUi.ts)

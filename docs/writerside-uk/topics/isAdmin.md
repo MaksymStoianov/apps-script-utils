@@ -4,7 +4,7 @@
 
 <link-summary>Повідомляє, чи є поточний користувач адміністратором Workspace.</link-summary>
 
-<web-summary>isAdmin() — Повідомляє, чи є поточний користувач адміністратором Workspace. apps-script-utils, Українська.</web-summary>
+<web-summary>isAdmin() — Повідомляє, чи є поточний користувач адміністратором Workspace. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/admin</code> · Доступно з: 1.5.0</p>
@@ -43,4 +43,4 @@ if (isAdmin()) {
 
 ## Вихідний код
 
-[`src/appsscript/admin/isAdmin.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/admin/isAdmin.ts)
+[`src/appsscript/admin/isAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/isAdmin.ts)

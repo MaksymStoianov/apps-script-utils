@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als ein Objekt zurück oder wirft.</link-summary>
 
-<web-summary>requireObject() — Gibt den Wert als ein Objekt zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireObject() — Gibt den Wert als ein Objekt zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireObject("abc"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireObject.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireObject.ts)
+[`src/lang/base/requireObject.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireObject.ts)

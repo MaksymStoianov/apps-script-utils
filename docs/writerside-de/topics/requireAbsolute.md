@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen absoluten Pfad zurück oder wirft.</link-summary>
 
-<web-summary>requireAbsolute() — Gibt den Wert als einen absoluten Pfad zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireAbsolute() — Gibt den Wert als einen absoluten Pfad zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ requireAbsolute("./a"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/net/path/requireAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/requireAbsolute.ts)
+[`src/net/path/requireAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireAbsolute.ts)

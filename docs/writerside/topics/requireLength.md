@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a valid array-like length, or throws.</link-summary>
 
-<web-summary>requireLength() — Returns the value as a valid array-like length, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireLength() — Returns the value as a valid array-like length, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireLength(1.5); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireLength.ts)
+[`src/lang/base/requireLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireLength.ts)

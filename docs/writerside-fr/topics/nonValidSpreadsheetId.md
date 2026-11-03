@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un identifiant de classeur.</link-summary>
 
-<web-summary>nonValidSpreadsheetId() — Vérifie qu'une valeur n'est **pas** un identifiant de classeur. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidSpreadsheetId() — Vérifie qu'une valeur n'est **pas** un identifiant de classeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -48,4 +48,4 @@ nonValidSpreadsheetId("1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"); // => fal
 
 ## Code source
 
-[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)
+[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является числом.</link-summary>
 
-<web-summary>nonNumber() — Проверяет, что значение **не** является числом. apps-script-utils, Русский.</web-summary>
+<web-summary>nonNumber() — Проверяет, что значение **не** является числом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -54,4 +54,4 @@ nonNumber(Infinity); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNumber.ts)
+[`src/lang/base/nonNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNumber.ts)

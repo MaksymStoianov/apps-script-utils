@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que tableau bidimensionnel non vide, ou lève une exception.</link-summary>
 
-<web-summary>require2DArray() — Renvoie la valeur en tant que tableau bidimensionnel non vide, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>require2DArray() — Renvoie la valeur en tant que tableau bidimensionnel non vide, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -76,4 +76,4 @@ require2DArray([]); // throws IllegalArgumentException — no rows
 
 ## Code source
 
-[`src/lang/array/require2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/require2DArray.ts)
+[`src/lang/array/require2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/require2DArray.ts)

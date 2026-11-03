@@ -4,7 +4,7 @@
 
 <link-summary>Разворачивает вложенный объект в один уровень с ключами через точку.</link-summary>
 
-<web-summary>flat() — Разворачивает вложенный объект в один уровень с ключами через точку. apps-script-utils, Русский.</web-summary>
+<web-summary>flat() — Разворачивает вложенный объект в один уровень с ключами через точку. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно с: 1.11.0</p>
@@ -52,4 +52,4 @@ flat({ a: { b: { c: 1 } } }, 1); // => { "a.b": { "c": 1 } }
 
 ## Исходный код
 
-[`src/lang/object/flat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/flat.ts)
+[`src/lang/object/flat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/flat.ts)

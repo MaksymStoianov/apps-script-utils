@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення логічним значенням.</link-summary>
 
-<web-summary>isBoolean() — Перевіряє, чи є значення логічним значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>isBoolean() — Перевіряє, чи є значення логічним значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isBoolean(null); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isBoolean.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isBoolean.ts)
+[`src/lang/base/isBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isBoolean.ts)

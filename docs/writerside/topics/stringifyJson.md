@@ -4,7 +4,7 @@
 
 <link-summary>Serialises a value to JSON with the object keys in a fixed order.</link-summary>
 
-<web-summary>stringifyJson() — Serialises a value to JSON with the object keys in a fixed order. apps-script-utils, English.</web-summary>
+<web-summary>stringifyJson() — Serialises a value to JSON with the object keys in a fixed order. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>json</code> · Since: 1.0.0</p>
@@ -46,4 +46,4 @@ stringifyJson([1, "a", null]); // => "[1,\"a\",null]"
 
 ## Source
 
-[`src/json/stringifyJson.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/json/stringifyJson.ts)
+[`src/json/stringifyJson.ts`](https://github.com/bootgs/utils/blob/main/src/json/stringifyJson.ts)

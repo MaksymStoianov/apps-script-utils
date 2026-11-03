@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a TextOutput.</link-summary>
 
-<web-summary>nonTextOutput() — Checks whether a value is **not** a TextOutput. apps-script-utils, English.</web-summary>
+<web-summary>nonTextOutput() — Checks whether a value is **not** a TextOutput. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonTextOutput(output); // => false
 
 ## Source
 
-[`src/appsscript/ui/nonTextOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/nonTextOutput.ts)
+[`src/appsscript/ui/nonTextOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/nonTextOutput.ts)

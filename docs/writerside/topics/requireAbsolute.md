@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as an absolute path, or throws.</link-summary>
 
-<web-summary>requireAbsolute() — Returns the value as an absolute path, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireAbsolute() — Returns the value as an absolute path, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ requireAbsolute("./a"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/net/path/requireAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/requireAbsolute.ts)
+[`src/net/path/requireAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireAbsolute.ts)

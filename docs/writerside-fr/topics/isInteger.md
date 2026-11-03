@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un entier.</link-summary>
 
-<web-summary>isInteger() — Vérifie si une valeur est un entier. apps-script-utils, Français.</web-summary>
+<web-summary>isInteger() — Vérifie si une valeur est un entier. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.5.0</p>
@@ -52,4 +52,4 @@ isInteger("42"); // => false
 
 ## Code source
 
-[`src/lang/number/isInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isInteger.ts)
+[`src/lang/number/isInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isInteger.ts)

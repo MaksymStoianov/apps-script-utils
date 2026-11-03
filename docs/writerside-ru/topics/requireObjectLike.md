@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как объектоподобное значение или выбрасывает исключение.</link-summary>
 
-<web-summary>requireObjectLike() — Возвращает значение как объектоподобное значение или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireObjectLike() — Возвращает значение как объектоподобное значение или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireObjectLike("abc"); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireObjectLike.ts)
+[`src/lang/base/requireObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireObjectLike.ts)

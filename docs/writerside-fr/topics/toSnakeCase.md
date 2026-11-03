@@ -4,7 +4,7 @@
 
 <link-summary>Réécrit une chaîne en snake_case.</link-summary>
 
-<web-summary>toSnakeCase() — Réécrit une chaîne en snake_case. apps-script-utils, Français.</web-summary>
+<web-summary>toSnakeCase() — Réécrit une chaîne en snake_case. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -52,4 +52,4 @@ toSnakeCase("userFirstName"); // => "user_first_name"
 
 ## Code source
 
-[`src/lang/string/toSnakeCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toSnakeCase.ts)
+[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toSnakeCase.ts)

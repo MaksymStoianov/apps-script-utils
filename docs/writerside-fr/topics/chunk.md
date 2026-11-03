@@ -4,7 +4,7 @@
 
 <link-summary>Découpe un tableau en groupes consécutifs de taille fixe, en validant les deux arguments.</link-summary>
 
-<web-summary>chunk() — Découpe un tableau en groupes consécutifs de taille fixe, en validant les deux arguments. apps-script-utils, Français.</web-summary>
+<web-summary>chunk() — Découpe un tableau en groupes consécutifs de taille fixe, en validant les deux arguments. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.0.0</p>
@@ -82,4 +82,4 @@ chunk([1, 2, 3], 1.5); // throws TypeError: Input 'size' must be an integer.
 
 ## Code source
 
-[`src/lang/array/chunk.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/chunk.ts)
+[`src/lang/array/chunk.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/chunk.ts)

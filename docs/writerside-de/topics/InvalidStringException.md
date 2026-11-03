@@ -4,7 +4,7 @@
 
 <link-summary>Eine Zeichenkette war erwartet, etwas anderes kam an.</link-summary>
 
-<web-summary>InvalidStringException — Eine Zeichenkette war erwartet, etwas anderes kam an. apps-script-utils, Deutsch.</web-summary>
+<web-summary>InvalidStringException — Eine Zeichenkette war erwartet, etwas anderes kam an. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/InvalidStringException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/InvalidStringException.ts)
+[`src/exception/InvalidStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidStringException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Blatt ist.</link-summary>
 
-<web-summary>nonSheet() — Prüft, ob ein Wert **nicht** ein Blatt ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonSheet() — Prüft, ob ein Wert **nicht** ein Blatt ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.3.0</p>
@@ -53,4 +53,4 @@ nonSheet(sheet); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonSheet.ts)
+[`src/appsscript/sheet/nonSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonSheet.ts)

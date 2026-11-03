@@ -4,7 +4,7 @@
 
 <link-summary>Склеивает сегменты пути, оставляя между ними один разделитель.</link-summary>
 
-<web-summary>join() — Склеивает сегменты пути, оставляя между ними один разделитель. apps-script-utils, Русский.</web-summary>
+<web-summary>join() — Склеивает сегменты пути, оставляя между ними один разделитель. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно с: 1.0.0</p>
@@ -47,4 +47,4 @@ join("/a", "../b"); // => "/b"
 
 ## Исходный код
 
-[`src/net/path/join.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/join.ts)
+[`src/net/path/join.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/join.ts)

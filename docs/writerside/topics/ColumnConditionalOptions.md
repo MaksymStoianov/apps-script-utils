@@ -4,7 +4,7 @@
 
 <link-summary>How the columns are read and which of them are candidates.</link-summary>
 
-<web-summary>ColumnConditionalOptions — How the columns are read and which of them are candidates. apps-script-utils, English.</web-summary>
+<web-summary>ColumnConditionalOptions — How the columns are read and which of them are candidates. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -33,4 +33,4 @@ const options = { headerColumn: 1 };
 
 ## Source
 
-[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)
+[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)

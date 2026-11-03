@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение строкой версии.</link-summary>
 
-<web-summary>isValidVersion() — Проверяет, является ли значение строкой версии. apps-script-utils, Русский.</web-summary>
+<web-summary>isValidVersion() — Проверяет, является ли значение строкой версии. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -49,4 +49,4 @@ isValidVersion("1..2"); // => false
 
 ## Исходный код
 
-[`src/lang/string/isValidVersion.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isValidVersion.ts)
+[`src/lang/string/isValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidVersion.ts)

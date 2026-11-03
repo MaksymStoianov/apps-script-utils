@@ -4,7 +4,7 @@
 
 <link-summary>Класи винятків і як їх розширювати.</link-summary>
 
-<web-summary>Модуль exception в apps-script-utils: базовий клас Exception, його нащадки і як додати до ієрархії власний клас.</web-summary>
+<web-summary>Модуль exception в @bootgs/utils: базовий клас Exception, його нащадки і як додати до ієрархії власний клас.</web-summary>
 
 `exception` містить класи помилок, які кидає решта бібліотеки. Ніщо в ньому не залежить від середовища виконання
 Apps Script.
@@ -26,7 +26,7 @@ Apps Script.
 успадковуйте `RuntimeException`:
 
 ```typescript
-import { RuntimeException } from "apps-script-utils";
+import { RuntimeException } from "@bootgs/utils";
 
 export class QuotaExceededException extends RuntimeException {}
 ```
@@ -51,7 +51,7 @@ Object.prototype.toString.call(error); // "[object QuotaExceededException]"
 тип змінюється:
 
 ```typescript
-import { RuntimeException } from "apps-script-utils";
+import { RuntimeException } from "@bootgs/utils";
 
 try {
   UrlFetchApp.fetch(endpoint);

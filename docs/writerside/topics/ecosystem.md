@@ -2,7 +2,7 @@
 
 <link-summary>The boot.gs framework, which builds on this library, and the Agent Skills that teach AI coding agents to use it.</link-summary>
 
-<web-summary>How apps-script-utils fits with the boot.gs framework for Google Apps Script and with the Agent Skills that teach Claude Code, Gemini CLI and Cursor to use both.</web-summary>
+<web-summary>How @bootgs/utils fits with the boot.gs framework for Google Apps Script and with the Agent Skills that teach Claude Code, Gemini CLI and Cursor to use both.</web-summary>
 
 This library is useful on its own — install it, import a function, done. It is also part of a small ecosystem for
 Google Apps Script development, and two neighbours are worth knowing about.
@@ -29,7 +29,7 @@ export class SheetController {
 }
 ```
 
-**The relationship to this library is a dependency, not a rivalry.** `bootgs` lists `apps-script-utils` among its
+**The relationship to this library is a dependency, not a rivalry.** `bootgs` lists `@bootgs/utils` among its
 runtime dependencies, so a boot.gs project already has every function documented here, with no second install. The
 guards are what its parameter validation and its service lookups are built from.
 
@@ -37,7 +37,7 @@ Which to reach for:
 
 | You want                                                                  | Use                                  |
 | :------------------------------------------------------------------------ | :----------------------------------- |
-| Helpers inside a script you already have — a few functions, no new shape  | `apps-script-utils` on its own       |
+| Helpers inside a script you already have — a few functions, no new shape  | `@bootgs/utils` on its own           |
 | Routing, controllers, dependency injection, a web app with real endpoints | `bootgs`, with this library included |
 
 ## Agent Skills — teaching an AI agent this library
@@ -50,7 +50,7 @@ The catalogue splits in two:
 
 | Skill                           | Covers                                                                              |
 | :------------------------------ | :---------------------------------------------------------------------------------- |
-| `apps-script-utils`             | This library: the `isX`/`nonX`/`requireX` convention, the guards, the helpers       |
+| `@bootgs/utils`                 | This library: the `isX`/`nonX`/`requireX` convention, the guards, the helpers       |
 | `apps-script-triggers`          | Simple and installable triggers, event shapes, quotas                               |
 | `apps-script-services`          | Quota-safe `SpreadsheetApp`, `PropertiesService`, `CacheService`, `LockService` use |
 | `apps-script-ui`                | Menus, sidebars, dialogs, and the `google.script.run` pitfalls                      |

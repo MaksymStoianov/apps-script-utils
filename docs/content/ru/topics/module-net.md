@@ -2,7 +2,7 @@
 
 <link-summary>Помощники для URL, путей и доменов.</link-summary>
 
-<web-summary>Модуль net в apps-script-utils: проверка URL, разбор, склеивание и нормализация путей, проверка доменов — всё это работает и внутри Google Apps Script.</web-summary>
+<web-summary>Модуль net в @bootgs/utils: проверка URL, разбор, склеивание и нормализация путей, проверка доменов — всё это работает и внутри Google Apps Script.</web-summary>
 
 `net` — это пути, URL и всё, что вокруг них. Как и `lang`, он не зависит от среды выполнения Apps Script.
 
@@ -20,7 +20,7 @@ Script — смотрите [](module-appsscript.md).
 ## Пути
 
 ```typescript
-import { join, normalize, parse, isAbsolute, isRelative } from "apps-script-utils";
+import { join, normalize, parse, isAbsolute, isRelative } from "@bootgs/utils";
 
 join("/a", "b", "../c"); // "/a/c"
 normalize("/a/b/../c"); // "/a/c"
@@ -38,7 +38,7 @@ isRelative("a/b"); // true
 ## Домены и URL
 
 ```typescript
-import { isValidDomain, isUrl } from "apps-script-utils";
+import { isValidDomain, isUrl } from "@bootgs/utils";
 
 isValidDomain("example.com"); // true
 isValidDomain("not a domain"); // false

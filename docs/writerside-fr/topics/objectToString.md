@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie le tag interne d'une valeur.</link-summary>
 
-<web-summary>objectToString() — Renvoie le tag interne d'une valeur. apps-script-utils, Français.</web-summary>
+<web-summary>objectToString() — Renvoie le tag interne d'une valeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Disponible depuis: 1.0.0</p>
@@ -44,4 +44,4 @@ objectToString(new Date()); // => "[object Date]"
 
 ## Code source
 
-[`src/lang/object/objectToString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/objectToString.ts)
+[`src/lang/object/objectToString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/objectToString.ts)

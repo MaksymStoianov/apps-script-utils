@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение числом `NaN`.</link-summary>
 
-<web-summary>isNaN() — Проверяет, является ли значение числом `NaN`. apps-script-utils, Русский.</web-summary>
+<web-summary>isNaN() — Проверяет, является ли значение числом `NaN`. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -49,4 +49,4 @@ isNaN(undefined); // => false
 
 ## Исходный код
 
-[`src/lang/number/isNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isNaN.ts)
+[`src/lang/number/isNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isNaN.ts)

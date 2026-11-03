@@ -4,7 +4,7 @@
 
 <link-summary>От строки ожидалось содержимое, а она оказалась null, undefined или пустой.</link-summary>
 
-<web-summary>EmptyStringException — От строки ожидалось содержимое, а она оказалась null, undefined или пустой. apps-script-utils, Русский.</web-summary>
+<web-summary>EmptyStringException — От строки ожидалось содержимое, а она оказалась null, undefined или пустой. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/EmptyStringException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/EmptyStringException.ts)
+[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/EmptyStringException.ts)

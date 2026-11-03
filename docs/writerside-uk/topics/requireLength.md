@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як припустиму довжину масиву або викидає виняток.</link-summary>
 
-<web-summary>requireLength() — Повертає значення як припустиму довжину масиву або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireLength() — Повертає значення як припустиму довжину масиву або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireLength(1.5); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireLength.ts)
+[`src/lang/base/requireLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireLength.ts)

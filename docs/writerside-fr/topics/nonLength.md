@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une longueur de tableau valide.</link-summary>
 
-<web-summary>nonLength() — Vérifie qu'une valeur n'est **pas** une longueur de tableau valide. apps-script-utils, Français.</web-summary>
+<web-summary>nonLength() — Vérifie qu'une valeur n'est **pas** une longueur de tableau valide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -52,4 +52,4 @@ nonLength(Number.MAX_SAFE_INTEGER); // => false
 
 ## Code source
 
-[`src/lang/base/nonLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonLength.ts)
+[`src/lang/base/nonLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonLength.ts)

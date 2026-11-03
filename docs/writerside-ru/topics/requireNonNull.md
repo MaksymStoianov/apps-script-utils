@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является значением `null` или `undefined`.</link-summary>
 
-<web-summary>requireNonNull() — Возвращает значение, убедившись, что оно не является значением `null` или `undefined`. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonNull() — Возвращает значение, убедившись, что оно не является значением `null` или `undefined`. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -56,4 +56,4 @@ requireNonNull(undefined); // throws NullPointerException
 
 ## Исходный код
 
-[`src/lang/base/requireNonNull.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonNull.ts)
+[`src/lang/base/requireNonNull.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonNull.ts)

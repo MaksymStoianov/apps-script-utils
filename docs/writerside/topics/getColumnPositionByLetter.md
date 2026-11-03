@@ -4,7 +4,7 @@
 
 <link-summary>Converts a column letter into its one-based position.</link-summary>
 
-<web-summary>getColumnPositionByLetter() — Converts a column letter into its one-based position. apps-script-utils, English.</web-summary>
+<web-summary>getColumnPositionByLetter() — Converts a column letter into its one-based position. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -44,4 +44,4 @@ getColumnPositionByLetter("AA"); // => 27
 
 ## Source
 
-[`src/appsscript/sheet/getColumnPositionByLetter.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getColumnPositionByLetter.ts)
+[`src/appsscript/sheet/getColumnPositionByLetter.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getColumnPositionByLetter.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Повторює виклик функції при винятку, збільшуючи паузу між спробами.</link-summary>
 
-<web-summary>retry() — Повторює виклик функції при винятку, збільшуючи паузу між спробами. apps-script-utils, Українська.</web-summary>
+<web-summary>retry() — Повторює виклик функції при винятку, збільшуючи паузу між спробами. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/function</code> · Доступно з: 1.11.0</p>
@@ -55,4 +55,4 @@ const response = retry(() => UrlFetchApp.fetch(url), {
 
 ## Вихідний код
 
-[`src/lang/function/retry.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/function/retry.ts)
+[`src/lang/function/retry.ts`](https://github.com/bootgs/utils/blob/main/src/lang/function/retry.ts)

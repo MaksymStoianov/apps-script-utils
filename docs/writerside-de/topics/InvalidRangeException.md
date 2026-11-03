@@ -4,7 +4,7 @@
 
 <link-summary>Ein Bereich war erwartet, der Wert ist keiner.</link-summary>
 
-<web-summary>InvalidRangeException — Ein Bereich war erwartet, der Wert ist keiner. apps-script-utils, Deutsch.</web-summary>
+<web-summary>InvalidRangeException — Ein Bereich war erwartet, der Wert ist keiner. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception/appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)
+[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)

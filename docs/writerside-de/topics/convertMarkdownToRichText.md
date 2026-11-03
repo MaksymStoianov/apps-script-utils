@@ -4,7 +4,7 @@
 
 <link-summary>Verwandelt eine kleine Teilmenge von Markdown in formatierte Textabschnitte.</link-summary>
 
-<web-summary>convertMarkdownToRichText() — Verwandelt eine kleine Teilmenge von Markdown in formatierte Textabschnitte. apps-script-utils, Deutsch.</web-summary>
+<web-summary>convertMarkdownToRichText() — Verwandelt eine kleine Teilmenge von Markdown in formatierte Textabschnitte. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -50,4 +50,4 @@ const runs = convertMarkdownToRichText("**bold** and `code`");
 
 ## Quellcode
 
-[`src/appsscript/slide/convertMarkdownToRichText.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/convertMarkdownToRichText.ts)
+[`src/appsscript/slide/convertMarkdownToRichText.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/convertMarkdownToRichText.ts)

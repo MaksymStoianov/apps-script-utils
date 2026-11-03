@@ -4,7 +4,7 @@
 
 <link-summary>Eine Präsentation war erwartet, der Wert ist keine.</link-summary>
 
-<web-summary>InvalidPresentationException — Eine Präsentation war erwartet, der Wert ist keine. apps-script-utils, Deutsch.</web-summary>
+<web-summary>InvalidPresentationException — Eine Präsentation war erwartet, der Wert ist keine. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception/appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)
+[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)

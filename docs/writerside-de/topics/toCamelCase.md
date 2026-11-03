@@ -4,7 +4,7 @@
 
 <link-summary>Fügt die Wörter einer Zeichenkette zu camelCase zusammen.</link-summary>
 
-<web-summary>toCamelCase() — Fügt die Wörter einer Zeichenkette zu camelCase zusammen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>toCamelCase() — Fügt die Wörter einer Zeichenkette zu camelCase zusammen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -54,4 +54,4 @@ toCamelCase("user_first_name"); // => "userfirstname"
 
 ## Quellcode
 
-[`src/lang/string/toCamelCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toCamelCase.ts)
+[`src/lang/string/toCamelCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toCamelCase.ts)

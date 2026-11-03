@@ -4,7 +4,7 @@
 
 <link-summary>L'appelant est connu mais n'y est pas autorisé.</link-summary>
 
-<web-summary>AuthorizationException — L'appelant est connu mais n'y est pas autorisé. apps-script-utils, Français.</web-summary>
+<web-summary>AuthorizationException — L'appelant est connu mais n'y est pas autorisé. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.11.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Code source
 
-[`src/exception/AuthorizationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/AuthorizationException.ts)
+[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/AuthorizationException.ts)

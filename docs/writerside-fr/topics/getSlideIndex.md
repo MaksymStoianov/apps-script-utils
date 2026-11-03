@@ -4,7 +4,7 @@
 
 <link-summary>Trouve la position d'une diapositive, dans une présentation ou dans celle active.</link-summary>
 
-<web-summary>getSlideIndex() — Trouve la position d'une diapositive, dans une présentation ou dans celle active. apps-script-utils, Français.</web-summary>
+<web-summary>getSlideIndex() — Trouve la position d'une diapositive, dans une présentation ou dans celle active. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -52,4 +52,4 @@ getSlideIndex(slide); // => 2
 
 ## Code source
 
-[`src/appsscript/slide/getSlideIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/getSlideIndex.ts)
+[`src/appsscript/slide/getSlideIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/getSlideIndex.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein absoluter Pfad ist.</link-summary>
 
-<web-summary>nonAbsolute() — Prüft, ob ein Wert **nicht** ein absoluter Pfad ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonAbsolute() — Prüft, ob ein Wert **nicht** ein absoluter Pfad ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code> · Verfügbar seit: 1.11.0</p>
@@ -51,4 +51,4 @@ nonAbsolute("mailto:a@example.com"); // => false
 
 ## Quellcode
 
-[`src/net/path/nonAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonAbsolute.ts)
+[`src/net/path/nonAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/nonAbsolute.ts)

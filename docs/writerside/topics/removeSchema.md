@@ -4,7 +4,7 @@
 
 <link-summary>Removes the schema stored on a sheet.</link-summary>
 
-<web-summary>removeSchema() — Removes the schema stored on a sheet. apps-script-utils, English.</web-summary>
+<web-summary>removeSchema() — Removes the schema stored on a sheet. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ removeSchema(sheet, { validation: true }); // also clears the rules it implied
 
 ## Source
 
-[`src/appsscript/sheet/removeSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/removeSchema.ts)
+[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/removeSchema.ts)

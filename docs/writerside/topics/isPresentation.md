@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a presentation.</link-summary>
 
-<web-summary>isPresentation() — Checks whether a value is a presentation. apps-script-utils, English.</web-summary>
+<web-summary>isPresentation() — Checks whether a value is a presentation. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -51,4 +51,4 @@ isPresentation(null); // => false
 
 ## Source
 
-[`src/appsscript/slide/isPresentation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isPresentation.ts)
+[`src/appsscript/slide/isPresentation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isPresentation.ts)
