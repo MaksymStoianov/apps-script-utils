@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * What a column holds, as far as a schema is concerned.
  *

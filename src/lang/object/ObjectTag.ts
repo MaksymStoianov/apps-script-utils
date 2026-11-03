@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * Enum representing `Object#toString` result references in uppercase.
  * Provides a standardized way to identify object types.

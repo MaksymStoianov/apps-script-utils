@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { IllegalArgumentException } from "../../exception";
 import { isArray, isNil, isString, requireCountable } from "../../lang";
 import { requireSheet } from "./requireSheet";

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isValidDomain } from "../../net";
 import { isEmpty, isString } from "../base";
 

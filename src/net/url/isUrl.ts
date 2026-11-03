@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isString } from "../../lang";
 
 const SCHEME_PATTERN: RegExp = /^(https?|ftp):\/\//i;

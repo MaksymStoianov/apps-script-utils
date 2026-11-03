@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * Checks if a value is a {@link GoogleAppsScript.Slides.Slide|Slide} object.
  *

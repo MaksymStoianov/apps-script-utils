@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { Exception } from "../../exception";
 import { isObject } from "./isObject";
 

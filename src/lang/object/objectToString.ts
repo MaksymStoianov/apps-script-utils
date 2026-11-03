@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * Converts `value` to a string using `Object.prototype.toString`.
  *

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isGridRangeContainedIn } from "./isGridRangeContainedIn";
 import type { GridRange } from "./types";
 
