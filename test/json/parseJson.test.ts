@@ -26,6 +26,38 @@ describe("parseJson", () => {
     it("should accept unquoted keys", () => {
       expect(parseJson("{a:1}")).toEqual({ a: 1 });
     });
+
+    it("should keep double quotes inside a single-quoted value", () => {
+      expect(parseJson(`{'a':'say "hi"'}`)).toEqual({ a: 'say "hi"' });
+    });
+
+    it("should keep double quotes inside a single-quoted key", () => {
+      expect(parseJson(`{'say "hi"':1}`)).toEqual({ 'say "hi"': 1 });
+    });
+
+    it("should unescape an escaped single quote in a single-quoted value", () => {
+      expect(parseJson(String.raw`{'a':'it\'s'}`)).toEqual({ a: "it's" });
+    });
+
+    it("should keep backslash escapes in a single-quoted value", () => {
+      expect(parseJson(String.raw`{'a':'C:\\dir\n'}`)).toEqual({ a: "C:\\dir\n" });
+    });
+
+    it("should keep an escaped double quote in a double-quoted value", () => {
+      expect(parseJson(String.raw`{a:"x\"y"}`)).toEqual({ a: 'x"y' });
+    });
+
+    it("should keep a backslash before a double quote in a single-quoted value", () => {
+      expect(parseJson(String.raw`{'a':'x\\"y'}`)).toEqual({ a: 'x\\"y' });
+    });
+
+    it("should accept mixed quoted and unquoted keys", () => {
+      expect(parseJson(`{ "foo": "bar", baz: true, 'qux': null }`)).toEqual({
+        foo: "bar",
+        baz: true,
+        qux: null
+      });
+    });
   });
 
   describe("Input it rejects", () => {
