@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Google Apps Script Utils 项目横幅](docs/assets/images/banner-1280x640.jpg)
+![Google Apps Script Utils 项目横幅](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [日本語](README.ja.md) | **中文**
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | **简体中文** | [繁體中文](README.zh-TW.md)
 
-> 本译文借助 AI 根据 2.1.1 版本的 [README.md](README.md) 翻译而成。以英文版 README 为准；欢迎指正——请参阅 [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations)。
+> 本译文借助 AI 根据 2.1.1 版本的 [README.md](../../README.md) 翻译而成。以英文版 README 为准；欢迎指正——请参阅 [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations)。
 
 # Google Apps Script™ 实用工具库
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -99,7 +99,7 @@ npm install @bootgs/utils
 
 ## 文档
 
-完整文档发布在 **<https://bootgs.github.io/utils/>**（英文），包括指南、各模块讲解和完整的函数参考。其源文件位于 [`docs/writerside/`](docs/writerside/)，每次推送到 `main` 时都会重新构建。
+完整文档发布在 **<https://bootgs.github.io/utils/>**（英文），包括指南、各模块讲解和完整的函数参考。其源文件位于 [`docs/writerside/`](../writerside/)，每次推送到 `main` 时都会重新构建。
 
 推荐的阅读顺序：
 
@@ -211,7 +211,7 @@ npm run dev
 
 ## 按类别划分的函数
 
-完整的函数参考已迁移到文档站点。该站点由 [`docs/writerside/`](docs/writerside/) 构建，每次推送到 `main` 时发布：
+完整的函数参考已迁移到文档站点。该站点由 [`docs/writerside/`](../writerside/) 构建，每次推送到 `main` 时发布：
 
 **<https://bootgs.github.io/utils/>**
 
@@ -227,7 +227,7 @@ npm run dev
 
 ## 参与贡献
 
-欢迎贡献。完整指南请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)。简要步骤如下：
+欢迎贡献。完整指南请参阅 [CONTRIBUTING.md](../../CONTRIBUTING.md)。简要步骤如下：
 
 1. Fork 本仓库，并为你的功能或缺陷修复创建分支。
 2. 添加或更新覆盖你的改动的测试。
@@ -235,13 +235,13 @@ npm run dev
 4. 不要手动编辑 `CHANGELOG.md`——它由 [release-please](https://github.com/googleapis/release-please) 自动生成。
 5. 创建 pull request，说明改了什么以及为什么。
 
-请遵循现有的代码风格和命名约定。社区准则见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
+请遵循现有的代码风格和命名约定。社区准则见 [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md)。
 
 ## 支持
 
 - 如需报告缺陷或提出功能需求，请在 GitHub 上搜索或新建 [issue](https://github.com/bootgs/utils/issues)。
-- 最近的变更请查看[更新日志](CHANGELOG.md)。
-- 如需报告安全漏洞，请遵循[安全策略](SECURITY.md)，不要创建公开 issue。
+- 最近的变更请查看[更新日志](../../CHANGELOG.md)。
+- 如需报告安全漏洞，请遵循[安全策略](../../SECURITY.md)，不要创建公开 issue。
 - 如需支持项目的持续开发，请访问 [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov)。
 
 ## 路线图
@@ -250,13 +250,13 @@ npm run dev
 
 ## 更新日志
 
-按版本列出的详细变更请参阅 [CHANGELOG.md](CHANGELOG.md)。
+按版本列出的详细变更请参阅 [CHANGELOG.md](../../CHANGELOG.md)。
 
 ## 许可证
 
-本项目采用 Apache License 2.0 许可证。详情请参阅 [LICENSE](LICENSE)。
+本项目采用 Apache License 2.0 许可证。详情请参阅 [LICENSE](../../LICENSE)。
 
-横幅插画不属于该许可证的范围。它是其作者的作品，在署名作者并附上链接的前提下可不加修改地重复使用，具体条款见 [docs/assets/images/README.md](docs/assets/images/README.md)。
+横幅插画不属于该许可证的范围。它是其作者的作品，在署名作者并附上链接的前提下可不加修改地重复使用，具体条款见 [docs/assets/images/README.md](../assets/images/README.md)。
 
 ## 商标
 

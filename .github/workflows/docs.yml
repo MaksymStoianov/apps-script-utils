@@ -13,6 +13,8 @@ on:
   pull_request:
     paths:
       - "docs/**"
+      # README translations live under docs/ but are not part of the site.
+      - "!docs/readme/**"
       - "scripts/docs/**"
       - ".github/workflows/docs.yml"
   workflow_dispatch:

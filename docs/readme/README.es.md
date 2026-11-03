@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-![Banner del proyecto Google Apps Script Utils](docs/assets/images/banner-1280x640.jpg)
+![Banner del proyecto Google Apps Script Utils](../assets/images/banner-1280x640.jpg)
 
 <p align="right">
     <small>
@@ -8,9 +8,9 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | **Español** | [Português](README.pt.md) | [日本語](README.ja.md) | [中文](README.zh.md)
+[English](../../README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | **Español** | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
-> Esta traducción se hizo con ayuda de IA a partir de [README.md](README.md) para la versión 2.1.1. La versión de referencia es el README en inglés; las correcciones son bienvenidas — consulta [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations).
+> Esta traducción se hizo con ayuda de IA a partir de [README.md](../../README.md) para la versión 2.1.1. La versión de referencia es el README en inglés; las correcciones son bienvenidas — consulta [CONTRIBUTING.md](../../CONTRIBUTING.md#readme-translations).
 
 # Utilidades para Google Apps Script™
 
@@ -18,8 +18,8 @@
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
-  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
+  <a href="../../SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
   <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
@@ -114,7 +114,7 @@ npm install @bootgs/utils
 
 La documentación completa está publicada en **<https://bootgs.github.io/utils/>** (en inglés):
 guías, recorridos por cada módulo y la referencia completa de funciones. Su código fuente está en
-[`docs/writerside/`](docs/writerside/) y se reconstruye con cada push a `main`.
+[`docs/writerside/`](../writerside/) y se reconstruye con cada push a `main`.
 
 Un buen orden de lectura:
 
@@ -230,7 +230,7 @@ npm run dev
 ## Funciones por categoría
 
 La referencia completa de funciones se ha trasladado al sitio de documentación, que se genera a partir de
-[`docs/writerside/`](docs/writerside/) y se publica con cada push a `main`:
+[`docs/writerside/`](../writerside/) y se publica con cada push a `main`:
 
 **<https://bootgs.github.io/utils/>**
 
@@ -251,7 +251,7 @@ explica qué funciones dependen de un servicio de Google, qué cuesta eso y qué
 
 ## Cómo contribuir
 
-Las contribuciones son bienvenidas. Consulta la guía completa en [CONTRIBUTING.md](CONTRIBUTING.md). En resumen:
+Las contribuciones son bienvenidas. Consulta la guía completa en [CONTRIBUTING.md](../../CONTRIBUTING.md). En resumen:
 
 1. Haz un fork del repositorio y crea una rama para tu funcionalidad o corrección.
 2. Añade o actualiza las pruebas que cubren tus cambios.
@@ -260,14 +260,14 @@ Las contribuciones son bienvenidas. Consulta la guía completa en [CONTRIBUTING.
 5. Abre una pull request que describa qué ha cambiado y por qué.
 
 Sigue el estilo de código y las convenciones de nombres existentes. Las normas de la comunidad están en
-[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+[CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md).
 
 ## Soporte
 
 - Para errores o solicitudes de funcionalidades, busca o abre una
   [issue](https://github.com/bootgs/utils/issues) en GitHub.
-- Para los cambios recientes, consulta el [registro de cambios](CHANGELOG.md).
-- Para informar de una vulnerabilidad de seguridad, sigue la [política de seguridad](SECURITY.md) en lugar de abrir
+- Para los cambios recientes, consulta el [registro de cambios](../../CHANGELOG.md).
+- Para informar de una vulnerabilidad de seguridad, sigue la [política de seguridad](../../SECURITY.md) en lugar de abrir
   una issue pública.
 - Para apoyar el desarrollo continuo, consulta [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov).
 
@@ -279,15 +279,15 @@ desfasado: para proponer algo, abre una [issue](https://github.com/bootgs/utils/
 
 ## Registro de cambios
 
-Para ver la lista detallada de cambios por versión, consulta [CHANGELOG.md](CHANGELOG.md).
+Para ver la lista detallada de cambios por versión, consulta [CHANGELOG.md](../../CHANGELOG.md).
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia Apache License 2.0. Consulta [LICENSE](LICENSE) para más detalles.
+Este proyecto se distribuye bajo la licencia Apache License 2.0. Consulta [LICENSE](../../LICENSE) para más detalles.
 
 La ilustración del banner no forma parte de esa licencia. Es obra de su autora, puede reutilizarse sin
 modificaciones siempre que se cite a la autora con un enlace, y se rige por
-[docs/assets/images/README.md](docs/assets/images/README.md).
+[docs/assets/images/README.md](../assets/images/README.md).
 
 ## Marcas comerciales
 
