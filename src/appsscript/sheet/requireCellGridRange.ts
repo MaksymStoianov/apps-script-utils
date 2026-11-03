@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { InvalidGridRangeException } from "../../exception";
 import { isCellGridRange } from "./isCellGridRange";
 import type { GridRange } from "./types";

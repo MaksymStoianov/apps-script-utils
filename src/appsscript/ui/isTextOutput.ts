@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isFunction, isObject } from "../../lang";
 
 type TextOutput = GoogleAppsScript.Content.TextOutput;

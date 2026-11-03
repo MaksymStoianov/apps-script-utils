@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { AdminDirectoryException } from "../../exception";
 import { nonFunction } from "../../lang";
 

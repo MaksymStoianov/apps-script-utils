@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { IllegalArgumentException } from "../exception";
 import { getDaysInMonth } from "./getDaysInMonth";
 import type { TimeUnit } from "./types";

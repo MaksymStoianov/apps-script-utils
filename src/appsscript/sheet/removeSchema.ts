@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isNil } from "../../lang";
 import { LEGACY_SCHEMA_METADATA_KEYS, SCHEMA_METADATA_KEY } from "./insertSchema";
 import { requireSheet } from "./requireSheet";

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isConsistent2DArray, isNil } from "../../lang";
 import { isRange } from "./isRange";

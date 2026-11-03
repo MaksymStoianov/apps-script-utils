@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { IllegalArgumentException, InvalidSheetException } from "../../exception";
 import { isFunction, isNil, requireCountable } from "../../lang";
 import { type ColumnConditionalOptions, type ColumnPredicate } from "./clearColumnsByConditional";

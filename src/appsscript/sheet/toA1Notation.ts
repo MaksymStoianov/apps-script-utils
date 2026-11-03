@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { IllegalArgumentException, InvalidGridRangeException } from "../../exception";
 import { isObject } from "../../lang";
 import { getColumnLetterByIndex } from "./getColumnLetterByIndex";

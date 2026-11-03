@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { NullPointerException } from "../../exception";
 import { isNil } from "./isNil";
 
