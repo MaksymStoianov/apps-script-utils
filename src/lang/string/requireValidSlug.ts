@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { IllegalArgumentException } from "../../exception";
 import { isValidSlug } from "./isValidSlug";
 import { requireNonEmptyString } from "./requireNonEmptyString";

@@ -1,77 +1,79 @@
 # Security Policy
 
-This document outlines how to report vulnerabilities in **apps-script-utils**. We appreciate the efforts of security researchers
-to help us keep the utility library secure.
+This document explains which versions of **@bootgs/utils** receive security fixes and how to report a
+vulnerability. We appreciate the work of security researchers who help keep the library and its users safe.
 
 ## Supported Versions
 
-We aim to provide security updates for the following versions of **apps-script-utils** on a best-effort basis:
+| Version | Package             | Supported                                                         |
+| :------ | :------------------ | :---------------------------------------------------------------- |
+| `3.x`   | `@bootgs/utils`     | :white_check_mark: once `3.0.0` is released                       |
+| `2.x`   | `apps-script-utils` | :warning: security fixes only, until 3 months after `3.0.0` ships |
+| `< 2.0` | `apps-script-utils` | :x:                                                               |
 
-<table width="100%">
-  <thead>
-    <tr>
-      <th align="left">Version</th>
-      <th align="left">Supported</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>>= 2.0.0</code></td>
-      <td>:white_check_mark:</td>
-    </tr>
-    <tr>
-      <td><code>< 2.0.0</code></td>
-      <td>:x:</td>
-    </tr>
-  </tbody>
-</table>
-
-We recommend using the latest stable version to benefit from any security improvements.
+Version 3 is published under the new name `@bootgs/utils`; the `2.x` line was published as `apps-script-utils`.
+The latest release receives all fixes. Please upgrade to the latest release to stay protected; see
+[SUPPORT.md](SUPPORT.md) for the support policy.
 
 ## Reporting a Vulnerability
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+**Please do not report security vulnerabilities through public issues, discussions or pull requests.**
 
-If you discover a potential security vulnerability, please report it privately.
+1. **Preferred:** use GitHub private vulnerability reporting — open the repository's
+   [**Security** tab → **Report a vulnerability**](https://github.com/bootgs/utils/security/advisories/new).
+2. **Alternative:** email [security@maksymstoianov.com](mailto:security@maksymstoianov.com).
 
-1. **Send an Email:** Send a report
-   to [stoianov.maksym+apps-script-utils+security@gmail.com](mailto:stoianov.maksym+apps-script-utils+security@gmail.com).
-2. **Include Details:** To help us understand the issue, please include:
-   - A descriptive title.
-   - Type of issue.
-   - Affected versions.
-   - Step-by-step instructions to reproduce or a proof-of-concept.
-3. **Wait for Response:** We will try to acknowledge your report as soon as possible, depending on our availability.
+Please include:
 
-## Our Security Process
+- a short description and the type of issue (for example injection, prototype pollution, information disclosure);
+- the affected versions;
+- steps to reproduce or a proof of concept;
+- the impact as you understand it, and any suggested fix.
 
-When a vulnerability is reported, we will:
+## Response Timeline
 
-1. **Review:** Evaluate the report to determine if it is a valid security concern.
-2. **Development:** If confirmed, we will work on a fix as our resources and time permit.
-3. **Disclosure:** Once a fix is released, we may provide credit to the reporter (if they wish) and may publish a
-   security advisory.
+| Step                                       | Target                       |
+| :----------------------------------------- | :--------------------------- |
+| Acknowledgement of the report              | within 5 business days       |
+| Initial assessment (validity and severity) | within 14 days               |
+| Fix released for critical or high severity | within 30 days of assessment |
+| Fix for medium or low severity             | in a regular release         |
 
-## Disclosure Policy
+We keep you informed of progress and may ask for more details. Severity is rated with
+[CVSS v3.1](https://www.first.org/cvss/v3.1/specification-document).
 
-- We follow the principle of coordinated vulnerability disclosure.
-- We ask that you give us a reasonable amount of time to resolve the issue before making any information public.
+## Coordinated Disclosure
 
-## Recognition
+- We follow coordinated vulnerability disclosure: please keep the details private until a fix is released or
+  90 days have passed since your report, whichever comes first, unless we agree on another date together.
+- Fixes are published as a new release, and confirmed vulnerabilities get a
+  [GitHub Security Advisory](https://github.com/bootgs/utils/security/advisories) and, where applicable, a CVE.
+- If a report is out of scope or not a vulnerability, we tell you why.
 
-We value the work of security researchers and may credit those who report vulnerabilities in our release notes or
-security advisories at our discretion.
+## Credit
+
+With your permission, we credit reporters by name or handle in the security advisory and release notes. Tell us
+in your report how you would like to be credited, or if you prefer to stay anonymous. We do not run a paid bug
+bounty programme.
+
+## Scope
+
+In scope: the source code in this repository, the `@bootgs/utils` package published on npm and the `2.x` releases
+of `apps-script-utils` while they are supported.
+
+Out of scope: vulnerabilities in Google Apps Script itself or other Google services (report them to
+[Google](https://bughunters.google.com/)), in development dependencies or other third-party packages (report them
+upstream; we will update the dependency), and in scripts built with the library that are caused by their own code
+or configuration.
 
 ## Security Best Practices for Users
 
-To help keep your applications secure, we recommend following these general best practices:
-
-1. **Keep Dependencies Updated:** Regularly update your project dependencies.
-2. **Secret Management:** Never commit sensitive information (API keys, secrets) to your repository. Use environment
-   variables.
-3. **Principle of Least Privilege:** Grant only necessary permissions in your `appsscript.json`.
-4. **Input Validation:** Always validate and sanitize user input.
+1. **Keep dependencies updated:** use the latest `@bootgs/utils` release and keep other packages current.
+2. **Secret management:** never commit API keys or secrets; use `PropertiesService` or another secret store.
+3. **Least privilege:** declare only the OAuth scopes you need in `appsscript.json`.
+4. **Input validation:** validate input from users, sheets and web requests before acting on it, for example with
+   the library's `require*` checks.
 
 ---
 
-_Thank you for helping us keep **apps-script-utils** secure!_
+_Thank you for helping us keep **@bootgs/utils** secure!_

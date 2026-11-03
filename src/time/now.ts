@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * Returns the number of milliseconds elapsed since the epoch (January 1, 1970, UTC).
  *

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { IllegalArgumentException } from "../../exception";
 import { isObjectLike, isString, requireArray } from "../../lang";
 import type { RichTextRun, TextStyle, Theme } from "./convertMarkdownToRichText";

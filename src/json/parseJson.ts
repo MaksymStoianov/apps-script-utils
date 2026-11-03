@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { requireNonEmptyString } from "../lang";
 
 /**
@@ -40,13 +41,28 @@ export function parseJson(value: string): object {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err: unknown) {
     /**
+     * Matches a complete double-quoted JSON string literal, escapes included.
+     * The tokenizer below turns every quoted string, single-quoted ones too,
+     * into this form.
+     */
+    const quotedString = /^"(?:[^"\\]|\\.)*"$/;
+
+    /**
      * Checks if a token is a valid key format (either quoted or unquoted alphanumeric).
      *
      * @param   {string} token The token string to check.
      * @returns {boolean} `true` if the token is a valid key format; otherwise, `false`.
      */
     const isValidKey = (token: string): boolean =>
-      /^"[^"]*"$/.test(token) || /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(token);
+      quotedString.test(token) || /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(token);
+
+    /**
+     * Returns a key token as a JSON string literal.
+     *
+     * @param   {string} token A token accepted by `isValidKey`.
+     * @returns {string} The token itself when it is already quoted; otherwise the token in double quotes.
+     */
+    const toKey = (token: string): string => (quotedString.test(token) ? token : `"${token}"`);
 
     /**
      * Checks if a token is a valid value format (boolean, null, number, or quoted string).
@@ -59,8 +75,7 @@ export function parseJson(value: string): object {
       token === "false" ||
       token === "null" ||
       /^-?\d+(\.\d+)?([eE][+-]?\d+)?$/.test(token) ||
-      /^"[^"]*"$/.test(token) ||
-      /^'[^']*'$/.test(token);
+      quotedString.test(token);
 
     const tokens = [];
 
@@ -76,6 +91,12 @@ export function parseJson(value: string): object {
       const char = result[i];
 
       if (isEscaped) {
+        // `\'` is how a single-quoted string carries a quote; JSON has no such
+        // escape, and inside double quotes the quote needs none.
+        if (char === "'" && isString) {
+          currentToken = currentToken.slice(0, -1);
+        }
+
         currentToken += char;
         isEscaped = false;
 
@@ -97,7 +118,9 @@ export function parseJson(value: string): object {
             tokens.push(currentToken);
             currentToken = "";
           } else {
-            currentToken += char;
+            // A double quote inside a single-quoted string has to be escaped
+            // once the string is re-quoted with double quotes.
+            currentToken += char === '"' ? '\\"' : char;
           }
         } else {
           isString = true;
@@ -153,19 +176,15 @@ export function parseJson(value: string): object {
         expectingKey = correctedTokens[correctedTokens.length - 2] === "}";
         expectingValue = !expectingKey;
       } else if (expectingKey && isValidKey(token)) {
-        correctedTokens.push(`"${token.replace(/"/g, "")}"`);
+        correctedTokens.push(toKey(token));
         expectingKey = false;
       } else if (expectingValue && isValidValue(token)) {
-        correctedTokens.push(
-          token.match(/^'[^']*'$/) ? `"${token.slice(1, -1).replace(/"/g, '\\"')}"` : token
-        );
+        correctedTokens.push(token);
         expectingValue = false;
       } else if (isValidKey(token)) {
-        correctedTokens.push(`"${token.replace(/"/g, "")}"`);
+        correctedTokens.push(toKey(token));
       } else if (isValidValue(token)) {
-        correctedTokens.push(
-          token.match(/^'[^']*'$/) ? `"${token.slice(1, -1).replace(/"/g, '\\"')}"` : token
-        );
+        correctedTokens.push(token);
       } else {
         throw new Error(`Invalid token: ${token}`);
       }

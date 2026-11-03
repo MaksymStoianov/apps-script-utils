@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * Interface for navigating through a collection, where backward navigation is optional.
  *

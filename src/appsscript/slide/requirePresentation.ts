@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { InvalidPresentationException } from "../../exception";
 import { isPresentation } from "./isPresentation";
 

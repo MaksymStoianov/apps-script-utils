@@ -18,6 +18,7 @@ Great that you are here and you want to contribute to **@bootgs/utils**!
   - [Development Cycle](#development-cycle)
     - [Basic Development Workflow](#basic-development-workflow)
     - [Commit Message Guidelines](#commit-message-guidelines)
+    - [Developer Certificate of Origin](#developer-certificate-of-origin)
     - [Community PR Guidelines](#community-pr-guidelines)
       - [1. General Requirements](#1-general-requirements)
       - [2. PR Specific Requirements](#2-pr-specific-requirements)
@@ -90,7 +91,8 @@ The project is organized as follows:
    ```bash
    npm run test
    ```
-4. Commit your changes following the [Commit Message Guidelines](#commit-message-guidelines) and create a Pull Request.
+4. Commit your changes following the [Commit Message Guidelines](#commit-message-guidelines), sign them off
+   ([DCO](#developer-certificate-of-origin)) with `git commit -s` and create a Pull Request.
 
 ### Commit Message Guidelines
 
@@ -148,6 +150,73 @@ feat(core)!: drop support for legacy handler format
 - `refactor(core): cleanup enums, types and repository helpers`
 - `test: add unit tests for ResponseBuilder`
 - `chore: update dependencies`
+
+### Developer Certificate of Origin
+
+All contributions are accepted under the [Developer Certificate of Origin 1.1](https://developercertificate.org/)
+(DCO). By signing off a commit you certify that you wrote the change or otherwise have the right to submit it under
+the project's licence:
+
+```text
+Developer Certificate of Origin
+Version 1.1
+
+Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+
+Everyone is permitted to copy and distribute verbatim copies of this
+license document, but changing it is not allowed.
+
+
+Developer's Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the best
+    of my knowledge, is covered under an appropriate open source
+    license and I have the right under that license to submit that
+    work with modifications, whether created in whole or in part
+    by me, under the same open source license (unless I am
+    permitted to submit under a different license), as indicated
+    in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including all
+    personal information I submit with it, including my sign-off) is
+    maintained indefinitely and may be redistributed consistent with
+    this project or the open source license(s) involved.
+```
+
+Every commit in a pull request must carry a `Signed-off-by:` trailer with the name and email of the commit author.
+Git adds it for you with `-s`:
+
+```bash
+git commit -s -m "fix(sheet): handle an empty range"
+```
+
+This produces:
+
+```text
+Signed-off-by: Your Name <your.email@example.com>
+```
+
+Use your real name (no anonymous contributions) and the same email as the commit author. A
+[DCO check](.github/workflows/dco.yml) runs on every pull request. To sign off commits you already made:
+
+```bash
+git rebase --signoff origin/develop
+git push --force-with-lease
+```
+
+Commits written with the help of AI assistants are signed off by the human author, who is responsible for them;
+see [Tools and AI Assistance](docs/tools-and-ai.md).
 
 ### Community PR Guidelines
 

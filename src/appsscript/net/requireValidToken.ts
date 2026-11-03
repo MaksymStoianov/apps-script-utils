@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { AuthenticationException } from "../../exception";
 import { isString } from "../../lang";
 

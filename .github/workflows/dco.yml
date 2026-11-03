@@ -1,0 +1,92 @@
+# Developer Certificate of Origin: every commit of a pull request must carry a
+# "Signed-off-by: Name <email>" trailer that matches its author (git commit -s).
+# See CONTRIBUTING.md → Developer Certificate of Origin.
+
+name: dco
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  sign-off:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: check
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        # Skips merge commits and bot authors (Dependabot, GitHub Actions, release-please).
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          range="$(git merge-base "$BASE_SHA" "$HEAD_SHA")..$HEAD_SHA"
+
+          lower() { printf '%s' "$1" | tr '[:upper:]' '[:lower:]'; }
+
+          failed=0
+          checked=0
+
+          while IFS= read -r -d '' record; do
+            IFS=$'\x1f' read -r sha name email trailers <<<"$record"
+            [ -n "$sha" ] || continue
+
+            case "$email" in
+              *"[bot]@users.noreply.github.com" | "noreply@github.com" | *"dependabot"* | *"release-please"*)
+                echo "skip  ${sha:0:12} ($name, bot)"
+                continue
+                ;;
+            esac
+            case "$name" in
+              "dependabot[bot]" | "github-actions[bot]" | "github-actions" | "release-please[bot]")
+                echo "skip  ${sha:0:12} ($name, bot)"
+                continue
+                ;;
+            esac
+
+            checked=$((checked + 1))
+            expected="$name <$email>"
+            found=0
+            while IFS= read -r line; do
+              line="${line#"${line%%[![:space:]]*}"}"
+              line="${line%"${line##*[![:space:]]}"}"
+              [ -n "$line" ] || continue
+              if [ "$(lower "$line")" = "$(lower "$expected")" ]; then
+                found=1
+                break
+              fi
+            done <<<"${trailers//$'\x1e'/$'\n'}"
+
+            if [ "$found" -eq 1 ]; then
+              echo "ok    ${sha:0:12} $expected"
+            else
+              echo "FAIL  ${sha:0:12} missing \"Signed-off-by: $expected\""
+              failed=$((failed + 1))
+            fi
+          done < <(git log --no-merges -z \
+            --format="%H%x1f%an%x1f%ae%x1f%(trailers:key=Signed-off-by,valueonly,separator=%x1e)" "$range")
+
+          echo
+          if [ "$failed" -gt 0 ]; then
+            echo "$failed of $checked commit(s) lack a matching Signed-off-by trailer."
+            echo "Sign off with 'git commit -s'; fix existing commits with 'git rebase --signoff origin/develop'."
+            echo "See CONTRIBUTING.md → Developer Certificate of Origin."
+            exit 1
+          fi
+          echo "All $checked commit(s) are signed off."
