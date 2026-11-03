@@ -493,8 +493,10 @@ function firstSentence(text) {
   return (match ? match[1] : clean).trim();
 }
 
+// A Markdown table cell: backslashes first, so that an escaped pipe in the
+// source does not turn into a cell boundary, then the pipes themselves.
 function escapeCell(text) {
-  return text.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
+  return text.replace(/\\/g, "\\\\").replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
 }
 
 function renderPage(entry, language, content, sourceContent, pages, thrownBy) {
@@ -874,7 +876,7 @@ function localiseTables(english, translated, language, summaries) {
 
         const localised = cells.slice();
 
-        localised[localised.length - 1] = ` ${summary.replace(/\|/g, "\\|")} `;
+        localised[localised.length - 1] = ` ${escapeCell(summary)} `;
 
         return `|${localised.join("|")}|`;
       })
