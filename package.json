@@ -20,6 +20,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "vitest run",
+    "test:cov": "vitest run --coverage",
     "build": "rm -rf dist/* && tsc -b --force",
     "build:gas": "npm run build && node scripts/gas/bundle.mjs scripts/gas/Library.js",
     "docs:generate": "node scripts/docs/generate-topics.mjs",
