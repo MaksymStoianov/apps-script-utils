@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как логическое значение или выбрасывает исключение.</link-summary>
 
-<web-summary>requireBoolean() — Возвращает значение как логическое значение или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireBoolean() — Возвращает значение как логическое значение или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireBoolean(1); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireBoolean.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireBoolean.ts)
+[`src/lang/base/requireBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireBoolean.ts)

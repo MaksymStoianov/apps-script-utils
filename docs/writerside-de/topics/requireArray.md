@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als ein Array zurück oder wirft.</link-summary>
 
-<web-summary>requireArray() — Gibt den Wert als ein Array zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireArray() — Gibt den Wert als ein Array zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireArray({ length: 0 }); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireArray.ts)
+[`src/lang/base/requireArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireArray.ts)

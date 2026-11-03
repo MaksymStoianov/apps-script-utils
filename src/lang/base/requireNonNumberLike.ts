@@ -24,7 +24,7 @@ import { isNumberLike } from "./isNumberLike";
  * @see      {@link isNumberLike}
  * @see      {@link nonNumberLike}
  * @see      {@link requireNumberLike}
- * @see      [requireNonNumberLike on the documentation site](https://bootgs.github.io/apps-script-utils/requirenonnumberlike.html)
+ * @see      [requireNonNumberLike on the documentation site](https://bootgs.github.io/utils/requirenonnumberlike.html)
  * @since    1.11.0
  * @version  1.0.0
  */

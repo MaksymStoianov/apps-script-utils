@@ -4,7 +4,7 @@
 
 <link-summary>Виклик надійшов невчасно: аргументи можуть бути цілком правильними, але об'єкт не в тому стані, який дозволяє цей виклик.</link-summary>
 
-<web-summary>IllegalStateException — Виклик надійшов невчасно: аргументи можуть бути цілком правильними, але об'єкт не в тому стані, який дозволяє цей виклик. apps-script-utils, Українська.</web-summary>
+<web-summary>IllegalStateException — Виклик надійшов невчасно: аргументи можуть бути цілком правильними, але об'єкт не в тому стані, який дозволяє цей виклик. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.11.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/IllegalStateException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/IllegalStateException.ts)
+[`src/exception/IllegalStateException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalStateException.ts)

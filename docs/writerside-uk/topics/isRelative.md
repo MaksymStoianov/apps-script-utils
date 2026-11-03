@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення відносним шляхом.</link-summary>
 
-<web-summary>isRelative() — Перевіряє, чи є значення відносним шляхом. apps-script-utils, Українська.</web-summary>
+<web-summary>isRelative() — Перевіряє, чи є значення відносним шляхом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code></p>
@@ -50,4 +50,4 @@ isRelative("https://example.com/a"); // => false
 
 ## Вихідний код
 
-[`src/net/path/isRelative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isRelative.ts)
+[`src/net/path/isRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isRelative.ts)

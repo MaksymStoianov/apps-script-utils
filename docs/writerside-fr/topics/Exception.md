@@ -4,7 +4,7 @@
 
 <link-summary>La racine de la hiérarchie, dérivée d'Error.</link-summary>
 
-<web-summary>Exception — La racine de la hiérarchie, dérivée d'Error. apps-script-utils, Français.</web-summary>
+<web-summary>Exception — La racine de la hiérarchie, dérivée d'Error. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Code source
 
-[`src/exception/Exception.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/Exception.ts)
+[`src/exception/Exception.ts`](https://github.com/bootgs/utils/blob/main/src/exception/Exception.ts)

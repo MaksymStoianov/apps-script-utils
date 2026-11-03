@@ -4,7 +4,7 @@
 
 <link-summary>Переписує рядок у snake_case.</link-summary>
 
-<web-summary>toSnakeCase() — Переписує рядок у snake_case. apps-script-utils, Українська.</web-summary>
+<web-summary>toSnakeCase() — Переписує рядок у snake_case. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -52,4 +52,4 @@ toSnakeCase("userFirstName"); // => "user_first_name"
 
 ## Вихідний код
 
-[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toSnakeCase.ts)
+[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toSnakeCase.ts)

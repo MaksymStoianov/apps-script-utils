@@ -19,7 +19,7 @@ import { RuntimeException } from "./RuntimeException";
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
- * @see     [IllegalArgumentException on the documentation site](https://bootgs.github.io/apps-script-utils/illegalargumentexception.html)
+ * @see     [IllegalArgumentException on the documentation site](https://bootgs.github.io/utils/illegalargumentexception.html)
  * @since   1.0.0
  * @version 1.0.0
  */

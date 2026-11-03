@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert leer ist.</link-summary>
 
-<web-summary>isEmpty() — Prüft, ob ein Wert leer ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isEmpty() — Prüft, ob ein Wert leer ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -55,4 +55,4 @@ isEmpty([0]); // => false
 
 ## Quellcode
 
-[`src/lang/base/isEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isEmpty.ts)
+[`src/lang/base/isEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isEmpty.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Interrompt l'appel si l'utilisateur courant n'est pas administrateur Workspace.</link-summary>
 
-<web-summary>requireAdmin() — Interrompt l'appel si l'utilisateur courant n'est pas administrateur Workspace. apps-script-utils, Français.</web-summary>
+<web-summary>requireAdmin() — Interrompt l'appel si l'utilisateur courant n'est pas administrateur Workspace. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/admin</code> · Disponible depuis: 1.11.0</p>
@@ -54,4 +54,4 @@ function deleteEverything() {
 
 ## Code source
 
-[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/admin/requireAdmin.ts)
+[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/requireAdmin.ts)

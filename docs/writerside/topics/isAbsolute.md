@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is an absolute path.</link-summary>
 
-<web-summary>isAbsolute() — Checks whether a value is an absolute path. apps-script-utils, English.</web-summary>
+<web-summary>isAbsolute() — Checks whether a value is an absolute path. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isAbsolute(""); // => false
 
 ## Source
 
-[`src/net/path/isAbsolute.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isAbsolute.ts)
+[`src/net/path/isAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isAbsolute.ts)

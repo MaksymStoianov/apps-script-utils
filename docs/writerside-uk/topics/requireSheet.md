@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як аркуш або викидає виняток.</link-summary>
 
-<web-summary>requireSheet() — Повертає значення як аркуш або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireSheet() — Повертає значення як аркуш або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.5.0</p>
@@ -56,4 +56,4 @@ requireSheet(null); // throws InvalidSheetException
 
 ## Вихідний код
 
-[`src/appsscript/sheet/requireSheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireSheet.ts)
+[`src/appsscript/sheet/requireSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSheet.ts)

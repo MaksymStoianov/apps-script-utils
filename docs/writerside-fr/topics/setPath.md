@@ -4,7 +4,7 @@
 
 <link-summary>Écrit une propriété imbriquée par chemin, en créant ce qui manque.</link-summary>
 
-<web-summary>setPath() — Écrit une propriété imbriquée par chemin, en créant ce qui manque. apps-script-utils, Français.</web-summary>
+<web-summary>setPath() — Écrit une propriété imbriquée par chemin, en créant ce qui manque. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Disponible depuis: 1.11.0</p>
@@ -57,4 +57,4 @@ setPath({}, ["rows", 0, "id"], 7); // => { "rows": [{ "id": 7 }] }
 
 ## Code source
 
-[`src/lang/object/setPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/setPath.ts)
+[`src/lang/object/setPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/setPath.ts)

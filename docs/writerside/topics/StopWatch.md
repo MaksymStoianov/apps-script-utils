@@ -4,7 +4,7 @@
 
 <link-summary>Times a sequence of named tasks.</link-summary>
 
-<web-summary>StopWatch — Times a sequence of named tasks. apps-script-utils, English.</web-summary>
+<web-summary>StopWatch — Times a sequence of named tasks. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code> · Since: 1.11.0</p>
@@ -45,4 +45,4 @@ watch.getTotalTimeMillis();
 
 ## Source
 
-[`src/time/StopWatch.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine zählbare Zahl ist.</link-summary>
 
-<web-summary>nonCountable() — Prüft, ob ein Wert **nicht** eine zählbare Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonCountable() — Prüft, ob ein Wert **nicht** eine zählbare Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -52,4 +52,4 @@ nonCountable(42); // => false
 
 ## Quellcode
 
-[`src/lang/number/nonCountable.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonCountable.ts)
+[`src/lang/number/nonCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonCountable.ts)

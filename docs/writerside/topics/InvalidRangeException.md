@@ -4,7 +4,7 @@
 
 <link-summary>A range was expected and the value is not one.</link-summary>
 
-<web-summary>InvalidRangeException — A range was expected and the value is not one. apps-script-utils, English.</web-summary>
+<web-summary>InvalidRangeException — A range was expected and the value is not one. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/sheet</code> · Since: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Source
 
-[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)
+[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)

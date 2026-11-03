@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als ein Blatt zurück oder wirft.</link-summary>
 
-<web-summary>requireSheet() — Gibt den Wert als ein Blatt zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireSheet() — Gibt den Wert als ein Blatt zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -56,4 +56,4 @@ requireSheet(null); // throws InvalidSheetException
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireSheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireSheet.ts)
+[`src/appsscript/sheet/requireSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSheet.ts)

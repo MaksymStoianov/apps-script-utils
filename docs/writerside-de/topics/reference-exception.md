@@ -4,7 +4,7 @@
 
 <link-summary>Alle Ausnahmeklassen, die die Bibliothek wirft.</link-summary>
 
-<web-summary>Referenz der Ausnahmeklassen von apps-script-utils: was jede bedeutet und welche Funktionen sie werfen.</web-summary>
+<web-summary>Referenz der Ausnahmeklassen von @bootgs/utils: was jede bedeutet und welche Funktionen sie werfen.</web-summary>
 
 Typisierte Ausnahmeklassen, die in der ganzen Bibliothek verwendet werden. Dienstgebundene Ausnahmen (Tabellen,
 Präsentationen, Admin SDK, Netzwerk) erben von der gemeinsamen Basisklasse `Exception` — für eine einheitliche

@@ -4,7 +4,7 @@
 
 <link-summary>Finds the values present in every one of the given arrays, deduplicated and in the first array's order.</link-summary>
 
-<web-summary>intersect() — Finds the values present in every one of the given arrays, deduplicated and in the first array's order. apps-script-utils, English.</web-summary>
+<web-summary>intersect() — Finds the values present in every one of the given arrays, deduplicated and in the first array's order. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -84,4 +84,4 @@ intersect(); // => []
 
 ## Source
 
-[`src/lang/array/intersect.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/intersect.ts)
+[`src/lang/array/intersect.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/intersect.ts)

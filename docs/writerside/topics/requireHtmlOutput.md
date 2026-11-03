@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as an HtmlOutput, or throws.</link-summary>
 
-<web-summary>requireHtmlOutput() — Returns the value as an HtmlOutput, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireHtmlOutput() — Returns the value as an HtmlOutput, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Since: 1.11.0</p>
@@ -59,4 +59,4 @@ requireHtmlOutput(null); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/ui/requireHtmlOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/requireHtmlOutput.ts)
+[`src/appsscript/ui/requireHtmlOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/requireHtmlOutput.ts)

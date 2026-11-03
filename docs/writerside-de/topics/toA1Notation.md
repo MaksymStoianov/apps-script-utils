@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt einen Rasterbereich in A1-Notation.</link-summary>
 
-<web-summary>toA1Notation() — Schreibt einen Rasterbereich in A1-Notation. apps-script-utils, Deutsch.</web-summary>
+<web-summary>toA1Notation() — Schreibt einen Rasterbereich in A1-Notation. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -47,4 +47,4 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnI
 
 ## Quellcode
 
-[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/toA1Notation.ts)
+[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/toA1Notation.ts)

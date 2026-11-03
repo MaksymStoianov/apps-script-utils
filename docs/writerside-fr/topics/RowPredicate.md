@@ -4,7 +4,7 @@
 
 <link-summary>Décide si une ligne fait partie de celles à traiter.</link-summary>
 
-<web-summary>RowPredicate — Décide si une ligne fait partie de celles à traiter. apps-script-utils, Français.</web-summary>
+<web-summary>RowPredicate — Décide si une ligne fait partie de celles à traiter. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -33,4 +33,4 @@ const predicate = (values, position, record) => record?.status === "done";
 
 ## Code source
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

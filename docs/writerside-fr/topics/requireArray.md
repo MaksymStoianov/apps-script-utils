@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un tableau, ou lève une exception.</link-summary>
 
-<web-summary>requireArray() — Renvoie la valeur en tant que un tableau, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireArray() — Renvoie la valeur en tant que un tableau, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -55,4 +55,4 @@ requireArray({ length: 0 }); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireArray.ts)
+[`src/lang/base/requireArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireArray.ts)

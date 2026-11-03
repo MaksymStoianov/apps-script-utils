@@ -4,7 +4,7 @@
 
 <link-summary>Сервис Admin SDK Directory недоступен или не включён для скрипта.</link-summary>
 
-<web-summary>AdminDirectoryException — Сервис Admin SDK Directory недоступен или не включён для скрипта. apps-script-utils, Русский.</web-summary>
+<web-summary>AdminDirectoryException — Сервис Admin SDK Directory недоступен или не включён для скрипта. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/admin</code> · Доступно с: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/appsscript/admin/AdminDirectoryException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/admin/AdminDirectoryException.ts)
+[`src/exception/appsscript/admin/AdminDirectoryException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/admin/AdminDirectoryException.ts)

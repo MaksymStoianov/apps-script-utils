@@ -4,7 +4,7 @@
 
 <link-summary>Reads the rows of a sheet, filtered, mapped and paged in one call.</link-summary>
 
-<web-summary>getValues() — Reads the rows of a sheet, filtered, mapped and paged in one call. apps-script-utils, English.</web-summary>
+<web-summary>getValues() — Reads the rows of a sheet, filtered, mapped and paged in one call. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -73,4 +73,4 @@ const rows = getValues(sheet.getRange("A1:C50"), { headerRow: 1 });
 
 ## Source
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

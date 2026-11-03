@@ -4,7 +4,7 @@
 
 <link-summary>Fügt Pfadsegmente mit genau einem Trenner dazwischen zusammen.</link-summary>
 
-<web-summary>join() — Fügt Pfadsegmente mit genau einem Trenner dazwischen zusammen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>join() — Fügt Pfadsegmente mit genau einem Trenner dazwischen zusammen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code> · Verfügbar seit: 1.0.0</p>
@@ -47,4 +47,4 @@ join("/a", "../b"); // => "/b"
 
 ## Quellcode
 
-[`src/net/path/join.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/join.ts)
+[`src/net/path/join.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/join.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Alle laufzeitunabhängigen Funktionen: Prüfungen, Arrays, Zahlen, Zeichenketten, Objekte, JSON und HTML.</link-summary>
 
-<web-summary>Referenz aller laufzeitunabhängigen Funktionen von apps-script-utils: isX/nonX/requireX-Prüfungen, Array-, Zahlen-, String-, Objekt-, JSON-, HTML- und Zeit-Helfer.</web-summary>
+<web-summary>Referenz aller laufzeitunabhängigen Funktionen von @bootgs/utils: isX/nonX/requireX-Prüfungen, Array-, Zahlen-, String-, Objekt-, JSON-, HTML- und Zeit-Helfer.</web-summary>
 
 Funktionen ohne Bindung an ein Framework: Typ- und Wertprüfung (`isX`/`nonX`/`requireX`), Arbeit mit Zeichenketten,
 Arrays und Objekten, JSON und HTML. Die Google-Apps-Script-Laufzeit brauchen sie nicht.

@@ -4,7 +4,7 @@
 
 <link-summary>Affirme qu'une condition tient, et lève dans le cas contraire.</link-summary>
 
-<web-summary>requireState() — Affirme qu'une condition tient, et lève dans le cas contraire. apps-script-utils, Français.</web-summary>
+<web-summary>requireState() — Affirme qu'une condition tient, et lève dans le cas contraire. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -55,4 +55,4 @@ function close(connection) {
 
 ## Code source
 
-[`src/lang/base/requireState.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireState.ts)
+[`src/lang/base/requireState.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireState.ts)

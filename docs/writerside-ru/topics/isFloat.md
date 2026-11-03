@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение числом с дробной частью.</link-summary>
 
-<web-summary>isFloat() — Проверяет, является ли значение числом с дробной частью. apps-script-utils, Русский.</web-summary>
+<web-summary>isFloat() — Проверяет, является ли значение числом с дробной частью. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -52,4 +52,4 @@ isFloat("1.5"); // => false
 
 ## Исходный код
 
-[`src/lang/number/isFloat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isFloat.ts)
+[`src/lang/number/isFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isFloat.ts)

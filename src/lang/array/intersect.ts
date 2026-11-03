@@ -26,7 +26,7 @@ import { isArray } from "../base";
  * @throws   {@link TypeError} If any argument is not an array.
  * @see      {@link unique}
  * @see      {@link without}
- * @see      [intersect on the documentation site](https://bootgs.github.io/apps-script-utils/intersect.html)
+ * @see      [intersect on the documentation site](https://bootgs.github.io/utils/intersect.html)
  * @since    1.11.0
  * @version  1.0.0
  */

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un identifiant de diapositive.</link-summary>
 
-<web-summary>nonValidSlideId() — Vérifie qu'une valeur n'est **pas** un identifiant de diapositive. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidSlideId() — Vérifie qu'une valeur n'est **pas** un identifiant de diapositive. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.11.0</p>
@@ -49,4 +49,4 @@ nonValidSlideId("SLIDES_api123"); // => false
 
 ## Code source
 
-[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)
+[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)

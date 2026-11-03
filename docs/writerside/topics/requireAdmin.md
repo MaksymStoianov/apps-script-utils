@@ -4,7 +4,7 @@
 
 <link-summary>Stops the call unless the current user is a Workspace administrator.</link-summary>
 
-<web-summary>requireAdmin() — Stops the call unless the current user is a Workspace administrator. apps-script-utils, English.</web-summary>
+<web-summary>requireAdmin() — Stops the call unless the current user is a Workspace administrator. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/admin</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ function deleteEverything() {
 
 ## Source
 
-[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/admin/requireAdmin.ts)
+[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/requireAdmin.ts)

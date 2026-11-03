@@ -4,7 +4,7 @@
 
 <link-summary>Значення, які JavaScript вважає хибними в логічному контексті.</link-summary>
 
-<web-summary>Falsy — Значення, які JavaScript вважає хибними в логічному контексті. apps-script-utils, Українська.</web-summary>
+<web-summary>Falsy — Значення, які JavaScript вважає хибними в логічному контексті. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -33,4 +33,4 @@ const values = [0, "", false, null, undefined];
 
 ## Вихідний код
 
-[`src/lang/array/compact.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/compact.ts)
+[`src/lang/array/compact.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/compact.ts)

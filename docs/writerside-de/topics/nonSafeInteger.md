@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine sichere ganze Zahl ist.</link-summary>
 
-<web-summary>nonSafeInteger() — Prüft, ob ein Wert **nicht** eine sichere ganze Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonSafeInteger() — Prüft, ob ein Wert **nicht** eine sichere ganze Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSafeInteger(Number.MAX_SAFE_INTEGER); // => false
 
 ## Quellcode
 
-[`src/lang/number/nonSafeInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonSafeInteger.ts)
+[`src/lang/number/nonSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonSafeInteger.ts)

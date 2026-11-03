@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як адресу електронної пошти або викидає виняток.</link-summary>
 
-<web-summary>requireValidEmail() — Повертає значення як адресу електронної пошти або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidEmail() — Повертає значення як адресу електронної пошти або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -54,4 +54,4 @@ requireValidEmail("user@"); // throws InvalidEmailFormatException
 
 ## Вихідний код
 
-[`src/lang/string/requireValidEmail.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidEmail.ts)
+[`src/lang/string/requireValidEmail.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidEmail.ts)

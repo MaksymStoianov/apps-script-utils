@@ -4,7 +4,7 @@
 
 <link-summary>Le service Admin SDK Directory n'est pas disponible ou n'a pas été activé pour le script.</link-summary>
 
-<web-summary>AdminDirectoryException — Le service Admin SDK Directory n'est pas disponible ou n'a pas été activé pour le script. apps-script-utils, Français.</web-summary>
+<web-summary>AdminDirectoryException — Le service Admin SDK Directory n'est pas disponible ou n'a pas été activé pour le script. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/admin</code> · Disponible depuis: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/appsscript/admin/AdminDirectoryException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/admin/AdminDirectoryException.ts)
+[`src/exception/appsscript/admin/AdminDirectoryException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/admin/AdminDirectoryException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Tabellen-Id zurück oder wirft.</link-summary>
 
-<web-summary>requireValidSpreadsheetId() — Gibt den Wert als eine Tabellen-Id zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireValidSpreadsheetId() — Gibt den Wert als eine Tabellen-Id zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -53,4 +53,4 @@ requireValidSpreadsheetId("has space in it and is long enough to pass"); // thro
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)
+[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)

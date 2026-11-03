@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як код локалі або викидає виняток.</link-summary>
 
-<web-summary>requireValidLocale() — Повертає значення як код локалі або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidLocale() — Повертає значення як код локалі або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidLocale("eng"); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/string/requireValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidLocale.ts)
+[`src/lang/string/requireValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidLocale.ts)

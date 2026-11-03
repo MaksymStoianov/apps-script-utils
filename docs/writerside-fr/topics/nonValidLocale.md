@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un code de locale.</link-summary>
 
-<web-summary>nonValidLocale() — Vérifie qu'une valeur n'est **pas** un code de locale. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidLocale() — Vérifie qu'une valeur n'est **pas** un code de locale. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidLocale("UK"); // => false
 
 ## Code source
 
-[`src/lang/string/nonValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidLocale.ts)
+[`src/lang/string/nonValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidLocale.ts)

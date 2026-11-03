@@ -4,7 +4,7 @@
 
 <link-summary>A unit an interval can be expressed in.</link-summary>
 
-<web-summary>TimeUnit — A unit an interval can be expressed in. apps-script-utils, English.</web-summary>
+<web-summary>TimeUnit — A unit an interval can be expressed in. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>time/types</code> · Since: 1.11.0</p>
@@ -35,4 +35,4 @@ offset(date, 1, "month");
 
 ## Source
 
-[`src/time/types/TimeUnit.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/types/TimeUnit.ts)
+[`src/time/types/TimeUnit.ts`](https://github.com/bootgs/utils/blob/main/src/time/types/TimeUnit.ts)

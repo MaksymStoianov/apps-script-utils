@@ -4,7 +4,7 @@
 
 <link-summary>The base of the hierarchy, extending Error.</link-summary>
 
-<web-summary>Exception — The base of the hierarchy, extending Error. apps-script-utils, English.</web-summary>
+<web-summary>Exception — The base of the hierarchy, extending Error. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Source
 
-[`src/exception/Exception.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/Exception.ts)
+[`src/exception/Exception.ts`](https://github.com/bootgs/utils/blob/main/src/exception/Exception.ts)

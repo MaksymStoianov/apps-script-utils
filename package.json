@@ -1,5 +1,5 @@
 {
-  "name": "apps-script-utils",
+  "name": "@bootgs/utils",
   "version": "2.1.1",
   "description": "Utilities for Google Apps Script™ projects.",
   "main": "dist/index.js",
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bootgs/apps-script-utils.git"
+    "url": "git+https://github.com/bootgs/utils.git"
   },
   "keywords": [
     "google-apps-script",
@@ -78,9 +78,9 @@
     "js-yaml": "^4.3.2"
   },
   "bugs": {
-    "url": "https://github.com/bootgs/apps-script-utils/issues"
+    "url": "https://github.com/bootgs/utils/issues"
   },
-  "homepage": "https://github.com/bootgs/apps-script-utils#readme",
+  "homepage": "https://github.com/bootgs/utils#readme",
   "funding": [
     {
       "type": "github",

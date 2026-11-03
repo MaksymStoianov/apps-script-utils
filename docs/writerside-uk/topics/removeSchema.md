@@ -4,7 +4,7 @@
 
 <link-summary>Видаляє схему, збережену на аркуші.</link-summary>
 
-<web-summary>removeSchema() — Видаляє схему, збережену на аркуші. apps-script-utils, Українська.</web-summary>
+<web-summary>removeSchema() — Видаляє схему, збережену на аркуші. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ removeSchema(sheet, { validation: true }); // also clears the rules it implied
 
 ## Вихідний код
 
-[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/removeSchema.ts)
+[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/removeSchema.ts)

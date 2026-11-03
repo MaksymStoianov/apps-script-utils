@@ -2,7 +2,7 @@
 
 <link-summary>The exception classes and how to extend them.</link-summary>
 
-<web-summary>The exception module of apps-script-utils: the Exception base class, the classes derived from it, and how to add your own to the hierarchy.</web-summary>
+<web-summary>The exception module of @bootgs/utils: the Exception base class, the classes derived from it, and how to add your own to the hierarchy.</web-summary>
 
 `exception` holds the error classes the rest of the library throws. Nothing in it depends on the Apps Script
 runtime.
@@ -24,7 +24,7 @@ A script with its own failure modes can join the hierarchy rather than throwing 
 `RuntimeException` for anything raised while the script runs:
 
 ```typescript
-import { RuntimeException } from "apps-script-utils";
+import { RuntimeException } from "@bootgs/utils";
 
 export class QuotaExceededException extends RuntimeException {}
 ```
@@ -49,7 +49,7 @@ Every constructor accepts an existing `Error` and reuses its message, which keep
 the type:
 
 ```typescript
-import { RuntimeException } from "apps-script-utils";
+import { RuntimeException } from "@bootgs/utils";
 
 try {
   UrlFetchApp.fetch(endpoint);

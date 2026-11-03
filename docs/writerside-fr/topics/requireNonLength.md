@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas une longueur de tableau valide.</link-summary>
 
-<web-summary>requireNonLength() — Renvoie la valeur après avoir vérifié qu'elle n'est pas une longueur de tableau valide. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonLength() — Renvoie la valeur après avoir vérifié qu'elle n'est pas une longueur de tableau valide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonLength(42); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonLength.ts)
+[`src/lang/base/requireNonLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonLength.ts)

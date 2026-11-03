@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение — непустая матрица, все строки которой одной длины.</link-summary>
 
-<web-summary>isConsistent2DArray() — Проверяет, что значение — непустая матрица, все строки которой одной длины. apps-script-utils, Русский.</web-summary>
+<web-summary>isConsistent2DArray() — Проверяет, что значение — непустая матрица, все строки которой одной длины. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.0.0</p>
@@ -69,4 +69,4 @@ function write(sheet, rows) {
 
 ## Исходный код
 
-[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/isConsistent2DArray.ts)
+[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/isConsistent2DArray.ts)

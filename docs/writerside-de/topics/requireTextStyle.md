@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen Textstil zurück oder wirft.</link-summary>
 
-<web-summary>requireTextStyle() — Gibt den Wert als einen Textstil zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireTextStyle() — Gibt den Wert als einen Textstil zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -59,4 +59,4 @@ requireTextStyle(null); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)
+[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Résout les segments `.` et `..` d'un chemin.</link-summary>
 
-<web-summary>normalize() — Résout les segments `.` et `..` d'un chemin. apps-script-utils, Français.</web-summary>
+<web-summary>normalize() — Résout les segments `.` et `..` d'un chemin. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code></p>
@@ -45,4 +45,4 @@ normalize("/a/b/../c/"); // => "/a/c"
 
 ## Code source
 
-[`src/net/path/normalize.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/normalize.ts)
+[`src/net/path/normalize.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/normalize.ts)

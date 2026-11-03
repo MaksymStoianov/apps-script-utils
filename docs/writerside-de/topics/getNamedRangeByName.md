@@ -4,7 +4,7 @@
 
 <link-summary>Findet einen benannten Bereich anhand seines Namens.</link-summary>
 
-<web-summary>getNamedRangeByName() — Findet einen benannten Bereich anhand seines Namens. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getNamedRangeByName() — Findet einen benannten Bereich anhand seines Namens. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -53,4 +53,4 @@ range?.getRange().getValues();
 
 ## Quellcode
 
-[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)
+[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une expression régulière.</link-summary>
 
-<web-summary>isRegExp() — Vérifie si une valeur est une expression régulière. apps-script-utils, Français.</web-summary>
+<web-summary>isRegExp() — Vérifie si une valeur est une expression régulière. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isRegExp(null); // => false
 
 ## Code source
 
-[`src/lang/base/isRegExp.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isRegExp.ts)
+[`src/lang/base/isRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isRegExp.ts)

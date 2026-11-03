@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є рядком.</link-summary>
 
-<web-summary>nonString() — Перевіряє, що значення **не** є рядком. apps-script-utils, Українська.</web-summary>
+<web-summary>nonString() — Перевіряє, що значення **не** є рядком. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -53,4 +53,4 @@ nonString("abc"); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonString.ts)
+[`src/lang/base/nonString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonString.ts)

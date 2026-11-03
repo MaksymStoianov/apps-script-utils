@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как строку версии или выбрасывает исключение.</link-summary>
 
-<web-summary>requireValidVersion() — Возвращает значение как строку версии или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireValidVersion() — Возвращает значение как строку версии или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidVersion("v1.2"); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/string/requireValidVersion.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidVersion.ts)
+[`src/lang/string/requireValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidVersion.ts)

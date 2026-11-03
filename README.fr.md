@@ -15,18 +15,18 @@
 # Utilitaires pour Google Apps Script™
 
 <p align="left">
-  <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/v/apps-script-utils?label=npm" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/dm/apps-script-utils?label=downloads" alt="npm downloads"></a>
+  <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/v/@bootgs/utils?label=npm" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@bootgs/utils"><img src="https://img.shields.io/npm/dm/@bootgs/utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/apps-script-utils?label=License" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/utils?label=License" alt="License"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
-  <a href="https://github.com/bootgs/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/apps-script-utils?label=Release" alt="Latest release"></a>
+  <a href="https://github.com/bootgs/utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/utils?label=Release" alt="Latest release"></a>
 </p>
 
 <p align="left">
-  <a href="https://github.com/bootgs/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/bootgs/apps-script-utils?style=social" alt="GitHub Stars"></a>
-  <a href="https://github.com/bootgs/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/bootgs/apps-script-utils?style=social" alt="GitHub Fork"></a>
+  <a href="https://github.com/bootgs/utils/stargazers"><img src="https://img.shields.io/github/stars/bootgs/utils?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/bootgs/utils/forks"><img src="https://img.shields.io/github/forks/bootgs/utils?style=social" alt="GitHub Fork"></a>
   <a href="https://github.com/sponsors/MaksymStoianov"><img src="https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github" alt="GitHub Sponsors"></a>
 </p>
 
@@ -54,7 +54,7 @@
 
 ## Présentation
 
-**apps-script-utils** est une bibliothèque d'utilitaires en TypeScript conçue spécialement pour **Google Apps
+**@bootgs/utils** est une bibliothèque d'utilitaires en TypeScript conçue spécialement pour **Google Apps
 Script**. Elle réunit les fonctions d'aide que chaque projet GAS finit par écrire à la main — manipulation des
 feuilles de calcul et de la notation A1, validation des types et des valeurs (`isX`/`nonX`/`requireX`),
 transformations de chaînes et de tableaux, exceptions typées, et plus encore — dans un seul paquet bien documenté et
@@ -78,7 +78,7 @@ entièrement testé.
 
 Pour les équipes qui utilisent un agent de programmation IA (Claude Code, Gemini CLI et d'autres), le dépôt
 [bootgs/skills](https://github.com/bootgs/skills) fournit un Agent Skill
-[`apps-script-utils`](https://github.com/bootgs/skills/tree/main/skills/apps-script-utils) qui documente cette
+[`@bootgs/utils`](https://github.com/bootgs/skills/tree/main/skills/apps-script-utils) qui documente cette
 bibliothèque pour ces agents : la convention de validation `isX`/`nonX`/`requireX`, les fonctions pour la notation A1
 et les feuilles, pour les chaînes, les nombres et les tableaux, les exceptions typées, ainsi que les fonctions HTML,
 JSON et de chemins.
@@ -108,23 +108,23 @@ Une fois installé, l'agent applique le skill automatiquement dès qu'une tâche
 Installez le paquet via npm :
 
 ```bash
-npm install apps-script-utils
+npm install @bootgs/utils
 ```
 
 ## Documentation
 
-La documentation complète est publiée sur **<https://bootgs.github.io/apps-script-utils/fr/>** — guides,
+La documentation complète est publiée sur **<https://bootgs.github.io/utils/fr/>** — guides,
 présentations de chaque module et référence complète des fonctions. Sa source se trouve dans
 [`docs/writerside-fr/`](docs/writerside-fr/) et est reconstruite à chaque push sur `main`.
 
 Un bon ordre de lecture :
 
-- [Premiers pas](https://bootgs.github.io/apps-script-utils/fr/getting-started.html)
-- [Conventions de validation](https://bootgs.github.io/apps-script-utils/fr/validation-conventions.html) —
+- [Premiers pas](https://bootgs.github.io/utils/fr/getting-started.html)
+- [Conventions de validation](https://bootgs.github.io/utils/fr/validation-conventions.html) —
   le schéma de noms `isX`/`nonX`/`requireX`/`requireNonX`
-- [Gestion des exceptions](https://bootgs.github.io/apps-script-utils/fr/exception-handling.html) — la
+- [Gestion des exceptions](https://bootgs.github.io/utils/fr/exception-handling.html) — la
   hiérarchie des classes et ce qui déclenche chacune d'elles
-- [L'environnement Apps Script](https://bootgs.github.io/apps-script-utils/fr/apps-script-runtime.html) —
+- [L'environnement Apps Script](https://bootgs.github.io/utils/fr/apps-script-runtime.html) —
   quelles fonctions sont liées à un service Google, et ce que cela implique pour les tests
 
 ## Exemples d'utilisation
@@ -134,7 +134,7 @@ Un bon ordre de lecture :
 Ajouter efficacement plusieurs lignes de données :
 
 ```typescript
-import { appendRows } from "apps-script-utils";
+import { appendRows } from "@bootgs/utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 const data = [
@@ -150,7 +150,7 @@ appendRows(sheet, data);
 Vérifier si l'utilisateur actuel dispose des droits d'administrateur :
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import { isAdmin } from "@bootgs/utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");
@@ -164,7 +164,7 @@ if (isAdmin()) {
 Analyser des notations A1 complexes en objets structurés :
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import { parseA1Notation } from "@bootgs/utils";
 
 const rangeInfo = parseA1Notation("'Sheet1'!A1:B10");
 
@@ -233,21 +233,21 @@ npm run dev
 La référence complète des fonctions a été déplacée sur le site de documentation, construit à partir de
 [`docs/writerside-fr/`](docs/writerside-fr/) et publié à chaque push sur `main` :
 
-**<https://bootgs.github.io/apps-script-utils/fr/>**
+**<https://bootgs.github.io/utils/fr/>**
 
-| Section                                                                                                    | Contenu                                                                                                         |
-| :--------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
-| [Module Google Apps Script](https://bootgs.github.io/apps-script-utils/fr/reference-appsscript.html)       | Sheets, Slides, Admin SDK, Drive, Docs, Forms, requêtes réseau et classes d'UI intégrées                        |
-| [Utilitaires de base](https://bootgs.github.io/apps-script-utils/fr/reference-base.html)                   | Vérification des types et validation, manipulation de chaînes, de tableaux et d'objets, traitement JSON et HTML |
-| [Exceptions](https://bootgs.github.io/apps-script-utils/fr/reference-exception.html)                       | Les classes d'exception typées et ce qui déclenche chacune d'elles                                              |
-| [Module `path`](https://bootgs.github.io/apps-script-utils/fr/reference-path.html)                         | Chemins de fichiers et URL                                                                                      |
-| [Classes abstraites et interfaces](https://bootgs.github.io/apps-script-utils/fr/reference-abstracts.html) | Briques de base partagées                                                                                       |
+| Section                                                                                        | Contenu                                                                                                         |
+| :--------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| [Module Google Apps Script](https://bootgs.github.io/utils/fr/reference-appsscript.html)       | Sheets, Slides, Admin SDK, Drive, Docs, Forms, requêtes réseau et classes d'UI intégrées                        |
+| [Utilitaires de base](https://bootgs.github.io/utils/fr/reference-base.html)                   | Vérification des types et validation, manipulation de chaînes, de tableaux et d'objets, traitement JSON et HTML |
+| [Exceptions](https://bootgs.github.io/utils/fr/reference-exception.html)                       | Les classes d'exception typées et ce qui déclenche chacune d'elles                                              |
+| [Module `path`](https://bootgs.github.io/utils/fr/reference-path.html)                         | Chemins de fichiers et URL                                                                                      |
+| [Classes abstraites et interfaces](https://bootgs.github.io/utils/fr/reference-abstracts.html) | Briques de base partagées                                                                                       |
 
 En plus de la référence, le site propose les guides que les tableaux ne pouvaient pas contenir : les
-[conventions de validation](https://bootgs.github.io/apps-script-utils/fr/validation-conventions.html)
+[conventions de validation](https://bootgs.github.io/utils/fr/validation-conventions.html)
 expliquent le schéma `isX`/`nonX`/`requireX`/`requireNonX` en un seul endroit, la
-[gestion des exceptions](https://bootgs.github.io/apps-script-utils/fr/exception-handling.html) présente la
-hiérarchie des classes, et [l'environnement Apps Script](https://bootgs.github.io/apps-script-utils/fr/apps-script-runtime.html)
+[gestion des exceptions](https://bootgs.github.io/utils/fr/exception-handling.html) présente la
+hiérarchie des classes, et [l'environnement Apps Script](https://bootgs.github.io/utils/fr/apps-script-runtime.html)
 indique quelles fonctions sont liées à un service Google, ce que cela coûte et ce que cela implique pour les tests.
 
 ## Contribuer
@@ -266,7 +266,7 @@ Respectez le style de code et les conventions de nommage existants. Les règles 
 ## Assistance
 
 - Pour signaler un bug ou proposer une fonctionnalité, recherchez ou ouvrez une
-  [issue](https://github.com/bootgs/apps-script-utils/issues) sur GitHub.
+  [issue](https://github.com/bootgs/utils/issues) sur GitHub.
 - Pour les changements récents, consultez le [journal des modifications](CHANGELOG.md).
 - Pour signaler une vulnérabilité, suivez la [politique de sécurité](SECURITY.md) plutôt que d'ouvrir une issue
   publique.
@@ -276,7 +276,7 @@ Respectez le style de code et les conventions de nommage existants. Les règles 
 
 Ce qui est prévu, en cours ou terminé figure sur le [tableau du projet](https://github.com/users/MaksymStoianov/projects/2/views/2),
 construit à partir du suivi des issues lui-même. Il n'existe pas de document de feuille de route séparé qui pourrait
-s'en écarter : pour proposer quelque chose, ouvrez une [issue](https://github.com/bootgs/apps-script-utils/issues).
+s'en écarter : pour proposer quelque chose, ouvrez une [issue](https://github.com/bootgs/utils/issues).
 
 ## Journal des modifications
 

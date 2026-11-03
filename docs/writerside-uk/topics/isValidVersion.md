@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення рядком версії.</link-summary>
 
-<web-summary>isValidVersion() — Перевіряє, чи є значення рядком версії. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidVersion() — Перевіряє, чи є значення рядком версії. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -49,4 +49,4 @@ isValidVersion("1..2"); // => false
 
 ## Вихідний код
 
-[`src/lang/string/isValidVersion.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/isValidVersion.ts)
+[`src/lang/string/isValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidVersion.ts)

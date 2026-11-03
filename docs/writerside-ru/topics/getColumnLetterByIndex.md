@@ -4,7 +4,7 @@
 
 <link-summary>Преобразует индекс столбца, считая от нуля, в его букву.</link-summary>
 
-<web-summary>getColumnLetterByIndex() — Преобразует индекс столбца, считая от нуля, в его букву. apps-script-utils, Русский.</web-summary>
+<web-summary>getColumnLetterByIndex() — Преобразует индекс столбца, считая от нуля, в его букву. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -44,4 +44,4 @@ getColumnLetterByIndex(26); // => "AA"
 
 ## Исходный код
 
-[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)
+[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)

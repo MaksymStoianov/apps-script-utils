@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення ідентифікатором таблиці.</link-summary>
 
-<web-summary>isValidSpreadsheetId() — Перевіряє, чи є значення ідентифікатором таблиці. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidSpreadsheetId() — Перевіряє, чи є значення ідентифікатором таблиці. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.5.0</p>
@@ -48,4 +48,4 @@ isValidSpreadsheetId("has space in it and is long enough to pass"); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)
+[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)

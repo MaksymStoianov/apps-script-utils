@@ -10,7 +10,7 @@
  *
  * @param   {unknown} value - The value to convert.
  * @returns {string} The converted string.
- * @see [objectToString on the documentation site](https://bootgs.github.io/apps-script-utils/objecttostring.html)
+ * @see [objectToString on the documentation site](https://bootgs.github.io/utils/objecttostring.html)
  * @since   1.0.0
  * @version 1.0.0
  */

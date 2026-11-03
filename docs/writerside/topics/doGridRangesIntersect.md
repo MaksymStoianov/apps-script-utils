@@ -4,7 +4,7 @@
 
 <link-summary>Reports whether two grid ranges overlap in any cell.</link-summary>
 
-<web-summary>doGridRangesIntersect() — Reports whether two grid ranges overlap in any cell. apps-script-utils, English.</web-summary>
+<web-summary>doGridRangesIntersect() — Reports whether two grid ranges overlap in any cell. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -47,4 +47,4 @@ doGridRangesIntersect(left, right); // => true
 
 ## Source
 
-[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)
+[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)

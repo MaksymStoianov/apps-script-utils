@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як слаг або викидає виняток.</link-summary>
 
-<web-summary>requireValidSlug() — Повертає значення як слаг або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidSlug() — Повертає значення як слаг або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSlug("my page"); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/string/requireValidSlug.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidSlug.ts)
+[`src/lang/string/requireValidSlug.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidSlug.ts)

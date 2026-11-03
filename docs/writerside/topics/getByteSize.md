@@ -4,7 +4,7 @@
 
 <link-summary>Returns the length of a string in code units.</link-summary>
 
-<web-summary>getByteSize() — Returns the length of a string in code units. apps-script-utils, English.</web-summary>
+<web-summary>getByteSize() — Returns the length of a string in code units. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/base</code> · Since: 1.0.0</p>
@@ -48,4 +48,4 @@ getByteSize("abc"); // => 3
 
 ## Source
 
-[`src/appsscript/base/getByteSize.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)
+[`src/appsscript/base/getByteSize.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/base/getByteSize.ts)

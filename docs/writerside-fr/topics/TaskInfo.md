@@ -4,7 +4,7 @@
 
 <link-summary>Une tâche chronométrée, telle qu'un `StopWatch` l'a enregistrée.</link-summary>
 
-<web-summary>TaskInfo — Une tâche chronométrée, telle qu'un `StopWatch` l'a enregistrée. apps-script-utils, Français.</web-summary>
+<web-summary>TaskInfo — Une tâche chronométrée, telle qu'un `StopWatch` l'a enregistrée. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code></p>
@@ -36,4 +36,4 @@ watch.getLastTaskInfo(); // { taskName: "fetch", timeMillis: …, timeSeconds: �
 
 ## Code source
 
-[`src/time/StopWatch.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

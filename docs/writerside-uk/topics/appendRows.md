@@ -4,7 +4,7 @@
 
 <link-summary>Додає рядки після останнього рядка з даними.</link-summary>
 
-<web-summary>appendRows() — Додає рядки після останнього рядка з даними. apps-script-utils, Українська.</web-summary>
+<web-summary>appendRows() — Додає рядки після останнього рядка з даними. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -78,4 +78,4 @@ appendRows(sheet.getRange("B1:C10"), [["Ada", "ada@example.com"]]);
 
 ## Вихідний код
 
-[`src/appsscript/sheet/appendRows.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/appendRows.ts)
+[`src/appsscript/sheet/appendRows.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/appendRows.ts)

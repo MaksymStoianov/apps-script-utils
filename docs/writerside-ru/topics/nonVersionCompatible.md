@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что версия ниже требуемой.</link-summary>
 
-<web-summary>nonVersionCompatible() — Проверяет, что версия ниже требуемой. apps-script-utils, Русский.</web-summary>
+<web-summary>nonVersionCompatible() — Проверяет, что версия ниже требуемой. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -43,4 +43,4 @@ nonVersionCompatible("1.2.0", "1.3.0"); // => true
 
 ## Исходный код
 
-[`src/lang/string/nonVersionCompatible.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonVersionCompatible.ts)
+[`src/lang/string/nonVersionCompatible.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonVersionCompatible.ts)

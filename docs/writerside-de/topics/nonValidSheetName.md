@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Blattname ist.</link-summary>
 
-<web-summary>nonValidSheetName() — Prüft, ob ein Wert **nicht** ein Blattname ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonValidSheetName() — Prüft, ob ein Wert **nicht** ein Blattname ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSheetName("Report 2026"); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonValidSheetName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetName.ts)
+[`src/appsscript/sheet/nonValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSheetName.ts)

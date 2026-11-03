@@ -4,7 +4,7 @@
 
 <link-summary>Сравнивает два значения вглубь и безопасно относительно null.</link-summary>
 
-<web-summary>equals() — Сравнивает два значения вглубь и безопасно относительно null. apps-script-utils, Русский.</web-summary>
+<web-summary>equals() — Сравнивает два значения вглубь и безопасно относительно null. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно с: 1.11.0</p>
@@ -47,4 +47,4 @@ equals(new Date(0), new Date(0)); // => true
 
 ## Исходный код
 
-[`src/lang/object/equals.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/equals.ts)
+[`src/lang/object/equals.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/equals.ts)

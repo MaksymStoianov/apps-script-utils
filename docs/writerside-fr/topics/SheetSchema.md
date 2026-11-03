@@ -4,7 +4,7 @@
 
 <link-summary>Comment s'appellent les colonnes d'une feuille et ce qu'elles contiennent.</link-summary>
 
-<web-summary>SheetSchema — Comment s'appellent les colonnes d'une feuille et ce qu'elles contiennent. apps-script-utils, Français.</web-summary>
+<web-summary>SheetSchema — Comment s'appellent les colonnes d'une feuille et ce qu'elles contiennent. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet/types</code> · Disponible depuis: 1.11.0</p>
@@ -42,4 +42,4 @@ const schema = {
 
 ## Code source
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

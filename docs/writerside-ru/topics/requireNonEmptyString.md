@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как непустую строку или бросает исключение.</link-summary>
 
-<web-summary>requireNonEmptyString() — Возвращает значение как непустую строку или бросает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonEmptyString() — Возвращает значение как непустую строку или бросает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ requireNonEmptyString("   "); // throws EmptyStringException
 
 ## Исходный код
 
-[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireNonEmptyString.ts)
+[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireNonEmptyString.ts)

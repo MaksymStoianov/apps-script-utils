@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как безопасное целое число или выбрасывает исключение.</link-summary>
 
-<web-summary>requireSafeInteger() — Возвращает значение как безопасное целое число или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireSafeInteger() — Возвращает значение как безопасное целое число или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireSafeInteger(1.5); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/number/requireSafeInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireSafeInteger.ts)
+[`src/lang/number/requireSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireSafeInteger.ts)

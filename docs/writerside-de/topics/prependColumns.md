@@ -4,7 +4,7 @@
 
 <link-summary>Fügt Spalten vor den Daten ein — im Blatt oder an einem Bereich.</link-summary>
 
-<web-summary>prependColumns() — Fügt Spalten vor den Daten ein — im Blatt oder an einem Bereich. apps-script-utils, Deutsch.</web-summary>
+<web-summary>prependColumns() — Fügt Spalten vor den Daten ein — im Blatt oder an einem Bereich. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -76,4 +76,4 @@ prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 
 ## Quellcode
 
-[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependColumns.ts)
+[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependColumns.ts)

@@ -14,7 +14,7 @@ import { isInteger } from "../number";
  * @template T - The type of elements in the input array.
  * @param    {T[]} array - The array to read from.
  * @returns  {T | undefined} The first element, or `undefined` if the array is empty.
- * @see [first on the documentation site](https://bootgs.github.io/apps-script-utils/first.html)
+ * @see [first on the documentation site](https://bootgs.github.io/utils/first.html)
  */
 export function first<T>(array: T[]): T | undefined;
 

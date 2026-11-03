@@ -4,7 +4,7 @@
 
 <link-summary>Liest JSON und versucht es bei striktem Fehlschlag mit einem toleranten Leser erneut.</link-summary>
 
-<web-summary>parseJson() — Liest JSON und versucht es bei striktem Fehlschlag mit einem toleranten Leser erneut. apps-script-utils, Deutsch.</web-summary>
+<web-summary>parseJson() — Liest JSON und versucht es bei striktem Fehlschlag mit einem toleranten Leser erneut. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>json</code> · Verfügbar seit: 1.0.0 · <b>Veraltet</b></p>
@@ -53,4 +53,4 @@ parseJson("{a: 'x', b: 1}"); // => {"a":"x","b":1}
 
 ## Quellcode
 
-[`src/json/parseJson.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/json/parseJson.ts)
+[`src/json/parseJson.ts`](https://github.com/bootgs/utils/blob/main/src/json/parseJson.ts)

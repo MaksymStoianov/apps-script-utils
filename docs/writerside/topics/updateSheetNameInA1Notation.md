@@ -4,7 +4,7 @@
 
 <link-summary>Replaces the sheet name in an A1 notation, keeping the range.</link-summary>
 
-<web-summary>updateSheetNameInA1Notation() — Replaces the sheet name in an A1 notation, keeping the range. apps-script-utils, English.</web-summary>
+<web-summary>updateSheetNameInA1Notation() — Replaces the sheet name in an A1 notation, keeping the range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.6.0</p>
@@ -45,4 +45,4 @@ updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
 
 ## Source
 
-[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)
+[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)

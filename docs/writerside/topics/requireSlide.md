@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a slide, or throws.</link-summary>
 
-<web-summary>requireSlide() — Returns the value as a slide, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireSlide() — Returns the value as a slide, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSlide(null); // throws SlideNotFoundException
 
 ## Source
 
-[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireSlide.ts)
+[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireSlide.ts)

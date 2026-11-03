@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення об'єктоподібним значенням.</link-summary>
 
-<web-summary>isObjectLike() — Перевіряє, чи є значення об'єктоподібним значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>isObjectLike() — Перевіряє, чи є значення об'єктоподібним значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -52,4 +52,4 @@ isObjectLike(1); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isObjectLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isObjectLike.ts)
+[`src/lang/base/isObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isObjectLike.ts)

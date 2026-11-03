@@ -4,7 +4,7 @@
 
 <link-summary>Розв'язує сегменти `.` та `..` у шляху.</link-summary>
 
-<web-summary>normalize() — Розв'язує сегменти `.` та `..` у шляху. apps-script-utils, Українська.</web-summary>
+<web-summary>normalize() — Розв'язує сегменти `.` та `..` у шляху. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code></p>
@@ -45,4 +45,4 @@ normalize("/a/b/../c/"); // => "/a/c"
 
 ## Вихідний код
 
-[`src/net/path/normalize.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/normalize.ts)
+[`src/net/path/normalize.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/normalize.ts)

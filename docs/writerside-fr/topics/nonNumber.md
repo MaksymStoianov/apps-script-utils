@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un nombre.</link-summary>
 
-<web-summary>nonNumber() — Vérifie qu'une valeur n'est **pas** un nombre. apps-script-utils, Français.</web-summary>
+<web-summary>nonNumber() — Vérifie qu'une valeur n'est **pas** un nombre. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -54,4 +54,4 @@ nonNumber(Infinity); // => false
 
 ## Code source
 
-[`src/lang/base/nonNumber.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNumber.ts)
+[`src/lang/base/nonNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNumber.ts)

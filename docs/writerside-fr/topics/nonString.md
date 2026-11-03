@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une chaîne de caractères.</link-summary>
 
-<web-summary>nonString() — Vérifie qu'une valeur n'est **pas** une chaîne de caractères. apps-script-utils, Français.</web-summary>
+<web-summary>nonString() — Vérifie qu'une valeur n'est **pas** une chaîne de caractères. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -53,4 +53,4 @@ nonString("abc"); // => false
 
 ## Code source
 
-[`src/lang/base/nonString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonString.ts)
+[`src/lang/base/nonString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonString.ts)

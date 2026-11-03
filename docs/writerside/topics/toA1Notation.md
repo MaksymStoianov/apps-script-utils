@@ -4,7 +4,7 @@
 
 <link-summary>Writes a grid range as A1 notation.</link-summary>
 
-<web-summary>toA1Notation() — Writes a grid range as A1 notation. apps-script-utils, English.</web-summary>
+<web-summary>toA1Notation() — Writes a grid range as A1 notation. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -47,4 +47,4 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnI
 
 ## Source
 
-[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/toA1Notation.ts)
+[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/toA1Notation.ts)

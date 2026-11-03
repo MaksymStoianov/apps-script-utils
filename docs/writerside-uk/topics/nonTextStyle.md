@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є стилем тексту.</link-summary>
 
-<web-summary>nonTextStyle() — Перевіряє, що значення **не** є стилем тексту. apps-script-utils, Українська.</web-summary>
+<web-summary>nonTextStyle() — Перевіряє, що значення **не** є стилем тексту. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonTextStyle(style); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonTextStyle.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonTextStyle.ts)
+[`src/appsscript/sheet/nonTextStyle.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonTextStyle.ts)

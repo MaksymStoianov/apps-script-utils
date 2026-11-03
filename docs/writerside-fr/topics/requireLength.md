@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que une longueur de tableau valide, ou lève une exception.</link-summary>
 
-<web-summary>requireLength() — Renvoie la valeur en tant que une longueur de tableau valide, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireLength() — Renvoie la valeur en tant que une longueur de tableau valide, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -58,4 +58,4 @@ requireLength(1.5); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireLength.ts)
+[`src/lang/base/requireLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireLength.ts)

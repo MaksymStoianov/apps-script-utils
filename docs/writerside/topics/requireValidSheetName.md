@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a sheet name, or throws.</link-summary>
 
-<web-summary>requireValidSheetName() — Returns the value as a sheet name, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidSheetName() — Returns the value as a sheet name, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSheetName("Data/2026"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/sheet/requireValidSheetName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetName.ts)
+[`src/appsscript/sheet/requireValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSheetName.ts)

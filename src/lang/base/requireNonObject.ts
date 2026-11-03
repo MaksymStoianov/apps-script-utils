@@ -24,7 +24,7 @@ import { isObject } from "./isObject";
  * @see      {@link isObject}
  * @see      {@link nonObject}
  * @see      {@link requireObject}
- * @see      [requireNonObject on the documentation site](https://bootgs.github.io/apps-script-utils/requirenonobject.html)
+ * @see      [requireNonObject on the documentation site](https://bootgs.github.io/utils/requirenonobject.html)
  * @since    1.11.0
  * @version  1.0.0
  */

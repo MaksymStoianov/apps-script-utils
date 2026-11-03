@@ -4,7 +4,7 @@
 
 <link-summary>Reorders the tabs of a spreadsheet.</link-summary>
 
-<web-summary>sortSheets() — Reorders the tabs of a spreadsheet. apps-script-utils, English.</web-summary>
+<web-summary>sortSheets() — Reorders the tabs of a spreadsheet. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.5.0</p>
@@ -54,4 +54,4 @@ sortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed
 
 ## Source
 
-[`src/appsscript/sheet/sortSheets.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/sortSheets.ts)
+[`src/appsscript/sheet/sortSheets.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/sortSheets.ts)

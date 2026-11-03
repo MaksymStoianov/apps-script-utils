@@ -4,7 +4,7 @@
 
 <link-summary>Insère une ligne avant les données — dans une feuille ou au niveau d'une plage.</link-summary>
 
-<web-summary>prependRow() — Insère une ligne avant les données — dans une feuille ou au niveau d'une plage. apps-script-utils, Français.</web-summary>
+<web-summary>prependRow() — Insère une ligne avant les données — dans une feuille ou au niveau d'une plage. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -70,4 +70,4 @@ prependRow(sheet.getRange("B4:C13"), ["Name", "Email"]);
 
 ## Code source
 
-[`src/appsscript/sheet/prependRow.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependRow.ts)
+[`src/appsscript/sheet/prependRow.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependRow.ts)

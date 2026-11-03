@@ -4,7 +4,7 @@
 
 <link-summary>Erzeugt einen numerischen Hash für einen beliebigen Wert.</link-summary>
 
-<web-summary>hashCode() — Erzeugt einen numerischen Hash für einen beliebigen Wert. apps-script-utils, Deutsch.</web-summary>
+<web-summary>hashCode() — Erzeugt einen numerischen Hash für einen beliebigen Wert. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/object</code> · Verfügbar seit: 1.0.0</p>
@@ -45,4 +45,4 @@ hashCode(""); // => 0
 
 ## Quellcode
 
-[`src/lang/object/hashCode.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/hashCode.ts)
+[`src/lang/object/hashCode.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/hashCode.ts)

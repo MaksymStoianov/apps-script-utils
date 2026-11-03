@@ -4,7 +4,7 @@
 
 <link-summary>От строки ожидался адрес электронной почты, а её форма ему не соответствует.</link-summary>
 
-<web-summary>InvalidEmailFormatException — От строки ожидался адрес электронной почты, а её форма ему не соответствует. apps-script-utils, Русский.</web-summary>
+<web-summary>InvalidEmailFormatException — От строки ожидался адрес электронной почты, а её форма ему не соответствует. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно с: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/InvalidEmailFormatException.ts)
+[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidEmailFormatException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a regular expression.</link-summary>
 
-<web-summary>isRegExp() — Checks whether a value is a regular expression. apps-script-utils, English.</web-summary>
+<web-summary>isRegExp() — Checks whether a value is a regular expression. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isRegExp(null); // => false
 
 ## Source
 
-[`src/lang/base/isRegExp.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isRegExp.ts)
+[`src/lang/base/isRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isRegExp.ts)

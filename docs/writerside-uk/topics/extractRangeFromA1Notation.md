@@ -4,7 +4,7 @@
 
 <link-summary>Видобуває частину з діапазоном із нотації A1.</link-summary>
 
-<web-summary>extractRangeFromA1Notation() — Видобуває частину з діапазоном із нотації A1. apps-script-utils, Українська.</web-summary>
+<web-summary>extractRangeFromA1Notation() — Видобуває частину з діапазоном із нотації A1. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.6.0</p>
@@ -44,4 +44,4 @@ extractRangeFromA1Notation("Sheet1!A1:B2"); // => "A1:B2"
 
 ## Вихідний код
 
-[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)
+[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)

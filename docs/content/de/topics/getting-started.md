@@ -2,7 +2,7 @@
 
 <link-summary>Voraussetzungen, Installation und ein erstes lauffähiges Skript.</link-summary>
 
-<web-summary>apps-script-utils in einem Google-Apps-Script-Projekt installieren: npm-Paket, clasp-Einrichtung und ein erstes Skript, das mit der Bibliothek ein Blatt liest.</web-summary>
+<web-summary>@bootgs/utils in einem Google-Apps-Script-Projekt installieren: npm-Paket, clasp-Einrichtung und ein erstes Skript, das mit der Bibliothek ein Blatt liest.</web-summary>
 
 ## Voraussetzungen
 
@@ -12,13 +12,13 @@
 ## Installation
 
 ```bash
-npm install apps-script-utils
+npm install @bootgs/utils
 ```
 
 Alles wird aus der Paketwurzel exportiert, ein einziger Importpfad deckt also die ganze Bibliothek ab:
 
 ```typescript
-import { appendRows, isAdmin, parseA1Notation, requireString } from "apps-script-utils";
+import { appendRows, isAdmin, parseA1Notation, requireString } from "@bootgs/utils";
 ```
 
 ## Erste Beispiele
@@ -28,7 +28,7 @@ import { appendRows, isAdmin, parseA1Notation, requireString } from "apps-script
 Mehrere Datenzeilen in einem Zug anhängen:
 
 ```typescript
-import { appendRows } from "apps-script-utils";
+import { appendRows } from "@bootgs/utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 const data = [
@@ -44,7 +44,7 @@ appendRows(sheet, data);
 Prüfen, ob der aktuelle Nutzer Administratorrechte hat:
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import { isAdmin } from "@bootgs/utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");
@@ -58,7 +58,7 @@ if (isAdmin()) {
 Eine zusammengesetzte A1-Notation in ein strukturiertes Objekt überführen:
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import { parseA1Notation } from "@bootgs/utils";
 
 const rangeInfo = parseA1Notation("'Sheet1'!A1:B10");
 
@@ -73,7 +73,7 @@ Die meisten Funktionen der Bibliothek weisen falsche Eingaben zurück, statt sie
 macht aus einem ungeprüften Wert einen typisierten — oder wirft:
 
 ```typescript
-import { requireString, requireNonEmptyString } from "apps-script-utils";
+import { requireString, requireNonEmptyString } from "@bootgs/utils";
 
 function greet(name: unknown): string {
   return `Hello, ${requireNonEmptyString(name)}!`;

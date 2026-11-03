@@ -4,7 +4,7 @@
 
 <link-summary>Die Oberklasse jeder Ausnahme, die ein laufendes Skript auslösen kann.</link-summary>
 
-<web-summary>RuntimeException — Die Oberklasse jeder Ausnahme, die ein laufendes Skript auslösen kann. apps-script-utils, Deutsch.</web-summary>
+<web-summary>RuntimeException — Die Oberklasse jeder Ausnahme, die ein laufendes Skript auslösen kann. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/RuntimeException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/RuntimeException.ts)
+[`src/exception/RuntimeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RuntimeException.ts)

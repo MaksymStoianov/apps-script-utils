@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** an integer.</link-summary>
 
-<web-summary>nonInteger() — Checks whether a value is **not** an integer. apps-script-utils, English.</web-summary>
+<web-summary>nonInteger() — Checks whether a value is **not** an integer. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ nonInteger(0); // => false
 
 ## Source
 
-[`src/lang/number/nonInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonInteger.ts)
+[`src/lang/number/nonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonInteger.ts)

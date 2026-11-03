@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a non-empty matrix whose rows all have the same length.</link-summary>
 
-<web-summary>isConsistent2DArray() — Checks whether a value is a non-empty matrix whose rows all have the same length. apps-script-utils, English.</web-summary>
+<web-summary>isConsistent2DArray() — Checks whether a value is a non-empty matrix whose rows all have the same length. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.0.0</p>
@@ -73,4 +73,4 @@ function write(sheet, rows) {
 
 ## Source
 
-[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/isConsistent2DArray.ts)
+[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/isConsistent2DArray.ts)

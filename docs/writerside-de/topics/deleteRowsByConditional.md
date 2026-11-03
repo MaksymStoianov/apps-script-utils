@@ -4,7 +4,7 @@
 
 <link-summary>Löscht die vom Prädikat gewählten Zeilen.</link-summary>
 
-<web-summary>deleteRowsByConditional() — Löscht die vom Prädikat gewählten Zeilen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>deleteRowsByConditional() — Löscht die vom Prädikat gewählten Zeilen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -74,4 +74,4 @@ deleteRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cel
 
 ## Quellcode
 
-[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)
+[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)

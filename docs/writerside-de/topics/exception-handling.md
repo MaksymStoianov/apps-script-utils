@@ -4,7 +4,7 @@
 
 <link-summary>Die Ausnahmehierarchie, wann welche Klasse geworfen wird und wie man sie fängt.</link-summary>
 
-<web-summary>Typisierte Ausnahmen in apps-script-utils: die Hierarchie unter Exception, welche Prüfung welche Klasse wirft und wie man sie in einem Google-Apps-Script-Projekt fängt.</web-summary>
+<web-summary>Typisierte Ausnahmen in @bootgs/utils: die Hierarchie unter Exception, welche Prüfung welche Klasse wirft und wie man sie in einem Google-Apps-Script-Projekt fängt.</web-summary>
 
 Jeder Fehler, den diese Bibliothek auslöst, ist eine Instanz der Klasse `Exception` oder einer ihrer Ableitungen.
 Ein einziges `catch` kann daher die Fehlschläge der Bibliothek von allem anderen unterscheiden, was die Laufzeit
@@ -42,7 +42,7 @@ sie — ein `catch` auf `RuntimeException` fängt also alles, was die Bibliothek
 `Exception` bietet eine statische Typprüfung an; sie ist die empfohlene Abfrage, weil sie den Typ zugleich verengt:
 
 ```typescript
-import { Exception, requireString } from "apps-script-utils";
+import { Exception, requireString } from "@bootgs/utils";
 
 try {
   requireString(input);
@@ -58,7 +58,7 @@ try {
 `instanceof` funktioniert ebenfalls und ist der Weg, einen einzelnen Fehlschlag zu fangen:
 
 ```typescript
-import { NullPointerException, requireNonNull } from "apps-script-utils";
+import { NullPointerException, requireNonNull } from "@bootgs/utils";
 
 try {
   const sheet = requireNonNull(spreadsheet.getSheetByName("Data"));

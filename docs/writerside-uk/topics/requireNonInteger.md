@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є цілим числом.</link-summary>
 
-<web-summary>requireNonInteger() — Повертає значення, переконавшись, що воно не є цілим числом. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonInteger() — Повертає значення, переконавшись, що воно не є цілим числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonInteger(-7); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/number/requireNonInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonInteger.ts)
+[`src/lang/number/requireNonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonInteger.ts)

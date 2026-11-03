@@ -4,7 +4,7 @@
 
 <link-summary>Analyse du JSON, puis réessaie avec un lecteur permissif si l'analyse stricte échoue.</link-summary>
 
-<web-summary>parseJson() — Analyse du JSON, puis réessaie avec un lecteur permissif si l'analyse stricte échoue. apps-script-utils, Français.</web-summary>
+<web-summary>parseJson() — Analyse du JSON, puis réessaie avec un lecteur permissif si l'analyse stricte échoue. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>json</code> · Disponible depuis: 1.0.0 · <b>Déprécié</b></p>
@@ -53,4 +53,4 @@ parseJson("{a: 'x', b: 1}"); // => {"a":"x","b":1}
 
 ## Code source
 
-[`src/json/parseJson.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/json/parseJson.ts)
+[`src/json/parseJson.ts`](https://github.com/bootgs/utils/blob/main/src/json/parseJson.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur est une matrice non vide dont toutes les lignes ont la même longueur.</link-summary>
 
-<web-summary>isConsistent2DArray() — Vérifie qu'une valeur est une matrice non vide dont toutes les lignes ont la même longueur. apps-script-utils, Français.</web-summary>
+<web-summary>isConsistent2DArray() — Vérifie qu'une valeur est une matrice non vide dont toutes les lignes ont la même longueur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.0.0</p>
@@ -69,4 +69,4 @@ function write(sheet, rows) {
 
 ## Code source
 
-[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/isConsistent2DArray.ts)
+[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/isConsistent2DArray.ts)

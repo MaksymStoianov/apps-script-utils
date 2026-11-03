@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un slug.</link-summary>
 
-<web-summary>isValidSlug() — Vérifie si une valeur est un slug. apps-script-utils, Français.</web-summary>
+<web-summary>isValidSlug() — Vérifie si une valeur est un slug. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -48,4 +48,4 @@ isValidSlug(""); // => false
 
 ## Code source
 
-[`src/lang/string/isValidSlug.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/isValidSlug.ts)
+[`src/lang/string/isValidSlug.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidSlug.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Bereich ist.</link-summary>
 
-<web-summary>nonRange() — Prüft, ob ein Wert **nicht** ein Bereich ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonRange() — Prüft, ob ein Wert **nicht** ein Bereich ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.3.0</p>
@@ -53,4 +53,4 @@ nonRange(range); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRange.ts)
+[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRange.ts)

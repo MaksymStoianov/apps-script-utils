@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение вызываемым значением.</link-summary>
 
-<web-summary>isFunctionLike() — Проверяет, является ли значение вызываемым значением. apps-script-utils, Русский.</web-summary>
+<web-summary>isFunctionLike() — Проверяет, является ли значение вызываемым значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.2.0</p>
@@ -51,4 +51,4 @@ isFunctionLike("fn"); // => false
 
 ## Исходный код
 
-[`src/lang/base/isFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isFunctionLike.ts)
+[`src/lang/base/isFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isFunctionLike.ts)

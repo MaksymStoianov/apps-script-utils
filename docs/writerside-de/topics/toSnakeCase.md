@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt eine Zeichenkette in snake_case.</link-summary>
 
-<web-summary>toSnakeCase() — Schreibt eine Zeichenkette in snake_case. apps-script-utils, Deutsch.</web-summary>
+<web-summary>toSnakeCase() — Schreibt eine Zeichenkette in snake_case. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -52,4 +52,4 @@ toSnakeCase("userFirstName"); // => "user_first_name"
 
 ## Quellcode
 
-[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toSnakeCase.ts)
+[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toSnakeCase.ts)

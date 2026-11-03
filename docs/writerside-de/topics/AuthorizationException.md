@@ -4,7 +4,7 @@
 
 <link-summary>Der Aufrufer ist bekannt, darf dies aber nicht.</link-summary>
 
-<web-summary>AuthorizationException — Der Aufrufer ist bekannt, darf dies aber nicht. apps-script-utils, Deutsch.</web-summary>
+<web-summary>AuthorizationException — Der Aufrufer ist bekannt, darf dies aber nicht. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.11.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/AuthorizationException.ts)
+[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/AuthorizationException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является объектом.</link-summary>
 
-<web-summary>nonObject() — Проверяет, что значение **не** является объектом. apps-script-utils, Русский.</web-summary>
+<web-summary>nonObject() — Проверяет, что значение **не** является объектом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -54,4 +54,4 @@ nonObject(new Date()); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonObject.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonObject.ts)
+[`src/lang/base/nonObject.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonObject.ts)

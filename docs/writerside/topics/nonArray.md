@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** an array.</link-summary>
 
-<web-summary>nonArray() — Checks whether a value is **not** an array. apps-script-utils, English.</web-summary>
+<web-summary>nonArray() — Checks whether a value is **not** an array. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.4.0</p>
@@ -53,4 +53,4 @@ nonArray([1, 2, 3]); // => false
 
 ## Source
 
-[`src/lang/base/nonArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonArray.ts)
+[`src/lang/base/nonArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonArray.ts)

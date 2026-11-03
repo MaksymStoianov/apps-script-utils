@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является регулярным выражением.</link-summary>
 
-<web-summary>nonRegExp() — Проверяет, что значение **не** является регулярным выражением. apps-script-utils, Русский.</web-summary>
+<web-summary>nonRegExp() — Проверяет, что значение **не** является регулярным выражением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ nonRegExp(new RegExp("a")); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonRegExp.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonRegExp.ts)
+[`src/lang/base/nonRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonRegExp.ts)

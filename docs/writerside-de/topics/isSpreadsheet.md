@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Tabelle ist.</link-summary>
 
-<web-summary>isSpreadsheet() — Prüft, ob ein Wert eine Tabelle ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isSpreadsheet() — Prüft, ob ein Wert eine Tabelle ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isSpreadsheet(null); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)
+[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une `Exception`.</link-summary>
 
-<web-summary>isException() — Vérifie si une valeur est une `Exception`. apps-script-utils, Français.</web-summary>
+<web-summary>isException() — Vérifie si une valeur est une `Exception`. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -50,4 +50,4 @@ isException(null); // => false
 
 ## Code source
 
-[`src/lang/base/isException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isException.ts)
+[`src/lang/base/isException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является экземпляром `Exception`.</link-summary>
 
-<web-summary>requireNonException() — Возвращает значение, убедившись, что оно не является экземпляром `Exception`. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonException() — Возвращает значение, убедившись, что оно не является экземпляром `Exception`. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ requireNonException(new IllegalArgumentException()); // throws IllegalArgumentEx
 
 ## Исходный код
 
-[`src/lang/base/requireNonException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonException.ts)
+[`src/lang/base/requireNonException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonException.ts)

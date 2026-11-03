@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є значенням `null`.</link-summary>
 
-<web-summary>nonNull() — Перевіряє, що значення **не** є значенням `null`. apps-script-utils, Українська.</web-summary>
+<web-summary>nonNull() — Перевіряє, що значення **не** є значенням `null`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -52,4 +52,4 @@ nonNull(null); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonNull.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNull.ts)
+[`src/lang/base/nonNull.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNull.ts)

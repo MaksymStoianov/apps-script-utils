@@ -4,7 +4,7 @@
 
 <link-summary>Calls a function again when it throws, with a growing wait between attempts.</link-summary>
 
-<web-summary>retry() — Calls a function again when it throws, with a growing wait between attempts. apps-script-utils, English.</web-summary>
+<web-summary>retry() — Calls a function again when it throws, with a growing wait between attempts. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/function</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ const response = retry(() => UrlFetchApp.fetch(url), {
 
 ## Source
 
-[`src/lang/function/retry.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/function/retry.ts)
+[`src/lang/function/retry.ts`](https://github.com/bootgs/utils/blob/main/src/lang/function/retry.ts)

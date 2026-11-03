@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як відносний шлях або викидає виняток.</link-summary>
 
-<web-summary>requireRelative() — Повертає значення як відносний шлях або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireRelative() — Повертає значення як відносний шлях або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code> · Доступно з: 1.11.0</p>
@@ -54,4 +54,4 @@ requireRelative("https://example.com/a"); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/net/path/requireRelative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/requireRelative.ts)
+[`src/net/path/requireRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireRelative.ts)

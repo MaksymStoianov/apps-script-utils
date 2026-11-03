@@ -4,7 +4,7 @@
 
 <link-summary>Повертає діапазон, переконавшись, що він лежить усередині іншого, інакше кидає виняток.</link-summary>
 
-<web-summary>requireGridRangeContainedIn() — Повертає діапазон, переконавшись, що він лежить усередині іншого, інакше кидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireGridRangeContainedIn() — Повертає діапазон, переконавшись, що він лежить усередині іншого, інакше кидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ requireGridRangeContainedIn(inner, outer); // => the inner range
 
 ## Вихідний код
 
-[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)
+[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)

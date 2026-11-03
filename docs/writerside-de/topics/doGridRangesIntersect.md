@@ -4,7 +4,7 @@
 
 <link-summary>Meldet, ob zwei Rasterbereiche sich in einer Zelle überschneiden.</link-summary>
 
-<web-summary>doGridRangesIntersect() — Meldet, ob zwei Rasterbereiche sich in einer Zelle überschneiden. apps-script-utils, Deutsch.</web-summary>
+<web-summary>doGridRangesIntersect() — Meldet, ob zwei Rasterbereiche sich in einer Zelle überschneiden. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -47,4 +47,4 @@ doGridRangesIntersect(left, right); // => true
 
 ## Quellcode
 
-[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)
+[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)

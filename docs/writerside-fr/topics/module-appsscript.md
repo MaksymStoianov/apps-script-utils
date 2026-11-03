@@ -4,7 +4,7 @@
 
 <link-summary>Les aides Google Apps Script : feuilles de calcul, notation A1, interface, Drive et Admin SDK.</link-summary>
 
-<web-summary>Le module appsscript d'apps-script-utils : aides pour les feuilles et la notation A1, validation de feuille, interface, Drive, Slides et Admin SDK pour Google Apps Script.</web-summary>
+<web-summary>Le module appsscript d'@bootgs/utils : aides pour les feuilles et la notation A1, validation de feuille, interface, Drive, Slides et Admin SDK pour Google Apps Script.</web-summary>
 
 `appsscript` rassemble tout ce qui touche à un service Google. C'est la partie de la bibliothèque qui ne s'exécute
 qu'à l'intérieur de l'environnement Apps Script — voir [](apps-script-runtime.md) pour ce que cela implique lors des
@@ -28,7 +28,7 @@ tests.
 demi-ouvertes, conformes à l'API Sheets plutôt qu'aux positions à base un qu'attendent les méthodes de `Range` :
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import { parseA1Notation } from "@bootgs/utils";
 
 parseA1Notation("Sheet1!A1:B10");
 // {
@@ -49,7 +49,7 @@ Les notations ouvertes s'analysent aussi : `"5:15"` laisse les bornes de colonne
 `toA1Notation` fait l'inverse :
 
 ```typescript
-import { toA1Notation } from "apps-script-utils";
+import { toA1Notation } from "@bootgs/utils";
 
 toA1Notation({ startRowIndex: 0, endRowIndex: 10, startColumnIndex: 0, endColumnIndex: 2 });
 // "A1:B10"
@@ -58,7 +58,7 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 10, startColumnIndex: 0, endColumn
 `parseA1Notations` prend une liste séparée par des virgules et renvoie un `GridRange` par entrée :
 
 ```typescript
-import { parseA1Notations } from "apps-script-utils";
+import { parseA1Notations } from "@bootgs/utils";
 
 parseA1Notations("Sheet1!A1:B2, Sheet1!D1"); // deux objets GridRange
 ```
@@ -70,7 +70,7 @@ import {
   extractRangeFromA1Notation,
   extractSheetNameFromA1Notation,
   updateSheetNameInA1Notation
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 extractSheetNameFromA1Notation("'My Sheet'!A1"); // "My Sheet"
 extractRangeFromA1Notation("'My Sheet'!A1:B2"); // "A1:B2"
@@ -87,7 +87,7 @@ import {
   getColumnIndexByLetter,
   getColumnLetterByIndex,
   getColumnPositionByLetter
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 getColumnIndexByLetter("A"); // 0
 getColumnIndexByLetter("AZ"); // 51
@@ -106,7 +106,7 @@ import {
   isCellGridRange,
   isGridRangeContainedIn,
   isGridRangeSameDimensions
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 const header = { startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 5 };
 const body = { startRowIndex: 1, endRowIndex: 100, startColumnIndex: 0, endColumnIndex: 5 };
@@ -118,7 +118,7 @@ isCellGridRange(header); // false — elle couvre cinq colonnes
 ## Écrire des lignes et des colonnes
 
 ```typescript
-import { appendRows, prependRows, appendColumns } from "apps-script-utils";
+import { appendRows, prependRows, appendColumns } from "@bootgs/utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 
@@ -139,7 +139,7 @@ service et un par ligne. Toutes les lignes doivent avoir la même longueur — `
 La même convention que dans le reste de la bibliothèque, appliquée aux classes Apps Script :
 
 ```typescript
-import { isSheet, isSpreadsheet, isRange, requireSheet } from "apps-script-utils";
+import { isSheet, isSpreadsheet, isRange, requireSheet } from "@bootgs/utils";
 
 function rowCount(value: unknown): number {
   return requireSheet(value).getLastRow();
@@ -152,7 +152,7 @@ function rowCount(value: unknown): number {
 ## Slides
 
 ```typescript
-import { getSlideByIndex, findReplaceAllTextInSlide, requireSlide } from "apps-script-utils";
+import { getSlideByIndex, findReplaceAllTextInSlide, requireSlide } from "@bootgs/utils";
 
 const presentation = SlidesApp.getActivePresentation();
 
@@ -170,7 +170,7 @@ findReplaceAllTextInSlide(slide, "{{name}}", "Ada Lovelace");
 ## Admin SDK
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import { isAdmin } from "@bootgs/utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");

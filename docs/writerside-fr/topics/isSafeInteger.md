@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un entier sûr.</link-summary>
 
-<web-summary>isSafeInteger() — Vérifie si une valeur est un entier sûr. apps-script-utils, Français.</web-summary>
+<web-summary>isSafeInteger() — Vérifie si une valeur est un entier sûr. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.11.0</p>
@@ -51,4 +51,4 @@ isSafeInteger("42"); // => false
 
 ## Code source
 
-[`src/lang/number/isSafeInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isSafeInteger.ts)
+[`src/lang/number/isSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isSafeInteger.ts)

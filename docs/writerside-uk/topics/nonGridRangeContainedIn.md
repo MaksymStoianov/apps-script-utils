@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що один діапазон **не** лежить цілком усередині іншого.</link-summary>
 
-<web-summary>nonGridRangeContainedIn() — Перевіряє, що один діапазон **не** лежить цілком усередині іншого. apps-script-utils, Українська.</web-summary>
+<web-summary>nonGridRangeContainedIn() — Перевіряє, що один діапазон **не** лежить цілком усередині іншого. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeContainedIn(outer, inner); // => true
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)
+[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)

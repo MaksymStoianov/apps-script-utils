@@ -4,7 +4,7 @@
 
 <link-summary>Adds columns after the last column that holds data.</link-summary>
 
-<web-summary>appendColumns() — Adds columns after the last column that holds data. apps-script-utils, English.</web-summary>
+<web-summary>appendColumns() — Adds columns after the last column that holds data. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -76,4 +76,4 @@ appendColumns(sheet.getRange("A1:D2"), [["a"], ["b"]]);
 
 ## Source
 
-[`src/appsscript/sheet/appendColumns.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/appendColumns.ts)
+[`src/appsscript/sheet/appendColumns.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/appendColumns.ts)

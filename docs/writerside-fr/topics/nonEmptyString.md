@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur comme chaîne non vide, en nommant l'argument en cas d'échec.</link-summary>
 
-<web-summary>nonEmptyString() — Renvoie la valeur comme chaîne non vide, en nommant l'argument en cas d'échec. apps-script-utils, Français.</web-summary>
+<web-summary>nonEmptyString() — Renvoie la valeur comme chaîne non vide, en nommant l'argument en cas d'échec. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.5.0 · <b>Déprécié</b></p>
@@ -50,4 +50,4 @@ nonEmptyString("Data", "sheetName"); // => "Data"
 
 ## Code source
 
-[`src/lang/string/nonEmptyString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonEmptyString.ts)
+[`src/lang/string/nonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonEmptyString.ts)

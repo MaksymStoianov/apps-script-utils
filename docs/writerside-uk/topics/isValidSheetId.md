@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення ідентифікатором аркуша.</link-summary>
 
-<web-summary>isValidSheetId() — Перевіряє, чи є значення ідентифікатором аркуша. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidSheetId() — Перевіряє, чи є значення ідентифікатором аркуша. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetId("0"); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)
+[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un nombre dénombrable.</link-summary>
 
-<web-summary>nonCountable() — Vérifie qu'une valeur n'est **pas** un nombre dénombrable. apps-script-utils, Français.</web-summary>
+<web-summary>nonCountable() — Vérifie qu'une valeur n'est **pas** un nombre dénombrable. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.11.0</p>
@@ -52,4 +52,4 @@ nonCountable(42); // => false
 
 ## Code source
 
-[`src/lang/number/nonCountable.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonCountable.ts)
+[`src/lang/number/nonCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonCountable.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Was eine Schemaspalte enthalten darf.</link-summary>
 
-<web-summary>SheetColumnType — Was eine Schemaspalte enthalten darf. apps-script-utils, Deutsch.</web-summary>
+<web-summary>SheetColumnType — Was eine Schemaspalte enthalten darf. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet/types</code> · Verfügbar seit: 1.11.0</p>
@@ -32,4 +32,4 @@ const type = "date";
 
 ## Quellcode
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

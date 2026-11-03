@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt die Formeln eines Blattes um.</link-summary>
 
-<web-summary>updateFormulas() — Schreibt die Formeln eines Blattes um. apps-script-utils, Deutsch.</web-summary>
+<web-summary>updateFormulas() — Schreibt die Formeln eines Blattes um. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -71,4 +71,4 @@ updateFormulas(sheet.getRange("D2:D100"), { "=SUM(A2:A)": "=SUM(A2:A1000)" });
 
 ## Quellcode
 
-[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/updateFormulas.ts)
+[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateFormulas.ts)

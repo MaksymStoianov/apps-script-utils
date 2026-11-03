@@ -2,7 +2,7 @@
 
 <link-summary>Every runtime-independent function: guards, arrays, numbers, strings, objects, JSON and HTML.</link-summary>
 
-<web-summary>Reference of every runtime-independent function in apps-script-utils: isX/nonX/requireX guards, array, number, string, object, JSON, HTML and time helpers.</web-summary>
+<web-summary>Reference of every runtime-independent function in @bootgs/utils: isX/nonX/requireX guards, array, number, string, object, JSON, HTML and time helpers.</web-summary>
 
 Framework-agnostic functions for type checking and validation (`isX`/`nonX`/`requireX`), string, array, and object
 manipulation, and JSON/HTML handling. These do not depend on the Google Apps Script runtime.

@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a string that carries something, or throws.</link-summary>
 
-<web-summary>requireNonEmptyString() — Returns the value as a string that carries something, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireNonEmptyString() — Returns the value as a string that carries something, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ requireNonEmptyString("   "); // throws EmptyStringException
 
 ## Source
 
-[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireNonEmptyString.ts)
+[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireNonEmptyString.ts)

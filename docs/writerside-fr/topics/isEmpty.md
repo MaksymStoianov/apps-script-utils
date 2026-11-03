@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est vide.</link-summary>
 
-<web-summary>isEmpty() — Vérifie si une valeur est vide. apps-script-utils, Français.</web-summary>
+<web-summary>isEmpty() — Vérifie si une valeur est vide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -55,4 +55,4 @@ isEmpty([0]); // => false
 
 ## Code source
 
-[`src/lang/base/isEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isEmpty.ts)
+[`src/lang/base/isEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isEmpty.ts)

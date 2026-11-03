@@ -4,7 +4,7 @@
 
 <link-summary>Ein Zellblock, beschrieben wie ihn die Sheets-API beschreibt.</link-summary>
 
-<web-summary>GridRange — Ein Zellblock, beschrieben wie ihn die Sheets-API beschreibt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>GridRange — Ein Zellblock, beschrieben wie ihn die Sheets-API beschreibt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet/types</code> · Verfügbar seit: 1.0.0</p>
@@ -42,4 +42,4 @@ const range = {
 
 ## Quellcode
 
-[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/GridRange.ts)
+[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/GridRange.ts)

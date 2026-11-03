@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** an HtmlOutput.</link-summary>
 
-<web-summary>nonHtmlOutput() — Checks whether a value is **not** an HtmlOutput. apps-script-utils, English.</web-summary>
+<web-summary>nonHtmlOutput() — Checks whether a value is **not** an HtmlOutput. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonHtmlOutput(output); // => false
 
 ## Source
 
-[`src/appsscript/ui/nonHtmlOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/nonHtmlOutput.ts)
+[`src/appsscript/ui/nonHtmlOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/nonHtmlOutput.ts)

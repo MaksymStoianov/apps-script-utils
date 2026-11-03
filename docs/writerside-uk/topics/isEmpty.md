@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення порожнім значенням.</link-summary>
 
-<web-summary>isEmpty() — Перевіряє, чи є значення порожнім значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>isEmpty() — Перевіряє, чи є значення порожнім значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -55,4 +55,4 @@ isEmpty([0]); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isEmpty.ts)
+[`src/lang/base/isEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isEmpty.ts)

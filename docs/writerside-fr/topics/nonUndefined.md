@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** `undefined`.</link-summary>
 
-<web-summary>nonUndefined() — Vérifie qu'une valeur n'est **pas** `undefined`. apps-script-utils, Français.</web-summary>
+<web-summary>nonUndefined() — Vérifie qu'une valeur n'est **pas** `undefined`. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.4.0</p>
@@ -52,4 +52,4 @@ nonUndefined(undefined); // => false
 
 ## Code source
 
-[`src/lang/base/nonUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonUndefined.ts)
+[`src/lang/base/nonUndefined.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonUndefined.ts)

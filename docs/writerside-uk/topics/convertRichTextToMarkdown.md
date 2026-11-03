@@ -4,7 +4,7 @@
 
 <link-summary>Перетворює стилізовані фрагменти тексту назад на Markdown.</link-summary>
 
-<web-summary>convertRichTextToMarkdown() — Перетворює стилізовані фрагменти тексту назад на Markdown. apps-script-utils, Українська.</web-summary>
+<web-summary>convertRichTextToMarkdown() — Перетворює стилізовані фрагменти тексту назад на Markdown. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 2.0.0</p>
@@ -61,4 +61,4 @@ convertRichTextToMarkdown([
 
 ## Вихідний код
 
-[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)
+[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)

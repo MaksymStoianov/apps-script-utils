@@ -4,7 +4,7 @@
 
 <link-summary>Writes a nested property by path, creating what is missing.</link-summary>
 
-<web-summary>setPath() — Writes a nested property by path, creating what is missing. apps-script-utils, English.</web-summary>
+<web-summary>setPath() — Writes a nested property by path, creating what is missing. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ setPath({}, ["rows", 0, "id"], 7); // => { "rows": [{ "id": 7 }] }
 
 ## Source
 
-[`src/lang/object/setPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/setPath.ts)
+[`src/lang/object/setPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/setPath.ts)

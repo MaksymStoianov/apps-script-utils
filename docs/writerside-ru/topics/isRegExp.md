@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение регулярным выражением.</link-summary>
 
-<web-summary>isRegExp() — Проверяет, является ли значение регулярным выражением. apps-script-utils, Русский.</web-summary>
+<web-summary>isRegExp() — Проверяет, является ли значение регулярным выражением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isRegExp(null); // => false
 
 ## Исходный код
 
-[`src/lang/base/isRegExp.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isRegExp.ts)
+[`src/lang/base/isRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isRegExp.ts)

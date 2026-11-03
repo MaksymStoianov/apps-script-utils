@@ -4,7 +4,7 @@
 
 <link-summary>Takes the first element of an array, or its first n elements, without an emptiness check.</link-summary>
 
-<web-summary>first() — Takes the first element of an array, or its first n elements, without an emptiness check. apps-script-utils, English.</web-summary>
+<web-summary>first() — Takes the first element of an array, or its first n elements, without an emptiness check. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -86,4 +86,4 @@ first([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Source
 
-[`src/lang/array/first.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/first.ts)
+[`src/lang/array/first.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/first.ts)

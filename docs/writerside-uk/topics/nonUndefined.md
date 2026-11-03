@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є значенням `undefined`.</link-summary>
 
-<web-summary>nonUndefined() — Перевіряє, що значення **не** є значенням `undefined`. apps-script-utils, Українська.</web-summary>
+<web-summary>nonUndefined() — Перевіряє, що значення **не** є значенням `undefined`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.4.0</p>
@@ -52,4 +52,4 @@ nonUndefined(undefined); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonUndefined.ts)
+[`src/lang/base/nonUndefined.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonUndefined.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Rewrites a string in kebab-case.</link-summary>
 
-<web-summary>toKebabCase() — Rewrites a string in kebab-case. apps-script-utils, English.</web-summary>
+<web-summary>toKebabCase() — Rewrites a string in kebab-case. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -53,4 +53,4 @@ toKebabCase("userFirstName"); // => "user-first-name"
 
 ## Source
 
-[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toKebabCase.ts)
+[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toKebabCase.ts)

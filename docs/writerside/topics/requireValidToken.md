@@ -4,7 +4,7 @@
 
 <link-summary>Returns a token once it matches one of the keys allowed, or throws.</link-summary>
 
-<web-summary>requireValidToken() — Returns a token once it matches one of the keys allowed, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidToken() — Returns a token once it matches one of the keys allowed, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/net</code> · Since: 1.5.0</p>
@@ -62,4 +62,4 @@ function doPost(event) {
 
 ## Source
 
-[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/net/requireValidToken.ts)
+[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/net/requireValidToken.ts)

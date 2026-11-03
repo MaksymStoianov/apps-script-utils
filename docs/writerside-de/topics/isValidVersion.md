@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Versionsangabe ist.</link-summary>
 
-<web-summary>isValidVersion() — Prüft, ob ein Wert eine Versionsangabe ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isValidVersion() — Prüft, ob ein Wert eine Versionsangabe ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -49,4 +49,4 @@ isValidVersion("1..2"); // => false
 
 ## Quellcode
 
-[`src/lang/string/isValidVersion.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/isValidVersion.ts)
+[`src/lang/string/isValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidVersion.ts)

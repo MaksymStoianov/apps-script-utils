@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення невід'ємним числом.</link-summary>
 
-<web-summary>isNonNegative() — Перевіряє, чи є значення невід'ємним числом. apps-script-utils, Українська.</web-summary>
+<web-summary>isNonNegative() — Перевіряє, чи є значення невід'ємним числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -50,4 +50,4 @@ isNonNegative("1"); // => false
 
 ## Вихідний код
 
-[`src/lang/number/isNonNegative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isNonNegative.ts)
+[`src/lang/number/isNonNegative.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isNonNegative.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Reports whether the current user is **not** a Workspace administrator.</link-summary>
 
-<web-summary>nonAdmin() — Reports whether the current user is **not** a Workspace administrator. apps-script-utils, English.</web-summary>
+<web-summary>nonAdmin() — Reports whether the current user is **not** a Workspace administrator. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/admin</code> · Since: 1.11.0</p>
@@ -39,4 +39,4 @@ if (nonAdmin()) {
 
 ## Source
 
-[`src/appsscript/admin/nonAdmin.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/admin/nonAdmin.ts)
+[`src/appsscript/admin/nonAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/nonAdmin.ts)

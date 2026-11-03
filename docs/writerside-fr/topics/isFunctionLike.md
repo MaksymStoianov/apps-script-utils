@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est appelable.</link-summary>
 
-<web-summary>isFunctionLike() — Vérifie si une valeur est appelable. apps-script-utils, Français.</web-summary>
+<web-summary>isFunctionLike() — Vérifie si une valeur est appelable. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.2.0</p>
@@ -51,4 +51,4 @@ isFunctionLike("fn"); // => false
 
 ## Code source
 
-[`src/lang/base/isFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isFunctionLike.ts)
+[`src/lang/base/isFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isFunctionLike.ts)

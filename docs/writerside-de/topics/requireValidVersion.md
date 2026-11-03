@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Versionsangabe zurück oder wirft.</link-summary>
 
-<web-summary>requireValidVersion() — Gibt den Wert als eine Versionsangabe zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireValidVersion() — Gibt den Wert als eine Versionsangabe zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidVersion("v1.2"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/string/requireValidVersion.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidVersion.ts)
+[`src/lang/string/requireValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidVersion.ts)

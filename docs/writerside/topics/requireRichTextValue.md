@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a rich text value, or throws.</link-summary>
 
-<web-summary>requireRichTextValue() — Returns the value as a rich text value, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireRichTextValue() — Returns the value as a rich text value, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -59,4 +59,4 @@ requireRichTextValue(null); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/sheet/requireRichTextValue.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireRichTextValue.ts)
+[`src/appsscript/sheet/requireRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireRichTextValue.ts)

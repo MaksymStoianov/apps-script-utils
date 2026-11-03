@@ -4,7 +4,7 @@
 
 <link-summary>How `merge` fills a template.</link-summary>
 
-<web-summary>MergeOptions — How `merge` fills a template. apps-script-utils, English.</web-summary>
+<web-summary>MergeOptions — How `merge` fills a template. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.11.0</p>
@@ -34,4 +34,4 @@ const options = { onMissing: "empty", escape: escapeHtml };
 
 ## Source
 
-[`src/lang/string/merge.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

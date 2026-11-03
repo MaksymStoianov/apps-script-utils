@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является вызываемым значением.</link-summary>
 
-<web-summary>requireNonFunctionLike() — Возвращает значение, убедившись, что оно не является вызываемым значением. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonFunctionLike() — Возвращает значение, убедившись, что оно не является вызываемым значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNonFunctionLike(Math.max); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonFunctionLike.ts)
+[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonFunctionLike.ts)

@@ -27,7 +27,7 @@ import { isNil } from "./isNil";
  * @see      {@link isNil}
  * @see      {@link nonNil}
  * @see      {@link requireNonNull}
- * @see      [requireNonNil on the documentation site](https://bootgs.github.io/apps-script-utils/requirenonnil.html)
+ * @see      [requireNonNil on the documentation site](https://bootgs.github.io/utils/requirenonnil.html)
  * @since    1.11.0
  * @version  1.0.0
  */

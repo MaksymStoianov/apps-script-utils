@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** empty.</link-summary>
 
-<web-summary>nonEmpty() — Checks whether a value is **not** empty. apps-script-utils, English.</web-summary>
+<web-summary>nonEmpty() — Checks whether a value is **not** empty. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.1.0</p>
@@ -56,4 +56,4 @@ nonEmpty(new Map()); // => false
 
 ## Source
 
-[`src/lang/base/nonEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonEmpty.ts)
+[`src/lang/base/nonEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonEmpty.ts)

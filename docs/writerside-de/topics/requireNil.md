@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als `null` oder `undefined` zurück oder wirft.</link-summary>
 
-<web-summary>requireNil() — Gibt den Wert als `null` oder `undefined` zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNil() — Gibt den Wert als `null` oder `undefined` zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNil(""); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNil.ts)
+[`src/lang/base/requireNil.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNil.ts)

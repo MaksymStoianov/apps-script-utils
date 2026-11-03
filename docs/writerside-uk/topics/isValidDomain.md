@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення доменним іменем.</link-summary>
 
-<web-summary>isValidDomain() — Перевіряє, чи є значення доменним іменем. apps-script-utils, Українська.</web-summary>
+<web-summary>isValidDomain() — Перевіряє, чи є значення доменним іменем. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code></p>
@@ -51,4 +51,4 @@ isValidDomain(""); // => false
 
 ## Вихідний код
 
-[`src/net/path/isValidDomain.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isValidDomain.ts)
+[`src/net/path/isValidDomain.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isValidDomain.ts)

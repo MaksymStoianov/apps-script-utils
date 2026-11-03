@@ -4,7 +4,7 @@
 
 <link-summary>Breaks a path into its parts.</link-summary>
 
-<web-summary>parse() — Breaks a path into its parts. apps-script-utils, English.</web-summary>
+<web-summary>parse() — Breaks a path into its parts. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code></p>
@@ -48,4 +48,4 @@ parse("readme.md");
 
 ## Source
 
-[`src/net/path/parse.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/parse.ts)
+[`src/net/path/parse.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/parse.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a callable value, or throws.</link-summary>
 
-<web-summary>requireFunctionLike() — Returns the value as a callable value, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireFunctionLike() — Returns the value as a callable value, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ requireFunctionLike({}); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireFunctionLike.ts)
+[`src/lang/base/requireFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireFunctionLike.ts)

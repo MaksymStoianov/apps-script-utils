@@ -4,7 +4,7 @@
 
 <link-summary>Les tags internes qu'une valeur peut déclarer, sous forme de constantes nommées.</link-summary>
 
-<web-summary>ObjectTag — Les tags internes qu'une valeur peut déclarer, sous forme de constantes nommées. apps-script-utils, Français.</web-summary>
+<web-summary>ObjectTag — Les tags internes qu'une valeur peut déclarer, sous forme de constantes nommées. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Disponible depuis: 1.0.0</p>
@@ -36,4 +36,4 @@ objectToString(null) === ObjectTag.NULL; // => true
 
 ## Code source
 
-[`src/lang/object/ObjectTag.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/ObjectTag.ts)
+[`src/lang/object/ObjectTag.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/ObjectTag.ts)

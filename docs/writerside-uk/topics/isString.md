@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення рядком.</link-summary>
 
-<web-summary>isString() — Перевіряє, чи є значення рядком. apps-script-utils, Українська.</web-summary>
+<web-summary>isString() — Перевіряє, чи є значення рядком. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isString([]); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isString.ts)
+[`src/lang/base/isString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isString.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает токен, если он совпал с одним из разрешённых ключей, иначе бросает исключение.</link-summary>
 
-<web-summary>requireValidToken() — Возвращает токен, если он совпал с одним из разрешённых ключей, иначе бросает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireValidToken() — Возвращает токен, если он совпал с одним из разрешённых ключей, иначе бросает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/net</code> · Доступно с: 1.5.0</p>
@@ -62,4 +62,4 @@ function doPost(event) {
 
 ## Исходный код
 
-[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/net/requireValidToken.ts)
+[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/net/requireValidToken.ts)

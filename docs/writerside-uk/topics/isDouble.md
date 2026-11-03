@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення числом з дробовою частиною.</link-summary>
 
-<web-summary>isDouble() — Перевіряє, чи є значення числом з дробовою частиною. apps-script-utils, Українська.</web-summary>
+<web-summary>isDouble() — Перевіряє, чи є значення числом з дробовою частиною. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -52,4 +52,4 @@ isDouble("1.5"); // => false
 
 ## Вихідний код
 
-[`src/lang/number/isDouble.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isDouble.ts)
+[`src/lang/number/isDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isDouble.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Comment `merge` remplit un gabarit.</link-summary>
 
-<web-summary>MergeOptions — Comment `merge` remplit un gabarit. apps-script-utils, Français.</web-summary>
+<web-summary>MergeOptions — Comment `merge` remplit un gabarit. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.11.0</p>
@@ -34,4 +34,4 @@ const options = { onMissing: "empty", escape: escapeHtml };
 
 ## Code source
 
-[`src/lang/string/merge.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

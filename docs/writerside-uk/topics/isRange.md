@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення діапазоном.</link-summary>
 
-<web-summary>isRange() — Перевіряє, чи є значення діапазоном. apps-script-utils, Українська.</web-summary>
+<web-summary>isRange() — Перевіряє, чи є значення діапазоном. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isRange(null); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isRange.ts)
+[`src/appsscript/sheet/isRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isRange.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que matrice à lignes de même longueur, ou lève en nommant la ligne fautive.</link-summary>
 
-<web-summary>requireConsistent2DArray() — Renvoie la valeur en tant que matrice à lignes de même longueur, ou lève en nommant la ligne fautive. apps-script-utils, Français.</web-summary>
+<web-summary>requireConsistent2DArray() — Renvoie la valeur en tant que matrice à lignes de même longueur, ou lève en nommant la ligne fautive. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -79,4 +79,4 @@ requireConsistent2DArray([1, 2], "rows must be a matrix");
 
 ## Code source
 
-[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/requireConsistent2DArray.ts)
+[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/requireConsistent2DArray.ts)

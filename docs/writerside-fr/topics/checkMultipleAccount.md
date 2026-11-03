@@ -4,7 +4,7 @@
 
 <link-summary>Indique si le script s'exécute sous un compte différent de celui qui l'a lancé.</link-summary>
 
-<web-summary>checkMultipleAccount() — Indique si le script s'exécute sous un compte différent de celui qui l'a lancé. apps-script-utils, Français.</web-summary>
+<web-summary>checkMultipleAccount() — Indique si le script s'exécute sous un compte différent de celui qui l'a lancé. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Disponible depuis: 1.0.0</p>
@@ -52,4 +52,4 @@ function onOpen(event) {
 
 ## Code source
 
-[`src/appsscript/ui/checkMultipleAccount.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/checkMultipleAccount.ts)
+[`src/appsscript/ui/checkMultipleAccount.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/checkMultipleAccount.ts)

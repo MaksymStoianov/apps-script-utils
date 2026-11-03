@@ -4,7 +4,7 @@
 
 <link-summary>Capitalises the first letter of every word and lowers the rest.</link-summary>
 
-<web-summary>toProperCase() — Capitalises the first letter of every word and lowers the rest. apps-script-utils, English.</web-summary>
+<web-summary>toProperCase() — Capitalises the first letter of every word and lowers the rest. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -50,4 +50,4 @@ toProperCase("hello WORLD"); // => "Hello World"
 
 ## Source
 
-[`src/lang/string/toProperCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toProperCase.ts)
+[`src/lang/string/toProperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toProperCase.ts)

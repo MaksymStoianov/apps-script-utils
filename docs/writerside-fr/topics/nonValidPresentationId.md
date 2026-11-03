@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un identifiant de présentation.</link-summary>
 
-<web-summary>nonValidPresentationId() — Vérifie qu'une valeur n'est **pas** un identifiant de présentation. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidPresentationId() — Vérifie qu'une valeur n'est **pas** un identifiant de présentation. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.11.0</p>
@@ -48,4 +48,4 @@ nonValidPresentationId("1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"); // => fa
 
 ## Code source
 
-[`src/appsscript/slide/nonValidPresentationId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/nonValidPresentationId.ts)
+[`src/appsscript/slide/nonValidPresentationId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonValidPresentationId.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як непорожній рядок або кидає виняток.</link-summary>
 
-<web-summary>requireNonEmptyString() — Повертає значення як непорожній рядок або кидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonEmptyString() — Повертає значення як непорожній рядок або кидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ requireNonEmptyString("   "); // throws EmptyStringException
 
 ## Вихідний код
 
-[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireNonEmptyString.ts)
+[`src/lang/string/requireNonEmptyString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireNonEmptyString.ts)

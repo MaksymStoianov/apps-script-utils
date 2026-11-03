@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine `Exception` ist.</link-summary>
 
-<web-summary>requireNonException() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine `Exception` ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonException() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine `Exception` ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireNonException(new IllegalArgumentException()); // throws IllegalArgumentEx
 
 ## Quellcode
 
-[`src/lang/base/requireNonException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonException.ts)
+[`src/lang/base/requireNonException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonException.ts)

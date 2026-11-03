@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un identifiant de feuille.</link-summary>
 
-<web-summary>isValidSheetId() — Vérifie si une valeur est un identifiant de feuille. apps-script-utils, Français.</web-summary>
+<web-summary>isValidSheetId() — Vérifie si une valeur est un identifiant de feuille. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetId("0"); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)
+[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)

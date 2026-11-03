@@ -27,7 +27,7 @@ interface ToLowerCaseOptions {
  * @see     {@link toProperCase}
  * @see     {@link toSnakeCase}
  * @see     {@link toUpperCase}
- * @see     [toLowerCase on the documentation site](https://bootgs.github.io/apps-script-utils/tolowercase.html)
+ * @see     [toLowerCase on the documentation site](https://bootgs.github.io/utils/tolowercase.html)
  * @since   1.0.0
  * @version 1.0.0
  */

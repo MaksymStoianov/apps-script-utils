@@ -4,7 +4,7 @@
 
 <link-summary>Welche Funktionen die Apps-Script-Laufzeit brauchen und welche überall laufen.</link-summary>
 
-<web-summary>Welche Teile von apps-script-utils von Google-Apps-Script-Diensten abhängen und welche in Node.js oder einer Testsuite laufen — und was das fürs Testen des eigenen Codes bedeutet.</web-summary>
+<web-summary>Welche Teile von @bootgs/utils von Google-Apps-Script-Diensten abhängen und welche in Node.js oder einer Testsuite laufen — und was das fürs Testen des eigenen Codes bedeutet.</web-summary>
 
 Die Bibliothek ist ein Paket, aber ihre Funktionen laufen nicht alle an denselben Orten. Auf welcher Seite der Linie
 eine Funktion steht, entscheidet, ob sie sich als Unit testen lässt und ob sie einen Dienstaufruf kostet.
@@ -52,7 +52,7 @@ Dieselbe Überlegung gilt für die Prüfung. Prüfen Sie die Form der Daten, bev
 danach:
 
 ```typescript
-import { IllegalArgumentException, appendRows, isConsistent2DArray } from "apps-script-utils";
+import { IllegalArgumentException, appendRows, isConsistent2DArray } from "@bootgs/utils";
 
 if (!isConsistent2DArray(rows)) {
   throw new IllegalArgumentException("every row must have the same number of columns");

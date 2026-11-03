@@ -4,7 +4,7 @@
 
 <link-summary>Утверждает, что условие выполняется, и бросает исключение, если нет.</link-summary>
 
-<web-summary>requireState() — Утверждает, что условие выполняется, и бросает исключение, если нет. apps-script-utils, Русский.</web-summary>
+<web-summary>requireState() — Утверждает, что условие выполняется, и бросает исключение, если нет. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ function close(connection) {
 
 ## Исходный код
 
-[`src/lang/base/requireState.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireState.ts)
+[`src/lang/base/requireState.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireState.ts)

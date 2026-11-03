@@ -4,7 +4,7 @@
 
 <link-summary>Colours the HTML in a range as source code.</link-summary>
 
-<web-summary>highlightHtml() — Colours the HTML in a range as source code. apps-script-utils, English.</web-summary>
+<web-summary>highlightHtml() — Colours the HTML in a range as source code. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -58,4 +58,4 @@ highlightHtml(range);
 
 ## Source
 
-[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/highlightHtml.ts)
+[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/highlightHtml.ts)

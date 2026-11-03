@@ -4,7 +4,7 @@
 
 <link-summary>Від рядка очікувався вміст, а він виявився null, undefined або порожнім.</link-summary>
 
-<web-summary>EmptyStringException — Від рядка очікувався вміст, а він виявився null, undefined або порожнім. apps-script-utils, Українська.</web-summary>
+<web-summary>EmptyStringException — Від рядка очікувався вміст, а він виявився null, undefined або порожнім. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/EmptyStringException.ts)
+[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/EmptyStringException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un identifiant de feuille.</link-summary>
 
-<web-summary>nonValidSheetId() — Vérifie qu'une valeur n'est **pas** un identifiant de feuille. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidSheetId() — Vérifie qu'une valeur n'est **pas** un identifiant de feuille. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSheetId(1234567890); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)
+[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)

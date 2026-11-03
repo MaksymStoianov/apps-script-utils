@@ -4,7 +4,7 @@
 
 <link-summary>Очікувався рядок, а надійшло щось інше.</link-summary>
 
-<web-summary>InvalidStringException — Очікувався рядок, а надійшло щось інше. apps-script-utils, Українська.</web-summary>
+<web-summary>InvalidStringException — Очікувався рядок, а надійшло щось інше. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/InvalidStringException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/InvalidStringException.ts)
+[`src/exception/InvalidStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidStringException.ts)

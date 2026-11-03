@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення значенням `null` або `undefined`.</link-summary>
 
-<web-summary>isNil() — Перевіряє, чи є значення значенням `null` або `undefined`. apps-script-utils, Українська.</web-summary>
+<web-summary>isNil() — Перевіряє, чи є значення значенням `null` або `undefined`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isNil(false); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isNil.ts)
+[`src/lang/base/isNil.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isNil.ts)

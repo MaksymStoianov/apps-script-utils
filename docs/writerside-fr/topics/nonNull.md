@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** `null`.</link-summary>
 
-<web-summary>nonNull() — Vérifie qu'une valeur n'est **pas** `null`. apps-script-utils, Français.</web-summary>
+<web-summary>nonNull() — Vérifie qu'une valeur n'est **pas** `null`. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -52,4 +52,4 @@ nonNull(null); // => false
 
 ## Code source
 
-[`src/lang/base/nonNull.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNull.ts)
+[`src/lang/base/nonNull.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNull.ts)

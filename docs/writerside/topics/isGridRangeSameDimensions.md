@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether two grid ranges have the same height and width.</link-summary>
 
-<web-summary>isGridRangeSameDimensions() — Checks whether two grid ranges have the same height and width. apps-script-utils, English.</web-summary>
+<web-summary>isGridRangeSameDimensions() — Checks whether two grid ranges have the same height and width. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -48,4 +48,4 @@ isGridRangeSameDimensions(source, target); // => true
 
 ## Source
 
-[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)

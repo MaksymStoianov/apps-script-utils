@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение относительным путём.</link-summary>
 
-<web-summary>isRelative() — Проверяет, является ли значение относительным путём. apps-script-utils, Русский.</web-summary>
+<web-summary>isRelative() — Проверяет, является ли значение относительным путём. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code></p>
@@ -50,4 +50,4 @@ isRelative("https://example.com/a"); // => false
 
 ## Исходный код
 
-[`src/net/path/isRelative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isRelative.ts)
+[`src/net/path/isRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isRelative.ts)

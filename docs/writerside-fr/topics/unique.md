@@ -4,7 +4,7 @@
 
 <link-summary>Retire les doublons d'un tableau en gardant la première occurrence de chaque valeur.</link-summary>
 
-<web-summary>unique() — Retire les doublons d'un tableau en gardant la première occurrence de chaque valeur. apps-script-utils, Français.</web-summary>
+<web-summary>unique() — Retire les doublons d'un tableau en gardant la première occurrence de chaque valeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -49,7 +49,7 @@ unique([0, -0]); // => [0]
 ### Dédoublonner des enregistrements par une clé
 
 ```typescript
-import { unique } from "apps-script-utils";
+import { unique } from "@bootgs/utils";
 
 const rows = [
   { id: 1, name: "first" },
@@ -84,4 +84,4 @@ function listStatuses(sheet) {
 
 ## Code source
 
-[`src/lang/array/unique.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/unique.ts)
+[`src/lang/array/unique.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/unique.ts)

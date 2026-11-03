@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a symbol.</link-summary>
 
-<web-summary>isSymbol() — Checks whether a value is a symbol. apps-script-utils, English.</web-summary>
+<web-summary>isSymbol() — Checks whether a value is a symbol. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -50,4 +50,4 @@ isSymbol(null); // => false
 
 ## Source
 
-[`src/lang/base/isSymbol.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isSymbol.ts)
+[`src/lang/base/isSymbol.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isSymbol.ts)

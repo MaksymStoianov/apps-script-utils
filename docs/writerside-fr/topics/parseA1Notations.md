@@ -4,7 +4,7 @@
 
 <link-summary>Lit une liste de notations A1 séparées par des virgules.</link-summary>
 
-<web-summary>parseA1Notations() — Lit une liste de notations A1 séparées par des virgules. apps-script-utils, Français.</web-summary>
+<web-summary>parseA1Notations() — Lit une liste de notations A1 séparées par des virgules. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.6.0</p>
@@ -44,4 +44,4 @@ parseA1Notations("A1:B2, C3").length; // => 2
 
 ## Code source
 
-[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)
+[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)

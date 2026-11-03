@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є символом.</link-summary>
 
-<web-summary>requireNonSymbol() — Повертає значення, переконавшись, що воно не є символом. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonSymbol() — Повертає значення, переконавшись, що воно не є символом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonSymbol(Symbol.iterator); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonSymbol.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonSymbol.ts)
+[`src/lang/base/requireNonSymbol.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonSymbol.ts)

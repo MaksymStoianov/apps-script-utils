@@ -4,7 +4,7 @@
 
 <link-summary>Записывает вложенное свойство по пути, создавая недостающее.</link-summary>
 
-<web-summary>setPath() — Записывает вложенное свойство по пути, создавая недостающее. apps-script-utils, Русский.</web-summary>
+<web-summary>setPath() — Записывает вложенное свойство по пути, создавая недостающее. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ setPath({}, ["rows", 0, "id"], 7); // => { "rows": [{ "id": 7 }] }
 
 ## Исходный код
 
-[`src/lang/object/setPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/setPath.ts)
+[`src/lang/object/setPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/setPath.ts)

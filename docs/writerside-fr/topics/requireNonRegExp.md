@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas une expression régulière.</link-summary>
 
-<web-summary>requireNonRegExp() — Renvoie la valeur après avoir vérifié qu'elle n'est pas une expression régulière. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonRegExp() — Renvoie la valeur après avoir vérifié qu'elle n'est pas une expression régulière. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonRegExp(new RegExp("a")); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonRegExp.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonRegExp.ts)
+[`src/lang/base/requireNonRegExp.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonRegExp.ts)

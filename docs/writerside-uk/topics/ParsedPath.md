@@ -4,7 +4,7 @@
 
 <link-summary>Частини, на які розпадається шлях.</link-summary>
 
-<web-summary>ParsedPath — Частини, на які розпадається шлях. apps-script-utils, Українська.</web-summary>
+<web-summary>ParsedPath — Частини, на які розпадається шлях. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path/types</code> · Доступно з: 0.1.0</p>
@@ -39,4 +39,4 @@ parse("readme.md");
 
 ## Вихідний код
 
-[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/types/ParsedPath.ts)
+[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/types/ParsedPath.ts)

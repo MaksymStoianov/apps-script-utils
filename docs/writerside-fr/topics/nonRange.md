@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une plage.</link-summary>
 
-<web-summary>nonRange() — Vérifie qu'une valeur n'est **pas** une plage. apps-script-utils, Français.</web-summary>
+<web-summary>nonRange() — Vérifie qu'une valeur n'est **pas** une plage. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.3.0</p>
@@ -53,4 +53,4 @@ nonRange(range); // => false
 
 ## Code source
 
-[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRange.ts)
+[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRange.ts)

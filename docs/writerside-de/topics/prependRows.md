@@ -4,7 +4,7 @@
 
 <link-summary>Fügt Zeilen vor den Daten ein — im Blatt oder an einem Bereich.</link-summary>
 
-<web-summary>prependRows() — Fügt Zeilen vor den Daten ein — im Blatt oder an einem Bereich. apps-script-utils, Deutsch.</web-summary>
+<web-summary>prependRows() — Fügt Zeilen vor den Daten ein — im Blatt oder an einem Bereich. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -75,4 +75,4 @@ prependRows(sheet.getRange("B4:C13"), [["Name", "Email"]]);
 
 ## Quellcode
 
-[`src/appsscript/sheet/prependRows.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependRows.ts)
+[`src/appsscript/sheet/prependRows.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependRows.ts)

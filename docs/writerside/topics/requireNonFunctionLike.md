@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not callable.</link-summary>
 
-<web-summary>requireNonFunctionLike() — Returns the value after checking that it is not callable. apps-script-utils, English.</web-summary>
+<web-summary>requireNonFunctionLike() — Returns the value after checking that it is not callable. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNonFunctionLike(Math.max); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonFunctionLike.ts)
+[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonFunctionLike.ts)

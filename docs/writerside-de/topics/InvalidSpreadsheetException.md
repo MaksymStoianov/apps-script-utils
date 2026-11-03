@@ -4,7 +4,7 @@
 
 <link-summary>Eine Tabelle war erwartet, der Wert ist keine.</link-summary>
 
-<web-summary>InvalidSpreadsheetException — Eine Tabelle war erwartet, der Wert ist keine. apps-script-utils, Deutsch.</web-summary>
+<web-summary>InvalidSpreadsheetException — Eine Tabelle war erwartet, der Wert ist keine. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception/appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not the `NaN` number.</link-summary>
 
-<web-summary>requireNonNaN() — Returns the value after checking that it is not the `NaN` number. apps-script-utils, English.</web-summary>
+<web-summary>requireNonNaN() — Returns the value after checking that it is not the `NaN` number. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonNaN(0 / 0); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireNonNaN.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonNaN.ts)
+[`src/lang/number/requireNonNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonNaN.ts)

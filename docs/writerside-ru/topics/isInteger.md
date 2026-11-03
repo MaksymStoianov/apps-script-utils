@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение целым числом.</link-summary>
 
-<web-summary>isInteger() — Проверяет, является ли значение целым числом. apps-script-utils, Русский.</web-summary>
+<web-summary>isInteger() — Проверяет, является ли значение целым числом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно с: 1.5.0</p>
@@ -52,4 +52,4 @@ isInteger("42"); // => false
 
 ## Исходный код
 
-[`src/lang/number/isInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isInteger.ts)
+[`src/lang/number/isInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isInteger.ts)

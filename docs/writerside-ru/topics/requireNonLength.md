@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является допустимой длиной массива.</link-summary>
 
-<web-summary>requireNonLength() — Возвращает значение, убедившись, что оно не является допустимой длиной массива. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonLength() — Возвращает значение, убедившись, что оно не является допустимой длиной массива. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonLength(42); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonLength.ts)
+[`src/lang/base/requireNonLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonLength.ts)

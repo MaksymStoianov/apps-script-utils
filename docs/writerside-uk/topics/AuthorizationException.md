@@ -4,7 +4,7 @@
 
 <link-summary>Той, хто викликає, відомий, але робити це йому не дозволено.</link-summary>
 
-<web-summary>AuthorizationException — Той, хто викликає, відомий, але робити це йому не дозволено. apps-script-utils, Українська.</web-summary>
+<web-summary>AuthorizationException — Той, хто викликає, відомий, але робити це йому не дозволено. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.11.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/AuthorizationException.ts)
+[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/AuthorizationException.ts)

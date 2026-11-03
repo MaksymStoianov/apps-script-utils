@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que une diapositive, ou lève une exception.</link-summary>
 
-<web-summary>requireSlide() — Renvoie la valeur en tant que une diapositive, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireSlide() — Renvoie la valeur en tant que une diapositive, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSlide(null); // throws SlideNotFoundException
 
 ## Code source
 
-[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireSlide.ts)
+[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireSlide.ts)

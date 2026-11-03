@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является диапазоном из одной ячейки.</link-summary>
 
-<web-summary>nonCellGridRange() — Проверяет, что значение **не** является диапазоном из одной ячейки. apps-script-utils, Русский.</web-summary>
+<web-summary>nonCellGridRange() — Проверяет, что значение **не** является диапазоном из одной ячейки. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -49,4 +49,4 @@ nonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endCol
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)
+[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)

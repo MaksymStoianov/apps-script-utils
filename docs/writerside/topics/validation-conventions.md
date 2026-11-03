@@ -2,7 +2,7 @@
 
 <link-summary>The isX / nonX / requireX / requireNonX naming scheme and what each prefix guarantees.</link-summary>
 
-<web-summary>The validation naming scheme of apps-script-utils: isX and nonX answer questions, requireX and requireNonX validate and return, and every prefix has one signature.</web-summary>
+<web-summary>The validation naming scheme of @bootgs/utils: isX and nonX answer questions, requireX and requireNonX validate and return, and every prefix has one signature.</web-summary>
 
 Most of this library is validation, and almost all of it follows one naming scheme. Learn the four prefixes once and
 the name of a function tells you its signature, its return value, and whether it can throw.
@@ -24,7 +24,7 @@ The `isX` and `nonX` pair are predicates: they answer a question and never inter
 `isX` guards are declared as TypeScript type predicates, so the compiler narrows the value inside the branch:
 
 ```typescript
-import { isString } from "apps-script-utils";
+import { isString } from "@bootgs/utils";
 
 function describe(value: unknown): string {
   if (isString(value)) {
@@ -38,7 +38,7 @@ function describe(value: unknown): string {
 `nonX` narrows in the opposite direction — it removes `X` from the type rather than confirming it:
 
 ```typescript
-import { nonString } from "apps-script-utils";
+import { nonString } from "@bootgs/utils";
 
 function lengthOf(value: string | number): number {
   if (nonString(value)) {
@@ -57,7 +57,7 @@ sentence rather than as a negation, which matters where the alternative would be
 `requireX` validates and returns, so it composes into an expression instead of forcing a separate statement:
 
 ```typescript
-import { requireNumber, requireString } from "apps-script-utils";
+import { requireNumber, requireString } from "@bootgs/utils";
 
 function repeat(text: unknown, times: unknown): string {
   return requireString(text).repeat(requireNumber(times));
@@ -103,7 +103,7 @@ Three names cover the empty cases, and the distinction is exact:
 alike and throws `NullPointerException`:
 
 ```typescript
-import { requireNonNull } from "apps-script-utils";
+import { requireNonNull } from "@bootgs/utils";
 
 const sheet = requireNonNull(spreadsheet.getSheetByName("Data"), "sheet 'Data' is missing");
 ```

@@ -4,7 +4,7 @@
 
 <link-summary>Raises a string to upper case, optionally tidying its whitespace.</link-summary>
 
-<web-summary>toUpperCase() — Raises a string to upper case, optionally tidying its whitespace. apps-script-utils, English.</web-summary>
+<web-summary>toUpperCase() — Raises a string to upper case, optionally tidying its whitespace. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -49,4 +49,4 @@ toUpperCase("Hello"); // => "HELLO"
 
 ## Source
 
-[`src/lang/string/toUpperCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toUpperCase.ts)
+[`src/lang/string/toUpperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toUpperCase.ts)

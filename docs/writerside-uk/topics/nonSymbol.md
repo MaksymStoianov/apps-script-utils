@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є символом.</link-summary>
 
-<web-summary>nonSymbol() — Перевіряє, що значення **не** є символом. apps-script-utils, Українська.</web-summary>
+<web-summary>nonSymbol() — Перевіряє, що значення **не** є символом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.4.0</p>
@@ -52,4 +52,4 @@ nonSymbol(Symbol.iterator); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonSymbol.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonSymbol.ts)
+[`src/lang/base/nonSymbol.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonSymbol.ts)

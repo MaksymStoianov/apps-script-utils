@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является функцией.</link-summary>
 
-<web-summary>nonFunction() — Проверяет, что значение **не** является функцией. apps-script-utils, Русский.</web-summary>
+<web-summary>nonFunction() — Проверяет, что значение **не** является функцией. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.4.0</p>
@@ -54,4 +54,4 @@ nonFunction(Math.max); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonFunction.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonFunction.ts)
+[`src/lang/base/nonFunction.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonFunction.ts)

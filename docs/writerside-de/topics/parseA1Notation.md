@@ -4,7 +4,7 @@
 
 <link-summary>Liest A1-Notation in einen Rasterbereich.</link-summary>
 
-<web-summary>parseA1Notation() — Liest A1-Notation in einen Rasterbereich. apps-script-utils, Deutsch.</web-summary>
+<web-summary>parseA1Notation() — Liest A1-Notation in einen Rasterbereich. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ parseA1Notation("A1").sheetName; // => null
 
 ## Quellcode
 
-[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)
+[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)

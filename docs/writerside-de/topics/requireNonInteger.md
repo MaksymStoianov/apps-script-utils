@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine ganze Zahl ist.</link-summary>
 
-<web-summary>requireNonInteger() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine ganze Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonInteger() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine ganze Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonInteger(-7); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/number/requireNonInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonInteger.ts)
+[`src/lang/number/requireNonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonInteger.ts)

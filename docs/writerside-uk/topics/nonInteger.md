@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є цілим числом.</link-summary>
 
-<web-summary>nonInteger() — Перевіряє, що значення **не** є цілим числом. apps-script-utils, Українська.</web-summary>
+<web-summary>nonInteger() — Перевіряє, що значення **не** є цілим числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -54,4 +54,4 @@ nonInteger(0); // => false
 
 ## Вихідний код
 
-[`src/lang/number/nonInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonInteger.ts)
+[`src/lang/number/nonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonInteger.ts)

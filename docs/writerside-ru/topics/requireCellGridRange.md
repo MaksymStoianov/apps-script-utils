@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как диапазон из одной ячейки или выбрасывает исключение.</link-summary>
 
-<web-summary>requireCellGridRange() — Возвращает значение как диапазон из одной ячейки или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireCellGridRange() — Возвращает значение как диапазон из одной ячейки или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -56,4 +56,4 @@ requireCellGridRange({}); // throws InvalidGridRangeException
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireCellGridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireCellGridRange.ts)
+[`src/appsscript/sheet/requireCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireCellGridRange.ts)

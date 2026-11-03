@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt den ersten Buchstaben jedes Wortes groß und den Rest klein.</link-summary>
 
-<web-summary>toProperCase() — Schreibt den ersten Buchstaben jedes Wortes groß und den Rest klein. apps-script-utils, Deutsch.</web-summary>
+<web-summary>toProperCase() — Schreibt den ersten Buchstaben jedes Wortes groß und den Rest klein. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -50,4 +50,4 @@ toProperCase("hello WORLD"); // => "Hello World"
 
 ## Quellcode
 
-[`src/lang/string/toProperCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toProperCase.ts)
+[`src/lang/string/toProperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toProperCase.ts)

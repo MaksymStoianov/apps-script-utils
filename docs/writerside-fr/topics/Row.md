@@ -4,7 +4,7 @@
 
 <link-summary>Une ligne, telle que `getValues` la remet à un filtre ou à un mappeur.</link-summary>
 
-<web-summary>Row — Une ligne, telle que `getValues` la remet à un filtre ou à un mappeur. apps-script-utils, Français.</web-summary>
+<web-summary>Row — Une ligne, telle que `getValues` la remet à un filtre ou à un mappeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -39,4 +39,4 @@ const row = {
 
 ## Code source
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

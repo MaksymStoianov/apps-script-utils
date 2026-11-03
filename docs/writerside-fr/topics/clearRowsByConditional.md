@@ -4,7 +4,7 @@
 
 <link-summary>Vide les lignes que le prédicat sélectionne, sans supprimer les lignes.</link-summary>
 
-<web-summary>clearRowsByConditional() — Vide les lignes que le prédicat sélectionne, sans supprimer les lignes. apps-script-utils, Français.</web-summary>
+<web-summary>clearRowsByConditional() — Vide les lignes que le prédicat sélectionne, sans supprimer les lignes. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -75,4 +75,4 @@ clearRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cell
 
 ## Code source
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur après avoir vérifié qu'elle n'est pas un entier.</link-summary>
 
-<web-summary>requireNonInteger() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un entier. apps-script-utils, Français.</web-summary>
+<web-summary>requireNonInteger() — Renvoie la valeur après avoir vérifié qu'elle n'est pas un entier. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonInteger(-7); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/number/requireNonInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonInteger.ts)
+[`src/lang/number/requireNonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonInteger.ts)

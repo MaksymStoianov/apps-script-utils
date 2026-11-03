@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a number with a fractional part.</link-summary>
 
-<web-summary>isDouble() — Checks whether a value is a number with a fractional part. apps-script-utils, English.</web-summary>
+<web-summary>isDouble() — Checks whether a value is a number with a fractional part. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -52,4 +52,4 @@ isDouble("1.5"); // => false
 
 ## Source
 
-[`src/lang/number/isDouble.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isDouble.ts)
+[`src/lang/number/isDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isDouble.ts)

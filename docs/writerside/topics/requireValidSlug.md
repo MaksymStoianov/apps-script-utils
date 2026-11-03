@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a slug, or throws.</link-summary>
 
-<web-summary>requireValidSlug() — Returns the value as a slug, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidSlug() — Returns the value as a slug, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSlug("my page"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/string/requireValidSlug.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidSlug.ts)
+[`src/lang/string/requireValidSlug.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidSlug.ts)

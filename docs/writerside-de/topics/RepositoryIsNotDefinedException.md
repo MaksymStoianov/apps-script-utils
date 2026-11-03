@@ -4,7 +4,7 @@
 
 <link-summary>Ein Repository, das das Skript erwartet hat, ist nicht da.</link-summary>
 
-<web-summary>RepositoryIsNotDefinedException — Ein Repository, das das Skript erwartet hat, ist nicht da. apps-script-utils, Deutsch.</web-summary>
+<web-summary>RepositoryIsNotDefinedException — Ein Repository, das das Skript erwartet hat, ist nicht da. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)
+[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)

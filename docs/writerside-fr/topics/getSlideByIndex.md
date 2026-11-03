@@ -4,7 +4,7 @@
 
 <link-summary>Trouve la diapositive à une position donnée, dans une présentation ou dans celle active.</link-summary>
 
-<web-summary>getSlideByIndex() — Trouve la diapositive à une position donnée, dans une présentation ou dans celle active. apps-script-utils, Français.</web-summary>
+<web-summary>getSlideByIndex() — Trouve la diapositive à une position donnée, dans une présentation ou dans celle active. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -55,4 +55,4 @@ const third = getSlideByIndex(2, SlidesApp.openById(id));
 
 ## Code source
 
-[`src/appsscript/slide/getSlideByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/getSlideByIndex.ts)
+[`src/appsscript/slide/getSlideByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/getSlideByIndex.ts)

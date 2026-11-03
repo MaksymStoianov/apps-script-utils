@@ -4,7 +4,7 @@
 
 <link-summary>Знаходить значення, наявні в усіх переданих масивах.</link-summary>
 
-<web-summary>intersect() — Знаходить значення, наявні в усіх переданих масивах. apps-script-utils, Українська.</web-summary>
+<web-summary>intersect() — Знаходить значення, наявні в усіх переданих масивах. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -80,4 +80,4 @@ intersect(); // => []
 
 ## Вихідний код
 
-[`src/lang/array/intersect.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/intersect.ts)
+[`src/lang/array/intersect.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/intersect.ts)

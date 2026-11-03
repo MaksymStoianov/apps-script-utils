@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Präsentations-Id ist.</link-summary>
 
-<web-summary>nonValidPresentationId() — Prüft, ob ein Wert **nicht** eine Präsentations-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonValidPresentationId() — Prüft, ob ein Wert **nicht** eine Präsentations-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.11.0</p>
@@ -48,4 +48,4 @@ nonValidPresentationId("1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"); // => fa
 
 ## Quellcode
 
-[`src/appsscript/slide/nonValidPresentationId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/nonValidPresentationId.ts)
+[`src/appsscript/slide/nonValidPresentationId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonValidPresentationId.ts)

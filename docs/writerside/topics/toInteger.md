@@ -4,7 +4,7 @@
 
 <link-summary>Reads a number out of a value, or reports that there is none.</link-summary>
 
-<web-summary>toInteger() — Reads a number out of a value, or reports that there is none. apps-script-utils, English.</web-summary>
+<web-summary>toInteger() — Reads a number out of a value, or reports that there is none. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.0.0</p>
@@ -49,4 +49,4 @@ toInteger(1.9); // => 1.9
 
 ## Source
 
-[`src/lang/number/toInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/toInteger.ts)
+[`src/lang/number/toInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/toInteger.ts)

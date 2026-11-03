@@ -4,7 +4,7 @@
 
 <link-summary>Wie weit `removeSchema` geht.</link-summary>
 
-<web-summary>RemoveSchemaOptions — Wie weit `removeSchema` geht. apps-script-utils, Deutsch.</web-summary>
+<web-summary>RemoveSchemaOptions — Wie weit `removeSchema` geht. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -32,4 +32,4 @@ const options = { validation: true };
 
 ## Quellcode
 
-[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/removeSchema.ts)
+[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/removeSchema.ts)

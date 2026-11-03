@@ -4,7 +4,7 @@
 
 <link-summary>Gibt zurück, wie viele Tage der Monat eines Datums hat.</link-summary>
 
-<web-summary>getDaysInMonth() — Gibt zurück, wie viele Tage der Monat eines Datums hat. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getDaysInMonth() — Gibt zurück, wie viele Tage der Monat eines Datums hat. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time</code> · Verfügbar seit: 1.11.0</p>
@@ -48,4 +48,4 @@ getDaysInMonth(new Date(2026, 1, 10)); // => 28
 
 ## Quellcode
 
-[`src/time/getDaysInMonth.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/getDaysInMonth.ts)
+[`src/time/getDaysInMonth.ts`](https://github.com/bootgs/utils/blob/main/src/time/getDaysInMonth.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Зберігає схему на аркуші й застосовує те, що вона описує.</link-summary>
 
-<web-summary>insertSchema() — Зберігає схему на аркуші й застосовує те, що вона описує. apps-script-utils, Українська.</web-summary>
+<web-summary>insertSchema() — Зберігає схему на аркуші й застосовує те, що вона описує. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -66,4 +66,4 @@ insertSchema(sheet, {
 
 ## Вихідний код
 
-[`src/appsscript/sheet/insertSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/insertSchema.ts)
+[`src/appsscript/sheet/insertSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/insertSchema.ts)

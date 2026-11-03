@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une diapositive.</link-summary>
 
-<web-summary>isSlide() — Vérifie si une valeur est une diapositive. apps-script-utils, Français.</web-summary>
+<web-summary>isSlide() — Vérifie si une valeur est une diapositive. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -51,4 +51,4 @@ isSlide(null); // => false
 
 ## Code source
 
-[`src/appsscript/slide/isSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/isSlide.ts)
+[`src/appsscript/slide/isSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isSlide.ts)

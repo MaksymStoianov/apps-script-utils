@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a safe integer, or throws.</link-summary>
 
-<web-summary>requireSafeInteger() — Returns the value as a safe integer, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireSafeInteger() — Returns the value as a safe integer, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ requireSafeInteger(1.5); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireSafeInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireSafeInteger.ts)
+[`src/lang/number/requireSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireSafeInteger.ts)

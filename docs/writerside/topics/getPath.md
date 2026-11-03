@@ -4,7 +4,7 @@
 
 <link-summary>Reads a nested property by path, with a fallback.</link-summary>
 
-<web-summary>getPath() — Reads a nested property by path, with a fallback. apps-script-utils, English.</web-summary>
+<web-summary>getPath() — Reads a nested property by path, with a fallback. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Since: 1.11.0</p>
@@ -52,4 +52,4 @@ getPath({ rows: [{ id: 7 }] }, ["rows", 0, "id"]); // => 7
 
 ## Source
 
-[`src/lang/object/getPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/getPath.ts)
+[`src/lang/object/getPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/getPath.ts)

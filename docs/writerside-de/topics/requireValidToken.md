@@ -4,7 +4,7 @@
 
 <link-summary>Gibt ein Token zurück, sobald es einem erlaubten Schlüssel entspricht, sonst wirft es.</link-summary>
 
-<web-summary>requireValidToken() — Gibt ein Token zurück, sobald es einem erlaubten Schlüssel entspricht, sonst wirft es. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireValidToken() — Gibt ein Token zurück, sobald es einem erlaubten Schlüssel entspricht, sonst wirft es. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/net</code> · Verfügbar seit: 1.5.0</p>
@@ -62,4 +62,4 @@ function doPost(event) {
 
 ## Quellcode
 
-[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/net/requireValidToken.ts)
+[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/net/requireValidToken.ts)

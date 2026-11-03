@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a non-empty two-dimensional array, or throws.</link-summary>
 
-<web-summary>require2DArray() — Returns the value as a non-empty two-dimensional array, or throws. apps-script-utils, English.</web-summary>
+<web-summary>require2DArray() — Returns the value as a non-empty two-dimensional array, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -79,4 +79,4 @@ require2DArray([]); // throws IllegalArgumentException — no rows
 
 ## Source
 
-[`src/lang/array/require2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/require2DArray.ts)
+[`src/lang/array/require2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/require2DArray.ts)

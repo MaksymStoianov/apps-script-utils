@@ -4,7 +4,7 @@
 
 <link-summary>Ein Argument war von der falschen Art oder lag außerhalb des akzeptierten Bereichs.</link-summary>
 
-<web-summary>IllegalArgumentException — Ein Argument war von der falschen Art oder lag außerhalb des akzeptierten Bereichs. apps-script-utils, Deutsch.</web-summary>
+<web-summary>IllegalArgumentException — Ein Argument war von der falschen Art oder lag außerhalb des akzeptierten Bereichs. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/IllegalArgumentException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/IllegalArgumentException.ts)
+[`src/exception/IllegalArgumentException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalArgumentException.ts)

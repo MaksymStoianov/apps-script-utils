@@ -4,7 +4,7 @@
 
 <link-summary>Extrait la partie plage d'une notation A1.</link-summary>
 
-<web-summary>extractRangeFromA1Notation() — Extrait la partie plage d'une notation A1. apps-script-utils, Français.</web-summary>
+<web-summary>extractRangeFromA1Notation() — Extrait la partie plage d'une notation A1. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.6.0</p>
@@ -44,4 +44,4 @@ extractRangeFromA1Notation("Sheet1!A1:B2"); // => "A1:B2"
 
 ## Code source
 
-[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)
+[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)

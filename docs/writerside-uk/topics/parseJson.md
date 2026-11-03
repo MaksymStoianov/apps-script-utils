@@ -4,7 +4,7 @@
 
 <link-summary>Розбирає JSON, а при невдачі суворого розбору пробує нестрогий.</link-summary>
 
-<web-summary>parseJson() — Розбирає JSON, а при невдачі суворого розбору пробує нестрогий. apps-script-utils, Українська.</web-summary>
+<web-summary>parseJson() — Розбирає JSON, а при невдачі суворого розбору пробує нестрогий. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>json</code> · Доступно з: 1.0.0 · <b>Застаріло</b></p>
@@ -53,4 +53,4 @@ parseJson("{a: 'x', b: 1}"); // => {"a":"x","b":1}
 
 ## Вихідний код
 
-[`src/json/parseJson.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/json/parseJson.ts)
+[`src/json/parseJson.ts`](https://github.com/bootgs/utils/blob/main/src/json/parseJson.ts)

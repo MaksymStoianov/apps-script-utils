@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи збігаються два діапазони за висотою та шириною.</link-summary>
 
-<web-summary>isGridRangeSameDimensions() — Перевіряє, чи збігаються два діапазони за висотою та шириною. apps-script-utils, Українська.</web-summary>
+<web-summary>isGridRangeSameDimensions() — Перевіряє, чи збігаються два діапазони за висотою та шириною. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -48,4 +48,4 @@ isGridRangeSameDimensions(source, target); // => true
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)

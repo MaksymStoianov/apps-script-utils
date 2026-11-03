@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Abstand zweier Daten in einer gewählten Einheit zurück.</link-summary>
 
-<web-summary>diff() — Gibt den Abstand zweier Daten in einer gewählten Einheit zurück. apps-script-utils, Deutsch.</web-summary>
+<web-summary>diff() — Gibt den Abstand zweier Daten in einer gewählten Einheit zurück. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time</code> · Verfügbar seit: 1.11.0</p>
@@ -60,4 +60,4 @@ diff(new Date(2026, 0, 2, 1), new Date(2026, 0, 1, 23), "day"); // => 0
 
 ## Quellcode
 
-[`src/time/diff.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/diff.ts)
+[`src/time/diff.ts`](https://github.com/bootgs/utils/blob/main/src/time/diff.ts)

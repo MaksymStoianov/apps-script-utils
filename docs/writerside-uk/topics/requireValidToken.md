@@ -4,7 +4,7 @@
 
 <link-summary>Повертає токен, якщо він збігся з одним із дозволених ключів, інакше кидає виняток.</link-summary>
 
-<web-summary>requireValidToken() — Повертає токен, якщо він збігся з одним із дозволених ключів, інакше кидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidToken() — Повертає токен, якщо він збігся з одним із дозволених ключів, інакше кидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/net</code> · Доступно з: 1.5.0</p>
@@ -62,4 +62,4 @@ function doPost(event) {
 
 ## Вихідний код
 
-[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/net/requireValidToken.ts)
+[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/net/requireValidToken.ts)

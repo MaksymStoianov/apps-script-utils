@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is not a matrix with uniform row lengths.</link-summary>
 
-<web-summary>nonConsistent2DArray() — Checks whether a value is not a matrix with uniform row lengths. apps-script-utils, English.</web-summary>
+<web-summary>nonConsistent2DArray() — Checks whether a value is not a matrix with uniform row lengths. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -80,4 +80,4 @@ function describeShape(rows) {
 
 ## Source
 
-[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/nonConsistent2DArray.ts)
+[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/nonConsistent2DArray.ts)

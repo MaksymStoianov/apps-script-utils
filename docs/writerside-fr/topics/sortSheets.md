@@ -4,7 +4,7 @@
 
 <link-summary>Réordonne les onglets d'un classeur.</link-summary>
 
-<web-summary>sortSheets() — Réordonne les onglets d'un classeur. apps-script-utils, Français.</web-summary>
+<web-summary>sortSheets() — Réordonne les onglets d'un classeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.5.0</p>
@@ -54,4 +54,4 @@ sortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed
 
 ## Code source
 
-[`src/appsscript/sheet/sortSheets.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/sortSheets.ts)
+[`src/appsscript/sheet/sortSheets.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/sortSheets.ts)

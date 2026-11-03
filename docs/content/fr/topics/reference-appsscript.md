@@ -2,7 +2,7 @@
 
 <link-summary>Toutes les fonctions Google Apps Script de la bibliothèque, groupées par service.</link-summary>
 
-<web-summary>Référence de toutes les fonctions Google Apps Script d'apps-script-utils : feuilles de calcul, notation A1, interface, Drive, Slides et Admin SDK, avec les types de retour.</web-summary>
+<web-summary>Référence de toutes les fonctions Google Apps Script d'@bootgs/utils : feuilles de calcul, notation A1, interface, Drive, Slides et Admin SDK, avec les types de retour.</web-summary>
 
 Des fonctions liées à des services Google Apps Script précis : Sheets, Slides, Admin SDK, Drive, Docs, Forms,
 requêtes réseau et classes d'interface intégrées.
@@ -28,11 +28,11 @@ Aides pour le [service Admin SDK Directory](https://developers.google.cn/apps-sc
 
 ## Méthodes Google Docs {id="google-docs-methods"}
 
-Aides pour Google Docs. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
+Aides pour Google Docs. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/bootgs/utils/blob/main/CONTRIBUTING.md).
 
 ## Méthodes Google Forms {id="google-forms-methods"}
 
-Aides pour Google Forms. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
+Aides pour Google Forms. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/bootgs/utils/blob/main/CONTRIBUTING.md).
 
 ## Méthodes Google Sheets {id="google-sheets-methods"}
 

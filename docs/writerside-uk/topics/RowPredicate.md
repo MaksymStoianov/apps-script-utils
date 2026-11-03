@@ -4,7 +4,7 @@
 
 <link-summary>Вирішує, чи належить рядок до тих, з якими треба щось зробити.</link-summary>
 
-<web-summary>RowPredicate — Вирішує, чи належить рядок до тих, з якими треба щось зробити. apps-script-utils, Українська.</web-summary>
+<web-summary>RowPredicate — Вирішує, чи належить рядок до тих, з якими треба щось зробити. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -33,4 +33,4 @@ const predicate = (values, position, record) => record?.status === "done";
 
 ## Вихідний код
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

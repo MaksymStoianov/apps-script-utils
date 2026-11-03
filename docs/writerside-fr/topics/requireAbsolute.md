@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un chemin absolu, ou lève une exception.</link-summary>
 
-<web-summary>requireAbsolute() — Renvoie la valeur en tant que un chemin absolu, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireAbsolute() — Renvoie la valeur en tant que un chemin absolu, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code> · Disponible depuis: 1.11.0</p>
@@ -54,4 +54,4 @@ requireAbsolute("./a"); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/net/path/requireAbsolute.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/requireAbsolute.ts)
+[`src/net/path/requireAbsolute.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireAbsolute.ts)

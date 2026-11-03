@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является экземпляром `Exception`.</link-summary>
 
-<web-summary>nonException() — Проверяет, что значение **не** является экземпляром `Exception`. apps-script-utils, Русский.</web-summary>
+<web-summary>nonException() — Проверяет, что значение **не** является экземпляром `Exception`. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -52,4 +52,4 @@ nonException(new IllegalArgumentException()); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonException.ts)
+[`src/lang/base/nonException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonException.ts)

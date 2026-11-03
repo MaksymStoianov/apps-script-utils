@@ -4,7 +4,7 @@
 
 <link-summary>Leert die vom Prädikat gewählten Spalten, ohne die Spalten zu entfernen.</link-summary>
 
-<web-summary>clearColumnsByConditional() — Leert die vom Prädikat gewählten Spalten, ohne die Spalten zu entfernen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>clearColumnsByConditional() — Leert die vom Prädikat gewählten Spalten, ohne die Spalten zu entfernen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -74,4 +74,4 @@ clearColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
 
 ## Quellcode
 
-[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)
+[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)

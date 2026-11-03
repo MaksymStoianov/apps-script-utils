@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a number, or throws.</link-summary>
 
-<web-summary>requireNumber() — Returns the value as a number, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireNumber() — Returns the value as a number, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNumber(null); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNumber.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNumber.ts)
+[`src/lang/base/requireNumber.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNumber.ts)

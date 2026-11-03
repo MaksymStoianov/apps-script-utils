@@ -3,7 +3,8 @@
   "packages": {
     ".": {
       "release-type": "node",
-      "package-name": "apps-script-utils",
+      "package-name": "@bootgs/utils",
+      "component": "apps-script-utils",
       "changelog-path": "CHANGELOG.md",
       "extra-files": [
         "docs/writerside/writerside.cfg",

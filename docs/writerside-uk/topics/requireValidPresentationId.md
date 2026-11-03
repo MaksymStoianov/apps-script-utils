@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як ідентифікатор презентації або викидає виняток.</link-summary>
 
-<web-summary>requireValidPresentationId() — Повертає значення як ідентифікатор презентації або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireValidPresentationId() — Повертає значення як ідентифікатор презентації або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно з: 1.11.0</p>
@@ -56,4 +56,4 @@ requireValidPresentationId("has space in it and is long enough to pass"); // thr
 
 ## Вихідний код
 
-[`src/appsscript/slide/requireValidPresentationId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireValidPresentationId.ts)
+[`src/appsscript/slide/requireValidPresentationId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireValidPresentationId.ts)

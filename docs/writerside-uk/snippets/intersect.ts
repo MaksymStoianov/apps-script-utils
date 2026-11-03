@@ -1,4 +1,4 @@
-import { intersect } from "apps-script-utils";
+import { intersect } from "@bootgs/utils";
 
 /**
  * Returns the identifiers that appear in both sheets, in the order of the

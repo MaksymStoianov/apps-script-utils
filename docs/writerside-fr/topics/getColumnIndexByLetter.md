@@ -4,7 +4,7 @@
 
 <link-summary>Convertit une lettre de colonne en son indice à base zéro.</link-summary>
 
-<web-summary>getColumnIndexByLetter() — Convertit une lettre de colonne en son indice à base zéro. apps-script-utils, Français.</web-summary>
+<web-summary>getColumnIndexByLetter() — Convertit une lettre de colonne en son indice à base zéro. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -44,4 +44,4 @@ getColumnIndexByLetter("B"); // => 1
 
 ## Code source
 
-[`src/appsscript/sheet/getColumnIndexByLetter.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getColumnIndexByLetter.ts)
+[`src/appsscript/sheet/getColumnIndexByLetter.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getColumnIndexByLetter.ts)

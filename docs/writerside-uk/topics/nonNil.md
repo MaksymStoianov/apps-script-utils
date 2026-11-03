@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є значенням `null` або `undefined`.</link-summary>
 
-<web-summary>nonNil() — Перевіряє, що значення **не** є значенням `null` або `undefined`. apps-script-utils, Українська.</web-summary>
+<web-summary>nonNil() — Перевіряє, що значення **не** є значенням `null` або `undefined`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -53,4 +53,4 @@ nonNil(undefined); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNil.ts)
+[`src/lang/base/nonNil.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNil.ts)

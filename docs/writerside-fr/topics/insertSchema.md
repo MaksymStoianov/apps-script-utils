@@ -4,7 +4,7 @@
 
 <link-summary>Stocke un schéma sur une feuille et applique ce qu'il décrit.</link-summary>
 
-<web-summary>insertSchema() — Stocke un schéma sur une feuille et applique ce qu'il décrit. apps-script-utils, Français.</web-summary>
+<web-summary>insertSchema() — Stocke un schéma sur une feuille et applique ce qu'il décrit. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -66,4 +66,4 @@ insertSchema(sheet, {
 
 ## Code source
 
-[`src/appsscript/sheet/insertSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/insertSchema.ts)
+[`src/appsscript/sheet/insertSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/insertSchema.ts)

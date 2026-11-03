@@ -4,7 +4,7 @@
 
 <link-summary>Entfernt jeden falsy-Wert aus einem Array und verengt dabei den Elementtyp ohne Cast.</link-summary>
 
-<web-summary>compact() — Entfernt jeden falsy-Wert aus einem Array und verengt dabei den Elementtyp ohne Cast. apps-script-utils, Deutsch.</web-summary>
+<web-summary>compact() — Entfernt jeden falsy-Wert aus einem Array und verengt dabei den Elementtyp ohne Cast. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -67,7 +67,7 @@ function readIds(sheet) {
 ### Wann `nonNil` der bessere Filter ist
 
 ```typescript
-import { nonNil } from "apps-script-utils";
+import { nonNil } from "@bootgs/utils";
 
 const cells = [0, "", 5, null]; // a column read from a sheet
 
@@ -82,4 +82,4 @@ cells.filter(nonNil); // => [0, "", 5] — drops only the absent values
 
 ## Quellcode
 
-[`src/lang/array/compact.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/compact.ts)
+[`src/lang/array/compact.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/compact.ts)

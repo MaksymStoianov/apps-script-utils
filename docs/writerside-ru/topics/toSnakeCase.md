@@ -4,7 +4,7 @@
 
 <link-summary>Переписывает строку в snake_case.</link-summary>
 
-<web-summary>toSnakeCase() — Переписывает строку в snake_case. apps-script-utils, Русский.</web-summary>
+<web-summary>toSnakeCase() — Переписывает строку в snake_case. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -52,4 +52,4 @@ toSnakeCase("userFirstName"); // => "user_first_name"
 
 ## Исходный код
 
-[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toSnakeCase.ts)
+[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toSnakeCase.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Shifts a date by an amount of a unit.</link-summary>
 
-<web-summary>offset() — Shifts a date by an amount of a unit. apps-script-utils, English.</web-summary>
+<web-summary>offset() — Shifts a date by an amount of a unit. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code> · Since: 1.11.0</p>
@@ -55,4 +55,4 @@ offset(start, -1, "day"); // 30 January 2026
 
 ## Source
 
-[`src/time/offset.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/offset.ts)
+[`src/time/offset.ts`](https://github.com/bootgs/utils/blob/main/src/time/offset.ts)

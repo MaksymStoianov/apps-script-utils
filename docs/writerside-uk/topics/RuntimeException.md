@@ -4,7 +4,7 @@
 
 <link-summary>Батько всіх винятків, які може спричинити робочий скрипт.</link-summary>
 
-<web-summary>RuntimeException — Батько всіх винятків, які може спричинити робочий скрипт. apps-script-utils, Українська.</web-summary>
+<web-summary>RuntimeException — Батько всіх винятків, які може спричинити робочий скрипт. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.0.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/RuntimeException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/RuntimeException.ts)
+[`src/exception/RuntimeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RuntimeException.ts)

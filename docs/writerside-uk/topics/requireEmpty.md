@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як порожнє значення або викидає виняток.</link-summary>
 
-<web-summary>requireEmpty() — Повертає значення як порожнє значення або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireEmpty() — Повертає значення як порожнє значення або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -60,4 +60,4 @@ requireEmpty(false); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireEmpty.ts)
+[`src/lang/base/requireEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireEmpty.ts)

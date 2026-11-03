@@ -4,7 +4,7 @@
 
 <link-summary>Returns the range once both are known to be the same size, or throws.</link-summary>
 
-<web-summary>requireGridRangeSameDimensions() — Returns the range once both are known to be the same size, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireGridRangeSameDimensions() — Returns the range once both are known to be the same size, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ requireGridRangeSameDimensions(source, target); // => the source range
 
 ## Source
 
-[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a spreadsheet.</link-summary>
 
-<web-summary>nonSpreadsheet() — Checks whether a value is **not** a spreadsheet. apps-script-utils, English.</web-summary>
+<web-summary>nonSpreadsheet() — Checks whether a value is **not** a spreadsheet. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonSpreadsheet(spreadsheet); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)
+[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)

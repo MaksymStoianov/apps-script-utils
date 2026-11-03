@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как форматированный текст или выбрасывает исключение.</link-summary>
 
-<web-summary>requireRichTextValue() — Возвращает значение как форматированный текст или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireRichTextValue() — Возвращает значение как форматированный текст или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -59,4 +59,4 @@ requireRichTextValue(null); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireRichTextValue.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireRichTextValue.ts)
+[`src/appsscript/sheet/requireRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireRichTextValue.ts)

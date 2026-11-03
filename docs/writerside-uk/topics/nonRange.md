@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є діапазоном.</link-summary>
 
-<web-summary>nonRange() — Перевіряє, що значення **не** є діапазоном. apps-script-utils, Українська.</web-summary>
+<web-summary>nonRange() — Перевіряє, що значення **не** є діапазоном. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.3.0</p>
@@ -53,4 +53,4 @@ nonRange(range); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRange.ts)
+[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRange.ts)

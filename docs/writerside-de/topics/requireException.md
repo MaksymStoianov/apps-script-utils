@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine `Exception` zurück oder wirft.</link-summary>
 
-<web-summary>requireException() — Gibt den Wert als eine `Exception` zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireException() — Gibt den Wert als eine `Exception` zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ requireException({}); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireException.ts)
+[`src/lang/base/requireException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireException.ts)

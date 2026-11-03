@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a single-cell range, or throws.</link-summary>
 
-<web-summary>requireCellGridRange() — Returns the value as a single-cell range, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireCellGridRange() — Returns the value as a single-cell range, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -56,4 +56,4 @@ requireCellGridRange({}); // throws InvalidGridRangeException
 
 ## Source
 
-[`src/appsscript/sheet/requireCellGridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireCellGridRange.ts)
+[`src/appsscript/sheet/requireCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireCellGridRange.ts)

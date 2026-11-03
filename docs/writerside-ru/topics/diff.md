@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает интервал между двумя датами в выбранных единицах.</link-summary>
 
-<web-summary>diff() — Возвращает интервал между двумя датами в выбранных единицах. apps-script-utils, Русский.</web-summary>
+<web-summary>diff() — Возвращает интервал между двумя датами в выбранных единицах. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time</code> · Доступно с: 1.11.0</p>
@@ -60,4 +60,4 @@ diff(new Date(2026, 0, 2, 1), new Date(2026, 0, 1, 23), "day"); // => 0
 
 ## Исходный код
 
-[`src/time/diff.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/diff.ts)
+[`src/time/diff.ts`](https://github.com/bootgs/utils/blob/main/src/time/diff.ts)

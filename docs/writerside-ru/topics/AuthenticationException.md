@@ -4,7 +4,7 @@
 
 <link-summary>Аутентификация не удалась: установить, кто вызывает, не получилось.</link-summary>
 
-<web-summary>AuthenticationException — Аутентификация не удалась: установить, кто вызывает, не получилось. apps-script-utils, Русский.</web-summary>
+<web-summary>AuthenticationException — Аутентификация не удалась: установить, кто вызывает, не получилось. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/net</code> · Доступно с: 1.5.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/net/AuthenticationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/net/AuthenticationException.ts)
+[`src/exception/net/AuthenticationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/net/AuthenticationException.ts)

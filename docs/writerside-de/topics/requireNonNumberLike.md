@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht in eine Zahl umwandelbar ist.</link-summary>
 
-<web-summary>requireNonNumberLike() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht in eine Zahl umwandelbar ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonNumberLike() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht in eine Zahl umwandelbar ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNonNumberLike("1.5"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonNumberLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonNumberLike.ts)
+[`src/lang/base/requireNonNumberLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonNumberLike.ts)

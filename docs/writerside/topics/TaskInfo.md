@@ -4,7 +4,7 @@
 
 <link-summary>One timed task, as a `StopWatch` recorded it.</link-summary>
 
-<web-summary>TaskInfo — One timed task, as a `StopWatch` recorded it. apps-script-utils, English.</web-summary>
+<web-summary>TaskInfo — One timed task, as a `StopWatch` recorded it. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code></p>
@@ -36,4 +36,4 @@ watch.getLastTaskInfo(); // { taskName: "fetch", timeMillis: …, timeSeconds: �
 
 ## Source
 
-[`src/time/StopWatch.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

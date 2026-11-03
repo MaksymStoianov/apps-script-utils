@@ -4,7 +4,7 @@
 
 <link-summary>Trouve une plage nommée par son nom.</link-summary>
 
-<web-summary>getNamedRangeByName() — Trouve une plage nommée par son nom. apps-script-utils, Français.</web-summary>
+<web-summary>getNamedRangeByName() — Trouve une plage nommée par son nom. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -53,4 +53,4 @@ range?.getRange().getValues();
 
 ## Code source
 
-[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)
+[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)

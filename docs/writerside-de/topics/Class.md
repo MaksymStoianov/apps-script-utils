@@ -4,7 +4,7 @@
 
 <link-summary>Die abstrakte Basis, von der die eigenen Klassen der Bibliothek erben.</link-summary>
 
-<web-summary>Class — Die abstrakte Basis, von der die eigenen Klassen der Bibliothek erben. apps-script-utils, Deutsch.</web-summary>
+<web-summary>Class — Die abstrakte Basis, von der die eigenen Klassen der Bibliothek erben. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang</code> · Verfügbar seit: 1.0.0</p>
@@ -38,4 +38,4 @@ class Money extends Class {
 
 ## Quellcode
 
-[`src/lang/Class.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/Class.ts)
+[`src/lang/Class.ts`](https://github.com/bootgs/utils/blob/main/src/lang/Class.ts)

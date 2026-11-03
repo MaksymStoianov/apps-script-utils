@@ -4,7 +4,7 @@
 
 <link-summary>Chronomètre une suite de tâches nommées.</link-summary>
 
-<web-summary>StopWatch — Chronomètre une suite de tâches nommées. apps-script-utils, Français.</web-summary>
+<web-summary>StopWatch — Chronomètre une suite de tâches nommées. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code> · Disponible depuis: 1.11.0</p>
@@ -45,4 +45,4 @@ watch.getTotalTimeMillis();
 
 ## Code source
 
-[`src/time/StopWatch.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

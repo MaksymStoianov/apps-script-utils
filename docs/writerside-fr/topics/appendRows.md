@@ -4,7 +4,7 @@
 
 <link-summary>Ajoute des lignes après la dernière ligne contenant des données.</link-summary>
 
-<web-summary>appendRows() — Ajoute des lignes après la dernière ligne contenant des données. apps-script-utils, Français.</web-summary>
+<web-summary>appendRows() — Ajoute des lignes après la dernière ligne contenant des données. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -78,4 +78,4 @@ appendRows(sheet.getRange("B1:C10"), [["Ada", "ada@example.com"]]);
 
 ## Code source
 
-[`src/appsscript/sheet/appendRows.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/appendRows.ts)
+[`src/appsscript/sheet/appendRows.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/appendRows.ts)

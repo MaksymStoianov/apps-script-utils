@@ -4,7 +4,7 @@
 
 <link-summary>Розбирає нотацію A1 у діапазон `GridRange`.</link-summary>
 
-<web-summary>parseA1Notation() — Розбирає нотацію A1 у діапазон `GridRange`. apps-script-utils, Українська.</web-summary>
+<web-summary>parseA1Notation() — Розбирає нотацію A1 у діапазон `GridRange`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ parseA1Notation("A1").sheetName; // => null
 
 ## Вихідний код
 
-[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)
+[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)

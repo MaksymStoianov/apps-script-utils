@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a string.</link-summary>
 
-<web-summary>isString() — Checks whether a value is a string. apps-script-utils, English.</web-summary>
+<web-summary>isString() — Checks whether a value is a string. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isString([]); // => false
 
 ## Source
 
-[`src/lang/base/isString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isString.ts)
+[`src/lang/base/isString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isString.ts)

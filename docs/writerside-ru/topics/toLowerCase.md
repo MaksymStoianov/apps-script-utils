@@ -4,7 +4,7 @@
 
 <link-summary>Приводит строку к нижнему регистру, при желании прибирая пробелы.</link-summary>
 
-<web-summary>toLowerCase() — Приводит строку к нижнему регистру, при желании прибирая пробелы. apps-script-utils, Русский.</web-summary>
+<web-summary>toLowerCase() — Приводит строку к нижнему регистру, при желании прибирая пробелы. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -49,4 +49,4 @@ toLowerCase("  Hello   World  ", { trim: true }); // => "hello world"
 
 ## Исходный код
 
-[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toLowerCase.ts)
+[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toLowerCase.ts)

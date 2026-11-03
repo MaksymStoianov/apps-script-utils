@@ -4,7 +4,7 @@
 
 <link-summary>Знаходить іменований діапазон за іменем.</link-summary>
 
-<web-summary>getNamedRangeByName() — Знаходить іменований діапазон за іменем. apps-script-utils, Українська.</web-summary>
+<web-summary>getNamedRangeByName() — Знаходить іменований діапазон за іменем. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ range?.getRange().getValues();
 
 ## Вихідний код
 
-[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)
+[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)

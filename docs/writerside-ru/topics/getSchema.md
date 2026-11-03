@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает схему листа — сохранённую или выведенную из его содержимого.</link-summary>
 
-<web-summary>getSchema() — Возвращает схему листа — сохранённую или выведенную из его содержимого. apps-script-utils, Русский.</web-summary>
+<web-summary>getSchema() — Возвращает схему листа — сохранённую или выведенную из его содержимого. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ schema?.columns.map((column) => column.name);
 
 ## Исходный код
 
-[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSchema.ts)
+[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSchema.ts)

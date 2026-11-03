@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen Domainnamen zurück oder wirft.</link-summary>
 
-<web-summary>requireValidDomain() — Gibt den Wert als einen Domainnamen zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireValidDomain() — Gibt den Wert als einen Domainnamen zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidDomain("example..com"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/net/path/requireValidDomain.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/requireValidDomain.ts)
+[`src/net/path/requireValidDomain.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireValidDomain.ts)

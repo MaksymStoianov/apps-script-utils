@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein Skalar ist.</link-summary>
 
-<web-summary>requireNonScalar() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein Skalar ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonScalar() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht ein Skalar ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonScalar(1); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonScalar.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonScalar.ts)
+[`src/lang/base/requireNonScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonScalar.ts)

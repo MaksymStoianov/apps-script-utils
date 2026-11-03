@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une plage de grille n'est **pas** entièrement contenue dans une autre.</link-summary>
 
-<web-summary>nonGridRangeContainedIn() — Vérifie qu'une plage de grille n'est **pas** entièrement contenue dans une autre. apps-script-utils, Français.</web-summary>
+<web-summary>nonGridRangeContainedIn() — Vérifie qu'une plage de grille n'est **pas** entièrement contenue dans une autre. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeContainedIn(outer, inner); // => true
 
 ## Code source
 
-[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)
+[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)

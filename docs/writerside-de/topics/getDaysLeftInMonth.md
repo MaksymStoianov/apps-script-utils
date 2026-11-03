@@ -4,7 +4,7 @@
 
 <link-summary>Gibt zurück, wie viele Tage von einem Datum bis zum Monatsende bleiben.</link-summary>
 
-<web-summary>getDaysLeftInMonth() — Gibt zurück, wie viele Tage von einem Datum bis zum Monatsende bleiben. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getDaysLeftInMonth() — Gibt zurück, wie viele Tage von einem Datum bis zum Monatsende bleiben. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time</code> · Verfügbar seit: 1.11.0</p>
@@ -49,4 +49,4 @@ getDaysLeftInMonth(new Date(2026, 0, 20)); // => 11
 
 ## Quellcode
 
-[`src/time/getDaysLeftInMonth.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/getDaysLeftInMonth.ts)
+[`src/time/getDaysLeftInMonth.ts`](https://github.com/bootgs/utils/blob/main/src/time/getDaysLeftInMonth.ts)

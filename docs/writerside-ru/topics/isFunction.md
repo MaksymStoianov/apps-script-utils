@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение функцией.</link-summary>
 
-<web-summary>isFunction() — Проверяет, является ли значение функцией. apps-script-utils, Русский.</web-summary>
+<web-summary>isFunction() — Проверяет, является ли значение функцией. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.0.0</p>
@@ -52,4 +52,4 @@ isFunction({}); // => false
 
 ## Исходный код
 
-[`src/lang/base/isFunction.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isFunction.ts)
+[`src/lang/base/isFunction.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isFunction.ts)

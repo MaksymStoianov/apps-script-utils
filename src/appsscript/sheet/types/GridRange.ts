@@ -13,7 +13,7 @@
  * };
  * ```
  *
- * @see [GridRange on the documentation site](https://bootgs.github.io/apps-script-utils/gridrange.html)
+ * @see [GridRange on the documentation site](https://bootgs.github.io/utils/gridrange.html)
  * @since   1.0.0
  * @version 1.0.0
  */

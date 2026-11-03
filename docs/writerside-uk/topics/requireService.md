@@ -4,7 +4,7 @@
 
 <link-summary>Повертає сервіс, переконавшись, що він існує, інакше кидає виняток.</link-summary>
 
-<web-summary>requireService() — Повертає сервіс, переконавшись, що він існує, інакше кидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireService() — Повертає сервіс, переконавшись, що він існує, інакше кидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript</code> · Доступно з: 1.5.0</p>
@@ -53,4 +53,4 @@ const directory = requireService(AdminDirectory, "Enable the Admin SDK service."
 
 ## Вихідний код
 
-[`src/appsscript/requireService.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/requireService.ts)
+[`src/appsscript/requireService.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/requireService.ts)

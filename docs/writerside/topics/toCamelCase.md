@@ -4,7 +4,7 @@
 
 <link-summary>Joins the words of a string into camelCase.</link-summary>
 
-<web-summary>toCamelCase() — Joins the words of a string into camelCase. apps-script-utils, English.</web-summary>
+<web-summary>toCamelCase() — Joins the words of a string into camelCase. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -54,4 +54,4 @@ toCamelCase("user_first_name"); // => "userfirstname"
 
 ## Source
 
-[`src/lang/string/toCamelCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toCamelCase.ts)
+[`src/lang/string/toCamelCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toCamelCase.ts)

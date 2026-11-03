@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** un objet Ui.</link-summary>
 
-<web-summary>nonUi() — Vérifie qu'une valeur n'est **pas** un objet Ui. apps-script-utils, Français.</web-summary>
+<web-summary>nonUi() — Vérifie qu'une valeur n'est **pas** un objet Ui. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Disponible depuis: 1.11.0</p>
@@ -53,4 +53,4 @@ nonUi(ui); // => false
 
 ## Code source
 
-[`src/appsscript/ui/nonUi.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/nonUi.ts)
+[`src/appsscript/ui/nonUi.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/nonUi.ts)

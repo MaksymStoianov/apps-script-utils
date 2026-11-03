@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein Blatt ist.</link-summary>
 
-<web-summary>isSheet() — Prüft, ob ein Wert ein Blatt ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isSheet() — Prüft, ob ein Wert ein Blatt ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isSheet(null); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isSheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isSheet.ts)
+[`src/appsscript/sheet/isSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSheet.ts)

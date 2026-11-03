@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як `null` або викидає виняток.</link-summary>
 
-<web-summary>requireNull() — Повертає значення як `null` або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNull() — Повертає значення як `null` або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -54,4 +54,4 @@ requireNull(0); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNull.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNull.ts)
+[`src/lang/base/requireNull.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNull.ts)

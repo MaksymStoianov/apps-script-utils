@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une `Exception`.</link-summary>
 
-<web-summary>nonException() — Vérifie qu'une valeur n'est **pas** une `Exception`. apps-script-utils, Français.</web-summary>
+<web-summary>nonException() — Vérifie qu'une valeur n'est **pas** une `Exception`. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -52,4 +52,4 @@ nonException(new IllegalArgumentException()); // => false
 
 ## Code source
 
-[`src/lang/base/nonException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonException.ts)
+[`src/lang/base/nonException.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonException.ts)

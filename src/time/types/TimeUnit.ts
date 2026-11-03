@@ -12,7 +12,7 @@
  * offset(date, 1, "month");
  * ```
  *
- * @see [TimeUnit on the documentation site](https://bootgs.github.io/apps-script-utils/timeunit.html)
+ * @see [TimeUnit on the documentation site](https://bootgs.github.io/utils/timeunit.html)
  * @since   1.11.0
  * @version 1.0.0
  */

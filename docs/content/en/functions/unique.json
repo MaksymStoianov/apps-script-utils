@@ -19,7 +19,7 @@
     },
     {
       "title": "Deduplicating records by a key",
-      "body": "```typescript\nimport { unique } from \"apps-script-utils\";\n\nconst rows = [\n  { id: 1, name: \"first\" },\n  { id: 1, name: \"second\" },\n  { id: 2, name: \"third\" }\n];\n\nunique(rows, (row) => row.id); // => [{ id: 1, name: \"first\" }, { id: 2, name: \"third\" }]\n```"
+      "body": "```typescript\nimport { unique } from \"@bootgs/utils\";\n\nconst rows = [\n  { id: 1, name: \"first\" },\n  { id: 1, name: \"second\" },\n  { id: 2, name: \"third\" }\n];\n\nunique(rows, (row) => row.id); // => [{ id: 1, name: \"first\" }, { id: 2, name: \"third\" }]\n```"
     },
     {
       "title": "Collecting the distinct values of a column",

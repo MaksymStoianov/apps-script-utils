@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение диапазоном из одной ячейки.</link-summary>
 
-<web-summary>isCellGridRange() — Проверяет, является ли значение диапазоном из одной ячейки. apps-script-utils, Русский.</web-summary>
+<web-summary>isCellGridRange() — Проверяет, является ли значение диапазоном из одной ячейки. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -49,4 +49,4 @@ isCellGridRange(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)
+[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)

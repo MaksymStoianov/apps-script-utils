@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a string.</link-summary>
 
-<web-summary>nonString() — Checks whether a value is **not** a string. apps-script-utils, English.</web-summary>
+<web-summary>nonString() — Checks whether a value is **not** a string. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -53,4 +53,4 @@ nonString("abc"); // => false
 
 ## Source
 
-[`src/lang/base/nonString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonString.ts)
+[`src/lang/base/nonString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonString.ts)

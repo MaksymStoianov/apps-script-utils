@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает диапазон, убедившись, что размеры совпадают, иначе бросает исключение.</link-summary>
 
-<web-summary>requireGridRangeSameDimensions() — Возвращает диапазон, убедившись, что размеры совпадают, иначе бросает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireGridRangeSameDimensions() — Возвращает диапазон, убедившись, что размеры совпадают, иначе бросает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ requireGridRangeSameDimensions(source, target); // => the source range
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перетворює числові посилання на символи назад у символи.</link-summary>
 
-<web-summary>decodeHtml() — Перетворює числові посилання на символи назад у символи. apps-script-utils, Українська.</web-summary>
+<web-summary>decodeHtml() — Перетворює числові посилання на символи назад у символи. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>html</code> · Доступно з: 1.0.0</p>
@@ -49,4 +49,4 @@ decodeHtml("&amp;"); // => "&amp;"
 
 ## Вихідний код
 
-[`src/html/decodeHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/decodeHtml.ts)
+[`src/html/decodeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/decodeHtml.ts)

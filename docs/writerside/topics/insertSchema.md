@@ -4,7 +4,7 @@
 
 <link-summary>Stores a schema on a sheet and applies what it describes.</link-summary>
 
-<web-summary>insertSchema() — Stores a schema on a sheet and applies what it describes. apps-script-utils, English.</web-summary>
+<web-summary>insertSchema() — Stores a schema on a sheet and applies what it describes. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -66,4 +66,4 @@ insertSchema(sheet, {
 
 ## Source
 
-[`src/appsscript/sheet/insertSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/insertSchema.ts)
+[`src/appsscript/sheet/insertSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/insertSchema.ts)

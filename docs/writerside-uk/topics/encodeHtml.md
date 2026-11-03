@@ -4,7 +4,7 @@
 
 <link-summary>Кодує кожен символ числовим посиланням.</link-summary>
 
-<web-summary>encodeHtml() — Кодує кожен символ числовим посиланням. apps-script-utils, Українська.</web-summary>
+<web-summary>encodeHtml() — Кодує кожен символ числовим посиланням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>html</code> · Доступно з: 1.0.0</p>
@@ -48,4 +48,4 @@ encodeHtml("<a>"); // => "&#60;a&#62;"
 
 ## Вихідний код
 
-[`src/html/encodeHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/encodeHtml.ts)
+[`src/html/encodeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/encodeHtml.ts)

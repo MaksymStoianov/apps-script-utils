@@ -4,7 +4,7 @@
 
 <link-summary>Rewrites a string in snake_case.</link-summary>
 
-<web-summary>toSnakeCase() — Rewrites a string in snake_case. apps-script-utils, English.</web-summary>
+<web-summary>toSnakeCase() — Rewrites a string in snake_case. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -52,4 +52,4 @@ toSnakeCase("userFirstName"); // => "user_first_name"
 
 ## Source
 
-[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toSnakeCase.ts)
+[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toSnakeCase.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Wie `getValues` ein Blatt liest.</link-summary>
 
-<web-summary>GetValuesConfig — Wie `getValues` ein Blatt liest. apps-script-utils, Deutsch.</web-summary>
+<web-summary>GetValuesConfig — Wie `getValues` ein Blatt liest. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -38,4 +38,4 @@ const config = {
 
 ## Quellcode
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

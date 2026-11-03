@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что один диапазон **не** лежит целиком внутри другого.</link-summary>
 
-<web-summary>nonGridRangeContainedIn() — Проверяет, что один диапазон **не** лежит целиком внутри другого. apps-script-utils, Русский.</web-summary>
+<web-summary>nonGridRangeContainedIn() — Проверяет, что один диапазон **не** лежит целиком внутри другого. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeContainedIn(outer, inner); // => true
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)
+[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)

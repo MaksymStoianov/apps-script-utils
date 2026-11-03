@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a spreadsheet, or throws.</link-summary>
 
-<web-summary>requireSpreadsheet() — Returns the value as a spreadsheet, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireSpreadsheet() — Returns the value as a spreadsheet, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSpreadsheet(null); // throws InvalidSpreadsheetException
 
 ## Source
 
-[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)
+[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)

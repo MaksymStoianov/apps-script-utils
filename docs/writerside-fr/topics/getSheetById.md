@@ -4,7 +4,7 @@
 
 <link-summary>Trouve une feuille par son identifiant.</link-summary>
 
-<web-summary>getSheetById() — Trouve une feuille par son identifiant. apps-script-utils, Français.</web-summary>
+<web-summary>getSheetById() — Trouve une feuille par son identifiant. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -55,4 +55,4 @@ if (sheet === null) {
 
 ## Code source
 
-[`src/appsscript/sheet/getSheetById.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSheetById.ts)
+[`src/appsscript/sheet/getSheetById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetById.ts)

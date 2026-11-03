@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является непустым двумерным массивом.</link-summary>
 
-<web-summary>non2DArray() — Проверяет, что значение **не** является непустым двумерным массивом. apps-script-utils, Русский.</web-summary>
+<web-summary>non2DArray() — Проверяет, что значение **не** является непустым двумерным массивом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -73,4 +73,4 @@ function validateShape(rows) {
 
 ## Исходный код
 
-[`src/lang/array/non2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/non2DArray.ts)
+[`src/lang/array/non2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/non2DArray.ts)

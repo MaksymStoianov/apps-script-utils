@@ -4,7 +4,7 @@
 
 <link-summary>Створює шлях папок на Диску, перевикористовуючи вже наявні папки.</link-summary>
 
-<web-summary>createFolder() — Створює шлях папок на Диску, перевикористовуючи вже наявні папки. apps-script-utils, Українська.</web-summary>
+<web-summary>createFolder() — Створює шлях папок на Диску, перевикористовуючи вже наявні папки. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/drive</code> · Доступно з: 1.11.0</p>
@@ -47,4 +47,4 @@ const folder = createFolder("reports/2026/january");
 
 ## Вихідний код
 
-[`src/appsscript/drive/createFolder.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/drive/createFolder.ts)
+[`src/appsscript/drive/createFolder.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/drive/createFolder.ts)

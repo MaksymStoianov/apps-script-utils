@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a single-cell range.</link-summary>
 
-<web-summary>isCellGridRange() — Checks whether a value is a single-cell range. apps-script-utils, English.</web-summary>
+<web-summary>isCellGridRange() — Checks whether a value is a single-cell range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -49,4 +49,4 @@ isCellGridRange(null); // => false
 
 ## Source
 
-[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)
+[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)

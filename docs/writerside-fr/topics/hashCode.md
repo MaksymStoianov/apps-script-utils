@@ -4,7 +4,7 @@
 
 <link-summary>Produit un condensé numérique pour n'importe quelle valeur.</link-summary>
 
-<web-summary>hashCode() — Produit un condensé numérique pour n'importe quelle valeur. apps-script-utils, Français.</web-summary>
+<web-summary>hashCode() — Produit un condensé numérique pour n'importe quelle valeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Disponible depuis: 1.0.0</p>
@@ -45,4 +45,4 @@ hashCode(""); // => 0
 
 ## Code source
 
-[`src/lang/object/hashCode.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/hashCode.ts)
+[`src/lang/object/hashCode.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/hashCode.ts)

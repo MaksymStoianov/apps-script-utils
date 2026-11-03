@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Zahl mit Nachkommateil zurück oder wirft.</link-summary>
 
-<web-summary>requireFloat() — Gibt den Wert als eine Zahl mit Nachkommateil zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireFloat() — Gibt den Wert als eine Zahl mit Nachkommateil zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireFloat(1.0); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/number/requireFloat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireFloat.ts)
+[`src/lang/number/requireFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireFloat.ts)

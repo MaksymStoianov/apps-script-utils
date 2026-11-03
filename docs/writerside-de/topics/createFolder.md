@@ -4,7 +4,7 @@
 
 <link-summary>Legt einen Ordnerpfad in Drive an und nutzt bereits vorhandene Ordner weiter.</link-summary>
 
-<web-summary>createFolder() — Legt einen Ordnerpfad in Drive an und nutzt bereits vorhandene Ordner weiter. apps-script-utils, Deutsch.</web-summary>
+<web-summary>createFolder() — Legt einen Ordnerpfad in Drive an und nutzt bereits vorhandene Ordner weiter. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/drive</code> · Verfügbar seit: 1.11.0</p>
@@ -47,4 +47,4 @@ const folder = createFolder("reports/2026/january");
 
 ## Quellcode
 
-[`src/appsscript/drive/createFolder.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/drive/createFolder.ts)
+[`src/appsscript/drive/createFolder.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/drive/createFolder.ts)

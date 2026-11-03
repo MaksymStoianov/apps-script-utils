@@ -4,7 +4,7 @@
 
 <link-summary>Ordnet die Reiter einer Tabelle neu.</link-summary>
 
-<web-summary>sortSheets() — Ordnet die Reiter einer Tabelle neu. apps-script-utils, Deutsch.</web-summary>
+<web-summary>sortSheets() — Ordnet die Reiter einer Tabelle neu. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -54,4 +54,4 @@ sortSheets(spreadsheet, (a, b) => b.localeCompare(a)); // reversed
 
 ## Quellcode
 
-[`src/appsscript/sheet/sortSheets.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/sortSheets.ts)
+[`src/appsscript/sheet/sortSheets.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/sortSheets.ts)

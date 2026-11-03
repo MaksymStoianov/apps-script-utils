@@ -4,7 +4,7 @@
 
 <link-summary>Lit une notation A1 en plage de grille.</link-summary>
 
-<web-summary>parseA1Notation() — Lit une notation A1 en plage de grille. apps-script-utils, Français.</web-summary>
+<web-summary>parseA1Notation() — Lit une notation A1 en plage de grille. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ parseA1Notation("A1").sheetName; // => null
 
 ## Code source
 
-[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)
+[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)

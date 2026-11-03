@@ -15,7 +15,7 @@
  * @returns {boolean} `true` if the value is a number; otherwise, `false`.
  * @see     {@link nonNumber}
  * @see     {@link isNumberLike}
- * @see     [isNumber on the documentation site](https://bootgs.github.io/apps-script-utils/isnumber.html)
+ * @see     [isNumber on the documentation site](https://bootgs.github.io/utils/isnumber.html)
  * @since   1.0.0
  * @version 1.0.0
  */

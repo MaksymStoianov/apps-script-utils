@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a Ui object, or throws.</link-summary>
 
-<web-summary>requireUi() — Returns the value as a Ui object, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireUi() — Returns the value as a Ui object, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Since: 1.11.0</p>
@@ -59,4 +59,4 @@ requireUi(null); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/ui/requireUi.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/requireUi.ts)
+[`src/appsscript/ui/requireUi.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/requireUi.ts)

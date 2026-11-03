@@ -4,7 +4,7 @@
 
 <link-summary>Зводить рядок до нижнього регістру, за бажанням прибираючи пробіли.</link-summary>
 
-<web-summary>toLowerCase() — Зводить рядок до нижнього регістру, за бажанням прибираючи пробіли. apps-script-utils, Українська.</web-summary>
+<web-summary>toLowerCase() — Зводить рядок до нижнього регістру, за бажанням прибираючи пробіли. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -49,4 +49,4 @@ toLowerCase("  Hello   World  ", { trim: true }); // => "hello world"
 
 ## Вихідний код
 
-[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toLowerCase.ts)
+[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toLowerCase.ts)

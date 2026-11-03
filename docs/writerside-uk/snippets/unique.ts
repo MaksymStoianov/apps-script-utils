@@ -1,4 +1,4 @@
-import { unique } from "apps-script-utils";
+import { unique } from "@bootgs/utils";
 
 /**
  * Lists every status used in a column, each one once, in the order they first

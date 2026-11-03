@@ -4,7 +4,7 @@
 
 <link-summary>Turns styled text runs back into Markdown.</link-summary>
 
-<web-summary>convertRichTextToMarkdown() — Turns styled text runs back into Markdown. apps-script-utils, English.</web-summary>
+<web-summary>convertRichTextToMarkdown() — Turns styled text runs back into Markdown. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 2.0.0</p>
@@ -61,4 +61,4 @@ convertRichTextToMarkdown([
 
 ## Source
 
-[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)
+[`src/appsscript/slide/convertRichTextToMarkdown.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/convertRichTextToMarkdown.ts)

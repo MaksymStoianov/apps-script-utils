@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is `undefined`.</link-summary>
 
-<web-summary>isUndefined() — Checks whether a value is `undefined`. apps-script-utils, English.</web-summary>
+<web-summary>isUndefined() — Checks whether a value is `undefined`. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -50,4 +50,4 @@ isUndefined(""); // => false
 
 ## Source
 
-[`src/lang/base/isUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isUndefined.ts)
+[`src/lang/base/isUndefined.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isUndefined.ts)

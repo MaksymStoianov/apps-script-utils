@@ -4,7 +4,7 @@
 
 <link-summary>Trouve une feuille par sa position dans le classeur.</link-summary>
 
-<web-summary>getSheetByIndex() — Trouve une feuille par sa position dans le classeur. apps-script-utils, Français.</web-summary>
+<web-summary>getSheetByIndex() — Trouve une feuille par sa position dans le classeur. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code></p>
@@ -50,4 +50,4 @@ const first = getSheetByIndex(0);
 
 ## Code source
 
-[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)
+[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)

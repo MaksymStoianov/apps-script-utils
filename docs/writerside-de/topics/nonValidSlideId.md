@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine Folien-Id ist.</link-summary>
 
-<web-summary>nonValidSlideId() — Prüft, ob ein Wert **nicht** eine Folien-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonValidSlideId() — Prüft, ob ein Wert **nicht** eine Folien-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.11.0</p>
@@ -49,4 +49,4 @@ nonValidSlideId("SLIDES_api123"); // => false
 
 ## Quellcode
 
-[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)
+[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)

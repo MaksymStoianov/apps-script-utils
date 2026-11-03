@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является именем листа.</link-summary>
 
-<web-summary>nonValidSheetName() — Проверяет, что значение **не** является именем листа. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidSheetName() — Проверяет, что значение **не** является именем листа. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidSheetName("Report 2026"); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonValidSheetName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetName.ts)
+[`src/appsscript/sheet/nonValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonValidSheetName.ts)

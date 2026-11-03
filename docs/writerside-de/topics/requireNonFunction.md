@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Funktion ist.</link-summary>
 
-<web-summary>requireNonFunction() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Funktion ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonFunction() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Funktion ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNonFunction(async function () {}); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonFunction.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonFunction.ts)
+[`src/lang/base/requireNonFunction.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonFunction.ts)

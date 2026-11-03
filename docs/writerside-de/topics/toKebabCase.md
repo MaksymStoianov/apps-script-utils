@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt eine Zeichenkette in kebab-case.</link-summary>
 
-<web-summary>toKebabCase() — Schreibt eine Zeichenkette in kebab-case. apps-script-utils, Deutsch.</web-summary>
+<web-summary>toKebabCase() — Schreibt eine Zeichenkette in kebab-case. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -53,4 +53,4 @@ toKebabCase("userFirstName"); // => "user-first-name"
 
 ## Quellcode
 
-[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toKebabCase.ts)
+[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toKebabCase.ts)

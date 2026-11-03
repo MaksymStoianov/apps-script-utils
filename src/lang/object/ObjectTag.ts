@@ -9,7 +9,7 @@
  * ```
  *
  * @enum
- * @see [ObjectTag on the documentation site](https://bootgs.github.io/apps-script-utils/objecttag.html)
+ * @see [ObjectTag on the documentation site](https://bootgs.github.io/utils/objecttag.html)
  * @since   1.0.0
  * @version 1.0.0
  */

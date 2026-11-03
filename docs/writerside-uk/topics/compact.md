@@ -4,7 +4,7 @@
 
 <link-summary>Видаляє з масиву всі хибні значення та звужує тип елементів без приведення.</link-summary>
 
-<web-summary>compact() — Видаляє з масиву всі хибні значення та звужує тип елементів без приведення. apps-script-utils, Українська.</web-summary>
+<web-summary>compact() — Видаляє з масиву всі хибні значення та звужує тип елементів без приведення. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -67,7 +67,7 @@ function readIds(sheet) {
 ### Коли `nonNil` підходить краще
 
 ```typescript
-import { nonNil } from "apps-script-utils";
+import { nonNil } from "@bootgs/utils";
 
 const cells = [0, "", 5, null]; // a column read from a sheet
 
@@ -82,4 +82,4 @@ cells.filter(nonNil); // => [0, "", 5] — drops only the absent values
 
 ## Вихідний код
 
-[`src/lang/array/compact.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/compact.ts)
+[`src/lang/array/compact.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/compact.ts)

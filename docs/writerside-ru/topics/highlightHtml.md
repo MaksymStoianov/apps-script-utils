@@ -4,7 +4,7 @@
 
 <link-summary>Раскрашивает HTML в диапазоне как исходный код.</link-summary>
 
-<web-summary>highlightHtml() — Раскрашивает HTML в диапазоне как исходный код. apps-script-utils, Русский.</web-summary>
+<web-summary>highlightHtml() — Раскрашивает HTML в диапазоне как исходный код. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -58,4 +58,4 @@ highlightHtml(range);
 
 ## Исходный код
 
-[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/highlightHtml.ts)
+[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/highlightHtml.ts)

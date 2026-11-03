@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Gebietsschema-Code ist.</link-summary>
 
-<web-summary>nonValidLocale() — Prüft, ob ein Wert **nicht** ein Gebietsschema-Code ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonValidLocale() — Prüft, ob ein Wert **nicht** ein Gebietsschema-Code ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidLocale("UK"); // => false
 
 ## Quellcode
 
-[`src/lang/string/nonValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidLocale.ts)
+[`src/lang/string/nonValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidLocale.ts)

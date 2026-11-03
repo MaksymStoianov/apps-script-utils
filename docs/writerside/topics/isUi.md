@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a Ui object.</link-summary>
 
-<web-summary>isUi() — Checks whether a value is a Ui object. apps-script-utils, English.</web-summary>
+<web-summary>isUi() — Checks whether a value is a Ui object. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isUi(null); // => false
 
 ## Source
 
-[`src/appsscript/ui/isUi.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/isUi.ts)
+[`src/appsscript/ui/isUi.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/isUi.ts)

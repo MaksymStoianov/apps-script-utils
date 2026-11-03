@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not a string.</link-summary>
 
-<web-summary>requireNonString() — Returns the value after checking that it is not a string. apps-script-utils, English.</web-summary>
+<web-summary>requireNonString() — Returns the value after checking that it is not a string. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonString("abc"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNonString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonString.ts)
+[`src/lang/base/requireNonString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonString.ts)

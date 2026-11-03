@@ -4,7 +4,7 @@
 
 <link-summary>Insère des colonnes avant les données — dans une feuille ou au niveau d'une plage.</link-summary>
 
-<web-summary>prependColumns() — Insère des colonnes avant les données — dans une feuille ou au niveau d'une plage. apps-script-utils, Français.</web-summary>
+<web-summary>prependColumns() — Insère des colonnes avant les données — dans une feuille ou au niveau d'une plage. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -76,4 +76,4 @@ prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 
 ## Code source
 
-[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependColumns.ts)
+[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependColumns.ts)

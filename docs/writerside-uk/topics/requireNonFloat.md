@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є числом з дробовою частиною.</link-summary>
 
-<web-summary>requireNonFloat() — Повертає значення, переконавшись, що воно не є числом з дробовою частиною. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonFloat() — Повертає значення, переконавшись, що воно не є числом з дробовою частиною. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonFloat(-0.1); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/number/requireNonFloat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonFloat.ts)
+[`src/lang/number/requireNonFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonFloat.ts)

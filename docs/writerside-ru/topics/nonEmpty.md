@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является пустым значением.</link-summary>
 
-<web-summary>nonEmpty() — Проверяет, что значение **не** является пустым значением. apps-script-utils, Русский.</web-summary>
+<web-summary>nonEmpty() — Проверяет, что значение **не** является пустым значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.1.0</p>
@@ -56,4 +56,4 @@ nonEmpty(new Map()); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonEmpty.ts)
+[`src/lang/base/nonEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonEmpty.ts)

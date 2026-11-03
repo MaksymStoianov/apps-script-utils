@@ -4,7 +4,7 @@
 
 <link-summary>Bricht den Aufruf ab, sofern der aktuelle Nutzer kein Workspace-Administrator ist.</link-summary>
 
-<web-summary>requireAdmin() — Bricht den Aufruf ab, sofern der aktuelle Nutzer kein Workspace-Administrator ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireAdmin() — Bricht den Aufruf ab, sofern der aktuelle Nutzer kein Workspace-Administrator ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/admin</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ function deleteEverything() {
 
 ## Quellcode
 
-[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/admin/requireAdmin.ts)
+[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/admin/requireAdmin.ts)

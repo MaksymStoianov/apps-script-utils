@@ -1,4 +1,4 @@
-import { non2DArray, nonConsistent2DArray } from "apps-script-utils";
+import { non2DArray, nonConsistent2DArray } from "@bootgs/utils";
 
 /**
  * Tells the two failure cases apart: not a matrix at all, versus a matrix

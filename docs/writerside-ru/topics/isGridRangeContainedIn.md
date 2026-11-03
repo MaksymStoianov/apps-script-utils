@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, лежит ли один диапазон целиком внутри другого.</link-summary>
 
-<web-summary>isGridRangeContainedIn() — Проверяет, лежит ли один диапазон целиком внутри другого. apps-script-utils, Русский.</web-summary>
+<web-summary>isGridRangeContainedIn() — Проверяет, лежит ли один диапазон целиком внутри другого. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isGridRangeContainedIn(inner, outer); // => true
 
 ## Исходный код
 
-[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)
+[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Робить першу літеру кожного слова великою, а решту малими.</link-summary>
 
-<web-summary>toProperCase() — Робить першу літеру кожного слова великою, а решту малими. apps-script-utils, Українська.</web-summary>
+<web-summary>toProperCase() — Робить першу літеру кожного слова великою, а решту малими. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.0.0</p>
@@ -50,4 +50,4 @@ toProperCase("hello WORLD"); // => "Hello World"
 
 ## Вихідний код
 
-[`src/lang/string/toProperCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toProperCase.ts)
+[`src/lang/string/toProperCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toProperCase.ts)

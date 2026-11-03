@@ -4,7 +4,7 @@
 
 <link-summary>The internal tags a value can report, as named constants.</link-summary>
 
-<web-summary>ObjectTag — The internal tags a value can report, as named constants. apps-script-utils, English.</web-summary>
+<web-summary>ObjectTag — The internal tags a value can report, as named constants. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/object</code> · Since: 1.0.0</p>
@@ -36,4 +36,4 @@ objectToString(null) === ObjectTag.NULL; // => true
 
 ## Source
 
-[`src/lang/object/ObjectTag.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/ObjectTag.ts)
+[`src/lang/object/ObjectTag.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/ObjectTag.ts)

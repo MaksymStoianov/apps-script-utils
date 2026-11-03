@@ -4,7 +4,7 @@
 
 <link-summary>Удаляет строки, выбранные предикатом.</link-summary>
 
-<web-summary>deleteRowsByConditional() — Удаляет строки, выбранные предикатом. apps-script-utils, Русский.</web-summary>
+<web-summary>deleteRowsByConditional() — Удаляет строки, выбранные предикатом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -74,4 +74,4 @@ deleteRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cel
 
 ## Исходный код
 
-[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)
+[`src/appsscript/sheet/deleteRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/deleteRowsByConditional.ts)

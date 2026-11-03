@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является вызываемым значением.</link-summary>
 
-<web-summary>nonFunctionLike() — Проверяет, что значение **не** является вызываемым значением. apps-script-utils, Русский.</web-summary>
+<web-summary>nonFunctionLike() — Проверяет, что значение **не** является вызываемым значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ nonFunctionLike(Math.max); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonFunctionLike.ts)
+[`src/lang/base/nonFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonFunctionLike.ts)

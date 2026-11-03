@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as `undefined`, or throws.</link-summary>
 
-<web-summary>requireUndefined() — Returns the value as `undefined`, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireUndefined() — Returns the value as `undefined`, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -54,4 +54,4 @@ requireUndefined(0); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireUndefined.ts)
+[`src/lang/base/requireUndefined.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireUndefined.ts)

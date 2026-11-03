@@ -4,7 +4,7 @@
 
 <link-summary>Повертає колекцію без змін, переконавшись, що жоден її елемент не дорівнює `null` чи `undefined`.</link-summary>
 
-<web-summary>requireNoNilElements() — Повертає колекцію без змін, переконавшись, що жоден її елемент не дорівнює `null` чи `undefined`. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNoNilElements() — Повертає колекцію без змін, переконавшись, що жоден її елемент не дорівнює `null` чи `undefined`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -62,7 +62,7 @@ function appendContact(sheet, name, email) {
 ### Звуження типу елементів
 
 ```typescript
-import { requireNoNilElements } from "apps-script-utils";
+import { requireNoNilElements } from "@bootgs/utils";
 
 const values: Array<string | null> = readColumn();
 
@@ -87,4 +87,4 @@ requireNoNilElements([1, , 3]); // throws — a hole is undefined
 
 ## Вихідний код
 
-[`src/lang/array/requireNoNilElements.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/requireNoNilElements.ts)
+[`src/lang/array/requireNoNilElements.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/requireNoNilElements.ts)

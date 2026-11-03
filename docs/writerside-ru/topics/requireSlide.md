@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как слайд или выбрасывает исключение.</link-summary>
 
-<web-summary>requireSlide() — Возвращает значение как слайд или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireSlide() — Возвращает значение как слайд или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно с: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSlide(null); // throws SlideNotFoundException
 
 ## Исходный код
 
-[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireSlide.ts)
+[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireSlide.ts)

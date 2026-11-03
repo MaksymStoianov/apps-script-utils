@@ -4,7 +4,7 @@
 
 <link-summary>One row, as `getValues` hands it to a filter or a mapper.</link-summary>
 
-<web-summary>Row — One row, as `getValues` hands it to a filter or a mapper. apps-script-utils, English.</web-summary>
+<web-summary>Row — One row, as `getValues` hands it to a filter or a mapper. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -39,4 +39,4 @@ const row = {
 
 ## Source
 
-[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getValues.ts)
+[`src/appsscript/sheet/getValues.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getValues.ts)

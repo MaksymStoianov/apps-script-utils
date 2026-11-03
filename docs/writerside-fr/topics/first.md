@@ -4,7 +4,7 @@
 
 <link-summary>Prend le premier élément d'un tableau, ou ses n premiers éléments, sans test de vacuité.</link-summary>
 
-<web-summary>first() — Prend le premier élément d'un tableau, ou ses n premiers éléments, sans test de vacuité. apps-script-utils, Français.</web-summary>
+<web-summary>first() — Prend le premier élément d'un tableau, ou ses n premiers éléments, sans test de vacuité. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -83,4 +83,4 @@ first([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Code source
 
-[`src/lang/array/first.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/first.ts)
+[`src/lang/array/first.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/first.ts)

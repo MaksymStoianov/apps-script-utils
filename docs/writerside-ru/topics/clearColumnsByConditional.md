@@ -4,7 +4,7 @@
 
 <link-summary>Очищает столбцы, выбранные предикатом, не удаляя сами столбцы.</link-summary>
 
-<web-summary>clearColumnsByConditional() — Очищает столбцы, выбранные предикатом, не удаляя сами столбцы. apps-script-utils, Русский.</web-summary>
+<web-summary>clearColumnsByConditional() — Очищает столбцы, выбранные предикатом, не удаляя сами столбцы. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -74,4 +74,4 @@ clearColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
 
 ## Исходный код
 
-[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)
+[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)

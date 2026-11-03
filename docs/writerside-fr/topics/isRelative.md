@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un chemin relatif.</link-summary>
 
-<web-summary>isRelative() — Vérifie si une valeur est un chemin relatif. apps-script-utils, Français.</web-summary>
+<web-summary>isRelative() — Vérifie si une valeur est un chemin relatif. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>net/path</code></p>
@@ -50,4 +50,4 @@ isRelative("https://example.com/a"); // => false
 
 ## Code source
 
-[`src/net/path/isRelative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isRelative.ts)
+[`src/net/path/isRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isRelative.ts)

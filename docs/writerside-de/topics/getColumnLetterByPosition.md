@@ -4,7 +4,7 @@
 
 <link-summary>Wandelt eine einsbasierte Spaltenposition in ihren Buchstaben um.</link-summary>
 
-<web-summary>getColumnLetterByPosition() — Wandelt eine einsbasierte Spaltenposition in ihren Buchstaben um. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getColumnLetterByPosition() — Wandelt eine einsbasierte Spaltenposition in ihren Buchstaben um. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ getColumnLetterByPosition(27); // => "AA"
 
 ## Quellcode
 
-[`src/appsscript/sheet/getColumnLetterByPosition.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByPosition.ts)
+[`src/appsscript/sheet/getColumnLetterByPosition.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getColumnLetterByPosition.ts)

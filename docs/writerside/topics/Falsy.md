@@ -4,7 +4,7 @@
 
 <link-summary>The values JavaScript treats as false in a boolean context.</link-summary>
 
-<web-summary>Falsy — The values JavaScript treats as false in a boolean context. apps-script-utils, English.</web-summary>
+<web-summary>Falsy — The values JavaScript treats as false in a boolean context. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -33,4 +33,4 @@ const values = [0, "", false, null, undefined];
 
 ## Source
 
-[`src/lang/array/compact.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/compact.ts)
+[`src/lang/array/compact.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/compact.ts)

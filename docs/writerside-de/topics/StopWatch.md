@@ -4,7 +4,7 @@
 
 <link-summary>Misst die Zeit einer Folge benannter Aufgaben.</link-summary>
 
-<web-summary>StopWatch — Misst die Zeit einer Folge benannter Aufgaben. apps-script-utils, Deutsch.</web-summary>
+<web-summary>StopWatch — Misst die Zeit einer Folge benannter Aufgaben. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time</code> · Verfügbar seit: 1.11.0</p>
@@ -45,4 +45,4 @@ watch.getTotalTimeMillis();
 
 ## Quellcode
 
-[`src/time/StopWatch.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

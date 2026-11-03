@@ -25,7 +25,7 @@ import { isSafeInteger } from "./isSafeInteger";
  * @throws  {@link IllegalArgumentException} If the value is not a safe integer.
  * @see     {@link isSafeInteger}
  * @see     {@link nonSafeInteger}
- * @see     [requireSafeInteger on the documentation site](https://bootgs.github.io/apps-script-utils/requiresafeinteger.html)
+ * @see     [requireSafeInteger on the documentation site](https://bootgs.github.io/utils/requiresafeinteger.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a single-cell range.</link-summary>
 
-<web-summary>nonCellGridRange() — Checks whether a value is **not** a single-cell range. apps-script-utils, English.</web-summary>
+<web-summary>nonCellGridRange() — Checks whether a value is **not** a single-cell range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -49,4 +49,4 @@ nonCellGridRange({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endCol
 
 ## Source
 
-[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)
+[`src/appsscript/sheet/nonCellGridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonCellGridRange.ts)

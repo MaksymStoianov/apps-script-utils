@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a sheet.</link-summary>
 
-<web-summary>isSheet() — Checks whether a value is a sheet. apps-script-utils, English.</web-summary>
+<web-summary>isSheet() — Checks whether a value is a sheet. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.0.0</p>
@@ -51,4 +51,4 @@ isSheet(null); // => false
 
 ## Source
 
-[`src/appsscript/sheet/isSheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isSheet.ts)
+[`src/appsscript/sheet/isSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isSheet.ts)

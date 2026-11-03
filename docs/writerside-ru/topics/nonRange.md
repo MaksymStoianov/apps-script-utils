@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является диапазоном.</link-summary>
 
-<web-summary>nonRange() — Проверяет, что значение **не** является диапазоном. apps-script-utils, Русский.</web-summary>
+<web-summary>nonRange() — Проверяет, что значение **не** является диапазоном. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.3.0</p>
@@ -53,4 +53,4 @@ nonRange(range); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRange.ts)
+[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRange.ts)

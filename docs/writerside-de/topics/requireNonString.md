@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Zeichenkette ist.</link-summary>
 
-<web-summary>requireNonString() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Zeichenkette ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonString() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Zeichenkette ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonString("abc"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonString.ts)
+[`src/lang/base/requireNonString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonString.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є рядком версії.</link-summary>
 
-<web-summary>nonValidVersion() — Перевіряє, що значення **не** є рядком версії. apps-script-utils, Українська.</web-summary>
+<web-summary>nonValidVersion() — Перевіряє, що значення **не** є рядком версії. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.11.0</p>
@@ -51,4 +51,4 @@ nonValidVersion("2026.01.15"); // => false
 
 ## Вихідний код
 
-[`src/lang/string/nonValidVersion.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidVersion.ts)
+[`src/lang/string/nonValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidVersion.ts)

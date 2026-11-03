@@ -4,7 +4,7 @@
 
 <link-summary>Вставляет столбцы перед данными — на листе или у диапазона.</link-summary>
 
-<web-summary>prependColumns() — Вставляет столбцы перед данными — на листе или у диапазона. apps-script-utils, Русский.</web-summary>
+<web-summary>prependColumns() — Вставляет столбцы перед данными — на листе или у диапазона. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -76,4 +76,4 @@ prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 
 ## Исходный код
 
-[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependColumns.ts)
+[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependColumns.ts)

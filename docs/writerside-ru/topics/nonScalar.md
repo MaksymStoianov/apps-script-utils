@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является скалярным значением.</link-summary>
 
-<web-summary>nonScalar() — Проверяет, что значение **не** является скалярным значением. apps-script-utils, Русский.</web-summary>
+<web-summary>nonScalar() — Проверяет, что значение **не** является скалярным значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.4.0</p>
@@ -55,4 +55,4 @@ nonScalar(10n); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonScalar.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonScalar.ts)
+[`src/lang/base/nonScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonScalar.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Decides whether a row is one to act on.</link-summary>
 
-<web-summary>RowPredicate — Decides whether a row is one to act on. apps-script-utils, English.</web-summary>
+<web-summary>RowPredicate — Decides whether a row is one to act on. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -33,4 +33,4 @@ const predicate = (values, position, record) => record?.status === "done";
 
 ## Source
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

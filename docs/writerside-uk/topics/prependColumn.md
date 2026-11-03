@@ -4,7 +4,7 @@
 
 <link-summary>Вставляє один стовпець перед даними — на аркуші або біля діапазону.</link-summary>
 
-<web-summary>prependColumn() — Вставляє один стовпець перед даними — на аркуші або біля діапазону. apps-script-utils, Українська.</web-summary>
+<web-summary>prependColumn() — Вставляє один стовпець перед даними — на аркуші або біля діапазону. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -71,4 +71,4 @@ prependColumn(sheet.getRange("C4:F13"), ["Name", "Ada"]);
 
 ## Вихідний код
 
-[`src/appsscript/sheet/prependColumn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependColumn.ts)
+[`src/appsscript/sheet/prependColumn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependColumn.ts)

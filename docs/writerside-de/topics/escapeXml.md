@@ -4,7 +4,7 @@
 
 <link-summary>Maskiert die von XML reservierten Zeichen.</link-summary>
 
-<web-summary>escapeXml() — Maskiert die von XML reservierten Zeichen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>escapeXml() — Maskiert die von XML reservierten Zeichen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>html</code> · Verfügbar seit: 1.0.0</p>
@@ -47,4 +47,4 @@ escapeXml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Quellcode
 
-[`src/html/escapeXml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/escapeXml.ts)
+[`src/html/escapeXml.ts`](https://github.com/bootgs/utils/blob/main/src/html/escapeXml.ts)

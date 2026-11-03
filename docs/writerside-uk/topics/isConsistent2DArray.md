@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення — непорожня матриця, усі рядки якої однакової довжини.</link-summary>
 
-<web-summary>isConsistent2DArray() — Перевіряє, що значення — непорожня матриця, усі рядки якої однакової довжини. apps-script-utils, Українська.</web-summary>
+<web-summary>isConsistent2DArray() — Перевіряє, що значення — непорожня матриця, усі рядки якої однакової довжини. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.0.0</p>
@@ -69,4 +69,4 @@ function write(sheet, rows) {
 
 ## Вихідний код
 
-[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/isConsistent2DArray.ts)
+[`src/lang/array/isConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/isConsistent2DArray.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** appelable.</link-summary>
 
-<web-summary>nonFunctionLike() — Vérifie qu'une valeur n'est **pas** appelable. apps-script-utils, Français.</web-summary>
+<web-summary>nonFunctionLike() — Vérifie qu'une valeur n'est **pas** appelable. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.11.0</p>
@@ -53,4 +53,4 @@ nonFunctionLike(Math.max); // => false
 
 ## Code source
 
-[`src/lang/base/nonFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonFunctionLike.ts)
+[`src/lang/base/nonFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonFunctionLike.ts)

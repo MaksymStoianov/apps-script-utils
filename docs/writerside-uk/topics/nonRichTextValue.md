@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є форматованим текстом.</link-summary>
 
-<web-summary>nonRichTextValue() — Перевіряє, що значення **не** є форматованим текстом. apps-script-utils, Українська.</web-summary>
+<web-summary>nonRichTextValue() — Перевіряє, що значення **не** є форматованим текстом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -53,4 +53,4 @@ nonRichTextValue(value); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)
+[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)

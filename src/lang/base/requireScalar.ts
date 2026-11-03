@@ -22,7 +22,7 @@ import { isScalar } from "./isScalar";
  * @throws  {@link IllegalArgumentException} If the value is not a scalar.
  * @see     {@link isScalar}
  * @see     {@link nonScalar}
- * @see     [requireScalar on the documentation site](https://bootgs.github.io/apps-script-utils/requirescalar.html)
+ * @see     [requireScalar on the documentation site](https://bootgs.github.io/utils/requirescalar.html)
  * @since   1.11.0
  * @version 1.0.0
  */

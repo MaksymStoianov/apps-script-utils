@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen relativen Pfad zurück oder wirft.</link-summary>
 
-<web-summary>requireRelative() — Gibt den Wert als einen relativen Pfad zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireRelative() — Gibt den Wert als einen relativen Pfad zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ requireRelative("https://example.com/a"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/net/path/requireRelative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/requireRelative.ts)
+[`src/net/path/requireRelative.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/requireRelative.ts)

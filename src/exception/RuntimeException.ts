@@ -18,7 +18,7 @@ import { Exception } from "./Exception";
  *
  * @extends Exception
  * @see     {@link Error}
- * @see     [RuntimeException on the documentation site](https://bootgs.github.io/apps-script-utils/runtimeexception.html)
+ * @see     [RuntimeException on the documentation site](https://bootgs.github.io/utils/runtimeexception.html)
  * @since   1.0.0
  * @version 1.0.0
  */

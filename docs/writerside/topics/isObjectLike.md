@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is object-like.</link-summary>
 
-<web-summary>isObjectLike() — Checks whether a value is object-like. apps-script-utils, English.</web-summary>
+<web-summary>isObjectLike() — Checks whether a value is object-like. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -52,4 +52,4 @@ isObjectLike(1); // => false
 
 ## Source
 
-[`src/lang/base/isObjectLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isObjectLike.ts)
+[`src/lang/base/isObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isObjectLike.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення масивом.</link-summary>
 
-<web-summary>isArray() — Перевіряє, чи є значення масивом. apps-script-utils, Українська.</web-summary>
+<web-summary>isArray() — Перевіряє, чи є значення масивом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.4.0</p>
@@ -51,4 +51,4 @@ isArray(null); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isArray.ts)
+[`src/lang/base/isArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isArray.ts)

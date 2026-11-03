@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение идентификатором таблицы.</link-summary>
 
-<web-summary>isValidSpreadsheetId() — Проверяет, является ли значение идентификатором таблицы. apps-script-utils, Русский.</web-summary>
+<web-summary>isValidSpreadsheetId() — Проверяет, является ли значение идентификатором таблицы. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -48,4 +48,4 @@ isValidSpreadsheetId("has space in it and is long enough to pass"); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)
+[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)

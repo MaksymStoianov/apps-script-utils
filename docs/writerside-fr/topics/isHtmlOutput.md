@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un HtmlOutput.</link-summary>
 
-<web-summary>isHtmlOutput() — Vérifie si une valeur est un HtmlOutput. apps-script-utils, Français.</web-summary>
+<web-summary>isHtmlOutput() — Vérifie si une valeur est un HtmlOutput. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Disponible depuis: 1.0.0</p>
@@ -51,4 +51,4 @@ isHtmlOutput(null); // => false
 
 ## Code source
 
-[`src/appsscript/ui/isHtmlOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/isHtmlOutput.ts)
+[`src/appsscript/ui/isHtmlOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/isHtmlOutput.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Folie zurück oder wirft.</link-summary>
 
-<web-summary>requireSlide() — Gibt den Wert als eine Folie zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireSlide() — Gibt den Wert als eine Folie zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSlide(null); // throws SlideNotFoundException
 
 ## Quellcode
 
-[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireSlide.ts)
+[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireSlide.ts)

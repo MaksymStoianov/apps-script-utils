@@ -4,7 +4,7 @@
 
 <link-summary>Takes the last element of an array, or its last n elements in their original order.</link-summary>
 
-<web-summary>last() — Takes the last element of an array, or its last n elements in their original order. apps-script-utils, English.</web-summary>
+<web-summary>last() — Takes the last element of an array, or its last n elements in their original order. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.11.0</p>
@@ -84,4 +84,4 @@ last([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Source
 
-[`src/lang/array/last.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/last.ts)
+[`src/lang/array/last.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/last.ts)

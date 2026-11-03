@@ -4,7 +4,7 @@
 
 <link-summary>Ersetzt den Blattnamen in einer A1-Notation und behält den Bereich.</link-summary>
 
-<web-summary>updateSheetNameInA1Notation() — Ersetzt den Blattnamen in einer A1-Notation und behält den Bereich. apps-script-utils, Deutsch.</web-summary>
+<web-summary>updateSheetNameInA1Notation() — Ersetzt den Blattnamen in einer A1-Notation und behält den Bereich. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.6.0</p>
@@ -45,4 +45,4 @@ updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
 
 ## Quellcode
 
-[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)
+[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Écrit une plage de grille en notation A1.</link-summary>
 
-<web-summary>toA1Notation() — Écrit une plage de grille en notation A1. apps-script-utils, Français.</web-summary>
+<web-summary>toA1Notation() — Écrit une plage de grille en notation A1. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -47,4 +47,4 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnI
 
 ## Code source
 
-[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/toA1Notation.ts)
+[`src/appsscript/sheet/toA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/toA1Notation.ts)

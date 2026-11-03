@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как идентификатор листа или выбрасывает исключение.</link-summary>
 
-<web-summary>requireValidSheetId() — Возвращает значение как идентификатор листа или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireValidSheetId() — Возвращает значение как идентификатор листа или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSheetId(1.5); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)
+[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)

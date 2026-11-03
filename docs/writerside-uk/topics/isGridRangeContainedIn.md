@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи лежить один діапазон цілком усередині іншого.</link-summary>
 
-<web-summary>isGridRangeContainedIn() — Перевіряє, чи лежить один діапазон цілком усередині іншого. apps-script-utils, Українська.</web-summary>
+<web-summary>isGridRangeContainedIn() — Перевіряє, чи лежить один діапазон цілком усередині іншого. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.0.0</p>
@@ -51,4 +51,4 @@ isGridRangeContainedIn(inner, outer); // => true
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)
+[`src/appsscript/sheet/isGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isGridRangeContainedIn.ts)

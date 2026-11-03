@@ -2,7 +2,7 @@
 
 <link-summary>La hiérarchie des exceptions, quand chaque classe est levée et comment les intercepter.</link-summary>
 
-<web-summary>Exceptions typées d'apps-script-utils : la hiérarchie sous Exception, quelle garde lève quelle classe, et comment les intercepter dans un projet Google Apps Script.</web-summary>
+<web-summary>Exceptions typées d'@bootgs/utils : la hiérarchie sous Exception, quelle garde lève quelle classe, et comment les intercepter dans un projet Google Apps Script.</web-summary>
 
 Toute erreur que lève cette bibliothèque est une instance de la classe `Exception` ou de l'une de ses dérivées. Un
 seul `catch` suffit donc à distinguer les échecs de la bibliothèque de tout ce que lève l'environnement.
@@ -39,7 +39,7 @@ Deux niveaux portent du sens. `Exception` est la racine et marque une erreur com
 `Exception` expose une garde de type statique, la vérification recommandée puisqu'elle restreint aussi le type :
 
 ```typescript
-import { Exception, requireString } from "apps-script-utils";
+import { Exception, requireString } from "@bootgs/utils";
 
 try {
   requireString(input);
@@ -55,7 +55,7 @@ try {
 `instanceof` fonctionne également, et c'est la façon d'attraper un échec précis :
 
 ```typescript
-import { NullPointerException, requireNonNull } from "apps-script-utils";
+import { NullPointerException, requireNonNull } from "@bootgs/utils";
 
 try {
   const sheet = requireNonNull(spreadsheet.getSheetByName("Data"));

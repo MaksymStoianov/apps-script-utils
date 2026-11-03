@@ -2,7 +2,7 @@
 
 <link-summary>Every path and URL function.</link-summary>
 
-<web-summary>Reference of the path and URL functions in apps-script-utils: parsing, joining, normalising, and validating paths and domains.</web-summary>
+<web-summary>Reference of the path and URL functions in @bootgs/utils: parsing, joining, normalising, and validating paths and domains.</web-summary>
 
 Functions for working with file paths and URLs.
 

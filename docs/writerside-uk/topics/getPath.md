@@ -4,7 +4,7 @@
 
 <link-summary>Читає вкладену властивість за шляхом, із запасним значенням.</link-summary>
 
-<web-summary>getPath() — Читає вкладену властивість за шляхом, із запасним значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>getPath() — Читає вкладену властивість за шляхом, із запасним значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/object</code> · Доступно з: 1.11.0</p>
@@ -52,4 +52,4 @@ getPath({ rows: [{ id: 7 }] }, ["rows", 0, "id"]); // => 7
 
 ## Вихідний код
 
-[`src/lang/object/getPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/getPath.ts)
+[`src/lang/object/getPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/getPath.ts)

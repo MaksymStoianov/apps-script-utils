@@ -4,7 +4,7 @@
 
 <link-summary>Eine Spalte des Schemas eines Blattes.</link-summary>
 
-<web-summary>SheetColumnSchema — Eine Spalte des Schemas eines Blattes. apps-script-utils, Deutsch.</web-summary>
+<web-summary>SheetColumnSchema — Eine Spalte des Schemas eines Blattes. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet/types</code> · Verfügbar seit: 1.11.0</p>
@@ -33,4 +33,4 @@ const column = { name: "created", type: "date" };
 
 ## Quellcode
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

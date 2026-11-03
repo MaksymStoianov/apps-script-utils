@@ -4,7 +4,7 @@
 
 <link-summary>Ein Blatt war erwartet, der Wert ist keines.</link-summary>
 
-<web-summary>InvalidSheetException — Ein Blatt war erwartet, der Wert ist keines. apps-script-utils, Deutsch.</web-summary>
+<web-summary>InvalidSheetException — Ein Blatt war erwartet, der Wert ist keines. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception/appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSheetException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidSheetException.ts)

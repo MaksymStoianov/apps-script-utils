@@ -4,7 +4,7 @@
 
 <link-summary>Von einer Zeichenkette war Inhalt erwartet, sie war null, undefined oder leer.</link-summary>
 
-<web-summary>EmptyStringException — Von einer Zeichenkette war Inhalt erwartet, sie war null, undefined oder leer. apps-script-utils, Deutsch.</web-summary>
+<web-summary>EmptyStringException — Von einer Zeichenkette war Inhalt erwartet, sie war null, undefined oder leer. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/EmptyStringException.ts)
+[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/EmptyStringException.ts)

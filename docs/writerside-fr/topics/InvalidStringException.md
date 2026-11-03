@@ -4,7 +4,7 @@
 
 <link-summary>Une chaîne était attendue et autre chose est arrivé.</link-summary>
 
-<web-summary>InvalidStringException — Une chaîne était attendue et autre chose est arrivé. apps-script-utils, Français.</web-summary>
+<web-summary>InvalidStringException — Une chaîne était attendue et autre chose est arrivé. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/InvalidStringException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/InvalidStringException.ts)
+[`src/exception/InvalidStringException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidStringException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un TextOutput, ou lève une exception.</link-summary>
 
-<web-summary>requireTextOutput() — Renvoie la valeur en tant que un TextOutput, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireTextOutput() — Renvoie la valeur en tant que un TextOutput, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/ui</code> · Disponible depuis: 1.11.0</p>
@@ -59,4 +59,4 @@ requireTextOutput(null); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/appsscript/ui/requireTextOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/requireTextOutput.ts)
+[`src/appsscript/ui/requireTextOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/requireTextOutput.ts)

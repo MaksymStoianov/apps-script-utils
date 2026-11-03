@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **keine** Matrix mit gleich langen Zeilen ist.</link-summary>
 
-<web-summary>nonConsistent2DArray() — Prüft, ob ein Wert **keine** Matrix mit gleich langen Zeilen ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonConsistent2DArray() — Prüft, ob ein Wert **keine** Matrix mit gleich langen Zeilen ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -75,4 +75,4 @@ function describeShape(rows) {
 
 ## Quellcode
 
-[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/nonConsistent2DArray.ts)
+[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/nonConsistent2DArray.ts)

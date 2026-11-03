@@ -4,7 +4,7 @@
 
 <link-summary>Eine Folie war erwartet, der Wert ist keine, oder die gesuchte Folie gibt es in der Präsentation nicht.</link-summary>
 
-<web-summary>SlideNotFoundException — Eine Folie war erwartet, der Wert ist keine, oder die gesuchte Folie gibt es in der Präsentation nicht. apps-script-utils, Deutsch.</web-summary>
+<web-summary>SlideNotFoundException — Eine Folie war erwartet, der Wert ist keine, oder die gesuchte Folie gibt es in der Präsentation nicht. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception/appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)
+[`src/exception/appsscript/slide/SlideNotFoundException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/slide/SlideNotFoundException.ts)

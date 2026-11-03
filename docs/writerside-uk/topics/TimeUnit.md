@@ -4,7 +4,7 @@
 
 <link-summary>Одиниця, в якій можна виразити інтервал.</link-summary>
 
-<web-summary>TimeUnit — Одиниця, в якій можна виразити інтервал. apps-script-utils, Українська.</web-summary>
+<web-summary>TimeUnit — Одиниця, в якій можна виразити інтервал. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time/types</code> · Доступно з: 1.11.0</p>
@@ -35,4 +35,4 @@ offset(date, 1, "month");
 
 ## Вихідний код
 
-[`src/time/types/TimeUnit.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/types/TimeUnit.ts)
+[`src/time/types/TimeUnit.ts`](https://github.com/bootgs/utils/blob/main/src/time/types/TimeUnit.ts)

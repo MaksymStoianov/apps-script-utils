@@ -4,7 +4,7 @@
 
 <link-summary>Gibt das Schema eines Blattes zurück, gespeichert oder aus dem Inhalt abgeleitet.</link-summary>
 
-<web-summary>getSchema() — Gibt das Schema eines Blattes zurück, gespeichert oder aus dem Inhalt abgeleitet. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getSchema() — Gibt das Schema eines Blattes zurück, gespeichert oder aus dem Inhalt abgeleitet. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ schema?.columns.map((column) => column.name);
 
 ## Quellcode
 
-[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSchema.ts)
+[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSchema.ts)

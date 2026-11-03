@@ -22,7 +22,7 @@
     },
     {
       "title": "Narrowing the element type",
-      "body": "```typescript\nimport { requireNoNilElements } from \"apps-script-utils\";\n\nconst values: Array<string | null> = readColumn();\n\nconst names: string[] = requireNoNilElements(values, \"the column has empty cells\");\n```"
+      "body": "```typescript\nimport { requireNoNilElements } from \"@bootgs/utils\";\n\nconst values: Array<string | null> = readColumn();\n\nconst names: string[] = requireNoNilElements(values, \"the column has empty cells\");\n```"
     },
     {
       "title": "What passes and what throws",

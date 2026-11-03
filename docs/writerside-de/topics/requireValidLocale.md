@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen Gebietsschema-Code zurück oder wirft.</link-summary>
 
-<web-summary>requireValidLocale() — Gibt den Wert als einen Gebietsschema-Code zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireValidLocale() — Gibt den Wert als einen Gebietsschema-Code zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidLocale("eng"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/string/requireValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidLocale.ts)
+[`src/lang/string/requireValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidLocale.ts)

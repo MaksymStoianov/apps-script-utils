@@ -2,7 +2,7 @@
 
 <link-summary>Die laufzeitunabhängigen Sprachwerkzeuge: Prüfungen, Arrays, Zahlen, Objekte, Zeichenketten.</link-summary>
 
-<web-summary>Das lang-Modul von apps-script-utils: Typprüfungen, Array- und Matrixhelfer, Zahleneinordnung, Objekt-Hashing und String-Umwandlung — alles unabhängig von der Laufzeit.</web-summary>
+<web-summary>Das lang-Modul von @bootgs/utils: Typprüfungen, Array- und Matrixhelfer, Zahleneinordnung, Objekt-Hashing und String-Umwandlung — alles unabhängig von der Laufzeit.</web-summary>
 
 `lang` sind die sprachnahen Werkzeuge — der Teil der Bibliothek, der nichts von Google Apps Script weiß und überall
 läuft, wo JavaScript läuft.
@@ -27,7 +27,7 @@ gemeinsam mit `lang` in [](reference-base.md).
 zurück.
 
 ```typescript
-import { requireString, toKebabCase } from "apps-script-utils";
+import { requireString, toKebabCase } from "@bootgs/utils";
 
 function slugify(input: unknown): string {
   return toKebabCase(requireString(input));
@@ -37,7 +37,7 @@ function slugify(input: unknown): string {
 ## Arrays
 
 ```typescript
-import { chunk, transpose, is2DArray, isConsistent2DArray } from "apps-script-utils";
+import { chunk, transpose, is2DArray, isConsistent2DArray } from "@bootgs/utils";
 
 chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
 
@@ -57,7 +57,7 @@ die die betroffene Zeile nicht nennt.
 ## Zahlen
 
 ```typescript
-import { isCountable, isFloat, isInteger, toInteger } from "apps-script-utils";
+import { isCountable, isFloat, isInteger, toInteger } from "@bootgs/utils";
 
 isInteger(42); // true
 isInteger(42.5); // false
@@ -74,7 +74,7 @@ Zeilen- und Spaltenargumente der Sheets-API sind Anzahlen, keine beliebigen Zahl
 Schreibweisen:
 
 ```typescript
-import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "apps-script-utils";
+import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "@bootgs/utils";
 
 toCamelCase("user name"); // "userName"
 toKebabCase("User Name"); // "user-name"
@@ -85,7 +85,7 @@ toProperCase("user name"); // "User Name"
 Prüfungen:
 
 ```typescript
-import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "apps-script-utils";
+import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "@bootgs/utils";
 
 isEmail("ada@example.com"); // true
 isValidSlug("my-post"); // true
@@ -97,7 +97,7 @@ requireValidEmail(formResponse); // gibt den Wert zurück oder wirft InvalidEmai
 Versionsvergleich, für Skripte, die ihr Verhalten von einer Bibliotheksversion abhängig machen:
 
 ```typescript
-import { versionCompare, isVersionCompatible } from "apps-script-utils";
+import { versionCompare, isVersionCompatible } from "@bootgs/utils";
 
 versionCompare("1.10.0", "1.9.0"); // 1
 versionCompare("1.9.0", "1.10.0"); // -1
@@ -108,7 +108,7 @@ versionCompare("1.9.0", "1.9.0"); // 0
 Suchbegriff aus einer Zelle oder einem Formular kommt:
 
 ```typescript
-import { escapeRegExp } from "apps-script-utils";
+import { escapeRegExp } from "@bootgs/utils";
 
 const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
 ```
@@ -116,7 +116,7 @@ const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
 ## Objekte
 
 ```typescript
-import { hashCode, objectToString } from "apps-script-utils";
+import { hashCode, objectToString } from "@bootgs/utils";
 
 objectToString([]); // "[object Array]"
 objectToString(null); // "[object Null]"

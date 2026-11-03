@@ -4,7 +4,7 @@
 
 <link-summary>Findet ein Blatt anhand seiner Position in der Tabelle.</link-summary>
 
-<web-summary>getSheetByIndex() — Findet ein Blatt anhand seiner Position in der Tabelle. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getSheetByIndex() — Findet ein Blatt anhand seiner Position in der Tabelle. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code></p>
@@ -50,4 +50,4 @@ const first = getSheetByIndex(0);
 
 ## Quellcode
 
-[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)
+[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)

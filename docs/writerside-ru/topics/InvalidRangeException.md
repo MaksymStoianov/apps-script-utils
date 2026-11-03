@@ -4,7 +4,7 @@
 
 <link-summary>Ожидался диапазон, а значение им не является.</link-summary>
 
-<web-summary>InvalidRangeException — Ожидался диапазон, а значение им не является. apps-script-utils, Русский.</web-summary>
+<web-summary>InvalidRangeException — Ожидался диапазон, а значение им не является. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception/appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)
+[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)

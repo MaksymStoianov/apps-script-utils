@@ -4,7 +4,7 @@
 
 <link-summary>Репозиторій, на доступність якого розраховував скрипт, недоступний.</link-summary>
 
-<web-summary>RepositoryIsNotDefinedException — Репозиторій, на доступність якого розраховував скрипт, недоступний. apps-script-utils, Українська.</web-summary>
+<web-summary>RepositoryIsNotDefinedException — Репозиторій, на доступність якого розраховував скрипт, недоступний. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>exception</code> · Доступно з: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)
+[`src/exception/RepositoryIsNotDefinedException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/RepositoryIsNotDefinedException.ts)

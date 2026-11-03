@@ -4,7 +4,7 @@
 
 <link-summary>Ersetzt jedes Vorkommen eines Textes auf einer Folie.</link-summary>
 
-<web-summary>findReplaceAllTextInSlide() — Ersetzt jedes Vorkommen eines Textes auf einer Folie. apps-script-utils, Deutsch.</web-summary>
+<web-summary>findReplaceAllTextInSlide() — Ersetzt jedes Vorkommen eines Textes auf einer Folie. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -59,4 +59,4 @@ const replaced = findReplaceAllTextInSlide(slide, "{{ client }}", "Acme", false)
 
 ## Quellcode
 
-[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)
+[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)

@@ -15,7 +15,7 @@ import { now } from "./now";
  * ```
  *
  * @property {string} taskName - The name the task was started with; empty if none was given.
- * @see [TaskInfo on the documentation site](https://bootgs.github.io/apps-script-utils/taskinfo.html)
+ * @see [TaskInfo on the documentation site](https://bootgs.github.io/utils/taskinfo.html)
  */
 export interface TaskInfo {
   readonly taskName: string;
@@ -62,7 +62,7 @@ const RULE = "-".repeat(45);
  * @class       StopWatch
  * @see         {@link TaskInfo}
  * @see         {@link now}
- * @see         [StopWatch on the documentation site](https://bootgs.github.io/apps-script-utils/stopwatch.html)
+ * @see         [StopWatch on the documentation site](https://bootgs.github.io/utils/stopwatch.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

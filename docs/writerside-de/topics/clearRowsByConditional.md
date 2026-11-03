@@ -4,7 +4,7 @@
 
 <link-summary>Leert die vom Prädikat gewählten Zeilen, ohne die Zeilen zu entfernen.</link-summary>
 
-<web-summary>clearRowsByConditional() — Leert die vom Prädikat gewählten Zeilen, ohne die Zeilen zu entfernen. apps-script-utils, Deutsch.</web-summary>
+<web-summary>clearRowsByConditional() — Leert die vom Prädikat gewählten Zeilen, ohne die Zeilen zu entfernen. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -75,4 +75,4 @@ clearRowsByConditional(sheet.getRange("B2:D100"), (values) => values.every((cell
 
 ## Quellcode
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

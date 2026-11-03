@@ -4,7 +4,7 @@
 
 <link-summary>Вставляє стовпці перед даними — на аркуші або біля діапазону.</link-summary>
 
-<web-summary>prependColumns() — Вставляє стовпці перед даними — на аркуші або біля діапазону. apps-script-utils, Українська.</web-summary>
+<web-summary>prependColumns() — Вставляє стовпці перед даними — на аркуші або біля діапазону. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно з: 1.11.0</p>
@@ -76,4 +76,4 @@ prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 
 ## Вихідний код
 
-[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependColumns.ts)
+[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependColumns.ts)

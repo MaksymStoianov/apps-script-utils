@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є значенням `null` або `undefined`.</link-summary>
 
-<web-summary>requireNonNil() — Повертає значення, переконавшись, що воно не є значенням `null` або `undefined`. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonNil() — Повертає значення, переконавшись, що воно не є значенням `null` або `undefined`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonNil(undefined); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonNil.ts)
+[`src/lang/base/requireNonNil.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonNil.ts)

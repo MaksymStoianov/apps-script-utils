@@ -66,7 +66,7 @@ function settings(language, depth = 2) {
     `<noindex-content>false</noindex-content>`,
     `<generate-canonicals>true</generate-canonicals>`,
     `<locale-code>${language.locale}</locale-code>`,
-    `<product-web-url>https://github.com/bootgs/apps-script-utils</product-web-url>`,
+    `<product-web-url>https://github.com/bootgs/utils</product-web-url>`,
     `<og-image>${SITE}/images/banner-1280x640.jpg</og-image>`,
     `<versions-switcher>${SITE}/help-versions.json</versions-switcher>`,
     `<include-in-head>head.html</include-in-head>`,
@@ -90,8 +90,8 @@ ${settings(language)}
     <footer>
         <notice>${language.strings.aiNotice}</notice>
         <copyright>2025–2026 Maksym Stoianov. Licensed under Apache-2.0.</copyright>
-        <link href="https://github.com/bootgs/apps-script-utils">GitHub</link>
-        <link href="https://www.npmjs.com/package/apps-script-utils">npm</link>
+        <link href="https://github.com/bootgs/utils">GitHub</link>
+        <link href="https://www.npmjs.com/package/@bootgs/utils">npm</link>
 ${LANGUAGES.map((other) => `        <link href="${other.webRoot}/">${other.name}</link>`).join("\n")}
         <link href="${ARTWORK}">Banner artwork: Daryna Mikhailenko</link>
     </footer>
@@ -118,10 +118,10 @@ export function headHtml(language) {
   {
     "@context": "https://schema.org",
     "@type": "SoftwareSourceCode",
-    "name": "apps-script-utils",
+    "name": "@bootgs/utils",
     "description": "A TypeScript utility library for Google Apps Script: spreadsheet and A1-notation helpers, isX/nonX/requireX validation, string, array and object transforms, and typed exceptions.",
     "url": "${language.webRoot}/",
-    "codeRepository": "https://github.com/bootgs/apps-script-utils",
+    "codeRepository": "https://github.com/bootgs/utils",
     "programmingLanguage": ["TypeScript", "JavaScript"],
     "runtimePlatform": "Google Apps Script",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",

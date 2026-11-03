@@ -4,7 +4,7 @@
 
 <link-summary>null oder undefined tauchte dort auf, wo ein Objekt verlangt war.</link-summary>
 
-<web-summary>NullPointerException — null oder undefined tauchte dort auf, wo ein Objekt verlangt war. apps-script-utils, Deutsch.</web-summary>
+<web-summary>NullPointerException — null oder undefined tauchte dort auf, wo ein Objekt verlangt war. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/NullPointerException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/NullPointerException.ts)
+[`src/exception/NullPointerException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/NullPointerException.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Turns numeric character references back into characters.</link-summary>
 
-<web-summary>decodeHtml() — Turns numeric character references back into characters. apps-script-utils, English.</web-summary>
+<web-summary>decodeHtml() — Turns numeric character references back into characters. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>html</code> · Since: 1.0.0</p>
@@ -49,4 +49,4 @@ decodeHtml("&amp;"); // => "&amp;"
 
 ## Source
 
-[`src/html/decodeHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/decodeHtml.ts)
+[`src/html/decodeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/decodeHtml.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not `null` or `undefined`.</link-summary>
 
-<web-summary>requireNonNull() — Returns the value after checking that it is not `null` or `undefined`. apps-script-utils, English.</web-summary>
+<web-summary>requireNonNull() — Returns the value after checking that it is not `null` or `undefined`. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -56,4 +56,4 @@ requireNonNull(undefined); // throws NullPointerException
 
 ## Source
 
-[`src/lang/base/requireNonNull.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonNull.ts)
+[`src/lang/base/requireNonNull.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonNull.ts)

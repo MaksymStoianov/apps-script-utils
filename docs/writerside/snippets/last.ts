@@ -1,4 +1,4 @@
-import { last } from "apps-script-utils";
+import { last } from "@bootgs/utils";
 
 /**
  * Logs the ten newest entries of a log sheet, oldest of the ten first.

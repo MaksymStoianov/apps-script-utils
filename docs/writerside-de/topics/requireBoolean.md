@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen booleschen Wert zurück oder wirft.</link-summary>
 
-<web-summary>requireBoolean() — Gibt den Wert als einen booleschen Wert zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireBoolean() — Gibt den Wert als einen booleschen Wert zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireBoolean(1); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireBoolean.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireBoolean.ts)
+[`src/lang/base/requireBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireBoolean.ts)

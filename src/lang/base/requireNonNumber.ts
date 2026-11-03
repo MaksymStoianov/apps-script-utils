@@ -23,7 +23,7 @@ import { isNumber } from "./isNumber";
  * @see      {@link isNumber}
  * @see      {@link nonNumber}
  * @see      {@link requireNumber}
- * @see      [requireNonNumber on the documentation site](https://bootgs.github.io/apps-script-utils/requirenonnumber.html)
+ * @see      [requireNonNumber on the documentation site](https://bootgs.github.io/utils/requirenonnumber.html)
  * @since    1.11.0
  * @version  1.0.0
  */

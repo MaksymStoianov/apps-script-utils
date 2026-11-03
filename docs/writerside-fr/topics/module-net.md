@@ -4,7 +4,7 @@
 
 <link-summary>Aides pour les URL, les chemins et les domaines.</link-summary>
 
-<web-summary>Le module net d'apps-script-utils : validation d'URL, analyse, assemblage et normalisation de chemins, contrôles de domaine — le tout utilisable dans Google Apps Script.</web-summary>
+<web-summary>Le module net d'@bootgs/utils : validation d'URL, analyse, assemblage et normalisation de chemins, contrôles de domaine — le tout utilisable dans Google Apps Script.</web-summary>
 
 `net` couvre les chemins, les URL et ce qui gravite autour. Comme `lang`, il ne dépend pas de l'environnement Apps
 Script.
@@ -23,7 +23,7 @@ d'Apps Script — voir [](module-appsscript.md).
 ## Chemins
 
 ```typescript
-import { join, normalize, parse, isAbsolute, isRelative } from "apps-script-utils";
+import { join, normalize, parse, isAbsolute, isRelative } from "@bootgs/utils";
 
 join("/a", "b", "../c"); // "/a/c"
 normalize("/a/b/../c"); // "/a/c"
@@ -42,7 +42,7 @@ fichiers dessous.
 ## Domaines et URL
 
 ```typescript
-import { isValidDomain, isUrl } from "apps-script-utils";
+import { isValidDomain, isUrl } from "@bootgs/utils";
 
 isValidDomain("example.com"); // true
 isValidDomain("not a domain"); // false

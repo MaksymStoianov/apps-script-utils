@@ -4,7 +4,7 @@
 
 <link-summary>Находит позицию слайда — в презентации или в активной.</link-summary>
 
-<web-summary>getSlideIndex() — Находит позицию слайда — в презентации или в активной. apps-script-utils, Русский.</web-summary>
+<web-summary>getSlideIndex() — Находит позицию слайда — в презентации или в активной. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/slide</code> · Доступно с: 1.5.0</p>
@@ -52,4 +52,4 @@ getSlideIndex(slide); // => 2
 
 ## Исходный код
 
-[`src/appsscript/slide/getSlideIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/getSlideIndex.ts)
+[`src/appsscript/slide/getSlideIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/getSlideIndex.ts)

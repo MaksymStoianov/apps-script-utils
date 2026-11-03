@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является кодом локали.</link-summary>
 
-<web-summary>nonValidLocale() — Проверяет, что значение **не** является кодом локали. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidLocale() — Проверяет, что значение **не** является кодом локали. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -50,4 +50,4 @@ nonValidLocale("UK"); // => false
 
 ## Исходный код
 
-[`src/lang/string/nonValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidLocale.ts)
+[`src/lang/string/nonValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidLocale.ts)

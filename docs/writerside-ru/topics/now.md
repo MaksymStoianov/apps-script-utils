@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает текущее время в миллисекундах с начала эпохи.</link-summary>
 
-<web-summary>now() — Возвращает текущее время в миллисекундах с начала эпохи. apps-script-utils, Русский.</web-summary>
+<web-summary>now() — Возвращает текущее время в миллисекундах с начала эпохи. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time</code> · Доступно с: 1.5.0</p>
@@ -40,4 +40,4 @@ const elapsed = now() - started; // milliseconds
 
 ## Исходный код
 
-[`src/time/now.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/now.ts)
+[`src/time/now.ts`](https://github.com/bootgs/utils/blob/main/src/time/now.ts)

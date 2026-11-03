@@ -4,7 +4,7 @@
 
 <link-summary>Die Teile, in die ein Pfad zerfällt.</link-summary>
 
-<web-summary>ParsedPath — Die Teile, in die ein Pfad zerfällt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>ParsedPath — Die Teile, in die ein Pfad zerfällt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>net/path/types</code> · Verfügbar seit: 0.1.0</p>
@@ -39,4 +39,4 @@ parse("readme.md");
 
 ## Quellcode
 
-[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/types/ParsedPath.ts)
+[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/types/ParsedPath.ts)

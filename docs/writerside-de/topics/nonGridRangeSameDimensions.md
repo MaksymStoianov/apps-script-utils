@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob zwei Rasterbereiche sich in Höhe oder Breite unterscheiden.</link-summary>
 
-<web-summary>nonGridRangeSameDimensions() — Prüft, ob zwei Rasterbereiche sich in Höhe oder Breite unterscheiden. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonGridRangeSameDimensions() — Prüft, ob zwei Rasterbereiche sich in Höhe oder Breite unterscheiden. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeSameDimensions(source, target); // => true
 
 ## Quellcode
 
-[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)

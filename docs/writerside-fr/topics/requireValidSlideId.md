@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un identifiant de diapositive, ou lève une exception.</link-summary>
 
-<web-summary>requireValidSlideId() — Renvoie la valeur en tant que un identifiant de diapositive, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireValidSlideId() — Renvoie la valeur en tant que un identifiant de diapositive, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSlideId(""); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)
+[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)

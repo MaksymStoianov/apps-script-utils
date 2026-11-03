@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Tabelle zurück oder wirft.</link-summary>
 
-<web-summary>requireSpreadsheet() — Gibt den Wert als eine Tabelle zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireSpreadsheet() — Gibt den Wert als eine Tabelle zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.5.0</p>
@@ -59,4 +59,4 @@ requireSpreadsheet(null); // throws InvalidSpreadsheetException
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)
+[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)

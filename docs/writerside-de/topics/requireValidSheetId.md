@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als eine Blatt-Id zurück oder wirft.</link-summary>
 
-<web-summary>requireValidSheetId() — Gibt den Wert als eine Blatt-Id zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireValidSheetId() — Gibt den Wert als eine Blatt-Id zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSheetId(1.5); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)
+[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)

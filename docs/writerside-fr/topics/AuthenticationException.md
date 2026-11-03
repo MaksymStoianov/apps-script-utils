@@ -4,7 +4,7 @@
 
 <link-summary>L'authentification a échoué : impossible d'établir qui appelle.</link-summary>
 
-<web-summary>AuthenticationException — L'authentification a échoué : impossible d'établir qui appelle. apps-script-utils, Français.</web-summary>
+<web-summary>AuthenticationException — L'authentification a échoué : impossible d'établir qui appelle. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/net</code> · Disponible depuis: 1.5.0</p>
@@ -42,4 +42,4 @@ try {
 
 ## Code source
 
-[`src/exception/net/AuthenticationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/net/AuthenticationException.ts)
+[`src/exception/net/AuthenticationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/net/AuthenticationException.ts)

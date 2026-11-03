@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a text style.</link-summary>
 
-<web-summary>nonTextStyle() — Checks whether a value is **not** a text style. apps-script-utils, English.</web-summary>
+<web-summary>nonTextStyle() — Checks whether a value is **not** a text style. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonTextStyle(style); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonTextStyle.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonTextStyle.ts)
+[`src/appsscript/sheet/nonTextStyle.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonTextStyle.ts)

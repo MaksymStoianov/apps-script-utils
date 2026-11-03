@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як лічильне число або викидає виняток.</link-summary>
 
-<web-summary>requireCountable() — Повертає значення як лічильне число або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireCountable() — Повертає значення як лічильне число або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -57,4 +57,4 @@ requireCountable(1.5); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/number/requireCountable.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireCountable.ts)
+[`src/lang/number/requireCountable.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireCountable.ts)

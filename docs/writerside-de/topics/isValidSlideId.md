@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Folien-Id ist.</link-summary>
 
-<web-summary>isValidSlideId() — Prüft, ob ein Wert eine Folien-Id ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isValidSlideId() — Prüft, ob ein Wert eine Folien-Id ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -49,4 +49,4 @@ isValidSlideId(""); // => false
 
 ## Quellcode
 
-[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/isValidSlideId.ts)
+[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isValidSlideId.ts)

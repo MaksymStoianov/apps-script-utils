@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, различаются ли два диапазона по высоте или ширине.</link-summary>
 
-<web-summary>nonGridRangeSameDimensions() — Проверяет, различаются ли два диапазона по высоте или ширине. apps-script-utils, Русский.</web-summary>
+<web-summary>nonGridRangeSameDimensions() — Проверяет, различаются ли два диапазона по высоте или ширине. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -46,4 +46,4 @@ nonGridRangeSameDimensions(source, target); // => true
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)

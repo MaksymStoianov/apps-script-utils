@@ -4,7 +4,7 @@
 
 <link-summary>Добавляет один столбец после последнего столбца с данными.</link-summary>
 
-<web-summary>appendColumn() — Добавляет один столбец после последнего столбца с данными. apps-script-utils, Русский.</web-summary>
+<web-summary>appendColumn() — Добавляет один столбец после последнего столбца с данными. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -70,4 +70,4 @@ appendColumn(sheet.getRange("A1:D3"), ["status", "new", "new"]);
 
 ## Исходный код
 
-[`src/appsscript/sheet/appendColumn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/appendColumn.ts)
+[`src/appsscript/sheet/appendColumn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/appendColumn.ts)

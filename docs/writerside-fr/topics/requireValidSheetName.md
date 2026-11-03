@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que un nom de feuille, ou lève une exception.</link-summary>
 
-<web-summary>requireValidSheetName() — Renvoie la valeur en tant que un nom de feuille, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireValidSheetName() — Renvoie la valeur en tant que un nom de feuille, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSheetName("Data/2026"); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/appsscript/sheet/requireValidSheetName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetName.ts)
+[`src/appsscript/sheet/requireValidSheetName.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSheetName.ts)

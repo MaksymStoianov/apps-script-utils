@@ -1,4 +1,4 @@
-import { requireNoNilElements } from "apps-script-utils";
+import { requireNoNilElements } from "@bootgs/utils";
 
 /**
  * Appends a contact row, refusing a row with a gap in it rather than writing a

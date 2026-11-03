@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Bereich zurück, sobald beide nachweislich gleich groß sind, sonst wirft er.</link-summary>
 
-<web-summary>requireGridRangeSameDimensions() — Gibt den Bereich zurück, sobald beide nachweislich gleich groß sind, sonst wirft er. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireGridRangeSameDimensions() — Gibt den Bereich zurück, sobald beide nachweislich gleich groß sind, sonst wirft er. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireGridRangeSameDimensions(source, target); // => the source range
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/requireGridRangeSameDimensions.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireGridRangeSameDimensions.ts)

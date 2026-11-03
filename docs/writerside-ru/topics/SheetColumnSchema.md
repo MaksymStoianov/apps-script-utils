@@ -4,7 +4,7 @@
 
 <link-summary>Один столбец схемы листа.</link-summary>
 
-<web-summary>SheetColumnSchema — Один столбец схемы листа. apps-script-utils, Русский.</web-summary>
+<web-summary>SheetColumnSchema — Один столбец схемы листа. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet/types</code> · Доступно с: 1.11.0</p>
@@ -33,4 +33,4 @@ const column = { name: "created", type: "date" };
 
 ## Исходный код
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

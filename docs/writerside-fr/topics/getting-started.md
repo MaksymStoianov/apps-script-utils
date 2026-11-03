@@ -4,7 +4,7 @@
 
 <link-summary>Prérequis, installation et un premier script qui fonctionne.</link-summary>
 
-<web-summary>Installer apps-script-utils dans un projet Google Apps Script : paquet npm, configuration de clasp et un premier script qui lit une feuille avec la bibliothèque.</web-summary>
+<web-summary>Installer @bootgs/utils dans un projet Google Apps Script : paquet npm, configuration de clasp et un premier script qui lit une feuille avec la bibliothèque.</web-summary>
 
 ## Prérequis
 
@@ -14,13 +14,13 @@
 ## Installation
 
 ```bash
-npm install apps-script-utils
+npm install @bootgs/utils
 ```
 
 Tout est exporté depuis la racine du paquet : un seul chemin d'import couvre donc toute la bibliothèque.
 
 ```typescript
-import { appendRows, isAdmin, parseA1Notation, requireString } from "apps-script-utils";
+import { appendRows, isAdmin, parseA1Notation, requireString } from "@bootgs/utils";
 ```
 
 ## Premiers exemples
@@ -30,7 +30,7 @@ import { appendRows, isAdmin, parseA1Notation, requireString } from "apps-script
 Ajouter plusieurs lignes de données en une fois :
 
 ```typescript
-import { appendRows } from "apps-script-utils";
+import { appendRows } from "@bootgs/utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 const data = [
@@ -46,7 +46,7 @@ appendRows(sheet, data);
 Vérifier si l'utilisateur courant dispose des droits d'administration :
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import { isAdmin } from "@bootgs/utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");
@@ -60,7 +60,7 @@ if (isAdmin()) {
 Transformer une notation A1 composée en objet structuré :
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import { parseA1Notation } from "@bootgs/utils";
 
 const rangeInfo = parseA1Notation("'Sheet1'!A1:B10");
 
@@ -75,7 +75,7 @@ La plupart des fonctions de la bibliothèque rejettent une entrée invalide plut
 `requireX` transforme une valeur non vérifiée en valeur typée — ou lève :
 
 ```typescript
-import { requireString, requireNonEmptyString } from "apps-script-utils";
+import { requireString, requireNonEmptyString } from "@bootgs/utils";
 
 function greet(name: unknown): string {
   return `Hello, ${requireNonEmptyString(name)}!`;

@@ -4,7 +4,7 @@
 
 <link-summary>Gibt die aktuelle Zeit in Millisekunden seit der Epoche zurück.</link-summary>
 
-<web-summary>now() — Gibt die aktuelle Zeit in Millisekunden seit der Epoche zurück. apps-script-utils, Deutsch.</web-summary>
+<web-summary>now() — Gibt die aktuelle Zeit in Millisekunden seit der Epoche zurück. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>time</code> · Verfügbar seit: 1.5.0</p>
@@ -40,4 +40,4 @@ const elapsed = now() - started; // milliseconds
 
 ## Quellcode
 
-[`src/time/now.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/now.ts)
+[`src/time/now.ts`](https://github.com/bootgs/utils/blob/main/src/time/now.ts)

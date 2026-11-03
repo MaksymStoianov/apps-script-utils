@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not an array.</link-summary>
 
-<web-summary>requireNonArray() — Returns the value after checking that it is not an array. apps-script-utils, English.</web-summary>
+<web-summary>requireNonArray() — Returns the value after checking that it is not an array. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonArray([1, 2, 3]); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNonArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonArray.ts)
+[`src/lang/base/requireNonArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonArray.ts)

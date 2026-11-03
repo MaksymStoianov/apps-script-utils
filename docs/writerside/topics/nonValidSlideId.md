@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a slide id.</link-summary>
 
-<web-summary>nonValidSlideId() — Checks whether a value is **not** a slide id. apps-script-utils, English.</web-summary>
+<web-summary>nonValidSlideId() — Checks whether a value is **not** a slide id. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.11.0</p>
@@ -49,4 +49,4 @@ nonValidSlideId("SLIDES_api123"); // => false
 
 ## Source
 
-[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)
+[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)

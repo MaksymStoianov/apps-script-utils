@@ -4,7 +4,7 @@
 
 <link-summary>Une présentation était attendue et la valeur n'en est pas une.</link-summary>
 
-<web-summary>InvalidPresentationException — Une présentation était attendue et la valeur n'en est pas une. apps-script-utils, Français.</web-summary>
+<web-summary>InvalidPresentationException — Une présentation était attendue et la valeur n'en est pas une. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception/appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -45,4 +45,4 @@ try {
 
 ## Code source
 
-[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)
+[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)

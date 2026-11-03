@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt eine verschachtelte Eigenschaft über einen Pfad und legt Fehlendes an.</link-summary>
 
-<web-summary>setPath() — Schreibt eine verschachtelte Eigenschaft über einen Pfad und legt Fehlendes an. apps-script-utils, Deutsch.</web-summary>
+<web-summary>setPath() — Schreibt eine verschachtelte Eigenschaft über einen Pfad und legt Fehlendes an. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/object</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ setPath({}, ["rows", 0, "id"], 7); // => { "rows": [{ "id": 7 }] }
 
 ## Quellcode
 
-[`src/lang/object/setPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/setPath.ts)
+[`src/lang/object/setPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/setPath.ts)

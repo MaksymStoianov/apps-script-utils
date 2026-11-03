@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie l'heure courante en millisecondes depuis l'époque.</link-summary>
 
-<web-summary>now() — Renvoie l'heure courante en millisecondes depuis l'époque. apps-script-utils, Français.</web-summary>
+<web-summary>now() — Renvoie l'heure courante en millisecondes depuis l'époque. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>time</code> · Disponible depuis: 1.5.0</p>
@@ -40,4 +40,4 @@ const elapsed = now() - started; // milliseconds
 
 ## Code source
 
-[`src/time/now.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/now.ts)
+[`src/time/now.ts`](https://github.com/bootgs/utils/blob/main/src/time/now.ts)

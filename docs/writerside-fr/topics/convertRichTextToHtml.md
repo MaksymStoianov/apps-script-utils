@@ -4,7 +4,7 @@
 
 <link-summary>Rend une valeur de cellule en texte enrichi sous forme de HTML.</link-summary>
 
-<web-summary>convertRichTextToHtml() — Rend une valeur de cellule en texte enrichi sous forme de HTML. apps-script-utils, Français.</web-summary>
+<web-summary>convertRichTextToHtml() — Rend une valeur de cellule en texte enrichi sous forme de HTML. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.0.0</p>
@@ -46,4 +46,4 @@ const html = convertRichTextToHtml(range.getRichTextValue());
 
 ## Code source
 
-[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)
+[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)

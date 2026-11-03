@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a rich text value.</link-summary>
 
-<web-summary>nonRichTextValue() — Checks whether a value is **not** a rich text value. apps-script-utils, English.</web-summary>
+<web-summary>nonRichTextValue() — Checks whether a value is **not** a rich text value. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonRichTextValue(value); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)
+[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)

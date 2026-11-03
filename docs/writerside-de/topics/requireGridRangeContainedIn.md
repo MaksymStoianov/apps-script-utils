@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Bereich zurück, sobald er nachweislich in einem anderen liegt, sonst wirft er.</link-summary>
 
-<web-summary>requireGridRangeContainedIn() — Gibt den Bereich zurück, sobald er nachweislich in einem anderen liegt, sonst wirft er. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireGridRangeContainedIn() — Gibt den Bereich zurück, sobald er nachweislich in einem anderen liegt, sonst wirft er. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireGridRangeContainedIn(inner, outer); // => the inner range
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)
+[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)

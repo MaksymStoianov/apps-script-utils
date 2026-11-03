@@ -4,7 +4,7 @@
 
 <link-summary>Findet die Folie an einer Position, in einer Präsentation oder in der aktiven.</link-summary>
 
-<web-summary>getSlideByIndex() — Findet die Folie an einer Position, in einer Präsentation oder in der aktiven. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getSlideByIndex() — Findet die Folie an einer Position, in einer Präsentation oder in der aktiven. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/slide</code> · Verfügbar seit: 1.5.0</p>
@@ -55,4 +55,4 @@ const third = getSlideByIndex(2, SlidesApp.openById(id));
 
 ## Quellcode
 
-[`src/appsscript/slide/getSlideByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/getSlideByIndex.ts)
+[`src/appsscript/slide/getSlideByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/getSlideByIndex.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine Funktion ist.</link-summary>
 
-<web-summary>isFunction() — Prüft, ob ein Wert eine Funktion ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isFunction() — Prüft, ob ein Wert eine Funktion ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -52,4 +52,4 @@ isFunction({}); // => false
 
 ## Quellcode
 
-[`src/lang/base/isFunction.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isFunction.ts)
+[`src/lang/base/isFunction.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isFunction.ts)

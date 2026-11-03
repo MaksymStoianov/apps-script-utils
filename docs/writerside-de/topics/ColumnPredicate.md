@@ -4,7 +4,7 @@
 
 <link-summary>Entscheidet, ob eine Spalte eine ist, auf die gewirkt wird.</link-summary>
 
-<web-summary>ColumnPredicate — Entscheidet, ob eine Spalte eine ist, auf die gewirkt wird. apps-script-utils, Deutsch.</web-summary>
+<web-summary>ColumnPredicate — Entscheidet, ob eine Spalte eine ist, auf die gewirkt wird. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.11.0</p>
@@ -33,4 +33,4 @@ const predicate = (values) => values.every((cell) => cell === "");
 
 ## Quellcode
 
-[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)
+[`src/appsscript/sheet/clearColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/clearColumnsByConditional.ts)

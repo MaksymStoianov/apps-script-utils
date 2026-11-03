@@ -20,7 +20,7 @@ import { isValidSlideId } from "./isValidSlideId";
  * @returns     {boolean} `true` if the value is not a valid slide identifier; otherwise, `false`.
  * @see         {@link isValidSlideId}
  * @see         {@link requireValidSlideId}
- * @see         [nonValidSlideId on the documentation site](https://bootgs.github.io/apps-script-utils/nonvalidslideid.html)
+ * @see         [nonValidSlideId on the documentation site](https://bootgs.github.io/utils/nonvalidslideid.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

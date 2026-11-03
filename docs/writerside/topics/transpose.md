@@ -4,7 +4,7 @@
 
 <link-summary>Swaps the rows and columns of a matrix.</link-summary>
 
-<web-summary>transpose() — Swaps the rows and columns of a matrix. apps-script-utils, English.</web-summary>
+<web-summary>transpose() — Swaps the rows and columns of a matrix. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Since: 1.0.0</p>
@@ -89,4 +89,4 @@ transpose([[1, 2], [3]]); // throws Error: Input must be a 2D array.
 
 ## Source
 
-[`src/lang/array/transpose.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/transpose.ts)
+[`src/lang/array/transpose.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/transpose.ts)

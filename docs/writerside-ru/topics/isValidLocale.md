@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение кодом локали.</link-summary>
 
-<web-summary>isValidLocale() — Проверяет, является ли значение кодом локали. apps-script-utils, Русский.</web-summary>
+<web-summary>isValidLocale() — Проверяет, является ли значение кодом локали. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.0.0</p>
@@ -48,4 +48,4 @@ isValidLocale(""); // => false
 
 ## Исходный код
 
-[`src/lang/string/isValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/isValidLocale.ts)
+[`src/lang/string/isValidLocale.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/isValidLocale.ts)

@@ -23,7 +23,7 @@ import { isFloat } from "./isFloat";
  * @returns {boolean} `true` if the value is a finite number with a fractional part, otherwise `false`.
  * @see     {@link isFloat}
  * @see     {@link isInteger}
- * @see     [isDouble on the documentation site](https://bootgs.github.io/apps-script-utils/isdouble.html)
+ * @see     [isDouble on the documentation site](https://bootgs.github.io/utils/isdouble.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение, убедившись, что оно не является объектоподобным значением.</link-summary>
 
-<web-summary>requireNonObjectLike() — Возвращает значение, убедившись, что оно не является объектоподобным значением. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNonObjectLike() — Возвращает значение, убедившись, что оно не является объектоподобным значением. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonObjectLike([]); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonObjectLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonObjectLike.ts)
+[`src/lang/base/requireNonObjectLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonObjectLike.ts)

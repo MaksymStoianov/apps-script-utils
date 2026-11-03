@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen aufrufbaren Wert zurück oder wirft.</link-summary>
 
-<web-summary>requireFunctionLike() — Gibt den Wert als einen aufrufbaren Wert zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireFunctionLike() — Gibt den Wert als einen aufrufbaren Wert zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireFunctionLike({}); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireFunctionLike.ts)
+[`src/lang/base/requireFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireFunctionLike.ts)

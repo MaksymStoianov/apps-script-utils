@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein Array ist.</link-summary>
 
-<web-summary>isArray() — Prüft, ob ein Wert ein Array ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isArray() — Prüft, ob ein Wert ein Array ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.4.0</p>
@@ -51,4 +51,4 @@ isArray(null); // => false
 
 ## Quellcode
 
-[`src/lang/base/isArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isArray.ts)
+[`src/lang/base/isArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isArray.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как `null` или `undefined` или выбрасывает исключение.</link-summary>
 
-<web-summary>requireNil() — Возвращает значение как `null` или `undefined` или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireNil() — Возвращает значение как `null` или `undefined` или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно с: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNil(""); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNil.ts)
+[`src/lang/base/requireNil.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNil.ts)

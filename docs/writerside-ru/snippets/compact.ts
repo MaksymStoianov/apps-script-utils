@@ -1,4 +1,4 @@
-import { compact } from "apps-script-utils";
+import { compact } from "@bootgs/utils";
 
 /**
  * Reads a column of identifiers and drops the blanks, without a cast:

@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a spreadsheet id, or throws.</link-summary>
 
-<web-summary>requireValidSpreadsheetId() — Returns the value as a spreadsheet id, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidSpreadsheetId() — Returns the value as a spreadsheet id, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ requireValidSpreadsheetId("has space in it and is long enough to pass"); // thro
 
 ## Source
 
-[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)
+[`src/appsscript/sheet/requireValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSpreadsheetId.ts)

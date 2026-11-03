@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert eine gültige Array-Länge ist.</link-summary>
 
-<web-summary>isLength() — Prüft, ob ein Wert eine gültige Array-Länge ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isLength() — Prüft, ob ein Wert eine gültige Array-Länge ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.0.0</p>
@@ -50,4 +50,4 @@ isLength("3"); // => false
 
 ## Quellcode
 
-[`src/lang/base/isLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isLength.ts)
+[`src/lang/base/isLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isLength.ts)

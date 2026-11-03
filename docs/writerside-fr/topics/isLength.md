@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est une longueur de tableau valide.</link-summary>
 
-<web-summary>isLength() — Vérifie si une valeur est une longueur de tableau valide. apps-script-utils, Français.</web-summary>
+<web-summary>isLength() — Vérifie si une valeur est une longueur de tableau valide. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -50,4 +50,4 @@ isLength("3"); // => false
 
 ## Code source
 
-[`src/lang/base/isLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isLength.ts)
+[`src/lang/base/isLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isLength.ts)

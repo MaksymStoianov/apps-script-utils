@@ -23,7 +23,7 @@ import { isFunctionLike } from "./isFunctionLike";
  * @see     {@link isFunctionLike}
  * @see     {@link nonFunctionLike}
  * @see     {@link requireFunction}
- * @see     [requireFunctionLike on the documentation site](https://bootgs.github.io/apps-script-utils/requirefunctionlike.html)
+ * @see     [requireFunctionLike on the documentation site](https://bootgs.github.io/utils/requirefunctionlike.html)
  * @since   1.11.0
  * @version 1.0.0
  */

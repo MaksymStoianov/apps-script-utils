@@ -4,7 +4,7 @@
 
 <link-summary>Wie `retry` wartet und wann es aufgibt.</link-summary>
 
-<web-summary>RetryOptions — Wie `retry` wartet und wann es aufgibt. apps-script-utils, Deutsch.</web-summary>
+<web-summary>RetryOptions — Wie `retry` wartet und wann es aufgibt. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/function</code></p>
@@ -38,4 +38,4 @@ const options = {
 
 ## Quellcode
 
-[`src/lang/function/retry.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/function/retry.ts)
+[`src/lang/function/retry.ts`](https://github.com/bootgs/utils/blob/main/src/lang/function/retry.ts)

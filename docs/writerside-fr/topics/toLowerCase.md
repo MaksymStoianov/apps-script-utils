@@ -4,7 +4,7 @@
 
 <link-summary>Met une chaîne en minuscules, en nettoyant au besoin ses espaces.</link-summary>
 
-<web-summary>toLowerCase() — Met une chaîne en minuscules, en nettoyant au besoin ses espaces. apps-script-utils, Français.</web-summary>
+<web-summary>toLowerCase() — Met une chaîne en minuscules, en nettoyant au besoin ses espaces. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -49,4 +49,4 @@ toLowerCase("  Hello   World  ", { trim: true }); // => "hello world"
 
 ## Code source
 
-[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toLowerCase.ts)
+[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toLowerCase.ts)

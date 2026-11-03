@@ -1,12 +1,12 @@
-# Contributing to apps-script-utils
+# Contributing to @bootgs/utils
 
-Great that you are here and you want to contribute to **apps-script-utils**!
+Great that you are here and you want to contribute to **@bootgs/utils**!
 
 ## Contents
 
 <!-- TOC -->
 
-- [Contributing to apps-script-utils](#contributing-to-apps-script-utils)
+- [Contributing to @bootgs/utils](#contributing-to-bootgsutils)
   - [Contents](#contents)
   - [Code of Conduct](#code-of-conduct)
   - [Directory Structure](#directory-structure)
@@ -61,11 +61,11 @@ The project is organized as follows:
 2. **Clone** your fork locally:
    ```bash
    git clone https://github.com/<your_username>/apps-script-utils.git
-   cd apps-script-utils
+   cd @bootgs/utils
    ```
 3. **Add upstream remote**:
    ```bash
-   git remote add upstream https://github.com/bootgs/apps-script-utils.git
+   git remote add upstream https://github.com/bootgs/utils.git
    ```
 4. **Install dependencies**:
    ```bash
@@ -204,5 +204,5 @@ from native speakers are welcome as ordinary pull requests.
 
 ## License
 
-By contributing to **apps-script-utils**, you agree that your contributions will be licensed under
+By contributing to **@bootgs/utils**, you agree that your contributions will be licensed under
 the [Apache-2.0 License](LICENSE).

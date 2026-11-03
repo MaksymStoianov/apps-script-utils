@@ -4,7 +4,7 @@
 
 <link-summary>Réécrit une chaîne en kebab-case.</link-summary>
 
-<web-summary>toKebabCase() — Réécrit une chaîne en kebab-case. apps-script-utils, Français.</web-summary>
+<web-summary>toKebabCase() — Réécrit une chaîne en kebab-case. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.0.0</p>
@@ -53,4 +53,4 @@ toKebabCase("userFirstName"); // => "user-first-name"
 
 ## Code source
 
-[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toKebabCase.ts)
+[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toKebabCase.ts)

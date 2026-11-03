@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a range, or throws.</link-summary>
 
-<web-summary>requireRange() — Returns the value as a range, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireRange() — Returns the value as a range, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.5.0</p>
@@ -56,4 +56,4 @@ requireRange(null); // throws InvalidRangeException
 
 ## Source
 
-[`src/appsscript/sheet/requireRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireRange.ts)
+[`src/appsscript/sheet/requireRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireRange.ts)

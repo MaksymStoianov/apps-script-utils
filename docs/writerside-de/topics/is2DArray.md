@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein nicht-leeres Array ist, dessen Elemente alle Arrays sind.</link-summary>
 
-<web-summary>is2DArray() — Prüft, ob ein Wert ein nicht-leeres Array ist, dessen Elemente alle Arrays sind. apps-script-utils, Deutsch.</web-summary>
+<web-summary>is2DArray() — Prüft, ob ein Wert ein nicht-leeres Array ist, dessen Elemente alle Arrays sind. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.0.0</p>
@@ -68,4 +68,4 @@ function countCells(value) {
 
 ## Quellcode
 
-[`src/lang/array/is2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/is2DArray.ts)
+[`src/lang/array/is2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/is2DArray.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Один стовпець схеми аркуша.</link-summary>
 
-<web-summary>SheetColumnSchema — Один стовпець схеми аркуша. apps-script-utils, Українська.</web-summary>
+<web-summary>SheetColumnSchema — Один стовпець схеми аркуша. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet/types</code> · Доступно з: 1.11.0</p>
@@ -33,4 +33,4 @@ const column = { name: "created", type: "date" };
 
 ## Вихідний код
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

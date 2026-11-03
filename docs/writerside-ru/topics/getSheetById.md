@@ -4,7 +4,7 @@
 
 <link-summary>Находит лист по идентификатору.</link-summary>
 
-<web-summary>getSheetById() — Находит лист по идентификатору. apps-script-utils, Русский.</web-summary>
+<web-summary>getSheetById() — Находит лист по идентификатору. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.0.0</p>
@@ -55,4 +55,4 @@ if (sheet === null) {
 
 ## Исходный код
 
-[`src/appsscript/sheet/getSheetById.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSheetById.ts)
+[`src/appsscript/sheet/getSheetById.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetById.ts)

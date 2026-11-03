@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est le nombre `NaN`.</link-summary>
 
-<web-summary>isNaN() — Vérifie si une valeur est le nombre `NaN`. apps-script-utils, Français.</web-summary>
+<web-summary>isNaN() — Vérifie si une valeur est le nombre `NaN`. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Disponible depuis: 1.11.0</p>
@@ -49,4 +49,4 @@ isNaN(undefined); // => false
 
 ## Code source
 
-[`src/lang/number/isNaN.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isNaN.ts)
+[`src/lang/number/isNaN.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/isNaN.ts)

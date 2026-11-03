@@ -4,7 +4,7 @@
 
 <link-summary>Eine Zeichenkette sollte eine E-Mail-Adresse sein und hat nicht deren Form.</link-summary>
 
-<web-summary>InvalidEmailFormatException — Eine Zeichenkette sollte eine E-Mail-Adresse sein und hat nicht deren Form. apps-script-utils, Deutsch.</web-summary>
+<web-summary>InvalidEmailFormatException — Eine Zeichenkette sollte eine E-Mail-Adresse sein und hat nicht deren Form. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>exception</code> · Verfügbar seit: 1.0.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/InvalidEmailFormatException.ts)
+[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/InvalidEmailFormatException.ts)

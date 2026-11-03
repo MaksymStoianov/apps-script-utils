@@ -4,7 +4,7 @@
 
 <link-summary>Finds a sheet by its position in the spreadsheet.</link-summary>
 
-<web-summary>getSheetByIndex() — Finds a sheet by its position in the spreadsheet. apps-script-utils, English.</web-summary>
+<web-summary>getSheetByIndex() — Finds a sheet by its position in the spreadsheet. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code></p>
@@ -50,4 +50,4 @@ const first = getSheetByIndex(0);
 
 ## Source
 
-[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)
+[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)

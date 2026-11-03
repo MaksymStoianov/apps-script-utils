@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a scalar, or throws.</link-summary>
 
-<web-summary>requireScalar() — Returns the value as a scalar, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireScalar() — Returns the value as a scalar, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireScalar([]); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireScalar.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireScalar.ts)
+[`src/lang/base/requireScalar.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireScalar.ts)

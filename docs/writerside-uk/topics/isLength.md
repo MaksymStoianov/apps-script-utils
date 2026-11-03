@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, чи є значення припустимою довжиною масиву.</link-summary>
 
-<web-summary>isLength() — Перевіряє, чи є значення припустимою довжиною масиву. apps-script-utils, Українська.</web-summary>
+<web-summary>isLength() — Перевіряє, чи є значення припустимою довжиною масиву. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -50,4 +50,4 @@ isLength("3"); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isLength.ts)
+[`src/lang/base/isLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/isLength.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Schreibt eine Zeichenkette klein und räumt auf Wunsch den Leerraum auf.</link-summary>
 
-<web-summary>toLowerCase() — Schreibt eine Zeichenkette klein und räumt auf Wunsch den Leerraum auf. apps-script-utils, Deutsch.</web-summary>
+<web-summary>toLowerCase() — Schreibt eine Zeichenkette klein und räumt auf Wunsch den Leerraum auf. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/string</code> · Verfügbar seit: 1.0.0</p>
@@ -49,4 +49,4 @@ toLowerCase("  Hello   World  ", { trim: true }); // => "hello world"
 
 ## Quellcode
 
-[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toLowerCase.ts)
+[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/toLowerCase.ts)

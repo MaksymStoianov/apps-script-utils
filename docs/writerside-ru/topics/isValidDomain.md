@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение доменным именем.</link-summary>
 
-<web-summary>isValidDomain() — Проверяет, является ли значение доменным именем. apps-script-utils, Русский.</web-summary>
+<web-summary>isValidDomain() — Проверяет, является ли значение доменным именем. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>net/path</code></p>
@@ -51,4 +51,4 @@ isValidDomain(""); // => false
 
 ## Исходный код
 
-[`src/net/path/isValidDomain.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isValidDomain.ts)
+[`src/net/path/isValidDomain.ts`](https://github.com/bootgs/utils/blob/main/src/net/path/isValidDomain.ts)

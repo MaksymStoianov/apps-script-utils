@@ -4,7 +4,7 @@
 
 <link-summary>Teilt ein Array in aufeinanderfolgende Gruppen fester Größe und prüft beide Argumente.</link-summary>
 
-<web-summary>chunk() — Teilt ein Array in aufeinanderfolgende Gruppen fester Größe und prüft beide Argumente. apps-script-utils, Deutsch.</web-summary>
+<web-summary>chunk() — Teilt ein Array in aufeinanderfolgende Gruppen fester Größe und prüft beide Argumente. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.0.0</p>
@@ -82,4 +82,4 @@ chunk([1, 2, 3], 1.5); // throws TypeError: Input 'size' must be an integer.
 
 ## Quellcode
 
-[`src/lang/array/chunk.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/chunk.ts)
+[`src/lang/array/chunk.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/chunk.ts)

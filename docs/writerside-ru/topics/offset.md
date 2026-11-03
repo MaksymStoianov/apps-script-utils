@@ -4,7 +4,7 @@
 
 <link-summary>Сдвигает дату на заданное количество единиц.</link-summary>
 
-<web-summary>offset() — Сдвигает дату на заданное количество единиц. apps-script-utils, Русский.</web-summary>
+<web-summary>offset() — Сдвигает дату на заданное количество единиц. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time</code> · Доступно с: 1.11.0</p>
@@ -55,4 +55,4 @@ offset(start, -1, "day"); // 30 January 2026
 
 ## Исходный код
 
-[`src/time/offset.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/offset.ts)
+[`src/time/offset.ts`](https://github.com/bootgs/utils/blob/main/src/time/offset.ts)

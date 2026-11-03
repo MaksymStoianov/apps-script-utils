@@ -4,7 +4,7 @@
 
 <link-summary>Gibt ein Repository zurück, sobald es nachweislich existiert, sonst wirft es.</link-summary>
 
-<web-summary>requireRepository() — Gibt ein Repository zurück, sobald es nachweislich existiert, sonst wirft es. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireRepository() — Gibt ein Repository zurück, sobald es nachweislich existiert, sonst wirft es. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript</code> · Verfügbar seit: 1.5.0</p>
@@ -52,4 +52,4 @@ const users = requireRepository(registry.users, "The user repository is not wire
 
 ## Quellcode
 
-[`src/appsscript/requireRepository.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/requireRepository.ts)
+[`src/appsscript/requireRepository.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/requireRepository.ts)

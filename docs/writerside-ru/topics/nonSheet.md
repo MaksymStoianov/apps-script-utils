@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является листом.</link-summary>
 
-<web-summary>nonSheet() — Проверяет, что значение **не** является листом. apps-script-utils, Русский.</web-summary>
+<web-summary>nonSheet() — Проверяет, что значение **не** является листом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.3.0</p>
@@ -53,4 +53,4 @@ nonSheet(sheet); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonSheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonSheet.ts)
+[`src/appsscript/sheet/nonSheet.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/nonSheet.ts)

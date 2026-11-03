@@ -4,7 +4,7 @@
 
 <link-summary>Les utilitaires de langage indépendants de l'environnement : gardes, tableaux, nombres, objets, chaînes.</link-summary>
 
-<web-summary>Le module lang d'apps-script-utils : gardes de type, aides pour tableaux et matrices, classification des nombres, condensé d'objets et conversion de chaînes — le tout indépendant de l'environnement.</web-summary>
+<web-summary>Le module lang d'@bootgs/utils : gardes de type, aides pour tableaux et matrices, classification des nombres, condensé d'objets et conversion de chaînes — le tout indépendant de l'environnement.</web-summary>
 
 `lang` regroupe les utilitaires proches du langage — la partie de la bibliothèque qui ignore tout de Google Apps
 Script et fonctionne partout où fonctionne JavaScript.
@@ -28,7 +28,7 @@ l'environnement et figurent avec `lang` dans [](reference-base.md).
 [](validation-conventions.md) ; en bref : `isX` et `nonX` répondent à une question, `requireX` valide et renvoie.
 
 ```typescript
-import { requireString, toKebabCase } from "apps-script-utils";
+import { requireString, toKebabCase } from "@bootgs/utils";
 
 function slugify(input: unknown): string {
   return toKebabCase(requireString(input));
@@ -38,7 +38,7 @@ function slugify(input: unknown): string {
 ## Tableaux
 
 ```typescript
-import { chunk, transpose, is2DArray, isConsistent2DArray } from "apps-script-utils";
+import { chunk, transpose, is2DArray, isConsistent2DArray } from "@bootgs/utils";
 
 chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
 
@@ -58,7 +58,7 @@ la ligne fautive.
 ## Nombres
 
 ```typescript
-import { isCountable, isFloat, isInteger, toInteger } from "apps-script-utils";
+import { isCountable, isFloat, isInteger, toInteger } from "@bootgs/utils";
 
 isInteger(42); // true
 isInteger(42.5); // false
@@ -75,7 +75,7 @@ que servent `isCountable` et `requireCountable`.
 Changement de casse :
 
 ```typescript
-import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "apps-script-utils";
+import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "@bootgs/utils";
 
 toCamelCase("user name"); // "userName"
 toKebabCase("User Name"); // "user-name"
@@ -86,7 +86,7 @@ toProperCase("user name"); // "User Name"
 Validation :
 
 ```typescript
-import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "apps-script-utils";
+import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "@bootgs/utils";
 
 isEmail("ada@example.com"); // true
 isValidSlug("my-post"); // true
@@ -98,7 +98,7 @@ requireValidEmail(formResponse); // renvoie la valeur, ou lève InvalidEmailForm
 Comparaison de versions, pour les scripts qui conditionnent un comportement à une version de bibliothèque :
 
 ```typescript
-import { versionCompare, isVersionCompatible } from "apps-script-utils";
+import { versionCompare, isVersionCompatible } from "@bootgs/utils";
 
 versionCompare("1.10.0", "1.9.0"); // 1
 versionCompare("1.9.0", "1.10.0"); // -1
@@ -109,7 +109,7 @@ versionCompare("1.9.0", "1.9.0"); // 0
 terme de recherche vient d'une cellule ou d'un formulaire :
 
 ```typescript
-import { escapeRegExp } from "apps-script-utils";
+import { escapeRegExp } from "@bootgs/utils";
 
 const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
 ```
@@ -117,7 +117,7 @@ const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
 ## Objets
 
 ```typescript
-import { hashCode, objectToString } from "apps-script-utils";
+import { hashCode, objectToString } from "@bootgs/utils";
 
 objectToString([]); // "[object Array]"
 objectToString(null); // "[object Null]"

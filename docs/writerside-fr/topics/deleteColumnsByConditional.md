@@ -4,7 +4,7 @@
 
 <link-summary>Supprime les colonnes que le prédicat sélectionne.</link-summary>
 
-<web-summary>deleteColumnsByConditional() — Supprime les colonnes que le prédicat sélectionne. apps-script-utils, Français.</web-summary>
+<web-summary>deleteColumnsByConditional() — Supprime les colonnes que le prédicat sélectionne. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -76,4 +76,4 @@ deleteColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
 
 ## Code source
 
-[`src/appsscript/sheet/deleteColumnsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/deleteColumnsByConditional.ts)
+[`src/appsscript/sheet/deleteColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/deleteColumnsByConditional.ts)

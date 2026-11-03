@@ -4,7 +4,7 @@
 
 <link-summary>Удаляет столбцы, выбранные предикатом.</link-summary>
 
-<web-summary>deleteColumnsByConditional() — Удаляет столбцы, выбранные предикатом. apps-script-utils, Русский.</web-summary>
+<web-summary>deleteColumnsByConditional() — Удаляет столбцы, выбранные предикатом. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.11.0</p>
@@ -76,4 +76,4 @@ deleteColumnsByConditional(sheet.getRange("B2:Z100"), (values) =>
 
 ## Исходный код
 
-[`src/appsscript/sheet/deleteColumnsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/deleteColumnsByConditional.ts)
+[`src/appsscript/sheet/deleteColumnsByConditional.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/deleteColumnsByConditional.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, является ли значение объектом HtmlOutput.</link-summary>
 
-<web-summary>isHtmlOutput() — Проверяет, является ли значение объектом HtmlOutput. apps-script-utils, Русский.</web-summary>
+<web-summary>isHtmlOutput() — Проверяет, является ли значение объектом HtmlOutput. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно с: 1.0.0</p>
@@ -51,4 +51,4 @@ isHtmlOutput(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/ui/isHtmlOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/isHtmlOutput.ts)
+[`src/appsscript/ui/isHtmlOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/isHtmlOutput.ts)

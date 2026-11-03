@@ -17,7 +17,7 @@ import { isSymbol } from "./isSymbol";
  * @throws  {@link IllegalArgumentException} If the value is not a `Symbol`.
  * @see     {@link isSymbol}
  * @see     {@link nonSymbol}
- * @see     [requireSymbol on the documentation site](https://bootgs.github.io/apps-script-utils/requiresymbol.html)
+ * @see     [requireSymbol on the documentation site](https://bootgs.github.io/utils/requiresymbol.html)
  * @since   1.11.0
  * @version 1.0.0
  */

@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als einen leeren Wert zurück oder wirft.</link-summary>
 
-<web-summary>requireEmpty() — Gibt den Wert als einen leeren Wert zurück oder wirft. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireEmpty() — Gibt den Wert als einen leeren Wert zurück oder wirft. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -60,4 +60,4 @@ requireEmpty(false); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireEmpty.ts)
+[`src/lang/base/requireEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireEmpty.ts)

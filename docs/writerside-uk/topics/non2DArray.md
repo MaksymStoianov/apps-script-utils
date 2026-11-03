@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є непорожнім двовимірним масивом.</link-summary>
 
-<web-summary>non2DArray() — Перевіряє, що значення **не** є непорожнім двовимірним масивом. apps-script-utils, Українська.</web-summary>
+<web-summary>non2DArray() — Перевіряє, що значення **не** є непорожнім двовимірним масивом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.11.0</p>
@@ -73,4 +73,4 @@ function validateShape(rows) {
 
 ## Вихідний код
 
-[`src/lang/array/non2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/non2DArray.ts)
+[`src/lang/array/non2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/non2DArray.ts)

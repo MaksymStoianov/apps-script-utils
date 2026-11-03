@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как объект Ui или выбрасывает исключение.</link-summary>
 
-<web-summary>requireUi() — Возвращает значение как объект Ui или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireUi() — Возвращает значение как объект Ui или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно с: 1.11.0</p>
@@ -59,4 +59,4 @@ requireUi(null); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/appsscript/ui/requireUi.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/requireUi.ts)
+[`src/appsscript/ui/requireUi.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/requireUi.ts)

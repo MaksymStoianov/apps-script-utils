@@ -4,7 +4,7 @@
 
 <link-summary>Trouve les valeurs présentes dans chacun des tableaux fournis.</link-summary>
 
-<web-summary>intersect() — Trouve les valeurs présentes dans chacun des tableaux fournis. apps-script-utils, Français.</web-summary>
+<web-summary>intersect() — Trouve les valeurs présentes dans chacun des tableaux fournis. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/array</code> · Disponible depuis: 1.11.0</p>
@@ -80,4 +80,4 @@ intersect(); // => []
 
 ## Code source
 
-[`src/lang/array/intersect.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/intersect.ts)
+[`src/lang/array/intersect.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/intersect.ts)

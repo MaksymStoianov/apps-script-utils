@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht `undefined` ist.</link-summary>
 
-<web-summary>requireNonUndefined() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht `undefined` ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonUndefined() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht `undefined` ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -57,4 +57,4 @@ requireNonUndefined(undefined); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonUndefined.ts)
+[`src/lang/base/requireNonUndefined.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonUndefined.ts)

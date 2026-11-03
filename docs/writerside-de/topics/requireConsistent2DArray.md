@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert als Matrix mit gleich langen Zeilen zurück oder wirft und benennt die Zeile.</link-summary>
 
-<web-summary>requireConsistent2DArray() — Gibt den Wert als Matrix mit gleich langen Zeilen zurück oder wirft und benennt die Zeile. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireConsistent2DArray() — Gibt den Wert als Matrix mit gleich langen Zeilen zurück oder wirft und benennt die Zeile. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.11.0</p>
@@ -79,4 +79,4 @@ requireConsistent2DArray([1, 2], "rows must be a matrix");
 
 ## Quellcode
 
-[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/requireConsistent2DArray.ts)
+[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/requireConsistent2DArray.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Міняє місцями рядки та стовпці матриці.</link-summary>
 
-<web-summary>transpose() — Міняє місцями рядки та стовпці матриці. apps-script-utils, Українська.</web-summary>
+<web-summary>transpose() — Міняє місцями рядки та стовпці матриці. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно з: 1.0.0</p>
@@ -85,4 +85,4 @@ transpose([[1, 2], [3]]); // throws Error: Input must be a 2D array.
 
 ## Вихідний код
 
-[`src/lang/array/transpose.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/transpose.ts)
+[`src/lang/array/transpose.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/transpose.ts)

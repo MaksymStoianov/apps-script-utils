@@ -1,4 +1,4 @@
-import { transpose } from "apps-script-utils";
+import { transpose } from "@bootgs/utils";
 
 /**
  * Writes a flat list down a column. `setValues` wants one row per cell, which

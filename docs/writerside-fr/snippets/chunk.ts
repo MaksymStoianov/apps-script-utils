@@ -1,4 +1,4 @@
-import { chunk } from "apps-script-utils";
+import { chunk } from "@bootgs/utils";
 
 /**
  * Appends rows in batches, so that one oversized `setValues` call cannot

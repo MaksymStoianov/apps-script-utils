@@ -19,7 +19,7 @@ import { isValidSheetId } from "./isValidSheetId";
  * @returns     {boolean} `true` if the value is not a valid sheet identifier; otherwise, `false`.
  * @see         {@link isValidSheetId}
  * @see         {@link requireValidSheetId}
- * @see         [nonValidSheetId on the documentation site](https://bootgs.github.io/apps-script-utils/nonvalidsheetid.html)
+ * @see         [nonValidSheetId on the documentation site](https://bootgs.github.io/utils/nonvalidsheetid.html)
  * @since       1.11.0
  * @version     1.0.0
  * @environment `Google Apps Script`, `Browser`

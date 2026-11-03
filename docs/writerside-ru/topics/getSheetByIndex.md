@@ -4,7 +4,7 @@
 
 <link-summary>Находит лист по его позиции в таблице.</link-summary>
 
-<web-summary>getSheetByIndex() — Находит лист по его позиции в таблице. apps-script-utils, Русский.</web-summary>
+<web-summary>getSheetByIndex() — Находит лист по его позиции в таблице. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code></p>
@@ -50,4 +50,4 @@ const first = getSheetByIndex(0);
 
 ## Исходный код
 
-[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)
+[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)

@@ -19,7 +19,7 @@ import { RuntimeException } from "./RuntimeException";
  * @extends RuntimeException
  * @see     {@link Exception}
  * @see     {@link Error}
- * @see     [NullPointerException on the documentation site](https://bootgs.github.io/apps-script-utils/nullpointerexception.html)
+ * @see     [NullPointerException on the documentation site](https://bootgs.github.io/utils/nullpointerexception.html)
  * @since   1.0.0
  * @version 1.0.0
  */

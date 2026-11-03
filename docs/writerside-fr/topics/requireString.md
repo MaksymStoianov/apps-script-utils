@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que une chaîne de caractères, ou lève une exception.</link-summary>
 
-<web-summary>requireString() — Renvoie la valeur en tant que une chaîne de caractères, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireString() — Renvoie la valeur en tant que une chaîne de caractères, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Disponible depuis: 1.0.0</p>
@@ -55,4 +55,4 @@ requireString(null); // throws InvalidStringException
 
 ## Code source
 
-[`src/lang/base/requireString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireString.ts)
+[`src/lang/base/requireString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireString.ts)

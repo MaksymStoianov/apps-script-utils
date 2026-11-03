@@ -4,7 +4,7 @@
 
 <link-summary>L'appel est arrivé au mauvais moment : les arguments peuvent être valides, mais l'objet n'est pas dans un état qui le permet.</link-summary>
 
-<web-summary>IllegalStateException — L'appel est arrivé au mauvais moment : les arguments peuvent être valides, mais l'objet n'est pas dans un état qui le permet. apps-script-utils, Français.</web-summary>
+<web-summary>IllegalStateException — L'appel est arrivé au mauvais moment : les arguments peuvent être valides, mais l'objet n'est pas dans un état qui le permet. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Disponible depuis: 1.11.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/IllegalStateException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/IllegalStateException.ts)
+[`src/exception/IllegalStateException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/IllegalStateException.ts)

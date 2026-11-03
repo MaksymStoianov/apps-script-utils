@@ -4,7 +4,7 @@
 
 <link-summary>Одне виміряне завдання в тому вигляді, в якому його записав `StopWatch`.</link-summary>
 
-<web-summary>TaskInfo — Одне виміряне завдання в тому вигляді, в якому його записав `StopWatch`. apps-script-utils, Українська.</web-summary>
+<web-summary>TaskInfo — Одне виміряне завдання в тому вигляді, в якому його записав `StopWatch`. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>time</code></p>
@@ -36,4 +36,4 @@ watch.getLastTaskInfo(); // { taskName: "fetch", timeMillis: …, timeSeconds: �
 
 ## Вихідний код
 
-[`src/time/StopWatch.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/utils/blob/main/src/time/StopWatch.ts)

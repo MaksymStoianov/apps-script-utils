@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie la valeur en tant que une chaîne de version, ou lève une exception.</link-summary>
 
-<web-summary>requireValidVersion() — Renvoie la valeur en tant que une chaîne de version, ou lève une exception. apps-script-utils, Français.</web-summary>
+<web-summary>requireValidVersion() — Renvoie la valeur en tant que une chaîne de version, ou lève une exception. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidVersion("v1.2"); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/string/requireValidVersion.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidVersion.ts)
+[`src/lang/string/requireValidVersion.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidVersion.ts)

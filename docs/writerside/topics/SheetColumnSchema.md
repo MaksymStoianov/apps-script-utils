@@ -4,7 +4,7 @@
 
 <link-summary>One column of a sheet's schema.</link-summary>
 
-<web-summary>SheetColumnSchema — One column of a sheet's schema. apps-script-utils, English.</web-summary>
+<web-summary>SheetColumnSchema — One column of a sheet's schema. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet/types</code> · Since: 1.11.0</p>
@@ -33,4 +33,4 @@ const column = { name: "created", type: "date" };
 
 ## Source
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

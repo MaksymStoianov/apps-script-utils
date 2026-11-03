@@ -17,7 +17,7 @@ import { isObject, isString } from "../lang";
  * ```
  *
  * @extends Error
- * @see [Exception on the documentation site](https://bootgs.github.io/apps-script-utils/exception.html)
+ * @see [Exception on the documentation site](https://bootgs.github.io/utils/exception.html)
  * @since   1.0.0
  * @version 1.0.0
  */

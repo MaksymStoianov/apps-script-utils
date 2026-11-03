@@ -4,7 +4,7 @@
 
 <link-summary>Ersetzt die fünf Zeichen, die sonst als Markup gelesen würden.</link-summary>
 
-<web-summary>escapeHtml() — Ersetzt die fünf Zeichen, die sonst als Markup gelesen würden. apps-script-utils, Deutsch.</web-summary>
+<web-summary>escapeHtml() — Ersetzt die fünf Zeichen, die sonst als Markup gelesen würden. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>html</code> · Verfügbar seit: 1.0.0</p>
@@ -49,4 +49,4 @@ escapeHtml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Quellcode
 
-[`src/html/escapeHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/escapeHtml.ts)
+[`src/html/escapeHtml.ts`](https://github.com/bootgs/utils/blob/main/src/html/escapeHtml.ts)

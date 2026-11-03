@@ -4,7 +4,7 @@
 
 <link-summary>Remplace le nom de feuille dans une notation A1 en conservant la plage.</link-summary>
 
-<web-summary>updateSheetNameInA1Notation() — Remplace le nom de feuille dans une notation A1 en conservant la plage. apps-script-utils, Français.</web-summary>
+<web-summary>updateSheetNameInA1Notation() — Remplace le nom de feuille dans une notation A1 en conservant la plage. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.6.0</p>
@@ -45,4 +45,4 @@ updateSheetNameInA1Notation("Sheet1!A1", "Data"); // => "Data!A1"
 
 ## Code source
 
-[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)
+[`src/appsscript/sheet/updateSheetNameInA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/updateSheetNameInA1Notation.ts)

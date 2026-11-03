@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** eine ganze Zahl ist.</link-summary>
 
-<web-summary>nonInteger() — Prüft, ob ein Wert **nicht** eine ganze Zahl ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonInteger() — Prüft, ob ein Wert **nicht** eine ganze Zahl ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -54,4 +54,4 @@ nonInteger(0); // => false
 
 ## Quellcode
 
-[`src/lang/number/nonInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonInteger.ts)
+[`src/lang/number/nonInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/nonInteger.ts)

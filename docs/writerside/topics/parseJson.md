@@ -4,7 +4,7 @@
 
 <link-summary>Parses JSON, and retries with a relaxed reader when strict parsing fails.</link-summary>
 
-<web-summary>parseJson() — Parses JSON, and retries with a relaxed reader when strict parsing fails. apps-script-utils, English.</web-summary>
+<web-summary>parseJson() — Parses JSON, and retries with a relaxed reader when strict parsing fails. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>json</code> · Since: 1.0.0 · <b>Deprecated</b></p>
@@ -53,4 +53,4 @@ parseJson("{a: 'x', b: 1}"); // => {"a":"x","b":1}
 
 ## Source
 
-[`src/json/parseJson.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/json/parseJson.ts)
+[`src/json/parseJson.ts`](https://github.com/bootgs/utils/blob/main/src/json/parseJson.ts)

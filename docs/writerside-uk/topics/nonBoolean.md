@@ -4,7 +4,7 @@
 
 <link-summary>Перевіряє, що значення **не** є логічним значенням.</link-summary>
 
-<web-summary>nonBoolean() — Перевіряє, що значення **не** є логічним значенням. apps-script-utils, Українська.</web-summary>
+<web-summary>nonBoolean() — Перевіряє, що значення **не** є логічним значенням. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.1.0</p>
@@ -53,4 +53,4 @@ nonBoolean(false); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonBoolean.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonBoolean.ts)
+[`src/lang/base/nonBoolean.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonBoolean.ts)

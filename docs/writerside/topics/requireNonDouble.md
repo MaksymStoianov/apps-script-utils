@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not a number with a fractional part.</link-summary>
 
-<web-summary>requireNonDouble() — Returns the value after checking that it is not a number with a fractional part. apps-script-utils, English.</web-summary>
+<web-summary>requireNonDouble() — Returns the value after checking that it is not a number with a fractional part. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/number</code> · Since: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonDouble(-0.1); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireNonDouble.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonDouble.ts)
+[`src/lang/number/requireNonDouble.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonDouble.ts)

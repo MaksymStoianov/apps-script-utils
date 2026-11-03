@@ -4,7 +4,7 @@
 
 <link-summary>Crée un chemin de dossiers dans Drive en réutilisant ceux qui existent déjà.</link-summary>
 
-<web-summary>createFolder() — Crée un chemin de dossiers dans Drive en réutilisant ceux qui existent déjà. apps-script-utils, Français.</web-summary>
+<web-summary>createFolder() — Crée un chemin de dossiers dans Drive en réutilisant ceux qui existent déjà. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/drive</code> · Disponible depuis: 1.11.0</p>
@@ -47,4 +47,4 @@ const folder = createFolder("reports/2026/january");
 
 ## Code source
 
-[`src/appsscript/drive/createFolder.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/drive/createFolder.ts)
+[`src/appsscript/drive/createFolder.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/drive/createFolder.ts)

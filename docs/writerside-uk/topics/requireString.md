@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення як рядок або викидає виняток.</link-summary>
 
-<web-summary>requireString() — Повертає значення як рядок або викидає виняток. apps-script-utils, Українська.</web-summary>
+<web-summary>requireString() — Повертає значення як рядок або викидає виняток. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.0.0</p>
@@ -55,4 +55,4 @@ requireString(null); // throws InvalidStringException
 
 ## Вихідний код
 
-[`src/lang/base/requireString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireString.ts)
+[`src/lang/base/requireString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireString.ts)

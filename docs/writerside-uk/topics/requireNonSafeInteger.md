@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є безпечним цілим числом.</link-summary>
 
-<web-summary>requireNonSafeInteger() — Повертає значення, переконавшись, що воно не є безпечним цілим числом. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonSafeInteger() — Повертає значення, переконавшись, що воно не є безпечним цілим числом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/number</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonSafeInteger(Number.MAX_SAFE_INTEGER); // throws IllegalArgumentExcepti
 
 ## Вихідний код
 
-[`src/lang/number/requireNonSafeInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonSafeInteger.ts)
+[`src/lang/number/requireNonSafeInteger.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonSafeInteger.ts)

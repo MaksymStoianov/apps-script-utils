@@ -4,7 +4,7 @@
 
 <link-summary>A service the script expected to be available is not: an advanced service left disabled, or a global that never got defined.</link-summary>
 
-<web-summary>ServiceIsNotDefinedException — A service the script expected to be available is not: an advanced service left disabled, or a global that never got defined. apps-script-utils, English.</web-summary>
+<web-summary>ServiceIsNotDefinedException — A service the script expected to be available is not: an advanced service left disabled, or a global that never got defined. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>exception</code> · Since: 1.5.0</p>
@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)
+[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/bootgs/utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)

@@ -2,7 +2,7 @@
 
 <link-summary>Требования, установка и первый рабочий скрипт.</link-summary>
 
-<web-summary>Установка apps-script-utils в проект Google Apps Script: пакет npm, настройка clasp и первый скрипт, читающий лист с помощью библиотеки.</web-summary>
+<web-summary>Установка @bootgs/utils в проект Google Apps Script: пакет npm, настройка clasp и первый скрипт, читающий лист с помощью библиотеки.</web-summary>
 
 ## Требования
 
@@ -12,13 +12,13 @@
 ## Установка
 
 ```bash
-npm install apps-script-utils
+npm install @bootgs/utils
 ```
 
 Всё экспортируется из корня пакета, поэтому одного пути импорта достаточно для всей библиотеки:
 
 ```typescript
-import { appendRows, isAdmin, parseA1Notation, requireString } from "apps-script-utils";
+import { appendRows, isAdmin, parseA1Notation, requireString } from "@bootgs/utils";
 ```
 
 ## Первые примеры
@@ -28,7 +28,7 @@ import { appendRows, isAdmin, parseA1Notation, requireString } from "apps-script
 Эффективно добавить несколько строк данных:
 
 ```typescript
-import { appendRows } from "apps-script-utils";
+import { appendRows } from "@bootgs/utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 const data = [
@@ -44,7 +44,7 @@ appendRows(sheet, data);
 Проверить, есть ли у текущего пользователя права администратора:
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import { isAdmin } from "@bootgs/utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");
@@ -58,7 +58,7 @@ if (isAdmin()) {
 Превратить сложную нотацию A1 в структурированный объект:
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import { parseA1Notation } from "@bootgs/utils";
 
 const rangeInfo = parseA1Notation("'Sheet1'!A1:B10");
 
@@ -73,7 +73,7 @@ console.log(rangeInfo.endColumnIndex); // 2
 превращает непроверенное значение в типизированное — или бросает исключение:
 
 ```typescript
-import { requireString, requireNonEmptyString } from "apps-script-utils";
+import { requireString, requireNonEmptyString } from "@bootgs/utils";
 
 function greet(name: unknown): string {
   return `Hello, ${requireNonEmptyString(name)}!`;

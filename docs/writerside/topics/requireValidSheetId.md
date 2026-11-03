@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a sheet id, or throws.</link-summary>
 
-<web-summary>requireValidSheetId() — Returns the value as a sheet id, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidSheetId() — Returns the value as a sheet id, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -57,4 +57,4 @@ requireValidSheetId(1.5); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)
+[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)

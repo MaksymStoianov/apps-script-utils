@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht aufrufbar ist.</link-summary>
 
-<web-summary>requireNonFunctionLike() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht aufrufbar ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonFunctionLike() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht aufrufbar ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.11.0</p>
@@ -55,4 +55,4 @@ requireNonFunctionLike(Math.max); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonFunctionLike.ts)
+[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonFunctionLike.ts)

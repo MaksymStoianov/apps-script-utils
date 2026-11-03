@@ -4,7 +4,7 @@
 
 <link-summary>Inserts one column before the data, on a sheet or at a range.</link-summary>
 
-<web-summary>prependColumn() — Inserts one column before the data, on a sheet or at a range. apps-script-utils, English.</web-summary>
+<web-summary>prependColumn() — Inserts one column before the data, on a sheet or at a range. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.11.0</p>
@@ -71,4 +71,4 @@ prependColumn(sheet.getRange("C4:F13"), ["Name", "Ada"]);
 
 ## Source
 
-[`src/appsscript/sheet/prependColumn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependColumn.ts)
+[`src/appsscript/sheet/prependColumn.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/prependColumn.ts)

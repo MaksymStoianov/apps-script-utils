@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie le schéma d'une feuille, stocké ou déduit de son contenu.</link-summary>
 
-<web-summary>getSchema() — Renvoie le schéma d'une feuille, stocké ou déduit de son contenu. apps-script-utils, Français.</web-summary>
+<web-summary>getSchema() — Renvoie le schéma d'une feuille, stocké ou déduit de son contenu. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Disponible depuis: 1.11.0</p>
@@ -55,4 +55,4 @@ schema?.columns.map((column) => column.name);
 
 ## Code source
 
-[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSchema.ts)
+[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/getSchema.ts)

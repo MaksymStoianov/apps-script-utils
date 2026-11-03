@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert **nicht** ein Symbol ist.</link-summary>
 
-<web-summary>nonSymbol() — Prüft, ob ein Wert **nicht** ein Symbol ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>nonSymbol() — Prüft, ob ein Wert **nicht** ein Symbol ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/base</code> · Verfügbar seit: 1.4.0</p>
@@ -52,4 +52,4 @@ nonSymbol(Symbol.iterator); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonSymbol.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonSymbol.ts)
+[`src/lang/base/nonSymbol.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonSymbol.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>A block of cells, described the way the Sheets API describes one.</link-summary>
 
-<web-summary>GridRange — A block of cells, described the way the Sheets API describes one. apps-script-utils, English.</web-summary>
+<web-summary>GridRange — A block of cells, described the way the Sheets API describes one. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet/types</code> · Since: 1.0.0</p>
@@ -42,4 +42,4 @@ const range = {
 
 ## Source
 
-[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/GridRange.ts)
+[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/GridRange.ts)

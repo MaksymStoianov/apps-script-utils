@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является адресом электронной почты.</link-summary>
 
-<web-summary>nonValidEmail() — Проверяет, что значение **не** является адресом электронной почты. apps-script-utils, Русский.</web-summary>
+<web-summary>nonValidEmail() — Проверяет, что значение **не** является адресом электронной почты. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ nonValidEmail("first.last@sub.example.co.uk"); // => false
 
 ## Исходный код
 
-[`src/lang/string/nonValidEmail.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidEmail.ts)
+[`src/lang/string/nonValidEmail.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidEmail.ts)

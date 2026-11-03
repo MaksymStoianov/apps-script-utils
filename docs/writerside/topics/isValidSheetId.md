@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a sheet id.</link-summary>
 
-<web-summary>isValidSheetId() — Checks whether a value is a sheet id. apps-script-utils, English.</web-summary>
+<web-summary>isValidSheetId() — Checks whether a value is a sheet id. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.5.0</p>
@@ -50,4 +50,4 @@ isValidSheetId("0"); // => false
 
 ## Source
 
-[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)
+[`src/appsscript/sheet/isValidSheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSheetId.ts)

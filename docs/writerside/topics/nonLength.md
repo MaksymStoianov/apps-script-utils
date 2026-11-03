@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** a valid array-like length.</link-summary>
 
-<web-summary>nonLength() — Checks whether a value is **not** a valid array-like length. apps-script-utils, English.</web-summary>
+<web-summary>nonLength() — Checks whether a value is **not** a valid array-like length. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -52,4 +52,4 @@ nonLength(Number.MAX_SAFE_INTEGER); // => false
 
 ## Source
 
-[`src/lang/base/nonLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonLength.ts)
+[`src/lang/base/nonLength.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonLength.ts)

@@ -1,4 +1,4 @@
-import { is2DArray } from "apps-script-utils";
+import { is2DArray } from "@bootgs/utils";
 
 /**
  * Counts the cells of a value that may or may not be a matrix. Inside the

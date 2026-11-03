@@ -4,7 +4,7 @@
 
 <link-summary>Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Zahl mit Nachkommateil ist.</link-summary>
 
-<web-summary>requireNonFloat() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Zahl mit Nachkommateil ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>requireNonFloat() — Gibt den Wert zurück, nachdem geprüft wurde, dass er nicht eine Zahl mit Nachkommateil ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/number</code> · Verfügbar seit: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonFloat(-0.1); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/number/requireNonFloat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonFloat.ts)
+[`src/lang/number/requireNonFloat.ts`](https://github.com/bootgs/utils/blob/main/src/lang/number/requireNonFloat.ts)

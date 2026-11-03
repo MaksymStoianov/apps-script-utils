@@ -4,7 +4,7 @@
 
 <link-summary>Liest eine verschachtelte Eigenschaft über einen Pfad, mit Rückfallwert.</link-summary>
 
-<web-summary>getPath() — Liest eine verschachtelte Eigenschaft über einen Pfad, mit Rückfallwert. apps-script-utils, Deutsch.</web-summary>
+<web-summary>getPath() — Liest eine verschachtelte Eigenschaft über einen Pfad, mit Rückfallwert. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/object</code> · Verfügbar seit: 1.11.0</p>
@@ -52,4 +52,4 @@ getPath({ rows: [{ id: 7 }] }, ["rows", 0, "id"]); // => 7
 
 ## Quellcode
 
-[`src/lang/object/getPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/getPath.ts)
+[`src/lang/object/getPath.ts`](https://github.com/bootgs/utils/blob/main/src/lang/object/getPath.ts)

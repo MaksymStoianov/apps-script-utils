@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value after checking that it is not empty.</link-summary>
 
-<web-summary>requireNonEmpty() — Returns the value after checking that it is not empty. apps-script-utils, English.</web-summary>
+<web-summary>requireNonEmpty() — Returns the value after checking that it is not empty. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -60,4 +60,4 @@ requireNonEmpty(""); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireNonEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonEmpty.ts)
+[`src/lang/base/requireNonEmpty.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonEmpty.ts)

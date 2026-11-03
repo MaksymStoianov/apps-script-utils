@@ -4,7 +4,7 @@
 
 <link-summary>Ce que peut contenir une colonne de schéma.</link-summary>
 
-<web-summary>SheetColumnType — Ce que peut contenir une colonne de schéma. apps-script-utils, Français.</web-summary>
+<web-summary>SheetColumnType — Ce que peut contenir une colonne de schéma. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet/types</code> · Disponible depuis: 1.11.0</p>
@@ -32,4 +32,4 @@ const type = "date";
 
 ## Code source
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

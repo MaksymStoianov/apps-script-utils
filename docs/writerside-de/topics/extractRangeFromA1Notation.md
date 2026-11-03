@@ -4,7 +4,7 @@
 
 <link-summary>Holt den Bereichsteil aus einer A1-Notation.</link-summary>
 
-<web-summary>extractRangeFromA1Notation() — Holt den Bereichsteil aus einer A1-Notation. apps-script-utils, Deutsch.</web-summary>
+<web-summary>extractRangeFromA1Notation() — Holt den Bereichsteil aus einer A1-Notation. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.6.0</p>
@@ -44,4 +44,4 @@ extractRangeFromA1Notation("Sheet1!A1:B2"); // => "A1:B2"
 
 ## Quellcode
 
-[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)
+[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)

@@ -2,7 +2,7 @@
 
 <link-summary>The runtime-independent language utilities: guards, arrays, numbers, objects, strings.</link-summary>
 
-<web-summary>The lang module of apps-script-utils: type guards, array and matrix helpers, number classification, object hashing, and string conversion, all runtime-independent.</web-summary>
+<web-summary>The lang module of @bootgs/utils: type guards, array and matrix helpers, number classification, object hashing, and string conversion, all runtime-independent.</web-summary>
 
 `lang` holds the language-level utilities — the parts of the library that know nothing about Google Apps Script and
 run anywhere JavaScript does.
@@ -26,7 +26,7 @@ and are listed alongside `lang` in [](reference-base.md).
 [](validation-conventions.md); in short, `isX` and `nonX` answer questions, `requireX` validates and returns.
 
 ```typescript
-import { requireString, toKebabCase } from "apps-script-utils";
+import { requireString, toKebabCase } from "@bootgs/utils";
 
 function slugify(input: unknown): string {
   return toKebabCase(requireString(input));
@@ -36,7 +36,7 @@ function slugify(input: unknown): string {
 ## Arrays
 
 ```typescript
-import { chunk, transpose, is2DArray, isConsistent2DArray } from "apps-script-utils";
+import { chunk, transpose, is2DArray, isConsistent2DArray } from "@bootgs/utils";
 
 chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
 
@@ -56,7 +56,7 @@ was wrong.
 ## Numbers
 
 ```typescript
-import { isCountable, isFloat, isInteger, toInteger } from "apps-script-utils";
+import { isCountable, isFloat, isInteger, toInteger } from "@bootgs/utils";
 
 isInteger(42); // true
 isInteger(42.5); // false
@@ -73,7 +73,7 @@ Row and column arguments in the Sheets API are counts, not arbitrary numbers, wh
 Case conversion:
 
 ```typescript
-import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "apps-script-utils";
+import { toCamelCase, toKebabCase, toSnakeCase, toProperCase } from "@bootgs/utils";
 
 toCamelCase("user name"); // "userName"
 toKebabCase("User Name"); // "user-name"
@@ -84,7 +84,7 @@ toProperCase("user name"); // "User Name"
 Validation:
 
 ```typescript
-import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "apps-script-utils";
+import { isEmail, isValidSlug, isValidVersion, requireValidEmail } from "@bootgs/utils";
 
 isEmail("ada@example.com"); // true
 isValidSlug("my-post"); // true
@@ -96,7 +96,7 @@ requireValidEmail(formResponse); // returns it, or throws InvalidEmailFormatExce
 Version comparison, for scripts that gate behaviour on a library version:
 
 ```typescript
-import { versionCompare, isVersionCompatible } from "apps-script-utils";
+import { versionCompare, isVersionCompatible } from "@bootgs/utils";
 
 versionCompare("1.10.0", "1.9.0"); // 1
 versionCompare("1.9.0", "1.10.0"); // -1
@@ -107,7 +107,7 @@ versionCompare("1.9.0", "1.9.0"); // 0
 comes from a cell or a form:
 
 ```typescript
-import { escapeRegExp } from "apps-script-utils";
+import { escapeRegExp } from "@bootgs/utils";
 
 const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
 ```
@@ -115,7 +115,7 @@ const pattern = new RegExp(escapeRegExp(searchTerm), "gi");
 ## Objects
 
 ```typescript
-import { hashCode, objectToString } from "apps-script-utils";
+import { hashCode, objectToString } from "@bootgs/utils";
 
 objectToString([]); // "[object Array]"
 objectToString(null); // "[object Null]"

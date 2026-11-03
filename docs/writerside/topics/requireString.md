@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as a string, or throws.</link-summary>
 
-<web-summary>requireString() — Returns the value as a string, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireString() — Returns the value as a string, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.0.0</p>
@@ -55,4 +55,4 @@ requireString(null); // throws InvalidStringException
 
 ## Source
 
-[`src/lang/base/requireString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireString.ts)
+[`src/lang/base/requireString.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireString.ts)

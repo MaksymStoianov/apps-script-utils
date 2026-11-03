@@ -4,7 +4,7 @@
 
 <link-summary>Turns a small subset of Markdown into styled text runs.</link-summary>
 
-<web-summary>convertMarkdownToRichText() — Turns a small subset of Markdown into styled text runs. apps-script-utils, English.</web-summary>
+<web-summary>convertMarkdownToRichText() — Turns a small subset of Markdown into styled text runs. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Since: 1.5.0</p>
@@ -50,4 +50,4 @@ const runs = convertMarkdownToRichText("**bold** and `code`");
 
 ## Source
 
-[`src/appsscript/slide/convertMarkdownToRichText.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/convertMarkdownToRichText.ts)
+[`src/appsscript/slide/convertMarkdownToRichText.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/convertMarkdownToRichText.ts)

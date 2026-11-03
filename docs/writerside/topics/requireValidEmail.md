@@ -4,7 +4,7 @@
 
 <link-summary>Returns the value as an email address, or throws.</link-summary>
 
-<web-summary>requireValidEmail() — Returns the value as an email address, or throws. apps-script-utils, English.</web-summary>
+<web-summary>requireValidEmail() — Returns the value as an email address, or throws. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Since: 1.0.0</p>
@@ -54,4 +54,4 @@ requireValidEmail("user@"); // throws InvalidEmailFormatException
 
 ## Source
 
-[`src/lang/string/requireValidEmail.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidEmail.ts)
+[`src/lang/string/requireValidEmail.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/requireValidEmail.ts)

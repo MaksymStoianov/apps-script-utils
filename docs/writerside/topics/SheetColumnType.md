@@ -4,7 +4,7 @@
 
 <link-summary>What a schema column may hold.</link-summary>
 
-<web-summary>SheetColumnType — What a schema column may hold. apps-script-utils, English.</web-summary>
+<web-summary>SheetColumnType — What a schema column may hold. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet/types</code> · Since: 1.11.0</p>
@@ -32,4 +32,4 @@ const type = "date";
 
 ## Source
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

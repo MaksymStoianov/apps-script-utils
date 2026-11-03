@@ -4,7 +4,7 @@
 
 <link-summary>Проверяет, что значение **не** является объектом TextOutput.</link-summary>
 
-<web-summary>nonTextOutput() — Проверяет, что значение **не** является объектом TextOutput. apps-script-utils, Русский.</web-summary>
+<web-summary>nonTextOutput() — Проверяет, что значение **не** является объектом TextOutput. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/ui</code> · Доступно с: 1.11.0</p>
@@ -53,4 +53,4 @@ nonTextOutput(output); // => false
 
 ## Исходный код
 
-[`src/appsscript/ui/nonTextOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/nonTextOutput.ts)
+[`src/appsscript/ui/nonTextOutput.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/ui/nonTextOutput.ts)

@@ -4,7 +4,7 @@
 
 <link-summary>Vertauscht Zeilen und Spalten einer Matrix.</link-summary>
 
-<web-summary>transpose() — Vertauscht Zeilen und Spalten einer Matrix. apps-script-utils, Deutsch.</web-summary>
+<web-summary>transpose() — Vertauscht Zeilen und Spalten einer Matrix. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>lang/array</code> · Verfügbar seit: 1.0.0</p>
@@ -85,4 +85,4 @@ transpose([[1, 2], [3]]); // throws Error: Input must be a 2D array.
 
 ## Quellcode
 
-[`src/lang/array/transpose.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/transpose.ts)
+[`src/lang/array/transpose.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/transpose.ts)

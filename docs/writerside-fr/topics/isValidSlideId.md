@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie si une valeur est un identifiant de diapositive.</link-summary>
 
-<web-summary>isValidSlideId() — Vérifie si une valeur est un identifiant de diapositive. apps-script-utils, Français.</web-summary>
+<web-summary>isValidSlideId() — Vérifie si une valeur est un identifiant de diapositive. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/slide</code> · Disponible depuis: 1.5.0</p>
@@ -49,4 +49,4 @@ isValidSlideId(""); // => false
 
 ## Code source
 
-[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/isValidSlideId.ts)
+[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/slide/isValidSlideId.ts)

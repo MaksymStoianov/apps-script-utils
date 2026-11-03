@@ -4,7 +4,7 @@
 
 <link-summary>Як `merge` заповнює шаблон.</link-summary>
 
-<web-summary>MergeOptions — Як `merge` заповнює шаблон. apps-script-utils, Українська.</web-summary>
+<web-summary>MergeOptions — Як `merge` заповнює шаблон. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/string</code> · Доступно з: 1.11.0</p>
@@ -34,4 +34,4 @@ const options = { onMissing: "empty", escape: escapeHtml };
 
 ## Вихідний код
 
-[`src/lang/string/merge.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/merge.ts)
+[`src/lang/string/merge.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/merge.ts)

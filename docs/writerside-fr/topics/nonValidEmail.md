@@ -4,7 +4,7 @@
 
 <link-summary>Vérifie qu'une valeur n'est **pas** une adresse e-mail.</link-summary>
 
-<web-summary>nonValidEmail() — Vérifie qu'une valeur n'est **pas** une adresse e-mail. apps-script-utils, Français.</web-summary>
+<web-summary>nonValidEmail() — Vérifie qu'une valeur n'est **pas** une adresse e-mail. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/string</code> · Disponible depuis: 1.11.0</p>
@@ -53,4 +53,4 @@ nonValidEmail("first.last@sub.example.co.uk"); // => false
 
 ## Code source
 
-[`src/lang/string/nonValidEmail.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidEmail.ts)
+[`src/lang/string/nonValidEmail.ts`](https://github.com/bootgs/utils/blob/main/src/lang/string/nonValidEmail.ts)

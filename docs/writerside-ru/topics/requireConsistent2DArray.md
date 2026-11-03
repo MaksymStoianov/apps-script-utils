@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как двумерный массив с одинаковой длиной строк или выбрасывает исключение.</link-summary>
 
-<web-summary>requireConsistent2DArray() — Возвращает значение как двумерный массив с одинаковой длиной строк или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireConsistent2DArray() — Возвращает значение как двумерный массив с одинаковой длиной строк или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/array</code> · Доступно с: 1.11.0</p>
@@ -79,4 +79,4 @@ requireConsistent2DArray([1, 2], "rows must be a matrix");
 
 ## Исходный код
 
-[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/requireConsistent2DArray.ts)
+[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/utils/blob/main/src/lang/array/requireConsistent2DArray.ts)

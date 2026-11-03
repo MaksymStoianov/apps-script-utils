@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is a spreadsheet id.</link-summary>
 
-<web-summary>isValidSpreadsheetId() — Checks whether a value is a spreadsheet id. apps-script-utils, English.</web-summary>
+<web-summary>isValidSpreadsheetId() — Checks whether a value is a spreadsheet id. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript/sheet</code> · Since: 1.5.0</p>
@@ -48,4 +48,4 @@ isValidSpreadsheetId("has space in it and is long enough to pass"); // => false
 
 ## Source
 
-[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)
+[`src/appsscript/sheet/isValidSpreadsheetId.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isValidSpreadsheetId.ts)

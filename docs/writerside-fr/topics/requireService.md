@@ -4,7 +4,7 @@
 
 <link-summary>Renvoie un service une fois établi qu'il existe, ou lève.</link-summary>
 
-<web-summary>requireService() — Renvoie un service une fois établi qu'il existe, ou lève. apps-script-utils, Français.</web-summary>
+<web-summary>requireService() — Renvoie un service une fois établi qu'il existe, ou lève. @bootgs/utils, Français.</web-summary>
 
 <tldr>
 <p>Module: <code>appsscript</code> · Disponible depuis: 1.5.0</p>
@@ -53,4 +53,4 @@ const directory = requireService(AdminDirectory, "Enable the Admin SDK service."
 
 ## Code source
 
-[`src/appsscript/requireService.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/requireService.ts)
+[`src/appsscript/requireService.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/requireService.ts)

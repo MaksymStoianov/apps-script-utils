@@ -2,7 +2,7 @@
 
 <link-summary>Помощники для Google Apps Script: таблицы, нотация A1, интерфейс, Диск и Admin SDK.</link-summary>
 
-<web-summary>Модуль appsscript в apps-script-utils: помощники для таблиц и нотации A1, проверки листов, интерфейс, Диск, Презентации и Admin SDK для Google Apps Script.</web-summary>
+<web-summary>Модуль appsscript в @bootgs/utils: помощники для таблиц и нотации A1, проверки листов, интерфейс, Диск, Презентации и Admin SDK для Google Apps Script.</web-summary>
 
 `appsscript` содержит всё, что касается сервисов Google. Это та часть библиотеки, которая работает только внутри
 среды Apps Script, — что это значит для тестов, разобрано в [](apps-script-runtime.md).
@@ -25,7 +25,7 @@
 правой границей, как в Sheets API, а не позициями от единицы, которые принимают методы `Range`:
 
 ```typescript
-import { parseA1Notation } from "apps-script-utils";
+import { parseA1Notation } from "@bootgs/utils";
 
 parseA1Notation("Sheet1!A1:B10");
 // {
@@ -46,7 +46,7 @@ parseA1Notation("B5");
 `toA1Notation` — обратная операция:
 
 ```typescript
-import { toA1Notation } from "apps-script-utils";
+import { toA1Notation } from "@bootgs/utils";
 
 toA1Notation({ startRowIndex: 0, endRowIndex: 10, startColumnIndex: 0, endColumnIndex: 2 });
 // "A1:B10"
@@ -55,7 +55,7 @@ toA1Notation({ startRowIndex: 0, endRowIndex: 10, startColumnIndex: 0, endColumn
 `parseA1Notations` принимает список через запятую и возвращает по одному `GridRange` на запись:
 
 ```typescript
-import { parseA1Notations } from "apps-script-utils";
+import { parseA1Notations } from "@bootgs/utils";
 
 parseA1Notations("Sheet1!A1:B2, Sheet1!D1"); // два объекта GridRange
 ```
@@ -67,7 +67,7 @@ import {
   extractRangeFromA1Notation,
   extractSheetNameFromA1Notation,
   updateSheetNameInA1Notation
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 extractSheetNameFromA1Notation("'My Sheet'!A1"); // "My Sheet"
 extractRangeFromA1Notation("'My Sheet'!A1:B2"); // "A1:B2"
@@ -84,7 +84,7 @@ import {
   getColumnIndexByLetter,
   getColumnLetterByIndex,
   getColumnPositionByLetter
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 getColumnIndexByLetter("A"); // 0
 getColumnIndexByLetter("AZ"); // 51
@@ -103,7 +103,7 @@ import {
   isCellGridRange,
   isGridRangeContainedIn,
   isGridRangeSameDimensions
-} from "apps-script-utils";
+} from "@bootgs/utils";
 
 const header = { startRowIndex: 0, endRowIndex: 1, startColumnIndex: 0, endColumnIndex: 5 };
 const body = { startRowIndex: 1, endRowIndex: 100, startColumnIndex: 0, endColumnIndex: 5 };
@@ -115,7 +115,7 @@ isCellGridRange(header); // false — он занимает пять столб�
 ## Запись строк и столбцов
 
 ```typescript
-import { appendRows, prependRows, appendColumns } from "apps-script-utils";
+import { appendRows, prependRows, appendColumns } from "@bootgs/utils";
 
 const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Data");
 
@@ -135,7 +135,7 @@ prependRows(sheet, [["Name", "Email", "Age"]]);
 То же соглашение, что и во всей библиотеке, применённое к классам Apps Script:
 
 ```typescript
-import { isSheet, isSpreadsheet, isRange, requireSheet } from "apps-script-utils";
+import { isSheet, isSpreadsheet, isRange, requireSheet } from "@bootgs/utils";
 
 function rowCount(value: unknown): number {
   return requireSheet(value).getLastRow();
@@ -148,7 +148,7 @@ function rowCount(value: unknown): number {
 ## Презентации
 
 ```typescript
-import { getSlideByIndex, findReplaceAllTextInSlide, requireSlide } from "apps-script-utils";
+import { getSlideByIndex, findReplaceAllTextInSlide, requireSlide } from "@bootgs/utils";
 
 const presentation = SlidesApp.getActivePresentation();
 
@@ -166,7 +166,7 @@ findReplaceAllTextInSlide(slide, "{{name}}", "Ada Lovelace");
 ## Admin SDK
 
 ```typescript
-import { isAdmin } from "apps-script-utils";
+import { isAdmin } from "@bootgs/utils";
 
 if (isAdmin()) {
   Logger.log("Access granted to admin panel.");

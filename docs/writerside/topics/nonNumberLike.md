@@ -4,7 +4,7 @@
 
 <link-summary>Checks whether a value is **not** convertible to a number.</link-summary>
 
-<web-summary>nonNumberLike() — Checks whether a value is **not** convertible to a number. apps-script-utils, English.</web-summary>
+<web-summary>nonNumberLike() — Checks whether a value is **not** convertible to a number. @bootgs/utils, English.</web-summary>
 
 <tldr>
 <p>Module: <code>lang/base</code> · Since: 1.11.0</p>
@@ -53,4 +53,4 @@ nonNumberLike(" 42 "); // => false
 
 ## Source
 
-[`src/lang/base/nonNumberLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNumberLike.ts)
+[`src/lang/base/nonNumberLike.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/nonNumberLike.ts)

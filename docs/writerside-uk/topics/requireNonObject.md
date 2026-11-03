@@ -4,7 +4,7 @@
 
 <link-summary>Повертає значення, переконавшись, що воно не є об'єктом.</link-summary>
 
-<web-summary>requireNonObject() — Повертає значення, переконавшись, що воно не є об'єктом. apps-script-utils, Українська.</web-summary>
+<web-summary>requireNonObject() — Повертає значення, переконавшись, що воно не є об'єктом. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/base</code> · Доступно з: 1.11.0</p>
@@ -58,4 +58,4 @@ requireNonObject([]); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonObject.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonObject.ts)
+[`src/lang/base/requireNonObject.ts`](https://github.com/bootgs/utils/blob/main/src/lang/base/requireNonObject.ts)

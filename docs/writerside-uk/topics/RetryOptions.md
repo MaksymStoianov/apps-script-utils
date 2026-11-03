@@ -4,7 +4,7 @@
 
 <link-summary>Як `retry` чекає і коли здається.</link-summary>
 
-<web-summary>RetryOptions — Як `retry` чекає і коли здається. apps-script-utils, Українська.</web-summary>
+<web-summary>RetryOptions — Як `retry` чекає і коли здається. @bootgs/utils, Українська.</web-summary>
 
 <tldr>
 <p>Модуль: <code>lang/function</code></p>
@@ -38,4 +38,4 @@ const options = {
 
 ## Вихідний код
 
-[`src/lang/function/retry.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/function/retry.ts)
+[`src/lang/function/retry.ts`](https://github.com/bootgs/utils/blob/main/src/lang/function/retry.ts)

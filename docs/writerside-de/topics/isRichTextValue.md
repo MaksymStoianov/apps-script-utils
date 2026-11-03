@@ -4,7 +4,7 @@
 
 <link-summary>Prüft, ob ein Wert ein Rich-Text-Wert ist.</link-summary>
 
-<web-summary>isRichTextValue() — Prüft, ob ein Wert ein Rich-Text-Wert ist. apps-script-utils, Deutsch.</web-summary>
+<web-summary>isRichTextValue() — Prüft, ob ein Wert ein Rich-Text-Wert ist. @bootgs/utils, Deutsch.</web-summary>
 
 <tldr>
 <p>Modul: <code>appsscript/sheet</code> · Verfügbar seit: 1.0.0</p>
@@ -51,4 +51,4 @@ isRichTextValue(null); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isRichTextValue.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isRichTextValue.ts)
+[`src/appsscript/sheet/isRichTextValue.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/isRichTextValue.ts)

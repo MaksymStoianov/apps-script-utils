@@ -4,7 +4,7 @@
 
 <link-summary>Возвращает значение как диапазон или выбрасывает исключение.</link-summary>
 
-<web-summary>requireRange() — Возвращает значение как диапазон или выбрасывает исключение. apps-script-utils, Русский.</web-summary>
+<web-summary>requireRange() — Возвращает значение как диапазон или выбрасывает исключение. @bootgs/utils, Русский.</web-summary>
 
 <tldr>
 <p>Модуль: <code>appsscript/sheet</code> · Доступно с: 1.5.0</p>
@@ -56,4 +56,4 @@ requireRange(null); // throws InvalidRangeException
 
 ## Исходный код
 
-[`src/appsscript/sheet/requireRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireRange.ts)
+[`src/appsscript/sheet/requireRange.ts`](https://github.com/bootgs/utils/blob/main/src/appsscript/sheet/requireRange.ts)
