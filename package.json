@@ -24,6 +24,7 @@
     "build:gas": "npm run build && node scripts/gas/bundle.mjs scripts/gas/Library.js",
     "docs:generate": "node scripts/docs/generate-topics.mjs",
     "docs:check": "node scripts/docs/generate-topics.mjs --check",
+    "docs:check-i18n": "node scripts/check-readme-translations.mjs",
     "docs:finalize-site": "node scripts/docs/finalize-site.mjs",
     "docs:help-versions": "node scripts/docs/write-help-versions.mjs",
     "docs:author": "node scripts/docs/author-guards.mjs && node scripts/docs/author-exceptions.mjs && node scripts/docs/author-batch.mjs",

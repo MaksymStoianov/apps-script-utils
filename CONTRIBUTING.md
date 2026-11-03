@@ -22,6 +22,7 @@ Great that you are here and you want to contribute to **apps-script-utils**!
       - [1. General Requirements](#1-general-requirements)
       - [2. PR Specific Requirements](#2-pr-specific-requirements)
     - [Test Suite](#test-suite)
+    - [README Translations](#readme-translations)
   - [License](#license)
 
 <!-- TOC -->
@@ -178,6 +179,28 @@ The project uses [Vitest](https://vitest.dev/) for testing.
   ```bash
   npm run dev
   ```
+
+### README Translations
+
+`README.md` is the authoritative version. `README.uk.md`, `README.ru.md`, `README.de.md`, `README.fr.md`,
+`README.es.md`, `README.pt.md`, `README.ja.md` and `README.zh.md` are AI-assisted translations of it, and corrections
+from native speakers are welcome as ordinary pull requests.
+
+- **Keep the shape**: every README carries the same language switcher under the banner, and every translation has
+  the same `##`/`###` headings as `README.md`. Translate prose only; code blocks, function names, commands, package
+  names, URLs and badges stay as they are. Ukrainian, Russian, German and French link to their own documentation
+  under `/<code>/`; the other languages link to the English documentation.
+- **Sync translations with the source**: when a change to `README.md` is carried into the translations, update the
+  version in the note under each switcher to the current `version` in `package.json`.
+- **The note goes stale on release, by design**: release-please bumps `package.json` but does not touch the
+  translations, so after a release the note keeps naming the version the translations were last synced with. It is
+  updated only when the translations are synced, not on every release.
+- **Check by hand**: run the check before committing a translation sync. It is not part of CI or the Git hooks.
+  ```bash
+  npm run docs:check-i18n
+  ```
+  It fails when a translation is missing, lacks the switcher, has a different number of `##`/`###` headings than
+  `README.md`, or its note names a version other than the one in `package.json`. It does not compare wording.
 
 ## License
 
