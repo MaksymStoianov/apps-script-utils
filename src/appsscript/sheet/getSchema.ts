@@ -1,5 +1,5 @@
 import { isNil } from "../../lang";
-import { SCHEMA_METADATA_KEY } from "./insertSchema";
+import { LEGACY_SCHEMA_METADATA_KEYS, SCHEMA_METADATA_KEY } from "./insertSchema";
 import { requireSheet } from "./requireSheet";
 import { type SheetColumnSchema, type SheetColumnType, type SheetSchema } from "./types";
 
@@ -10,11 +10,23 @@ import { type SheetColumnSchema, type SheetColumnType, type SheetSchema } from "
  * @returns {SheetSchema | null} The stored schema, or `null` when there is none or it cannot be read.
  */
 function readStoredSchema(sheet: GoogleAppsScript.Spreadsheet.Sheet): SheetSchema | null {
-  for (const metadata of sheet.getDeveloperMetadata()) {
-    if (metadata.getKey() !== SCHEMA_METADATA_KEY) {
-      continue;
-    }
+  // A schema under the current key wins over one left under a legacy key.
+  const entries: GoogleAppsScript.Spreadsheet.DeveloperMetadata[] = sheet
+    .getDeveloperMetadata()
+    .filter(
+      (metadata: GoogleAppsScript.Spreadsheet.DeveloperMetadata): boolean =>
+        metadata.getKey() === SCHEMA_METADATA_KEY ||
+        LEGACY_SCHEMA_METADATA_KEYS.includes(metadata.getKey())
+    )
+    .sort(
+      (
+        a: GoogleAppsScript.Spreadsheet.DeveloperMetadata,
+        b: GoogleAppsScript.Spreadsheet.DeveloperMetadata
+      ): number =>
+        Number(b.getKey() === SCHEMA_METADATA_KEY) - Number(a.getKey() === SCHEMA_METADATA_KEY)
+    );
 
+  for (const metadata of entries) {
     try {
       const parsed: unknown = JSON.parse(metadata.getValue() ?? "");
 

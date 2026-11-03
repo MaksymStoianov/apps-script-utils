@@ -21,7 +21,9 @@ interface SheetMock {
   calls: RangeCall[];
 }
 
-const KEY = "apps-script-utils:schema";
+const KEY = "bootgs-utils:schema";
+
+const LEGACY_KEY = "apps-script-utils:schema";
 
 /**
  * A stand-in sheet carrying the given metadata, recording range calls.
@@ -101,6 +103,17 @@ describe("removeSchema", () => {
 
       removeSchema(mock.sheet);
 
+      expect(mock.metadata).toStrictEqual([{ key: "other", value: "keep me" }]);
+    });
+
+    it("should remove a schema stored under the legacy key", () => {
+      const mock = sheetMock([
+        { key: "other", value: "keep me" },
+        { key: LEGACY_KEY, value: schema },
+        { key: KEY, value: schema }
+      ]);
+
+      expect(removeSchema(mock.sheet)).toBe(true);
       expect(mock.metadata).toStrictEqual([{ key: "other", value: "keep me" }]);
     });
 

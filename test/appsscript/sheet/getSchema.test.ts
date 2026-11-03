@@ -28,7 +28,9 @@ function sheetMock(
   } as unknown as GoogleAppsScript.Spreadsheet.Sheet;
 }
 
-const KEY = "apps-script-utils:schema";
+const KEY = "bootgs-utils:schema";
+
+const LEGACY_KEY = "apps-script-utils:schema";
 
 describe("getSchema", () => {
   describe("A stored schema", () => {
@@ -50,6 +52,29 @@ describe("getSchema", () => {
       const sheet = sheetMock([["Inferred"], [1]], [{ key: KEY, value: JSON.stringify(stored) }]);
 
       expect(getSchema(sheet)?.columns).toStrictEqual([{ name: "Declared" }]);
+    });
+
+    it("should read a schema stored under the legacy key", () => {
+      const stored = { version: 1, headerRow: 1, columns: [{ name: "Legacy" }] };
+
+      const sheet = sheetMock([["Inferred"]], [{ key: LEGACY_KEY, value: JSON.stringify(stored) }]);
+
+      expect(getSchema(sheet)).toStrictEqual(stored);
+    });
+
+    it("should prefer the current key over the legacy key", () => {
+      const legacy = { version: 1, headerRow: 1, columns: [{ name: "Legacy" }] };
+      const current = { version: 1, headerRow: 1, columns: [{ name: "Current" }] };
+
+      const sheet = sheetMock(
+        [["Inferred"]],
+        [
+          { key: LEGACY_KEY, value: JSON.stringify(legacy) },
+          { key: KEY, value: JSON.stringify(current) }
+        ]
+      );
+
+      expect(getSchema(sheet)).toStrictEqual(current);
     });
 
     it("should ignore metadata under other keys", () => {
