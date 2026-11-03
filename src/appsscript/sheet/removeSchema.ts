@@ -1,5 +1,5 @@
 import { isNil } from "../../lang";
-import { SCHEMA_METADATA_KEY } from "./insertSchema";
+import { LEGACY_SCHEMA_METADATA_KEYS, SCHEMA_METADATA_KEY } from "./insertSchema";
 import { requireSheet } from "./requireSheet";
 import { type SheetSchema } from "./types";
 
@@ -75,7 +75,9 @@ export function removeSchema(
   let removed: boolean = false;
 
   for (const metadata of sheet.getDeveloperMetadata()) {
-    if (metadata.getKey() !== SCHEMA_METADATA_KEY) {
+    const key: string = metadata.getKey();
+
+    if (key !== SCHEMA_METADATA_KEY && !LEGACY_SCHEMA_METADATA_KEYS.includes(key)) {
       continue;
     }
 

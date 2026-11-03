@@ -6,7 +6,14 @@ import { type SheetColumnSchema, type SheetSchema } from "./types";
 /**
  * The developer-metadata key a sheet's schema is stored under.
  */
-export const SCHEMA_METADATA_KEY: string = "apps-script-utils:schema";
+export const SCHEMA_METADATA_KEY: string = "bootgs-utils:schema";
+
+/**
+ * Keys earlier versions stored the schema under (`apps-script-utils` 2.x and older). They are
+ * still read and removed, and replaced by {@link SCHEMA_METADATA_KEY} the next time a schema is
+ * written, so spreadsheets migrate on their own.
+ */
+export const LEGACY_SCHEMA_METADATA_KEYS: readonly string[] = ["apps-script-utils:schema"];
 
 /**
  * Rejects anything that is not a usable schema.
@@ -51,7 +58,9 @@ function requireSchema(schema: unknown): SheetSchema {
  */
 function removeStoredSchema(sheet: GoogleAppsScript.Spreadsheet.Sheet): void {
   for (const metadata of sheet.getDeveloperMetadata()) {
-    if (metadata.getKey() === SCHEMA_METADATA_KEY) {
+    const key: string = metadata.getKey();
+
+    if (key === SCHEMA_METADATA_KEY || LEGACY_SCHEMA_METADATA_KEYS.includes(key)) {
       metadata.remove();
     }
   }

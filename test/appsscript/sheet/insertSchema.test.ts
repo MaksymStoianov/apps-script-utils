@@ -204,7 +204,7 @@ describe("insertSchema", () => {
       insertSchema(mock.sheet, { version: 1, headerRow: 1, columns: [{ name: "Id" }] });
 
       expect(mock.metadata).toHaveLength(1);
-      expect(mock.metadata[0].key).toBe("apps-script-utils:schema");
+      expect(mock.metadata[0].key).toBe("bootgs-utils:schema");
       expect(JSON.parse(mock.metadata[0].value)).toStrictEqual({
         version: 1,
         headerRow: 1,
@@ -231,7 +231,19 @@ describe("insertSchema", () => {
 
       expect(mock.metadata.map((m: { key: string }) => m.key)).toStrictEqual([
         "other",
-        "apps-script-utils:schema"
+        "bootgs-utils:schema"
+      ]);
+    });
+
+    it("should migrate a schema stored under the legacy key", () => {
+      const mock = sheetMock();
+
+      mock.sheet.addDeveloperMetadata("apps-script-utils:schema", JSON.stringify({ version: 1 }));
+
+      insertSchema(mock.sheet, { version: 1, headerRow: 1, columns: [{ name: "Id" }] });
+
+      expect(mock.metadata.map((m: { key: string }) => m.key)).toStrictEqual([
+        "bootgs-utils:schema"
       ]);
     });
 
