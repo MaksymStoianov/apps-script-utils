@@ -11,6 +11,10 @@
  * - the version in its translation note, the blockquote right after the
  *   switcher, differs from the `version` in package.json.
  *
+ * A right-to-left translation wraps its prose in `<div dir="rtl" ...>` blocks.
+ * Those wrapper lines are skipped when looking for the note, and the headings
+ * inside them still count, since they stay `##`/`###` lines of their own.
+ *
  * It does not compare wording: a translation can be out of date and still
  * pass. The version note is what says which README.md it was made from.
  *
@@ -74,6 +78,13 @@ function proseLines(text) {
   return lines;
 }
 
+/**
+ * Whether the line only opens or closes a right-to-left wrapper block.
+ */
+function isRtlWrapper(line) {
+  return /^<div\b[^>]*\bdir="rtl"[^>]*>$/.test(line.trim()) || line.trim() === "</div>";
+}
+
 function headingCount(lines) {
   return lines.filter((line) => /^#{2,3} \S/.test(line)).length;
 }
@@ -108,7 +119,9 @@ for (const { code } of LANGUAGES.slice(1)) {
   if (switcherAt === -1) {
     problems.push(`${file}: the language switcher is missing or differs from the expected line`);
   } else {
-    const note = lines.slice(switcherAt + 1).find((line) => line.trim() !== "");
+    const note = lines
+      .slice(switcherAt + 1)
+      .find((line) => line.trim() !== "" && !isRtlWrapper(line));
 
     const noted = note?.startsWith(">") ? /\b\d+\.\d+\.\d+\b/.exec(note)?.[0] : undefined;
 
