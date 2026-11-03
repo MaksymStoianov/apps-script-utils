@@ -42,9 +42,10 @@
 
     /**
      * Create sourcemaps for d.ts files.
+     * Off: the package ships `dist` without `src`, so the maps would point at files that are not there.
      * @see https://www.typescriptlang.org/tsconfig#declarationMap
      */
-    "declarationMap": true,
+    "declarationMap": false,
 
     /**
      * Emit design-type metadata for decorated declarations in source files.
@@ -158,9 +159,10 @@
 
     /**
      * Create source map files for emitted JavaScript files.
+     * Off: the package ships `dist` without `src`, so the maps would point at files that are not there.
      * @see https://www.typescriptlang.org/tsconfig#sourceMap
      */
-    "sourceMap": true,
+    "sourceMap": false,
 
     /**
      * Enable all strict type-checking options.
