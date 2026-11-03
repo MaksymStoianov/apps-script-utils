@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { SlideNotFoundException } from "../../exception";
 import { isSlide } from "./isSlide";
 

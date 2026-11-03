@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * The parts a path breaks into, as {@link parse} reports them.
  *

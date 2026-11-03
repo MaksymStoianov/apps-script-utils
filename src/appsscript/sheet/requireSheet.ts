@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { InvalidSheetException } from "../../exception";
 import { isSheet } from "./isSheet";
 

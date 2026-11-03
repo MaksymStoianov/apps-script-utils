@@ -17,18 +17,78 @@
 **Прив'язані до сервісів** функції самі звертаються до глобального сервісу. Вони працюють лише всередині скрипта з
 виданими правами і в Node не працюють зовсім. Сьогодні це весь список:
 
-| Функція                 | До якого глобального об'єкта звертається                         |
-| :---------------------- | :--------------------------------------------------------------- |
-| `isAdmin`               | `Session.getActiveUser`, `AdminDirectory.Users`                  |
-| `checkMultipleAccount`  | `Session.getEffectiveUser`                                       |
-| `getSheetById`          | `SpreadsheetApp.getActiveSpreadsheet`, якщо таблицю не передано  |
-| `getSheetByIndex`       | `SpreadsheetApp.getActiveSpreadsheet`, якщо таблицю не передано  |
-| `highlightHtml`         | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue` |
-| `convertRichTextToHtml` | `Utilities.formatString`                                         |
+| Функція                               | До якого глобального об'єкта звертається                         | Яка область доступу потрібна                      |
+| :------------------------------------ | :--------------------------------------------------------------- | :------------------------------------------------ |
+| `isAdmin`, `nonAdmin`, `requireAdmin` | `Session.getActiveUser`, `AdminDirectory.Users`                  | `userinfo.email`, `admin.directory.user.readonly` |
+| `checkMultipleAccount`                | `Session.getEffectiveUser`                                       | `userinfo.email`                                  |
+| `getSheetById`, `getSheetByIndex`     | `SpreadsheetApp.getActiveSpreadsheet`, якщо таблицю не передано  | `spreadsheets.currentonly`                        |
+| `getSlideByIndex`, `getSlideIndex`    | `SlidesApp.getActivePresentation`, якщо презентацію не передано  | `presentations.currentonly`                       |
+| `createFolder`                        | `DriveApp.getRootFolder`, якщо батьківську папку не передано     | `drive`                                           |
+| `getTriggerById`                      | `ScriptApp.getProjectTriggers`                                   | `script.scriptapp`                                |
+| `appendRows`, `prependRows`           | `LockService.getDocumentLock`                                    | для блокування не потрібна                        |
+| `appendRow`, `prependRow`             | `LockService.getDocumentLock`, через дві функції вище            | для блокування не потрібна                        |
+| `appendColumns`, `prependColumns`     | `LockService.getDocumentLock`                                    | для блокування не потрібна                        |
+| `appendColumn`, `prependColumn`       | `LockService.getDocumentLock`, через дві функції вище            | для блокування не потрібна                        |
+| `highlightHtml`                       | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue` | для конструкторів не потрібна                     |
+| `insertSchema`                        | `SpreadsheetApp.newDataValidation`                               | для конструктора не потрібна                      |
+| `deleteRowsByConditional`             | `SpreadsheetApp.Dimension`                                       | для переліку не потрібна                          |
+| `deleteColumnsByConditional`          | `SpreadsheetApp.Dimension`                                       | для переліку не потрібна                          |
+| `convertRichTextToHtml`               | `Utilities.formatString`                                         | не потрібна                                       |
+| `retry`                               | `Utilities.sleep`, якщо він є                                    | не потрібна                                       |
+
+Області доступу записано без префікса `https://www.googleapis.com/auth/`. «Не потрібна» означає, що самому
+глобальному об'єкту авторизація не потрібна; аркуш, діапазон чи папка, які функція отримує, однаково потребують
+області доступу того сервісу, з якого їх узято, — про це наступний розділ.
 
 Усе інше в `appsscript` приймає об'єкт сервісу аргументом: `appendRows` пише в той `Sheet`, який ви йому дали, а
 `requireSheet` розглядає передане значення, а не здобуває його сам. Таким функціям живий об'єкт сервісу потрібен,
 щоб принести користь, але шукати його вони не йдуть — саме це й дозволяє підмінити їх у тесті.
+
+## Області доступу OAuth
+
+Apps Script вирішує, які області доступу запитати, переглядаючи код усього проєкту, разом із бібліотекою. Тому
+проєкт, у який бібліотеку вбудовано цілком, може запитати в користувача більше, ніж справді використовує.
+Перелічіть області доступу в `appsscript.json` самі: щойно там є `oauthScopes`, Apps Script запитує саме їх і нічого
+більше.
+
+| Що викликає ваш код                                                                                                       | Найвужча область                                  | Ширша альтернатива                            |
+| :------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------ | :-------------------------------------------- |
+| Будь-яка функція, що приймає `Sheet`, `Range`, `Spreadsheet` або `RichTextValue` з прив'язаної таблиці                    | `spreadsheets.currentonly`                        | `spreadsheets` — для таблиць, відкритих за ID |
+| `getSheetById`, `getSheetByIndex` без таблиці                                                                             | `spreadsheets.currentonly`                        | `spreadsheets`                                |
+| Будь-яка функція, що приймає `Slide` або `Presentation`, а також `getSlideByIndex`, `getSlideIndex` без презентації       | `presentations.currentonly`                       | `presentations`                               |
+| `createFolder`                                                                                                            | `drive`                                           | —                                             |
+| `getTriggerById`                                                                                                          | `script.scriptapp`                                | —                                             |
+| `checkMultipleAccount`                                                                                                    | `userinfo.email`                                  | —                                             |
+| `isAdmin`, `nonAdmin`, `requireAdmin`                                                                                     | `userinfo.email`, `admin.directory.user.readonly` | `admin.directory.user`                        |
+| Усе в `lang`, `net`, `json`, `html`, `time` і `exception`, а також помічники для нотації A1, літер стовпців і `GridRange` | не потрібна                                       | —                                             |
+
+Скрипту, прив'язаному до таблиці, що працює лише з нею, більше нічого не потрібно:
+
+```json
+{
+  "timeZone": "Etc/UTC",
+  "runtimeVersion": "V8",
+  "oauthScopes": ["https://www.googleapis.com/auth/spreadsheets.currentonly"]
+}
+```
+
+Що варто знати, перш ніж звужувати:
+
+- **`*.currentonly`** покриває лише документ, до якого прив'язано скрипт, або той, у якому працює доповнення.
+  Скрипту, що відкриває інші таблиці чи презентації за ID або URL, потрібні `spreadsheets` або `presentations`.
+- **`createFolder`** спершу шукає наявні папки за назвою і лише потім створює нову. З `drive.file` скрипт бачить
+  тільки файли й папки, які створив сам або які користувач відкрив через нього, тож пошук не знаходить папок,
+  створених кимось іншим, і з'являються дублікати. Використовуйте `drive.file`, лише якщо все дерево створює сам
+  скрипт; інакше — `drive`.
+- **Функціям Admin SDK** також потрібен увімкнений у проєкті розширений сервіс Admin SDK Directory
+  (`dependencies.enabledAdvancedServices`, `serviceId` `admin`, `version` `directory_v1`) і користувач, якому дозволено
+  читати каталог. Області лише для читання `admin.directory.user.readonly` досить: `isAdmin` тільки читає
+  користувача.
+- **Брак області доступу** виявляється під час виконання — помилкою авторизації під час виклику сервісу, а не під час
+  збереження проєкту. Після зміни `oauthScopes` пройдіть кожну гілку коду хоча б раз.
+
+Яка область потрібна кожному методу, зазначено в розділі «Authorization» його сторінки в
+[довіднику Apps Script](https://developers.google.com/apps-script/reference).
 
 ## Пакетність на межі
 

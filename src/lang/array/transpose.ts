@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isConsistent2DArray } from "../array";
 import { isArray } from "../base";
 

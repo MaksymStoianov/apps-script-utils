@@ -17,19 +17,78 @@ conversions, and the `GridRange` comparisons.
 **Service-bound** functions reach for a global service on their own. They only work inside a script that has the
 relevant scope authorised, and they cannot be called in Node at all. Today that is the whole list:
 
-| Function                | Global it reaches for                                                |
-| :---------------------- | :------------------------------------------------------------------- |
-| `isAdmin`               | `Session.getActiveUser`, `AdminDirectory.Users`                      |
-| `checkMultipleAccount`  | `Session.getEffectiveUser`                                           |
-| `getSheetById`          | `SpreadsheetApp.getActiveSpreadsheet`, when no spreadsheet is passed |
-| `getSheetByIndex`       | `SpreadsheetApp.getActiveSpreadsheet`, when no spreadsheet is passed |
-| `highlightHtml`         | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue`     |
-| `convertRichTextToHtml` | `Utilities.formatString`                                             |
+| Function                              | Global it reaches for                                                | Scope it needs                                    |
+| :------------------------------------ | :------------------------------------------------------------------- | :------------------------------------------------ |
+| `isAdmin`, `nonAdmin`, `requireAdmin` | `Session.getActiveUser`, `AdminDirectory.Users`                      | `userinfo.email`, `admin.directory.user.readonly` |
+| `checkMultipleAccount`                | `Session.getEffectiveUser`                                           | `userinfo.email`                                  |
+| `getSheetById`, `getSheetByIndex`     | `SpreadsheetApp.getActiveSpreadsheet`, when no spreadsheet is passed | `spreadsheets.currentonly`                        |
+| `getSlideByIndex`, `getSlideIndex`    | `SlidesApp.getActivePresentation`, when no presentation is passed    | `presentations.currentonly`                       |
+| `createFolder`                        | `DriveApp.getRootFolder`, when no parent folder is passed            | `drive`                                           |
+| `getTriggerById`                      | `ScriptApp.getProjectTriggers`                                       | `script.scriptapp`                                |
+| `appendRows`, `prependRows`           | `LockService.getDocumentLock`                                        | none for the lock                                 |
+| `appendRow`, `prependRow`             | `LockService.getDocumentLock`, through the two above                 | none for the lock                                 |
+| `appendColumns`, `prependColumns`     | `LockService.getDocumentLock`                                        | none for the lock                                 |
+| `appendColumn`, `prependColumn`       | `LockService.getDocumentLock`, through the two above                 | none for the lock                                 |
+| `highlightHtml`                       | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue`     | none for the builders                             |
+| `insertSchema`                        | `SpreadsheetApp.newDataValidation`                                   | none for the builder                              |
+| `deleteRowsByConditional`             | `SpreadsheetApp.Dimension`                                           | none for the enum                                 |
+| `deleteColumnsByConditional`          | `SpreadsheetApp.Dimension`                                           | none for the enum                                 |
+| `convertRichTextToHtml`               | `Utilities.formatString`                                             | none                                              |
+| `retry`                               | `Utilities.sleep`, when it exists                                    | none                                              |
+
+Scopes are written without the `https://www.googleapis.com/auth/` prefix. "None" means the global itself needs no
+authorisation; the sheet, range or folder the function is given still needs the scope of the service it came from,
+as the next section explains.
 
 Everything else in `appsscript` takes the service object it works on as an argument — `appendRows` writes to the
 `Sheet` you hand it, `requireSheet` inspects the value it is given rather than fetching one. Those functions need a
 live service object to do anything useful, but they never go looking for one, which is what makes them
 substitutable in a test.
+
+## OAuth scopes
+
+Apps Script decides which scopes to ask for by scanning the code of the whole project, the library included. A
+project that bundles the library can therefore ask the user for more than it actually uses. List the scopes in
+`appsscript.json` yourself instead: once `oauthScopes` is present, Apps Script asks for exactly those and nothing
+else.
+
+| What your code calls                                                                                                            | Narrowest scope                                   | Broader alternative                           |
+| :------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------ | :-------------------------------------------- |
+| Any function that takes a `Sheet`, `Range`, `Spreadsheet` or `RichTextValue` from the bound spreadsheet                         | `spreadsheets.currentonly`                        | `spreadsheets`, for spreadsheets opened by ID |
+| `getSheetById`, `getSheetByIndex` without a spreadsheet                                                                         | `spreadsheets.currentonly`                        | `spreadsheets`                                |
+| Any function that takes a `Slide` or `Presentation`, and `getSlideByIndex`, `getSlideIndex` without one                         | `presentations.currentonly`                       | `presentations`                               |
+| `createFolder`                                                                                                                  | `drive`                                           | —                                             |
+| `getTriggerById`                                                                                                                | `script.scriptapp`                                | —                                             |
+| `checkMultipleAccount`                                                                                                          | `userinfo.email`                                  | —                                             |
+| `isAdmin`, `nonAdmin`, `requireAdmin`                                                                                           | `userinfo.email`, `admin.directory.user.readonly` | `admin.directory.user`                        |
+| Everything in `lang`, `net`, `json`, `html`, `time` and `exception`, and the A1-notation, column-letter and `GridRange` helpers | none                                              | —                                             |
+
+A container-bound script that works only on its own spreadsheet needs nothing more than this:
+
+```json
+{
+  "timeZone": "Etc/UTC",
+  "runtimeVersion": "V8",
+  "oauthScopes": ["https://www.googleapis.com/auth/spreadsheets.currentonly"]
+}
+```
+
+Things to know before narrowing:
+
+- **`*.currentonly`** covers only the document the script is bound to, or the one an add-on runs in. A script that
+  opens other spreadsheets or presentations by ID or URL needs `spreadsheets` or `presentations`.
+- **`createFolder`** looks up existing folders by name before it creates one. Under `drive.file` a script sees only
+  the files and folders it created or the user opened with it, so the lookup misses folders made by anyone else and
+  creates duplicates. Use `drive.file` only when the whole tree is created by the script itself; otherwise `drive`.
+- **The Admin SDK functions** also need the Admin SDK Directory advanced service enabled in the project
+  (`dependencies.enabledAdvancedServices`, `serviceId` `admin`, `version` `directory_v1`), and a user who is allowed
+  to read the directory. The read-only scope `admin.directory.user.readonly` is enough: `isAdmin` only reads the
+  user.
+- **A missing scope** shows up at run time, as an authorisation error from the service call, not when the project is
+  saved. Run each code path once after you change `oauthScopes`.
+
+The scope each method needs is listed under "Authorization" in its
+[Apps Script reference](https://developers.google.com/apps-script/reference) page.
 
 ## Batch at the boundary
 

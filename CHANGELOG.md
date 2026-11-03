@@ -35,7 +35,7 @@
 
 ### ⚠ BREAKING CHANGES
 
-* **slide:** getSlideIndex takes (slide, presentation?) rather than (presentation, slide). A call left in the other order returns null.
+* **slide:** getSlideIndex takes (slide, presentation?): the slide comes first, as in 1.x, and the presentation is now optional, defaulting to the active presentation. A call with the arguments the other way round returns null.
 * **slide:** getSlideByIndex takes (index, presentation?) rather than (presentation, index). A call left in the old order returns null.
 * **sheet:** a failed write throws the Error the Apps Script service raised rather than a string carrying its message. A caller matching on a string value has to match on `error.message` instead.
 * **sheet:** updateFormulas no longer rejects a Range as its first argument; a call that relied on a Range throwing InvalidSheetException now rewrites it.
@@ -51,7 +51,6 @@
 * **sheet:** appendColumn writes its values down one column instead of across one row, and rejects anything that is not a flat array.
 * **sheet:** appendRow no longer rejects a Range as its first argument; a call that relied on a Range throwing InvalidSheetException now writes.
 * **sheet:** appendRows no longer rejects a Range as its first argument; a call that relied on a Range throwing InvalidSheetException now writes.
-* **slide:** getSlideIndex now takes (presentation, slide) rather than (slide, presentation). A call left in the old order returns null instead of an index.
 * **slide:** convertMarkdownToRichText no longer returns an empty array for `null`, `undefined`, a missing argument or a value of another type; it throws.
 * **sheet:** appendColumns, and appendColumn with it, write one column further right than before — the column they used to overwrite is now left alone.
 * **sheet:** isValidSheetName now rejects names containing \ / ? * [ ], names longer than 100 characters, and the reserved name History.
@@ -320,7 +319,6 @@
 * **sheet:** write a column, not a row, in appendColumn ([f99fe17](https://github.com/MaksymStoianov/apps-script-utils/commit/f99fe17f3acfcec1241fea9fac1a35339ba1ce0b)), closes [#503](https://github.com/MaksymStoianov/apps-script-utils/issues/503)
 * **slide:** reject absent or non-string input in convertMarkdownToRichText ([a80ae2f](https://github.com/MaksymStoianov/apps-script-utils/commit/a80ae2f37c2cd30dd5494a8b33b60536e4fea013)), closes [#451](https://github.com/MaksymStoianov/apps-script-utils/issues/451)
 * **slide:** take the index first in getSlideByIndex, and default to the active presentation ([34b8f02](https://github.com/MaksymStoianov/apps-script-utils/commit/34b8f02ba4003619cd34245fe4b7444dd961fd4d)), closes [#449](https://github.com/MaksymStoianov/apps-script-utils/issues/449)
-* **slide:** take the presentation first in getSlideIndex ([4a0ae57](https://github.com/MaksymStoianov/apps-script-utils/commit/4a0ae57ccb86282ddcdbec9ae8ffa6f5899d3a7d)), closes [#470](https://github.com/MaksymStoianov/apps-script-utils/issues/470)
 * **slide:** take the slide first in getSlideIndex, and default to the active presentation ([b3bed1e](https://github.com/MaksymStoianov/apps-script-utils/commit/b3bed1e66a34cb57e23f08dd5f7148d03d710090)), closes [#532](https://github.com/MaksymStoianov/apps-script-utils/issues/532)
 
 ## [1.10.0](https://github.com/MaksymStoianov/apps-script-utils/compare/v1.9.0...v1.10.0) (2026-08-19)

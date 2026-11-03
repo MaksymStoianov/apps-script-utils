@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isNil, isObject } from "../../lang";
 import type { GridRange } from "./types";
 

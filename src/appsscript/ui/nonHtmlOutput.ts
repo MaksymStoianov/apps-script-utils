@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { isHtmlOutput } from "./isHtmlOutput";
 
 type HtmlOutput = GoogleAppsScript.HTML.HtmlOutput;

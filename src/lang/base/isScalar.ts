@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 /**
  * Checks if the provided value is a scalar type (`string`, `number`, `boolean`, `symbol`, or `bigint`).
  *

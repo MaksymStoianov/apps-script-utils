@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { stringifyJson } from "../../json";
 import { isBoolean, isNull, isNumber, isObject, isString, isUndefined } from "../base";
 import { objectToString } from "./objectToString";

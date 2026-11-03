@@ -71,6 +71,20 @@ const files = walk(DIST)
   .sort();
 
 /**
+ * Undoes scripts/fix-esm-specifiers.mjs, so that a specifier names a module
+ * the way the TypeScript sources write it: `./a/index.js` was `./a`, and
+ * `./b.js` was `./b`. `./index.js` and `../index.js` stay files (`./index`),
+ * since the sources never import a bare `.` or `..`.
+ */
+function bare(spec) {
+  if (/\/[^./][^/]*\/index\.js$/.test(spec)) {
+    return spec.replace(/\/index\.js$/, "");
+  }
+
+  return spec.replace(/\.js$/, "");
+}
+
+/**
  * Maps an import specifier to the emitted files it actually pulls in.
  */
 function resolveSpec(src, spec) {
@@ -78,7 +92,7 @@ function resolveSpec(src, spec) {
     return [];
   }
 
-  const target = resolve(dirname(src), spec);
+  const target = resolve(dirname(src), bare(spec));
 
   const direct = `${target}.js`;
 
@@ -108,7 +122,7 @@ function resolveSpec(src, spec) {
     seen.add(current);
 
     for (const match of readFileSync(current, "utf8").matchAll(FROM_ANY)) {
-      const next = resolve(dirname(current), match[1]);
+      const next = resolve(dirname(current), bare(match[1]));
 
       if (exists(`${next}.js`)) {
         out.push(`${next}.js`);
