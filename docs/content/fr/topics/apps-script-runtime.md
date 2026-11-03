@@ -17,19 +17,80 @@ simples : les analyseurs de notation A1, les conversions de lettres de colonne e
 Les fonctions **liées à un service** vont chercher elles-mêmes un service global. Elles ne fonctionnent que dans un
 script dont la portée est autorisée, et pas du tout dans Node. Voici la liste entière à ce jour :
 
-| Fonction                | Globale utilisée                                                     |
-| :---------------------- | :------------------------------------------------------------------- |
-| `isAdmin`               | `Session.getActiveUser`, `AdminDirectory.Users`                      |
-| `checkMultipleAccount`  | `Session.getEffectiveUser`                                           |
-| `getSheetById`          | `SpreadsheetApp.getActiveSpreadsheet`, si aucun classeur n'est passé |
-| `getSheetByIndex`       | `SpreadsheetApp.getActiveSpreadsheet`, si aucun classeur n'est passé |
-| `highlightHtml`         | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue`     |
-| `convertRichTextToHtml` | `Utilities.formatString`                                             |
+| Fonction                              | Globale utilisée                                                       | Portée nécessaire                                 |
+| :------------------------------------ | :--------------------------------------------------------------------- | :------------------------------------------------ |
+| `isAdmin`, `nonAdmin`, `requireAdmin` | `Session.getActiveUser`, `AdminDirectory.Users`                        | `userinfo.email`, `admin.directory.user.readonly` |
+| `checkMultipleAccount`                | `Session.getEffectiveUser`                                             | `userinfo.email`                                  |
+| `getSheetById`, `getSheetByIndex`     | `SpreadsheetApp.getActiveSpreadsheet`, si aucun classeur n'est passé   | `spreadsheets.currentonly`                        |
+| `getSlideByIndex`, `getSlideIndex`    | `SlidesApp.getActivePresentation`, si aucune présentation n'est passée | `presentations.currentonly`                       |
+| `createFolder`                        | `DriveApp.getRootFolder`, si aucun dossier parent n'est passé          | `drive`                                           |
+| `getTriggerById`                      | `ScriptApp.getProjectTriggers`                                         | `script.scriptapp`                                |
+| `appendRows`, `prependRows`           | `LockService.getDocumentLock`                                          | aucune pour le verrou                             |
+| `appendRow`, `prependRow`             | `LockService.getDocumentLock`, par les deux fonctions ci-dessus        | aucune pour le verrou                             |
+| `appendColumns`, `prependColumns`     | `LockService.getDocumentLock`                                          | aucune pour le verrou                             |
+| `appendColumn`, `prependColumn`       | `LockService.getDocumentLock`, par les deux fonctions ci-dessus        | aucune pour le verrou                             |
+| `highlightHtml`                       | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue`       | aucune pour les constructeurs                     |
+| `insertSchema`                        | `SpreadsheetApp.newDataValidation`                                     | aucune pour le constructeur                       |
+| `deleteRowsByConditional`             | `SpreadsheetApp.Dimension`                                             | aucune pour l'énumération                         |
+| `deleteColumnsByConditional`          | `SpreadsheetApp.Dimension`                                             | aucune pour l'énumération                         |
+| `convertRichTextToHtml`               | `Utilities.formatString`                                               | aucune                                            |
+| `retry`                               | `Utilities.sleep`, s'il existe                                         | aucune                                            |
+
+Les portées sont écrites sans le préfixe `https://www.googleapis.com/auth/`. « Aucune » signifie que la globale
+elle-même ne demande pas d'autorisation ; la feuille, la plage ou le dossier que reçoit la fonction a quand même
+besoin de la portée du service dont il provient, comme l'explique la section suivante.
 
 Tout le reste d'`appsscript` reçoit en argument l'objet de service sur lequel il agit : `appendRows` écrit dans le
 `Sheet` que vous lui donnez, `requireSheet` examine la valeur reçue au lieu d'en chercher une. Ces fonctions ont
 besoin d'un objet de service vivant pour servir à quelque chose, mais elles n'en cherchent jamais — et c'est ce qui
 les rend remplaçables dans un test.
+
+## Portées OAuth
+
+Apps Script choisit les portées à demander en parcourant le code de tout le projet, bibliothèque comprise. Un projet
+qui intègre la bibliothèque entière peut donc demander à l'utilisateur plus qu'il n'utilise réellement. Indiquez
+plutôt les portées vous-même dans `appsscript.json` : dès que `oauthScopes` est présent, Apps Script demande
+exactement celles-là et aucune autre.
+
+| Ce que votre code appelle                                                                                                                    | Portée la plus étroite                            | Alternative plus large                            |
+| :------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------ | :------------------------------------------------ |
+| Toute fonction qui reçoit un `Sheet`, un `Range`, un `Spreadsheet` ou une `RichTextValue` du classeur lié                                    | `spreadsheets.currentonly`                        | `spreadsheets`, pour les classeurs ouverts par ID |
+| `getSheetById`, `getSheetByIndex` sans classeur                                                                                              | `spreadsheets.currentonly`                        | `spreadsheets`                                    |
+| Toute fonction qui reçoit une `Slide` ou une `Presentation`, ainsi que `getSlideByIndex`, `getSlideIndex` sans présentation                  | `presentations.currentonly`                       | `presentations`                                   |
+| `createFolder`                                                                                                                               | `drive`                                           | —                                                 |
+| `getTriggerById`                                                                                                                             | `script.scriptapp`                                | —                                                 |
+| `checkMultipleAccount`                                                                                                                       | `userinfo.email`                                  | —                                                 |
+| `isAdmin`, `nonAdmin`, `requireAdmin`                                                                                                        | `userinfo.email`, `admin.directory.user.readonly` | `admin.directory.user`                            |
+| Tout `lang`, `net`, `json`, `html`, `time` et `exception`, ainsi que les utilitaires de notation A1, de lettres de colonne et de `GridRange` | aucune                                            | —                                                 |
+
+Un script lié à un classeur qui ne travaille que sur ce classeur n'a besoin de rien de plus :
+
+```json
+{
+  "timeZone": "Etc/UTC",
+  "runtimeVersion": "V8",
+  "oauthScopes": ["https://www.googleapis.com/auth/spreadsheets.currentonly"]
+}
+```
+
+À savoir avant de restreindre :
+
+- **`*.currentonly`** ne couvre que le document auquel le script est lié, ou celui dans lequel tourne un module
+  complémentaire. Un script qui ouvre d'autres classeurs ou présentations par ID ou URL a besoin de `spreadsheets` ou
+  de `presentations`.
+- **`createFolder`** cherche d'abord les dossiers existants par leur nom avant d'en créer un. Avec `drive.file`, un
+  script ne voit que les fichiers et dossiers qu'il a créés ou que l'utilisateur a ouverts avec lui ; la recherche
+  manque donc les dossiers créés par d'autres et crée des doublons. N'utilisez `drive.file` que si le script crée
+  lui-même toute l'arborescence ; sinon, `drive`.
+- **Les fonctions Admin SDK** demandent aussi que le service avancé Admin SDK Directory soit activé dans le projet
+  (`dependencies.enabledAdvancedServices`, `serviceId` `admin`, `version` `directory_v1`), et un utilisateur autorisé
+  à lire l'annuaire. La portée en lecture seule `admin.directory.user.readonly` suffit : `isAdmin` ne fait que lire
+  l'utilisateur.
+- **Une portée manquante** se manifeste à l'exécution, par une erreur d'autorisation lors de l'appel au service, et
+  non à l'enregistrement du projet. Après avoir modifié `oauthScopes`, exécutez une fois chaque chemin du code.
+
+La portée nécessaire à chaque méthode figure sous « Authorization » sur sa page de la
+[référence Apps Script](https://developers.google.com/apps-script/reference).
 
 ## Grouper à la frontière
 

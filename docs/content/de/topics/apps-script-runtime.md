@@ -17,18 +17,78 @@ Spaltenbuchstaben-Umrechnungen und die `GridRange`-Vergleiche.
 **Dienstgebundene** Funktionen greifen selbst nach einem globalen Dienst. Sie funktionieren nur in einem Skript mit
 den nötigen Berechtigungen und in Node gar nicht. Das ist derzeit die ganze Liste:
 
-| Funktion                | Greift nach                                                              |
-| :---------------------- | :----------------------------------------------------------------------- |
-| `isAdmin`               | `Session.getActiveUser`, `AdminDirectory.Users`                          |
-| `checkMultipleAccount`  | `Session.getEffectiveUser`                                               |
-| `getSheetById`          | `SpreadsheetApp.getActiveSpreadsheet`, wenn keine Tabelle übergeben wird |
-| `getSheetByIndex`       | `SpreadsheetApp.getActiveSpreadsheet`, wenn keine Tabelle übergeben wird |
-| `highlightHtml`         | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue`         |
-| `convertRichTextToHtml` | `Utilities.formatString`                                                 |
+| Funktion                              | Greift nach                                                               | Benötigter Bereich                                |
+| :------------------------------------ | :------------------------------------------------------------------------ | :------------------------------------------------ |
+| `isAdmin`, `nonAdmin`, `requireAdmin` | `Session.getActiveUser`, `AdminDirectory.Users`                           | `userinfo.email`, `admin.directory.user.readonly` |
+| `checkMultipleAccount`                | `Session.getEffectiveUser`                                                | `userinfo.email`                                  |
+| `getSheetById`, `getSheetByIndex`     | `SpreadsheetApp.getActiveSpreadsheet`, wenn keine Tabelle übergeben wird  | `spreadsheets.currentonly`                        |
+| `getSlideByIndex`, `getSlideIndex`    | `SlidesApp.getActivePresentation`, wenn keine Präsentation übergeben wird | `presentations.currentonly`                       |
+| `createFolder`                        | `DriveApp.getRootFolder`, wenn kein übergeordneter Ordner übergeben wird  | `drive`                                           |
+| `getTriggerById`                      | `ScriptApp.getProjectTriggers`                                            | `script.scriptapp`                                |
+| `appendRows`, `prependRows`           | `LockService.getDocumentLock`                                             | keiner für die Sperre                             |
+| `appendRow`, `prependRow`             | `LockService.getDocumentLock`, über die beiden Funktionen darüber         | keiner für die Sperre                             |
+| `appendColumns`, `prependColumns`     | `LockService.getDocumentLock`                                             | keiner für die Sperre                             |
+| `appendColumn`, `prependColumn`       | `LockService.getDocumentLock`, über die beiden Funktionen darüber         | keiner für die Sperre                             |
+| `highlightHtml`                       | `SpreadsheetApp.newTextStyle`, `SpreadsheetApp.newRichTextValue`          | keiner für die Builder                            |
+| `insertSchema`                        | `SpreadsheetApp.newDataValidation`                                        | keiner für den Builder                            |
+| `deleteRowsByConditional`             | `SpreadsheetApp.Dimension`                                                | keiner für die Aufzählung                         |
+| `deleteColumnsByConditional`          | `SpreadsheetApp.Dimension`                                                | keiner für die Aufzählung                         |
+| `convertRichTextToHtml`               | `Utilities.formatString`                                                  | keiner                                            |
+| `retry`                               | `Utilities.sleep`, wenn vorhanden                                         | keiner                                            |
+
+Die Bereiche stehen ohne das Präfix `https://www.googleapis.com/auth/`. „Keiner“ heißt, dass das globale Objekt
+selbst keine Autorisierung braucht; das Blatt, der Bereich oder der Ordner, den die Funktion erhält, braucht trotzdem
+den Bereich des Dienstes, aus dem er stammt — dazu der nächste Abschnitt.
 
 Alles Übrige in `appsscript` nimmt das Dienstobjekt als Argument: `appendRows` schreibt in das `Sheet`, das Sie ihm
 geben, und `requireSheet` betrachtet den übergebenen Wert, statt selbst einen zu holen. Solche Funktionen brauchen
 ein lebendes Dienstobjekt, um nützlich zu sein, suchen aber keines — genau das macht sie im Test ersetzbar.
+
+## OAuth-Bereiche
+
+Apps Script entscheidet, welche Bereiche es anfordert, indem es den Code des ganzen Projekts durchsucht, die
+Bibliothek eingeschlossen. Ein Projekt, das die Bibliothek vollständig einbindet, kann den Nutzer daher um mehr bitten,
+als es tatsächlich verwendet. Tragen Sie die Bereiche deshalb selbst in `appsscript.json` ein: Sobald `oauthScopes`
+vorhanden ist, fordert Apps Script genau diese an und keine anderen.
+
+| Was Ihr Code aufruft                                                                                                               | Engster Bereich                                   | Breitere Alternative                          |
+| :--------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------ | :-------------------------------------------- |
+| Jede Funktion, die ein `Sheet`, `Range`, `Spreadsheet` oder `RichTextValue` aus der gebundenen Tabelle erhält                      | `spreadsheets.currentonly`                        | `spreadsheets`, für per ID geöffnete Tabellen |
+| `getSheetById`, `getSheetByIndex` ohne Tabelle                                                                                     | `spreadsheets.currentonly`                        | `spreadsheets`                                |
+| Jede Funktion, die eine `Slide` oder `Presentation` erhält, sowie `getSlideByIndex`, `getSlideIndex` ohne Präsentation             | `presentations.currentonly`                       | `presentations`                               |
+| `createFolder`                                                                                                                     | `drive`                                           | —                                             |
+| `getTriggerById`                                                                                                                   | `script.scriptapp`                                | —                                             |
+| `checkMultipleAccount`                                                                                                             | `userinfo.email`                                  | —                                             |
+| `isAdmin`, `nonAdmin`, `requireAdmin`                                                                                              | `userinfo.email`, `admin.directory.user.readonly` | `admin.directory.user`                        |
+| Alles in `lang`, `net`, `json`, `html`, `time` und `exception` sowie die Helfer für A1-Notation, Spaltenbuchstaben und `GridRange` | keiner                                            | —                                             |
+
+Ein an eine Tabelle gebundenes Skript, das nur mit dieser Tabelle arbeitet, braucht nicht mehr als das:
+
+```json
+{
+  "timeZone": "Etc/UTC",
+  "runtimeVersion": "V8",
+  "oauthScopes": ["https://www.googleapis.com/auth/spreadsheets.currentonly"]
+}
+```
+
+Was Sie vor dem Einschränken wissen sollten:
+
+- **`*.currentonly`** deckt nur das Dokument ab, an das das Skript gebunden ist, oder das, in dem ein Add-on läuft.
+  Ein Skript, das andere Tabellen oder Präsentationen per ID oder URL öffnet, braucht `spreadsheets` oder
+  `presentations`.
+- **`createFolder`** sucht zuerst vorhandene Ordner nach Namen und legt erst dann einen neuen an. Mit `drive.file`
+  sieht ein Skript nur die Dateien und Ordner, die es selbst angelegt oder die der Nutzer damit geöffnet hat; die
+  Suche übersieht also Ordner, die jemand anderes angelegt hat, und es entstehen Duplikate. Verwenden Sie
+  `drive.file` nur, wenn das Skript den ganzen Baum selbst anlegt, sonst `drive`.
+- **Die Admin-SDK-Funktionen** brauchen außerdem den im Projekt aktivierten erweiterten Dienst Admin SDK Directory
+  (`dependencies.enabledAdvancedServices`, `serviceId` `admin`, `version` `directory_v1`) und einen Nutzer, der das
+  Verzeichnis lesen darf. Der Lesebereich `admin.directory.user.readonly` genügt: `isAdmin` liest den Nutzer nur.
+- **Ein fehlender Bereich** zeigt sich zur Laufzeit, als Autorisierungsfehler beim Dienstaufruf, nicht beim Speichern
+  des Projekts. Führen Sie nach jeder Änderung an `oauthScopes` jeden Codepfad einmal aus.
+
+Welchen Bereich eine Methode braucht, steht unter „Authorization“ auf ihrer Seite in der
+[Apps-Script-Referenz](https://developers.google.com/apps-script/reference).
 
 ## An der Grenze bündeln
 
