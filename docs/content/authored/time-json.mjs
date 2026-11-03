@@ -21,80 +21,8 @@ const INVALID_DATE = {
 };
 
 export const FUNCTIONS = {
-  parseJson: entry({
-    seeAlso: ["stringifyJson"],
-    examples: code(
-      [
-        'parseJson(\'{"a":1,"b":[1,2]}\'); // => {"a":1,"b":[1,2]}',
-        'parseJson("{a: \'x\', b: 1}"); // => {"a":"x","b":1}'
-      ].join("\n")
-    ),
-    summary: {
-      en: "Parses JSON, and retries with a relaxed reader when strict parsing fails.",
-      ru: "Разбирает JSON, а при неудаче строгого разбора пробует нестрогий.",
-      uk: "Розбирає JSON, а при невдачі суворого розбору пробує нестрогий.",
-      de: "Liest JSON und versucht es bei striktem Fehlschlag mit einem toleranten Leser erneut.",
-      fr: "Analyse du JSON, puis réessaie avec un lecteur permissif si l'analyse stricte échoue."
-    },
-    description: {
-      en: [
-        "`JSON.parse` runs first. If it refuses, the text is tokenised again by rules that accept what hand-written configuration usually contains: unquoted keys and single-quoted strings.",
-        "Text that neither reader can make sense of throws. This is for configuration a person typed, not for a payload from a service — for that, `JSON.parse` and its error are clearer."
-      ],
-      ru: [
-        "Сначала работает `JSON.parse`. Если он отказывается, текст разбирается заново по правилам, допускающим то, что обычно встречается в конфигурации, написанной руками: ключи без кавычек и строки в одинарных кавычках.",
-        "Текст, который не понял ни один из разборщиков, приводит к исключению. Это инструмент для конфигурации, набранной человеком, а не для ответа сервиса — там понятнее `JSON.parse` с его ошибкой."
-      ],
-      uk: [
-        "Спершу працює `JSON.parse`. Якщо він відмовляється, текст розбирається заново за правилами, що допускають те, що зазвичай трапляється в конфігурації, написаній руками: ключі без лапок і рядки в одинарних лапках.",
-        "Текст, якого не зрозумів жоден з розбірників, призводить до винятку. Це інструмент для конфігурації, набраної людиною, а не для відповіді сервісу — там зрозуміліший `JSON.parse` з його помилкою."
-      ],
-      de: [
-        "Zuerst läuft `JSON.parse`. Weigert es sich, wird der Text nach Regeln erneut zerlegt, die zulassen, was handgeschriebene Konfiguration meist enthält: Schlüssel ohne Anführungszeichen und Zeichenketten in einfachen Anführungszeichen.",
-        "Text, mit dem keiner der beiden Leser etwas anfangen kann, wirft. Gedacht für von Hand getippte Konfiguration, nicht für die Antwort eines Dienstes — dort ist `JSON.parse` mit seinem Fehler klarer."
-      ],
-      fr: [
-        "`JSON.parse` s'exécute d'abord. S'il refuse, le texte est relu selon des règles qui acceptent ce que contient d'ordinaire une configuration écrite à la main : clés sans guillemets et chaînes entre apostrophes.",
-        "Un texte qu'aucun des deux lecteurs ne comprend lève. C'est fait pour de la configuration saisie par une personne, pas pour la réponse d'un service — là, `JSON.parse` et son erreur sont plus clairs."
-      ]
-    },
-    params: {
-      value: {
-        en: "The text to parse. It must not be empty.",
-        ru: "Текст для разбора. Не должен быть пустым.",
-        uk: "Текст для розбору. Не має бути порожнім.",
-        de: "Der zu lesende Text. Er darf nicht leer sein.",
-        fr: "Le texte à analyser. Il ne doit pas être vide."
-      }
-    },
-    returns: {
-      en: "the parsed value.",
-      ru: "разобранное значение.",
-      uk: "розібране значення.",
-      de: "den gelesenen Wert.",
-      fr: "la valeur analysée."
-    },
-    throws: {
-      EmptyStringException: {
-        en: "the value is not a string, or is empty.",
-        ru: "значение не строка или строка пуста.",
-        uk: "значення не рядок або рядок порожній.",
-        de: "der Wert ist keine Zeichenkette oder ist leer.",
-        fr: "la valeur n'est pas une chaîne, ou elle est vide."
-      },
-      SyntaxError: {
-        en: "neither reader can parse the text.",
-        ru: "ни один из разборщиков не смог прочитать текст.",
-        uk: "жоден з розбірників не зміг прочитати текст.",
-        de: "keiner der beiden Leser kann den Text lesen.",
-        fr: "aucun des deux lecteurs ne peut analyser le texte."
-      }
-    },
-    title: { en: "Parsing", ru: "Разбор", uk: "Розбір", de: "Lesen", fr: "Analyse" }
-  }),
-
   stringifyJson: entry({
-    seeAlso: ["parseJson", "hashCode", "equals"],
+    seeAlso: ["hashCode", "equals"],
     examples: code(
       [
         'stringifyJson({ b: 1, a: 2 }); // => "{\\"a\\":2,\\"b\\":1}"',
