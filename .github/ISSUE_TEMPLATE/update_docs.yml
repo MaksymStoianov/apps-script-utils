@@ -1,7 +1,7 @@
 name: Documentation Update
 description: Report a mistake or suggest an improvement for the documentation.
 title: "[Docs]: "
-labels: [ "documentation" ]
+labels: [ "Kind/Documentation" ]
 body:
   - type: textarea
     id: description
