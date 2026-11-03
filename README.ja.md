@@ -8,7 +8,7 @@
     </small>
 </p>
 
-[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | **日本語** | [中文](README.zh.md)
+[English](README.md) | [Українська](README.uk.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md) | [Português](README.pt.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Čeština](README.cs.md) | [Türkçe](README.tr.md) | [العربية](README.ar.md) | [Bahasa Indonesia](README.id.md) | [Tiếng Việt](README.vi.md) | **日本語** | [한국어](README.ko.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
 > この翻訳は、バージョン 2.1.1 の [README.md](README.md) をもとに AI の支援を受けて作成しました。正式な内容は英語版 README です。修正の提案を歓迎します。詳しくは [CONTRIBUTING.md](CONTRIBUTING.md#readme-translations) をご覧ください。
 

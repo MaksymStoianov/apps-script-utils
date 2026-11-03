@@ -182,14 +182,19 @@ The project uses [Vitest](https://vitest.dev/) for testing.
 
 ### README Translations
 
-`README.md` is the authoritative version. `README.uk.md`, `README.ru.md`, `README.de.md`, `README.fr.md`,
-`README.es.md`, `README.pt.md`, `README.ja.md` and `README.zh.md` are AI-assisted translations of it, and corrections
-from native speakers are welcome as ordinary pull requests.
+`README.md` is the authoritative version. The `README.<code>.md` files next to it are AI-assisted translations of it
+into Ukrainian (`uk`), Russian (`ru`), German (`de`), French (`fr`), Spanish (`es`), Portuguese (`pt`), Italian (`it`),
+Dutch (`nl`), Polish (`pl`), Czech (`cs`), Turkish (`tr`), Arabic (`ar`), Indonesian (`id`), Vietnamese (`vi`),
+Japanese (`ja`), Korean (`ko`), Simplified Chinese (`zh`) and Traditional Chinese (`zh-TW`). Corrections from native
+speakers are welcome as ordinary pull requests.
 
 - **Keep the shape**: every README carries the same language switcher under the banner, and every translation has
   the same `##`/`###` headings as `README.md`. Translate prose only; code blocks, function names, commands, package
   names, URLs and badges stay as they are. Ukrainian, Russian, German and French link to their own documentation
   under `/<code>/`; the other languages link to the English documentation.
+- **Right-to-left languages**: the Arabic README wraps its prose in `<div dir="rtl" lang="ar">` … `</div>` blocks,
+  with a blank line inside each wrapper so GitHub still renders the Markdown. Code blocks, badges, the scripts table
+  and the switcher stay outside the wrappers, left to right; headings stay ordinary `##`/`###` lines.
 - **Sync translations with the source**: when a change to `README.md` is carried into the translations, update the
   version in the note under each switcher to the current `version` in `package.json`.
 - **The note goes stale on release, by design**: release-please bumps `package.json` but does not touch the

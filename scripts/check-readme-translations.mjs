@@ -38,8 +38,18 @@ const LANGUAGES = [
   { code: "fr", name: "Français" },
   { code: "es", name: "Español" },
   { code: "pt", name: "Português" },
+  { code: "it", name: "Italiano" },
+  { code: "nl", name: "Nederlands" },
+  { code: "pl", name: "Polski" },
+  { code: "cs", name: "Čeština" },
+  { code: "tr", name: "Türkçe" },
+  { code: "ar", name: "العربية" },
+  { code: "id", name: "Bahasa Indonesia" },
+  { code: "vi", name: "Tiếng Việt" },
   { code: "ja", name: "日本語" },
-  { code: "zh", name: "中文" }
+  { code: "ko", name: "한국어" },
+  { code: "zh", name: "简体中文" },
+  { code: "zh-TW", name: "繁體中文" }
 ];
 
 const fileOf = (code) => (code === "en" ? "README.md" : `README.${code}.md`);
