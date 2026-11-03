@@ -165,10 +165,7 @@ for (const file of listSources(SRC).sort()) {
 
     // A link written before the casing was fixed is corrected in place rather
     // than left beside its replacement.
-    const corrected = text.replace(
-      new RegExp(`${SITE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/${name}\\.html`, "g"),
-      page
-    );
+    const corrected = text.replaceAll(`${SITE}/${name}.html`, page);
 
     const missing = [...wanted].filter(([, url]) => !corrected.includes(url));
 
