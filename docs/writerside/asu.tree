@@ -233,7 +233,6 @@
             <toc-element topic="ObjectTag.md"/>
             <toc-element topic="objectToString.md"/>
             <toc-element topic="offset.md"/>
-            <toc-element topic="parseJson.md"/>
             <toc-element topic="require2DArray.md"/>
             <toc-element topic="requireArray.md"/>
             <toc-element topic="requireBoolean.md"/>

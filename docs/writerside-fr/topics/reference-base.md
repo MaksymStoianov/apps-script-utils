@@ -104,7 +104,6 @@ retrait est prévu dans une version future.
 | [`ObjectTag`](ObjectTag.md)                                       | `Enum`           | Les tags internes qu'une valeur peut déclarer, sous forme de constantes nommées.                      |
 | [`objectToString`](objectToString.md)                             | `String`         | Renvoie le tag interne d'une valeur.                                                                  |
 | [`offset`](offset.md) **New**                                     | `Date`           | Décale une date d'un certain nombre d'unités.                                                         |
-| [`parseJson`](parseJson.md) **Deprecated**                        | `Object`         | Analyse du JSON, puis réessaie avec un lecteur permissif si l'analyse stricte échoue.                 |
 | [`require2DArray`](require2DArray.md) **New**                     | `Array`          | Renvoie la valeur en tant que tableau bidimensionnel non vide, ou lève une exception.                 |
 | [`requireArray`](requireArray.md) **New**                         | `Array`          | Renvoie la valeur en tant que un tableau, ou lève une exception.                                      |
 | [`requireBoolean`](requireBoolean.md) **New**                     | `Boolean`        | Renvoie la valeur en tant que un booléen, ou lève une exception.                                      |

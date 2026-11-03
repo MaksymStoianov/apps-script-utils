@@ -103,7 +103,6 @@ einem künftigen Release entfernt werden soll.
 | [`ObjectTag`](ObjectTag.md)                                       | `Enum`           | Die internen Tags, die ein Wert melden kann, als benannte Konstanten.                                       |
 | [`objectToString`](objectToString.md)                             | `String`         | Gibt den internen Tag eines Werts zurück.                                                                   |
 | [`offset`](offset.md) **New**                                     | `Date`           | Verschiebt ein Datum um eine Anzahl einer Einheit.                                                          |
-| [`parseJson`](parseJson.md) **Deprecated**                        | `Object`         | Liest JSON und versucht es bei striktem Fehlschlag mit einem toleranten Leser erneut.                       |
 | [`require2DArray`](require2DArray.md) **New**                     | `Array`          | Gibt den Wert als nicht-leeres zweidimensionales Array zurück oder wirft.                                   |
 | [`requireArray`](requireArray.md) **New**                         | `Array`          | Gibt den Wert als ein Array zurück oder wirft.                                                              |
 | [`requireBoolean`](requireBoolean.md) **New**                     | `Boolean`        | Gibt den Wert als einen booleschen Wert zurück oder wirft.                                                  |

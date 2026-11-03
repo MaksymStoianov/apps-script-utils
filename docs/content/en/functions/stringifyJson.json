@@ -17,9 +17,6 @@
   ],
   "seeAlso": [
     {
-      "name": "parseJson"
-    },
-    {
       "name": "hashCode"
     },
     {

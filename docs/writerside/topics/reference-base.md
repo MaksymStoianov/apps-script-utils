@@ -101,7 +101,6 @@ scheduled for removal in a future release.
 | [`ObjectTag`](ObjectTag.md)                                       | `Enum`           | Enum representing `Object#toString` result references in uppercase.                                                        |
 | [`objectToString`](objectToString.md)                             | `String`         | Converts a value to its `Object#toString` tag, e.g. `[object Array]`.                                                      |
 | [`offset`](offset.md) **New**                                     | `Date`           | Shifts a date by an interval and returns a new `Date`, never mutating the input.                                           |
-| [`parseJson`](parseJson.md) **Deprecated**                        | `Object`         | Safely parses a JSON string, handling potential errors.                                                                    |
 | [`require2DArray`](require2DArray.md) **New**                     | `Array`          | Ensures a value is a non-empty two-dimensional array, throwing otherwise.                                                  |
 | [`requireArray`](requireArray.md) **New**                         | `Array`          | Ensures a value is an `Array`, throwing `IllegalArgumentException` otherwise.                                              |
 | [`requireBoolean`](requireBoolean.md) **New**                     | `Boolean`        | Ensures a value is a boolean, throwing `IllegalArgumentException` otherwise.                                               |

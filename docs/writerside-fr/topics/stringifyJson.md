@@ -39,7 +39,6 @@ stringifyJson([1, "a", null]); // => "[1,\"a\",null]"
 
 ## Voir aussi
 
-- [`parseJson`](parseJson.md)
 - [`hashCode`](hashCode.md)
 - [`equals`](equals.md)
 - [](reference-base.md)

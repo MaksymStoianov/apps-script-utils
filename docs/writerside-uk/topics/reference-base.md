@@ -103,7 +103,6 @@
 | [`ObjectTag`](ObjectTag.md)                                       | `Enum`           | Внутрішні теги, які може повідомити значення, у вигляді іменованих констант.                      |
 | [`objectToString`](objectToString.md)                             | `String`         | Повертає внутрішній тег значення.                                                                 |
 | [`offset`](offset.md) **New**                                     | `Date`           | Зсуває дату на задану кількість одиниць.                                                          |
-| [`parseJson`](parseJson.md) **Deprecated**                        | `Object`         | Розбирає JSON, а при невдачі суворого розбору пробує нестрогий.                                   |
 | [`require2DArray`](require2DArray.md) **New**                     | `Array`          | Повертає значення як непорожній двовимірний масив або викидає виняток.                            |
 | [`requireArray`](requireArray.md) **New**                         | `Array`          | Повертає значення як масив або викидає виняток.                                                   |
 | [`requireBoolean`](requireBoolean.md) **New**                     | `Boolean`        | Повертає значення як логічне значення або викидає виняток.                                        |
