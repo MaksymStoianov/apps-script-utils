@@ -1,0 +1,31 @@
+@bootgs/utils
+Utilities for Google Apps Script(TM) projects
+Copyright 2025-2026 Maksym Stoianov
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes software developed by Maksym Stoianov
+(https://maksymstoianov.com) and contributors to https://github.com/bootgs/utils.
+
+-------------------------------------------------------------------------------
+Third-party software
+-------------------------------------------------------------------------------
+
+The published npm package has no runtime dependencies and bundles no
+third-party code.
+
+-------------------------------------------------------------------------------
+Artwork
+-------------------------------------------------------------------------------
+
+The banner images in docs/assets/images (banner-*.jpg) are the work of
+Daryna Mikhailenko (https://darynamikhailenko.com), who holds the copyright
+in them. They are NOT covered by the Apache License 2.0 and are not part of
+the npm package. Terms of reuse: docs/assets/images/README.md.
+
+-------------------------------------------------------------------------------
+Trademarks
+-------------------------------------------------------------------------------
+
+Google Apps Script is a trademark of Google LLC. This project is not
+affiliated with, endorsed by or sponsored by Google LLC. See TRADEMARKS.md.
