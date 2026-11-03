@@ -17,6 +17,10 @@ on:
       - ".github/workflows/docs.yml"
   workflow_dispatch:
 
+# Read-only by default; only the deploy job is granted more.
+permissions:
+  contents: read
+
 # Allow one concurrent deployment; queued runs supersede each other rather than
 # racing to publish.
 concurrency:
@@ -45,10 +49,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 22
           cache: npm
@@ -89,17 +95,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
 
       - name: Build docs using the Writerside Docker builder
-        uses: JetBrains/writerside-github-action@v4
+        uses: JetBrains/writerside-github-action@738910d7cf197d67188300d0e0f84b2e708db3cf # v4
         with:
           location: ${{ env.LOCATION }}
           instance: ${{ matrix.language.module }}/asu
           docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Upload build results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: docs-${{ matrix.language.code }}
           path: |
@@ -124,13 +132,13 @@ jobs:
 
     steps:
       - name: Download build results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: docs-${{ matrix.language.code }}
           path: artifacts
 
       - name: Check for broken links and other problems
-        uses: JetBrains/writerside-checker-action@v1
+        uses: JetBrains/writerside-checker-action@79ff89902dcd3d5c5a3f26a79bc35830377f38c5 # v1
         with:
           instance: ${{ matrix.language.module }}/asu
 
@@ -146,10 +154,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 22
           cache: npm
@@ -158,7 +168,7 @@ jobs:
         run: npm ci
 
       - name: Download build results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: docs-*
           path: artifacts
@@ -205,6 +215,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    # contents: write pushes the archive of earlier versions to the docs-archive branch.
     permissions:
       contents: write
       pages: write
@@ -216,10 +227,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
 
       - name: Download build results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: docs-*
           path: artifacts
@@ -300,13 +313,13 @@ jobs:
         run: node scripts/docs/write-help-versions.mjs dir "$(node -p "require('./package.json').version")"
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4.0.0
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
           path: dir
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
