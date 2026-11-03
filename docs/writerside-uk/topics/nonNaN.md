@@ -53,4 +53,4 @@ nonNaN(0 / 0); // => false
 
 ## Вихідний код
 
-[`src/lang/number/nonNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonNaN.ts)
+[`src/lang/number/nonNaN.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonNaN.ts)

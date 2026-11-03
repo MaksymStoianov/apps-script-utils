@@ -57,4 +57,4 @@ requireValidSlug("my page"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/string/requireValidSlug.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireValidSlug.ts)
+[`src/lang/string/requireValidSlug.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidSlug.ts)

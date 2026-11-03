@@ -50,4 +50,4 @@ isCountable(Number.MAX_SAFE_INTEGER + 2); // => false
 
 ## Source
 
-[`src/lang/number/isCountable.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isCountable.ts)
+[`src/lang/number/isCountable.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isCountable.ts)

@@ -57,4 +57,4 @@ requireValidSheetId(1.5); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)
+[`src/appsscript/sheet/requireValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetId.ts)

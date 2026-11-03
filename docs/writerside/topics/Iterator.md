@@ -37,4 +37,4 @@ while (iterator.hasNext()) {
 
 ## Source
 
-[`src/lang/Iterator.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/Iterator.ts)
+[`src/lang/Iterator.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/Iterator.ts)

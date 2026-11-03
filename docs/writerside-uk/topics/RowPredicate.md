@@ -33,4 +33,4 @@ const predicate = (values, position, record) => record?.status === "done";
 
 ## Вихідний код
 
-[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)
+[`src/appsscript/sheet/clearRowsByConditional.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/clearRowsByConditional.ts)

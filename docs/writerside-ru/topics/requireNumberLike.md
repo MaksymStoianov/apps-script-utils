@@ -58,4 +58,4 @@ requireNumberLike(Infinity); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNumberLike.ts)
+[`src/lang/base/requireNumberLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNumberLike.ts)

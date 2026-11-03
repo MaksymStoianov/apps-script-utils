@@ -58,4 +58,4 @@ highlightHtml(range);
 
 ## Quellcode
 
-[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/highlightHtml.ts)
+[`src/appsscript/sheet/highlightHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/highlightHtml.ts)

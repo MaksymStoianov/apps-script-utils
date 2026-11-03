@@ -47,4 +47,4 @@ doGridRangesIntersect(left, right); // => true
 
 ## Вихідний код
 
-[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)
+[`src/appsscript/sheet/doGridRangesIntersect.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/doGridRangesIntersect.ts)

@@ -57,4 +57,4 @@ requireNonUndefined(undefined); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonUndefined.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonUndefined.ts)
+[`src/lang/base/requireNonUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonUndefined.ts)

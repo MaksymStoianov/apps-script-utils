@@ -44,4 +44,4 @@ getColumnLetterByIndex(26); // => "AA"
 
 ## Quellcode
 
-[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)
+[`src/appsscript/sheet/getColumnLetterByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByIndex.ts)

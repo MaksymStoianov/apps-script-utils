@@ -48,4 +48,4 @@ encodeHtml("<a>"); // => "&#60;a&#62;"
 
 ## Вихідний код
 
-[`src/html/encodeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/encodeHtml.ts)
+[`src/html/encodeHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/encodeHtml.ts)

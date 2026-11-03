@@ -54,4 +54,4 @@ requireValidEmail("user@"); // throws InvalidEmailFormatException
 
 ## Source
 
-[`src/lang/string/requireValidEmail.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireValidEmail.ts)
+[`src/lang/string/requireValidEmail.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidEmail.ts)

@@ -62,4 +62,4 @@ function doPost(event) {
 
 ## Исходный код
 
-[`src/appsscript/net/requireValidToken.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/net/requireValidToken.ts)
+[`src/appsscript/net/requireValidToken.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/net/requireValidToken.ts)

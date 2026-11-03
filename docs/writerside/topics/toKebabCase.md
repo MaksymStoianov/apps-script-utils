@@ -53,4 +53,4 @@ toKebabCase("userFirstName"); // => "user-first-name"
 
 ## Source
 
-[`src/lang/string/toKebabCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toKebabCase.ts)
+[`src/lang/string/toKebabCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toKebabCase.ts)

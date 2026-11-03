@@ -53,4 +53,4 @@ versionCompare("1.2.3", "1.2.3-beta"); // throws TypeError
 
 ## Quellcode
 
-[`src/lang/string/versionCompare.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/versionCompare.ts)
+[`src/lang/string/versionCompare.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/versionCompare.ts)

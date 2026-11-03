@@ -49,4 +49,4 @@ nonValidSlideId("SLIDES_api123"); // => false
 
 ## Quellcode
 
-[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)
+[`src/appsscript/slide/nonValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/nonValidSlideId.ts)

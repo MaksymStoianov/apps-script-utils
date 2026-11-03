@@ -51,4 +51,4 @@ nonAbsolute("mailto:a@example.com"); // => false
 
 ## Source
 
-[`src/net/path/nonAbsolute.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonAbsolute.ts)
+[`src/net/path/nonAbsolute.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/nonAbsolute.ts)

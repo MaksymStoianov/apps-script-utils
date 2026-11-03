@@ -75,4 +75,4 @@ function describeShape(rows) {
 
 ## Code source
 
-[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/nonConsistent2DArray.ts)
+[`src/lang/array/nonConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/nonConsistent2DArray.ts)

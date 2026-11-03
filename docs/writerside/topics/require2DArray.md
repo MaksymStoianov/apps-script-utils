@@ -79,4 +79,4 @@ require2DArray([]); // throws IllegalArgumentException — no rows
 
 ## Source
 
-[`src/lang/array/require2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/require2DArray.ts)
+[`src/lang/array/require2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/require2DArray.ts)

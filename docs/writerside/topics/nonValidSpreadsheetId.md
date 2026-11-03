@@ -48,4 +48,4 @@ nonValidSpreadsheetId("1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"); // => fal
 
 ## Source
 
-[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)
+[`src/appsscript/sheet/nonValidSpreadsheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSpreadsheetId.ts)

@@ -52,4 +52,4 @@ flat({ a: { b: { c: 1 } } }, 1); // => { "a.b": { "c": 1 } }
 
 ## Исходный код
 
-[`src/lang/object/flat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/flat.ts)
+[`src/lang/object/flat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/flat.ts)

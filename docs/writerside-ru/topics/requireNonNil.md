@@ -58,4 +58,4 @@ requireNonNil(undefined); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonNil.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonNil.ts)
+[`src/lang/base/requireNonNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonNil.ts)

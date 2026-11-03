@@ -54,4 +54,4 @@ nonObject(new Date()); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonObject.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonObject.ts)
+[`src/lang/base/nonObject.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonObject.ts)

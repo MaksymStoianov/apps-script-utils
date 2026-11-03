@@ -47,4 +47,4 @@ escapeXml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Исходный код
 
-[`src/html/escapeXml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/escapeXml.ts)
+[`src/html/escapeXml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/escapeXml.ts)

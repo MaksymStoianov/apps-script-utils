@@ -59,4 +59,4 @@ requireHtmlOutput(null); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/appsscript/ui/requireHtmlOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/requireHtmlOutput.ts)
+[`src/appsscript/ui/requireHtmlOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/requireHtmlOutput.ts)

@@ -53,4 +53,4 @@ nonTextOutput(output); // => false
 
 ## Source
 
-[`src/appsscript/ui/nonTextOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/nonTextOutput.ts)
+[`src/appsscript/ui/nonTextOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/nonTextOutput.ts)

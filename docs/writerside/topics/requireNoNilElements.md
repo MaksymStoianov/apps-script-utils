@@ -94,4 +94,4 @@ requireNoNilElements([1, , 3]); // throws — a hole is undefined
 
 ## Source
 
-[`src/lang/array/requireNoNilElements.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/requireNoNilElements.ts)
+[`src/lang/array/requireNoNilElements.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/requireNoNilElements.ts)

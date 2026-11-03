@@ -48,4 +48,4 @@ isGridRangeSameDimensions(source, target); // => true
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/isGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isGridRangeSameDimensions.ts)

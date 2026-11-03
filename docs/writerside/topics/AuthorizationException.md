@@ -42,4 +42,4 @@ try {
 
 ## Source
 
-[`src/exception/AuthorizationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/AuthorizationException.ts)
+[`src/exception/AuthorizationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/AuthorizationException.ts)

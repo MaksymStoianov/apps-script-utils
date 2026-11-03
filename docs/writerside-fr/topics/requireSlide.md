@@ -59,4 +59,4 @@ requireSlide(null); // throws SlideNotFoundException
 
 ## Code source
 
-[`src/appsscript/slide/requireSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requireSlide.ts)
+[`src/appsscript/slide/requireSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireSlide.ts)

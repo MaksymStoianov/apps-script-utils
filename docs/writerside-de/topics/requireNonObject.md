@@ -58,4 +58,4 @@ requireNonObject([]); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonObject.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonObject.ts)
+[`src/lang/base/requireNonObject.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonObject.ts)

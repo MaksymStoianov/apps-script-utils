@@ -44,4 +44,4 @@ getColumnLetterByPosition(27); // => "AA"
 
 ## Code source
 
-[`src/appsscript/sheet/getColumnLetterByPosition.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByPosition.ts)
+[`src/appsscript/sheet/getColumnLetterByPosition.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getColumnLetterByPosition.ts)

@@ -32,4 +32,4 @@ const rewrite = (formula, row, column) => formula.replace("Sheet1", "Data");
 
 ## Code source
 
-[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/updateFormulas.ts)
+[`src/appsscript/sheet/updateFormulas.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/updateFormulas.ts)

@@ -56,4 +56,4 @@ requireSheet(null); // throws InvalidSheetException
 
 ## Quellcode
 
-[`src/appsscript/sheet/requireSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireSheet.ts)
+[`src/appsscript/sheet/requireSheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireSheet.ts)

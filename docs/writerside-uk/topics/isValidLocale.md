@@ -48,4 +48,4 @@ isValidLocale(""); // => false
 
 ## Вихідний код
 
-[`src/lang/string/isValidLocale.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isValidLocale.ts)
+[`src/lang/string/isValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/isValidLocale.ts)

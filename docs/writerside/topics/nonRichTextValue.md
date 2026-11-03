@@ -53,4 +53,4 @@ nonRichTextValue(value); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)
+[`src/appsscript/sheet/nonRichTextValue.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRichTextValue.ts)

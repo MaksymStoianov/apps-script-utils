@@ -58,4 +58,4 @@ requireScalar([]); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireScalar.ts)
+[`src/lang/base/requireScalar.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireScalar.ts)

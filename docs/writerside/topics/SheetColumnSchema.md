@@ -33,4 +33,4 @@ const column = { name: "created", type: "date" };
 
 ## Source
 
-[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)
+[`src/appsscript/sheet/types/SheetSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/SheetSchema.ts)

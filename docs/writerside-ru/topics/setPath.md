@@ -57,4 +57,4 @@ setPath({}, ["rows", 0, "id"], 7); // => { "rows": [{ "id": 7 }] }
 
 ## Исходный код
 
-[`src/lang/object/setPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/setPath.ts)
+[`src/lang/object/setPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/setPath.ts)

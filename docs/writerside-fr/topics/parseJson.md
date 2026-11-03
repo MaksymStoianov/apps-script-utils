@@ -53,4 +53,4 @@ parseJson("{a: 'x', b: 1}"); // => {"a":"x","b":1}
 
 ## Code source
 
-[`src/json/parseJson.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/json/parseJson.ts)
+[`src/json/parseJson.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/json/parseJson.ts)

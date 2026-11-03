@@ -56,4 +56,4 @@ requireNonNull(undefined); // throws NullPointerException
 
 ## Code source
 
-[`src/lang/base/requireNonNull.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonNull.ts)
+[`src/lang/base/requireNonNull.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonNull.ts)

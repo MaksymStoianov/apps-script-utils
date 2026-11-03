@@ -50,4 +50,4 @@ const first = getSheetByIndex(0);
 
 ## Quellcode
 
-[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)
+[`src/appsscript/sheet/getSheetByIndex.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSheetByIndex.ts)

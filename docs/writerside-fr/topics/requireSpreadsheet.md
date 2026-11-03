@@ -59,4 +59,4 @@ requireSpreadsheet(null); // throws InvalidSpreadsheetException
 
 ## Code source
 
-[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)
+[`src/appsscript/sheet/requireSpreadsheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireSpreadsheet.ts)

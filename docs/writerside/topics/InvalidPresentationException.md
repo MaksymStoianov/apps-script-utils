@@ -45,4 +45,4 @@ try {
 
 ## Source
 
-[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)
+[`src/exception/appsscript/slide/InvalidPresentationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/slide/InvalidPresentationException.ts)

@@ -42,4 +42,4 @@ try {
 
 ## Вихідний код
 
-[`src/exception/Exception.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/Exception.ts)
+[`src/exception/Exception.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/Exception.ts)

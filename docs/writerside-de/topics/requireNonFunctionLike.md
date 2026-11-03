@@ -55,4 +55,4 @@ requireNonFunctionLike(Math.max); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonFunctionLike.ts)
+[`src/lang/base/requireNonFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonFunctionLike.ts)

@@ -55,4 +55,4 @@ requireArray({ length: 0 }); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/base/requireArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireArray.ts)
+[`src/lang/base/requireArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireArray.ts)

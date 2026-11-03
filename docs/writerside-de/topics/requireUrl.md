@@ -54,4 +54,4 @@ requireUrl("https://"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/net/url/requireUrl.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/url/requireUrl.ts)
+[`src/net/url/requireUrl.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/url/requireUrl.ts)

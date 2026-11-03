@@ -51,4 +51,4 @@ nonValidVersion("2026.01.15"); // => false
 
 ## Вихідний код
 
-[`src/lang/string/nonValidVersion.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidVersion.ts)
+[`src/lang/string/nonValidVersion.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidVersion.ts)

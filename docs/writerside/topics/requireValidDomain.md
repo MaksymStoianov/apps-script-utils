@@ -57,4 +57,4 @@ requireValidDomain("example..com"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/net/path/requireValidDomain.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/requireValidDomain.ts)
+[`src/net/path/requireValidDomain.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/requireValidDomain.ts)

@@ -39,4 +39,4 @@ parse("readme.md");
 
 ## Source
 
-[`src/net/path/types/ParsedPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/types/ParsedPath.ts)
+[`src/net/path/types/ParsedPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/types/ParsedPath.ts)

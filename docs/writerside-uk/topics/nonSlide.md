@@ -53,4 +53,4 @@ nonSlide(slide); // => false
 
 ## Вихідний код
 
-[`src/appsscript/slide/nonSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/nonSlide.ts)
+[`src/appsscript/slide/nonSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/nonSlide.ts)

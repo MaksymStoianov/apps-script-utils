@@ -51,4 +51,4 @@ isVersionCompatible("1.2.0", "1.3.0"); // => false
 
 ## Code source
 
-[`src/lang/string/isVersionCompatible.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isVersionCompatible.ts)
+[`src/lang/string/isVersionCompatible.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/isVersionCompatible.ts)

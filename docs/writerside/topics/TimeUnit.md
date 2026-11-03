@@ -35,4 +35,4 @@ offset(date, 1, "month");
 
 ## Source
 
-[`src/time/types/TimeUnit.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/types/TimeUnit.ts)
+[`src/time/types/TimeUnit.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/types/TimeUnit.ts)

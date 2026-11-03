@@ -18,15 +18,15 @@
   <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/v/apps-script-utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/dm/apps-script-utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/apps-script-utils?label=License" alt="License"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release" alt="Latest release"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/apps-script-utils?label=Release" alt="Latest release"></a>
 </p>
 
 <p align="left">
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Stars"></a>
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Fork"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/bootgs/apps-script-utils?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/bootgs/apps-script-utils?style=social" alt="GitHub Fork"></a>
   <a href="https://github.com/sponsors/MaksymStoianov"><img src="https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github" alt="GitHub Sponsors"></a>
 </p>
 
@@ -112,18 +112,18 @@ npm install apps-script-utils
 
 ## Documentación
 
-La documentación completa está publicada en **<https://maksymstoianov.github.io/apps-script-utils/>** (en inglés):
+La documentación completa está publicada en **<https://bootgs.github.io/apps-script-utils/>** (en inglés):
 guías, recorridos por cada módulo y la referencia completa de funciones. Su código fuente está en
 [`docs/writerside/`](docs/writerside/) y se reconstruye con cada push a `main`.
 
 Un buen orden de lectura:
 
-- [Getting started](https://maksymstoianov.github.io/apps-script-utils/getting-started.html) — primeros pasos
-- [Validation conventions](https://maksymstoianov.github.io/apps-script-utils/validation-conventions.html) — el
+- [Getting started](https://bootgs.github.io/apps-script-utils/getting-started.html) — primeros pasos
+- [Validation conventions](https://bootgs.github.io/apps-script-utils/validation-conventions.html) — el
   esquema de nombres `isX`/`nonX`/`requireX`/`requireNonX`
-- [Exception handling](https://maksymstoianov.github.io/apps-script-utils/exception-handling.html) — la jerarquía de
+- [Exception handling](https://bootgs.github.io/apps-script-utils/exception-handling.html) — la jerarquía de
   clases y qué provoca cada excepción
-- [The Apps Script runtime](https://maksymstoianov.github.io/apps-script-utils/apps-script-runtime.html) — qué
+- [The Apps Script runtime](https://bootgs.github.io/apps-script-utils/apps-script-runtime.html) — qué
   funciones dependen de un servicio de Google y qué implica eso para las pruebas
 
 ## Ejemplos de uso
@@ -232,21 +232,21 @@ npm run dev
 La referencia completa de funciones se ha trasladado al sitio de documentación, que se genera a partir de
 [`docs/writerside/`](docs/writerside/) y se publica con cada push a `main`:
 
-**<https://maksymstoianov.github.io/apps-script-utils/>**
+**<https://bootgs.github.io/apps-script-utils/>**
 
-| Sección                                                                                                   | Contenido                                                                                                 |
-| :-------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| [Google Apps Script module](https://maksymstoianov.github.io/apps-script-utils/reference-appsscript.html) | Sheets, Slides, Admin SDK, Drive, Docs, Forms, peticiones de red y las clases de UI integradas            |
-| [Base utilities](https://maksymstoianov.github.io/apps-script-utils/reference-base.html)                  | Comprobación de tipos y validación, manipulación de cadenas, arrays y objetos, tratamiento de JSON y HTML |
-| [Exceptions](https://maksymstoianov.github.io/apps-script-utils/reference-exception.html)                 | Las clases de excepción tipadas y qué provoca cada una                                                    |
-| [`path` module](https://maksymstoianov.github.io/apps-script-utils/reference-path.html)                   | Rutas de archivos y URL                                                                                   |
-| [Abstracts and interfaces](https://maksymstoianov.github.io/apps-script-utils/reference-abstracts.html)   | Piezas compartidas                                                                                        |
+| Sección                                                                                           | Contenido                                                                                                 |
+| :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------- |
+| [Google Apps Script module](https://bootgs.github.io/apps-script-utils/reference-appsscript.html) | Sheets, Slides, Admin SDK, Drive, Docs, Forms, peticiones de red y las clases de UI integradas            |
+| [Base utilities](https://bootgs.github.io/apps-script-utils/reference-base.html)                  | Comprobación de tipos y validación, manipulación de cadenas, arrays y objetos, tratamiento de JSON y HTML |
+| [Exceptions](https://bootgs.github.io/apps-script-utils/reference-exception.html)                 | Las clases de excepción tipadas y qué provoca cada una                                                    |
+| [`path` module](https://bootgs.github.io/apps-script-utils/reference-path.html)                   | Rutas de archivos y URL                                                                                   |
+| [Abstracts and interfaces](https://bootgs.github.io/apps-script-utils/reference-abstracts.html)   | Piezas compartidas                                                                                        |
 
 Además de la referencia, el sitio incluye las guías que no cabían en las tablas:
-[validation conventions](https://maksymstoianov.github.io/apps-script-utils/validation-conventions.html) explica el
+[validation conventions](https://bootgs.github.io/apps-script-utils/validation-conventions.html) explica el
 esquema `isX`/`nonX`/`requireX`/`requireNonX` en un solo lugar,
-[exception handling](https://maksymstoianov.github.io/apps-script-utils/exception-handling.html) expone la jerarquía
-de clases y [the Apps Script runtime](https://maksymstoianov.github.io/apps-script-utils/apps-script-runtime.html)
+[exception handling](https://bootgs.github.io/apps-script-utils/exception-handling.html) expone la jerarquía
+de clases y [the Apps Script runtime](https://bootgs.github.io/apps-script-utils/apps-script-runtime.html)
 explica qué funciones dependen de un servicio de Google, qué cuesta eso y qué implica para las pruebas.
 
 ## Cómo contribuir
@@ -265,7 +265,7 @@ Sigue el estilo de código y las convenciones de nombres existentes. Las normas 
 ## Soporte
 
 - Para errores o solicitudes de funcionalidades, busca o abre una
-  [issue](https://github.com/MaksymStoianov/apps-script-utils/issues) en GitHub.
+  [issue](https://github.com/bootgs/apps-script-utils/issues) en GitHub.
 - Para los cambios recientes, consulta el [registro de cambios](CHANGELOG.md).
 - Para informar de una vulnerabilidad de seguridad, sigue la [política de seguridad](SECURITY.md) en lugar de abrir
   una issue pública.
@@ -275,7 +275,7 @@ Sigue el estilo de código y las convenciones de nombres existentes. Las normas 
 
 Lo planificado, en curso o terminado está en el [tablero del proyecto](https://github.com/users/MaksymStoianov/projects/2/views/2),
 que se genera a partir del propio gestor de issues. No hay un documento de hoja de ruta aparte que pueda quedar
-desfasado: para proponer algo, abre una [issue](https://github.com/MaksymStoianov/apps-script-utils/issues).
+desfasado: para proponer algo, abre una [issue](https://github.com/bootgs/apps-script-utils/issues).
 
 ## Registro de cambios
 

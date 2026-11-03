@@ -53,4 +53,4 @@ nonSheet(sheet); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonSheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonSheet.ts)
+[`src/appsscript/sheet/nonSheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonSheet.ts)

@@ -57,4 +57,4 @@ requireValidSheetName("Data/2026"); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/sheet/requireValidSheetName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetName.ts)
+[`src/appsscript/sheet/requireValidSheetName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireValidSheetName.ts)

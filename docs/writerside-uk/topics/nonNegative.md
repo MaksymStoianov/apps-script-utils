@@ -47,4 +47,4 @@ nonNegative(-1); // => false
 
 ## Вихідний код
 
-[`src/lang/number/nonNegative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonNegative.ts)
+[`src/lang/number/nonNegative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonNegative.ts)

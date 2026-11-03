@@ -82,4 +82,4 @@ chunk([1, 2, 3], 1.5); // throws TypeError: Input 'size' must be an integer.
 
 ## Вихідний код
 
-[`src/lang/array/chunk.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/chunk.ts)
+[`src/lang/array/chunk.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/chunk.ts)

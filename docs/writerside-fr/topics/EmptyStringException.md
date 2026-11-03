@@ -44,4 +44,4 @@ try {
 
 ## Code source
 
-[`src/exception/EmptyStringException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/EmptyStringException.ts)
+[`src/exception/EmptyStringException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/EmptyStringException.ts)

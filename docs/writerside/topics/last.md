@@ -84,4 +84,4 @@ last([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Source
 
-[`src/lang/array/last.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/last.ts)
+[`src/lang/array/last.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/last.ts)

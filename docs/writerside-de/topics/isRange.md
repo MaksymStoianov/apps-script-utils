@@ -51,4 +51,4 @@ isRange(null); // => false
 
 ## Quellcode
 
-[`src/appsscript/sheet/isRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isRange.ts)
+[`src/appsscript/sheet/isRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isRange.ts)

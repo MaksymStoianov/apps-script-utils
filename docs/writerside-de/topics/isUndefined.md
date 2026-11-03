@@ -50,4 +50,4 @@ isUndefined(""); // => false
 
 ## Quellcode
 
-[`src/lang/base/isUndefined.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isUndefined.ts)
+[`src/lang/base/isUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isUndefined.ts)

@@ -52,4 +52,4 @@ nonNull(null); // => false
 
 ## Вихідний код
 
-[`src/lang/base/nonNull.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNull.ts)
+[`src/lang/base/nonNull.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNull.ts)

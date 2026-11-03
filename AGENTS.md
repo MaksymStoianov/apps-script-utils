@@ -287,7 +287,7 @@ means the repository is broken.
 - `gh` fails with `tls: failed to verify certificate: x509: OSStatus -26276`.
   Run it with the sandbox disabled, or ask the user to run `! gh ...`.
 - `git fetch github` over SSH fails. Fetching the same refs over HTTPS works:
-  `git fetch https://github.com/MaksymStoianov/apps-script-utils.git develop`.
+  `git fetch https://github.com/bootgs/apps-script-utils.git develop`.
 - Writes to `.git/config` are denied, so `npm run prepare` cannot register the
   merge drivers from inside the sandbox. Run that one command outside it.
 - `mktemp -t` resolves to a directory the sandbox cannot write to. Use `$TMPDIR`

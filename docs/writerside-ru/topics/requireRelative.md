@@ -54,4 +54,4 @@ requireRelative("https://example.com/a"); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/net/path/requireRelative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/requireRelative.ts)
+[`src/net/path/requireRelative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/requireRelative.ts)

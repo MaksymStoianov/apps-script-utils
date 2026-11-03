@@ -52,4 +52,4 @@ isFunction({}); // => false
 
 ## Source
 
-[`src/lang/base/isFunction.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isFunction.ts)
+[`src/lang/base/isFunction.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isFunction.ts)

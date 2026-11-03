@@ -52,4 +52,4 @@ isNumber(null); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isNumber.ts)
+[`src/lang/base/isNumber.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isNumber.ts)

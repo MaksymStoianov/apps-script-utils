@@ -42,4 +42,4 @@ const range = {
 
 ## Source
 
-[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/types/GridRange.ts)
+[`src/appsscript/sheet/types/GridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/types/GridRange.ts)

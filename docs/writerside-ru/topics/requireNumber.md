@@ -55,4 +55,4 @@ requireNumber(null); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNumber.ts)
+[`src/lang/base/requireNumber.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNumber.ts)

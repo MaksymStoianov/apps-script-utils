@@ -53,4 +53,4 @@ nonSafeInteger(Number.MAX_SAFE_INTEGER); // => false
 
 ## Code source
 
-[`src/lang/number/nonSafeInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/nonSafeInteger.ts)
+[`src/lang/number/nonSafeInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/nonSafeInteger.ts)

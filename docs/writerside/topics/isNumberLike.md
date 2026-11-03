@@ -51,4 +51,4 @@ isNumberLike(null); // => false
 
 ## Source
 
-[`src/lang/base/isNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isNumberLike.ts)
+[`src/lang/base/isNumberLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isNumberLike.ts)

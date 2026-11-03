@@ -53,4 +53,4 @@ nonSpreadsheet(spreadsheet); // => false
 
 ## Source
 
-[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)
+[`src/appsscript/sheet/nonSpreadsheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonSpreadsheet.ts)

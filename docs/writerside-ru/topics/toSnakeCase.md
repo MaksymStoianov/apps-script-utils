@@ -52,4 +52,4 @@ toSnakeCase("userFirstName"); // => "user_first_name"
 
 ## Исходный код
 
-[`src/lang/string/toSnakeCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toSnakeCase.ts)
+[`src/lang/string/toSnakeCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toSnakeCase.ts)

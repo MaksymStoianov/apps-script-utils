@@ -65,7 +65,7 @@ The project is organized as follows:
    ```
 3. **Add upstream remote**:
    ```bash
-   git remote add upstream https://github.com/MaksymStoianov/apps-script-utils.git
+   git remote add upstream https://github.com/bootgs/apps-script-utils.git
    ```
 4. **Install dependencies**:
    ```bash

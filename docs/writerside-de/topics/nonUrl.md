@@ -52,4 +52,4 @@ nonUrl("http://example.com/a?b=1"); // => false
 
 ## Quellcode
 
-[`src/net/url/nonUrl.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/url/nonUrl.ts)
+[`src/net/url/nonUrl.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/url/nonUrl.ts)

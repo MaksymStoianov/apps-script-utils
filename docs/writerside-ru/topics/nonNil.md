@@ -53,4 +53,4 @@ nonNil(undefined); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonNil.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNil.ts)
+[`src/lang/base/nonNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNil.ts)

@@ -57,4 +57,4 @@ requireValidLocale("eng"); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/string/requireValidLocale.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/requireValidLocale.ts)
+[`src/lang/string/requireValidLocale.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/requireValidLocale.ts)

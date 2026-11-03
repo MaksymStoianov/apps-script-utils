@@ -36,4 +36,4 @@ watch.getLastTaskInfo(); // { taskName: "fetch", timeMillis: â€¦, timeSeconds: â
 
 ## Quellcode
 
-[`src/time/StopWatch.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/StopWatch.ts)
+[`src/time/StopWatch.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/StopWatch.ts)

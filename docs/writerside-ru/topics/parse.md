@@ -48,4 +48,4 @@ parse("readme.md");
 
 ## Исходный код
 
-[`src/net/path/parse.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/parse.ts)
+[`src/net/path/parse.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/parse.ts)

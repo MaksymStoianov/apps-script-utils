@@ -53,4 +53,4 @@ nonRegExp(new RegExp("a")); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonRegExp.ts)
+[`src/lang/base/nonRegExp.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonRegExp.ts)

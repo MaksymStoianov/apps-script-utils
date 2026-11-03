@@ -57,4 +57,4 @@ requireGridRangeContainedIn(inner, outer); // => the inner range
 
 ## Code source
 
-[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)
+[`src/appsscript/sheet/requireGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireGridRangeContainedIn.ts)

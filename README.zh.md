@@ -18,15 +18,15 @@
   <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/v/apps-script-utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/dm/apps-script-utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/apps-script-utils?label=License" alt="License"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release" alt="Latest release"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/apps-script-utils?label=Release" alt="Latest release"></a>
 </p>
 
 <p align="left">
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Stars"></a>
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Fork"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/bootgs/apps-script-utils?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/bootgs/apps-script-utils?style=social" alt="GitHub Fork"></a>
   <a href="https://github.com/sponsors/MaksymStoianov"><img src="https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github" alt="GitHub Sponsors"></a>
 </p>
 
@@ -99,14 +99,14 @@ npm install apps-script-utils
 
 ## 文档
 
-完整文档发布在 **<https://maksymstoianov.github.io/apps-script-utils/>**（英文），包括指南、各模块讲解和完整的函数参考。其源文件位于 [`docs/writerside/`](docs/writerside/)，每次推送到 `main` 时都会重新构建。
+完整文档发布在 **<https://bootgs.github.io/apps-script-utils/>**（英文），包括指南、各模块讲解和完整的函数参考。其源文件位于 [`docs/writerside/`](docs/writerside/)，每次推送到 `main` 时都会重新构建。
 
 推荐的阅读顺序：
 
-- [Getting started](https://maksymstoianov.github.io/apps-script-utils/getting-started.html)——入门
-- [Validation conventions](https://maksymstoianov.github.io/apps-script-utils/validation-conventions.html)——`isX`/`nonX`/`requireX`/`requireNonX` 命名方案
-- [Exception handling](https://maksymstoianov.github.io/apps-script-utils/exception-handling.html)——类层次结构以及每种异常的触发条件
-- [The Apps Script runtime](https://maksymstoianov.github.io/apps-script-utils/apps-script-runtime.html)——哪些辅助函数绑定到 Google 服务，以及这对测试意味着什么
+- [Getting started](https://bootgs.github.io/apps-script-utils/getting-started.html)——入门
+- [Validation conventions](https://bootgs.github.io/apps-script-utils/validation-conventions.html)——`isX`/`nonX`/`requireX`/`requireNonX` 命名方案
+- [Exception handling](https://bootgs.github.io/apps-script-utils/exception-handling.html)——类层次结构以及每种异常的触发条件
+- [The Apps Script runtime](https://bootgs.github.io/apps-script-utils/apps-script-runtime.html)——哪些辅助函数绑定到 Google 服务，以及这对测试意味着什么
 
 ## 使用示例
 
@@ -213,17 +213,17 @@ npm run dev
 
 完整的函数参考已迁移到文档站点。该站点由 [`docs/writerside/`](docs/writerside/) 构建，每次推送到 `main` 时发布：
 
-**<https://maksymstoianov.github.io/apps-script-utils/>**
+**<https://bootgs.github.io/apps-script-utils/>**
 
-| 章节                                                                                                      | 内容                                                                  |
-| :-------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------- |
-| [Google Apps Script module](https://maksymstoianov.github.io/apps-script-utils/reference-appsscript.html) | Sheets、Slides、Admin SDK、Drive、Docs、Forms、网络请求以及内置 UI 类 |
-| [Base utilities](https://maksymstoianov.github.io/apps-script-utils/reference-base.html)                  | 类型检查与校验，字符串、数组和对象操作，JSON 与 HTML 处理             |
-| [Exceptions](https://maksymstoianov.github.io/apps-script-utils/reference-exception.html)                 | 类型化异常类及各自的触发条件                                          |
-| [`path` module](https://maksymstoianov.github.io/apps-script-utils/reference-path.html)                   | 文件路径与 URL                                                        |
-| [Abstracts and interfaces](https://maksymstoianov.github.io/apps-script-utils/reference-abstracts.html)   | 共享的基础构件                                                        |
+| 章节                                                                                              | 内容                                                                  |
+| :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------- |
+| [Google Apps Script module](https://bootgs.github.io/apps-script-utils/reference-appsscript.html) | Sheets、Slides、Admin SDK、Drive、Docs、Forms、网络请求以及内置 UI 类 |
+| [Base utilities](https://bootgs.github.io/apps-script-utils/reference-base.html)                  | 类型检查与校验，字符串、数组和对象操作，JSON 与 HTML 处理             |
+| [Exceptions](https://bootgs.github.io/apps-script-utils/reference-exception.html)                 | 类型化异常类及各自的触发条件                                          |
+| [`path` module](https://bootgs.github.io/apps-script-utils/reference-path.html)                   | 文件路径与 URL                                                        |
+| [Abstracts and interfaces](https://bootgs.github.io/apps-script-utils/reference-abstracts.html)   | 共享的基础构件                                                        |
 
-除参考之外，站点上还有表格容纳不下的指南：[validation conventions](https://maksymstoianov.github.io/apps-script-utils/validation-conventions.html) 集中讲解 `isX`/`nonX`/`requireX`/`requireNonX` 方案，[exception handling](https://maksymstoianov.github.io/apps-script-utils/exception-handling.html) 阐述类层次结构，[the Apps Script runtime](https://maksymstoianov.github.io/apps-script-utils/apps-script-runtime.html) 则说明哪些辅助函数绑定到 Google 服务、这样做的代价以及对测试的影响。
+除参考之外，站点上还有表格容纳不下的指南：[validation conventions](https://bootgs.github.io/apps-script-utils/validation-conventions.html) 集中讲解 `isX`/`nonX`/`requireX`/`requireNonX` 方案，[exception handling](https://bootgs.github.io/apps-script-utils/exception-handling.html) 阐述类层次结构，[the Apps Script runtime](https://bootgs.github.io/apps-script-utils/apps-script-runtime.html) 则说明哪些辅助函数绑定到 Google 服务、这样做的代价以及对测试的影响。
 
 ## 参与贡献
 
@@ -239,14 +239,14 @@ npm run dev
 
 ## 支持
 
-- 如需报告缺陷或提出功能需求，请在 GitHub 上搜索或新建 [issue](https://github.com/MaksymStoianov/apps-script-utils/issues)。
+- 如需报告缺陷或提出功能需求，请在 GitHub 上搜索或新建 [issue](https://github.com/bootgs/apps-script-utils/issues)。
 - 最近的变更请查看[更新日志](CHANGELOG.md)。
 - 如需报告安全漏洞，请遵循[安全策略](SECURITY.md)，不要创建公开 issue。
 - 如需支持项目的持续开发，请访问 [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov)。
 
 ## 路线图
 
-已计划、进行中和已完成的事项都在[项目看板](https://github.com/users/MaksymStoianov/projects/2/views/2)上，看板直接由 issue 跟踪器生成。没有单独的路线图文档，因此不会与看板脱节：如需提出建议，请创建 [issue](https://github.com/MaksymStoianov/apps-script-utils/issues)。
+已计划、进行中和已完成的事项都在[项目看板](https://github.com/users/MaksymStoianov/projects/2/views/2)上，看板直接由 issue 跟踪器生成。没有单独的路线图文档，因此不会与看板脱节：如需提出建议，请创建 [issue](https://github.com/bootgs/apps-script-utils/issues)。
 
 ## 更新日志
 

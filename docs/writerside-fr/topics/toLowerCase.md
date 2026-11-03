@@ -49,4 +49,4 @@ toLowerCase("  Hello   World  ", { trim: true }); // => "hello world"
 
 ## Code source
 
-[`src/lang/string/toLowerCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toLowerCase.ts)
+[`src/lang/string/toLowerCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toLowerCase.ts)

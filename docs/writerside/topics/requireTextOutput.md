@@ -59,4 +59,4 @@ requireTextOutput(null); // throws IllegalArgumentException
 
 ## Source
 
-[`src/appsscript/ui/requireTextOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/requireTextOutput.ts)
+[`src/appsscript/ui/requireTextOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/requireTextOutput.ts)

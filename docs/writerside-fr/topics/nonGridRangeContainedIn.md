@@ -46,4 +46,4 @@ nonGridRangeContainedIn(outer, inner); // => true
 
 ## Code source
 
-[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)
+[`src/appsscript/sheet/nonGridRangeContainedIn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeContainedIn.ts)

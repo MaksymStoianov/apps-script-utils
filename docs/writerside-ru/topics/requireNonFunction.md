@@ -55,4 +55,4 @@ requireNonFunction(async function () {}); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonFunction.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonFunction.ts)
+[`src/lang/base/requireNonFunction.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonFunction.ts)

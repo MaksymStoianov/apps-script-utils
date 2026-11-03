@@ -58,4 +58,4 @@ requireNonDouble(-0.1); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/number/requireNonDouble.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNonDouble.ts)
+[`src/lang/number/requireNonDouble.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonDouble.ts)

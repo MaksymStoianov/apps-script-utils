@@ -55,4 +55,4 @@ requireInteger(NaN); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/number/requireInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireInteger.ts)
+[`src/lang/number/requireInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireInteger.ts)

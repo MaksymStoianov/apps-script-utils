@@ -45,4 +45,4 @@ try {
 
 ## Source
 
-[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)
+[`src/exception/appsscript/sheet/InvalidRangeException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidRangeException.ts)

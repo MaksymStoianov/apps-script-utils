@@ -70,4 +70,4 @@ appendRow(sheet.getRange("B1:D10"), ["Ada", "ada@example.com"]);
 
 ## Исходный код
 
-[`src/appsscript/sheet/appendRow.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/appendRow.ts)
+[`src/appsscript/sheet/appendRow.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/appendRow.ts)

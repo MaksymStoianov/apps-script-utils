@@ -50,4 +50,4 @@ isException(null); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isException.ts)
+[`src/lang/base/isException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isException.ts)

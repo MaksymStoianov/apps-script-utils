@@ -49,4 +49,4 @@ isCellGridRange(null); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)
+[`src/appsscript/sheet/isCellGridRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isCellGridRange.ts)

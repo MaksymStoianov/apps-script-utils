@@ -47,4 +47,4 @@ const folder = createFolder("reports/2026/january");
 
 ## Code source
 
-[`src/appsscript/drive/createFolder.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/drive/createFolder.ts)
+[`src/appsscript/drive/createFolder.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/drive/createFolder.ts)

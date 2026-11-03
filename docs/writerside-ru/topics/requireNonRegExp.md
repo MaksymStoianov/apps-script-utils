@@ -58,4 +58,4 @@ requireNonRegExp(new RegExp("a")); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonRegExp.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonRegExp.ts)
+[`src/lang/base/requireNonRegExp.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonRegExp.ts)

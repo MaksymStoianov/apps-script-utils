@@ -44,4 +44,4 @@ extractRangeFromA1Notation("Sheet1!A1:B2"); // => "A1:B2"
 
 ## Исходный код
 
-[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)
+[`src/appsscript/sheet/extractRangeFromA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/extractRangeFromA1Notation.ts)

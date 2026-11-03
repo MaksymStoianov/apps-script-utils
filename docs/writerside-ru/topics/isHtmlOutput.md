@@ -51,4 +51,4 @@ isHtmlOutput(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/ui/isHtmlOutput.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/isHtmlOutput.ts)
+[`src/appsscript/ui/isHtmlOutput.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/isHtmlOutput.ts)

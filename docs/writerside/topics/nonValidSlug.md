@@ -50,4 +50,4 @@ nonValidSlug("a_1"); // => false
 
 ## Source
 
-[`src/lang/string/nonValidSlug.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidSlug.ts)
+[`src/lang/string/nonValidSlug.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidSlug.ts)

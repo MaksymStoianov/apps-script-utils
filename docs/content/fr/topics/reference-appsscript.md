@@ -28,11 +28,11 @@ Aides pour le [service Admin SDK Directory](https://developers.google.cn/apps-sc
 
 ## Méthodes Google Docs {id="google-docs-methods"}
 
-Aides pour Google Docs. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Aides pour Google Docs. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
 
 ## Méthodes Google Forms {id="google-forms-methods"}
 
-Aides pour Google Forms. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Aides pour Google Forms. Pas encore implémentées. Les contributions sont bienvenues — voir [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
 
 ## Méthodes Google Sheets {id="google-sheets-methods"}
 

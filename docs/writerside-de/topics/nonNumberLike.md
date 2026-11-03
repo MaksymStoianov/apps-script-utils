@@ -53,4 +53,4 @@ nonNumberLike(" 42 "); // => false
 
 ## Quellcode
 
-[`src/lang/base/nonNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNumberLike.ts)
+[`src/lang/base/nonNumberLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNumberLike.ts)

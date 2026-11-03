@@ -76,4 +76,4 @@ prependColumns(sheet.getRange("C4:F13"), 1, [["note"]]);
 
 ## Source
 
-[`src/appsscript/sheet/prependColumns.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/prependColumns.ts)
+[`src/appsscript/sheet/prependColumns.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/prependColumns.ts)

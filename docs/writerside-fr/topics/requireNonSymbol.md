@@ -58,4 +58,4 @@ requireNonSymbol(Symbol.iterator); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonSymbol.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonSymbol.ts)
+[`src/lang/base/requireNonSymbol.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonSymbol.ts)

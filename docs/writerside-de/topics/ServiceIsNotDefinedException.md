@@ -44,4 +44,4 @@ try {
 
 ## Quellcode
 
-[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)
+[`src/exception/ServiceIsNotDefinedException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/ServiceIsNotDefinedException.ts)

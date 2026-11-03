@@ -54,4 +54,4 @@ if (trigger !== null) {
 
 ## Code source
 
-[`src/appsscript/base/getTriggerById.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getTriggerById.ts)
+[`src/appsscript/base/getTriggerById.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/base/getTriggerById.ts)

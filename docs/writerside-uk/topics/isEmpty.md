@@ -55,4 +55,4 @@ isEmpty([0]); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isEmpty.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isEmpty.ts)
+[`src/lang/base/isEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isEmpty.ts)

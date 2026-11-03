@@ -60,4 +60,4 @@ requireEmpty(false); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireEmpty.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireEmpty.ts)
+[`src/lang/base/requireEmpty.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireEmpty.ts)

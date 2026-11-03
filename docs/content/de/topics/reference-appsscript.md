@@ -28,11 +28,11 @@ Helfer für den [Admin-SDK-Directory-Dienst](https://developers.google.cn/apps-s
 
 ## Methoden für Google Docs {id="google-docs-methods"}
 
-Helfer für Google Docs. Noch nicht umgesetzt. Beiträge sind willkommen — siehe [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Helfer für Google Docs. Noch nicht umgesetzt. Beiträge sind willkommen — siehe [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
 
 ## Methoden für Google Forms {id="google-forms-methods"}
 
-Helfer für Google Forms. Noch nicht umgesetzt. Beiträge sind willkommen — siehe [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Helfer für Google Forms. Noch nicht umgesetzt. Beiträge sind willkommen — siehe [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
 
 ## Methoden für Google Tabellen {id="google-sheets-methods"}
 

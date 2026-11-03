@@ -50,4 +50,4 @@ isNonNegative("1"); // => false
 
 ## Исходный код
 
-[`src/lang/number/isNonNegative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isNonNegative.ts)
+[`src/lang/number/isNonNegative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isNonNegative.ts)

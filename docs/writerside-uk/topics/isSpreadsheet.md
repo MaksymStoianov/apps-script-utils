@@ -51,4 +51,4 @@ isSpreadsheet(null); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)
+[`src/appsscript/sheet/isSpreadsheet.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/isSpreadsheet.ts)

@@ -48,4 +48,4 @@ getByteSize("abc"); // => 3
 
 ## Вихідний код
 
-[`src/appsscript/base/getByteSize.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)
+[`src/appsscript/base/getByteSize.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/base/getByteSize.ts)

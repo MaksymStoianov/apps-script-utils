@@ -52,4 +52,4 @@ nonUndefined(undefined); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonUndefined.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonUndefined.ts)
+[`src/lang/base/nonUndefined.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonUndefined.ts)

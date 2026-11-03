@@ -55,4 +55,4 @@ requireFunction("fn"); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireFunction.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireFunction.ts)
+[`src/lang/base/requireFunction.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireFunction.ts)

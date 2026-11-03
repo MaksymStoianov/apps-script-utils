@@ -54,4 +54,4 @@ nonObjectLike(function () {}); // => false
 
 ## Source
 
-[`src/lang/base/nonObjectLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonObjectLike.ts)
+[`src/lang/base/nonObjectLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonObjectLike.ts)

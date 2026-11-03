@@ -50,4 +50,4 @@ isSymbol(null); // => false
 
 ## Source
 
-[`src/lang/base/isSymbol.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isSymbol.ts)
+[`src/lang/base/isSymbol.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isSymbol.ts)

@@ -54,4 +54,4 @@ toCamelCase("user_first_name"); // => "userfirstname"
 
 ## Вихідний код
 
-[`src/lang/string/toCamelCase.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/toCamelCase.ts)
+[`src/lang/string/toCamelCase.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/toCamelCase.ts)

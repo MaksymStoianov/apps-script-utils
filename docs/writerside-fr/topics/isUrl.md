@@ -50,4 +50,4 @@ isUrl("https://exa mple.com"); // => false
 
 ## Code source
 
-[`src/net/url/isUrl.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/url/isUrl.ts)
+[`src/net/url/isUrl.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/url/isUrl.ts)

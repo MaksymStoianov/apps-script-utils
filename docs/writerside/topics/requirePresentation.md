@@ -59,4 +59,4 @@ requirePresentation(null); // throws InvalidPresentationException
 
 ## Source
 
-[`src/appsscript/slide/requirePresentation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requirePresentation.ts)
+[`src/appsscript/slide/requirePresentation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requirePresentation.ts)

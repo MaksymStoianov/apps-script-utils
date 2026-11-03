@@ -53,4 +53,4 @@ range?.getRange().getValues();
 
 ## Исходный код
 
-[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)
+[`src/appsscript/sheet/getNamedRangeByName.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getNamedRangeByName.ts)

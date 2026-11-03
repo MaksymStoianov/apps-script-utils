@@ -3,6 +3,6 @@
 
 <vars>
     <var name="product" value="apps-script-utils"/>
-    <var name="repo" value="https://github.com/MaksymStoianov/apps-script-utils"/>
-    <var name="src" value="https://github.com/MaksymStoianov/apps-script-utils/blob/main/src"/>
+    <var name="repo" value="https://github.com/bootgs/apps-script-utils"/>
+    <var name="src" value="https://github.com/bootgs/apps-script-utils/blob/main/src"/>
 </vars>

@@ -44,4 +44,4 @@ getColumnIndexByLetter("B"); // => 1
 
 ## Quellcode
 
-[`src/appsscript/sheet/getColumnIndexByLetter.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getColumnIndexByLetter.ts)
+[`src/appsscript/sheet/getColumnIndexByLetter.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getColumnIndexByLetter.ts)

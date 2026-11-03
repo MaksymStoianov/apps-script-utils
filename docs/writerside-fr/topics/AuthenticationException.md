@@ -42,4 +42,4 @@ try {
 
 ## Code source
 
-[`src/exception/net/AuthenticationException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/net/AuthenticationException.ts)
+[`src/exception/net/AuthenticationException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/net/AuthenticationException.ts)

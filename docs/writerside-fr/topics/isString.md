@@ -51,4 +51,4 @@ isString([]); // => false
 
 ## Code source
 
-[`src/lang/base/isString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isString.ts)
+[`src/lang/base/isString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isString.ts)

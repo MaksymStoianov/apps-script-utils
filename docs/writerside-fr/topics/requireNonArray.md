@@ -58,4 +58,4 @@ requireNonArray([1, 2, 3]); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNonArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonArray.ts)
+[`src/lang/base/requireNonArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonArray.ts)

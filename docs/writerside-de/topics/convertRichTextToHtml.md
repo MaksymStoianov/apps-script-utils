@@ -46,4 +46,4 @@ const html = convertRichTextToHtml(range.getRichTextValue());
 
 ## Quellcode
 
-[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)
+[`src/appsscript/sheet/convertRichTextToHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/convertRichTextToHtml.ts)

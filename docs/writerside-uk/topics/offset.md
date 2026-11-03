@@ -55,4 +55,4 @@ offset(start, -1, "day"); // 30 January 2026
 
 ## Вихідний код
 
-[`src/time/offset.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/offset.ts)
+[`src/time/offset.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/offset.ts)

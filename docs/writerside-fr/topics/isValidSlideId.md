@@ -49,4 +49,4 @@ isValidSlideId(""); // => false
 
 ## Code source
 
-[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isValidSlideId.ts)
+[`src/appsscript/slide/isValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/isValidSlideId.ts)

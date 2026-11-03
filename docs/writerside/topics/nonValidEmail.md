@@ -53,4 +53,4 @@ nonValidEmail("first.last@sub.example.co.uk"); // => false
 
 ## Source
 
-[`src/lang/string/nonValidEmail.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/nonValidEmail.ts)
+[`src/lang/string/nonValidEmail.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/nonValidEmail.ts)

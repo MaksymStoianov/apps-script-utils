@@ -59,4 +59,4 @@ requireTextStyle(null); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)
+[`src/appsscript/sheet/requireTextStyle.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireTextStyle.ts)

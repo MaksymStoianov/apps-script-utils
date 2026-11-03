@@ -51,4 +51,4 @@ isEmail(""); // => false
 
 ## Quellcode
 
-[`src/lang/string/isEmail.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/string/isEmail.ts)
+[`src/lang/string/isEmail.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/string/isEmail.ts)

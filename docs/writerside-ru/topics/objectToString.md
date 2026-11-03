@@ -44,4 +44,4 @@ objectToString(new Date()); // => "[object Date]"
 
 ## Исходный код
 
-[`src/lang/object/objectToString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/objectToString.ts)
+[`src/lang/object/objectToString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/objectToString.ts)

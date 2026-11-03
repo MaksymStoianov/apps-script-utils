@@ -18,15 +18,15 @@
   <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/v/apps-script-utils?label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/apps-script-utils"><img src="https://img.shields.io/npm/dm/apps-script-utils?label=downloads" alt="npm downloads"></a>
   <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/Built%20with-clasp-4285f4.svg" alt="Built with clasp"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/MaksymStoianov/apps-script-utils?label=License" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/bootgs/apps-script-utils?label=License" alt="License"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg" alt="Security Policy"></a>
   <a href="https://github.com/users/MaksymStoianov/projects/2/views/2"><img src="https://img.shields.io/badge/Roadmap-Board-blue.svg" alt="Roadmap"></a>
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/MaksymStoianov/apps-script-utils?label=Release" alt="Latest release"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/releases"><img src="https://img.shields.io/github/v/release/bootgs/apps-script-utils?label=Release" alt="Latest release"></a>
 </p>
 
 <p align="left">
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Stars"></a>
-  <a href="https://github.com/MaksymStoianov/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/MaksymStoianov/apps-script-utils?style=social" alt="GitHub Fork"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/stargazers"><img src="https://img.shields.io/github/stars/bootgs/apps-script-utils?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/bootgs/apps-script-utils/forks"><img src="https://img.shields.io/github/forks/bootgs/apps-script-utils?style=social" alt="GitHub Fork"></a>
   <a href="https://github.com/sponsors/MaksymStoianov"><img src="https://img.shields.io/github/sponsors/MaksymStoianov?style=social&logo=github" alt="GitHub Sponsors"></a>
 </p>
 
@@ -99,14 +99,14 @@ npm install apps-script-utils
 
 ## ドキュメント
 
-完全なドキュメントは **<https://maksymstoianov.github.io/apps-script-utils/>**（英語）で公開しています。ガイド、モジュールごとの解説、関数リファレンスのすべてが含まれます。ソースは [`docs/writerside/`](docs/writerside/) にあり、`main` への push のたびに再ビルドされます。
+完全なドキュメントは **<https://bootgs.github.io/apps-script-utils/>**（英語）で公開しています。ガイド、モジュールごとの解説、関数リファレンスのすべてが含まれます。ソースは [`docs/writerside/`](docs/writerside/) にあり、`main` への push のたびに再ビルドされます。
 
 おすすめの読む順番:
 
-- [Getting started](https://maksymstoianov.github.io/apps-script-utils/getting-started.html) — はじめに
-- [Validation conventions](https://maksymstoianov.github.io/apps-script-utils/validation-conventions.html) — `isX`/`nonX`/`requireX`/`requireNonX` の命名規則
-- [Exception handling](https://maksymstoianov.github.io/apps-script-utils/exception-handling.html) — クラス階層と、それぞれの例外が発生する条件
-- [The Apps Script runtime](https://maksymstoianov.github.io/apps-script-utils/apps-script-runtime.html) — どのヘルパーが Google のサービスに依存しているか、それがテストにとって何を意味するか
+- [Getting started](https://bootgs.github.io/apps-script-utils/getting-started.html) — はじめに
+- [Validation conventions](https://bootgs.github.io/apps-script-utils/validation-conventions.html) — `isX`/`nonX`/`requireX`/`requireNonX` の命名規則
+- [Exception handling](https://bootgs.github.io/apps-script-utils/exception-handling.html) — クラス階層と、それぞれの例外が発生する条件
+- [The Apps Script runtime](https://bootgs.github.io/apps-script-utils/apps-script-runtime.html) — どのヘルパーが Google のサービスに依存しているか、それがテストにとって何を意味するか
 
 ## 使用例
 
@@ -213,17 +213,17 @@ npm run dev
 
 関数リファレンスの全体はドキュメントサイトに移りました。サイトは [`docs/writerside/`](docs/writerside/) からビルドされ、`main` への push のたびに公開されます:
 
-**<https://maksymstoianov.github.io/apps-script-utils/>**
+**<https://bootgs.github.io/apps-script-utils/>**
 
-| セクション                                                                                                | 内容                                                                                      |
-| :-------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
-| [Google Apps Script module](https://maksymstoianov.github.io/apps-script-utils/reference-appsscript.html) | Sheets、Slides、Admin SDK、Drive、Docs、Forms、ネットワークリクエスト、組み込み UI クラス |
-| [Base utilities](https://maksymstoianov.github.io/apps-script-utils/reference-base.html)                  | 型チェックと検証、文字列・配列・オブジェクトの操作、JSON と HTML の処理                   |
-| [Exceptions](https://maksymstoianov.github.io/apps-script-utils/reference-exception.html)                 | 型付き例外クラスと、それぞれが発生する条件                                                |
-| [`path` module](https://maksymstoianov.github.io/apps-script-utils/reference-path.html)                   | ファイルパスと URL                                                                        |
-| [Abstracts and interfaces](https://maksymstoianov.github.io/apps-script-utils/reference-abstracts.html)   | 共通の構成要素                                                                            |
+| セクション                                                                                        | 内容                                                                                      |
+| :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------- |
+| [Google Apps Script module](https://bootgs.github.io/apps-script-utils/reference-appsscript.html) | Sheets、Slides、Admin SDK、Drive、Docs、Forms、ネットワークリクエスト、組み込み UI クラス |
+| [Base utilities](https://bootgs.github.io/apps-script-utils/reference-base.html)                  | 型チェックと検証、文字列・配列・オブジェクトの操作、JSON と HTML の処理                   |
+| [Exceptions](https://bootgs.github.io/apps-script-utils/reference-exception.html)                 | 型付き例外クラスと、それぞれが発生する条件                                                |
+| [`path` module](https://bootgs.github.io/apps-script-utils/reference-path.html)                   | ファイルパスと URL                                                                        |
+| [Abstracts and interfaces](https://bootgs.github.io/apps-script-utils/reference-abstracts.html)   | 共通の構成要素                                                                            |
 
-リファレンスのほかに、表には収まらないガイドもサイトにあります。[validation conventions](https://maksymstoianov.github.io/apps-script-utils/validation-conventions.html) は `isX`/`nonX`/`requireX`/`requireNonX` の規則を一か所で説明し、[exception handling](https://maksymstoianov.github.io/apps-script-utils/exception-handling.html) はクラス階層を示し、[the Apps Script runtime](https://maksymstoianov.github.io/apps-script-utils/apps-script-runtime.html) はどのヘルパーが Google のサービスに依存しているか、そのコスト、そしてテストにとっての意味を扱います。
+リファレンスのほかに、表には収まらないガイドもサイトにあります。[validation conventions](https://bootgs.github.io/apps-script-utils/validation-conventions.html) は `isX`/`nonX`/`requireX`/`requireNonX` の規則を一か所で説明し、[exception handling](https://bootgs.github.io/apps-script-utils/exception-handling.html) はクラス階層を示し、[the Apps Script runtime](https://bootgs.github.io/apps-script-utils/apps-script-runtime.html) はどのヘルパーが Google のサービスに依存しているか、そのコスト、そしてテストにとっての意味を扱います。
 
 ## コントリビューション
 
@@ -239,14 +239,14 @@ npm run dev
 
 ## サポート
 
-- バグ報告や機能要望は、GitHub で [issue](https://github.com/MaksymStoianov/apps-script-utils/issues) を検索するか新しく作成してください。
+- バグ報告や機能要望は、GitHub で [issue](https://github.com/bootgs/apps-script-utils/issues) を検索するか新しく作成してください。
 - 最近の変更は [変更履歴](CHANGELOG.md) をご覧ください。
 - セキュリティ上の脆弱性は、公開 issue を作成せず [セキュリティポリシー](SECURITY.md) に従って報告してください。
 - 継続的な開発を支援するには [GitHub Sponsors](https://github.com/sponsors/MaksymStoianov) をご覧ください。
 
 ## ロードマップ
 
-計画中、進行中、完了済みの項目は、issue トラッカーから作られた [プロジェクトボード](https://github.com/users/MaksymStoianov/projects/2/views/2) にあります。ボードとずれてしまう別のロードマップ文書はありません。提案がある場合は [issue](https://github.com/MaksymStoianov/apps-script-utils/issues) を作成してください。
+計画中、進行中、完了済みの項目は、issue トラッカーから作られた [プロジェクトボード](https://github.com/users/MaksymStoianov/projects/2/views/2) にあります。ボードとずれてしまう別のロードマップ文書はありません。提案がある場合は [issue](https://github.com/bootgs/apps-script-utils/issues) を作成してください。
 
 ## 変更履歴
 

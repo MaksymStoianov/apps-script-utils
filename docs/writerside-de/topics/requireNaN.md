@@ -55,4 +55,4 @@ requireNaN("abc"); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/number/requireNaN.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNaN.ts)
+[`src/lang/number/requireNaN.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNaN.ts)

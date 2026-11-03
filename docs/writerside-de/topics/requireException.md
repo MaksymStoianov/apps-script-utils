@@ -54,4 +54,4 @@ requireException({}); // throws IllegalArgumentException
 
 ## Quellcode
 
-[`src/lang/base/requireException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireException.ts)
+[`src/lang/base/requireException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireException.ts)

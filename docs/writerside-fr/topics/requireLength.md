@@ -58,4 +58,4 @@ requireLength(1.5); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireLength.ts)
+[`src/lang/base/requireLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireLength.ts)

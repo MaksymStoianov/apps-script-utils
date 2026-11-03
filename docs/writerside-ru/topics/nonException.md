@@ -52,4 +52,4 @@ nonException(new IllegalArgumentException()); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonException.ts)
+[`src/lang/base/nonException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonException.ts)

@@ -70,4 +70,4 @@ appendColumn(sheet.getRange("A1:D3"), ["status", "new", "new"]);
 
 ## Исходный код
 
-[`src/appsscript/sheet/appendColumn.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/appendColumn.ts)
+[`src/appsscript/sheet/appendColumn.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/appendColumn.ts)

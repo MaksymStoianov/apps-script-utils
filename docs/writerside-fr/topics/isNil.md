@@ -51,4 +51,4 @@ isNil(false); // => false
 
 ## Code source
 
-[`src/lang/base/isNil.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isNil.ts)
+[`src/lang/base/isNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isNil.ts)

@@ -79,4 +79,4 @@ requireConsistent2DArray([1, 2], "rows must be a matrix");
 
 ## Quellcode
 
-[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/requireConsistent2DArray.ts)
+[`src/lang/array/requireConsistent2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/requireConsistent2DArray.ts)

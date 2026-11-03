@@ -58,4 +58,4 @@ requireNil(""); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireNil.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNil.ts)
+[`src/lang/base/requireNil.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNil.ts)

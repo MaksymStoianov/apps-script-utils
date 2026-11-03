@@ -32,4 +32,4 @@ const options = { validation: true };
 
 ## Code source
 
-[`src/appsscript/sheet/removeSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/removeSchema.ts)
+[`src/appsscript/sheet/removeSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/removeSchema.ts)

@@ -55,4 +55,4 @@ schema?.columns.map((column) => column.name);
 
 ## Исходный код
 
-[`src/appsscript/sheet/getSchema.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/getSchema.ts)
+[`src/appsscript/sheet/getSchema.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/getSchema.ts)

@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/InvalidStringException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/InvalidStringException.ts)
+[`src/exception/InvalidStringException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/InvalidStringException.ts)

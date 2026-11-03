@@ -40,4 +40,4 @@ const elapsed = now() - started; // milliseconds
 
 ## Вихідний код
 
-[`src/time/now.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/now.ts)
+[`src/time/now.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/now.ts)

@@ -51,4 +51,4 @@ nonValidDomain("sub.example.co.uk"); // => false
 
 ## Исходный код
 
-[`src/net/path/nonValidDomain.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/nonValidDomain.ts)
+[`src/net/path/nonValidDomain.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/nonValidDomain.ts)

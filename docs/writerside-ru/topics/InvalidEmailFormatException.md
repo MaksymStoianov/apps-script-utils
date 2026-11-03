@@ -44,4 +44,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/InvalidEmailFormatException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/InvalidEmailFormatException.ts)
+[`src/exception/InvalidEmailFormatException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/InvalidEmailFormatException.ts)

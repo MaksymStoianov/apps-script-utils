@@ -53,4 +53,4 @@ nonUi(ui); // => false
 
 ## Вихідний код
 
-[`src/appsscript/ui/nonUi.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/ui/nonUi.ts)
+[`src/appsscript/ui/nonUi.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/ui/nonUi.ts)

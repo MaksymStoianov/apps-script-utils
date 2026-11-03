@@ -52,4 +52,4 @@ nonSymbol(Symbol.iterator); // => false
 
 ## Исходный код
 
-[`src/lang/base/nonSymbol.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonSymbol.ts)
+[`src/lang/base/nonSymbol.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonSymbol.ts)

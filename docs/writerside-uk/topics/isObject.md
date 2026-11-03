@@ -52,4 +52,4 @@ isObject(function () {}); // => false
 
 ## Вихідний код
 
-[`src/lang/base/isObject.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isObject.ts)
+[`src/lang/base/isObject.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isObject.ts)

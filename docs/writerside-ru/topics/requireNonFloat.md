@@ -58,4 +58,4 @@ requireNonFloat(-0.1); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/number/requireNonFloat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireNonFloat.ts)
+[`src/lang/number/requireNonFloat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireNonFloat.ts)

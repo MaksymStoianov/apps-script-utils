@@ -9,7 +9,7 @@
  * around the prose. The prose itself lives in `docs/content/<code>/`.
  */
 
-export const SITE = "https://maksymstoianov.github.io/apps-script-utils";
+export const SITE = "https://bootgs.github.io/apps-script-utils";
 
 export const LANGUAGES = [
   {

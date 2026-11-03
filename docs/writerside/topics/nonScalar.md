@@ -55,4 +55,4 @@ nonScalar(10n); // => false
 
 ## Source
 
-[`src/lang/base/nonScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonScalar.ts)
+[`src/lang/base/nonScalar.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonScalar.ts)

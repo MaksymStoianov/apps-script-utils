@@ -55,4 +55,4 @@ requireFunctionLike({}); // throws IllegalArgumentException
 
 ## Code source
 
-[`src/lang/base/requireFunctionLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireFunctionLike.ts)
+[`src/lang/base/requireFunctionLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireFunctionLike.ts)

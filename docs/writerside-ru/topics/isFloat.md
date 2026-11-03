@@ -52,4 +52,4 @@ isFloat("1.5"); // => false
 
 ## Исходный код
 
-[`src/lang/number/isFloat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/isFloat.ts)
+[`src/lang/number/isFloat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/isFloat.ts)

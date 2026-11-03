@@ -54,4 +54,4 @@ nonNumber(Infinity); // => false
 
 ## Source
 
-[`src/lang/base/nonNumber.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/nonNumber.ts)
+[`src/lang/base/nonNumber.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/nonNumber.ts)

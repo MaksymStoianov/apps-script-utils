@@ -58,4 +58,4 @@ requireFloat(1.0); // throws IllegalArgumentException
 
 ## Source
 
-[`src/lang/number/requireFloat.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/requireFloat.ts)
+[`src/lang/number/requireFloat.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/requireFloat.ts)

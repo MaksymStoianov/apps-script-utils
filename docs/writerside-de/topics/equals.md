@@ -47,4 +47,4 @@ equals(new Date(0), new Date(0)); // => true
 
 ## Quellcode
 
-[`src/lang/object/equals.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/equals.ts)
+[`src/lang/object/equals.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/equals.ts)

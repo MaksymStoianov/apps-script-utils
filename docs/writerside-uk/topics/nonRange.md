@@ -53,4 +53,4 @@ nonRange(range); // => false
 
 ## Вихідний код
 
-[`src/appsscript/sheet/nonRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonRange.ts)
+[`src/appsscript/sheet/nonRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonRange.ts)

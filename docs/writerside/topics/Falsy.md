@@ -33,4 +33,4 @@ const values = [0, "", false, null, undefined];
 
 ## Source
 
-[`src/lang/array/compact.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/compact.ts)
+[`src/lang/array/compact.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/compact.ts)

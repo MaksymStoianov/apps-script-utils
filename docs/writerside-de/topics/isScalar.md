@@ -53,4 +53,4 @@ isScalar(null); // => false
 
 ## Quellcode
 
-[`src/lang/base/isScalar.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/isScalar.ts)
+[`src/lang/base/isScalar.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/isScalar.ts)

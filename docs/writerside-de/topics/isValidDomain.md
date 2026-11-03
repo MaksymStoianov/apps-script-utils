@@ -51,4 +51,4 @@ isValidDomain(""); // => false
 
 ## Quellcode
 
-[`src/net/path/isValidDomain.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/isValidDomain.ts)
+[`src/net/path/isValidDomain.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isValidDomain.ts)

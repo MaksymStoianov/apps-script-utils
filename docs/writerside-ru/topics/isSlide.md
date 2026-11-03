@@ -51,4 +51,4 @@ isSlide(null); // => false
 
 ## Исходный код
 
-[`src/appsscript/slide/isSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/isSlide.ts)
+[`src/appsscript/slide/isSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/isSlide.ts)

@@ -60,4 +60,4 @@ diff(new Date(2026, 0, 2, 1), new Date(2026, 0, 1, 23), "day"); // => 0
 
 ## Code source
 
-[`src/time/diff.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/time/diff.ts)
+[`src/time/diff.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/time/diff.ts)

@@ -83,4 +83,4 @@ first([1, 2], 1.5); // throws TypeError: Input 'n' must be an integer.
 
 ## Вихідний код
 
-[`src/lang/array/first.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/first.ts)
+[`src/lang/array/first.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/first.ts)

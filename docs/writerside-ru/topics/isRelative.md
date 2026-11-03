@@ -50,4 +50,4 @@ isRelative("https://example.com/a"); // => false
 
 ## Исходный код
 
-[`src/net/path/isRelative.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/isRelative.ts)
+[`src/net/path/isRelative.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/isRelative.ts)

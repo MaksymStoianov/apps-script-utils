@@ -49,4 +49,4 @@ decodeHtml("&amp;"); // => "&amp;"
 
 ## Source
 
-[`src/html/decodeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/decodeHtml.ts)
+[`src/html/decodeHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/decodeHtml.ts)

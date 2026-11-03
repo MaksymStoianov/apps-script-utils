@@ -57,4 +57,4 @@ requireNonException(new IllegalArgumentException()); // throws IllegalArgumentEx
 
 ## Исходный код
 
-[`src/lang/base/requireNonException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonException.ts)
+[`src/lang/base/requireNonException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonException.ts)

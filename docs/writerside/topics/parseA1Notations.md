@@ -44,4 +44,4 @@ parseA1Notations("A1:B2, C3").length; // => 2
 
 ## Source
 
-[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)
+[`src/appsscript/sheet/parseA1Notations.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notations.ts)

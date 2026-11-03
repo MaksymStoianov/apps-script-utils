@@ -45,4 +45,4 @@ try {
 
 ## Исходный код
 
-[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)
+[`src/exception/appsscript/sheet/InvalidSpreadsheetException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/appsscript/sheet/InvalidSpreadsheetException.ts)

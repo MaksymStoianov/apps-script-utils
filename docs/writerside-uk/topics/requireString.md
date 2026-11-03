@@ -55,4 +55,4 @@ requireString(null); // throws InvalidStringException
 
 ## Вихідний код
 
-[`src/lang/base/requireString.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireString.ts)
+[`src/lang/base/requireString.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireString.ts)

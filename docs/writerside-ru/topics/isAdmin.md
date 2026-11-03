@@ -43,4 +43,4 @@ if (isAdmin()) {
 
 ## Исходный код
 
-[`src/appsscript/admin/isAdmin.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/admin/isAdmin.ts)
+[`src/appsscript/admin/isAdmin.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/admin/isAdmin.ts)

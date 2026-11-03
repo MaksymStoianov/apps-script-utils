@@ -46,4 +46,4 @@ nonGridRangeSameDimensions(source, target); // => true
 
 ## Code source
 
-[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)
+[`src/appsscript/sheet/nonGridRangeSameDimensions.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonGridRangeSameDimensions.ts)

@@ -44,4 +44,4 @@ try {
 
 ## Source
 
-[`src/exception/NullPointerException.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/exception/NullPointerException.ts)
+[`src/exception/NullPointerException.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/exception/NullPointerException.ts)

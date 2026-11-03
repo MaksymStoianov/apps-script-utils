@@ -50,4 +50,4 @@ nonValidSheetId(1234567890); // => false
 
 ## Исходный код
 
-[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)
+[`src/appsscript/sheet/nonValidSheetId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/nonValidSheetId.ts)

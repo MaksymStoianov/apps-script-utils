@@ -52,4 +52,4 @@ const users = requireRepository(registry.users, "The user repository is not wire
 
 ## Вихідний код
 
-[`src/appsscript/requireRepository.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/requireRepository.ts)
+[`src/appsscript/requireRepository.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/requireRepository.ts)

@@ -51,4 +51,4 @@ parseA1Notation("A1").sheetName; // => null
 
 ## Quellcode
 
-[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)
+[`src/appsscript/sheet/parseA1Notation.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/parseA1Notation.ts)

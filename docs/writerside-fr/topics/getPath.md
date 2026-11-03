@@ -52,4 +52,4 @@ getPath({ rows: [{ id: 7 }] }, ["rows", 0, "id"]); // => 7
 
 ## Code source
 
-[`src/lang/object/getPath.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/object/getPath.ts)
+[`src/lang/object/getPath.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/object/getPath.ts)

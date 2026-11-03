@@ -47,4 +47,4 @@ join("/a", "../b"); // => "/b"
 
 ## Quellcode
 
-[`src/net/path/join.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/net/path/join.ts)
+[`src/net/path/join.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/net/path/join.ts)

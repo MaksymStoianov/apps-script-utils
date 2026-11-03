@@ -55,4 +55,4 @@ requireNonNumberLike("1.5"); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/lang/base/requireNonNumberLike.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonNumberLike.ts)
+[`src/lang/base/requireNonNumberLike.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonNumberLike.ts)

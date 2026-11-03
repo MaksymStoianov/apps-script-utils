@@ -78,4 +78,4 @@ appendRows(sheet.getRange("B1:C10"), [["Ada", "ada@example.com"]]);
 
 ## Code source
 
-[`src/appsscript/sheet/appendRows.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/appendRows.ts)
+[`src/appsscript/sheet/appendRows.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/appendRows.ts)

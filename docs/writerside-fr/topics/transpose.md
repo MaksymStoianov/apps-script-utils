@@ -85,4 +85,4 @@ transpose([[1, 2], [3]]); // throws Error: Input must be a 2D array.
 
 ## Code source
 
-[`src/lang/array/transpose.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/transpose.ts)
+[`src/lang/array/transpose.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/transpose.ts)

@@ -59,4 +59,4 @@ const replaced = findReplaceAllTextInSlide(slide, "{{ client }}", "Acme", false)
 
 ## Quellcode
 
-[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)
+[`src/appsscript/slide/findReplaceAllTextInSlide.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/findReplaceAllTextInSlide.ts)

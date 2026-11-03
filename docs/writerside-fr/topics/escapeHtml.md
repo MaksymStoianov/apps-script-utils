@@ -49,4 +49,4 @@ escapeHtml("<a>&"); // => "&lt;a&gt;&amp;"
 
 ## Code source
 
-[`src/html/escapeHtml.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/html/escapeHtml.ts)
+[`src/html/escapeHtml.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/html/escapeHtml.ts)

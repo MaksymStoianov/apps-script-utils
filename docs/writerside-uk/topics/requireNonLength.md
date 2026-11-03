@@ -58,4 +58,4 @@ requireNonLength(42); // throws IllegalArgumentException
 
 ## Вихідний код
 
-[`src/lang/base/requireNonLength.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/base/requireNonLength.ts)
+[`src/lang/base/requireNonLength.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/base/requireNonLength.ts)

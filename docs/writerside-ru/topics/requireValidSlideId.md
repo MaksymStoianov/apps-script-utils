@@ -57,4 +57,4 @@ requireValidSlideId(""); // throws IllegalArgumentException
 
 ## Исходный код
 
-[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)
+[`src/appsscript/slide/requireValidSlideId.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/slide/requireValidSlideId.ts)

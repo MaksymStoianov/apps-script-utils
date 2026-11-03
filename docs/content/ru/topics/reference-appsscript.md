@@ -28,11 +28,11 @@
 
 ## Методы Google Документов {id="google-docs-methods"}
 
-Помощники для Google Документов. Пока не реализованы. Будем рады вкладу — смотрите [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Помощники для Google Документов. Пока не реализованы. Будем рады вкладу — смотрите [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
 
 ## Методы Google Форм {id="google-forms-methods"}
 
-Помощники для Google Форм. Пока не реализованы. Будем рады вкладу — смотрите [Contributing](https://github.com/MaksymStoianov/apps-script-utils/blob/main/CONTRIBUTING.md).
+Помощники для Google Форм. Пока не реализованы. Будем рады вкладу — смотрите [Contributing](https://github.com/bootgs/apps-script-utils/blob/main/CONTRIBUTING.md).
 
 ## Методы Google Таблиц {id="google-sheets-methods"}
 

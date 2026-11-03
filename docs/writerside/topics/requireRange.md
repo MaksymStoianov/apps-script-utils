@@ -56,4 +56,4 @@ requireRange(null); // throws InvalidRangeException
 
 ## Source
 
-[`src/appsscript/sheet/requireRange.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/sheet/requireRange.ts)
+[`src/appsscript/sheet/requireRange.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/sheet/requireRange.ts)

@@ -49,4 +49,4 @@ toInteger(1.9); // => 1.9
 
 ## Quellcode
 
-[`src/lang/number/toInteger.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/number/toInteger.ts)
+[`src/lang/number/toInteger.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/number/toInteger.ts)

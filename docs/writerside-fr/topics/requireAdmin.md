@@ -54,4 +54,4 @@ function deleteEverything() {
 
 ## Code source
 
-[`src/appsscript/admin/requireAdmin.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/appsscript/admin/requireAdmin.ts)
+[`src/appsscript/admin/requireAdmin.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/appsscript/admin/requireAdmin.ts)

@@ -73,4 +73,4 @@ function validateShape(rows) {
 
 ## Исходный код
 
-[`src/lang/array/non2DArray.ts`](https://github.com/MaksymStoianov/apps-script-utils/blob/main/src/lang/array/non2DArray.ts)
+[`src/lang/array/non2DArray.ts`](https://github.com/bootgs/apps-script-utils/blob/main/src/lang/array/non2DArray.ts)
